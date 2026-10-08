@@ -778,67 +778,67 @@
     {
       "device_id": "OWN-DEV-0156",
       "path": "devices/definitions/own-dev-0156-hometouch-home-automation-video-entry-display.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0157",
       "path": "devices/definitions/own-dev-0157-classe-100x16e-connected-video-internal-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0158",
       "path": "devices/definitions/own-dev-0158-easy-kit-connected-video-entry-kit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0159",
       "path": "devices/definitions/own-dev-0159-classe-300eos-connected-video-internal-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0160",
       "path": "devices/definitions/own-dev-0160-easy-kit-home-security-connected-internal-unit.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0161",
       "path": "devices/definitions/own-dev-0161-light-now-shutter-actuator-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0162",
       "path": "devices/definitions/own-dev-0162-two-wire-ip-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0163",
       "path": "devices/definitions/own-dev-0163-d45-ip-interface.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0164",
       "path": "devices/definitions/own-dev-0164-axolute-eight-zone-touch-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0165",
       "path": "devices/definitions/own-dev-0165-two-wire-concierge-switchboard.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0166",
       "path": "devices/definitions/own-dev-0166-sfera-audio-speaker-module.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0167",
       "path": "devices/definitions/own-dev-0167-sfera-audio-video-module.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0168",
       "path": "devices/definitions/own-dev-0168-sfera-wide-angle-audio-video-module.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0169",

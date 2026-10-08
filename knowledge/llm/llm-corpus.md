@@ -119421,3 +119421,8481 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 - [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0155)
+
+# Document: ownkb:document:d000295
+
+Source path: `devices/definitions/own-dev-0156-hometouch-home-automation-video-entry-display.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## HOMETOUCH home automation and video-entry display
+
+Section ID: `ownkb:section:d000295:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000295:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+HOMETOUCH is a 7-inch touch panel combining MyHOME home controls with a connected video-entry unit. It displays system status and controls lighting, shutters, temperature, scenarios and supported music/alarm functions. Separate automation and video-entry bus connections, plus Ethernet or Wi-Fi, let it participate in both systems.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0156` | Project identity |
+| Technical description | HOMETOUCH home automation and video-entry display | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `067259`, `3488` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `2214` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Integration function | Main system association |
+| Item model / `modobj` | `128` | Main association; independent of project ID |
+| Firmware definition | `752`, `810`, `820`, `828`, `830` | Catalogue firmware IDs; version/build table below |
+| Declared Modules | `2` | Firmware metadata |
+| Categories | Audio video, User interfaces, Multifunction devices | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000295:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Legrand | `067259` | Established catalogue identity | Manufacturer database commercial record `2556` explicitly links this SKU to item `2214` |
+| BTicino | `3488` | Established catalogue identity | Manufacturer database commercial record `2555` explicitly links this SKU to item `2214` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000295:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `3488` | `8005543612033` | [3488-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/df/4e/df4e3aa837d4df07e7dc9a89f19f03f46f561ff2e2d51d499334439c8b45a6ed.pdf) PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000295:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `3488` | HOME TOUCH 7 | Canonical commercial record `2555` |
+| `067259` | HOME TOUCH 7 | Canonical commercial record `2556` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000295:s000006`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`, `not evidence`
+Provenance cues: `catalogue`, `database`, `documentation`, `evidence`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `RA00162AE_EN.pdf` | English counterpart of manufacturer-linked document | `RA00162AE`-11/21-PC; printed cover label | PDF pp. 32–34,47–58,68–69,152–155,177–188,232–234: setup, server/alarm/load association and controls; remaining chapters unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/61/40/61405fb7779dff0b0c87dcf2cbeb83a20725a45e552c9c4d0fa829821f552ba7.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00162AE_EN.pdf) |
+| `ST-00000724-EN.pdf` | Technical Sheet `ST-00000724-EN` | `ST-00000724-EN; 30/06/2020` | PDF pp. 1–3:2020 sheet printed asST-00000517-EN; identity, rating and setup examined; later diagrams unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/eb/8f/eb8f3473da6240ab2278f69cfc50598d9d0fef5d0a4f7d95464ccd2653bb347d.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000724-EN.pdf) |
+| `3488-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/df/4e/df4e3aa837d4df07e7dc9a89f19f03f46f561ff2e2d51d499334439c8b45a6ed.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-3488&include_technical=1) |
+| `3488-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/54/76/5476372510aa149035463a0567f66726baf197e05c8c15a39d442cff4d337310.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-3488) |
+| `RA00162AE_IT.pdf` | Legacy manufacturer technical documentation | `RA00162AE`-11/21-PC; printed cover label | PDF pp. 48–51,177,187: Italian server/alarm/load cross-check; remaining translation chapters unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/c6/28/c628c93b5971112560cc7a48705bd60aadf9d06233e87973dc940045939554c5.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00162AE_IT.pdf) |
+| `ST_00001032_IT.pdf` | Legacy manufacturer technical documentation | `ST_00001032_IT; 29/04/2022` | PDF pp. 1,4: Italian rating, server and EOS-compatibility cross-check; remaining translation pages unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/a4/65/a46584f070a5ee74879f0f5741e690e32d227a13ee5602798025ccf55929df27.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00001032_IT.pdf) |
+| `ST_00001032_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00001032_EN; 29/04/2022` | PDF pp. 1–6: complete2022 exact HOMETOUCH sheet, with additional-supply and EOS/server exclusions | [Archived original](https://archive.openwebnet-ha.org/sha256/91/cd/91cd736a3115eb9582dbade37df35658d3381e875e4fd2916e2c01326d9446a0.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00001032_EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet `ST-00002703-EN` | `ST-00002703-EN; 16/06/2026` | PDF p. 9: exact actuator/server ecosystem compatibility inspected; other product functions not transferred | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2214`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `door-entry-app-update-publisher-page.html` | Exact-reference manufacturer app notice | 18 June 2024; minimums effective20 June 2024 | Entire dated notice examined; names these references, app families and minimum Android/iOS releases; not evidence of present service availability | [Archived original](https://archive.openwebnet-ha.org/sha256/b1/c5/b1c57ba8d2097fbb90bdfe3b51753b625d8440d71b5b4ed1e65e80208f251ba9.pdf) | [Publisher source](https://www.bticino.com/news/door-entry-app-important-update-available-security-reliability-and-performance-app) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000295:s000007`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply | `27 Vdc; additional 1–2 power supply required` | `ST_00001032_EN` p. 1 |
+| AV SCS maximum draw | `20 mA during conversation at 27 V` | `ST_00001032_EN` p. 1 |
+| MH SCS draw | `1 mA` | `ST_00001032_EN` p. 1 |
+| Maximum additional-supply draw | `300 mA during conversation` | `ST_00001032_EN` p. 1 |
+| Temperature / dimensions | `5..35 °C; 196 x 147 x 25 mm` | `ST_00001032_EN` p. 1 |
+| Display | `7-inch capacitive touch screen` | `ST_00001032_EN` p. 1 |
+| Interfaces | `AV SCS BUS; MH SCS BUS; Ethernet; Wi-Fi; service mini-USB; floor-call terminals` | `ST_00001032_EN` p. 1 |
+| Wireless | `IEEE 802.11 b/g/n, 2.4 GHz, 13 channels` | `ST_00001032_EN` p. 1 |
+| Published network traffic | `5061 SIP device; 5228 SIP app; UDP 0..65000 negotiated media; HTTP/HTTPS 80/443` | `ST_00001032_EN` p. 1 |
+| Mounting | `wall bracket or flush box 3487; supply 346020 related item` | `ST_00001032_EN` p. 1 |
+| Network limits | `one app-connected internal unit; maximum ten HOMETOUCH connected to a MyHOMEServer1 on one LAN` | `ST_00001032_EN` p. 6 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000295:s000008`
+
+Applicability cues: `not applicable`, `scs`
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| Bus system KNX | `No` | `ST_00001032_EN` p. 1 |
+| Bus system KNX-RF (Radio Frequency) | `No` | `ST_00001032_EN` p. 1 |
+| Bus system radio frequency | `No` | `ST_00001032_EN` p. 1 |
+| Bus system LON | `No` | `ST_00001032_EN` p. 1 |
+| Bus system Powernet | `Yes` | `ST_00001032_EN` p. 1 |
+| Other bus systems | `Other` | `ST_00001032_EN` p. 1 |
+| Radio frequency bidirectional | `Yes` | `ST_00001032_EN` p. 1 |
+| Assembly arrangement | `Control element` | `ST_00001032_EN` p. 1 |
+| Model | `Control tableau` | `ST_00001032_EN` p. 1 |
+| Mounting method | `Flush-mounted` | `ST_00001032_EN` p. 1 |
+| Touch function | `Yes` | `ST_00001032_EN` p. 1 |
+| Additional interfaces | `Ethernet` | `ST_00001032_EN` p. 1 |
+| With bus connection | `Yes` | `ST_00001032_EN` p. 1 |
+| Material | `Glass` | `ST_00001032_EN` p. 1 |
+| Material quality | `Other` | `ST_00001032_EN` p. 1 |
+| Colour | `Black` | `ST_00001032_EN` p. 1 |
+| RAL-number (similar) | `9005` | `ST_00001032_EN` p. 1 |
+| Degree of protection (IP) | `Other` | `ST_00001032_EN` p. 1 |
+| Width | `196 mm` | `ST_00001032_EN` p. 1 |
+| Height | `147 mm` | `ST_00001032_EN` p. 1 |
+| Depth | `25 mm` | `ST_00001032_EN` p. 1 |
+| Built-in depth | `7 mm` | `ST_00001032_EN` p. 1 |
+| degree of impact strength (IK) | `Not applicable` | `ST_00001032_EN` p. 1 |
+| Operating / setting temperature (Min-Max) | `5-35 °C` | `ST_00001032_EN` p. 1 |
+| Storage temperature (Min-Max) | `-10-70 °C` | `ST_00001032_EN` p. 1 |
+| Hands free | `Yes` | `ST_00001032_EN` p. 1 |
+| Loudness setting | `Yes` | `ST_00001032_EN` p. 1 |
+| Addressable | `Yes` | `ST_00001032_EN` p. 1 |
+| Remote opening of gate / Electric door opener | `Yes` | `ST_00001032_EN` p. 1 |
+| Screen resolution | `852x480` | `ST_00001032_EN` p. 1 |
+| Screen brightness setting | `Yes` | `ST_00001032_EN` p. 1 |
+| Screen contrast setting | `Yes` | `ST_00001032_EN` p. 1 |
+| Contains Batteries | `No` | `ST_00001032_EN` p. 1 |
+| Connected object | `Yes` | `ST_00001032_EN` p. 1 |
+| Operating method | `SCS, Wifi network 2.4G` | `ST_00001032_EN` p. 1 |
+| Application store for download | `Google Play Store, Mac Apple Store` | `ST_00001032_EN` p. 1 |
+| Programmable | `Yes` | `ST_00001032_EN` p. 1 |
+| Connectable by Internet box | `Yes` | `ST_00001032_EN` p. 1 |
+| Application name | `Door Entry` | `ST_00001032_EN` p. 1 |
+| Product use function | `Control & command systems` | `ST_00001032_EN` p. 1 |
+| Software Update Duration (years) | `3` | `ST_00001032_EN` p. 1 |
+
+### Identity
+
+Section ID: `ownkb:section:d000295:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2214` | Canonical catalogue |
+| Technical item description | HOME TOUCH 7 | Canonical catalogue |
+| Item family | 0; key `20` | Canonical catalogue |
+| Main system | Integration function; key `26` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `128` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `2` | `EN_DEVICE` |
+| Additional system | Video door entry system; key `4`; model `24` | Separate non-main catalogue association |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000295:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `24` | No | Canonical item/system relationship |
+| Integration function | `128` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000295:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `752` | `1` | `0` | `0` | `2` | Not catalogue default | Official |
+| `810` | `2` | `0` | `0` | `2` | Not catalogue default | Official |
+| `820` | `3` | `0` | `0` | `2` | Not catalogue default | Official |
+| `828` | `2` | `4` | `0` | `2` | Not catalogue default | Official |
+| `830` | `2` | `5` | `0` | `2` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000295:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `752` | `1038` | BTicino (key `1`) | `0` | Extra | `2214_1.0_BT\xml\Extra\extra.xml` |
+| `752` | `1039` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2214_1.0_BT\xml\Protocol\protocol.xml` |
+| `752` | `1040` | Legrand (key `2`) | `0` | Extra | `2214_1.0_LG\xml\Extra\extra.xml` |
+| `752` | `1041` | Legrand (key `2`) | `0` | Protocol and other device parameters | `2214_1.0_LG\xml\Protocol\protocol.xml` |
+| `810` | `1048` | BTicino (key `1`) | `0` | Extra | `2214_2.0_BT\xml\Extra\extra.xml` |
+| `810` | `1049` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2214_2.0_BT\xml\Protocol\protocol.xml` |
+| `810` | `1050` | Legrand (key `2`) | `0` | Extra | `2214_2.0_LG\xml\Extra\extra.xml` |
+| `810` | `1051` | Legrand (key `2`) | `0` | Protocol and other device parameters | `2214_2.0_LG\xml\Protocol\protocol.xml` |
+| `820` | `1072` | BTicino (key `1`) | `0` | Extra | `2214_3.0_BT\xml\Extra\extra.xml` |
+| `820` | `1073` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2214_3.0_BT\xml\Protocol\protocol.xml` |
+| `820` | `1076` | Legrand (key `2`) | `0` | Extra | `2214_3.0_LG\xml\Extra\extra.xml` |
+| `820` | `1077` | Legrand (key `2`) | `0` | Protocol and other device parameters | `2214_3.0_LG\xml\Protocol\protocol.xml` |
+| `828` | `1086` | BTicino (key `1`) | `0` | Extra | `2214_2.4_BT\xml\Extra\extra.xml` |
+| `828` | `1087` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2214_2.4_BT\xml\Protocol\protocol.xml` |
+| `828` | `1088` | Legrand (key `2`) | `0` | Extra | `2214_2.4_LG\xml\Extra\extra.xml` |
+| `828` | `1089` | Legrand (key `2`) | `0` | Protocol and other device parameters | `2214_2.4_LG\xml\Protocol\protocol.xml` |
+| `830` | `1093` | BTicino (key `1`) | `0` | Extra | `2214_2.5_BT\xml\Extra\extra.xml` |
+| `830` | `1094` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2214_2.5_BT\xml\Protocol\protocol.xml` |
+| `830` | `1095` | Legrand (key `2`) | `0` | Extra | `2214_2.5_LG\xml\Extra\extra.xml` |
+| `830` | `1096` | Legrand (key `2`) | `0` | Protocol and other device parameters | `2214_2.5_LG\xml\Protocol\protocol.xml` |
+
+All 20 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000295:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `752` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `2681` | `32` | `1288` |
+| `752` | `2` | `154` Internal Unit | Fixed/designated metadata | `2682` | `154` | `1289` |
+| `810` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3392` | `32` | `1646` |
+| `810` | `2` | `154` Internal Unit | Fixed/designated metadata | `3393` | `154` | `1647` |
+| `820` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3411` | `32` | `1665` |
+| `820` | `2` | `154` Internal Unit | Fixed/designated metadata | `3412` | `154` | `1666` |
+| `828` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3423` | `32` | `1677` |
+| `828` | `2` | `154` Internal Unit | Fixed/designated metadata | `3424` | `154` | `1678` |
+| `830` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3427` | `32` | `1681` |
+| `830` | `2` | `154` Internal Unit | Fixed/designated metadata | `3428` | `154` | `1682` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000295:s000014`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000295:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `752` | Product Programming | `3` | Canonical firmware/mode association |
+| `810` | Product Programming | `3` | Canonical firmware/mode association |
+| `820` | Product Programming | `3` | Canonical firmware/mode association |
+| `828` | Product Programming | `3` | Canonical firmware/mode association |
+| `830` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `752` | Ethernet | Canonical firmware/connection association |
+| `752` | Ethernet over USB | Canonical firmware/connection association |
+| `810` | Ethernet | Canonical firmware/connection association |
+| `810` | Ethernet over USB | Canonical firmware/connection association |
+| `820` | Ethernet | Canonical firmware/connection association |
+| `820` | Ethernet over USB | Canonical firmware/connection association |
+| `828` | Ethernet | Canonical firmware/connection association |
+| `828` | Ethernet over USB | Canonical firmware/connection association |
+| `830` | Ethernet | Canonical firmware/connection association |
+| `830` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating modes
+
+Section ID: `ownkb:section:d000295:s000016`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+These published settings are independent of catalogue programming-mode IDs. Revision/variant limitations are reconciled in Programming and Source reconciliation.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `First switch-on` | language; video N/P, app-connected unit, staircase light, teleloop; then server/network | `ST-00000724-EN` printed/PDF pp. 1-8, printed identifier `ST-00000517-EN`; `RA00162AE_EN` pp. 47-54,55-98 |
+| `App-connected unit` | one per system; owns call forwarding and answering machine | `ST-00000724-EN` printed/PDF pp. 1-8, printed identifier `ST-00000517-EN`; `RA00162AE_EN` pp. 47-54,55-98 |
+| `MyHOMEServer1 connection` | Ethernet or Wi-Fi; DHCP or manual IP; synchronization required | `ST-00000724-EN` printed/PDF pp. 1-8, printed identifier `ST-00000517-EN`; `RA00162AE_EN` pp. 47-54,55-98 |
+| `Update routes` | device settings / Door Entry for HOMETOUCH / Suite USB | `ST-00000724-EN` printed/PDF pp. 1-8, printed identifier `ST-00000517-EN`; `RA00162AE_EN` pp. 47-54,55-98 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000295:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `752` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `810` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `820` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `828` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `830` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000295:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `32` - Colors Touch Screen
+
+Section ID: `ownkb:section:d000295:s000019`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `documentation`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address; public documentation value, not an observed installation |
+| `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+#### Object `154` - Internal Unit
+
+Section ID: `ownkb:section:d000295:s000020`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N` | `0..3999` | `0` | Address |
+| `P` | `0..95` | `0` | Associated external unit |
+| `HAND_FREE` | `0` = Disable; `1` = Enable | `0` | HAND_FREE |
+| `PRO_STUDIO` | `0` = Disable; `1` = Enable | `0` | Professional Studio |
+| `DOOR_STATE` | `0` = Disable; `1` = Enable | `0` | Door state display |
+| `PEOPLE_S` | `0` = No; `1` = ?; `2` = ? | `0` | PeopleSearching |
+| `MENU_PRE` | `0..99` | `0` | MenuPreset |
+| `RING_T_OUT` | `1..30` | `10` | RingTimeOut |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `PE_T_OUT` | `3..90` | `6` | EUConnectionTimeOut |
+| `PI_T_OUT` | `3..90` | `18` | IUConnectionTimeOut |
+| `TEL_T_OUT` | `3..180` | `90` | TelConnectionTimeout |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
+| `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
+| `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000295:s000021`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000295:s000022`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000295:s000023`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000295:s000024`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion rule is attached to these slot rows. Resolve the active Object and apply its exact Firmware restrictions; generic resolution remains in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000295:s000025`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `128` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000295:s000026`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `32` - Colors Touch Screen | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `154` - Internal Unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000295:s000027`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000295:s000028`
+
+Applicability cues: `firmware`
+
+The home-automation objects are detected from the configured MyHOME_Up/MyHOMEServer1 system; this does not mean initial setup is absent. First switch-on selects language, N/P video-entry addressing, app-connected unit, staircase light and teleloop, then network connection and MyHOMEServer1 synchronisation. The first-switch-on menu allows sections to be skipped and completed later. Use DHCP or manual IP and Ethernet/Wi-Fi as documented. The video-entry app handles calls, locks, cameras and answering-machine events; the local panel adds favourites and configured home objects. Firmware updates use device settings with Internet, the Door Entry for HOMETOUCH app or Suite over USB. Check server firmware compatibility. Additional supply is mandatory in the sheet’s diagrams; in/out video wiring is allowed only with addressed calls. Parallel additional units need Master/Slave support. While the app is connected for a call/camera operation, other display operations are unavailable.
+
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+#### Home control prerequisites
+
+Section ID: `ownkb:section:d000295:s000029`
+
+Uncertainty: `may`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| MyHOMEServer1 association | DHCP is initially enabled. Select the actual server by its Device ID and enter its installer code; manual IP search is available. Imported functions rely on the already configured server. | Manual pp. 47–54 |
+| Temperature and scenarios | Thermostat/towel-warmer/fan-coil controls depend on configured objects. Scenario object starts a scenario created in MyHOME_Up; it is not a scenario programming editor. | Manual pp. 152–155 |
+| Alarm management | Requires BTicino4200/4201/4203 and installer association; country availability applies. Insertion scenarios/partitions and zone inclusion/exclusion may ask for the system code. Acknowledging an alarm display does not resolve its cause. | Manual pp. 177–185 |
+| Load management | Installer configuration required. A shed load can be force-enabled for 4hours with higher priority only within the maximum absorption threshold; its normal priority then resumes. Consumption viewing is assigned to MyHOME_Up in this edition. | Manual pp. 186–188 |
+| Topology | Additional supply required; only Master/Slave-capable additional IUs allowed in the parallel diagram. One app-connected IU per system and at most10 HOMETOUCH on the server LAN. | `ST_00001032_EN` pp. 4–6 |
+
+#### Dated app-update prerequisite
+
+Section ID: `ownkb:section:d000295:s000030`
+
+Applicability cues: `firmware`
+
+The [manufacturer notice of 18 June 2024](https://archive.openwebnet-ha.org/sha256/b1/c5/b1c57ba8d2097fbb90bdfe3b51753b625d8440d71b5b4ed1e65e80208f251ba9.pdf) names 3488/3488 W/067259 for Door Entry HOMETOUCH. From 20 June 2024 it requires at least Android 1.7.0 or iOS 1.6.0 to continue receiving calls. These are dated service prerequisites, not the latest release, installed firmware, or measured cloud availability.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000295:s000031`
+
+Applicability cues: `gateway`
+Provenance cues: `catalogue`, `database`
+
+3488 and 067259 are database identities; the shared sheet also names 3488 W as a documented external variant without adding it to this cluster’s catalogue records. The downloaded filename `ST-00000724-EN` prints `ST-00000517-EN` and 30/06/2020; both identifiers are preserved. “No configuration necessary” describes discovery of existing home objects, whereas the manual explicitly requires basic video/network/server setup. The current EOS sheet says HOMETOUCH is incompatible with Classe 300EOS and compatible only with MyHOMEServer1; a newer server or gateway is not substituted on the basis of branding.
+
+#### Reviewed source boundaries
+
+Section ID: `ownkb:section:d000295:s000032`
+
+Automatic import does not remove the need to associate MyHOMEServer1 and complete basic setup. One app-connected internal unit per system and ten HOMETOUCH panels on the server LAN are different limits. The 2022 sheet requires additional supply and excludes Classe 300EOS; it does not authorise substituting a newer server. Alarm and load controls require the explicitly associated equipment and configuration, with country-dependent availability.
+
+#### Retained source accounting
+
+Section ID: `ownkb:section:d000295:s000033`
+
+Cautions: `do not`, `not evidence`
+Provenance cues: `evidence`, `source`
+
+| Original | Examined role / remaining scope |
+| --- | --- |
+| `RA00162AE_EN.pdf` | PDF pp. 32–34,47–58,68–69,152–155,177–188,232–234: setup, server/alarm/load association and controls; remaining chapters unexamined |
+| `ST-00000724-EN.pdf` | PDF pp. 1–3:2020 sheet printed asST-00000517-EN; identity, rating and setup examined; later diagrams unexamined |
+| `3488-publisher-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `3488-italian-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `RA00162AE_IT.pdf` | PDF pp. 48–51,177,187: Italian server/alarm/load cross-check; remaining translation chapters unexamined |
+| `ST_00001032_IT.pdf` | PDF pp. 1,4: Italian rating, server and EOS-compatibility cross-check; remaining translation pages unexamined |
+| `ST_00001032_EN.pdf` | PDF pp. 1–6: complete2022 exact HOMETOUCH sheet, with additional-supply and EOS/server exclusions |
+| `ST-00002703-EN.pdf` | PDF p. 9: exact actuator/server ecosystem compatibility inspected; other product functions not transferred |
+| `door-entry-app-update-publisher-page.html` | Entire dated notice examined; names these references, app families and minimum Android/iOS releases; not evidence of present service availability |
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000295:s000034`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+Server/firmware compatibility, present app/cloud service, hearing-loop implementation, installed protocol/diagnostic behavior and integration with any later server require corroboration.
+
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000295:s000035`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `not evidence`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+These publisher-linked sources were identified but were not retained or used as evidence. Their presence is not evidence of installed firmware, a certified test result or additional capability.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `LGMDBDWSDK.PDF` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/Certif/LGMDBDWSDK.PDF) |
+| `Brochure Living_NOW 2M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing]([https://assets.legrand.com/pim/DOCUMENT/Brochure](https://assets.legrand.com/pim/DOCUMENT/Brochure) Living_NOW 2M.pdf) |
+| `Brochure Living_NOW 3M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing]([https://assets.legrand.com/pim/DOCUMENT/Brochure](https://assets.legrand.com/pim/DOCUMENT/Brochure) Living_NOW 3M.pdf) |
+| `Brochure MyHOME.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing]([https://assets.legrand.com/pim/DOCUMENT/Brochure](https://assets.legrand.com/pim/DOCUMENT/Brochure) MyHOME.pdf) |
+| `Catalogue Living_NOW 2M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing]([https://assets.legrand.com/pim/DOCUMENT/Catalogue](https://assets.legrand.com/pim/DOCUMENT/Catalogue) Living_NOW 2M.pdf) |
+| `Catalogue Living_NOW 3M.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing]([https://assets.legrand.com/pim/DOCUMENT/Catalogue](https://assets.legrand.com/pim/DOCUMENT/Catalogue) Living_NOW 3M.pdf) |
+| `MyHome_Suite_README_v2.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) |
+| `SMARTDES_030205.fwz` | Firmware binary; payload/update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/SMARTDES_030205.fwz) |
+
+[`RA00162AD_U_EN.pdf`](https://dar.bticino.com/asset/Documents/RA00162AD_U_EN.pdf) is an earlier manufacturer revision found during discovery; its full content has not been compared with AE. The source’s MyHOME_Up naming is historical and does not establish present app availability.
+
+### Sources
+
+Section ID: `ownkb:section:d000295:s000036`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0156)
+
+# Document: ownkb:document:d000296
+
+Source path: `devices/definitions/own-dev-0157-classe-100x16e-connected-video-internal-unit.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Classe 100X16E connected video internal unit
+
+Section ID: `ownkb:section:d000296:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000296:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+Classe 100X16E is a connected handsfree video-entry unit with a 5-inch colour display and dedicated call, lock and camera controls. Its joystick adjusts audio/video settings and Wi-Fi setup. The 344682 variant includes an inductive loop; the manual scopes that hearing-assistance feature specifically to that reference.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0157` | Project identity |
+| Technical description | Classe 100X16E connected video internal unit | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `344682`, `344782` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `2266` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Video door entry system | Main system association |
+| Item model / `modobj` | `99` | Main association; independent of project ID |
+| Firmware definition | `793`, `827`, `855`, `857`, `864`, `903` | Catalogue firmware IDs; version/build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Audio video, User interfaces | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000296:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `344682` | Established catalogue identity | Manufacturer database commercial record `2624` explicitly links this SKU to item `2266` |
+| BTicino | `344782` | Established catalogue identity | Manufacturer database commercial record `2646` explicitly links this SKU to item `2266` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000296:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `344682` | `8005543631591` | [344682-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/fc/32/fc326abea039bced8c9696794e2e507c465e560d4340b9f32a6b447ec8c190a8.pdf) PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000296:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `344682` | CLASSE100 X16E | Canonical commercial record `2624` |
+| `344782` | CLASSE100 X16E | Canonical commercial record `2646` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000296:s000006`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`, `not evidence`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `database`, `documentation`, `evidence`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE10815AG.pdf` | Instruction Use `LE10815AG` | `LE10815AG`;02/23-02PC | PDF pp. 1,4: dimensions, rear connectors and unpowered switch instructions; other multilingual sections unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/10/b7/10b7deb45cee0b0f84b139f4d4bb55a68eb0e35901d359fd37bab6fc27bd252a.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE10815AG.pdf) |
+| `RA00169AD_EN.pdf` | Technical Guide `RA00169AD_EN` | `RA00169AD`-05/23-PC; printed cover label | PDF pp. 19–26,38–41 and joystick/settings chapters42–56: configuration, interlocks and settings examined; other chapters not reviewed in full | [Archived original](https://archive.openwebnet-ha.org/sha256/37/61/37619bbb0892bf4464a09f2fe909a72d735a57eef163a373bfa3db552c6f9f9a.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00169AD_EN.pdf) |
+| `ST-00002025-EN.pdf` | English counterpart of manufacturer-linked document | `ST-00002025-EN; 01/10/2024` | PDF pp. 1–12,13–25: physical/configuration/topology/settings and app scopes examined; manufacturer key-count/UDP defects retained | [Archived original](https://archive.openwebnet-ha.org/sha256/9a/61/9a618a65d05fcbcf33dd25a1dc542c1df12f5d2da8ae169652aa2ff1cd73df95.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST-00002025-EN.pdf) |
+| `344682-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/fc/32/fc326abea039bced8c9696794e2e507c465e560d4340b9f32a6b447ec8c190a8.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-344682&include_technical=1) |
+| `344682-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/1d/ac/1dacc331224a5f7c5abb66ef33b922edf8ed3c5f51037aa3ed53bcabe435a49f.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344682) |
+| `FIS_LE10815AG.pdf` | Legacy manufacturer technical documentation | `FIS_LE10815AG; printed publication date not established` | Retained legacy counterpart; byte fingerprint checked, content not separately compared in this batch. No unique claim rests on this original | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/25/a525a249150815b8722d85f54ee0fd2462b171247783596ac90afbb6625a81c4.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/FIS_LE10815AG.pdf) |
+| `LE10815AF.pdf` | Legacy manufacturer technical documentation | `LE10815AF; printed publication date not established` | PDF p. 1: older installation/revision scope checked; remaining multilingual instructions unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/94/7e/947e54190d9e552cd2cc627970728bb586f53be7f03432e995f3f94c84a8ea15.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE10815AF.pdf) |
+| `RA00169AC_IT.pdf` | Legacy manufacturer technical documentation | `RA00169AC`-11/21-PC; printed cover label | PDF pp. 25,31: older physical-only setup and M10 discrepancy cross-check; remaining translation unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/18/7d/187d06ce12e88e55ca056cffdad2ec4a4c59e43e5bef4cf925d1d013e57e9b6b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00169AC_IT.pdf) |
+| `RA00169AC_EN.pdf` | English counterpart of manufacturer-linked document | `RA00169AC`-11/21-PC; printed cover label | PDF pp. 3–4,19–20,25–26: older Door Entry app generation, controls, physical addressing and first mode block; other pages unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/9e/e7/9ee7d8dfa8599babcb1a75809e71b40af98d06a9e6b4d914c5ab810dfc69a739.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00169AC_EN.pdf) |
+| `RA00169AD_IT.pdf` | Legacy manufacturer technical documentation | `RA00169AD`-05/23-PC; printed cover label | PDF pp. 25–26: Italian special-function/M10 table cross-check; remaining translation unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/c4/af/c4afc2096eb236c2e28596731d6497d31d1928b65ffaf710d8b8d16e6392d732.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00169AD_IT.pdf) |
+| `RA00169AD_EN-dar-source.pdf` | English counterpart of manufacturer-linked document | `RA00169AD`-05/23-PC; printed cover label | All64 pages compared by normalised extracted text with assets original; identical text, different archived bytes. Same selected procedural scope; images/resources not proven identical | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/9a/5b9a15b340bdeb242f79add85b7086cd73c717d13e6be5c73e051ef41c504269.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00169AD_EN.pdf) |
+| `ST-00002025-IT.pdf` | Legacy manufacturer technical documentation | `ST-00002025-IT; 01/10/2024` | PDF pp. 1,6: Italian network and M05 table cross-check; remaining translation pages unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/48/23/4823655d636e34e1e07e99b70259c0bd110fc98c95bfad7a50822ec1466f842b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST-00002025-IT.pdf) |
+| `ST_00000695_IT.pdf` | Legacy manufacturer technical documentation | `ST_00000695_IT; 17/03/2020` | PDF pp. 1–2: Italian older app/network/configuration cross-check; later pages unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/cc/5e/cc5ee80c6d2ae18e7f171fd308e6c2c77149f10715696234093d5185381796f2.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00000695_IT.pdf) |
+| `ST_00000695_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00000695_EN; 17/03/2020` | PDF pp. 1–2:2020 Door Entry app/network/rating/physical setup; remaining settings diagrams unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/0f/5e/0f5eb623b13f303e423fa0a15780bc6831b8d0a064da003c4f5ab1e855933e9d.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00000695_EN.pdf) |
+| `ST-00000825-ES.pdf` | Exact-product manufacturer revision documentation | `ST-00000825-ES; 23/10/2020` | PDF p. 1: exact 344782 identity, key count, wireless and absent loop; topology limitations read in printed notes, remaining mode/settings pages unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/e7/5c/e75c25178f7e3aa346074e1e6e6104241a402df2208dcfe7e9624a0dbca5969e.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00000825-ES.pdf) |
+| `Classe100X_README_v1.pdf` | Exact-product manufacturer revision documentation | `v1; 04/08/2025` | PDF p. 1: entire2025 exact-reference generation and incompatible firmware selection notice | [Archived original](https://archive.openwebnet-ha.org/sha256/c8/87/c8879c09bbe39555f589dcaa24f4bb8a209bfa62e7f7a9f1ab4d656dee24c024.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/Classe100X_README_v1.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2266`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `ST_00001240_EN.pdf` | Exact2023 Home + Security technical sheet | `ST-00001240-EN`;24/05/2023 | PDF pp. 1–2,11–13,24–25 examined for generation, topology, controls and safe-door-lock; remaining mode/adjustment pages not compared in full | [Archived original](https://archive.openwebnet-ha.org/sha256/b4/fa/b4faf4c2ac3045a7a2ac04a225c098848c07fd04f8db7e9cf8dea27f09b9da11.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/ST_00001240_EN.pdf) |
+| `door-entry-app-update-publisher-page.html` | Exact-reference manufacturer app notice | 18 June 2024; minimums effective20 June 2024 | Entire dated notice examined; names these references, app families and minimum Android/iOS releases; not evidence of present service availability | [Archived original](https://archive.openwebnet-ha.org/sha256/b1/c5/b1c57ba8d2097fbb90bdfe3b51753b625d8440d71b5b4ed1e65e80208f251ba9.pdf) | [Publisher source](https://www.bticino.com/news/door-entry-app-important-update-available-security-reliability-and-performance-app) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000296:s000007`
+
+Applicability cues: `scs`, `tcp`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Supply / maximum SCS standby draw | `18..27 Vdc / 37 mA` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Maximum operating SCS draw | `400 mA` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Temperature / dimensions | `5..40 °C; 164 x 165 x 20.5 mm` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Display | `5-inch, 16:9 colour LCD` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Maximum terminal cable section | `2 x 1 mm²` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Wireless | `IEEE 802.11 b/g/n; 2.4..2.4835 GHz; transmission <20 dBm` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Published security | `WEP/WPA/WPA2` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Inductive loop, 344682 only | `0..9 kHz; field <1.005 A/m` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782; AD p. 38 for 344682-only loop |
+| 2024 network traffic | `outbound UDP 3478 and 0..65536 for media as printed; outbound UDP/TCP 443 and 25050 for web/authentication` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Accessory | `344692 tabletop supports; wall bracket supplied` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| 344782 / 2020 network traffic | `5228 SIP device/app; UDP 0..65000 media; 8883 MQTT cloud; HTTP/HTTPS 80/443` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000296:s000008`
+
+Applicability cues: `not applicable`
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| With video | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Installation technique | `Bus system` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Mounting method | `Surface mounted` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Material | `Plastic` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Picture system | `PAL` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Property picture system | `Colour` | `344682-publisher-product-sheet.pdf` PDF p. 3 |
+| With memory function | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Overhear protected | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Operation door lock | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Control extra function(s) | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Hands free | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Function lamps | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Can be connected to smartphone | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Screen diagonal | `127 mm` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Screen diagonal (inch) | `5 inch` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Hearing aid compatible | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| With automatic door opener | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Colour | `White` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Type of interface | `Wi-Fi` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Mutable call tone | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Internal communication | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Specific call tone | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Additional device connectable | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Loudness setting | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| With touch screen | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Width | `164 mm` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Height | `165 mm` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Depth | `20.5 mm` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Compatible with Apple HomeKit | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Compatible with Google Assistant | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Compatible with Amazon Alexa | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| IFTTT support available | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Built-in depth | `0 mm` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| degree of impact strength (IK) | `IK07` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Degree of protection (IP) | `Not applicable` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Operating / setting temperature (Min-Max) | `5-40 °C` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Storage temperature (Min-Max) | `-10-70 °C` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Voltage type | `DC` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Nominal voltage (Min-Max) | `18-27 V` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Supply current (Min-Max) | `0.030-0.35 A` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Frequency (Min-Max) | `0-0 Hz` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Sound level | `81 dB` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Standby consumption | `30 mA` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Antimicrobial treatment | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Cable nature for connection | `Flexible or rigid` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Cable section (Min-Max) | `0.1-2.5 mm²` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Label space/information surface | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Fitted with USB plug | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Fitted with rainproof plate protection | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| With complemantary luminous signal | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Control mode | `Wireless` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Contains Batteries | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Additional unit | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Maximum number of additional screens | `63` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Addressable | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Door entry system with mobile application | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Number of ringtones | `16` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Remote opening of gate / Electric door opener | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Screen resolution | `Other` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Screen brightness setting | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Screen contrast setting | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Memory video function | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Camera type | `Not applicable` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Max distance between internal and external unit | `600 m` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Connected object | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Operating method | `Wifi network 2.4G` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Application store for download | `App Store, Google Play Store` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Programming way | `Smartphone apps` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| With voice command | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Programmable | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Interoperable connection Protocol | `No` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Connectable by Internet box | `Yes` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Application name | `Home + Security` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Product use function | `Door entry systems` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+| Software Update Duration (years) | `3` | `ST-00002025-EN` p. 1; `ST-00000825-ES` p. 1 for 344782 |
+
+### Identity
+
+Section ID: `ownkb:section:d000296:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2266` | Canonical catalogue |
+| Technical item description | CLASSE100 X16E | Canonical catalogue |
+| Item family | 0; key `26` | Canonical catalogue |
+| Main system | Video door entry system; key `4` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `99` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `2` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000296:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `99` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000296:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `793` | `1` | `0` | `1` | `1` | Not catalogue default | Official |
+| `827` | `1` | `4` | `0` | `1` | Not catalogue default | Official |
+| `855` | `1` | `5` | `0` | `1` | Not catalogue default | Official |
+| `857` | `2` | `0` | `0` | `1` | Not catalogue default | Official |
+| `864` | `2` | `1` | `0` | `1` | Not catalogue default | Official |
+| `903` | `2` | `3` | `0` | `1` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000296:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `793` | `1044` | BTicino (key `1`) | `0` | Extra | `2266_1.0_BT\xml\Extra\extra.xml` |
+| `793` | `1045` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2266_1.0_BT\xml\Protocol\protocol.xml` |
+| `827` | `1085` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2266_1.4_BT\xml\Protocol\protocol.xml` |
+| `827` | `1090` | BTicino (key `1`) | `0` | Extra | `2266_1.4_BT\xml\Extra\extra.xml` |
+| `855` | `1125` | BTicino (key `1`) | `0` | Extra | `2266_1.5_BT\xml\Extra\extra.xml` |
+| `855` | `1126` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2266_1.5_BT\xml\Protocol\protocol.xml` |
+| `857` | `1121` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2266_2.0_BT\xml\Protocol\protocol.xml` |
+| `857` | `1122` | BTicino (key `1`) | `0` | Extra | `2266_2.0_BT\xml\Extra\extra.xml` |
+| `864` | `1127` | BTicino (key `1`) | `0` | Extra | `2266_2.1_BT\xml\Extra\extra.xml` |
+| `864` | `1128` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2266_2.1_BT\xml\Protocol\protocol.xml` |
+| `903` | `1141` | BTicino (key `1`) | `0` | Extra | `2266_2.3_BT\xml\Extra\extra.xml` |
+| `903` | `1142` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2266_2.3_BT\xml\Protocol\protocol.xml` |
+
+All 12 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000296:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `793` | `1` | `154` Internal Unit | Fixed/designated metadata | `3175` | `154` | `1538` |
+| `827` | `1` | `154` Internal Unit | Fixed/designated metadata | `3422` | `154` | `1676` |
+| `855` | `1` | `154` Internal Unit | Fixed/designated metadata | `3556` | `154` | `1758` |
+| `857` | `1` | `154` Internal Unit | Fixed/designated metadata | `3559` | `154` | `1761` |
+| `864` | `1` | `154` Internal Unit | Fixed/designated metadata | `3699` | `154` | `1774` |
+| `903` | `1` | `154` Internal Unit | Fixed/designated metadata | `4818` | `154` | `2115` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000296:s000014`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000296:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `793` | Product Programming | `3` | Canonical firmware/mode association |
+| `827` | Product Programming | `3` | Canonical firmware/mode association |
+| `855` | Product Programming | `3` | Canonical firmware/mode association |
+| `857` | Product Programming | `3` | Canonical firmware/mode association |
+| `864` | Product Programming | `3` | Canonical firmware/mode association |
+| `903` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `793` | Ethernet over USB | Canonical firmware/connection association |
+| `827` | Ethernet over USB | Canonical firmware/connection association |
+| `855` | Ethernet over USB | Canonical firmware/connection association |
+| `857` | Ethernet over USB | Canonical firmware/connection association |
+| `864` | Ethernet over USB | Canonical firmware/connection association |
+| `903` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating modes
+
+Section ID: `ownkb:section:d000296:s000016`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+These published settings are independent of catalogue programming-mode IDs. Revision/variant limitations are reconciled in Programming and Source reconciliation.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `N / P / M` | physical internal-unit address / entrance panel / programmable keys | `ST-00002025-EN` printed/PDF pp. 1-25; `RA00169AD_EN` pp. 19-26,27-41,42-56; `ST-00000825-ES` printed/PDF p. 1 for 344782; `Classe100X_README_v1` p. 1 for firmware-generation rows |
+| `Basic M` | `00..06`,10,12,13 arrangements in exact tables | `ST-00002025-EN` printed/PDF pp. 1-25; `RA00169AD_EN` pp. 19-26,27-41,42-56; `ST-00000825-ES` printed/PDF p. 1 for 344782; `Classe100X_README_v1` p. 1 for firmware-generation rows |
+| `Special-function offsets` | +20 Office; current manual +40 paging/+80 combined, revision-specific | `ST-00002025-EN` printed/PDF pp. 1-25; `RA00169AD_EN` pp. 19-26,27-41,42-56; `ST-00000825-ES` printed/PDF p. 1 for 344782; `Classe100X_README_v1` p. 1 for firmware-generation rows |
+| `Parallel units without 346850` | maximum three; same N | `ST-00002025-EN` printed/PDF pp. 1-25; `RA00169AD_EN` pp. 19-26,27-41,42-56; `ST-00000825-ES` printed/PDF p. 1 for 344782; `Classe100X_README_v1` p. 1 for firmware-generation rows |
+| `Black joystick-menu background` | 2025 readme: Home + Security generation; C100XR_020301.fwz | `ST-00002025-EN` printed/PDF pp. 1-25; `RA00169AD_EN` pp. 19-26,27-41,42-56; `ST-00000825-ES` printed/PDF p. 1 for 344782; `Classe100X_README_v1` p. 1 for firmware-generation rows |
+| `Purple joystick-menu background` | 2025 readme: Door Entry generation; C100X_010508.fwz | `ST-00002025-EN` printed/PDF pp. 1-25; `RA00169AD_EN` pp. 19-26,27-41,42-56; `ST-00000825-ES` printed/PDF p. 1 for 344782; `Classe100X_README_v1` p. 1 for firmware-generation rows |
+| `Firmware interchangeability` | manufacturer says generations incompatible, redesign released in 2023 | `ST-00002025-EN` printed/PDF pp. 1-25; `RA00169AD_EN` pp. 19-26,27-41,42-56; `ST-00000825-ES` printed/PDF p. 1 for 344782; `Classe100X_README_v1` p. 1 for firmware-generation rows |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000296:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `793` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `793` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `793` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `793` | `P1` | `0..6` | `0` | Configurator P1 |
+| `793` | `P2` | `0..9` | `0` | Configurator P2 |
+| `793` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `793` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `827` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `827` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `827` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `827` | `P1` | `0..6` | `0` | Configurator P1 |
+| `827` | `P2` | `0..9` | `0` | Configurator P2 |
+| `827` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `827` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `855` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `855` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `855` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `855` | `P1` | `0..6` | `0` | Configurator P1 |
+| `855` | `P2` | `0..9` | `0` | Configurator P2 |
+| `855` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `855` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `857` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `857` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `857` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `857` | `P1` | `0..6` | `0` | Configurator P1 |
+| `857` | `P2` | `0..9` | `0` | Configurator P2 |
+| `857` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `857` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `864` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `864` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `864` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `864` | `P1` | `0..6` | `0` | Configurator P1 |
+| `864` | `P2` | `0..9` | `0` | Configurator P2 |
+| `864` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `864` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `903` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `903` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `903` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `903` | `P1` | `0..6` | `0` | Configurator P1 |
+| `903` | `P2` | `0..9` | `0` | Configurator P2 |
+| `903` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `903` | `M2` | `0..9` | `0` | M2 (0-9) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000296:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `154` - Internal Unit
+
+Section ID: `ownkb:section:d000296:s000019`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N` | `0..3999` | `0` | Address |
+| `P` | `0..95` | `0` | Associated external unit |
+| `HAND_FREE` | `0` = Disable; `1` = Enable | `0` | HAND_FREE |
+| `PRO_STUDIO` | `0` = Disable; `1` = Enable | `0` | Professional Studio |
+| `DOOR_STATE` | `0` = Disable; `1` = Enable | `0` | Door state display |
+| `PEOPLE_S` | `0` = No; `1` = ?; `2` = ? | `0` | PeopleSearching |
+| `MENU_PRE` | `0..99` | `0` | MenuPreset |
+| `RING_T_OUT` | `1..30` | `10` | RingTimeOut |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `PE_T_OUT` | `3..90` | `6` | EUConnectionTimeOut |
+| `PI_T_OUT` | `3..90` | `18` | IUConnectionTimeOut |
+| `TEL_T_OUT` | `3..180` | `90` | TelConnectionTimeout |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
+| `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
+| `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000296:s000020`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000296:s000021`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000296:s000022`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000296:s000023`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion rule is attached to these slot rows. Resolve the active Object and apply its exact Firmware restrictions; generic resolution remains in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000296:s000024`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `99` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000296:s000025`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `154` - Internal Unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000296:s000026`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000296:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The exact sheet and current manual require physical N/P/M configuration; the joystick/Wi-Fi/app settings do not replace N/P/M addressing. N identifies the unit; P associates the entrance panel and idle door lock; M selects programmable-key functions. Parallel units without 346850 are limited to three with the same N. Basic `M=00..06`,10,12,13 arrangements cover internal/external intercom, entrance-panel activation and additional locks. The 2024 sheet also lists +20 Office variants; the current manual describes +40 paging and +80 combined Office/paging, which must be scoped to that manual’s applicability rather than assumed for all catalogue firmware. Safe-door-lock switching is set unpowered; it disables lock control except under the stated call conditions. The Home + Security app receives calls, controls locks, cameras and compatible Netatmo cameras; the current manual explains the local/remote distinction. Mini-USB supports firmware update; the app route is separately documented. Termination, additional-supply enable and optional bell point-to-point wiring follow the exact diagrams. The exact 344782 sheet permits one Classe100X per apartment, recommends one per Wi-Fi SSID for best performance, and requires a wholly two-wire installation. The manufacturer readme v1 dated 04/08/2025 explicitly says the two generations released before/after the 2023 redesign have mutually incompatible firmware. Press the side wheel: black background uses C100XR_020301.fwz for Home + Security; purple uses C100X_010508.fwz for Door Entry. These are published visual-identification/update instructions, not an installed Firmware tuple measured here.
+
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+#### Key assignments and safeguards
+
+Section ID: `ownkb:section:d000296:s000028`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Basic M assignments | 00: internal intercom, EP+1, locks+1/+2;01: internal/intercom1, EP+1, lock+1;02: intercom1/2, locks1/2;03: intercom1–4;04: EP+1, intercom1, locks1/2;05: locks1–4 in the sheet;06: intercom to `N=1` except from `N=1`, internal intercom, locks1/2;10: general intercom, EP+1, locks1/2;12: external intercom1/2, locks1/2;13: external intercom1–4. Intercom scope depends on346850 apartment interface. | AD pp. 19–26;2024 sheet pp. 2–9 |
+| Mode-table discrepancies | Most base rows use +20 Office,+40 paging,+80 combined. AD EN and IT p. 25 print M30/M40/M50 for the M10 block, inconsistent with applying those offsets. AD EN p. 23 repeats P+1/P+2 for the last M05 locks while the sheet p. 6 gives P+3/P+4. Do not silently calculate replacements. | AD EN/IT p. 25; AD EN p. 23;2024 sheet p. 6 |
+| Safe lock / Office | Safe-door-lock switch changed unpowered: release only during EP/IU voice communication; affected keys flash white otherwise. Safe lock and Office cannot coexist. Office also excludes door-status service. | AD pp. 39–41;2023/2024 sheet p. 24 |
+| Parallel / connected-unit counts | Physical N note allows3 parallel IUs without346850; particular sheet diagrams allow5 in specified single-family/interface configurations and3 in the two-family case. One connected Classe100X per apartment; one per Wi-Fi SSID recommended. Export63 additional screens is a classification value, not a wiring authorisation. | 2023 sheet pp. 2,11–12;2024 sheet pp. 10–12; ES sheet pp. 8–12; exact export p. 4 |
+
+#### Dated app-update prerequisite
+
+Section ID: `ownkb:section:d000296:s000029`
+
+Applicability cues: `firmware`
+Cautions: `must not`
+
+The [manufacturer notice of 18 June 2024](https://archive.openwebnet-ha.org/sha256/b1/c5/b1c57ba8d2097fbb90bdfe3b51753b625d8440d71b5b4ed1e65e80208f251ba9.pdf) names 344682/344932/344786 for Door Entry CLASSE100X. From 20 June 2024 it requires at least Android 1.7.3 or iOS 1.6.0 to continue receiving calls. These are dated service prerequisites, not the latest release, installed firmware, or measured cloud availability. The notice does not name344782 and must not be applied to the later Home + Security generation.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000296:s000030`
+
+Applicability cues: `firmware`, `revision`, `tcp`
+Provenance cues: `catalogue`, `source`
+
+344682 and 344782 are explicit SKU-to-item relationships; the exact Spanish `ST-00000825-ES` sheet now independently documents 344782 despite the missing current Italian page. `RA00169AD` explicitly restricts the inductive loop to 344682, so that capability is not copied to 344782. Current and older AC/AD manuals and `ST_00000695`/`ST-00002025` sheets retain different app generations (Door Entry CLASSE100X versus Home + Security) and must be read by revision. The current network table prints 65536 as the UDP upper value; that is preserved as a publisher value, not converted into a valid port number or silently corrected. Configuration remains physical despite remote and catalogue virtual metadata. The assets.legrand.com and dar.bticino.com `RA00169AD_EN` originals have different SHA-256 bytes but identical normalised extracted text. Both originals are retained and distinguished locally; text equality does not prove identical embedded resources or visuals. The firmware readme establishes a 2023 generation split rather than an assumed catalogue-firmware boundary.
+
+The 24/05/2023 sheet already names Home + Security. The 2020 sheet names Door Entry CLASSE100X and gives SIP `5228`, MQTT `8883` and UDP `0..65000`. The 2024 sheet instead specifies outgoing UDP `3478` and `0..65536` for multimedia, and outgoing UDP/TCP `443` and `25050` for web traffic and authentication. Its UDP upper value exceeds a valid 16-bit port; the publisher defect is preserved without endorsing it as a usable port. Exact-sheet standby/operating draws of `37/400 mA` differ from the export’s `30 mA` and `0.030..0.35 A`. The English sheet’s introductory count of three capacitive keys conflicts with its four programmable keys plus lock/camera/staircase legend and the Spanish 344782 description of seven; the detailed physical legend takes precedence for locating controls, without silently correcting the source count.
+
+#### Reviewed source boundaries
+
+Section ID: `ownkb:section:d000296:s000031`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+The 2025 readme distinguishes incompatible generations by their black or purple joystick-menu background; no catalogue firmware ID is assumed to identify that hardware boundary. The 2023 technical sheet already names Home + Security. The English and Italian AD mode tables share the exceptional M10 block, and the older AC Italian table repeats the same discrepancy. The exact Spanish sheet establishes the `344782` variant; its hearing-assistance scope is kept separate from `344682`.
+
+#### Retained source accounting
+
+Section ID: `ownkb:section:d000296:s000032`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`, `not evidence`
+Provenance cues: `evidence`, `source`
+
+| Original | Examined role / remaining scope |
+| --- | --- |
+| `LE10815AG.pdf` | PDF pp. 1,4: dimensions, rear connectors and unpowered switch instructions; other multilingual sections unexamined |
+| `RA00169AD_EN.pdf` | PDF pp. 19–26,38–41 and joystick/settings chapters42–56: configuration, interlocks and settings examined; other chapters not reviewed in full |
+| `ST-00002025-EN.pdf` | PDF pp. 1–12,13–25: physical/configuration/topology/settings and app scopes examined; manufacturer key-count/UDP defects retained |
+| `344682-publisher-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `344682-italian-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `FIS_LE10815AG.pdf` | Retained legacy counterpart; byte fingerprint checked, content not separately compared in this batch. No unique claim rests on this original |
+| `LE10815AF.pdf` | PDF p. 1: older installation/revision scope checked; remaining multilingual instructions unexamined |
+| `RA00169AC_IT.pdf` | PDF pp. 25,31: older physical-only setup and M10 discrepancy cross-check; remaining translation unexamined |
+| `RA00169AC_EN.pdf` | PDF pp. 3–4,19–20,25–26: older Door Entry app generation, controls, physical addressing and first mode block; other pages unexamined |
+| `RA00169AD_IT.pdf` | PDF pp. 25–26: Italian special-function/M10 table cross-check; remaining translation unexamined |
+| `RA00169AD_EN-dar-source.pdf` | All64 pages compared by normalised extracted text with assets original; identical text, different archived bytes. Same selected procedural scope; images/resources not proven identical |
+| `ST-00002025-IT.pdf` | PDF pp. 1,6: Italian network and M05 table cross-check; remaining translation pages unexamined |
+| `ST_00000695_IT.pdf` | PDF pp. 1–2: Italian older app/network/configuration cross-check; later pages unexamined |
+| `ST_00000695_EN.pdf` | PDF pp. 1–2:2020 Door Entry app/network/rating/physical setup; remaining settings diagrams unexamined |
+| `ST-00000825-ES.pdf` | PDF p. 1: exact 344782 identity, key count, wireless and absent loop; topology limitations read in printed notes, remaining mode/settings pages unexamined |
+| `Classe100X_README_v1.pdf` | PDF p. 1: entire2025 exact-reference generation and incompatible firmware selection notice |
+| `ST_00001240_EN.pdf` | PDF pp. 1–2,11–13,24–25 examined for generation, topology, controls and safe-door-lock; remaining mode/adjustment pages not compared in full |
+| `door-entry-app-update-publisher-page.html` | Entire dated notice examined; names these references, app families and minimum Android/iOS releases; not evidence of present service availability |
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000296:s000033`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+The exact firmware/production boundary behind every catalogue firmware ID, correction of the printed 2024 UDP upper bound, present app-service behavior and installed diagnostics remain uncorroborated. Exact 344782 documentation is retained; its absent current product page is no identity gap.
+
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000296:s000034`
+
+Applicability cues: `firmware`
+Cautions: `not evidence`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked sources were identified but were not retained or used as evidence. Their presence is not evidence of installed firmware, a certified test result or additional capability.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `LGHZMVXGUQ.PDF` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/Certif/LGHZMVXGUQ.PDF) |
+| `Classe_100.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Classe_100.pdf) |
+| `C100X_010508.fwz` | Firmware binary; payload/update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/C100X_010508.fwz) |
+| `C100XR_020311.fwz` | Firmware binary; payload/update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/C100XR_020311.fwz) |
+| `MyHome_Suite_README_v2.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) |
+
+### Sources
+
+Section ID: `ownkb:section:d000296:s000035`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0157)
+
+# Document: ownkb:document:d000297
+
+Source path: `devices/definitions/own-dev-0158-easy-kit-connected-video-entry-kit.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Easy Kit Connected video-entry kit
+
+Section ID: `ownkb:section:d000297:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000297:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+This catalogue cluster groups the Easy Kit Connected references 318011 and 369420. The retained 369420 kit manual describes a 7-inch connected handsfree monitor with door, gate, light and intercom controls. Wi-Fi supports the published Door Entry EASYKIT service; variant-specific documentation is needed before assigning every 369420 kit detail to 318011.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0158` | Project identity |
+| Technical description | Easy Kit Connected video-entry kit | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `318011`, `369420` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `2279` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Video door entry system | Main system association |
+| Item model / `modobj` | `100` | Main association; independent of project ID |
+| Firmware definition | `809` | Catalogue firmware IDs; version/build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Audio video, User interfaces, Multifunction devices | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000297:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `318011` | Established catalogue identity | Manufacturer database commercial record `2640` explicitly links this SKU to item `2279` |
+| Legrand | `369420` | Established catalogue identity | Manufacturer database commercial record `2642` explicitly links this SKU to item `2279` |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000297:s000004`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `318011` | Easy Kit Connnected | Canonical commercial record `2640` |
+| `369420` | Easy Kit Connnected | Canonical commercial record `2642` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000297:s000005`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `not evidence`
+Provenance cues: `catalogue`, `database`, `evidence`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE11336AC.pdf` | Exact-product manufacturer original | `LE11336AC01PC-21W38; printed revision label` | English sections PDF pp. 3–6,14,18–20,21–40; p. 5 expansion diagram inspected visually. Remaining external-panel/translation chapters unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/19/b8/19b830b183591f73371d050eed408836579cad37a1d815fbfca968f3026b8709.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE11336AC.pdf) |
+| `EASYKIT_CONNECTED_D_E_READMEv1.pdf` | Exact catalogue-reference compatibility/readme | `EASYKIT_CONNECTED_D_E_READMEv1; 04/08/2025` | PDF p. 1: entire exact-reference list and software environment,4August 2025 | [Archived original](https://archive.openwebnet-ha.org/sha256/b5/d3/b5d30fbae1c4ac0b1ea6cede9cf5cce7ceb968b39875beb523741559793d42b0.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/EASYKIT_CONNECTED_D_E_READMEv1.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2279`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `door-entry-app-update-publisher-page.html` | Exact-reference manufacturer app notice | 18 June 2024; minimums effective20 June 2024 | Entire dated notice examined; names these references, app families and minimum Android/iOS releases; not evidence of present service availability | [Archived original](https://archive.openwebnet-ha.org/sha256/b1/c5/b1c57ba8d2097fbb90bdfe3b51753b625d8440d71b5b4ed1e65e80208f251ba9.pdf) | [Publisher source](https://www.bticino.com/news/door-entry-app-important-update-available-security-reliability-and-performance-app) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000297:s000006`
+
+Provenance cues: `evidence`, `source`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| 369420 monitor display | `7-inch, 16:9; dedicated touch control keys and joystick` | `LE11336AC` p. 14 |
+| 369420 power-source marking | `DC 30 V / 30 W; supply marking, not measured monitor consumption` | `LE11336AC` p. 18 |
+| Wireless, 369420 | `IEEE 802.11 b/g/n; 2.4..2.4835 GHz; <20 dBm; WEP/WPA/WPA2` | `LE11336AC` p. 20 |
+| 369420 connectors | `D1/D2 previous panel or monitor; R1/R2 next monitor; mini-USB service` | `LE11336AC` p. 18 |
+| Family / role selection | `family 1/family 2 and Master/Slave switches` | `LE11336AC` p. 18 |
+| 369420 cable limits | `80 m for 2 x 0.28 mm² twisted pair / 100 m for 2 x 0.5 mm² 573999 cable` | `LE11336AC` p. 3 |
+| CCTV secondary-panel connection | `100 m coaxial in specified diagram` | `LE11336AC` p. 6 |
+| Published app limit | `one connected indoor unit per family linked to home Wi-Fi/app` | `LE11336AC` p. 5 |
+| Software readme references | `318011 explicitly listed in BTicino family; 369420 in Legrand family` | `EASYKIT_CONNECTED_D_E_READMEv1` p. 1 |
+
+### Identity
+
+Section ID: `ownkb:section:d000297:s000007`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2279` | Canonical catalogue |
+| Technical item description | Easy Kit Connnected | Canonical catalogue |
+| Item family | 0; key `20` | Canonical catalogue |
+| Main system | Video door entry system; key `4` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `100` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `2` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000297:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `100` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000297:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `809` | `1` | `0` | `0` | `1` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000297:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `809` | `1046` | BTicino (key `1`) | `0` | Extra | `2279_1.0_BT\xml\Extra\extra.xml` |
+| `809` | `1047` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2279_1.0_BT\xml\Protocol\protocol.xml` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000297:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `809` | `1` | `154` Internal Unit | Fixed/designated metadata | `3391` | `154` | `1645` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000297:s000012`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000297:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `809` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `809` | Ethernet | Canonical firmware/connection association |
+| `809` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating modes
+
+Section ID: `ownkb:section:d000297:s000014`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+These published settings are independent of catalogue programming-mode IDs. Revision/variant limitations are reconciled in Programming and Source reconciliation.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `369420 F1 / F2` | single/two-family addressing; entrance button adapts | `LE11336AC` printed/PDF pp. 3-6,14,18-20,21-40; `EASYKIT_CONNECTED_D_E_READMEv1` PDF pp. 1-2 |
+| `369420 Master / Slave` | monitor role selection | `LE11336AC` printed/PDF pp. 3-6,14,18-20,21-40; `EASYKIT_CONNECTED_D_E_READMEv1` PDF pp. 1-2 |
+| `Idle / active-call door,gate,light` | main panel / communicating panel | `LE11336AC` printed/PDF pp. 3-6,14,18-20,21-40; `EASYKIT_CONNECTED_D_E_READMEv1` PDF pp. 1-2 |
+| `App connection` | one connected monitor per family | `LE11336AC` printed/PDF pp. 3-6,14,18-20,21-40; `EASYKIT_CONNECTED_D_E_READMEv1` PDF pp. 1-2 |
+| `318011` | exact software readme identity; full exact kit instruction still absent | `LE11336AC` printed/PDF pp. 3-6,14,18-20,21-40; `EASYKIT_CONNECTED_D_E_READMEv1` PDF pp. 1-2 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000297:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `809` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000297:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `154` - Internal Unit
+
+Section ID: `ownkb:section:d000297:s000017`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N` | `0..3999` | `0` | Address |
+| `P` | `0..95` | `0` | Associated external unit |
+| `HAND_FREE` | `0` = Disable; `1` = Enable | `0` | HAND_FREE |
+| `PRO_STUDIO` | `0` = Disable; `1` = Enable | `0` | Professional Studio |
+| `DOOR_STATE` | `0` = Disable; `1` = Enable | `0` | Door state display |
+| `PEOPLE_S` | `0` = No; `1` = ?; `2` = ? | `0` | PeopleSearching |
+| `MENU_PRE` | `0..99` | `0` | MenuPreset |
+| `RING_T_OUT` | `1..30` | `10` | RingTimeOut |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `PE_T_OUT` | `3..90` | `6` | EUConnectionTimeOut |
+| `PI_T_OUT` | `3..90` | `18` | IUConnectionTimeOut |
+| `TEL_T_OUT` | `3..180` | `90` | TelConnectionTimeout |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
+| `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
+| `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000297:s000018`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000297:s000019`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000297:s000020`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000297:s000021`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion rule is attached to these slot rows. Resolve the active Object and apply its exact Firmware restrictions; generic resolution remains in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000297:s000022`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `100` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000297:s000023`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `154` - Internal Unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000297:s000024`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000297:s000025`
+
+Applicability cues: `firmware`
+
+For 369420, use the exact single-family/two-family wiring and family/role switches. The entrance-panel call adapts to F1/F2 settings. At idle, door/gate/light keys act on the main entrance panel; during a call they act on the communicating panel. Intercom requires an additional monitor. Configure ringing, video/audio and Wi-Fi through the joystick; the installation manual separately covers app association and Wi-Fi reset. Red bell LED flashing means ringtone excluded; red Wi-Fi flashing means enabled but disconnected; off means disabled or working; steady red means app data exchange. The software readme lists the supported Easy Kit families and device/software update context; it does not prove that a 318011 package has the same contents or every electrical value as 369420.
+
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+#### Expansion, association and reset
+
+Section ID: `ownkb:section:d000297:s000026`
+
+Applicability cues: `version`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| 369420 expansion | Maximum2 entrance panels369339,3 listed monitors,2 cameras369400,2 door locks,2 gate locks and2 lights. One connected indoor unit per family may use home Wi-Fi and Door Entry EASYKIT. These are kit-wide counts, independent of the single catalogue Module. | `LE11336AC` p. 5, inspected visually |
+| Accessory cable scope | The additional cable segment specified at p. 3 is limited to20m with loop impedance0.08ohm/m; the separate main cable runs have80/100m limits. No single universal100m allowance is inferred. | `LE11336AC` p. 3 |
+| Wi-Fi / whole-device reset | Joysticks select/confirm settings. Wi-Fi reset removes wireless settings and reconnection can require the app; full Device reset deletes all associated account and Wi-Fi data. The device-info screen exposes FW version/address/network information for checking installed state. | `LE11336AC` pp. 34–40 |
+| App label discrepancy | One illustrated settings screen says Door Entry CLASSE100X. The manual title, expansion note and exact-reference EASYKIT readme establish Easy Kit Connected / Door Entry EASYKIT; the copied screen label is not product identity evidence. | `LE11336AC` pp. 5,30; readme p. 1 |
+
+#### Dated app-update prerequisite
+
+Section ID: `ownkb:section:d000297:s000027`
+
+Applicability cues: `firmware`
+
+The [manufacturer notice of 18 June 2024](https://archive.openwebnet-ha.org/sha256/b1/c5/b1c57ba8d2097fbb90bdfe3b51753b625d8440d71b5b4ed1e65e80208f251ba9.pdf) names 318011/318012/318015 and369420/369430, among the named kit families for Door Entry EASYKIT. From 20 June 2024 it requires at least Android 1.7.3 or iOS 1.6.0 to continue receiving calls. These are dated service prerequisites, not the latest release, installed firmware, or measured cloud availability.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000297:s000028`
+
+Cautions: `must not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `database`, `documentation`
+
+The manufacturer database explicitly links both SKUs to item 2279, and the software readme names both. `LE11336AC` names 369420/369430, not 318011: its kit counts, cable/electrical details and commissioning instructions are therefore scoped to 369420. Publisher exports for 318011 were not found at the attempted endpoints; the Legrand 369420 export returned 403. These are documentation gaps, not unresolved identities. The single catalogue indoor-unit Object `154` describes the configured device role, not the entire kit’s component count. This older app generation must not be replaced silently with the newer Home + Security generation. The database labels 369420 as BTicino, while its exact manufacturer manual identifies Legrand; the commercial identity uses the marketed Legrand brand without changing the explicit database relationship.
+
+#### Reviewed source boundaries
+
+Section ID: `ownkb:section:d000297:s000029`
+
+Provenance cues: `catalogue`
+
+Both commercial references have established catalogue identities. The single Internal Unit Object describes the software item, not the number of monitors or components in a kit. LE11336AC supports the named `369420` kit’s hardware and expansion facts; it does not establish all `318011` contents. Its illustrated CLASSE100X app label conflicts with the EASYKIT title, expansion note and exact-reference readme, so that copied label does not change the product’s identity.
+
+#### Retained source accounting
+
+Section ID: `ownkb:section:d000297:s000030`
+
+Cautions: `not evidence`
+Provenance cues: `evidence`
+
+| Original | Examined role / remaining scope |
+| --- | --- |
+| `LE11336AC.pdf` | English sections PDF pp. 3–6,14,18–20,21–40; p. 5 expansion diagram inspected visually. Remaining external-panel/translation chapters unexamined |
+| `EASYKIT_CONNECTED_D_E_READMEv1.pdf` | PDF p. 1: entire exact-reference list and software environment,4August 2025 |
+| `door-entry-app-update-publisher-page.html` | Entire dated notice examined; names these references, app families and minimum Android/iOS releases; not evidence of present service availability |
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000297:s000031`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+An exact 318011 installation/contents sheet, a retained commercial export/EAN for each kit, and current app/update compatibility remain documentation gaps. Hardware fingerprint and observed operation remain uncorroborated.
+
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
+
+The current 369420 catalogue export was found at [manufacturer PDF export](https://www.legrand.com/ecatalogue/en/legrand-ecat/generatepdf/67056), but retrieval returned HTTP403 during this review. Its search preview is not retained original evidence; no EAN is assigned from it.
+
+### Sources
+
+Section ID: `ownkb:section:d000297:s000032`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0158)
+
+# Document: ownkb:document:d000298
+
+Source path: `devices/definitions/own-dev-0159-classe-300eos-connected-video-internal-unit.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Classe 300EOS connected video internal unit
+
+Section ID: `ownkb:section:d000298:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000298:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+Classe 300EOS is a connected handsfree video-entry unit with a vertical 5-inch touch screen and built-in Alexa voice assistance. Current manufacturer documents also describe MyHOME configuration and control, answering-machine functions and integration with supported security products. Those newer capabilities remain scoped to the documented product and firmware generation.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0159` | Project identity |
+| Technical description | Classe 300EOS connected video internal unit | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `344842`, `344845` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `2283` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Integration function | Main system association |
+| Item model / `modobj` | `130` | Main association; independent of project ID |
+| Firmware definition | `826`, `832`, `845`, `846`, `847`, `848`, `856`, `883` | Catalogue firmware IDs; version/build table below |
+| Declared Modules | `2` | Firmware metadata |
+| Categories | Audio video, User interfaces, Multifunction devices, Gateways and interfaces | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000298:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `344842` | Established catalogue identity | Manufacturer database commercial record `2645` explicitly links this SKU to item `2283` |
+| BTicino | `344845` | Established catalogue identity | Manufacturer database commercial record `2648` explicitly links this SKU to item `2283` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000298:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `344842` | `8005543677513` | [344842-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/bb/27/bb27dc329a7d9738f736a1c54481ea85039db0c97032a74ed56421963527b978.pdf) PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000298:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `344842` | CLASSE300 EOS | Canonical commercial record `2645` |
+| `344845` | CLASSE300 EOS | Canonical commercial record `2648` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000298:s000006`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE12456AD.pdf` | Instruction Use `LE12456AD` | `LE12456AD`;12/21-01PC | PDF p. 1:121 mm dimension and12/21 installation revision; remaining sections unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/44/60/4460df01dfba400961f17f3edf8afa3ec266d03606f2ac1629906165b9d236aa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE12456AD.pdf) |
+| `RA00194AB_EN.pdf` | Technical Guide `RA00194AB_EN` | `RA00194AB`-07/21-PC; printed cover label | PDF pp. 3–4,19,36,47,51–52:2021 function inventory, firmware update, recording and loop/safe-lock scope; remaining chapters unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/74/88/748837d5a89ccc092356f306de0d70ca7a9aeeab0bc58d8ee34fe1b31c76066c.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00194AB_EN.pdf) |
+| `RA00215AC_I_EN.pdf` | Installation Guide `RA00215AC_I_EN` | `RA00215AC_I-11/24-PC; printed revision label` | PDF pp. 3–8,25–28,31–32:2024 capacity, compatibility, commissioning and physical/menu paths; remaining object/application chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. | [Archived original](https://archive.openwebnet-ha.org/sha256/82/81/828191cd10c8e92183a6c42fca4d06541ca8bea14d84abf182fa1070a3832d0d.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00215AC_I_EN.pdf) |
+| `RA00215AC_U_EN.pdf` | Technical Guide `RA00215AC_U_EN` | `RA00215AC_U-12/24-PC; printed revision label` | PDF pp. 3–4,20–21,30–35:2024 service inventory, recording/Office/safe-lock/loop; remaining app/automation chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. | [Archived original](https://archive.openwebnet-ha.org/sha256/5b/34/5b3409d549c70bb0d078468c4249c8e4265f229cb381cf29e85392c2b51b4de4.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00215AC_U_EN.pdf) |
+| `ST-00002703-EN.pdf` | Technical Sheet `ST-00002703-EN` | `ST-00002703-EN; 16/06/2026` | PDF pp. 1–19:2026 functions, load/device compatibility, topology and configuration examined; p. 4 mode diagram inspected visually | [Archived original](https://archive.openwebnet-ha.org/sha256/b2/f5/b2f5090b601e33cdef9ba666108848ff4d9800792ccd5b7c14385da300bf0ffa.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00002703-EN.pdf) |
+| `344842-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/bb/27/bb27dc329a7d9738f736a1c54481ea85039db0c97032a74ed56421963527b978.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-344842&include_technical=1) |
+| `344842-italian-product-sheet.pdf` | Exact Italian product export | `Captured 05/10/2026; compliance-template date does not establish product publication date` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/23/46/2346eebed579490907aea0b553cfde70e6043c5365094dbc6075681c192e36b3.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-344842) |
+| `LE12456AB.pdf` | Legacy manufacturer technical documentation | `LE12456AB`;04/21-01PC | PDF p. 1: older121 mm dimension and04/21 installation revision; remaining sections unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/ed/0e/ed0eb14df57ef5c7801e5eaf1e6318eb12e0680e37698780aae1d7640eb5303d.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/LE12456AB.pdf) |
+| `ST_00001000_IT.pdf` | Legacy manufacturer technical documentation | `ST_00001000_IT; 27/06/2023` | PDF p. 1: Italian identity/function/technical heading cross-check; remaining pages unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/62/8a/628a137a1c477bac54a1daf71ef2ae13b75edd486b7134888ec2d2e20ae0b763.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/ST_00001000_IT.pdf) |
+| `ST_00001000_EN.pdf` | English counterpart of manufacturer-linked document | `ST_00001000_EN; 27/06/2023` | PDF pp. 1–2: older27/06/2023 sheet printedST-00001580-EN, ratings and setup; remaining diagrams unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/34/c4/34c45807e121af30e969e1635156cb33a423ccc21ddce8c05b1a6d733cb7ef36.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/ST_00001000_EN.pdf) |
+| `ST-00001582-FR.pdf` | Exact-product manufacturer variant/revision documentation | `ST-00001582-FR; printed date 21/07/223 (malformed; year not silently corrected)` | PDF pp. 1–2: exact 344845/344885 loop, rating and setup; malformed21/07/223 date retained; remaining pages unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. | [Archived original](https://archive.openwebnet-ha.org/sha256/2b/60/2b607cb96b832a8595488b1d416284eb698852bf499625fad8383c71e7da1693.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/ST-00001582-FR.pdf) |
+| `RA00211AA_I_ENG.pdf` | Exact-product manufacturer variant/revision documentation | `RA00211AA_I-07/22-PC` | PDF pp. 3,22: earlier MyHOME setup and explicit HomeKit assertion; remaining chapters unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/ac/ae/acaed77dcec7038be3040037a5afe29d8dc26d4b9db062d95271192abff2e47f.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/RA00211AA_I_ENG.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2283`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000298:s000007`
+
+Applicability cues: `revision`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| AV BUS supply | `21..27 Vdc` | `ST-00002703-EN` p. 1 |
+| Maximum AV BUS operating draw | `580 mA` | `ST-00002703-EN` p. 1 |
+| Additional supply | `27 Vdc on 1–2; AV BUS draw with it maximum 22 mA` | `ST-00002703-EN` p. 1 |
+| Temperature / dimensions | `5..40 °C; 122 x 222 x 32 mm` | `ST-00002703-EN` p. 2 |
+| Display | `5-inch vertical LCD touch screen` | `ST-00002703-EN` p. 1 |
+| Cable section per terminal | `maximum 2 x 1 mm²` | `ST-00002703-EN` p. 1 |
+| Wireless | `IEEE 802.11 b/g/n; 2.4 GHz; <20 dBm; WEP/WPA/WPA2` | `ST-00002703-EN` p. 1 |
+| Ethernet | `RJ45 through accessory 344844, not supplied` | `ST-00002703-EN` p. 2 |
+| Alexa | `up to 5 m in optimum ambient audio; minimum 512 Kbps for streaming; availability varies by country/language` | `ST-00002703-EN` p. 1 |
+| Start-up | `up to 2 minutes after power-on` | `ST-00002703-EN` p. 1 |
+| 11/24 installer MyHOME limits | `30 rooms; 50 graphical objects per room; 50 commands per actuator; 50 scenarios; 150 actions and 50 start conditions per scenario; 30 temperature zones` | `RA00215AC_I_EN` p. 7 (11/24 revision; not a2026-only limit) |
+| Installer accounts / concurrent users | `15 accounts; one simultaneously connected installer` | `RA00215AC_I_EN` p. 7 (11/24 revision; not a2026-only limit) |
+| Managed addresses | `175 with one supply; 350 with two supplies and one F422A, as manual table` | `RA00215AC_I_EN` p. 7 |
+| Inductive loop, 344845 only | `hearing aid T position; recommended 25..35 cm frontal position` | `RA00215AC_U_EN` printed/PDF p. 35; `ST-00001582-FR` p. 1 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000298:s000008`
+
+Applicability cues: `not applicable`
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| With video | `Yes` | `ST-00002703-EN` p. 1 |
+| Installation technique | `Bus system` | `ST-00002703-EN` p. 1 |
+| Mounting method | `Surface mounted` | `ST-00002703-EN` p. 1 |
+| Material | `Plastic` | `ST-00002703-EN` p. 1 |
+| Picture system | `PAL` | `ST-00002703-EN` p. 1 |
+| Property picture system | `Colour` | `344842-publisher-product-sheet.pdf` PDF p. 3 |
+| With memory function | `Yes` | `ST-00002703-EN` p. 1 |
+| Overhear protected | `Yes` | `ST-00002703-EN` p. 1 |
+| Operation door lock | `Yes` | `ST-00002703-EN` p. 1 |
+| Control extra function(s) | `Yes` | `ST-00002703-EN` p. 1 |
+| Hands free | `Yes` | `ST-00002703-EN` p. 1 |
+| Can be connected to smartphone | `Yes` | `ST-00002703-EN` p. 1 |
+| Hearing aid compatible | `No` | `ST-00002703-EN` p. 1 |
+| With automatic door opener | `Yes` | `ST-00002703-EN` p. 1 |
+| Colour | `White` | `ST-00002703-EN` p. 1 |
+| Type of interface | `Wi-Fi` | `ST-00002703-EN` p. 1 |
+| Mutable call tone | `Yes` | `ST-00002703-EN` p. 1 |
+| Internal communication | `Yes` | `ST-00002703-EN` p. 1 |
+| Specific call tone | `Yes` | `ST-00002703-EN` p. 1 |
+| Loudness setting | `Yes` | `ST-00002703-EN` p. 1 |
+| With touch screen | `Yes` | `ST-00002703-EN` p. 1 |
+| Width | `130 mm` | `ST-00002703-EN` p. 1 |
+| Height | `230 mm` | `ST-00002703-EN` p. 1 |
+| Depth | `40 mm` | `ST-00002703-EN` p. 1 |
+| Compatible with Apple HomeKit | `No` | `ST-00002703-EN` p. 1 |
+| Compatible with Google Assistant | `Yes` | `ST-00002703-EN` p. 1 |
+| Compatible with Amazon Alexa | `Yes` | `ST-00002703-EN` p. 1 |
+| IFTTT support available | `Yes` | `ST-00002703-EN` p. 1 |
+| degree of impact strength (IK) | `IK07` | `ST-00002703-EN` p. 1 |
+| Degree of protection (IP) | `IP54` | `ST-00002703-EN` p. 1 |
+| Operating / setting temperature (Min-Max) | `5-40 °C` | `ST-00002703-EN` p. 1 |
+| Storage temperature (Min-Max) | `-10-70 °C` | `ST-00002703-EN` p. 1 |
+| Voltage type | `DC` | `ST-00002703-EN` p. 1 |
+| Nominal voltage (Min-Max) | `20-27 V` | `ST-00002703-EN` p. 1 |
+| Supply current (Min-Max) | `0.1-0.580 A` | `ST-00002703-EN` p. 1 |
+| Frequency (Min-Max) | `50-60 Hz` | `ST-00002703-EN` p. 1 |
+| Sound level | `80 dB` | `ST-00002703-EN` p. 1 |
+| Standby consumption | `215 mA` | `ST-00002703-EN` p. 1 |
+| Antimicrobial treatment | `No` | `ST-00002703-EN` p. 1 |
+| Cable nature for connection | `Flexible or rigid` | `ST-00002703-EN` p. 1 |
+| Cable section (Min-Max) | `0.28-0.5 mm²` | `ST-00002703-EN` p. 1 |
+| Label space/information surface | `No` | `ST-00002703-EN` p. 1 |
+| Fitted with USB plug | `Yes` | `ST-00002703-EN` p. 1 |
+| Fitted with rainproof plate protection | `No` | `ST-00002703-EN` p. 1 |
+| With complemantary luminous signal | `Yes` | `ST-00002703-EN` p. 1 |
+| Vertical fixing center distance (Min-Max) | `1600-1650 mm` | `ST-00002703-EN` p. 1 |
+| Horizontal fixing center distance (Min-Max) | `40-40 mm` | `ST-00002703-EN` p. 1 |
+| Contains Batteries | `No` | `ST-00002703-EN` p. 1 |
+| Additional unit | `Yes` | `ST-00002703-EN` p. 1 |
+| Maximum number of additional screens | `0` | `ST-00002703-EN` p. 1 |
+| Addressable | `Yes` | `ST-00002703-EN` p. 1 |
+| Door entry system with mobile application | `Yes` | `ST-00002703-EN` p. 1 |
+| Number of ringtones | `6` | `ST-00002703-EN` p. 1 |
+| Remote opening of gate / Electric door opener | `Yes` | `ST-00002703-EN` p. 1 |
+| Screen resolution | `1280x720` | `ST-00002703-EN` p. 1 |
+| Screen brightness setting | `Yes` | `ST-00002703-EN` p. 1 |
+| Screen contrast setting | `Yes` | `ST-00002703-EN` p. 1 |
+| Memory video function | `Yes` | `ST-00002703-EN` p. 1 |
+| Camera type | `Not applicable` | `ST-00002703-EN` p. 1 |
+| Max distance between internal and external unit | `200 m` | `ST-00002703-EN` p. 1 |
+| Connected object | `Yes` | `ST-00002703-EN` p. 1 |
+| Operating method | `Wifi network 2.4G` | `ST-00002703-EN` p. 1 |
+| Application store for download | `Google Play Store` | `ST-00002703-EN` p. 1 |
+| Programming way | `Smartphone apps` | `ST-00002703-EN` p. 1 |
+| With voice command | `Yes` | `ST-00002703-EN` p. 1 |
+| Programmable | `No` | `ST-00002703-EN` p. 1 |
+| Interoperable connection Protocol | `No` | `ST-00002703-EN` p. 1 |
+| Connectable by Internet box | `Yes` | `ST-00002703-EN` p. 1 |
+| Compatible voice assistants | `Amazon Alexa` | `ST-00002703-EN` p. 1 |
+| Application name | `Home + Security, Home + Control` | `ST-00002703-EN` p. 1 |
+| Product use function | `Door entry systems` | `ST-00002703-EN` p. 1 |
+| Software Update Duration (years) | `3` | `ST-00002703-EN` p. 1 |
+
+### Identity
+
+Section ID: `ownkb:section:d000298:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2283` | Canonical catalogue |
+| Technical item description | CLASSE300 EOS | Canonical catalogue |
+| Item family | 0; key `26` | Canonical catalogue |
+| Main system | Integration function; key `26` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `130` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `2` | `EN_DEVICE` |
+| Additional system | Video door entry system; key `4`; model `130` | Separate non-main catalogue association |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000298:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `130` | No | Canonical item/system relationship |
+| Integration function | `130` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000298:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `826` | `1` | `0` | `0` | `2` | Not catalogue default | Official |
+| `832` | `2` | `1` | `0` | `2` | Not catalogue default | Official |
+| `845` | `1` | `1` | `0` | `2` | Not catalogue default | Official |
+| `846` | `1` | `2` | `0` | `2` | Not catalogue default | Official |
+| `847` | `1` | `3` | `0` | `2` | Not catalogue default | Official |
+| `848` | `1` | `5` | `0` | `2` | Not catalogue default | Official |
+| `856` | `2` | `2` | `0` | `2` | Not catalogue default | Official |
+| `883` | `3` | `0` | `0` | `2` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000298:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `826` | `1082` | BTicino (key `1`) | `0` | Extra | `2283_1.0_BT\xml\Extra\extra.xml` |
+| `826` | `1083` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.0_BT\xml\Protocol\protocol.xml` |
+| `832` | `1101` | BTicino (key `1`) | `0` | Extra | `2283_2.1_BT\xml\Extra\extra.xml` |
+| `832` | `1102` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_2.1_BT\xml\Protocol\protocol.xml` |
+| `845` | `1111` | BTicino (key `1`) | `0` | Extra | `2283_1.1_BT\xml\Extra\extra.xml` |
+| `845` | `1112` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.1_BT\xml\Protocol\protocol.xml` |
+| `846` | `1113` | BTicino (key `1`) | `0` | Extra | `2283_1.2_BT\xml\Extra\extra.xml` |
+| `846` | `1114` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.2_BT\xml\Protocol\protocol.xml` |
+| `847` | `1115` | BTicino (key `1`) | `0` | Extra | `2283_1.3_BT\xml\Extra\extra.xml` |
+| `847` | `1116` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.3_BT\xml\Protocol\protocol.xml` |
+| `848` | `1117` | BTicino (key `1`) | `0` | Extra | `2283_1.5_BT\xml\Extra\extra.xml` |
+| `848` | `1118` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_1.5_BT\xml\Protocol\protocol.xml` |
+| `856` | `1119` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_2.2_BT\xml\Protocol\protocol.xml` |
+| `856` | `1120` | BTicino (key `1`) | `0` | Extra | `2283_2.2_BT\xml\Extra\extra.xml` |
+| `883` | `1133` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2283_3.0_BT\xml\Protocol\protocol.xml` |
+| `883` | `1134` | BTicino (key `1`) | `0` | Extra | `2283_3.0_BT\xml\Extra\extra.xml` |
+
+All 16 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000298:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `826` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3421` | `32` | `1675` |
+| `826` | `2` | `154` Internal Unit | Fixed/designated metadata | `3420` | `154` | `1674` |
+| `832` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3432` | `32` | `1686` |
+| `832` | `2` | `154` Internal Unit | Fixed/designated metadata | `3431` | `154` | `1685` |
+| `845` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3462` | `32` | `1707` |
+| `845` | `2` | `154` Internal Unit | Fixed/designated metadata | `3461` | `154` | `1706` |
+| `846` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3464` | `32` | `1709` |
+| `846` | `2` | `154` Internal Unit | Fixed/designated metadata | `3463` | `154` | `1708` |
+| `847` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3466` | `32` | `1711` |
+| `847` | `2` | `154` Internal Unit | Fixed/designated metadata | `3465` | `154` | `1710` |
+| `848` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3468` | `32` | `1713` |
+| `848` | `2` | `154` Internal Unit | Fixed/designated metadata | `3467` | `154` | `1712` |
+| `856` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `3558` | `32` | `1760` |
+| `856` | `2` | `154` Internal Unit | Fixed/designated metadata | `3557` | `154` | `1759` |
+| `883` | `1` | `32` Colors Touch Screen | Fixed/designated metadata | `4444` | `32` | `1995` |
+| `883` | `2` | `154` Internal Unit | Fixed/designated metadata | `4443` | `154` | `1994` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000298:s000014`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000298:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `826` | Physical configuration | `0` | Canonical firmware/mode association |
+| `826` | Product Programming | `3` | Canonical firmware/mode association |
+| `832` | Physical configuration | `0` | Canonical firmware/mode association |
+| `832` | Product Programming | `3` | Canonical firmware/mode association |
+| `845` | Physical configuration | `0` | Canonical firmware/mode association |
+| `845` | Product Programming | `3` | Canonical firmware/mode association |
+| `846` | Physical configuration | `0` | Canonical firmware/mode association |
+| `846` | Product Programming | `3` | Canonical firmware/mode association |
+| `847` | Physical configuration | `0` | Canonical firmware/mode association |
+| `847` | Product Programming | `3` | Canonical firmware/mode association |
+| `848` | Physical configuration | `0` | Canonical firmware/mode association |
+| `848` | Product Programming | `3` | Canonical firmware/mode association |
+| `856` | Physical configuration | `0` | Canonical firmware/mode association |
+| `856` | Product Programming | `3` | Canonical firmware/mode association |
+| `883` | Physical configuration | `0` | Canonical firmware/mode association |
+| `883` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `826` | Ethernet | Canonical firmware/connection association |
+| `826` | Ethernet over USB | Canonical firmware/connection association |
+| `832` | Ethernet | Canonical firmware/connection association |
+| `832` | Ethernet over USB | Canonical firmware/connection association |
+| `845` | Ethernet | Canonical firmware/connection association |
+| `845` | Ethernet over USB | Canonical firmware/connection association |
+| `846` | Ethernet | Canonical firmware/connection association |
+| `846` | Ethernet over USB | Canonical firmware/connection association |
+| `847` | Ethernet | Canonical firmware/connection association |
+| `847` | Ethernet over USB | Canonical firmware/connection association |
+| `848` | Ethernet | Canonical firmware/connection association |
+| `848` | Ethernet over USB | Canonical firmware/connection association |
+| `856` | Ethernet | Canonical firmware/connection association |
+| `856` | Ethernet over USB | Canonical firmware/connection association |
+| `883` | Ethernet | Canonical firmware/connection association |
+| `883` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating modes
+
+Section ID: `ownkb:section:d000298:s000016`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+These published settings are independent of catalogue programming-mode IDs. Revision/variant limitations are reconciled in Programming and Source reconciliation.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `N / P / M` | video-entry address / entrance panel / Favorite/Quick Actions | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
+| `M units 0..9` | staircase; locks P+`1..3`; auto-on P+`1..3`; paging; intercom; Office | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
+| `Video / MyHOME configuration` | physical or menu video entry / Home + Project home automation | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
+| `Home-device physical configurators` | excluded by current EOS compatibility sheet | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
+| `344845 inductive loop` | T-mode hearing aid; recommended `25..35` cm | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
+| `BUS-MH terminal` | future application label retained; no independent active role inferred | `ST-00002703-EN` printed/PDF pp. 1-19; `RA00215AC_I_EN` pp. 7-10,25-28; `ST_00001000_EN` older sheet; `ST-00001582-FR` printed/PDF pp. 1-2 for 344845 where applicable |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000298:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `826` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `826` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `826` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `826` | `P1` | `0..6` | `0` | Configurator P1 |
+| `826` | `P2` | `0..9` | `0` | Configurator P2 |
+| `826` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `826` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `832` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `832` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `832` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `832` | `P1` | `0..6` | `0` | Configurator P1 |
+| `832` | `P2` | `0..9` | `0` | Configurator P2 |
+| `832` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `832` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `845` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `845` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `845` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `845` | `P1` | `0..6` | `0` | Configurator P1 |
+| `845` | `P2` | `0..9` | `0` | Configurator P2 |
+| `845` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `845` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `846` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `846` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `846` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `846` | `P1` | `0..6` | `0` | Configurator P1 |
+| `846` | `P2` | `0..9` | `0` | Configurator P2 |
+| `846` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `846` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `847` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `847` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `847` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `847` | `P1` | `0..6` | `0` | Configurator P1 |
+| `847` | `P2` | `0..9` | `0` | Configurator P2 |
+| `847` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `847` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `848` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `848` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `848` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `848` | `P1` | `0..6` | `0` | Configurator P1 |
+| `848` | `P2` | `0..9` | `0` | Configurator P2 |
+| `848` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `848` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `856` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `856` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `856` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `856` | `P1` | `0..6` | `0` | Configurator P1 |
+| `856` | `P2` | `0..9` | `0` | Configurator P2 |
+| `856` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `856` | `M2` | `0..9` | `0` | M2 (0-9) |
+| `883` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `883` | `N1_1` | `0..9` | `0` | Internal Unit Range |
+| `883` | `N1_2` | `0..9` | `0` | Internal Unit Range |
+| `883` | `P1` | `0..6` | `0` | Configurator P1 |
+| `883` | `P2` | `0..9` | `0` | Configurator P2 |
+| `883` | `M1` | `0..9` | `0` | M1 (0-9) |
+| `883` | `M2` | `0..9` | `0` | M2 (0-9) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000298:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `32` - Colors Touch Screen
+
+Section ID: `ownkb:section:d000298:s000019`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `documentation`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address; public documentation value, not an observed installation |
+| `FW_VER` | `######` = Firmware version | `3.0.0` | Firmware version |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+#### Object `154` - Internal Unit
+
+Section ID: `ownkb:section:d000298:s000020`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N` | `0..3999` | `0` | Address |
+| `P` | `0..95` | `0` | Associated external unit |
+| `HAND_FREE` | `0` = Disable; `1` = Enable | `0` | HAND_FREE |
+| `PRO_STUDIO` | `0` = Disable; `1` = Enable | `0` | Professional Studio |
+| `DOOR_STATE` | `0` = Disable; `1` = Enable | `0` | Door state display |
+| `PEOPLE_S` | `0` = No; `1` = ?; `2` = ? | `0` | PeopleSearching |
+| `MENU_PRE` | `0..99` | `0` | MenuPreset |
+| `RING_T_OUT` | `1..30` | `10` | RingTimeOut |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `PE_T_OUT` | `3..90` | `6` | EUConnectionTimeOut |
+| `PI_T_OUT` | `3..90` | `18` | IUConnectionTimeOut |
+| `TEL_T_OUT` | `3..180` | `90` | TelConnectionTimeout |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
+| `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
+| `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000298:s000021`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000298:s000022`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000298:s000023`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000298:s000024`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion rule is attached to these slot rows. Resolve the active Object and apply its exact Firmware restrictions; generic resolution remains in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000298:s000025`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `130` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000298:s000026`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `154` - Internal Unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `32` - Colors Touch Screen | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000298:s000027`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000298:s000028`
+
+Applicability cues: `firmware`
+
+Configure video-entry N/P/M physically or through the device menu; units digit `M=0..9` selects staircase light, P+1/P+2/P+3 locks, P+1/P+2/P+3 auto-on, paging, internal intercom or Office. Tens digit selects the four-action arrangement. Change rear switches unpowered and wait one minute before reconnecting after configuration. For MyHOME, update firmware before commissioning and configure through Home + Project, delivering the system for Home + Control use; associate supported alarm functions through Home + Security. The current sheet excludes physically configured home-automation devices and the 99-zone central-unit solution; it permits only one EOS in the house to use MyHOME functions. HOMETOUCH is incompatible. Devices on different lines have explicit per-model/production compatibility limits in the installer manual; “supported” does not imply unrestricted cross-line control. Multi-family sheet diagrams require additional supply 1–2, and other layouts must follow their own power-sizing instructions. The BUS-MH terminal is labelled future application in the technical sheet and manual, despite their MyHOME functions; no independent active terminal role is inferred. Door status requires actuator 346260. Alexa mute disables its and the device microphone.
+
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+#### Commissioning and function limits
+
+Section ID: `ownkb:section:d000298:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| Setup path | Video entry can be configured by menu, physically plus menu, or physically. Removing physical configurators before full menu setup requires a reboot. MyHOME and associated alarm/load devices are commissioned through Home+Project; Home+Control is the user control app and Home + Security handles video/alarm functions. | Installer pp. 26–32 |
+| Supply and parallel units | Multi-family and integrated automation layouts require1–2 additional supply. In particular single-family layouts it is recommended for Alexa performance but optional for ordinary video entry. Parallel3/5-unit and one app-connected EOS limits are diagram-specific. | 2026 sheet pp. 12–18; installer pp. 17–24 |
+| Capacity | 30 rooms; 50 objects per room; 50 commands per actuator; 50 scenarios; 150 actions and 50 start conditions per scenario; 30 temperature zones; 15 installer accounts and one simultaneous installer. 175 addresses with one supply; 350 with two supplies and `F422A`. These are application limits, not Object slot counts. | Installer p.7 |
+| Answering machine revisions | 25 high-resolution15 s messages in both manuals. AB user p. 47 states50 low-resolution messages; AC user p. 30 states35. Full memory overwrites oldest. A firmware boundary for the change is not documented. | `RA00194AB_EN` p. 47;`RA00215AC_U_EN` p. 30 |
+| Office and safe lock | Door status requires 346260 plus contact and excludes Office. Office opens automatically on an EP call and excludes safe lock. Safe lock permits release only during EP/IU voice communication and also restricts app/object/Favourite commands. | AC user pp. 32–34; AB pp. 49–51 |
+| Physical M tens | `1`: internal intercom, EP+1, locks+1/+2; `2`: paging, EP+1, locks+1/+2; `3`: internal intercom, intercom1, EP+1, lock1; `4`: intercom among addresses1–3, locks1/2; `5`: external intercom among addresses1–4, lock1; `6`: intercom among addresses1–5; `7`: external intercom among addresses1–5; `8`: EP+1, intercom1, locks1/2; `9`: locks1–4. In the illustrated multi-address presets a call targets the other addresses, excluding the originating unit. Interface346850 determines internal/external scope. M units separately select Favourite action0–9. | 2026 sheet pp.3–5; pp.4–5 visually inspected |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000298:s000030`
+
+Applicability cues: `gateway`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+344842 and 344845 are explicit database identities and are both named on the retained `RA00215AC_I`-11/24-PC installer manual. The current English sheet names 344842/344884, while the exact French `ST-00001582-FR` sheet names 344845/344885; the 344884/344885 variants are outside this catalogue cluster. The user manual explicitly scopes the inductive loop to 344845. Both exact variants therefore have retained documentation; their differing hearing assistance is not flattened. The French sheet prints the malformed date 21/07/223; it is preserved without silently inferring 2023. The older `ST_00001000_EN` filename prints `ST-00001580-EN` and 27/06/2023. The 11/24 installer manual and 16/06/2026 English sheet reverse DALI2 gateway/dimmer names in portions of their compatibility inventory; no corrected assignment is inferred. Physical video-entry configuration is separate from the software-configured home-automation solution and its exclusion of physically configured associated devices. Catalogue history alone does not establish that all later functions existed in every older release.
+
+Earlier installer `RA00211AA_I_ENG` p. 22 explicitly calls HomeKit compatible, whereas the captured344842 product classification says Apple HomeKit No; this is an unresolved source/scope discrepancy, not a basis for promising direct HomeKit integration. Earlier AB and current AC user manuals also disagree on low-resolution recording capacity. `LE12456AB`/AD p. 1 give121 mm width, technical sheets122 mm, export130×230×40 mm; no hardware-change date or packing-dimension explanation is supplied. The2024 installer p. 25 calls the command-actuator LG067561; the2026 sheet p. 11 instead prints LG067554, duplicating the basic-command reference. That code discrepancy remains explicit.
+
+The alternate dar installation/user URLs and cloudinary French path resolve to the same respective archived SHA-256 fingerprints as the originals shown above. Their earlier duplicate local filename rows were provenance aliases, not distinct revisions.
+
+#### Reviewed source boundaries
+
+Section ID: `ownkb:section:d000298:s000031`
+
+Provenance cues: `catalogue`, `documentation`, `source`
+
+Both catalogue variants have retained exact-variant documentation, and the user manual limits the inductive loop to `344845`. The current `344884/344885` references remain outside this catalogue cluster. The 2024 installer uses `F422A` for its 350-address/two-supply limit. Later MyHOME and security functions are scoped to the examined revisions; they are not inferred for every older catalogue release. Recording capacity and HomeKit support retain the specific source disagreements described here.
+
+#### Retained source accounting
+
+Section ID: `ownkb:section:d000298:s000032`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Provenance cues: `source`
+
+| Original | Examined role / remaining scope |
+| --- | --- |
+| `LE12456AD.pdf` | PDF p. 1:121 mm dimension and12/21 installation revision; remaining sections unexamined |
+| `RA00194AB_EN.pdf` | PDF pp. 3–4,19,36,47,51–52:2021 function inventory, firmware update, recording and loop/safe-lock scope; remaining chapters unexamined |
+| `RA00215AC_I_EN.pdf` | PDF pp. 3–8,25–28,31–32:2024 capacity, compatibility, commissioning and physical/menu paths; remaining object/application chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. |
+| `RA00215AC_U_EN.pdf` | PDF pp. 3–4,20–21,30–35:2024 service inventory, recording/Office/safe-lock/loop; remaining app/automation chapters unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. |
+| `ST-00002703-EN.pdf` | PDF pp. 1–19:2026 functions, load/device compatibility, topology and configuration examined; p. 4 mode diagram inspected visually |
+| `344842-publisher-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `344842-italian-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `LE12456AB.pdf` | PDF p. 1: older121 mm dimension and04/21 installation revision; remaining sections unexamined |
+| `ST_00001000_IT.pdf` | PDF p. 1: Italian identity/function/technical heading cross-check; remaining pages unexamined |
+| `ST_00001000_EN.pdf` | PDF pp. 1–2: older27/06/2023 sheet printedST-00001580-EN, ratings and setup; remaining diagrams unexamined |
+| `ST-00001582-FR.pdf` | PDF pp. 1–2: exact 344845/344885 loop, rating and setup; malformed21/07/223 date retained; remaining pages unexamined Alternate publisher path retained for the same archived fingerprint; provenance aliases do not add an original. |
+| `RA00211AA_I_ENG.pdf` | PDF pp. 3,22: earlier MyHOME setup and explicit HomeKit assertion; remaining chapters unexamined |
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000298:s000033`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+The compatibility-table reference corrections, actual firmware enabling later MyHOME functions, the future BUS-MH terminal and installed responses remain uncorroborated. Both catalogue SKU identities and exact-variant documentation are established.
+
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000298:s000034`
+
+Applicability cues: `firmware`
+Cautions: `not evidence`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked sources were identified but were not retained or used as evidence. Their presence is not evidence of installed firmware, a certified test result or additional capability.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `LGELWJGOYE.PDF` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/Certif/LGELWJGOYE.PDF) |
+| `LGFKVBKBFZ.PDF` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/Certif/LGFKVBKBFZ.PDF) |
+| `Bticino-Door Entry System-Classe 300EOS-Internal Unit.rfa` | Publisher-linked document; contents and applicability unexamined | [Publisher listing]([https://assets.legrand.com/pim/AUTRE/Bticino-Door](https://assets.legrand.com/pim/AUTRE/Bticino-Door) Entry System-Classe 300EOS-Internal Unit.rfa) |
+| `Classe_300.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Classe_300.pdf) |
+| `MX_040012.fwz` | Firmware binary; payload/update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MX_040012.fwz) |
+| `MyHome_Suite_README_v2.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) |
+
+### Sources
+
+Section ID: `ownkb:section:d000298:s000035`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0159)
+
+# Document: ownkb:document:d000299
+
+Source path: `devices/definitions/own-dev-0160-easy-kit-home-security-connected-internal-unit.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Easy Kit Home + Security connected internal unit
+
+Section ID: `ownkb:section:d000299:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000299:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+This cluster groups two white 7-inch Easy Kit Wi-Fi additional monitors, BTicino 335254 and Legrand 365225. They answer video-entry calls and control doors, gates, lighting and cameras, with Home + Security smartphone access. Their exact instructions name different compatible kit families, so their expansion requirements remain variant-specific.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0160` | Project identity |
+| Technical description | Easy Kit Home + Security connected internal unit | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `335254`, `365225` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `2301` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Video door entry system | Main system association |
+| Item model / `modobj` | `101` | Main association; independent of project ID |
+| Firmware definition | `860`, `916` | Catalogue firmware IDs; version/build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Audio video, User interfaces | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000299:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `335254` | Established catalogue identity | Manufacturer database commercial record `2655` explicitly links this SKU to item `2301` |
+| Legrand | `365225` | Established catalogue identity | Manufacturer database commercial record `2656` explicitly links this SKU to item `2301` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000299:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `335254` | `8005543740835` | [335254-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/0c/42/0c42292e249e0d7909cf346c6271b4cc302ef389d6aefb62bc12a90881d061ca.pdf) PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000299:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `335254` | Easy Kit Connnected with H+S | Canonical commercial record `2655` |
+| `365225` | Easy Kit Connnected with H+S | Canonical commercial record `2656` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000299:s000006`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE14222AC.pdf` | Instruction Use `LE14222AC` | `LE14222AC`;05/24-01PC | English sections PDF pp. 1–6 examined: exact 335254 dimensions, keys, wiring, all three compatible-kit groups and technical data; p. 6 inspected visually; other translations unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/9c/6f/9c6fe4b25ed0773462e4f37b146db54f720c9bc84f4a7072c015ec64415359c7.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE14222AC.pdf) |
+| `335254-publisher-product-sheet.pdf` | Exact English product export | `Publisher DATASHEET; 05.10.2026` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes | [Archived original](https://archive.openwebnet-ha.org/sha256/0c/42/0c42292e249e0d7909cf346c6271b4cc302ef389d6aefb62bc12a90881d061ca.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-335254&include_technical=1) |
+| `LE14226AB.pdf` | Exact-product manufacturer variant/revision documentation | `LE14226AB; 09/23-01 PC` | English sections PDF pp. 1–7 examined: exact 365225 dimensions, controls, wiring, compatible kits, app and technical data; French/internal-unit wording conflict p. 6 retained; remaining translations unexamined | [Archived original](https://archive.openwebnet-ha.org/sha256/29/30/29306e6c22c7168c71b6dbc165975dc090ecb9680b194a54c1d0aed71d82e8f7.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE14226AB.pdf) |
+| `EASYKIT_CONNECTED_README.pdf` | Software EASYKIT_CONNECTED_README | `30TH May, 2025; printed date` | PDF p. 1: entire30May 2025 Netatmo-family exact-reference list and software environment | [Archived original](https://archive.openwebnet-ha.org/sha256/d3/56/d3566257c4b717cdaed35b56ae4a7af8f28b182e0af37482c78c459bbe47c541.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/EASYKIT_CONNECTED_README.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2301`: complete extracted Device/firmware/Object/configuration associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000299:s000007`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| 335254 display | `7-inch, 16:9; touch control keys, not a touch-screen display` | `LE14222 AC` p. 3 |
+| 335254 supply marking | `30 Vdc / 30 W in instruction; export nominal 30 V, current range 0..1 A` | `LE14222 AC` p. 6 |
+| 335254 standby draw | `10 mA in publisher export` | `335254-publisher-product-sheet.pdf` pp. 2–3 |
+| 335254 temperature | `operating 5..40 °C; storage -10..70 °C, export` | `LE14222 AC` p. 6; exact export p. 2 |
+| 335254 dimensions | `215 x 142.5 x 22.3 mm in instruction; export height 140 mm` | `LE14222 AC` p. 1; exact export p. 2 |
+| 335254 protection | `IP30 in publisher export` | `335254-publisher-product-sheet.pdf` pp. 2–3 |
+| 335254 wireless | `IEEE 802.11 b/g/n; 2.4..2.4835 GHz; <20 dBm; WEP/WPA/WPA2` | `LE14222 AC` p. 6 |
+| 335254 connectors | `D1/D2 upstream; R1/R2 additional monitor; mini-USB for firmware update` | `LE14222 AC` p. 4 |
+| Role switches | `family 1/family 2; Master/Slave` | `LE14222 AC` p. 4 |
+| 335254 export expansion | `maximum two additional screens; maximum internal/external distance 100 m, topology-specific` | `335254-publisher-product-sheet.pdf` pp. 2–3 |
+| 365225 dimensions | `215 x 142.5 x 22.3 mm` | `LE14226AB` p. 1 |
+| 365225 supply / temperature | `30 Vdc / 30 W marking; 5..40 °C` | `LE14226AB` p. 7 |
+| 365225 wireless | `IEEE 802.11 b/g/n; 2.4..2.4835 GHz; <20 dBm; WEP/WPA/WPA2` | `LE14226AB` p. 7 |
+| 365225 maximum terminal section | `2 x 1 mm²` | `LE14226AB` p. 7 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000299:s000008`
+
+Applicability cues: `not applicable`
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Classification frequency values of zero are separate from explicitly documented Wi-Fi carriers; a negative connected-object classification does not exclude remote control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| With video | `Yes` | `LE14222 AC` p. 3 |
+| Installation technique | `Bus system` | `LE14222 AC` p. 3 |
+| Mounting method | `Surface mounted` | `LE14222 AC` p. 3 |
+| Material | `Plastic` | `LE14222 AC` p. 3 |
+| Picture system | `PAL` | `LE14222 AC` p. 3 |
+| Property picture system | `Colour` | `335254-publisher-product-sheet.pdf` PDF p. 2 |
+| With memory function | `No` | `LE14222 AC` p. 3 |
+| Overhear protected | `No` | `LE14222 AC` p. 3 |
+| Operation door lock | `Yes` | `LE14222 AC` p. 3 |
+| Control extra function(s) | `Yes` | `LE14222 AC` p. 3 |
+| Hands free | `Yes` | `LE14222 AC` p. 3 |
+| Function lamps | `Yes` | `LE14222 AC` p. 3 |
+| Can be connected to smartphone | `Yes` | `LE14222 AC` p. 3 |
+| Zoom, pan/tilt function | `No` | `LE14222 AC` p. 3 |
+| Screen diagonal | `177.8 mm` | `LE14222 AC` p. 3 |
+| Screen diagonal (inch) | `7 inch` | `LE14222 AC` p. 3 |
+| Hearing aid compatible | `No` | `LE14222 AC` p. 3 |
+| With automatic door opener | `Yes` | `LE14222 AC` p. 3 |
+| Colour | `White` | `LE14222 AC` p. 3 |
+| Type of interface | `Wi-Fi` | `LE14222 AC` p. 3 |
+| Mutable call tone | `Yes` | `LE14222 AC` p. 3 |
+| Internal communication | `Yes` | `LE14222 AC` p. 3 |
+| Specific call tone | `Yes` | `LE14222 AC` p. 3 |
+| Additional device connectable | `Yes` | `LE14222 AC` p. 3 |
+| Loudness setting | `Yes` | `LE14222 AC` p. 3 |
+| With touch screen | `No` | `LE14222 AC` p. 3 |
+| Width | `215 mm` | `LE14222 AC` p. 3 |
+| Height | `140 mm` | `LE14222 AC` p. 3 |
+| Depth | `22.3 mm` | `LE14222 AC` p. 3 |
+| Compatible with Apple HomeKit | `No` | `LE14222 AC` p. 3 |
+| Compatible with Google Assistant | `No` | `LE14222 AC` p. 3 |
+| Compatible with Amazon Alexa | `No` | `LE14222 AC` p. 3 |
+| IFTTT support available | `No` | `LE14222 AC` p. 3 |
+| degree of impact strength (IK) | `Not applicable` | `LE14222 AC` p. 3 |
+| Degree of protection (IP) | `IP30` | `335254-publisher-product-sheet.pdf` pp. 2–3 |
+| Operating / setting temperature (Min-Max) | `5-40 °C` | `LE14222 AC` p. 6; exact export p. 2 |
+| Storage temperature (Min-Max) | `-10-70 °C` | `LE14222 AC` p. 6; exact export p. 2 |
+| Voltage type | `DC` | `LE14222 AC` p. 3 |
+| Nominal voltage (Min-Max) | `30-30 V` | `LE14222 AC` p. 3 |
+| Supply current (Min-Max) | `0-1 A` | `LE14222 AC` p. 3 |
+| Frequency (Min-Max) | `0-0 Hz` | `LE14222 AC` p. 3 |
+| Sound level | `82 dB` | `LE14222 AC` p. 3 |
+| Standby consumption | `10 mA` | `LE14222 AC` p. 3 |
+| Antimicrobial treatment | `No` | `LE14222 AC` p. 3 |
+| Cable nature for connection | `Flexible or rigid` | `LE14222 AC` p. 3 |
+| Cable section (Min-Max) | `0.1-2.5 mm²` | `LE14222 AC` p. 3 |
+| Label space/information surface | `No` | `LE14222 AC` p. 3 |
+| Fitted with USB plug | `Yes` | `LE14222 AC` p. 3 |
+| Fitted with rainproof plate protection | `No` | `335254-publisher-product-sheet.pdf` pp. 2–3 |
+| With complemantary luminous signal | `Yes` | `LE14222 AC` p. 3 |
+| Vertical fixing center distance (Min-Max) | `25-85 mm` | `LE14222 AC` p. 3 |
+| Horizontal fixing center distance (Min-Max) | `35-110 mm` | `LE14222 AC` p. 3 |
+| Control mode | `Wireless` | `LE14222 AC` p. 3 |
+| Contains Batteries | `No` | `LE14222 AC` p. 3 |
+| Additional unit | `Yes` | `LE14222 AC` p. 3 |
+| Maximum number of additional screens | `2` | `LE14222 AC` p. 3 |
+| Addressable | `Yes` | `LE14222 AC` p. 3 |
+| Door entry system with mobile application | `Yes` | `LE14222 AC` p. 3 |
+| Number of ringtones | `20` | `LE14222 AC` p. 3 |
+| Remote opening of gate / Electric door opener | `Yes` | `LE14222 AC` p. 3 |
+| Screen resolution | `Other` | `LE14222 AC` p. 3 |
+| Screen brightness setting | `Yes` | `LE14222 AC` p. 3 |
+| Screen contrast setting | `Yes` | `LE14222 AC` p. 3 |
+| Memory video function | `No` | `LE14222 AC` p. 3 |
+| Max distance between internal and external unit | `100 m` | `LE14222 AC` p. 3 |
+| Connected object | `Yes` | `LE14222 AC` p. 3 |
+| Application store for download | `App Store, Google Play Store` | `LE14222 AC` p. 3 |
+| Programming way | `Smartphone apps` | `LE14222 AC` p. 3 |
+| With voice command | `No` | `LE14222 AC` p. 3 |
+| Programmable | `No` | `LE14222 AC` p. 3 |
+| Connectable by Internet box | `Yes` | `LE14222 AC` p. 3 |
+| Product use function | `Door entry systems` | `LE14222 AC` p. 3 |
+
+### Identity
+
+Section ID: `ownkb:section:d000299:s000009`
+
+Provenance cues: `catalogue`, `evidence`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2301` | Canonical catalogue |
+| Technical item description | Easy Kit Connnected with H+S | Canonical catalogue |
+| Item family | 0; key `20` | Canonical catalogue |
+| Main system | Video door entry system; key `4` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `101` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `2` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000299:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `101` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | private riser | Canonical item/bus relationship |
+| Video door entry system 8 wires | public riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000299:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `860` | `1` | `0` | `0` | `1` | Not catalogue default | Official |
+| `916` | `2` | `0` | `0` | `1` | Not catalogue default | Official |
+
+Version/revision/build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000299:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `860` | `1123` | BTicino (key `1`) | `0` | Extra | `2301_1.0_BT\xml\Extra\extra.xml` |
+| `860` | `1124` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2301_1.0_BT\xml\Protocol\protocol.xml` |
+| `916` | `1147` | BTicino (key `1`) | `0` | Extra | `2301_2.0_BT\xml\Extra\extra.xml` |
+| `916` | `1148` | BTicino (key `1`) | `0` | Protocol and other device parameters | `2301_2.0_BT\xml\Protocol\protocol.xml` |
+
+All 4 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000299:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `860` | `1` | `154` Internal Unit | Fixed/designated metadata | `3693` | `154` | `1768` |
+| `916` | `1` | `154` Internal Unit | Fixed/designated metadata | `4917` | `154` | `2158` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed/designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000299:s000014`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000299:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `860` | Product Programming | `3` | Canonical firmware/mode association |
+| `916` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `860` | Ethernet | Canonical firmware/connection association |
+| `860` | Ethernet over USB | Canonical firmware/connection association |
+| `916` | Ethernet | Canonical firmware/connection association |
+| `916` | Ethernet over USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating modes
+
+Section ID: `ownkb:section:d000299:s000016`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+These published settings are independent of catalogue programming-mode IDs. Revision/variant limitations are reconciled in Programming and Source reconciliation.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `F1 / F2; Master / Slave` | family and internal-unit role selection | `LE14222AC` printed/PDF pp. 1-7; `335254-publisher-product-sheet` PDF pp. 1-4 |
+| `Idle / active-call commands` | main / communicating entrance panel | `LE14222AC` printed/PDF pp. 1-7; `335254-publisher-product-sheet` PDF pp. 1-4 |
+| `335254 compatible-kit inventory` | BTicino references in `LE14222AC` p. 5 | `LE14222AC` printed/PDF pp. 1-7; `335254-publisher-product-sheet` PDF pp. 1-4 |
+| `365225 compatible-kit inventory` | Legrand references in `LE14226AB` p. 6 | `LE14222AC` printed/PDF pp. 1-7; `335254-publisher-product-sheet` PDF pp. 1-4 |
+| `365225 with 360910/360915/369420/369430` | one connected unit/family; each internal unit needs SP102 | `LE14222AC` printed/PDF pp. 1-7; `335254-publisher-product-sheet` PDF pp. 1-4 |
+| `Update readme scope` | 335254 expressly listed; 365225 not added to that readme by inference | `LE14222AC` printed/PDF pp. 1-7; `335254-publisher-product-sheet` PDF pp. 1-4 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000299:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `860` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `916` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000299:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `154` - Internal Unit
+
+Section ID: `ownkb:section:d000299:s000019`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N` | `0..3999` | `0` | Address |
+| `P` | `0..95` | `0` | Associated external unit |
+| `HAND_FREE` | `0` = Disable; `1` = Enable | `0` | HAND_FREE |
+| `PRO_STUDIO` | `0` = Disable; `1` = Enable | `0` | Professional Studio |
+| `DOOR_STATE` | `0` = Disable; `1` = Enable | `0` | Door state display |
+| `PEOPLE_S` | `0` = No; `1` = ?; `2` = ? | `0` | PeopleSearching |
+| `MENU_PRE` | `0..99` | `0` | MenuPreset |
+| `RING_T_OUT` | `1..30` | `10` | RingTimeOut |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `PE_T_OUT` | `3..90` | `6` | EUConnectionTimeOut |
+| `PI_T_OUT` | `3..90` | `18` | IUConnectionTimeOut |
+| `TEL_T_OUT` | `3..180` | `90` | TelConnectionTimeout |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `BEEP` | `0` = Disable; `1` = Enable | `0` | BEEP |
+| `IS_SLAVE` | `0` = Not slave; `1` = Slave | Not specified in source | Slave |
+| `DOSA_CALL` | `0` = Enable; `1` = Disable | `0` | Forward incoming call to ethernet |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000299:s000020`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000299:s000021`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000299:s000022`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000299:s000023`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+No conversion rule is attached to these slot rows. Resolve the active Object and apply its exact Firmware restrictions; generic resolution remains in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000299:s000024`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `101` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000299:s000025`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `154` - Internal Unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system/model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000299:s000026`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000299:s000027`
+
+Applicability cues: `firmware`, `scs`
+Uncertainty: `may`
+
+For 335254, use the instruction’s explicit compatible-kit list and additional-monitor diagrams. The listed kits are 316913/317013/317014/317113/317213/316911/317011/317211 and 317913/317914/318913/318914; this is not authority to expand arbitrary SCS systems. Configure family/role switches, joystick settings and Home + Security association. At idle, door/gate/light commands target the main panel; during a call they target the communicating panel. Intercom needs an additional internal unit. The Wi-Fi LED distinguishes disconnected, disabled/working and active app-data exchange states. The diagrams use a <=10 A protective breaker and show optional separately purchased accessories; the 24 V external accessory power-supply drawings are not substituted for the monitor’s 30 V marking. The app’s Netatmo security controls are integration functions, not additional sensor hardware inside this monitor. `LE14226AB` directly documents 365225. Its compatible kits are 369110/369220/369230/369320/369330, 367910/367915/368910/368915, and the separately illustrated 360910/360915/369420/369430 group. For the last group, only one connected internal unit per family is allowed and each internal unit requires SP102. Its Home + Security application is explicitly named on p. 7. The Easy Kit Connected with Netatmo software readme dated 30 May 2025 explicitly lists 335254 and its software/update environment; it does not by itself add 365225 to that readme’s reference list.
+
+Apply the firmware-specific restrictions above. The generic session/validation method remains in [Programming](../../programming/).
+
+#### Additional-monitor groups
+
+Section ID: `ownkb:section:d000299:s000028`
+
+Provenance cues: `documentation`, `evidence`
+
+| Function / setting | Documented behavior | Evidence |
+| --- | --- | --- |
+| 335254 third kit group | `LE14222AC` p. 6 also names 310913,310914,318011,318012,318013,318015. For this group only one connected IU per family is permitted and every IU needs SP102. This was missing from the earlier description. | `LE14222AC` p. 6, inspected visually |
+| 365225 third kit group | `LE14226AB` p. 6 names 360910,360915,369420,369430. Only one connected IU per family and SP102 for each IU. French wording unexpectedly says each external unit while English and the other checked translations say internal unit; the diagram labels the internal monitors. | `LE14226AB` p. 6 |
+| Setup evidence | Instructions point to separate downloadable configuration documentation. No full joystick/account-reset sequence is imported from the older Door Entry EASYKIT product. The Netatmo readme lists335254 and Windows10/11,64bit, .NET4+ software requirements; it does not name365225 or identify the installed release. | `LE14222AC` p. 6;`LE14226AB` p. 7; EASYKIT_CONNECTED_README p. 1 |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000299:s000029`
+
+Provenance cues: `catalogue`, `database`, `source`
+
+335254 and 365225 are explicit catalogue commercial relationships. `LE14222AC` and the export directly cover 335254; `LE14226AB` directly covers 365225 and identifies the Legrand publisher. The two instructions agree on core monitor dimensions/supply/radio facts but list different compatible kit references. The database labels both commercial records BTicino; the marketed Legrand brand for 365225 is shown with that source distinction preserved. The export height 140 mm differs from the instruction’s 142.5 mm; both are preserved. Touch control commands coexist with the export’s “With touch screen: No”, because the display and dedicated controls are different surfaces. The instruction’s English rear legend accidentally lists Speaker twice and numbers power supply as 9 while other languages list it as 8; that numbering defect does not establish an extra interface. The 30 W supply marking is not asserted as measured monitor consumption.
+
+#### Reviewed source boundaries
+
+Section ID: `ownkb:section:d000299:s000030`
+
+Both commercial mappings are established and both exact instruction originals are retained. Their compatible-kit lists differ. The newly accounted third `335254` group requires one connected internal unit per family and SP102 for each internal unit; those restrictions apply to that group, not every diagram. The 2025 Netatmo readme names `335254` but not `365225`, so it does not establish interchangeable update applicability.
+
+#### Retained source accounting
+
+Section ID: `ownkb:section:d000299:s000031`
+
+Cautions: `do not`
+Provenance cues: `source`
+
+| Original | Examined role / remaining scope |
+| --- | --- |
+| `LE14222AC.pdf` | English sections PDF pp. 1–6 examined: exact 335254 dimensions, keys, wiring, all three compatible-kit groups and technical data; p. 6 inspected visually; other translations unexamined |
+| `335254-publisher-product-sheet.pdf` | Complete exact-reference commercial export and all classification attributes examined; EAN only where explicitly retained. Source-specific ratings do not replace technical-sheet scopes |
+| `LE14226AB.pdf` | English sections PDF pp. 1–7 examined: exact 365225 dimensions, controls, wiring, compatible kits, app and technical data; French/internal-unit wording conflict p. 6 retained; remaining translations unexamined |
+| `EASYKIT_CONNECTED_README.pdf` | PDF p. 1: entire30May 2025 Netatmo-family exact-reference list and software environment |
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000299:s000032`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+A retained 365225 commercial export/EAN, dimensional tolerance explaining the 335254 export/instruction height difference, installed kit compatibility and app/firmware/diagnostic behavior remain uncorroborated. Exact instruction originals for both SKUs are retained.
+
+No installed hardware revision or microcontroller fingerprint is retained for this cluster. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Canonical catalogue extraction and reconciliation are complete within the retained evidence scope. Unexamined documentation, source conflicts and runtime corroboration remain explicit limits of this review.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000299:s000033`
+
+Applicability cues: `firmware`
+Cautions: `not evidence`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked sources were identified but were not retained or used as evidence. Their presence is not evidence of installed firmware, a certified test result or additional capability.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `DIYN_010011.fwz` | Firmware binary; payload/update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/DIYN_010011.fwz) |
+| `MyHome_Suite_README_v2.pdf` | Publisher-linked document; contents and applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/MyHome_Suite_README_v2.pdf) |
+
+### Sources
+
+Section ID: `ownkb:section:d000299:s000034`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial/system/firmware/build associations, reusable fields and their ranges/defaults, slot/Object/Virgin relationships, every attached filter/condition/conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0151-0160-2026-10-07.md#own-dev-0160)
+
+# Document: ownkb:document:d000300
+
+Source path: `devices/definitions/own-dev-0161-light-now-shutter-actuator-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Light NOW shutter actuator and control
+
+Section ID: `ownkb:section:d000300:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000300:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+This shutter actuator and control, marketed as Light NOW or Céliane MyHOME, combines a shutter motor actuator with a local control and can also command a remote actuator. The documented Y4672M2S variant supports up / down operation and a stored preset position. Its detachable control and actuator parts are joined through the connector shown in the installation sheet.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0161` | Project identity |
+| Technical description | Light NOW shutter actuator and control | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `MX5220`, `Y4672M2S` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `2310` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Automation | Main system association |
+| Item model / `modobj` | `144` | Main association; independent of project ID |
+| Firmware definition | `870` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `6` | Firmware metadata |
+| Categories | Actuators, User interfaces, Multifunction devices | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000300:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Legrand - Céliane | `MX5220` | Established catalogue identity | Manufacturer database commercial record `2666` explicitly links this SKU to item `2310` |
+| BTicino - Light NOW | `Y4672M2S` | Established catalogue identity | Manufacturer database commercial record `2665` explicitly links this SKU to item `2310` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000300:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `Y4672M2S` | `8005543762295` | [Retained Y4672M2S export](https://archive.openwebnet-ha.org/sha256/72/3c/723c29312a905e9179b26c8a4edde561f49a0a1a78260c447fe3b867e034645f.pdf), PDF p.1 |
+| `MX5220` | `3414972808781` | [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf), EAN/Gencode field |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000300:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `Y4672M2S` | Acutator/Command Shutter Light Now | Canonical commercial record `2665` |
+| `MX5220` | Acutator/Command Shutter Light Now | Canonical commercial record `2666` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000300:s000006`
+
+Applicability cues: `revision`, `scs`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `LE14827AA.pdf` | Instruction Use LE14827AA | LE14827AA; 07/24-02 PC | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/27/1f/271f1d6f9656bde96bc80ee6e3717e54248bb9c8446940e9f6aded656fc371a2.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/LE14827AA.pdf) |
+| `Y4672M2S-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/72/3c/723c29312a905e9179b26c8a4edde561f49a0a1a78260c447fe3b867e034645f.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-Y4672M2S&include_technical=1) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `2310`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `LE14826AC.pdf` | Exact MX5220 multilingual installation notice | LE14826AC; 05/26-01 PC | Printed/PDF pp.1-2 mounting variants; p.3 indication and adjustment controls; p.4 wiring, SCS supply and shutter-specific motor column. MX5230 lighting and MX5220C packaging references are separate scopes. | [Archived original](https://archive.openwebnet-ha.org/sha256/78/ca/78ca31a67be1a93dc933574dd7d0cf30ddff259881e23c050fe49e3d565c5660.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/LE14826AC.pdf) |
+| `MX5220-ean-publisher-page.html` | Exact French publisher product record | Retrieved 7 October 2026; live publisher record, no printed revision | MX5220 Céliane identity, EAN, shutter capabilities, dimensions, classification attributes and linked installation original. | [Archived original](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) | [Publisher source](https://www.legrand.fr/pro/catalogue/actionneur-bus-celiane-myhome-avec-commande-integree-pour-volet-roulant-460w-230v-2-modules) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000300:s000007`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Y4672M2S SCS supply | `18..27 Vdc in installation sheet; 27 Vdc nominal in export` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Y4672M2S current draw at maximum LED intensity | `9 mA standby; 17 mA maximum shutter operation` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Y4672M2S motor load | `460 W at 230 Vac; 250 W at 110 Vac` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Y4672M2S operating temperature | `0..40 °C in installation sheet; export says -5..36 °C` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Load supply / terminals | `110..230 Vac, 50/60 Hz; printed terminal capacity 2 x 1.5 m² or 1 x 2.5 m² has unit typo; unit is not silently corrected` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Y4672M2S motor contact marking | `2 A; 110..230 Vac on installation marking; export description says 250 Vac relay` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Y4672M2S dimensions | `45 x 45 x 40 mm; minimum box depth 43 mm; 2 wiring-device modules` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Control configurators | `A1, PL1, M1, A2, PL2, M2` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Local indication | `steady blue load ON; steady white load OFF; flashing blue Object not configured` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| LED brightness cycle | `60% default; 30%; 0%; 100%; hold LED pushbutton more than 2 s` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+| Circuit protection | `10 A thermal magnetic circuit breaker in wiring diagram` | `LE14827AA` PDF pp. 1-4; `Y4672M2S-publisher-product-sheet` PDF pp. 1-5 |
+
+| Completion / packaging | `1- or2-module key covers,support frames and plates; publisher says plastic-free paper packaging` | `Y4672M2S-publisher-product-sheet.pdf` pp. 1-2 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000300:s000008`
+
+Applicability cues: `not applicable`, `scs`
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Frequency classifications and a negative connected-object classification do not establish the runtime transport or exclude control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| Bus system KNX | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system KNX-RF (Radio Frequency) | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system KNX Secure | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system KNX Secure-RF (Radio Frequency) | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system radio frequency | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system LON | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system Powernet | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Other bus systems | `Other` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Radio frequency bidirectional | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Number of linkable devices | `1` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Mounting method | `Flush-mounted` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Width in number of modular spacings | `2` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Local operation / hand operation | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| With LED indication | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Number of digital inputs | `3` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Suitable for C-load | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Max. number of switching contacts | `2` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Max. switching current | `2 A` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Rated operating voltage (Min- Max) | `110-230 V` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Different phases connectable | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| With bus connection | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus module detachable | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Min. depth of built-in installation box | `43 mm` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Modular expandability | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Degree of protection (IP) | `IP20` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Width | `45 mm` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Height | `45 mm` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Depth | `40 mm` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| degree of impact strength (IK) | `IK04` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Operating / setting temperature (Min-Max) | `-5-36 °C` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Storage temperature (Min-Max) | `-10-71 °C` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Voltage type | `AC` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Terminal marking indication | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Type of load | `Universal and LED Retrofit` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 3 |
+| Connection type | `Screwed terminal` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Number of distribution blocks | `4` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Terminals capacity (Min-Max) | `0.34-2.5 mm²` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Connection type | `Not applicable` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Label space / information surface | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Fitted with USB plug | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Addressable | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Connected object | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| With voice command | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Programmable | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Interoperable connection Protocol | `Yes` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Connectable by Internet box | `No` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+| Product use function | `Lighting management` | `Y4672M2S-publisher-product-sheet.pdf` PDF p. 4 |
+
+| Property | MX5220 value | Evidence |
+| --- | --- | --- |
+| SCS supply / motor load | `18..27 Vdc`; `460 W at 230 Vac`, `250 W at 110 Vac` | LE14826AC printed/PDF p.4; exact shutter column |
+| Notice current at maximum LED intensity | `9 mA` standby; `17 mA` shutter operation | LE14826AC printed/PDF p.4; `26 mA` concerns two lights on MX5230 |
+| Operating supply / temperature | `110..230 Vac`, `50/60 Hz`; `0..40 °C` | LE14826AC printed/PDF p.4 |
+| Dimensions / built-in depth | `45 x 45 x 39.9 mm`; `33 mm` built-in depth | [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) |
+| Protection / publisher standby | `IP20`; `7 mA` standby; LED-intensity context unstated | [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) |
+| Assembly accessories | Cover, ring, support and finish plate; Céliane and Arteor/Seano drawings are distinct mounting examples | LE14826AC pp.1-2; [Retained MX5220 manufacturer record](https://archive.openwebnet-ha.org/sha256/97/7b/977b6da48095c8ed427f559ecbaeec83eb3acab4f71844838826937a960430ab.pdf) |
+
+### Identity
+
+Section ID: `ownkb:section:d000300:s000009`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `2310` | Canonical catalogue |
+| Technical item description | Acutator/Command Shutter Light Now | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `2` | Canonical catalogue |
+| Main system | Automation; key `1` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `144` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `2` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000300:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `144` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000300:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `870` | `1` | `0` | `0` | `6` | Not catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000300:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000300:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `870` | `1` | `218` Shutter actuator | Fixed / designated metadata | `4378` | `514` | `1970` |
+| `870` | `2` | `410` Light control | Fixed / designated metadata | `4374` | `410` | `1969` |
+| `870` | `2` | `411` Automation control | Candidate alternative | `3844` | `411` | `1826` |
+| `870` | `2` | `412` Lock / unlock actuator control | Candidate alternative | `3848` | `412` | `1827` |
+| `870` | `2` | `416` Scheduled scenario PLUS | Candidate alternative | `3852` | `416` | `1828` |
+| `870` | `2` | `418` Open lock control | Candidate alternative | `3860` | `418` | `1830` |
+| `870` | `2` | `426` Staircase light control | Candidate alternative | `3864` | `426` | `1831` |
+| `870` | `2` | `427` Floor call control | Candidate alternative | `3868` | `427` | `1832` |
+| `870` | `2` | `463` Load control actuator visualization | Candidate alternative | `3876` | `492` | `1834` |
+| `870` | `3` | `410` Light control | Fixed / designated metadata | `4375` | `410` | `1969` |
+| `870` | `3` | `411` Automation control | Candidate alternative | `3845` | `411` | `1826` |
+| `870` | `3` | `412` Lock / unlock actuator control | Candidate alternative | `3849` | `412` | `1827` |
+| `870` | `3` | `416` Scheduled scenario PLUS | Candidate alternative | `3853` | `416` | `1828` |
+| `870` | `3` | `418` Open lock control | Candidate alternative | `3861` | `418` | `1830` |
+| `870` | `3` | `426` Staircase light control | Candidate alternative | `3865` | `426` | `1831` |
+| `870` | `3` | `427` Floor call control | Candidate alternative | `3869` | `427` | `1832` |
+| `870` | `3` | `463` Load control actuator visualization | Candidate alternative | `3877` | `492` | `1834` |
+| `870` | `3` | `174` Shutter control (3 slots) | Candidate alternative | `3839` | `665` | `1824` |
+| `870` | `4` | `410` Light control | Fixed / designated metadata | `4376` | `410` | `1969` |
+| `870` | `4` | `411` Automation control | Candidate alternative | `3846` | `411` | `1826` |
+| `870` | `4` | `412` Lock / unlock actuator control | Candidate alternative | `3850` | `412` | `1827` |
+| `870` | `4` | `416` Scheduled scenario PLUS | Candidate alternative | `3854` | `416` | `1828` |
+| `870` | `4` | `418` Open lock control | Candidate alternative | `3862` | `418` | `1830` |
+| `870` | `4` | `426` Staircase light control | Candidate alternative | `3866` | `426` | `1831` |
+| `870` | `4` | `427` Floor call control | Candidate alternative | `3870` | `427` | `1832` |
+| `870` | `4` | `463` Load control actuator visualization | Candidate alternative | `3878` | `492` | `1834` |
+| `870` | `5` | `410` Light control | Fixed / designated metadata | `4377` | `410` | `1969` |
+| `870` | `5` | `411` Automation control | Candidate alternative | `3847` | `411` | `1826` |
+| `870` | `5` | `412` Lock / unlock actuator control | Candidate alternative | `3851` | `412` | `1827` |
+| `870` | `5` | `416` Scheduled scenario PLUS | Candidate alternative | `3855` | `416` | `1828` |
+| `870` | `5` | `418` Open lock control | Candidate alternative | `3863` | `418` | `1830` |
+| `870` | `5` | `426` Staircase light control | Candidate alternative | `3867` | `426` | `1831` |
+| `870` | `5` | `427` Floor call control | Candidate alternative | `3871` | `427` | `1832` |
+| `870` | `5` | `463` Load control actuator visualization | Candidate alternative | `3879` | `492` | `1834` |
+| `870` | `6` | `143` User interface settings for command | Fixed / designated metadata | `4373` | `644` | `1968` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000300:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `870` | `521` Soft-Touch command virgin | `2`, `3`, `4`, `5` | `410`, `411`, `412`, `413`, `414`, `415`, `416`, `417`, `418`, `419`, `421`, `426`, `427`, `462` | `521` | `156` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000300:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `870` | Physical configuration | `0` | Canonical firmware/mode association |
+| `870` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `870` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000300:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `documentation`, `evidence`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `A1/PL1/M1; A2/PL2/M2` | Separate configuration sockets shown on control; full selector mode matrix deferred by original to application documentation | `LE14827AA` PDF pp. 1, 3-4 |
+| `Blue steady / white steady / blue flashing` | Load on / load off / Object unconfigured; indication is published, not captured feedback | `LE14827AA` PDF pp. 1, 3-4 |
+| `Brightness hold >2 s` | 60% default →30%→0%→100% | `LE14827AA` PDF pp. 1, 3-4 |
+| `App prerequisites, July 2024 sheet` | Android ≥5.0 with Google Play; iPhone iOS ≥12.0; these are sheet prerequisites, not current app-store compatibility | `LE14827AA` PDF pp. 1, 3-4 |
+
+| MX5220 control / indication | Published setting | Evidence |
+| --- | --- | --- |
+| LED indication | Magenta steady = load ON; blue steady = load OFF; flashing magenta = Object unconfigured | LE14826AC printed/PDF p.3 |
+| LED intensity button | Hold `>5 s` for shutter brightness; `60%` default → `30%` → `0%` → `100%`. The `>2 s` instruction is for MX5230 lights. | LE14826AC printed/PDF p.3 |
+| Shutter adjustment button | Hold `>3 s`; notice directs detailed adjustment to online catalogue. This alone does not specify the full calibration sequence. | LE14826AC printed/PDF p.3 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000300:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `870` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `870` | `A1` | `0..9` | `0` | Configurator A1 (0-9) |
+| `870` | `PL1` | `0..9` | `0` | PL1 - (0-9) |
+| `870` | `M1` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN`; `15` = `PUL` | `0` | Modality; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`, SU_GIU, SU_GIU_M,`CEN`,`PUL`) |
+| `870` | `A2` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB` | `0` | Automation A addressing space (for configurator A2) |
+| `870` | `PL2` | `0..9` | `0` | PL2 - (0-9) |
+| `870` | `M2` | `0..8`; `9` = `O/I`; `10` = `OFF`; `11` = `ON`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `15` = `PUL` | `0` | Modality; Mode physical configurator (0-8, `O/I`,`OFF`,`ON`, SU_GIU, SU_GIU_M,`CEN`,`PUL`) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000300:s000018`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `410` - Light control
+
+Section ID: `ownkb:section:d000300:s000019`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON`/`OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (MODE+`ON`/`OFF`) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+
+#### Object `411` - Automation control
+
+Section ID: `ownkb:section:d000300:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = UP bistable control; `1` = DOWN bistable control; `2` = UP monostable control; `3` = DOWN monostable control; `4` = UP monostable and bistable control; `5` = DOWN monostable and bistable control | `0` | Modality; mode (`UP/DOWN`) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `412` - Lock / unlock actuator control
+
+Section ID: `ownkb:section:d000300:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Disable; `2` = Enable | `1` | Modality; mode (D/E) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `416` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000300:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press / release only; `1` = Press / hold / release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `418` - Open lock control
+
+Section ID: `ownkb:section:d000300:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+#### Object `426` - Staircase light control
+
+Section ID: `ownkb:section:d000300:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `427` - Floor call control
+
+Section ID: `ownkb:section:d000300:s000025`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `463` - Load control actuator visualization
+
+Section ID: `ownkb:section:d000300:s000026`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `492` maps to external Object `463`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PRIORITY` | `0..63` | `1` | Priority |
+| `PHASE` | `0` = Single phase; `1` = Phase 1; `2` = Phase 2; `3` = Phase 3 | `0` | Phase |
+
+#### Object `218` - Shutter actuator
+
+Section ID: `ownkb:section:d000300:s000027`
+
+Applicability cues: `only for`
+Provenance cues: `catalogue`
+
+Catalogue Object key `514` maps to external Object `218`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `M` | `0` = Master standard mode; `11` = Slave standard mode; `15` = `PUL` mode master; `16` = `PUL` mode slave | `0` | Modality; Mode shutter actuator |
+| `SHUTTER_TYPE` | `0` = Standard automatic without slats; `1` = Standard without slats; `2` = Pulse without slats; `3` = Standard with slats | `0` | Motor type; Shutter type |
+| `STOP_PULSE_DURATION` | `1` = 0.1 s; `2` = 0.2 s; `3` = 0.3 s; `4` = 0.4 s; `5` = 0.5 s; `6` = 0.6 s; `7` = 0.7 s; `8` = 0.8 s; `9` = 0.9 s; `10` = 1 s; `11` = 1.1 s; `12` = 1.2 s; `13` = 1.3 s; `14` = 1.4 s; `15` = 1.5 s; `16` = 1.6 s; `17` = 1.7 s; `18` = 1.8 s; `19` = 1.9 s; `20` = 2 s; `21` = 2.1 s; `22` = 2.2 s; `23` = 2.3 s; `24` = 2.4 s; `25` = 2.5 s; `26` = 2.6 s; `27` = 2.7 s; `28` = 2.8 s; `29` = 2.9 s; `30` = 3 s; `31` = 3.1 s; `32` = 3.2 s; `33` = 3.3 s; `34` = 3.4 s; `35` = 3.5 s; `36` = 3.6 s; `37` = 3.7 s; `38` = 3.8 s; `39` = 3.9 s; `40` = 4 s; `41` = 4.1 s; `42` = 4.2 s; `43` = 4.3 s; `44` = 4.4 s; `45` = 4.5 s; `46` = 4.6 s; `47` = 4.7 s; `48` = 4.8 s; `49` = 4.9 s; `50` = 5 s; `51` = 5.1 s; `52` = 5.2 s; `53` = 5.3 s; `54` = 5.4 s; `55` = 5.5 s; `56` = 5.6 s; `57` = 5.7 s; `58` = 5.8 s; `59` = 5.9 s; `60` = 6 s; `61` = 6.1 s; `62` = 6.2 s; `63` = 6.3 s; `64` = 6.4 s; `65` = 6.5 s; `66` = 6.6 s; `67` = 6.7 s; `68` = 6.8 s; `69` = 6.9 s; `70` = 7 s; `71` = 7.1 s; `72` = 7.2 s; `73` = 7.3 s; `74` = 7.4 s; `75` = 7.5 s; `76` = 7.6 s; `77` = 7.7 s; `78` = 7.8 s; `79` = 7.9 s; `80` = 8 s; `81` = 8.1 s; `82` = 8.2 s; `83` = 8.3 s; `84` = 8.4 s; `85` = 8.5 s; `86` = 8.6 s; `87` = 8.7 s; `88` = 8.8 s; `89` = 8.9 s; `90` = 9 s; `91` = 9.1 s; `92` = 9.2 s; `93` = 9.3 s; `94` = 9.4 s; `95` = 9.5 s; `96` = 9.6 s; `97` = 9.7 s; `98` = 9.8 s; `99` = 9.9 s; `100` = 10 s | `1` | Stop pulse duration; Duration pulse of stop |
+| `UP_OR_DOWN_PULSE_DURATION` | `1` = 0.1 s; `2` = 0.2 s; `3` = 0.3 s; `4` = 0.4 s; `5` = 0.5 s; `6` = 0.6 s; `7` = 0.7 s; `8` = 0.8 s; `9` = 0.9 s; `10` = 1 s; `11` = 1.1 s; `12` = 1.2 s; `13` = 1.3 s; `14` = 1.4 s; `15` = 1.5 s; `16` = 1.6 s; `17` = 1.7 s; `18` = 1.8 s; `19` = 1.9 s; `20` = 2 s; `21` = 2.1 s; `22` = 2.2 s; `23` = 2.3 s; `24` = 2.4 s; `25` = 2.5 s; `26` = 2.6 s; `27` = 2.7 s; `28` = 2.8 s; `29` = 2.9 s; `30` = 3 s; `31` = 3.1 s; `32` = 3.2 s; `33` = 3.3 s; `34` = 3.4 s; `35` = 3.5 s; `36` = 3.6 s; `37` = 3.7 s; `38` = 3.8 s; `39` = 3.9 s; `40` = 4 s; `41` = 4.1 s; `42` = 4.2 s; `43` = 4.3 s; `44` = 4.4 s; `45` = 4.5 s; `46` = 4.6 s; `47` = 4.7 s; `48` = 4.8 s; `49` = 4.9 s; `50` = 5 s; `51` = 5.1 s; `52` = 5.2 s; `53` = 5.3 s; `54` = 5.4 s; `55` = 5.5 s; `56` = 5.6 s; `57` = 5.7 s; `58` = 5.8 s; `59` = 5.9 s; `60` = 6 s; `61` = 6.1 s; `62` = 6.2 s; `63` = 6.3 s; `64` = 6.4 s; `65` = 6.5 s; `66` = 6.6 s; `67` = 6.7 s; `68` = 6.8 s; `69` = 6.9 s; `70` = 7 s; `71` = 7.1 s; `72` = 7.2 s; `73` = 7.3 s; `74` = 7.4 s; `75` = 7.5 s; `76` = 7.6 s; `77` = 7.7 s; `78` = 7.8 s; `79` = 7.9 s; `80` = 8 s; `81` = 8.1 s; `82` = 8.2 s; `83` = 8.3 s; `84` = 8.4 s; `85` = 8.5 s; `86` = 8.6 s; `87` = 8.7 s; `88` = 8.8 s; `89` = 8.9 s; `90` = 9 s; `91` = 9.1 s; `92` = 9.2 s; `93` = 9.3 s; `94` = 9.4 s; `95` = 9.5 s; `96` = 9.6 s; `97` = 9.7 s; `98` = 9.8 s; `99` = 9.9 s; `100` = 10 s | `1` | UP or DOWN pulse duration; Pulse duration of UP or Down |
+| `TILTING` | `1..100` | `70` | Tilting to rolling switch pulse duration; Only for pulse mode. |
+| `ROLLING` | `1..100` | `70` | Rolling to tilting switch pulse duration; Only for pulse mode. |
+| `LOCAL_BUTTON` | `0` = Bistable control; `1` = Monostable control; `2` = Blades control and Bistable; `3` = Bistable and blades control | `0` | Modality; Local button mode for Shutter managemant 4661M2 |
+| `PRIORITY` | `0` = Low; `1` = Medium; `2` = High; `3` = Safety | `1` | Priority; Shutter management command priority |
+| `PRESET_NUMBER` | `1..10`; `0` = None | `0` | Preset; Shutter management preset number |
+| `P1` | `0..100` | `10` | Preset of position P1 |
+| `P2` | `0..100` | `20` | Preset of position P2 |
+| `P3` | `0..100` | `30` | Preset of position P3 |
+| `P4` | `0..100` | `40` | Preset of position P4 |
+| `P5` | `0..100` | `50` | Preset of position P5 |
+| `P6` | `0..100` | `60` | Preset of position P6 |
+| `P7` | `0..100` | `70` | Preset of position P7 |
+| `P8` | `0..100` | `80` | Preset of position P8 |
+| `P9` | `0..100` | `90` | Preset of position P9 |
+| `P10` | `0..100` | `100` | Preset of position P10 |
+| `UP_SHUTTER_TIME_MINUTES` | `0..9` | `0` | UP shutter calbration time (m) |
+| `UP_SHUTTER_TIME_SECONDS` | `0..59` | `0` | UP shutter calbration time (s) |
+| `DOWN_SHUTTER_TIME_MINUTES` | `0..9` | `0` | DOWN shutter calbration time (m) |
+| `DOWN_SHUTTER_TIME_SECONDS` | `0..59` | `0` | DOWN shutter calbration time (s) |
+| `SLATS_ROTATION_TIME_DOWN_H` | `0..27` | `0` | SLATS ROTATION calibration time when shutter is all the way down - HIGH BYTE (ms) |
+| `SLATS_ROTATION_TIME_DOWN_L` | `0..255` | `0` | SLATS ROTATION calibration time when shutter is all the way down - LOW BYTE (ms) |
+| `SLATS_ROTATION_TIME_MIDDLE_H` | `0..27` | `0` | SLATS ROTATION calibration time when shutter is in middle position - HIGH BYTE (ms); If not intentionally modified, par 0x20 = par 30 |
+| `SLATS_ROTATION_TIME_MIDDLE_L` | `0..255` | `0` | SLATS ROTATION calibration time when shutter is in middle position - LOW BYTE (ms); If not intentionally modified, par 0x21 = par 31 |
+| `SLATS_ROTATION_STEP_NUMBER` | `3..100` | `4` | SLATS ROTATION step number |
+| `G1` | `0..255` | `0` | Group 1; Group = 0 means no group |
+| `G2` | `0..255` | `0` | Group 2; Group = 0 means no group |
+| `G3` | `0..255` | `0` | Group 3; Group = 0 means no group |
+| `G4` | `0..255` | `0` | Group 4; Group = 0 means no group |
+| `G5` | `0..255` | `0` | Group 5; Group = 0 means no group |
+| `G6` | `0..255` | `0` | Group 6; Group = 0 means no group |
+| `G7` | `0..255` | `0` | Group 7; Group = 0 means no group |
+| `G8` | `0..255` | `0` | Group 8; Group = 0 means no group |
+| `G9` | `0..255` | `0` | Group 9; Group = 0 means no group |
+| `G10` | `0..255` | `0` | Group 10; Group = 0 means no group |
+
+#### Object `143` - User interface settings for command
+
+Section ID: `ownkb:section:d000300:s000028`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `644` maps to external Object `143`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LED_LEVEL_COMMANDS` | `0` = `OFF`; `1` = Minimum level; `2` = Medium level; `3` = Maximum level | `2` | LED intensity level |
+| `ENABLE_DISABLE_LED_COMMAND` | `0` = All Led Enabled; `1` = Presence Led Enabled - State Update Led Disable; `2` = Presence Led Disable - State Update Led Enable; `3` = All Led Disable | `0` | Enable-Disable LED |
+| `PRESENCE_LED_INTENSITY_LEVEL_COMMAND` | `0` = Standard level; `1` = High intensity level | `0` | Presence LED intensity level |
+
+#### Object `174` - Shutter control (3 slots)
+
+Section ID: `ownkb:section:d000300:s000029`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `665` maps to external Object `174`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Bistable control; `1` = Monostable control; `2` = Blades control and bistable; `3` = Bistable and blades control | `0` | Modality; Mode (0, 1, 2, 3) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; See Automation System Addressing |
+| `A` | `0..10` | `0` | Area; See Automation System Addressing |
+| `PL` | `0..15` | `0` | Light point; See Automation System Addressing |
+| `G1` | `1..255` | `1` | Group 1; See Automation System Addressing |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level; See Automation System Addressing |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `15` = Local bus 15; `16` = All systems | `0` | Destination level; See Automation System Addressing |
+| `A_R` | `0..10` | `0` | Area of reference actuator |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator |
+| `PRIORITY` | `0` = Low; `1` = Medium; `2` = High; `3` = Safety | `1` | Priority; Shutter management command priority |
+| `PRE` | `1..9`; `0` = None | `0` | Preset; Shutter management preset number |
+
+#### Object `413` - Scenario module control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000300:s000030`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15 | `0` | Destination level; Destination level (`0..15`) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
+
+#### Object `414` - Scheduled scenario (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000300:s000031`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `CEN_BUTT_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press/release only; `1` = Press/hold/release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `415` - Scenario PLUS Lighting Management (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000300:s000032`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (ON/OFF regulation) |
+| `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+
+#### Object `417` - AUX control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000300:s000033`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
+
+#### Object `419` - Sound diffusion control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000300:s000034`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`/volume +; `1` = `OFF`/volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON`/`OFF` | `0` | Modality; Mode (VOL,ON_OFF) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+| `SUB_SOURCE` | `0..255` | `0` | Sub source |
+| `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
+
+#### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000300:s000035`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `462` - Open lock command on session (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000300:s000036`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000300:s000037`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000300:s000038`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000300:s000039`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `870` | `218` | `4449` | `UP_SHUTTER_TIME_MINUTES` | `0..9` (entire reusable range retained) | `0` | UP shutter calbration time (m) |
+| `870` | `218` | `4462` | `UP_SHUTTER_TIME_SECONDS` | `0..59` (entire reusable range retained) | `0` | UP shutter calbration time (s) |
+| `870` | `218` | `4475` | `DOWN_SHUTTER_TIME_MINUTES` | `0..9` (entire reusable range retained) | `0` | DOWN shutter calbration time (m) |
+| `870` | `218` | `4488` | `SLATS_ROTATION_TIME_DOWN_H` | `0..27` (entire reusable range retained) | `0` | SLATS ROTATION calibration time when shutter is all the way down - HIGH BYTE (ms) |
+| `870` | `218` | `4501` | `SLATS_ROTATION_TIME_DOWN_L` | `0..255` (entire reusable range retained) | `0` | SLATS ROTATION calibration time when shutter is all the way down - LOW BYTE (ms) |
+| `870` | `218` | `4514` | `SLATS_ROTATION_TIME_MIDDLE_H` | `0..27` (entire reusable range retained) | `0` | SLATS ROTATION calibration time when shutter is in middle position - HIGH BYTE (ms) |
+| `870` | `218` | `4527` | `SLATS_ROTATION_TIME_MIDDLE_L` | `0..255` (entire reusable range retained) | `0` | SLATS ROTATION calibration time when shutter is in middle position - LOW BYTE (ms) |
+| `870` | `218` | `4540` | `SLATS_ROTATION_STEP_NUMBER` | `3..100` (entire reusable range retained) | `4` | SLATS ROTATION step number |
+| `870` | `218` | `4620` | `SHUTTER_TYPE` | `3` = Standard with slats | `0` | Motor type; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `870` | `174` | `4092` | `PRIORITY` | `0` = Low; `1` = Medium; `2` = High; `3` = Safety (entire reusable range retained) | `1` | Priority |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000300:s000040`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000300:s000041`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `144` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000300:s000042`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `174` - Shutter control (3 slots) | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `411` - Automation control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `412` - Lock / unlock actuator control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `416` - Scheduled scenario PLUS | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `418` - Open lock control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `426` - Staircase light control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `427` - Floor call control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `463` - Load control actuator visualization | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `143` - User interface settings for command | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `410` - Light control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `218` - Shutter actuator | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000300:s000043`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `174` - Shutter control (3 slots) | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `412` - Lock / unlock actuator control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `463` - Load control actuator visualization | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `463` - Load control actuator visualization | New energy saving and load control | `20` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `143` - User interface settings for command | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `143` - User interface settings for command | New energy saving and load control | `20` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `218` - Shutter actuator | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+#### Related functional reference families
+
+Section ID: `ownkb:section:d000300:s000044`
+
+Applicability cues: `applies to`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+The correspondence below is a semantic cross-reference based on the named role and the canonical functional reference; it does not assert captured frames or support for every operation.
+
+| Catalogue role | Related canonical reference | Evidence limit |
+| --- | --- | --- |
+| `410` | [Lighting](../../functional/who-1-lighting/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `174`, `218`, `411` | [Automation](../../functional/who-2-automation/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `412` | [Actuator locking](../../functional/who-14-special-commands/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `416` | [CEN+ scenario triggers](../../functional/who-25-transversal/cen-plus.md) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `463` | [Energy and load management](../../functional/who-18-energy-management/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
+
+| MX5220 published capability | Scope / distinction | Evidence |
+| --- | --- | --- |
+| Motor control | Logical relay interlock or pulse control; up, down, stop, opening percentage, stored-position recall | Exact MX5220 publisher record; documented capability, no captured frames |
+| Position feedback / memorization | Closed, open or intermediate-position indication; direct self-learning of a stored opening level | Exact MX5220 publisher record; transport and procedure not established by this listing |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000300:s000045`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000300:s000046`
+
+Applicability cues: `firmware`
+Uncertainty: `not established`, `not verified`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+Use the shutter wiring labelled Y4672M2S; the shared sheet also covers Y4672M2L lighting outputs, whose lamp-load columns are separate from the Y4672M2S motor column. Configure the command and actuator roles separately according to the catalogue Firmware/Module filters. The sheet directs detailed application setup to the manufacturer app / documentation; it does not supply a complete physical M1/M2 mode matrix. Stored preset behavior is explicitly stated in the Y4672M2S export, while calibration and the complete preset procedure are not established in this original. Local control status and brightness adjustment are documented independently of OpenWebNet feedback.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000300:s000047`
+
+Applicability cues: `firmware`
+Uncertainty: `appears`
+Provenance cues: `catalogue`, `database`
+
+MX5220 and Y4672M2S are explicit database members of one technical item. The retained Y4672M2S originals and the separately retained MX5220 notice and product record establish variant-scoped specifications. MX5220 is marketed as Céliane, while the shared database description still says Light Now. The database description says “Light Now”, while the exact current export markets Light NOW. The export labels the bus module non-detachable, whereas the installation drawing distinguishes control and actuator assemblies: a classification label does not erase the physical connector. The export’s `110..230` V operating range and 250 Vac contact label describe different properties. Its temperature classification (`-5..36 °C`) conflicts with the installation sheet’s `0..40` °C. The lighting-oriented load / use classifications in the shutter export are preserved separately from the exact motor column. The installation terminal-capacity unit is printed m²; this appears malformed, but no alternate literal is invented.
+
+The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
+
+#### Reviewed source boundaries
+
+Section ID: `ownkb:section:d000300:s000048`
+
+Applicability cues: `firmware`, `scs`
+Cautions: `must not`
+Provenance cues: `catalogue`
+
+The exact notices and product records are reconciled above. The five linked Light NOW brochures/catalogues remain unexamined marketing/composition sources; no calibration, electrical-rating or transport claim is derived from them. The MX5220 page also links catalogue page p.78 (2024), the connected-home guide and Céliane brochure; these remain unexamined regional marketing/accessory sources. Firmware `870`’s `SHUTTER_TYPE=3` filter excludes reusable default `0`; no replacement is inferred. Object `174` omits destination level `14`; retain that hole rather than extending an apparent range.
+
+The MX5220 listing describes an addressable SCS control in its functional text but marks its classification “Addressable: No”; that field is retained as a publisher classification discrepancy. Its `7 mA` standby value and the notice’s `9 mA` at maximum LED intensity have different stated measurement contexts. The MX5220 LED colours and shutter adjustment thresholds must not be copied to Y4672M2S. LE14826AC includes separate MX5230 lighting columns and MX5220C references; neither expands this dossier’s established catalogue identities.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000300:s000049`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+The full application configuration / calibration procedure, the MX5220C packaging relationship beyond its inclusion in the notice, and applicability of preset behavior to all catalogue releases remain documentation gaps. All catalogue identities remain established.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000300:s000050`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked files were identified but are not used as retained evidence in this dossier. Firmware / installers and declarations remain separate evidence families. A listed URL does not establish payload identity, installed release or tested compatibility.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `Brochure_LHNOW_2M.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure_LHNOW_2M.pdf) |
+| `Brochure_LHNOW_3M.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Brochure_LHNOW_3M.pdf) |
+| `Catalogue_LHNOW_2M.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue_LHNOW_2M.pdf) |
+| `Catalogue_LHNOW_3M.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Catalogue_LHNOW_3M.pdf) |
+| `Presentation_LHNOW.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Presentation_LHNOW.pdf) |
+
+### Sources
+
+Section ID: `ownkb:section:d000300:s000051`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0161)
+
+# Document: ownkb:document:d000301
+
+Source path: `devices/definitions/own-dev-0162-two-wire-ip-interface.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Two-wire to IP interface
+
+Section ID: `ownkb:section:d000301:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000301:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+346890 joins two-wire video-entry risers to an Ethernet backbone, allowing much larger installations than a single local bus. It separates physical two-wire addresses from system addresses through configurable base offsets. Quick physical configuration and advanced TiDeviceIP configuration offer different system capacities.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0162` | Project identity |
+| Technical description | Two-wire to IP interface | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `346890` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `1177` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Integration function | Main system association |
+| Item model / `modobj` | `17` | Main association; independent of project ID |
+| Firmware definition | `70` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Gateways and interfaces, Audio video | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000301:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `346890` | Established catalogue identity | Manufacturer database commercial record `1689` explicitly links this SKU to item `1177` |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000301:s000004`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `346890` | IP interface (2Wire/IP) | Canonical commercial record `1689` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000301:s000005`
+
+Applicability cues: `revision`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `346890-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/4c/ba/4cbab45d25900ff10a4ab5496727dee464db2263320e47e67c3fbd8511945fa6.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-346890) |
+| `BT00676_a_IT.pdf` | Manufacturer Italian / installation document | BT00676_a_IT; printed publication date not established | Printed/PDF pp. 1-4 supply, interfaces, physical / software address and capacity matrix; pp.5-6 contrasting physical / advanced range examples. Ambiguous boundary and capacity labels retained. | [Archived original](https://archive.openwebnet-ha.org/sha256/a0/39/a039e94eaff871a9f70c97f0c05f1157cc3af9c3da592ce62c5d8de22b1f0a18.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00676_a_IT.pdf) |
+| `BT00676_a_EN.pdf` | Historical exact-product manufacturer source | BT00676_a_EN; printed publication date not established | Printed/PDF pp. 1-4 supply, interfaces, physical / software address and capacity matrix; pp.5-6 contrasting physical / advanced range examples. Ambiguous boundary and capacity labels retained. | [Archived original](https://archive.openwebnet-ha.org/sha256/ca/7e/ca7e4910b7840645e96782fbf8e5d1d84deb72de73e69f7a51a530163726dfc0.pdf) | [Publisher original](https://dar.bticino.com/asset/Documents/BT00676_a_EN.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1177`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000301:s000006`
+
+Applicability cues: `revision`, `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS operating supply | `18..27 Vdc` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| SCS standby / maximum draw | `5 mA / 70 mA` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| DC standby / maximum draw | `150 mA / 300 mA` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| Operating temperature | `5..40 °C` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| Mounting | `10 DIN modules` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| Interfaces | `10/100 Mbit Ethernet; USB; separate entrance-panel/handset SCS and supply terminals` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| Quick configuration capacity | `3900 handsets; 95 entrance panels; 100 IP devices; 9 IP switchboards` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| Advanced configuration capacity | `10000 handsets; 1000 entrance panels; 100 IP devices; switchboards constrained by total IP-device count` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| System addressing | `system address = physical address + local handset/entrance-panel base` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+| IP switchboard service count | `2..4 IP devices per switchboard PC according to enabled services` | `BT00676_a_EN` printed/PDF pp. 1-6; Italian revision `BT00676_a_IT` pp. 1-6 |
+
+### Identity
+
+Section ID: `ownkb:section:d000301:s000007`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1177` | Canonical catalogue |
+| Technical item description | IP interface (2Wire/IP) | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `100` | Canonical catalogue |
+| Main system | Integration function; key `26` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `17` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `1` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000301:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `17` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000301:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `70` | `4` | `0` | `8` | `1` | Catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000301:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `70` | `71` | BTicino (key `1`) | `0` | external software | `TiDeviceIP_0400` |
+
+The one parameter-file association is shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000301:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `70` | `1` | `92` IP interface (2 wires/IP and D2009/IP) | Fixed / designated metadata | `2271` | `92` | `949` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000301:s000012`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000301:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `70` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `70` | Ethernet | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000301:s000014`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `M1 / N1 / M2 / N2 / C` | Lower first / second address component / upper first / second component, each `00..99`; M1 also `OFF`; `C=1..9` switchboard | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `Quick mode 1` | `M1=OFF`; N1/M2/N2 empty; automatically detected entrance panels / cameras only | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `Quick mode 2` | Range delimited by configured lower and upper handset addresses; entrance panels / cameras automatically detected | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `Quick mode 3` | M1 hundreds prefix; N1/M2/N2 empty; stated hundred-address interval; boundary inequalities conflict with example labels | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `Advanced local bases` | Independent handset and entrance-panel / lock offsets; system address = physical address + base | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `Capacity, quick / advanced` | System handsets 3900 /10000; entrance panels 95 /1000; highest called address 4000 /10000; total IP devices 100 in either mode | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `IP switchboards / services` | Quick 9 switchboards; advanced subject to 100 IP-device total; each switchboard PC consumes `2..4` service-device entries | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `Advanced functions` | Direct entrance-panel call; activation redirection; camera cycling; customizable text and system addressing | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `Range example 190..210` | Physical example uses two 346851 interfaces for two hundreds ranges; advanced example uses handset addresses `1..21` plus base 189 without those interfaces | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `SPEED / FULL / LINK / SYSTEM / AUX` | 100/10 Mbit; full / half duplex; Ethernet present / absent; powered / operating; `AUX` unused | `BT00676_a_EN` printed/PDF pp. 1-6 |
+| `PC transfer / firmware update` | Powered interface, no physical configurators; USB-miniUSB; TiDeviceIP also verifies quick-mode consistency | `BT00676_a_EN` printed/PDF pp. 1-6 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000301:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `70` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `70` | `M1_1` | `0..3` | `0` | M1_1; Internal Unit Range |
+| `70` | `M1_2` | `0..9`; `10` = `OFF` | `0` | M1_2; Internal Unit Range |
+| `70` | `N1_1` | `0..9` | `0` | N1_1; Internal Unit Range |
+| `70` | `N1_2` | `0..9` | `0` | N1_2; Internal Unit Range |
+| `70` | `M2_1` | `0..3` | `0` | M2_1; Internal Unit Range |
+| `70` | `M2_2` | `0..9` | `0` | M2_2; Internal Unit Range |
+| `70` | `N2_1` | `0..9` | `0` | N2_1; Internal Unit Range |
+| `70` | `N2_2` | `0..9` | `0` | N2_2; Internal Unit Range |
+| `70` | `C` | `0..9` | `0` | C; Interf2wires Associated SwitchBoard |
+| `70` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address; public documentation value, not an observed installation |
+| `70` | `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `70` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000301:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `92` - IP interface (2 wires/IP and D2009/IP)
+
+Section ID: `ownkb:section:d000301:s000017`
+
+Provenance cues: `documentation`, `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address; public documentation value, not an observed installation |
+| `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `EXTERNAL_UNIT_MIN` | `0..100090` | Not specified in source | (0-100090) |
+| `EXTERNAL_UNIT_MAX` | `0..100090` | Not specified in source | (0-100090) |
+| `INTERNAL_UNIT_MIN` | `0..103999` | Not specified in source | (0-103999) |
+| `INTERNAL_UNIT_MAX` | `0..103999` | Not specified in source | (0-103999) |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000301:s000018`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000301:s000019`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000301:s000020`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000301:s000021`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000301:s000022`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `17` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000301:s000023`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `92` - IP interface (2 wires/IP and D2009/IP) | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000301:s000024`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `92` - IP interface (2 wires/IP and D2009/IP) | Integration function | `26` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000301:s000025`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000301:s000026`
+
+Applicability cues: `firmware`
+Uncertainty: `not verified`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Quick configuration uses M1/N1 for the lower handset boundary, M2/N2 for the upper boundary and `C=1..9` for the IP switchboard. `M1=OFF` with N1/M2/N2 empty is entrance-panel-only. A hundred-address riser mode uses M1 as the hundreds prefix and leaves the other handset sockets empty. Advanced configuration introduces local bases for handsets and entrance panels / locks, direct entrance-panel calls, activation redirection and camera cycling. For USB transfer / update, power the interface and remove physical configurators. TiDeviceIP provides the quick-mode consistency check. Count switchboard communication framework, logger and alarm-manager services within the 100-IP-device ceiling. These capacity figures describe the documented system, not unrestricted per-interface fan-out.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000301:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+The exact English and Italian technical sheets and Italian export agree on the two-wire/IP role and 10-DIN housing. The technical sheet distinguishes 3900 quick-mode system handsets from a basic physical address range `1..3999`; those numbers are not silently equated. Its page 2 also assigns 95 entrance panels and 3900 handsets to one interface in the stated quick configuration, whereas the page 4 table labels these as system totals; the physical wiring limits still require independent topology validation. Several example inequalities omit or vary inclusive boundaries even though diagrams show endpoints; preserve configured domains and validate boundary behavior on hardware. 346891 is a different reference and is not substituted for this discontinued item. The 346310 switchboard sheet explicitly excludes installations using 346890.
+
+The two-language sheets disagree internally on address endpoints: page 3 uses physical handset range `1..3999`, while the page 4 drawing labels `1..4000` and a shifted `4001..8000` range. Page 3’s entrance-panel drawing adds base `100` to `1..95` yet labels the result `101..190`, excluding five possible values; this is an arithmetic/source discrepancy, not an inferred device truncation. The broad reusable Object `92` ranges `0..100090` and `0..103999` do not establish those quick-mode capacities. Firmware `70` alone adds digit selectors; its `C=0..9` catalogue domain includes `0`, while the physical switchboard setting is `1..9`. The empty selector interpretation and boundary discrepancies require hardware corroboration.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000301:s000028`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `database`, `evidence`, `source`
+
+The boundary semantics in quick-mode examples, currently usable TiDeviceIP software, per-interface topology limits and installed diagnostic support remain uncorroborated.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+The original TiDeviceIP manual and software payload referenced by parameter record `71` (`TiDeviceIP_0400`) have not been inspected. Database Ethernet programming and documented USB transfer/update describe different software workflows; neither establishes a public OpenWebNet listener on this interface.
+
+### Sources
+
+Section ID: `ownkb:section:d000301:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0162)
+
+# Document: ownkb:document:d000302
+
+Source path: `devices/definitions/own-dev-0163-d45-ip-interface.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## D45 to IP interface
+
+Section ID: `ownkb:section:d000302:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000302:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+323011 connects a D45 video-entry installation to an IP network and supports mixed D45 / two-wire-IP installations. It has separate D45 bus and main-entrance-panel connections, Ethernet, USB and serial configuration interfaces. Video-gain switches adapt the documented bus connection.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0163` | Project identity |
+| Technical description | D45 to IP interface | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `323011` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `1178` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Integration function | Main system association |
+| Item model / `modobj` | `49` | Main association; independent of project ID |
+| Firmware definition | `71` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Gateways and interfaces, Audio video | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000302:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| Legrand | `323011` | Established catalogue identity | Manufacturer database commercial record `1953` explicitly links this SKU to item `1178` |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000302:s000004`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `323011` | IP interface (D45/IP) | Canonical commercial record `1953` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000302:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `BT00459-b-EN.pdf` | Exact-product manufacturer source | BT00459-b-EN; 13/05/2013 | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/10/54/105452f6c19200f06548456308b4a1e025478cd7d3526181f90c6540f2643282.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/BT00459-b-EN.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1178`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000302:s000006`
+
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| Auxiliary supply | `30 Vdc` | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| Standby / maximum draw | `≤130 mA / ≤230 mA at 30 V` | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| Operating temperature | `-10..40 °C` | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| Dimensions / mounting | `175 x 90 x 60 mm; DIN rail` | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| Interfaces | `10/100 Mbit Ethernet; USB; RS232; SYSTEM1 D45 riser bus; SYSTEM2 main entrance panel` | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| Local controls | `video gain DIP switch; configurator socket; unused pushbutton` | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| LEDs | `SYSTEM powered/working; LINK network; FULL duplex; SPEED 100 Mbit on / 10 Mbit off` | `BT00459-b-EN` printed/PDF pp. 1-2 |
+
+### Identity
+
+Section ID: `ownkb:section:d000302:s000007`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1178` | Canonical catalogue |
+| Technical item description | IP interface (D45/IP) | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `100` | Canonical catalogue |
+| Main system | Integration function; key `26` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `49` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `1` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000302:s000008`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Integration function | `49` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Burglar alarm | private riser | Canonical item/bus relationship |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+| Network | LAN | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000302:s000009`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `71` | `4` | `0` | `1` | `1` | Catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000302:s000010`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `71` | `72` | Legrand (key `2`) | `0` | external software | `TiDeviceIP_0400` |
+
+The one parameter-file association is shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000302:s000011`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `71` | `1` | `92` IP interface (2 wires/IP and D2009/IP) | Fixed / designated metadata | `2264` | `92` | `942` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000302:s000012`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000302:s000013`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `71` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `71` | Ethernet | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000302:s000014`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `Configuration tool` | D45/IP interface Config 2.0 | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| `Download routes` | Online Ethernet, serial RS232, USB | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| `SYSTEM1 / SYSTEM2 / DC` | D45 riser shunt / D45 main entrance panel / auxiliary 30 Vdc supply | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| `DIP / unused controls` | Video-gain selection shown; complete switch-value matrix not given; local pushbutton and `AUX` LED unused | `BT00459-b-EN` printed/PDF pp. 1-2 |
+| `SYSTEM / LINK / FULL / SPEED` | Powered / working / network found / full duplex / 100 Mbit on or 10 Mbit off | `BT00459-b-EN` printed/PDF pp. 1-2 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000302:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `71` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `71` | `EXTERNAL_UNIT_MIN` | `0..100090` | Not specified in source | (0-100090) |
+| `71` | `EXTERNAL_UNIT_MAX` | `0..100090` | Not specified in source | (0-100090) |
+| `71` | `INTERNAL_UNIT_MIN` | `0..103999` | Not specified in source | (0-103999) |
+| `71` | `INTERNAL_UNIT_MAX` | `0..103999` | Not specified in source | (0-103999) |
+| `71` | `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address; public documentation value, not an observed installation |
+| `71` | `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `71` | `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000302:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `92` - IP interface (2 wires/IP and D2009/IP)
+
+Section ID: `ownkb:section:d000302:s000017`
+
+Provenance cues: `documentation`, `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `LAN_IP_ADDRESS` | `###.###.###.###` = Local IP address | `[NETWORK_ADDRESS]` | Local IP address; public documentation value, not an observed installation |
+| `LAN_IP_ADDR_TYPE` | `0` = Static IP; `1` = Dynamic IP (DHCP) | `0` | Local IP dynamicity |
+| `SYSADDRESS` | `######` = Univocal code | `1` | Univocal code |
+| `EXTERNAL_UNIT_MIN` | `0..100090` | Not specified in source | (0-100090) |
+| `EXTERNAL_UNIT_MAX` | `0..100090` | Not specified in source | (0-100090) |
+| `INTERNAL_UNIT_MIN` | `0..103999` | Not specified in source | (0-103999) |
+| `INTERNAL_UNIT_MAX` | `0..103999` | Not specified in source | (0-103999) |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000302:s000018`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000302:s000019`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000302:s000020`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000302:s000021`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000302:s000022`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `49` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000302:s000023`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `92` - IP interface (2 wires/IP and D2009/IP) | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000302:s000024`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `92` - IP interface (2 wires/IP and D2009/IP) | Integration function | `26` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000302:s000025`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000302:s000026`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `not verified`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The exact sheet specifies D45/IP interface Config 2.0. Download routes are online Ethernet, serial and USB; USB also supports firmware updates. SYSTEM1 connects to a D45 riser shunt, SYSTEM2 to the main entrance panel and DC to the auxiliary 30 V supply. The lower / higher handset ranges must cover the intended risers without overlaps; the sheet illustrates consecutive 80-address risers. Do not use Ethernet RJ45 pin assumptions for the D45 SYSTEM connectors simply because the connector shape is identical.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+The sheet’s `0..239` and `240..559` grouped-riser examples are examples, not universal address maxima. Its wiring note permits omission of a main-panel supply when the panel is sufficiently close to the interface, without stating a distance/current threshold; do not generalize that topology-dependent exception. Video gain switch positions and their numerical gain remain undocumented in this two-page sheet.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000302:s000027`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`, `source`
+
+The exact 2013 sheet establishes this D45 interface independently of 346890, even though both firmware definitions reuse Object `92`. Shared Object fields do not establish interchangeable terminals, supply or commissioning tools. The database label “D2009/IP” is retained implementation terminology; the product sheet uses D45. The two-page sheet establishes three configuration-transfer routes but does not document every software field or network default.
+
+The catalogue associates Legrand reference `323011` with item `1178`, model `49`, firmware `71` (`4.0`, build `1`) and Object `92`; the exact D45 sheet corroborates this product without merging it into `346890` (item `1177`, model `17`). The sheet’s Config 2.0 and three download routes differ from the historical catalogue parameter path `TiDeviceIP_0400` and Ethernet association. Preserve these as source-specific commissioning metadata; the parameter payload is unexamined. SYSTEM connectors are D45 bus links, distinct from Ethernet LAN.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000302:s000028`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The original Config 2.0 software / manual, complete video-gain settings, detailed mixed-system limits and hardware / network diagnostics remain gaps. The official historical catalogue URL attempted during discovery returned 403.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+### Sources
+
+Section ID: `ownkb:section:d000302:s000029`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0163)
+
+# Document: ownkb:document:d000303
+
+Source path: `devices/definitions/own-dev-0164-axolute-eight-zone-touch-control.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Axolute eight-zone touch control
+
+Section ID: `ownkb:section:d000303:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000303:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+This Axolute control uses eight capacitive touch zones in a four-module panel to operate configured home functions. It can learn commands, recall scenarios or act as four rocker controls, with proximity-sensitive LEDs and configurable feedback. Its temporary cleaning lock prevents touches from operating loads.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0164` | Project identity |
+| Technical description | Axolute eight-zone touch control | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `HC/HS/HD4657M4` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `1191` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Automation | Main system association |
+| Item model / `modobj` | `28` | Main association; independent of project ID |
+| Firmware definition | `158` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `9` | Firmware metadata |
+| Categories | User interfaces, Multifunction devices | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000303:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Axolute | `HC/HS/HD4657M4` | Established catalogue identity | Manufacturer database commercial record `1191` explicitly links this SKU to item `1191` |
+| BTicino - Axolute | `HC4657M4` | Established finish member of combined catalogue reference | `MQ00110-f-EN` p. 1 and exact publisher export; combined catalogue code `HC/HS/HD4657M4` |
+| BTicino - Axolute | `HS4657M4` | Established finish member of combined catalogue reference | `MQ00110-f-EN` p. 1 and exact publisher export; combined catalogue code `HC/HS/HD4657M4` |
+| BTicino - Axolute | `HD4657M4` | Established finish member of combined catalogue reference | `MQ00110-f-EN` p. 1 and exact publisher export; combined catalogue code `HC/HS/HD4657M4` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000303:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `HC4657M4` | `8012199942322` | [HC4657M4-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/82/c1/82c1b0688b53fba432e99f43d4ded91e3489ed823deb8b763cbd54767cb2edc7.pdf) PDF p. 1 |
+| `HD4657M4` | `8005543412879` | [HD4657M4-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/8e/d5/8ed547d2783cdb9d1eebe7d54a808bee09325bdc0ccf457e4113f9ae2449f584.pdf) PDF p. 1 |
+| `HS4657M4` | `8012199942346` | [HS4657M4-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/d8/d7/d8d710cbc63b8606de8df350950d062fd2abf49738f3ac5f013357a6834a86f7.pdf) PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000303:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `HC/HS/HD4657M4` | Touch control | Canonical commercial record `1191` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000303:s000006`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `MQ00110_f_EN.pdf` | Technical Sheet MQ00110-F-EN | MQ00110-f-EN; 07/06/2014 | Printed/PDF pp. 1-7: exact M4 supply/current, eight-zone topology, physical/software domains, learning/scenario/CEN modes, LED settings and cleaning/calibration. Separate M3/573912/13 values excluded. | [Archived original](https://archive.openwebnet-ha.org/sha256/fb/98/fb9888607c897255780d423bd2a27a1104be3a7b7c908c811c93d2f34d99b1ea.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MQ00110-f-EN.pdf) |
+| `U2701D.pdf` | Multilingual touch-control user manual | Part. U2701D - 03/11-01 CT; printed revision label | English printed/PDF pp.15-18; capacitive-key operation, configured-function record and 10-second cleaning suspension. Other language sections parallel these user operations; no electrical ratings claimed. | [Archived original](https://archive.openwebnet-ha.org/sha256/25/2d/252d4d2a5ef6f4f7b12e48263dd7bcd95dae28c5b6aee024fe59e285ebb5a456.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/U2701D.pdf) |
+| `HC4657M4-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/82/c1/82c1b0688b53fba432e99f43d4ded91e3489ed823deb8b763cbd54767cb2edc7.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-HC4657M4&include_technical=1) |
+| `HD4657M4-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/8e/d5/8ed547d2783cdb9d1eebe7d54a808bee09325bdc0ccf457e4113f9ae2449f584.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-HD4657M4&include_technical=1) |
+| `HS4657M4-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/d8/d7/d8d710cbc63b8606de8df350950d062fd2abf49738f3ac5f013357a6834a86f7.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-HS4657M4&include_technical=1) |
+| `MyHOME-Technical-Guide.pdf` | Installation Guide GUI-MHOME | GUI-MHOME; printed publication date not established; incidental older-sheet dates are not guide dates | HC/HS/HD4657M4 touch controls printed/PDF p.95. Other product sheets and their incidental dates do not date the whole guide or override exact-product limits. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/c9/a5c96905fdb4d86e833293da14f6e8e49f3b54c20ccf40203eca3def705c71d9.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/MyHOME%20Technical%20Guide.pdf) |
+| `eteris-historical-catalogue.pdf` | Historical exact-product manufacturer source | eteris-historical-catalogue; printed publication date not established | touch-control HC/HS/HD4657M4 printed pp.77, 92, 124, 156 / PDF pp.79, 94, 126, 158, plus occupied box depth printed pp.163-165 / PDF pp.165-167. Separate plate, box, support and display dimensions are not interchangeable. | [Archived original](https://archive.openwebnet-ha.org/sha256/a5/07/a5076bf8fe317ce6516dbd3810af363add8eac63c8f783f47974991c6aaabb30.pdf) | [Publisher original](https://www.bticino.es/pdf/C_50_EditorialContent_145_Lib_Props_GLib_AList_GLib_AItem_0_GLib_ABin.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1191`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00224AA_EN.pdf` | Retained F460/F461 installation/configuration guide | Revision in retained original; compatibility scoped to its tables | Printed/PDF pp.7-8 manufacturer supported-product and production-batch table; pp.12-13 line topology and cross-line control table. Other device/server commissioning pages outside this Device review. | [Archived original](https://archive.openwebnet-ha.org/sha256/d2/a4/d2a45bbcd72baa0b6e5536baccca8816cce3cdf94414e7b7144763003c1b1e6d.pdf) | Publisher URL not retained in manifest |
+| `ST_00001000_EN.pdf` | Retained Classe 300EOS compatibility sheet | Original prints ST-00001580-EN; 27/06/2023 | Printed/PDF pp.7-9 system compatibility context and HC/HD/HS4657M4 minimum production batches. Archive filename differs from printed sheet identifier; other internal-unit features do not apply to this Device. | [Archived original](https://archive.openwebnet-ha.org/sha256/34/c4/34c45807e121af30e969e1635156cb33a423ccc21ddce8c05b1a6d733cb7ef36.pdf) | [Publisher source](https://dar.bticino.com/asset/Documents/ST_00001000_EN.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000303:s000007`
+
+Applicability cues: `scs`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS nominal / operating supply | `27 Vdc / 18..27 Vdc` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Maximum draw, HC/HS/HD4657M4 | `25 mA in 2014 technical sheet` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Operating temperature | `0..40 °C` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Format | `4 flush-mounted modules; 8 capacitive touch zones` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Brightness, physical | `25% default; 40%; 0%; proximity levels 65% / 70% / 20%` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Brightness, virtual | `10 selectable levels` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Cleaning lock | `touch opposite diagonal end zones; restores after 10 s without touching` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Commissioning | `wait 2 min for automatic calibration; commands may be automatically sent during calibration` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| Historical mounting | `504E masonry or PB504 hollow-wall box with H4704 support; corresponding M4 combinations` | `eteris-historical-catalogue.pdf` printed pp.77, 124 / PDF pp.79, 126 |
+| Occupied depth inside box | `20 mm for HC4657M4,HD4657M4,HS4657M4; separate from overall export depth` | `eteris-historical-catalogue.pdf` printed pp.163-165 / PDF pp.165-167 |
+| Historical HC/HS front outline | `150 x 95 mm; current publisher export lists150 x96 mm` | `eteris-historical-catalogue.pdf` printed p.156 / PDF p.158 |
+| Historical box dimensions | `504E:133 x74 x53.5 mm;PB504:131.5 x68 x51 mm; installation-accessory sizes` | `eteris-historical-catalogue.pdf` printed p.124 / PDF p.126 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000303:s000008`
+
+Applicability cues: `scs`
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Frequency classifications and a negative connected-object classification do not establish the runtime transport or exclude control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| Bus system KNX | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system KNX-RF (Radio Frequency) | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system radio frequency | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system LON | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Bus system Powernet | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Other bus systems | `Other` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Radio frequency bidirectional | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Mounting method | `Flush-mounted` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| With anti-theft / dismantling protection | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| With bus connection | `Yes` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Number of actuation points | `8` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Number of buttons | `8` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| With LED indication | `Yes` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| With label area | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| With display | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Material | `Glass` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Material quality | `Other` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Surface protection | `Untreated` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Surface finishing | `Glossy` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Colour | `White` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| RAL-number (similar) | `9006` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Transparent | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| With room temperature controller | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| With IR sensor | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Degree of protection (IP) | `IP20` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Min. depth of built-in installation box | `55 mm` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Width | `150 mm` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Height | `96 mm` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Depth | `29 mm` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| degree of impact strength (IK) | `Other` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Operating / setting temperature (Min-Max) | `0-40 °C` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Storage temperature (Min-Max) | `-10-70 °C` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Frequency (Min-Max) | `0-0 Hz` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Standby consumption | `20 mA` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Terminal marking indication | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Antimicrobial treatment | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 3; `HD4657M4-publisher-product-sheet.pdf` PDF p. 3; `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Terminals capacity (Min-Max) | `0.34-2.5 mm²` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Cable nature for connection | `Flexible or rigid` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Label space / information surface | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Addressable | `Yes` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Connected object | `No` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Operating method | `SCS` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| With voice command | `Yes` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Programmable | `Yes` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Interoperable connection Protocol | `Yes` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Connectable by Internet box | `Yes` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| Product use function | `Control & command systems` | `HC4657M4-publisher-product-sheet.pdf` PDF p. 4; `HD4657M4-publisher-product-sheet.pdf` PDF p. 4; `HS4657M4-publisher-product-sheet.pdf` PDF p. 4 |
+| RAL-number (similar) | `9003` | `HD4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| Colour | `Black` | `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+| RAL-number (similar) | `9004` | `HS4657M4-publisher-product-sheet.pdf` PDF p. 3 |
+
+### Identity
+
+Section ID: `ownkb:section:d000303:s000009`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1191` | Canonical catalogue |
+| Technical item description | Touch control | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `1` | Canonical catalogue |
+| Main system | Automation; key `1` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `28` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `1` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000303:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Automation | `28` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Automation | private riser | Canonical item/bus relationship |
+| Automation | local bus | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000303:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `158` | `-1` | `-1` | `-1` | `9` | Catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000303:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+No firmware parameter-file association is stored for this item.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000303:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `158` | `1` | `410` Light control | Fixed / designated metadata | `1216` | `410` | `653` |
+| `158` | `1` | `411` Automation control | Candidate alternative | `1224` | `411` | `654` |
+| `158` | `1` | `412` Lock / unlock actuator control | Candidate alternative | `1232` | `412` | `655` |
+| `158` | `1` | `413` Scenario module control | Candidate alternative | `1240` | `413` | `656` |
+| `158` | `1` | `414` Scheduled scenario | Candidate alternative | `1248` | `414` | `657` |
+| `158` | `1` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1256` | `415` | `658` |
+| `158` | `1` | `416` Scheduled scenario PLUS | Candidate alternative | `1264` | `416` | `659` |
+| `158` | `1` | `418` Open lock control | Candidate alternative | `1272` | `418` | `660` |
+| `158` | `1` | `419` Sound diffusion control | Candidate alternative | `1280` | `419` | `661` |
+| `158` | `1` | `426` Staircase light control | Candidate alternative | `1288` | `426` | `662` |
+| `158` | `1` | `427` Floor call control | Candidate alternative | `1296` | `427` | `663` |
+| `158` | `2` | `410` Light control | Fixed / designated metadata | `1217` | `410` | `653` |
+| `158` | `2` | `411` Automation control | Candidate alternative | `1225` | `411` | `654` |
+| `158` | `2` | `412` Lock / unlock actuator control | Candidate alternative | `1233` | `412` | `655` |
+| `158` | `2` | `413` Scenario module control | Candidate alternative | `1241` | `413` | `656` |
+| `158` | `2` | `414` Scheduled scenario | Candidate alternative | `1249` | `414` | `657` |
+| `158` | `2` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1257` | `415` | `658` |
+| `158` | `2` | `416` Scheduled scenario PLUS | Candidate alternative | `1265` | `416` | `659` |
+| `158` | `2` | `418` Open lock control | Candidate alternative | `1273` | `418` | `660` |
+| `158` | `2` | `419` Sound diffusion control | Candidate alternative | `1281` | `419` | `661` |
+| `158` | `2` | `426` Staircase light control | Candidate alternative | `1289` | `426` | `662` |
+| `158` | `2` | `427` Floor call control | Candidate alternative | `1297` | `427` | `663` |
+| `158` | `3` | `410` Light control | Fixed / designated metadata | `1218` | `410` | `653` |
+| `158` | `3` | `411` Automation control | Candidate alternative | `1226` | `411` | `654` |
+| `158` | `3` | `412` Lock / unlock actuator control | Candidate alternative | `1234` | `412` | `655` |
+| `158` | `3` | `413` Scenario module control | Candidate alternative | `1242` | `413` | `656` |
+| `158` | `3` | `414` Scheduled scenario | Candidate alternative | `1250` | `414` | `657` |
+| `158` | `3` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1258` | `415` | `658` |
+| `158` | `3` | `416` Scheduled scenario PLUS | Candidate alternative | `1266` | `416` | `659` |
+| `158` | `3` | `418` Open lock control | Candidate alternative | `1274` | `418` | `660` |
+| `158` | `3` | `419` Sound diffusion control | Candidate alternative | `1282` | `419` | `661` |
+| `158` | `3` | `426` Staircase light control | Candidate alternative | `1290` | `426` | `662` |
+| `158` | `3` | `427` Floor call control | Candidate alternative | `1298` | `427` | `663` |
+| `158` | `4` | `410` Light control | Fixed / designated metadata | `1219` | `410` | `653` |
+| `158` | `4` | `411` Automation control | Candidate alternative | `1227` | `411` | `654` |
+| `158` | `4` | `412` Lock / unlock actuator control | Candidate alternative | `1235` | `412` | `655` |
+| `158` | `4` | `413` Scenario module control | Candidate alternative | `1243` | `413` | `656` |
+| `158` | `4` | `414` Scheduled scenario | Candidate alternative | `1251` | `414` | `657` |
+| `158` | `4` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1259` | `415` | `658` |
+| `158` | `4` | `416` Scheduled scenario PLUS | Candidate alternative | `1267` | `416` | `659` |
+| `158` | `4` | `418` Open lock control | Candidate alternative | `1275` | `418` | `660` |
+| `158` | `4` | `419` Sound diffusion control | Candidate alternative | `1283` | `419` | `661` |
+| `158` | `4` | `426` Staircase light control | Candidate alternative | `1291` | `426` | `662` |
+| `158` | `4` | `427` Floor call control | Candidate alternative | `1299` | `427` | `663` |
+| `158` | `5` | `410` Light control | Fixed / designated metadata | `1220` | `410` | `653` |
+| `158` | `5` | `411` Automation control | Candidate alternative | `1228` | `411` | `654` |
+| `158` | `5` | `412` Lock / unlock actuator control | Candidate alternative | `1236` | `412` | `655` |
+| `158` | `5` | `413` Scenario module control | Candidate alternative | `1244` | `413` | `656` |
+| `158` | `5` | `414` Scheduled scenario | Candidate alternative | `1252` | `414` | `657` |
+| `158` | `5` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1260` | `415` | `658` |
+| `158` | `5` | `416` Scheduled scenario PLUS | Candidate alternative | `1268` | `416` | `659` |
+| `158` | `5` | `418` Open lock control | Candidate alternative | `1276` | `418` | `660` |
+| `158` | `5` | `419` Sound diffusion control | Candidate alternative | `1284` | `419` | `661` |
+| `158` | `5` | `426` Staircase light control | Candidate alternative | `1292` | `426` | `662` |
+| `158` | `5` | `427` Floor call control | Candidate alternative | `1300` | `427` | `663` |
+| `158` | `6` | `410` Light control | Fixed / designated metadata | `1221` | `410` | `653` |
+| `158` | `6` | `411` Automation control | Candidate alternative | `1229` | `411` | `654` |
+| `158` | `6` | `412` Lock / unlock actuator control | Candidate alternative | `1237` | `412` | `655` |
+| `158` | `6` | `413` Scenario module control | Candidate alternative | `1245` | `413` | `656` |
+| `158` | `6` | `414` Scheduled scenario | Candidate alternative | `1253` | `414` | `657` |
+| `158` | `6` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1261` | `415` | `658` |
+| `158` | `6` | `416` Scheduled scenario PLUS | Candidate alternative | `1269` | `416` | `659` |
+| `158` | `6` | `418` Open lock control | Candidate alternative | `1277` | `418` | `660` |
+| `158` | `6` | `419` Sound diffusion control | Candidate alternative | `1285` | `419` | `661` |
+| `158` | `6` | `426` Staircase light control | Candidate alternative | `1293` | `426` | `662` |
+| `158` | `6` | `427` Floor call control | Candidate alternative | `1301` | `427` | `663` |
+| `158` | `7` | `410` Light control | Fixed / designated metadata | `1222` | `410` | `653` |
+| `158` | `7` | `411` Automation control | Candidate alternative | `1230` | `411` | `654` |
+| `158` | `7` | `412` Lock / unlock actuator control | Candidate alternative | `1238` | `412` | `655` |
+| `158` | `7` | `413` Scenario module control | Candidate alternative | `1246` | `413` | `656` |
+| `158` | `7` | `414` Scheduled scenario | Candidate alternative | `1254` | `414` | `657` |
+| `158` | `7` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1262` | `415` | `658` |
+| `158` | `7` | `416` Scheduled scenario PLUS | Candidate alternative | `1270` | `416` | `659` |
+| `158` | `7` | `418` Open lock control | Candidate alternative | `1278` | `418` | `660` |
+| `158` | `7` | `419` Sound diffusion control | Candidate alternative | `1286` | `419` | `661` |
+| `158` | `7` | `426` Staircase light control | Candidate alternative | `1294` | `426` | `662` |
+| `158` | `7` | `427` Floor call control | Candidate alternative | `1302` | `427` | `663` |
+| `158` | `8` | `410` Light control | Fixed / designated metadata | `1223` | `410` | `653` |
+| `158` | `8` | `411` Automation control | Candidate alternative | `1231` | `411` | `654` |
+| `158` | `8` | `412` Lock / unlock actuator control | Candidate alternative | `1239` | `412` | `655` |
+| `158` | `8` | `413` Scenario module control | Candidate alternative | `1247` | `413` | `656` |
+| `158` | `8` | `414` Scheduled scenario | Candidate alternative | `1255` | `414` | `657` |
+| `158` | `8` | `415` Scenario PLUS Lighting Management | Candidate alternative | `1263` | `415` | `658` |
+| `158` | `8` | `416` Scheduled scenario PLUS | Candidate alternative | `1271` | `416` | `659` |
+| `158` | `8` | `418` Open lock control | Candidate alternative | `1279` | `418` | `660` |
+| `158` | `8` | `419` Sound diffusion control | Candidate alternative | `1287` | `419` | `661` |
+| `158` | `8` | `426` Staircase light control | Candidate alternative | `1295` | `426` | `662` |
+| `158` | `8` | `427` Floor call control | Candidate alternative | `1303` | `427` | `663` |
+| `158` | `9` | `130` User interface settings | Fixed / designated metadata | `1215` | `480` | `652` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000303:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `158` | `521` Soft-Touch command virgin | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` | `410`, `411`, `412`, `413`, `414`, `415`, `416`, `417`, `418`, `419`, `421`, `426`, `427`, `462` | `521` | `35` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000303:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `158` | Physical configuration | `0` | Canonical firmware/mode association |
+| `158` | Virtual Configuration | `1` | Canonical firmware/mode association |
+| `158` | Advanced Configuration | `2` | Canonical firmware/mode association |
+
+No firmware/connection association is stored; this does not imply that the physical Device lacks a bus connector.
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000303:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `Physical A / PL, learning and F420` | `1..9` /`0..9`; note physical `PL=0` is explicitly present in this sheet | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `Physical A / PL, CEN` | `1..9` /`1..9`; `CEN` subsection has a narrower physical PL domain | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `Virtual addresses` | Room `0..10`; point `0..15`; room / group / general controls; group `1..255` | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `A=AMB / GR / GEN` | Room / group / general address roles, distinct from point-to-point addressing | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `Destination I` | Local bus `1..9` physical or `1..15` virtual; `I=CEN` riser; `I=0` complete system; installation level via software | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `M=0` | Individual command self-learning, physical only; virtual configuration assigns functions individually | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `M=6` | Paired top on / up and bottom off / down; source heading says cyclic, accompanying definition says never cyclic | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `Four-module M=1 / M=2` | F420 scenario buttons `1..8` →scenarios `1..8` /`9..16`; generic `M=1..4` also covers the separate three-module product | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `M=CEN` | MH200N command; physical buttons `1..8`, software `0..31`; address different from actuator addresses | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `PLUS / other functions` | PLUS scenario number `1..2047` and buttons `0..31`; locking, video-entry, sound and PLUS functions configured through software | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `Brightness, physical / virtual` | 25% default, 40%, 0%; corresponding fade levels 65%, 70%, 20%; ten software levels | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `Learning / deletion` | 20 s selection / exit timeout; one assignment hold 4 s; all touch assignments rear button hold 10 s | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `F420 scenario memory` | Program / delete with F420 learning enabled; scenario memory remains in F420; F420 DEL hold 10 s resets its entire memory | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+| `Cleaning / calibration` | Opposite diagonal zones suspend input until 10 s untouched; wait 2 min after installation for automatic calibration | `MQ00110-f-EN` printed/PDF pp. 1-7 |
+
+#### Physical SET illumination combinations
+
+Section ID: `ownkb:section:d000303:s000017`
+
+`MQ00110-f-EN` printed/PDF p.7 separates unused-zone lighting, feedback and fade.
+
+| SET | LED at rest | Status return | Fade |
+| --- | --- | --- | --- |
+| `0` | Always on | Off | On |
+| `1` | Always on | Off | Off |
+| `2` | Only configured zones | Off | On |
+| `3` | Only configured zones | Off | Off |
+| `4` | Always on | On | On |
+| `5` | Always on | On | Off |
+| `6` | Only configured zones | On | On |
+| `7` | Only configured zones | On | Off |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000303:s000018`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `158` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `158` | `A` | `0..9`; `12` = `GEN`; `13` = `GR`; `14` = `AMB` | `0` | A; Enviroment (0-9 `GEN`,`GR`,`AMB`) |
+| `158` | `PL` | `0..9` | `0` | PL; Light Point |
+| `158` | `M` | `0..2`; `6`; `9` = `O/I`; `12` = `UP/DOWN`; `13` = `UP/DOWN` monostable; `14` = `CEN` | `0` | M; Mode physical configurator (0-2, 6,`O/I`, SU_GIU, SU_GIU_M,`CEN`) |
+| `158` | `SET` | `0..7` | `0` | SET; User interface settings configurator (0-7) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000303:s000019`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `410` - Light control
+
+Section ID: `ownkb:section:d000303:s000020`
+
+Applicability cues: `only for`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Toggle; `1` = Timed `ON`; `2` = Toggle dimmer; `4` = Toggle `ON`/`OFF`; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `20` = `ON` and point to point dimmer; `21` = `OFF` and point to point dimmer; `22` = `ON` and Dimmer; `23` = `OFF` and Dimmer; `32` = Blinking 0.5 s; `33` = Blinking 1 s; `34` = Blinking 1.5 s; `35` = Blinking 2 s; `36` = Blinking 2.5 s; `37` = Blinking 3 s; `38` = Blinking 3.5 s; `39` = Blinking 4 s; `40` = Blinking 4.5 s; `41` = Blinking 5 s; `42` = Blinking 5.5 s; `43` = Blinking 6 s; `44` = Blinking 6.5 s; `45` = Blinking 7 s; `46` = Blinking 7.5 s; `47` = Blinking 8 s; `49` = `ON` dimmer 10%; `50` = `ON` dimmer 20%; `51` = `ON` dimmer 30%; `52` = `ON` dimmer 40%; `53` = `ON` dimmer 50%; `54` = `ON` dimmer 60%; `55` = `ON` dimmer 70%; `56` = `ON` dimmer 80%; `57` = `ON` dimmer 90%; `128` = Customized timed `ON`; `129` = Customized toggle and point to point dimmer; `131` = Customized toggle dimmer; `133` = Customized toggle dimmer without regulation; `135` = Customized `ON` and dimmer without regulation; `136` = Customized `OFF` and dimmer without regulation; `137` = Customized `ON` and dimmer with regulation; `138` = Customized `OFF` and dimmer with regulation | `0` | Modality; Mode (MODE+`ON`/`OFF`) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `HOURS` | `0..255` | `0` | Hours; Only for `MOD=128` |
+| `MINUTES` | `0..59` | `0` | Minutes; Only for `MOD=128` |
+| `SECONDS` | `0..59` | `30` | Seconds; Only for `MOD=128` |
+| `LEVEL` | `0..100` | `100` | Level; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `START_S` | `0..255` | `255` | Soft start speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `STOP_S` | `0..255` | `255` | Soft stop speed; Only for `MOD=129`, 131, 133, 135, 136, 137, 138 |
+| `DIMMING_S` | `0..255` | `255` | Dimming speed; Only for `MOD=129`, 131 |
+| `T_TIME` | `1` = 1 min; `2` = 2 min; `3` = 3 min; `4` = 4 min; `5` = 5 min; `6` = 15 min; `7` = 30 s; `8` = 0.5 s; `9` = 2 s; `10` = 10 min | `1` | Tabled time; Only for `MOD=1` |
+
+#### Object `411` - Automation control
+
+Section ID: `ownkb:section:d000303:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = UP bistable control; `1` = DOWN bistable control; `2` = UP monostable control; `3` = DOWN monostable control; `4` = UP monostable and bistable control; `5` = DOWN monostable and bistable control | `0` | Modality; mode (`UP/DOWN`) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `A_R` | `0..10` | `0` | Area of reference actuator; 0= no referent |
+| `PL_R` | `0..15` | `0` | Light point of reference actuator; 0= no referent |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `412` - Lock / unlock actuator control
+
+Section ID: `ownkb:section:d000303:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Disable; `2` = Enable | `1` | Modality; mode (D/E) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `2` = Group; `3` = General | `0` | Addressing type; Address  Area  Group |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `G` | `1..255` | `1` | Group |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = All systems | `0` | Destination level |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `413` - Scenario module control
+
+Section ID: `ownkb:section:d000303:s000023`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Scenario activation and modification; `1` = Scenario activation | `0` | Modality |
+| `APL` | `0..175`; encoded by `APL=16*A+PL`, with `A=0..10` and `PL=0..15` | `0` | Scenario module address |
+| `INST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15; `16` = Standard | `16` | Installation level |
+| `DEST_LEV` | `0` = Private riser; `1` = Local bus 1; `2` = Local bus 2; `3` = Local bus 3; `4` = Local bus 4; `5` = Local bus 5; `6` = Local bus 6; `7` = Local bus 7; `8` = Local bus 8; `9` = Local bus 9; `10` = Local bus 10; `11` = Local bus 11; `12` = Local bus 12; `13` = Local bus 13; `14` = Local bus 14; `15` = Local bus 15 | `0` | Destination level; Destination level (`0..15`) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `SCE_BUTT_1` | `1..16` | `1` | Scenario number |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay of scenario number |
+
+#### Object `414` - Scheduled scenario
+
+Section ID: `ownkb:section:d000303:s000024`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `A` | `0..10` | `0` | Area |
+| `PL` | `0..15` | `0` | Light point |
+| `CEN_BUTT_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press / release only; `1` = Press / hold / release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `415` - Scenario PLUS Lighting Management
+
+Section ID: `ownkb:section:d000303:s000025`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON`; `1` = `OFF`; `2` = `ON` with regulation; `3` = `OFF` with regulation | `0` | Modality; Mode (`ON`/`OFF` regulation) |
+| `PPT_SCE_1` | `0..255` | `1` | Upper button scenario |
+| `TYPE_OF_REGULATION` | `0` = Regulate all; `1` = Lights only; `2` = Shutters only; `3` = Stereo amplifiers only | `0` | Regulation type |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `DEL_BUTTON_1` | `0` = None; `1` = 1 s; `2` = 2 s; `3` = 3 s; `4` = 4 s; `5` = 5 s; `6` = 6 s; `7` = 7 s; `8` = 8 s; `9` = 9 s; `10` = 10 s; `11` = 11 s; `12` = 12 s; `13` = 13 s; `14` = 14 s; `15` = 15 s; `16` = 16 s; `17` = 17 s; `18` = 18 s; `19` = 19 s; `20` = 20 s; `21` = 21 s; `22` = 22 s; `23` = 23 s; `24` = 24 s; `25` = 25 s; `26` = 26 s; `27` = 27 s; `28` = 28 s; `29` = 29 s; `30` = 30 s; `31` = 31 s; `32` = 32 s; `33` = 33 s; `34` = 34 s; `35` = 35 s; `36` = 36 s; `37` = 37 s; `38` = 38 s; `39` = 39 s; `40` = 40 s; `41` = 41 s; `42` = 42 s; `43` = 43 s; `44` = 44 s; `45` = 45 s; `46` = 46 s; `47` = 47 s; `48` = 48 s; `49` = 49 s; `50` = 50 s; `51` = 51 s; `52` = 52 s; `53` = 53 s; `54` = 54 s; `55` = 55 s; `56` = 56 s; `57` = 57 s; `58` = 58 s; `59` = 59 s; `60` = 60 s; `61` = 1 min 30 s; `62` = 2 min; `63` = 3 min; `64` = 4 min; `65` = 5 min; `66` = 6 min; `67` = 7 min; `68` = 8 min; `69` = 9 min; `70` = 10 min; `71` = 15 min | `0` | Activation delay for upper button |
+
+#### Object `416` - Scheduled scenario PLUS
+
+Section ID: `ownkb:section:d000303:s000026`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `PPT_CEN_LOW` | `0..255` | `1` | Scheduled scenario PLUS number |
+| `PPT_CEN_HIG` | `0..7` | `0` | Scheduled scenario PLUS number |
+| `BUTTON_1` | `0..31` | `1` | Button |
+| `MODE` | `0` = Press / release only; `1` = Press / hold / release | `0` | Modality; Mode (Lighting management) |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+
+#### Object `418` - Open lock control
+
+Section ID: `ownkb:section:d000303:s000027`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+#### Object `419` - Sound diffusion control
+
+Section ID: `ownkb:section:d000303:s000028`
+
+Provenance cues: `source`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = `ON` / volume +; `1` = `OFF` / volume -; `2` = Change track; `3` = Switch source; `4` = Toggle `ON`/`OFF` | `0` | Modality; Mode (VOL, ON_OFF) |
+| `ADDR_TYPE` | `0` = Point to point; `1` = Area; `3` = General | `0` | Addressing type |
+| `A` | `0..9` | `0` | Area |
+| `PF` | `0..9` | `0` | Audio point |
+| `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed | `0` | Contact type |
+| `IS_FOLLOW_ME` | `0` = No; `1` = Yes | `1` | Follow me |
+| `SOURCE` | `1..9` | `1` | Source |
+| `SUB_SOURCE` | `0..255` | `0` | Sub source |
+| `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video | `3` | Channel (BB-Stereo) |
+
+#### Object `426` - Staircase light control
+
+Section ID: `ownkb:section:d000303:s000029`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `427` - Floor call control
+
+Section ID: `ownkb:section:d000303:s000030`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+| `IN_AUX_CHANNEL` | `0..15` | `0` | Input `AUX` channel |
+
+#### Object `130` - User interface settings
+
+Section ID: `ownkb:section:d000303:s000031`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `480` maps to external Object `130`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `STATE_OF_UNUSED_BUTTON` | `0` = `ON`; `1` = `OFF` | `1` | State of unused button; Default depends on device |
+| `STATE_UPDATE` | `0` = No; `1` = Yes | `1` | Feedback update; Default depends on device |
+| `LED_LEVEL` | `0..10` | `6` | LED intensity level; Default, minimum level (0), maximum level (10) and distribution of intermediate levels depend on device |
+| `LED_FADE` | `0..10` | `5` | LED fading; Default, minimum level (0), maximum level (10) and distribution of intermediate levels depend on device |
+| `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 | `1` | Backlight intensity stand by level |
+| `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 | `1` | when BACKLIGHT_INTENSITY_STANDBY_LEVEL is `OFF`, only one led can be used for the standby. |
+| `BACKLIGHT_DELAY` | `0..255` | `15` | Delay time (seconds); Time en second to light off the backlight |
+| `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable | `1` | Proximity Activation |
+| `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase | `2` | Signboard activation type |
+
+#### Object `417` - AUX control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000303:s000032`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `0` = Cyclical; `10` = `OFF`; `11` = `ON`; `15` = `PUL`; `17` = DOWN Shutter bistable command; `18` = UP shutter monostable command; `4` = Reset BI; `5` = Reset TRI; `6` = Reset `GEN`; `1` = Disable; `2` = Enable; `16` = UP shutter bistable command; `19` = DOWN Shutter monostable command | `0` | Modality; mode(Cyclical,off,on,pul,up,down,...) |
+| `OUT_AUX_CH` | `1..15` | `1` | AUX channel |
+| `TYPE_CONTACT` | No legal values specified in source | `0` | Contact type |
+
+#### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000303:s000033`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `462` - Open lock command on session (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000303:s000034`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000303:s000035`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000303:s000036`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000303:s000037`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `158` | `410` | `1238` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `411` | `1253` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `412` | `1262` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `413` | `1270` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `414` | `1285` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `414` | `1286` | `MODE` | `0` = Press / release only; `1` = Press / hold / release (entire reusable range retained) | `0` | Mode for `CEN` command |
+| `158` | `415` | `1294` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `416` | `1309` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `416` | `1310` | `MODE` | `0` = Press / release only; `1` = Press / hold / release (entire reusable range retained) | `0` | Mode for `CEN` command |
+| `158` | `419` | `1332` | `TYPE_CONTACT` | `0` = Normally open; `1` = Normally closed (entire reusable range retained) | `0` | Contact type |
+| `158` | `419` | `1333` | `CHANNEL` | `0` = Base Band; `1` = Left; `2` = Right; `3` = Stereo; `8` = Base Band and Video; `9` = Left and video; `10` = Right and video; `11` = Left and video (entire reusable range retained) | `3` | Channel (BB-Stereo) |
+| `158` | `419` | `1334` | `SUB_SOURCE` | `0..255` (entire reusable range retained) | `0` | SUB_SOURCE |
+| `158` | `426` | `1350` | `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone (entire reusable range retained) | `0` | Segment |
+| `158` | `426` | `4108` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `158` | `427` | `1365` | `IN_AUX_CHANNEL` | `0..15` (entire reusable range retained) | `0` | Input `AUX` channel |
+| `158` | `427` | `1366` | `TO_ALL` | `1` = General | `1` | Type of call |
+| `158` | `427` | `1905` | `SEGMENT` | `0` = The same; `1` = Riser; `2` = Building; `3` = Backbone (entire reusable range retained) | `0` | Segment |
+| `158` | `130` | `3115` | `BACKLIGHT_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 (entire reusable range retained) | `1` | Backlight intensity stand by level |
+| `158` | `130` | `3122` | `PROXIMITY_ENABLE` | `0` = Disable; `1` = Enable (entire reusable range retained) | `1` | Proximity Activation |
+| `158` | `130` | `3129` | `SIGNBOARD` | `0` = Off; `1` = Fixe; `2` = Chase (entire reusable range retained) | `2` | Signboard activation type |
+| `158` | `130` | `3137` | `SINGLE_LED_INTENSITY_STANDBY_LEVEL` | `0` = `OFF`; `1` = Level1; `2` = Level2; `3` = Level3; `4` = Level4; `5` = Level5; `6` = Level6; `7` = Level7; `8` = Level8; `9` = Level9; `10` = Level10 (entire reusable range retained) | `1` | when BACKLIGHT_INTENSITY_STANDBY_LEVEL is `OFF`, only one led can be used for the standby. |
+| `158` | `130` | `3160` | `BACKLIGHT_DELAY` | `0..255` (entire reusable range retained) | `15` | Delay time (seconds) |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000303:s000038`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000303:s000039`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `28` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000303:s000040`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `130` - User interface settings | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `410` - Light control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `411` - Automation control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `412` - Lock / unlock actuator control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `413` - Scenario module control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `414` - Scheduled scenario | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `415` - Scenario PLUS Lighting Management | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `416` - Scheduled scenario PLUS | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `418` - Open lock control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `419` - Sound diffusion control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `426` - Staircase light control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `427` - Floor call control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000303:s000041`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `130` - User interface settings | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `130` - User interface settings | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `130` - User interface settings | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `130` - User interface settings | New energy saving and load control | `20` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `410` - Light control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `411` - Automation control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `412` - Lock / unlock actuator control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `413` - Scenario module control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `413` - Scenario module control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `413` - Scenario module control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `413` - Scenario module control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `414` - Scheduled scenario | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `414` - Scheduled scenario | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `414` - Scheduled scenario | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `414` - Scheduled scenario | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `415` - Scenario PLUS Lighting Management | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `415` - Scenario PLUS Lighting Management | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `415` - Scenario PLUS Lighting Management | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `415` - Scenario PLUS Lighting Management | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `416` - Scheduled scenario PLUS | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `418` - Open lock control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `419` - Sound diffusion control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `419` - Sound diffusion control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `419` - Sound diffusion control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `419` - Sound diffusion control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `427` - Floor call control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+#### Related functional reference families
+
+Section ID: `ownkb:section:d000303:s000042`
+
+Applicability cues: `applies to`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+The correspondence below is a semantic cross-reference based on the named role and the canonical functional reference; it does not assert captured frames or support for every operation.
+
+| Catalogue role | Related canonical reference | Evidence limit |
+| --- | --- | --- |
+| `410` | [Lighting](../../functional/who-1-lighting/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `411` | [Automation](../../functional/who-2-automation/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `412` | [Actuator locking](../../functional/who-14-special-commands/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `413` | [Scenario modules](../../functional/who-0-scenarios/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `414` | [CEN scenario triggers](../../functional/who-15-cen/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `416` | [CEN+ scenario triggers](../../functional/who-25-transversal/cen-plus.md) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| `419` | [Sound](../../functional/who-16-sound-system/) | Related canonical semantics for the named role; exact configured operation and runtime transport remain to be corroborated |
+| Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
+
+| System / capability | Published restriction | Evidence |
+| --- | --- | --- |
+| F460/F461 compatibility | HC4657M4 and HD4657M4 from `11W12`; HS4657M4 from `11W14` | RA00224AA_EN printed/PDF pp.7-8 |
+| F460/F461 cross-line control | Table permits control of actuators on all lines or only on its own line; HC reference is printed `T-HC4657M4` in this table, versus `BT-HC4657M4` in compatibility table | RA00224AA_EN printed/PDF pp.12-13 |
+| Classe 300EOS integration | Same HC/HD `11W12` and HS `11W14` batches; compatibility sheet excludes physical-configurator setup in that system | ST_00001000_EN archive; printed ST-00001580-EN, pp.7-9 |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000303:s000043`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000303:s000044`
+
+Applicability cues: `firmware`
+Uncertainty: `may`, `not verified`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Physical self-learning requires the rear programming button then selection of a touch zone within 20 s, followed by the desired command on the corresponding control / actuator. A four-second touch deletes one assignment; holding the rear button for ten seconds during programming deletes all assignments. Scenario mode requires an enabled F420 with the same address; `M=1` selects scenarios `1..8` and `M=2` selects `9..16` on this four-module model. The scenarios are stored in F420, not inferred as local scene memory. `CEN` targets MH200N and requires a command address distinct from actuator addresses. Software associates individual zones to functions including PLUS scenarios, locks, stair lights, floor call and sound. SET configures unused-zone illumination, feedback and fading. The heading “cyclic self-learning” for `M=6` is contradicted by text saying buttons never act cyclically; its described paired `ON` / up and `OFF` / down behavior is retained without silently fixing the source heading.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+The exact sheet warns that commands may be automatically sent during the two-minute calibration period. Rear programming/brightness button `P` is to be operated with the supplied screwdriver. The sheet allows brightness/colour differences even within one production batch; this does not alone indicate a changed Firmware. In rocker mode, preserve the configured base address and consecutive targets rather than treating nine catalogue Modules as nine physical keys.
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000303:s000045`
+
+Applicability cues: `firmware`, `revision`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `database`, `specification`
+
+The combined manufacturer database code HC/HS/HD4657M4 and the exact sheet establish HC4657M4, HS4657M4 and HD4657M4 as finish members. The current HC export title describes six keys, but its own description and attribute table state eight, agreeing with the exact four-module sheet and zone drawing. Six is the technical sheet’s count for the three-module M3 model. The export’s 20 mA standby classification and technical sheet’s 25 mA maximum have different current contexts and are not treated as conflicting maxima. U2701D is a multilingual user manual, not an installation specification. The firmware’s nine Modules are not a count of touch zones. Grouped-reference metadata and per-finish EANs are kept separate.
+
+The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
+
+The historical Spanish catalogue independently confirms eight keys for all three M4 finishes. Its 20 mm depth is expressly the occupied depth inside the wall box, whereas the current export lists a 29 mm product depth; those measure different contexts. Historical HC/HS front outlines are 150 x 95 mm versus current export height 96 mm; the revision/measurement boundary remains unresolved. Historical 504E/PB504 mounting examples do not override the current 55 mm minimum-box-depth classification.
+
+The retained guide and Spanish catalogue contain unrelated F401/HW4684 material; those paragraphs do not support this Device. Applicable guide p.95 and historical catalogue touch-control/mounting pages corroborate the M4 form; installation accessory dimensions remain separate from electronics dimensions. All eight SET combinations, physical/virtual address distinctions and CEN/PLUS ranges are retained. Virgin `521` also admits Objects `417` and `421` without a direct firmware relation; their reusable fields are now explicit Virgin-only candidates. No firmware parameter, connection or package association is stored.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000303:s000046`
+
+Applicability cues: `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The production boundary behind changed current / key-count descriptions, learned-command wire encoding and measured touch/LED feedback remain uncorroborated.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000303:s000047`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked files were identified but are not used as retained evidence in this dossier. Firmware / installers and declarations remain separate evidence families. A listed URL does not establish payload identity, installed release or tested compatibility.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `HC4657M4.dwg` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/HC4657M4.dwg) |
+| `HS4657M4.dwg` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/HS4657M4.dwg) |
+
+The linked HC/HS DWG drawings remain unexamined; no added mechanical dimensions are inferred from their filenames. The technical sheet’s `M=6` “cyclic” heading conflicts with its non-cyclic paired-command description. Runtime command mapping and selection of Virgin-only candidates remain unobserved.
+
+Other F460/F461 manual pages and Classe 300EOS product features are outside this Device-specific compatibility review. The newly discovered ST-00001807-EN F460 sheet and ST-00002123-DE regional sheet are not retained here; their complete revision-specific compatibility tables remain unexamined. The retained tables establish their own production boundaries, not universal support on all later servers.
+
+### Sources
+
+Section ID: `ownkb:section:d000303:s000048`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0164)
+
+# Document: ownkb:document:d000304
+
+Source path: `devices/definitions/own-dev-0165-two-wire-concierge-switchboard.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Two-wire concierge switchboard
+
+Section ID: `ownkb:section:d000304:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000304:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+346310 is a concierge switchboard for two-wire audio / video entry systems. Its handset, handsfree audio, 7-inch screen and keypad support calls, door release, camera selection and apartment alarm handling. Master and hierarchical backbone / riser roles determine which calls it manages.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0165` | Project identity |
+| Technical description | Two-wire concierge switchboard | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `346310` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `1440` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Video door entry system | Main system association |
+| Item model / `modobj` | `167` | Main association; independent of project ID |
+| Firmware definition | `74` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Audio video, User interfaces, Multifunction devices | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000304:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino | `346310` | Established catalogue identity | Manufacturer database commercial record `1440` explicitly links this SKU to item `1440` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000304:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `346310` | `8005543408025` | [346310-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/7f/02/7f02c13020a67b42159b38475f922e1cc34cda46fd28debb9a908843a6fbca19.pdf) PDF p. 1; `346310-italian-product-sheet.pdf` PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000304:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `346310` | Management Center 2Wires | Canonical commercial record `1440` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000304:s000006`
+
+Applicability cues: `revision`
+Cautions: `do not`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `BT00680-c-EN.pdf` | Technical Sheet BT00680-C-EN | BT00680-c-EN; 03/10/2016 | Printed/PDF pp. 1-2 exact specifications / roles; pp.3-9 topology examples; pp.10-11 external audible notification and relay application. Examples do not establish unrestricted accessory compatibility. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/68/0d6806e6d5d5a50226916ebe0fc87cfcfb964a7574f1192ceb7d056927c4f376.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/BT00680-c-EN.pdf) |
+| `O1224E_I_EN.pdf` | Technical Guide O1224E_I_EN | O1224E_I_EN; printed publication date not established | 346310 installation: printed/PDF pp. 5-15, 16-49; topology, MASTER / backbone / riser roles, connections and setup. | [Archived original](https://archive.openwebnet-ha.org/sha256/37/d6/37d6ab4b75d546fdc92ea2e0f3a26a4a4247603e03deb4c3730601d5670b589e.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1224E_I_EN.pdf) |
+| `O1224E_S_EN.pdf` | Technical Guide O1224E_S_EN | O1224E_S_EN; printed publication date not established | 346310 software: printed/PDF pp. 4-10, 11-48; transfer / update, identity / address book, service internal unit, modes and alarm / automation settings. | [Archived original](https://archive.openwebnet-ha.org/sha256/f3/92/f3922fddcdaef45210ce19bbb8131133598fc10fff13fc688d25807c8dd0980b.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1224E_S_EN.pdf) |
+| `O1224E_U_EN.pdf` | Technical Guide O1224E_U_EN | O1224E_U_EN; printed publication date not established | 346310 user operations: printed/PDF pp. 4-25, 26-55; calls, door / camera, alarms and operator settings. | [Archived original](https://archive.openwebnet-ha.org/sha256/2b/07/2b0705eea624af872819807901ced9de4e5677e23e87568f8045e520fef7d5da.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1224E_U_EN.pdf) |
+| `346310-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/7f/02/7f02c13020a67b42159b38475f922e1cc34cda46fd28debb9a908843a6fbca19.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-346310&include_technical=1) |
+| `346310-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/88/5a/885ae01d3dfe490c26d707fe44d0c418792849442dada4eeedfadcd6d905ffdc.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-346310) |
+| `BT00680_c_IT.pdf` | Manufacturer Italian / installation document | BT00680_c_IT; 03/10/2016 | Printed/PDF pp. 1-2 exact specifications / roles; pp.3-9 topology examples; pp.10-11 external audible notification and relay application. Examples do not establish unrestricted accessory compatibility. | [Archived original](https://archive.openwebnet-ha.org/sha256/13/81/13810bd6cee5be8633084bc3ec6c5ac81f53dfadd8534fe2de1dac71584a4598.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00680_c_IT.pdf) |
+| `O1224E_I_IT.pdf` | Manufacturer Italian / installation document | O1224E_I_IT; printed publication date not established | 346310 installation: printed/PDF pp. 5-15, 16-49; topology, MASTER / backbone / riser roles, connections and setup. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/36/14360ab68ff7d3f4ec3669890ece291e0e6d683026d8bfd15e3c40ade2e9d2e2.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/O1224E_I_IT.pdf) |
+| `O1224E_S_IT.pdf` | Manufacturer Italian / installation document | O1224E_S_IT; printed publication date not established | 346310 software: printed/PDF pp. 4-10, 11-48; transfer / update, identity / address book, service internal unit, modes and alarm / automation settings. | [Archived original](https://archive.openwebnet-ha.org/sha256/66/6e/666e40dacb594dbfce8ff1e403d104c2d54f46c1ed0b02b273a81a5b3567fbab.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/O1224E_S_IT.pdf) |
+| `O1224E_U_IT.pdf` | Manufacturer Italian / installation document | O1224E_U_IT; printed publication date not established | 346310 user operations: printed/PDF pp. 4-25, 26-55; calls, door / camera, alarms and operator settings. | [Archived original](https://archive.openwebnet-ha.org/sha256/77/8e/778eb83ef3e40b5cebeda7fb1cebbe9fa66984977a0ddad85426c18a59ca68be.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/O1224E_U_IT.pdf) |
+| `TiSwitchboardDevice_README_v1.pdf` | Software TISWITCHBOARDDEVICED_README_V1 | TiSwitchboardDevice_README_v1; 23/07/2025 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/66/98/6698c8c7844cfaa4fb54125ae9d1279bbbfa1706b242cbb7775c6c65195eac6f.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TiSwitchboardDevice_README_v1.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1440`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000304:s000007`
+
+Applicability cues: `firmware`, `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `19..27 Vdc` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| BUS draw without additional supply | `35 mA standby / 450 mA maximum` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| BUS draw with additional supply | `5 mA standby / 20 mA maximum` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| Temperature | `5..40 °C` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| Dimensions | `290 x 210 x 170 mm as drawing` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| Display / mounting | `7-inch colour LCD; integrated table support` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| Relay output | `24 Vac / 24 Vdc, 3 A, cos phi 1` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| System maximum | `16 switchboards, addresses 0..15` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| Hierarchical Sfera requirements | `351100/351200/351300 firmware ≥01.02.31; 351000 batch ≥16W18; 346851 batch ≥16W28` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+| IP-interface exclusion | `cannot be used in systems with 346890` | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_I_EN` pp. 5-15; `O1224E_U_EN` pp. 4-25 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000304:s000008`
+
+Applicability cues: `not applicable`
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Frequency classifications and a negative connected-object classification do not establish the runtime transport or exclude control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| Model | `Substation` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Type of communication | `Half-duplex` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Type of system | `Hybrid` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Single call function | `Yes` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| General call function | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Installation technique | `Bus system` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Mounting method | `Desktop device` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Degree of protection (IP) | `Other` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Compatible with Apple HomeKit | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Compatible with Google Assistant | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Compatible with Amazon Alexa | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| IFTTT support available | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| degree of impact strength (IK) | `Not applicable` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Storage temperature (Min-Max) | `-10-70 °C` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Voltage type | `DC` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Nominal voltage (Min-Max) | `18-27 V` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Supply current (Min-Max) | `0.005-0.05 A` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Frequency (Min-Max) | `0-0 Hz` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Sound level | `82 dB` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Standby consumption | `5 mA` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Antimicrobial treatment | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable nature for connection | `Flexible` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable section (Min-Max) | `0.1-2.5 mm²` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Label space / information surface | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Control mode | `Wired` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Hands free | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Loudness setting | `Yes` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Addressable | `Yes` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Door entry system with mobile application | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Remote opening of gate / Electric door opener | `Yes` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+| Connected object | `No` | `346310-publisher-product-sheet.pdf` PDF p. 3 |
+
+### Identity
+
+Section ID: `ownkb:section:d000304:s000009`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1440` | Canonical catalogue |
+| Technical item description | Management Center 2Wires | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `20` | Canonical catalogue |
+| Main system | Video door entry system; key `4` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `167` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `1` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000304:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `167` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000304:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `74` | `1` | `0` | `16` | `1` | Catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000304:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `74` | `69` | BTicino (key `1`) | `0` | external software | `TiSwitchboardDevice_0100` |
+
+The one parameter-file association is shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000304:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `74` | `1` | `115` Management Center 2Wires | Fixed / designated metadata | `2390` | `620` | `1045` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000304:s000014`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| all | None associated | Not applicable | Not applicable | Not applicable | Not applicable |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000304:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `74` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `74` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000304:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `Switchboard / associated EP address` | Switchboard `0..15`; associated entrance panel `1..80` in technical-sheet configuration | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+| `MASTER / SLAVE` | Single hierarchy; DAY calls routed via operator; NIGHT directly to resident; first answering master / slave takes call | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+| `BACKBONE / RISER` | Riser first, backbone second, apartment last when preceding operators are out of service; backbone entrance calls go to backbone first | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+| `Hierarchical production limits` | Sfera 351100/200/300 firmware ≥01.02.31; 351000 ≥16W18; 346851 ≥16W28 | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+| `Alarm topology, exact examples` | All apartment / common alarms handled by main switchboard address 0; common contacts through F422, maximum 9 interfaces in illustrated topology | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+| `Configuration / transfer` | Icon menu or TiSwitchboardDevice; address-book compilation and ringtone management require PC; transfer / update with powered device over mini-USB | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+| `Rear termination / auxiliary supply` | `ON`/`OFF` termination switch; BUS; 1-2 extra supply; separate optional audible-notification terminal | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+| `Status indicator` | Steady: standby; fast flashing: call; slow flashing: conversation | `BT00680-c-EN` printed/PDF pp. 1-11; `O1224E_S_EN` pp. 12-18 |
+
+#### Commissioning software prerequisites
+
+Section ID: `ownkb:section:d000304:s000017`
+
+Provenance cues: `evidence`
+
+These are the retained readme requirements, separate from product electrical ratings and current operating-system compatibility.
+
+| Property | Published value | Evidence |
+| --- | --- | --- |
+| Windows | `10` | `TiSwitchboardDevice_README_v1` p.1 |
+| Framework | `.NET 3.5 SP1 or higher` | `TiSwitchboardDevice_README_v1` p.1 |
+| CPU / RAM | `1 GHz;1 GB(32-bit) or2 GB(64-bit)` | `TiSwitchboardDevice_README_v1` p.1 |
+| Disk / display | `1 GB;1024x768` | `TiSwitchboardDevice_README_v1` p.1 |
+
+#### Documented operator and commissioning settings
+
+Section ID: `ownkb:section:d000304:s000018`
+
+Applicability cues: `applies to`, `firmware`, `scs`
+Cautions: `do not`
+Uncertainty: `not verified`
+Provenance cues: `documentation`, `source`
+
+| Setting / role | Documented value or consequence | Retained manufacturer source (printed/PDF pages) |
+| --- | --- | --- |
+| Backbone address / alarms | Hierarchical backbone is unique, address `0`; riser `1..15` cannot receive technical alarms. Non-hierarchical Master `0..15`, but alarms require address `0`. | O1224E_I_EN pp.38,40-41; O1224E_S_EN pp.18-19 |
+| Slave address / association | Local `1..15`; associated Switchboard `0..15`; main entrance panel `1..80`; reproduces associated Master/backbone/riser function. | O1224E_I_EN pp.40-41 |
+| Hierarchy routing | Day calls can target backbone alone, or backbone plus riser; never riser alone. Riser `0` in the software list denotes backbone wiring. | O1224E_S_EN pp.20-21 |
+| Hierarchy transfer prerequisites | All entrance panels and Switchboards must be connected and working when sending hierarchy configuration. | O1224E_I_EN p.42 |
+| Service internal unit priority | Temporary forwarding to configured internal unit; Night entrance-panel routing has priority and bypasses both Switchboard and service unit. | O1224E_I_EN pp.17,29 |
+| Multiple service Switchboards | On the same stretch, all but one require additional supply when service forwarding is enabled; associated internal units need different addresses. | O1224E_I_EN p.29 |
+| Internal-unit day/night disabled | Riser forwards to backbone; backbone/Master forwards to associated main entrance panel. Enabled mode follows manual/automatic day/night setting. | O1224E_I_EN p.28 |
+| Day/night scheduling | Installer menu: up to `6` change times per weekday. PC software: maximum `3` day/night bands per day; weekday entries copied Monday-Friday, Saturday/Sunday separate. | O1224E_I_EN pp.33-34; O1224E_S_EN pp.32-35 |
+| Entrance-panel day/night scope | All, main or selected list; list choice is Master-only; hierarchy uses the separate hierarchy table. | O1224E_S_EN pp.32-33 |
+| Riser presence | Present/absent applies to riser; absent calls pass to backbone and follow its day/night status. | O1224E_U_EN p.41 |
+| Door lock / automation entries | Up to `12` entries with address, description and riser; riser `0` denotes backbone. | O1224E_I_EN p.35; O1224E_S_EN p.26 |
+| Relay call behavior | Local or external relay independently enabled for call/alarm. Call repeats `5 s` ON, `5 s` OFF until call ends; alarm stays ON until silenced/acknowledged. | O1224E_S_EN p.29; O1224E_I_EN p.21 |
+| Remote notification example | 346210 `MOD=8`; `N/P` encodes associated Switchboard address; do not customize `T` in this example. Output follows Switchboard call/alarm timing. | BT00680-c-EN / BT00680_c_IT p.10 |
+| Associated camera | Enable camera and give it the Switchboard local address in `P`; permits caller to see operator. Backbone does not display riser entrance-panel video; main entrance panels remain audio/video. | O1224E_I_EN pp.13,44; BT00680-c-EN pp.8,11 |
+| Alarm / notification setup | Enable/disable alarms, with optional Day-only reception; notifications require alarms and include mains lost/restored, low alarm-system battery and door status via `346260`. | O1224E_I_EN p.38; O1224E_S_EN p.27 |
+| Alarm status handling | Red = active, yellow = acknowledged, green = solved; acknowledgement and resolution are distinct operator actions. User Alarm Log is presented as backbone-only. | O1224E_U_EN pp.21-23,39-40 |
+| Technical alarm types | Flooding, freezer, emergency, gas leak, fire, intrusion, tampering, panic and technical alarm; these are documented UI categories, not verified wire event codes. | O1224E_U_EN p.40 |
+| Address-book call modes | Alphanumeric call code or block/floor/apartment. Each component at most `5` characters/digits as stated by installer manual; total `1..8` in software; must match Sfera entrance-panel mode. Changing mode requires clearing saved contacts. | O1224E_I_EN p.45; O1224E_S_EN pp.30-31 |
+| Repeated call rings | `1..5` | O1224E_I_EN p.47; O1224E_S_EN pp.30-31 |
+| Installer authentication | Numeric `5`-digit password, `0..99999` in software; manufacturer documentation default `[REDACTED]`; manual recommends customization. Not an installation credential. | O1224E_I_EN pp.27,48; O1224E_S_EN p.22 |
+| PC project contents | Select/add localization package, save configuration, configure ringtones and contacts; send them together as the complete project. Firmware update uses `.fwz`; Request Device Info shows hardware/software features. | O1224E_S_EN pp.4-9,43-48 |
+| Ringtone authoring | Import `.mp3`, `.wav` or `.pcm`; trim to maximum `5 s`; associate to events. Ringtone and contact sections follow project-saving prerequisites. | O1224E_S_EN pp.37-44 |
+| Contact fields | Apartment, entrance panel or Switchboard type; name/surname, call code, SCS address and BFA fields when selected. Add/delete/filter are software operations; no numeric contact maximum established by text. | O1224E_S_EN pp.44-48 |
+| Call log | All, missed, received and sent calls; delete log; slow-flashing status LED can also signify missed calls. | O1224E_U_EN pp.28,36-38 |
+| Operator controls | Separate speaker/microphone/ringtone adjustments, day/night display brightness/contrast/colour, date/time, keypad beep, information and menu language. Screenshot values do not establish defaults or full numerical domains. | O1224E_I_EN pp.22-26,46; O1224E_U_EN pp.24-25,49-53 |
+
+#### Twelve programmable function keys
+
+Section ID: `ownkb:section:d000304:s000019`
+
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+| Assignable function | Documented action |
+| --- | --- |
+| Door lock `1..12` | Selected configured entrance-panel lock or actuator |
+| IU / EP day-night toggle | Separate call-routing states for internal units and entrance panels |
+| Presence / service IU toggle | Riser presence or temporary service forwarding |
+| Staircase light | Staircase light activation |
+| IU / EP / Switchboard call | Call selected endpoint |
+| Local call / alarm siren | Toggle local call or alarm repetition |
+| External call / alarm siren | Toggle remote actuator repetition |
+| BFA letter | Associate a character to the block/floor/apartment call code |
+
+All function families listed in O1224E_I_EN printed/PDF pp.36-37 and O1224E_S_EN pp.23-24 are represented here. These assignments do not add local catalogue Objects.
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000304:s000020`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `74` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000304:s000021`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `115` - Management Center 2Wires
+
+Section ID: `ownkb:section:d000304:s000022`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `620` maps to external Object `115`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `CDP_ADDRESS` | `0..15` | `0` | Address |
+| `PE_ADDRESS` | `1..80` | `1` | External Panel Address |
+| `PI_ADDRESS` | `0..3999` | `0` | Internal Panel Address |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000304:s000023`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000304:s000024`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000304:s000025`
+
+Applicability cues: `firmware`, `not applicable`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| all | Not applicable | None | Not applicable | No relation-specific filters associated | Not applicable | Canonical catalogue |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000304:s000026`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000304:s000027`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `167` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000304:s000028`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `115` - Management Center 2Wires | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000304:s000029`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `115` - Management Center 2Wires | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+#### Related functional reference families
+
+Section ID: `ownkb:section:d000304:s000030`
+
+Applicability cues: `applies to`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+The correspondence below is a semantic cross-reference based on the named role and the canonical functional reference; it does not assert captured frames or support for every operation.
+
+| Catalogue role | Related canonical reference | Evidence limit |
+| --- | --- | --- |
+| Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000304:s000031`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000304:s000032`
+
+Applicability cues: `firmware`
+Uncertainty: `not verified`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Use device menus or TiSwitchboardDevice to set identity, service internal unit, contact / address book, entrance panels, day / night behavior, alarms and automation. A MASTER manages its system; backbone / riser operation requires the documented hierarchical topology and compatible entrance panels. Riser entrance panels downstream of 346851 are supported; apartment entrance panels downstream of 346850 are not managed by this switchboard. Additional 346020 supply is recommended and changes BUS draw; keep supply sizing distinct from the output relay rating. PC transfer / update uses the documented USB connection and powered switchboard. User operations include direct and address-book calls, call transfer, camera cycling, door and staircase-light control and alarm management. The 2025 software readme lists BT-346310 and Windows 10 / .NET 3.5 SP1 requirements; it does not establish support on all newer operating systems.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000304:s000033`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `database`, `source`
+
+English and Italian installation, software and user manuals have separate roles and are retained individually. Hierarchical support is firmware / production-scoped, while the single database Management Center Object is a capability definition. The product export’s current classifications do not remove the technical sheet’s 346890 exclusion or apartment-entrance-panel limit. Software address-book and alarm setup does not establish measured support for every optional field or external accessory.
+
+The installation / software hierarchy paragraph prints interface `346581`, whereas the exact switchboard technical sheet and diagrams name `346851`. The transposed reference is preserved as a source discrepancy; no relationship to a separate `346581` product is inferred.
+
+The current publisher export excludes `346891`, whereas both 2016 technical sheets exclude `346890`; both reference-specific exclusions are retained without inferring interchangeability. The export lists `18..27 V`, `5..50 mA` and “Hands free: No”; the technical sheet specifies `19..27 V` and separate supplied/unsupplied currents, while the manuals explicitly document handsfree operation. These are publisher-classification discrepancies, not grounds to discard the exact operating manuals. Its hierarchy list adds Sfera Robur and omits Minisfera from the older list; applicability must follow the named source and Firmware/production limits.
+
+Six installer-menu change times and three software day/night bands use different units of scheduling: they can represent three paired day/night intervals, but their complete equivalence has not been tested. The installer manual describes a maximum five-digit new password while software specifies five numeric digits; leading-zero handling is uncorroborated. The user manual presents Alarm Log as backbone-only, while setup software also allows an address-zero Master to receive alarms; the corresponding non-hierarchical UI availability remains unconfirmed.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000304:s000034`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Exact installed firmware, compatibility of later Sfera generations, external relay use and observed calls / alarms / diagnostics remain uncorroborated.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000304:s000035`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+These publisher-linked files were identified but are not used as retained evidence in this dossier. Firmware / installers and declarations remain separate evidence families. A listed URL does not establish payload identity, installed release or tested compatibility.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `Switchboard_030003.fwz` | Firmware binary: payload, production / update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/Switchboard_030003.fwz) |
+| `TiSwitchboardDevice_030015.exe` | Software installer: payload / installed compatibility unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/TiSwitchboardDevice_030015.exe) |
+
+The retained English operating/setup/settings sections, exact technical sheets and export/readme are reconciled for this Device. Italian manuals provide parallel source roles and checked topology/alarm/relay/password boundaries; their remaining UI walk-through pages have not been independently translated line by line. Generic editing gestures, demonstration contacts and screenshot dates do not establish configuration defaults. Firmware `Switchboard_030003.fwz`, installer `TiSwitchboardDevice_030015.exe`, localization payloads and the historical catalogue parameter file remain unexamined; no relation from their filenames to Firmware `74` is inferred.
+
+### Sources
+
+Section ID: `ownkb:section:d000304:s000036`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0165)
+
+# Document: ownkb:document:d000305
+
+Source path: `devices/definitions/own-dev-0166-sfera-audio-speaker-module.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Sfera audio speaker module
+
+Section ID: `ownkb:section:d000305:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000305:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+351100 is the Sfera audio module that handles entrance-panel calls and directly releases the associated door lock. It can serve up to 100 pushbutton calls and can be combined with the separate Night & Day camera for video.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0166` | Project identity |
+| Technical description | Sfera audio speaker module | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `351100` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `1459` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Video door entry system | Main system association |
+| Item model / `modobj` | `34` | Main association; independent of project ID |
+| Firmware definition | `111`, `635` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Audio video | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000305:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Sfera | `351100` | Established catalogue identity | Manufacturer database commercial record `1459` explicitly links this SKU to item `1459` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000305:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `351100` | `8005543441558` | [351100-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/df/ac/dfaca8b563dd70c9dee9dd7b2772ea7f8a5c76885f3914a6f3a70097b95cc02e.pdf) PDF p. 1; `351100-italian-product-sheet.pdf` PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000305:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `351100` | Audio module | Canonical commercial record `1459` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000305:s000006`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `BT00596-c-EN.pdf` | Technical Sheet BT00596-C-EN | BT00596-c-EN; 15/05/2017 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/f0/2d/f02d32f4a01c2fe7d2def721ddcc0f63519c52e2cf3a206d80a002e3e2fb0856.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/BT00596-c-EN.pdf) |
+| `O1678E.pdf` | Instruction Use O1678E | O1678E; printed publication date not established | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/83/fe/83fe4fb03c231f18ee940a767196a052b543b7118f93300003413d3400b7cc0c.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/O1678E.pdf) |
+| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: PDF pp.6-14, compared against AC revision for applicable settings. Unrelated module settings outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
+| `351100-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/df/ac/dfaca8b563dd70c9dee9dd7b2772ea7f8a5c76885f3914a6f3a70097b95cc02e.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-351100&include_technical=1) |
+| `351100-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/84/27/84273aa0daad1830f6a2365eb5143217b64bc22456023c992c4b5ae09d99d02f.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-351100) |
+| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: applicable speaker/pushbutton sections pp.6-14; Italian terminology/settings cross-checks. Other module/address-book sections not independently translated for this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
+| `TisferaDesign_README_v4.pdf` | Software TISFERADESIGN_README_V4 | TisferaDesign_README_v4; 14/05/2026 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/52/48/52481f4b2cb9999abf86bb870007398845f3f29a7a52fb475dbf90a880d31f65.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TisferaDesign_README_v4.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1459`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00176AC_S_EN.pdf` | TiSferaDesign software manual | RA00176AC; 03/24-PC | PDF pp. 6-14: powered USB transfer, speaker and pushbutton settings; compared with AA revision. Other module settings are outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
+| `BT00680-c-EN.pdf` | Exact 346310 compatibility technical sheet | BT00680-c-EN; 18/01/2016 | PDF p.1 compatibility list: 351100/351200/351300 minimum firmware 01.02.31 for hierarchical switchboard operation; remaining switchboard features outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/68/0d6806e6d5d5a50226916ebe0fc87cfcfb964a7574f1192ceb7d056927c4f376.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/BT00680-c-EN.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000305:s000007`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `18..27 Vdc` | `BT00596-c-EN` PDF pp. 1-3 |
+| Standby, backlighting off / on | `10 mA / 15 mA` | `BT00596-c-EN` PDF pp. 1-3 |
+| Maximum draw | `65 mA` | `BT00596-c-EN` PDF pp. 1-3 |
+| Temperature / assembled protection | `-25..70 °C; IP54 for assembled entrance panel` | `BT00596-c-EN` PDF pp. 1-3 |
+| Face dimensions | `115 x 91 mm` | `BT00596-c-EN` PDF pp. 1-3 |
+| Direct lock output | `18 V, 4 A impulse / 250 mA holding; maximum 30 ohm` | `BT00596-c-EN` PDF pp. 1-3 |
+| Call capacity | `100 pushbutton calls` | `BT00596-c-EN` PDF pp. 1-3 |
+| Local controls | `speaker/microphone level; PL door-release input; status LEDs` | `BT00596-c-EN` PDF pp. 1-3 |
+| Additional supply | `1–2 input; enabled when J2 disconnected` | `BT00596-c-EN` PDF pp. 1-3 |
+
+| Night backlighting | `Integrated optical sensor; automatic night-backlight activation` | `351100-publisher-product-sheet.pdf` p.1 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000305:s000008`
+
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Frequency classifications and a negative connected-object classification do not establish the runtime transport or exclude control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| Number of call buttons | `2` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Material call buttons | `Plastic` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Material front | `Other` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Front plate height | `91 mm` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Front plate width | `115 mm` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Built-in depth | `20 mm` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Mounting method | `Surface mounted` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Installation technique | `Bus system` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Colour | `Other` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Degree of protection (IP) | `IP54` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| degree of impact strength (IK) | `IK07` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Operating / setting temperature (Min-Max) | `-15-50 °C` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Storage temperature (Min-Max) | `-20-70 °C` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Voltage type | `AC/DC` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Nominal voltage (Min-Max) | `18-240 V` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Supply current (Min-Max) | `0.04-1 A` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Frequency (Min-Max) | `50-60 Hz` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Sound level | `80 dB` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Standby consumption | `40 mA` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable nature for connection | `Flexible` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable section (Min-Max) | `1-2.5 mm²` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Label space / information surface | `Yes` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Fitted with rainproof plate protection | `Yes` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| With complemantary luminous signal | `No` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Control mode | `Wired` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Contains Batteries | `No` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Hands free | `Yes` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Loudness setting | `Yes` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Addressable | `No` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Door entry system with mobile application | `Yes` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Remote opening of gate / Electric door opener | `Yes` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Camera type | `Adjustable` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Video recorder angle | `100 °` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Max distance between internal and external unit | `150 m` | `351100-publisher-product-sheet.pdf` PDF p. 3 |
+| Communication rank type | `Other` | `351100-publisher-product-sheet.pdf` PDF p. 4 |
+| Connected object | `No` | `351100-publisher-product-sheet.pdf` PDF p. 4 |
+
+### Identity
+
+Section ID: `ownkb:section:d000305:s000009`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1459` | Canonical catalogue |
+| Technical item description | Audio module | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `20` | Canonical catalogue |
+| Main system | Video door entry system; key `4` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `34` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `1` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000305:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `34` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000305:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `111` | `1` | `1` | `4` | `1` | Catalogue default | Official |
+| `635` | `1` | `2` | `25` | `1` | Not catalogue default | Official |
+| `635` | `1` | `2` | `30` | `1` | Not catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000305:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `111` | `196` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0102` |
+| `635` | `1028` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0300` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000305:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `111` | `1` | `155` External unit | Fixed / designated metadata | `745` | `155` | `507` |
+| `111` | `1` | `420` Call Push button | Candidate alternative | `746` | `420` | `508` |
+| `111` | `1` | `426` Staircase light control | Candidate alternative | `747` | `426` | `509` |
+| `111` | `1` | `465` Switchboard call push button | Candidate alternative | `748` | `497` | `510` |
+| `635` | `1` | `155` External unit | Fixed / designated metadata | `2450` | `155` | `1102` |
+| `635` | `1` | `420` Call Push button | Candidate alternative | `2451` | `420` | `1103` |
+| `635` | `1` | `426` Staircase light control | Candidate alternative | `2452` | `426` | `1104` |
+| `635` | `1` | `465` Switchboard call push button | Candidate alternative | `2453` | `497` | `1105` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000305:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `111` | `505` Internal unit virgin pushbuttons | `1` | `418`, `421`, `422`, `423`, `424`, `425`, `426`, `429` | `505` | `38` |
+| `635` | `505` Internal unit virgin pushbuttons | `1` | `418`, `421`, `422`, `423`, `424`, `425`, `426`, `429` | `505` | `49` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000305:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `111` | Product Programming | `3` | Canonical firmware/mode association |
+| `635` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `111` | USB | Canonical firmware/connection association |
+| `635` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000305:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `P / N` | Entrance panel P from 0, `P=0` common / main; first called internal-unit N, normally 1 for common pushbuttons | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `S=0 /1 /2 /3` | SPRINT call-frequency pairs 1200/600, 1200/0, 1200/2400, 1200 Hz; compatible later Classe handsets choose among 16 melodies; `S=9` general call in one-family system | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `T=0 /1 /2 /3 /4 /5 /6 /7` | Absent=4 s; 1 s; 2 s; 3 s; while key pressed(max10 s); 6 s; 8 s; 10 s; longer timing requires 346210 `MOD=5` | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `M=0 /1 /2 /3` | Call and lock tones on / lock tone off / call tone off / both tones off | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `M=4 /5 /6 /7` | Same four tone combinations, with night backlighting always on | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `J1 fitted / removed` | Right button column only / both columns | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `J2 fitted / removed` | Auxiliary supply disabled / enabled | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Advanced P / lock timing` | `P=0..99`; lock `1..10` s or while release button held; software timing distinct from physical T map | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Software pushbutton roles` | Disabled by default; handset point / general call, stair lights or switchboard call; handset `0..3999`, switchboard `0..15` | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Transfer / update` | Powered module; remove physical configurators and J1 for advanced software transfer; front mini-USB | `BT00596-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+
+#### Commissioning software prerequisites
+
+Section ID: `ownkb:section:d000305:s000017`
+
+Provenance cues: `evidence`
+
+These are the retained readme requirements, separate from product electrical ratings and current operating-system compatibility.
+
+| Property | Published value | Evidence |
+| --- | --- | --- |
+| Windows / framework | `10 or11,64-bit;.NET4.8 or higher` | `TisferaDesign_README_v4` p.1 |
+| CPU / RAM | `10th-generation i5 or equivalent;8 GB minimum,16 GB recommended` | `TisferaDesign_README_v4` p.1 |
+| Disk / display | `500 MB;1366x768 minimum,1920x1080 recommended` | `TisferaDesign_README_v4` p.1 |
+| Market scope | `TiSferaDesign_es_04.xx.xx for Spanish market only` | `TisferaDesign_README_v4` p.1 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000305:s000018`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `111` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `111` | `P2` | `0..9` | `0` | P2; Configurator P2 |
+| `111` | `P1` | `0..6` | `0` | P1; Configurator P1 |
+| `111` | `N2` | `0..39` | `0` | N2; AssInternalUnitAddrHundreds |
+| `111` | `N1` | `0..99` | `0` | N1; AssInternalUnitAddrUnits |
+| `111` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `111` | `T` | `0..7` | `0` | T; Configurator T (time) - (0-7) |
+| `111` | `M` | `0..7` | `0` | M; Mode 0-7 |
+| `635` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `635` | `P2` | `0..9` | `0` | P2; Configurator P2 |
+| `635` | `P1` | `0..6` | `0` | P1; Configurator P1 |
+| `635` | `N2` | `0..39` | `0` | N2; AssInternalUnitAddrHundreds |
+| `635` | `N1` | `0..99` | `0` | N1; AssInternalUnitAddrUnits |
+| `635` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `635` | `T` | `0..7` | `0` | T; Configurator T (time) - (0-7) |
+| `635` | `M` | `0..7` | `0` | M; Mode 0-7 |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000305:s000019`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `155` - External unit
+
+Section ID: `ownkb:section:d000305:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | Address |
+| `N` | `0..99` | `0` | Associated Internal Unit address - units |
+| `M` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `RING_T_OUT` | `1..3` | `10` | RingTIMEOUT |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `CONN_T_OUT` | `3..90` | `6` | ConnectionTimeOut |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `ASSOCIATEDSWITCHBOARDADDRESSBOOK` | `0..15` | `0` | Switchboard associated to the device for the Video door-entry address book |
+| `BEEP_LOCK` | `0` = Disable; `1` = Enable | `1` | Beep on lock |
+| `BEEP_BUTT` | `0` = Disable; `1` = Enable | `1` | Beep on push button |
+| `BEEP_SES` | `0` = Disable; `1` = Enable | `1` | Beep on session change |
+| `NEXT_PE` | `0..95` | `0` | NextExtUnitInSliding |
+| `CAM` | `0..96` | `96` | AssociatedCamera |
+| `SPEECH_SYNT` | `0` = Disable; `1` = Enable | `0` | Speech sintesys |
+| `IS_VIDEO` | `0` = Undefined; `1` = Video; `2` = Audio | `0` | IS_VIDEO |
+
+#### Object `420` - Call Push button
+
+Section ID: `ownkb:section:d000305:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..99` | `0` | Associated Internal Unit address - units |
+| `N2` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `RING_TONE` | `0..3` | `0` | RingToneRequired |
+
+#### Object `426` - Staircase light control
+
+Section ID: `ownkb:section:d000305:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `465` - Switchboard call push button
+
+Section ID: `ownkb:section:d000305:s000023`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `497` maps to external Object `465`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `CDP_ADDRESS` | `0..15` | `0` | Address |
+| `RING_TONE` | `0..3` | `0` | RingToneRequired |
+
+#### Object `418` - Open lock control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000305:s000024`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+#### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000305:s000025`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `422` - Addressed autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000305:s000026`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `423` - Relais Actuat Command(AA) (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000305:s000027`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `424` - Intercom control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000305:s000028`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..99` | `0` | Associated Internal Unit address - units |
+| `N2` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `425` - Telephonic Call (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000305:s000029`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `NUM_IN_LIST` | `0..15` | `0` | NumberIntoList |
+
+#### Object `429` - Paging button (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000305:s000030`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Base; `2` = Advanced | `2` | Modality; mode(Base,Advanced) |
+| `AMPL_AREA` | `0..99` | `0` | Amplifier area |
+| `AMPL_UNIT` | `0..39` | `0` | Amplifier unit |
+| `ADDR_TYPE` | `0` = General; `1` = Ambient; `2` = Point to point | `0` | Addressing type |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000305:s000031`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000305:s000032`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000305:s000033`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `111` | `155` | `726` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `111` | `420` | `727` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `111` | `426` | `4103` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `635` | `155` | `1841` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `635` | `420` | `1842` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `635` | `426` | `4112` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000305:s000034`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000305:s000035`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `34` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000305:s000036`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `155` - External unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `420` - Call Push button | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `426` - Staircase light control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `465` - Switchboard call push button | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000305:s000037`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `155` - External unit | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `420` - Call Push button | No stored Object-system association | Not applicable | Absence of this relation does not remove the explicit Firmware/Object association |
+| `426` - Staircase light control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `465` - Switchboard call push button | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+#### Related functional reference families
+
+Section ID: `ownkb:section:d000305:s000038`
+
+Applicability cues: `applies to`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+The correspondence below is a semantic cross-reference based on the named role and the canonical functional reference; it does not assert captured frames or support for every operation.
+
+| Catalogue role | Related canonical reference | Evidence limit |
+| --- | --- | --- |
+| Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000305:s000039`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000305:s000040`
+
+Applicability cues: `firmware`
+Uncertainty: `not verified`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Physical P numbers entrance panels from 0, with `P=0` reserved for the common / main panel. N assigns the first called internal unit; common pushbutton panels use `N=1`. S sets handset ringtone behavior and `S=9` gives the general call in one-family systems. T sets lock timing; M sets tone suppression and always-on backlighting. J1 connected enables the right button column; disconnected enables both columns. J2 disconnected enables additional supply. Advanced TiSferaDesign transfer requires removal of J1 and physical configurators, with the module powered. The 2024 software manual allows `P=0..99`, individual / general calls, stair-light and switchboard functions, handset `0..3999` and switchboard `0..15` destinations. These are software domains; apply the exact firmware filters below. The front mini-USB also supports firmware updates. Hierarchical 346310 operation is documented from firmware 01.02.31.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+#### Manufacturer selector and software settings
+
+Section ID: `ownkb:section:d000305:s000041`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+| Setting | Documented meaning / boundary | Evidence |
+| --- | --- | --- |
+| P / N | P identifies the entrance panel; common/main panel uses `P=0`. N is the first called handset; common pushbutton panels use `N=1`. | `BT00596-c-EN.pdf` p. 2 |
+| S: older Sprint L2 | 0: two-tone 1200/600 Hz; 1: two-tone 1200/0 Hz; 2: two-tone 1200/2400 Hz; 3: one-tone 1200 Hz. Classe 100/300 use S to associate one of 16 handset-selected preset bells. | `BT00596-c-EN.pdf` p. 2 |
+| S: general call | `S=9` provides the one-family general call. The firmware field S stores only `0..4`; the sources do not explain this mismatch. | `BT00596-c-EN.pdf` p. 2; canonical firmware fields |
+| T: lock timer | 0 (absent): 4 s; 1: 1 s; 2: 2 s; 3: 3 s; 4: while pressed, maximum 10 s; 5: 6 s; 6: 8 s; 7: 10 s. A 346210 actuator configured `MOD=5` is specified for extensions beyond 10 s. | `BT00596-c-EN.pdf` p. 2 |
+| M: tones / backlight | 0: all tones; 1: lock tone off; 2: call tone off; 3: both off. M=`4..7` repeat these tone choices with backlight always on and light sensor disabled. | `BT00596-c-EN.pdf` p. 2 |
+| J1 / J2 | J1 connected: right call-button column only; removed: both columns. Remove J1 and physical configurators for PC configuration. Remove J2 to enable local supply on terminals 1–2. | `BT00596-c-EN.pdf` pp. 2-3 |
+| Status indicators | Green door LED: door open; green communication LED: active communication; green call LED: forwarded call; red call LED: system busy. | `BT00596-c-EN.pdf` p. 1 |
+| PC speaker settings | P=`0..99`; enable/disable lock-release tone and call tone; lock duration `1..10` s or while the release button is pressed; handset-associated ringtone. | `RA00176AC_S_EN.pdf` p. 13; AA p. 13 |
+| PC pushbutton settings | Basic configuration disables keys. Select none, handset call, staircase lights or switchboard call. Point/general handset call; general hides destination. Handset `0..3999`; switchboard 0..15. | `RA00176AC_S_EN.pdf` p. 14; AA p. 14 |
+| PC transfer / update | Powered module, mini-USB/USB connection, automatically detected virtual COM device and prompted drivers. Offline project composition does not establish device connection or installed firmware. | `RA00176AC_S_EN.pdf` pp. 6-9; AA pp. 6-9 |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000305:s000042`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`
+
+The exact sheet and exports establish this assembly independently of other Sfera speaker / camera products. Covers, assembled IP protection and impact ratings depend on the selected Sfera New/Robur front plate; a cover rating does not rate the uncovered electronics. Database External unit and pushbutton Objects are conditional configuration roles, not additional physical call keys. AA and AC TiSferaDesign manuals are retained as distinct revisions; the 2026 V4 readme requires 64-bit Windows 10/11 and .NET 4.8, not the older software prerequisite set. The audio module supports the separate 352400 camera, but does not contain a camera. The English sheet allows 100 pushbutton calls; the A/V sheets state 98 for their own assemblies.
+
+The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
+
+#### Source-specific operating boundaries
+
+Section ID: `ownkb:section:d000305:s000043`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `catalogue`
+
+The 2026 English export classification disagrees with the 2017 exact sheet: standby 40 mA versus 10/15 mA with backlight off/on; operating temperature `-15..50` °C versus `-25..70` °C; IK07 versus IK08 for the named Sfera New covers and IK10 for Robur covers. Its AC/DC nominal-voltage classification of `18..240` V does not replace the specified `18..27` Vdc bus supply. The export’s camera classifications describe an adjustable 100° camera although 351100 has no built-in camera; the camera requires the separate 352400 module.
+
+No documented production boundary reconciles these attributes. The Addressable=No classification does not override P/N configuration; app capability belongs to a compatible assembled system, not proof that this module is an IP gateway.
+
+Firmware 01.02.31 is named for hierarchical switchboard operation in `BT00680-c-EN.pdf` p.1, but is absent from this catalogue snapshot (1.2 builds 25 and 30); compatibility is not extended to those builds by inference. AA and AC software sections 6-14 agree on the reviewed settings. The Virgin `505` label “Internal unit virgin pushbuttons” is reusable catalogue wording on this entrance-panel item; its candidate list does not establish additional installed roles. Staircase-light N1 retains default 0 outside its `100..255` filter. TO_ALL filters retain the complete point/general domain; no selection predicate or conversion establishes precedence. P1=`0..6` and P2=`0..9` are distinct catalogue fields, not an established encoding of the software’s full P=`0..99` domain.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000305:s000044`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The production / firmware boundary for current exports, full assembled-panel electrical budget and measured call, lock and diagnostic behavior remain open.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000305:s000045`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked files were identified but are not used as retained evidence in this dossier. Firmware / installers and declarations remain separate evidence families. A listed URL does not establish payload identity, installed release or tested compatibility.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `LGRP-01109-V01.01-EN.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/LGRP-01109-V01.01-EN.pdf) |
+| `LGRP-2015-159-V1-EN.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/LGRP-2015-159-V1-EN.pdf) |
+| `Sfera.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Sfera.pdf) |
+| `Sfera_2011A_010234.fwz` | Firmware binary: payload, production / update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/Sfera_2011A_010234.fwz) |
+| `TiSferaDesign_040024.exe` | Software installer: payload / installed compatibility unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/TiSferaDesign_040024.exe) |
+
+### Sources
+
+Section ID: `ownkb:section:d000305:s000046`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0166)
+
+# Document: ownkb:document:d000306
+
+Source path: `devices/definitions/own-dev-0167-sfera-audio-video-module.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Sfera audio and video module
+
+Section ID: `ownkb:section:d000306:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000306:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+351200 is the Sfera audio / video module that handles entrance-panel calls and directly releases the associated door lock. Its colour camera has white night-lighting LEDs and a mist-prevention heater. Its camera can be mechanically aimed by ±10° horizontally and vertically.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0167` | Project identity |
+| Technical description | Sfera audio and video module | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `351200` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `1460` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Video door entry system | Main system association |
+| Item model / `modobj` | `35` | Main association; independent of project ID |
+| Firmware definition | `112`, `636` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Audio video | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000306:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Sfera | `351200` | Established catalogue identity | Manufacturer database commercial record `1460` explicitly links this SKU to item `1460` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000306:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `351200` | `8005543441565` | [351200-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/21/d6/21d6d9dd9a8458ce226e7f606d8f46ce51819d30cba7c1e690007a49e1516ef7.pdf) PDF p. 1; `351200-italian-product-sheet.pdf` PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000306:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `351200` | A/V module | Canonical commercial record `1460` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000306:s000006`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: PDF pp.6-14, compared against AC revision for applicable settings. Unrelated module settings outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
+| `BT00597-c-EN.pdf` | Technical Sheet BT00597-C-EN | BT00597-c-EN; 15/05/2017 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/c9/80/c980d4e8a290e5c8a3d8f9372441735c3c41451ad8b29da591c12fa962c88d70.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/BT00597-c-EN.pdf) |
+| `351200-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/21/d6/21d6d9dd9a8458ce226e7f606d8f46ce51819d30cba7c1e690007a49e1516ef7.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-351200&include_technical=1) |
+| `351200-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/08/fb/08fbf6f9f7ef9a6a64535d872d599291421b61f58022f480c951923d0dff6151.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-351200) |
+| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: applicable speaker/pushbutton sections pp.6-14; Italian terminology/settings cross-checks. Other module/address-book sections not independently translated for this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
+| `BT00597_c_IT.pdf` | Manufacturer Italian / installation document | BT00597_c_IT; 15/05/2017 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/b5/a3/b5a3c0b770cbeb0378ba20d88ba7068ce20def850409aaec7a0f34c0801a9ff3.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00597_c_IT.pdf) |
+| `FIS_351200.pdf` | Manufacturer Italian / installation document | FIS_351200; printed publication date not established | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/ac/90/ac90b9f5b2d8f0e30a41ca50f559cdf90c48e56a3b0f813bd3bcb75bf777ba49.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/FIS_351200.pdf) |
+| `TisferaDesign_README_v4.pdf` | Software TISFERADESIGN_README_V4 | TisferaDesign_README_v4; 14/05/2026 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/52/48/52481f4b2cb9999abf86bb870007398845f3f29a7a52fb475dbf90a880d31f65.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TisferaDesign_README_v4.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1460`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00176AC_S_EN.pdf` | TiSferaDesign software manual | RA00176AC; 03/24-PC | PDF pp. 6-14: powered USB transfer, speaker and pushbutton settings; compared with AA revision. Other module settings are outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
+| `BT00680-c-EN.pdf` | Exact 346310 compatibility technical sheet | BT00680-c-EN; 18/01/2016 | PDF p.1 compatibility list: 351100/351200/351300 minimum firmware 01.02.31 for hierarchical switchboard operation; remaining switchboard features outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/68/0d6806e6d5d5a50226916ebe0fc87cfcfb964a7574f1192ceb7d056927c4f376.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/BT00680-c-EN.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000306:s000007`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `18..27 Vdc` | `BT00597-c-EN` PDF pp. 1-3 |
+| Standby, backlighting off / on | `15 mA / 20 mA` | `BT00597-c-EN` PDF pp. 1-3 |
+| Maximum draw | `140 mA` | `BT00597-c-EN` PDF pp. 1-3 |
+| Temperature / assembled protection | `-25..70 °C; IP54 for assembled entrance panel` | `BT00597-c-EN` PDF pp. 1-3 |
+| Face dimensions | `115 x 91 mm` | `BT00597-c-EN` PDF pp. 1-3 |
+| Direct lock output | `18 V, 4 A impulse / 250 mA holding; maximum 30 ohm` | `BT00597-c-EN` PDF pp. 1-3 |
+| Call capacity | `98 pushbutton calls` | `BT00597-c-EN` PDF pp. 1-3 |
+| Local controls | `speaker/microphone level; PL door-release input; status LEDs` | `BT00597-c-EN` PDF pp. 1-3 |
+| Additional supply | `1–2 input; enabled when J2 disconnected` | `BT00597-c-EN` PDF pp. 1-3 |
+| Camera sensor / resolution | `1/3-inch colour; 330 horizontal TV lines; interlace 2:1` | `BT00597-c-EN` PDF pp. 1-3 |
+| Lens | `F2.5 f3.3 mm` | `BT00597-c-EN` PDF pp. 1-3 |
+| Viewing field | `92° horizontal / 60° vertical; 105 x 60 cm at 50 cm` | `BT00597-c-EN` PDF pp. 1-3 |
+| Night imaging | `white LEDs; automatic brightness; mist-prevention heating` | `BT00597-c-EN` PDF pp. 1-3 |
+
+| Operating status / night sensor | `Lock release,communication active,call forwarded,system busy LEDs; optical night-backlight sensor` | `351200-publisher-product-sheet.pdf` pp. 1-2 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000306:s000008`
+
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Frequency classifications and a negative connected-object classification do not establish the runtime transport or exclude control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| Number of call buttons | `2` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Material call buttons | `Plastic` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Material front | `Other` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Front plate height | `91 mm` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Front plate width | `115 mm` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Built-in depth | `20 mm` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Mounting method | `Flush-mounted` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Installation technique | `Bus system` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Colour | `Other` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Degree of protection (IP) | `IP54` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| degree of impact strength (IK) | `IK07` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Operating / setting temperature (Min-Max) | `-15-50 °C` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Storage temperature (Min-Max) | `-20-70 °C` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Voltage type | `AC/DC` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Nominal voltage (Min-Max) | `18-27 V` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Supply current (Min-Max) | `0.04-1 A` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Sound level | `80 dB` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Standby consumption | `40 mA` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable nature for connection | `Flexible` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable section (Min-Max) | `1-2.5 mm²` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Label space / information surface | `Yes` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Fitted with rainproof plate protection | `Yes` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| With complemantary luminous signal | `No` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Control mode | `Wired` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Contains Batteries | `No` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Hands free | `Yes` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Loudness setting | `Yes` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Addressable | `No` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Door entry system with mobile application | `Yes` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Remote opening of gate / Electric door opener | `No` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Camera type | `Adjustable` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Video recorder angle | `100 °` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Max distance between internal and external unit | `150 m` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Communication rank type | `Other` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+| Connected object | `No` | `351200-publisher-product-sheet.pdf` PDF p. 3 |
+
+### Identity
+
+Section ID: `ownkb:section:d000306:s000009`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1460` | Canonical catalogue |
+| Technical item description | A/V module | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `20` | Canonical catalogue |
+| Main system | Video door entry system; key `4` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `35` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `1` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000306:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `35` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000306:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `112` | `1` | `1` | `4` | `1` | Catalogue default | Official |
+| `636` | `1` | `2` | `25` | `1` | Not catalogue default | Official |
+| `636` | `1` | `2` | `30` | `1` | Not catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000306:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `112` | `197` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0102` |
+| `636` | `1026` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0300` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000306:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `112` | `1` | `155` External unit | Fixed / designated metadata | `749` | `155` | `511` |
+| `112` | `1` | `420` Call Push button | Candidate alternative | `750` | `420` | `512` |
+| `112` | `1` | `426` Staircase light control | Candidate alternative | `751` | `426` | `513` |
+| `112` | `1` | `465` Switchboard call push button | Candidate alternative | `752` | `497` | `514` |
+| `636` | `1` | `155` External unit | Fixed / designated metadata | `2454` | `155` | `1106` |
+| `636` | `1` | `420` Call Push button | Candidate alternative | `2455` | `420` | `1107` |
+| `636` | `1` | `426` Staircase light control | Candidate alternative | `2456` | `426` | `1108` |
+| `636` | `1` | `465` Switchboard call push button | Candidate alternative | `2457` | `497` | `1109` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000306:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `112` | `505` Internal unit virgin pushbuttons | `1` | `418`, `421`, `422`, `423`, `424`, `425`, `426`, `429` | `505` | `37` |
+| `636` | `505` Internal unit virgin pushbuttons | `1` | `418`, `421`, `422`, `423`, `424`, `425`, `426`, `429` | `505` | `50` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000306:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `112` | Product Programming | `3` | Canonical firmware/mode association |
+| `636` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `112` | USB | Canonical firmware/connection association |
+| `636` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000306:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `P / N` | Entrance panel P from 0, `P=0` common / main; first called internal-unit N, normally 1 for common pushbuttons | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `S=0 /1 /2 /3` | SPRINT call-frequency pairs 1200/600, 1200/0, 1200/2400, 1200 Hz; compatible later Classe handsets choose among 16 melodies; `S=9` general call in one-family system | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `T=0 /1 /2 /3 /4 /5 /6 /7` | Absent=4 s; 1 s; 2 s; 3 s; while key pressed(max10 s); 6 s; 8 s; 10 s; longer timing requires 346210 `MOD=5` | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `M=0 /1 /2 /3` | Call and lock tones on / lock tone off / call tone off / both tones off | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `M=4 /5 /6 /7` | Same four tone combinations, with night backlighting always on | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `J1 fitted / removed` | Right button column only / both columns | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `J2 fitted / removed` | Auxiliary supply disabled / enabled | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Advanced P / lock timing` | `P=0..99`; lock `1..10` s or while release button held; software timing distinct from physical T map | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Software pushbutton roles` | Disabled by default; handset point / general call, stair lights or switchboard call; handset `0..3999`, switchboard `0..15` | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Transfer / update` | Powered module; remove physical configurators and J1 for advanced software transfer; front mini-USB | `BT00597-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+
+#### Commissioning software prerequisites
+
+Section ID: `ownkb:section:d000306:s000017`
+
+Provenance cues: `evidence`
+
+These are the retained readme requirements, separate from product electrical ratings and current operating-system compatibility.
+
+| Property | Published value | Evidence |
+| --- | --- | --- |
+| Windows / framework | `10 or11,64-bit;.NET4.8 or higher` | `TisferaDesign_README_v4` p.1 |
+| CPU / RAM | `10th-generation i5 or equivalent;8 GB minimum,16 GB recommended` | `TisferaDesign_README_v4` p.1 |
+| Disk / display | `500 MB;1366x768 minimum,1920x1080 recommended` | `TisferaDesign_README_v4` p.1 |
+| Market scope | `TiSferaDesign_es_04.xx.xx for Spanish market only` | `TisferaDesign_README_v4` p.1 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000306:s000018`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `112` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `112` | `P2` | `0..9` | `0` | P2; Configurator P2 |
+| `112` | `P1` | `0..6` | `0` | P1; Configurator P1 |
+| `112` | `N2` | `0..39` | `0` | N2; AssInternalUnitAddrHundreds |
+| `112` | `N1` | `0..99` | `0` | N1; AssInternalUnitAddrUnits |
+| `112` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `112` | `T` | `0..7` | `0` | T; Configurator T (time) - (0-7) |
+| `112` | `M` | `0..7` | `0` | M; Mode 0-7 |
+| `636` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `636` | `P2` | `0..9` | `0` | P2; Configurator P2 |
+| `636` | `P1` | `0..6` | `0` | P1; Configurator P1 |
+| `636` | `N2` | `0..39` | `0` | N2; AssInternalUnitAddrHundreds |
+| `636` | `N1` | `0..99` | `0` | N1; AssInternalUnitAddrUnits |
+| `636` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `636` | `T` | `0..7` | `0` | T; Configurator T (time) - (0-7) |
+| `636` | `M` | `0..7` | `0` | M; Mode 0-7 |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000306:s000019`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `155` - External unit
+
+Section ID: `ownkb:section:d000306:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | Address |
+| `N` | `0..99` | `0` | Associated Internal Unit address - units |
+| `M` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `RING_T_OUT` | `1..3` | `10` | RingTIMEOUT |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `CONN_T_OUT` | `3..90` | `6` | ConnectionTimeOut |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `ASSOCIATEDSWITCHBOARDADDRESSBOOK` | `0..15` | `0` | Switchboard associated to the device for the Video door-entry address book |
+| `BEEP_LOCK` | `0` = Disable; `1` = Enable | `1` | Beep on lock |
+| `BEEP_BUTT` | `0` = Disable; `1` = Enable | `1` | Beep on push button |
+| `BEEP_SES` | `0` = Disable; `1` = Enable | `1` | Beep on session change |
+| `NEXT_PE` | `0..95` | `0` | NextExtUnitInSliding |
+| `CAM` | `0..96` | `96` | AssociatedCamera |
+| `SPEECH_SYNT` | `0` = Disable; `1` = Enable | `0` | Speech sintesys |
+| `IS_VIDEO` | `0` = Undefined; `1` = Video; `2` = Audio | `0` | IS_VIDEO |
+
+#### Object `420` - Call Push button
+
+Section ID: `ownkb:section:d000306:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..99` | `0` | Associated Internal Unit address - units |
+| `N2` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `RING_TONE` | `0..3` | `0` | RingToneRequired |
+
+#### Object `426` - Staircase light control
+
+Section ID: `ownkb:section:d000306:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `465` - Switchboard call push button
+
+Section ID: `ownkb:section:d000306:s000023`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `497` maps to external Object `465`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `CDP_ADDRESS` | `0..15` | `0` | Address |
+| `RING_TONE` | `0..3` | `0` | RingToneRequired |
+
+#### Object `418` - Open lock control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000306:s000024`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+#### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000306:s000025`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `422` - Addressed autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000306:s000026`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `423` - Relais Actuat Command(AA) (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000306:s000027`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `424` - Intercom control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000306:s000028`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..99` | `0` | Associated Internal Unit address - units |
+| `N2` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `425` - Telephonic Call (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000306:s000029`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `NUM_IN_LIST` | `0..15` | `0` | NumberIntoList |
+
+#### Object `429` - Paging button (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000306:s000030`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Base; `2` = Advanced | `2` | Modality; mode(Base,Advanced) |
+| `AMPL_AREA` | `0..99` | `0` | Amplifier area |
+| `AMPL_UNIT` | `0..39` | `0` | Amplifier unit |
+| `ADDR_TYPE` | `0` = General; `1` = Ambient; `2` = Point to point | `0` | Addressing type |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000306:s000031`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000306:s000032`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000306:s000033`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `112` | `155` | `728` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `112` | `420` | `729` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `112` | `426` | `4104` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `636` | `155` | `1843` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `636` | `420` | `1844` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `636` | `426` | `4113` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000306:s000034`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000306:s000035`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `35` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000306:s000036`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `155` - External unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `420` - Call Push button | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `426` - Staircase light control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `465` - Switchboard call push button | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000306:s000037`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `155` - External unit | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `420` - Call Push button | No stored Object-system association | Not applicable | Absence of this relation does not remove the explicit Firmware/Object association |
+| `426` - Staircase light control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `465` - Switchboard call push button | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+#### Related functional reference families
+
+Section ID: `ownkb:section:d000306:s000038`
+
+Applicability cues: `applies to`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+The correspondence below is a semantic cross-reference based on the named role and the canonical functional reference; it does not assert captured frames or support for every operation.
+
+| Catalogue role | Related canonical reference | Evidence limit |
+| --- | --- | --- |
+| Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000306:s000039`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000306:s000040`
+
+Applicability cues: `firmware`
+Uncertainty: `not verified`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Physical P numbers entrance panels from 0, with `P=0` reserved for the common / main panel. N assigns the first called internal unit; common pushbutton panels use `N=1`. S sets handset ringtone behavior and `S=9` gives the general call in one-family systems. T sets lock timing; M sets tone suppression and always-on backlighting. J1 connected enables the right button column; disconnected enables both columns. J2 disconnected enables additional supply. Advanced TiSferaDesign transfer requires removal of J1 and physical configurators, with the module powered. The 2024 software manual allows `P=0..99`, individual / general calls, stair-light and switchboard functions, handset `0..3999` and switchboard `0..15` destinations. These are software domains; apply the exact firmware filters below. The front mini-USB also supports firmware updates. Hierarchical 346310 operation is documented from firmware 01.02.31.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+#### Manufacturer selector and software settings
+
+Section ID: `ownkb:section:d000306:s000041`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+| Setting | Documented meaning / boundary | Evidence |
+| --- | --- | --- |
+| P / N | P identifies the entrance panel; common/main panel uses `P=0`. N is the first called handset; common pushbutton panels use `N=1`. | `BT00597-c-EN.pdf` p. 2 |
+| S: older Sprint L2 | 0: two-tone 1200/600 Hz; 1: two-tone 1200/0 Hz; 2: two-tone 1200/2400 Hz; 3: one-tone 1200 Hz. Classe 100/300 use S to associate one of 16 handset-selected preset bells. | `BT00597-c-EN.pdf` p. 2 |
+| S: general call | `S=9` provides the one-family general call. The firmware field S stores only `0..4`; the sources do not explain this mismatch. | `BT00597-c-EN.pdf` p. 2; canonical firmware fields |
+| T: lock timer | 0 (absent): 4 s; 1: 1 s; 2: 2 s; 3: 3 s; 4: while pressed, maximum 10 s; 5: 6 s; 6: 8 s; 7: 10 s. A 346210 actuator configured `MOD=5` is specified for extensions beyond 10 s. | `BT00597-c-EN.pdf` p. 2 |
+| M: tones / backlight | 0: all tones; 1: lock tone off; 2: call tone off; 3: both off. M=`4..7` repeat these tone choices with backlight always on and light sensor disabled. | `BT00597-c-EN.pdf` p. 2 |
+| J1 / J2 | J1 connected: right call-button column only; removed: both columns. Remove J1 and physical configurators for PC configuration. Remove J2 to enable local supply on terminals 1–2. | `BT00597-c-EN.pdf` pp. 2-3 |
+| Status indicators | Green door LED: door open; green communication LED: active communication; green call LED: forwarded call; red call LED: system busy. | `BT00597-c-EN.pdf` p. 1 |
+| PC speaker settings | P=`0..99`; enable/disable lock-release tone and call tone; lock duration `1..10` s or while the release button is pressed; handset-associated ringtone. | `RA00176AC_S_EN.pdf` p. 13; AA p. 13 |
+| PC pushbutton settings | Basic configuration disables keys. Select none, handset call, staircase lights or switchboard call. Point/general handset call; general hides destination. Handset `0..3999`; switchboard 0..15. | `RA00176AC_S_EN.pdf` p. 14; AA p. 14 |
+| PC transfer / update | Powered module, mini-USB/USB connection, automatically detected virtual COM device and prompted drivers. Offline project composition does not establish device connection or installed firmware. | `RA00176AC_S_EN.pdf` pp. 6-9; AA pp. 6-9 |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000306:s000042`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`
+
+The exact sheet and exports establish this assembly independently of other Sfera speaker / camera products. Covers, assembled IP protection and impact ratings depend on the selected Sfera New/Robur front plate; a cover rating does not rate the uncovered electronics. Database External unit and pushbutton Objects are conditional configuration roles, not additional physical call keys. AA and AC TiSferaDesign manuals are retained as distinct revisions; the 2026 V4 readme requires 64-bit Windows 10/11 and .NET 4.8, not the older software prerequisite set. The shared shooting-field diagram distinguishes 351200 from 351300; their lens / field values are not interchangeable. FIS installation drawings corroborate the named assembly’s connectors and physical configuration.
+
+The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
+
+#### Source-specific operating boundaries
+
+Section ID: `ownkb:section:d000306:s000043`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `catalogue`, `source`, `specification`
+
+The 2026 English export classification disagrees with the 2017 exact sheet: standby 40 mA versus 15/20 mA with backlight off/on; operating temperature `-15..50` °C versus `-25..70` °C; IK07 versus IK08 for the named Sfera New covers and IK10 for Robur covers. Its AC/DC voltage-type classification does not replace the exact sheet’s dc-only bus supply; both give the nominal range `18..27 V`. The export’s camera classifications are not the source of the technical-sheet lens or shooting-field specification.
+
+No documented production boundary reconciles these attributes. The Addressable=No classification does not override P/N configuration; app capability belongs to a compatible assembled system, not proof that this module is an IP gateway. Remote opening=No in the export conflicts with its own description and the exact sheet’s S+/S− electric-lock output. The 351200 camera is mechanically adjustable ±10° in both directions, F2.5/f3.3 mm, with 92° horizontal and 60° vertical field; at 50 cm the drawing covers 105 × 60 cm. Both A/V sheets specify 1/3-inch colour sensor, 330 horizontal TV lines, 2:1 interlace, white illumination LEDs and an anti-mist heater. The retained FIS drawings dated 12/19-01 PC warn against strong backlighting; their lens-downward advice applies specifically to 351200.
+
+Firmware 01.02.31 is named for hierarchical switchboard operation in `BT00680-c-EN.pdf` p.1, but is absent from this catalogue snapshot (1.2 builds 25 and 30); compatibility is not extended to those builds by inference. AA and AC software sections 6-14 agree on the reviewed settings. The Virgin `505` label “Internal unit virgin pushbuttons” is reusable catalogue wording on this entrance-panel item; its candidate list does not establish additional installed roles. Staircase-light N1 retains default 0 outside its `100..255` filter. TO_ALL filters retain the complete point/general domain; no selection predicate or conversion establishes precedence. P1=`0..6` and P2=`0..9` are distinct catalogue fields, not an established encoding of the software’s full P=`0..99` domain.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000306:s000044`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The production / firmware boundary for current exports, full assembled-panel electrical budget and measured call, lock and diagnostic behavior remain open.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000306:s000045`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked files were identified but are not used as retained evidence in this dossier. Firmware / installers and declarations remain separate evidence families. A listed URL does not establish payload identity, installed release or tested compatibility.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `LGRP-00079-V01.01-EN.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/LGRP-00079-V01.01-EN.pdf) |
+| `Sfera.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Sfera.pdf) |
+| `Sfera_2011AV_010234.fwz` | Firmware binary: payload, production / update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/Sfera_2011AV_010234.fwz) |
+| `TiSferaDesign_040024.exe` | Software installer: payload / installed compatibility unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/TiSferaDesign_040024.exe) |
+
+### Sources
+
+Section ID: `ownkb:section:d000306:s000046`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0167)
+
+# Document: ownkb:document:d000307
+
+Source path: `devices/definitions/own-dev-0168-sfera-wide-angle-audio-video-module.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## Sfera wide-angle audio and video module
+
+Section ID: `ownkb:section:d000307:s000001`
+
+### Summary
+
+Section ID: `ownkb:section:d000307:s000002`
+
+Applicability cues: `firmware`, `version`
+Provenance cues: `catalogue`, `documentation`, `evidence`, `source`
+
+351300 is the Sfera wide-angle audio / video module that handles entrance-panel calls and directly releases the associated door lock. Its colour camera has white night-lighting LEDs and a mist-prevention heater. The wide-angle lens covers a substantially larger field than 351200.
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| Device ID | `OWN-DEV-0168` | Project identity |
+| Technical description | Sfera wide-angle audio and video module | Canonical catalogue and source-scoped manufacturer documents |
+| Commercial identities | `351300` | All explicit catalogue commercial relationships; product documentation scoped separately |
+| Catalogue item | `1461` | MyHOME Suite `3.5.38`, canonical `MHCatalogue.db` |
+| Main catalogue system | Video door entry system | Main system association |
+| Item model / `modobj` | `36` | Main association; independent of project ID |
+| Firmware definition | `113`, `637` | Catalogue firmware IDs; version / build table below |
+| Declared Modules | `1` | Firmware metadata |
+| Categories | Audio video | Source-derived roles |
+
+### Commercial identities
+
+Section ID: `ownkb:section:d000307:s000003`
+
+Provenance cues: `catalogue`, `database`, `evidence`
+
+| Brand / line | Reference | Relationship | Evidence |
+| --- | --- | --- | --- |
+| BTicino - Sfera | `351300` | Established catalogue identity | Manufacturer database commercial record `1461` explicitly links this SKU to item `1461` |
+
+#### EAN-13 commercial identifiers
+
+Section ID: `ownkb:section:d000307:s000004`
+
+Provenance cues: `evidence`
+
+EANs identify the named commercial variant, not the configured physical device or its diagnostic identity.
+
+| Reference | EAN-13 | Evidence |
+| --- | --- | --- |
+| `351300` | `8005543441596` | [351300-publisher-product-sheet.pdf](https://archive.openwebnet-ha.org/sha256/9f/68/9f688ab58911fc5e2541cfe3cc3e5c7c9935e72a4887a4164243c1f6ab6d9313.pdf) PDF p. 1; `351300-italian-product-sheet.pdf` PDF p. 1 |
+
+#### Catalogue labels
+
+Section ID: `ownkb:section:d000307:s000005`
+
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+| Reference | Catalogue name | Evidence |
+| --- | --- | --- |
+| `351300` | Wide angle A/V module | Canonical commercial record `1461` |
+
+These labels describe the retained historical catalogue; they do not establish installed state or present-day market availability.
+
+### Documentation
+
+Section ID: `ownkb:section:d000307:s000006`
+
+Applicability cues: `firmware`, `revision`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `database`, `source`
+
+| Document | Type | Revision / date | Coverage | Archived original | Publisher source |
+| --- | --- | --- | --- | --- | --- |
+| `RA00176AA_S_EN.pdf` | Technical Guide RA00176AA_S_EN | RA00176AA_S_EN; printed publication date not established | Earlier TiSferaDesign manual: PDF pp.6-14, compared against AC revision for applicable settings. Unrelated module settings outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/14/14/1414875a0d40523aafb77d2f4947f60475d4dc1be6a27825883b0137b639d97f.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/RA00176AA_S_EN.pdf) |
+| `BT00598-c-EN.pdf` | Technical Sheet BT00598-C-EN | BT00598-c-EN; 15/05/2017 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/2e/42/2e42bd417c56d416fd542d06cbb7baae4d0879470f23a89684f48ca87ec67214.pdf) | [Publisher original](https://assets.legrand.com/pim/NP-FT-GT/BT00598-c-EN.pdf) |
+| `351300-publisher-product-sheet.pdf` | Exact English product export | Publisher DATASHEET; 05.10.2026 | PDF pp. 1-5: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/9f/68/9f688ab58911fc5e2541cfe3cc3e5c7c9935e72a4887a4164243c1f6ab6d9313.pdf) | [Publisher original](https://www.bticino.com/products/pdf?sku=BT-351300&include_technical=1) |
+| `351300-italian-product-sheet.pdf` | Exact Italian product export | Product export retrieved 05/10/2026; boilerplate compliance dates are not product publication dates | PDF pp. 1-2: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/22/91/22913c049abc4f88b4b21435343adb5ac66db687b68ec687632bb64380582131.pdf) | [Publisher original](https://catalogo.bticino.it/pdf/scheda-prodotto/BTI-351300) |
+| `RA00176AC_S_IT.pdf` | Manufacturer Italian / installation document | RA00176AC-03/24-PC; printed revision label | TiSferaDesign 2024: applicable speaker/pushbutton sections pp.6-14; Italian terminology/settings cross-checks. Other module/address-book sections not independently translated for this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/23/78/237891b468a5152361ad36fd432ebd52e8804aecbfb2373a0c953dd7cc98eb8b.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/RA00176AC_S_IT.pdf) |
+| `BT00598_c_IT.pdf` | Manufacturer Italian / installation document | BT00598_c_IT; 15/05/2017 | PDF pp. 1-3: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/5c/c0/5cc0216319f28e97be38d976c69625f0b844a645e50b1c555d8bd37909e13c32.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/BT00598_c_IT.pdf) |
+| `FIS_351300.pdf` | Manufacturer Italian / installation document | FIS_351300; printed publication date not established | PDF pp. 1-4: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/22/9c/229c8efca6a2a5471f37957a3753e81fda483f405d4987df3f3366fca2265aab.pdf) | [Publisher original](https://dar.bticino.it/asset/Documents/FIS_351300.pdf) |
+| `TisferaDesign_README_v4.pdf` | Software TISFERADESIGN_README_V4 | TisferaDesign_README_v4; 14/05/2026 | PDF pp. 1-1: exact-reference specifications, configuration or wiring. Printed pagination coincides where numbered; product exports use PDF pages. | [Archived original](https://archive.openwebnet-ha.org/sha256/52/48/52481f4b2cb9999abf86bb870007398845f3f29a7a52fb475dbf90a880d31f65.pdf) | [Publisher original](https://assets.legrand.com/pim/AUTRE/TisferaDesign_README_v4.pdf) |
+| MyHOME Suite `MHCatalogue.db` | Canonical configuration catalogue | `3.5.38` | Item `1461`: complete extracted catalogue associations | [Archived database metadata](../../sources/myhome-suite/3.5.38/databases/) | Bundled manufacturer software |
+| `RA00176AC_S_EN.pdf` | TiSferaDesign software manual | RA00176AC; 03/24-PC | PDF pp. 6-14: powered USB transfer, speaker and pushbutton settings; compared with AA revision. Other module settings are outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/7c/63/7c634fb15eebc8b90bef803b80677c9b638317d9a88c71679eece9581a796ff9.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/RA00176AC_S_EN.pdf) |
+| `BT00680-c-EN.pdf` | Exact 346310 compatibility technical sheet | BT00680-c-EN; 18/01/2016 | PDF p.1 compatibility list: 351100/351200/351300 minimum firmware 01.02.31 for hierarchical switchboard operation; remaining switchboard features outside this item. | [Archived original](https://archive.openwebnet-ha.org/sha256/0d/68/0d6806e6d5d5a50226916ebe0fc87cfcfb964a7574f1192ceb7d056927c4f376.pdf) | [Publisher source](https://assets.legrand.com/pim/NP-FT-GT/BT00680-c-EN.pdf) |
+
+### Physical and electrical characteristics
+
+Section ID: `ownkb:section:d000307:s000007`
+
+Applicability cues: `scs`
+Provenance cues: `evidence`
+
+| Property | Value | Evidence |
+| --- | --- | --- |
+| SCS supply | `18..27 Vdc` | `BT00598-c-EN` PDF pp. 1-3 |
+| Standby, backlighting off / on | `15 mA / 20 mA` | `BT00598-c-EN` PDF pp. 1-3 |
+| Maximum draw | `140 mA` | `BT00598-c-EN` PDF pp. 1-3 |
+| Temperature / assembled protection | `-25..70 °C; IP54 for assembled entrance panel` | `BT00598-c-EN` PDF pp. 1-3 |
+| Face dimensions | `115 x 91 mm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Direct lock output | `18 V, 4 A impulse / 250 mA holding; maximum 30 ohm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Call capacity | `98 pushbutton calls` | `BT00598-c-EN` PDF pp. 1-3 |
+| Local controls | `speaker/microphone level; PL door-release input; status LEDs` | `BT00598-c-EN` PDF pp. 1-3 |
+| Additional supply | `1–2 input; enabled when J2 disconnected` | `BT00598-c-EN` PDF pp. 1-3 |
+| Camera sensor / resolution | `1/3-inch colour; 330 horizontal TV lines; interlace 2:1` | `BT00598-c-EN` PDF pp. 1-3 |
+| Lens | `F2.5 f1.8 mm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Viewing field | `135° horizontal / 96° vertical; 240 x 115 cm at 50 cm` | `BT00598-c-EN` PDF pp. 1-3 |
+| Night imaging | `white LEDs; automatic brightness; mist-prevention heating` | `BT00598-c-EN` PDF pp. 1-3 |
+
+| Night backlighting | `Integrated optical sensor; automatic night-backlight activation` | `351300-publisher-product-sheet.pdf` p.1 |
+
+#### Publisher export attributes
+
+Section ID: `ownkb:section:d000307:s000008`
+
+Cautions: `do not`
+Provenance cues: `source`
+
+These are the complete captured publisher classification values for the named variants. They do not replace technical-sheet load ratings or establish runtime protocol support. Frequency classifications and a negative connected-object classification do not establish the runtime transport or exclude control through another system device.
+
+| Property | Publisher value | Variant / source |
+| --- | --- | --- |
+| Number of call buttons | `2` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Material call buttons | `Plastic` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Material front | `Other` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Front plate height | `91 mm` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Front plate width | `115 mm` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Built-in depth | `20 mm` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Mounting method | `Flush-mounted` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Installation technique | `Bus system` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Colour | `Other` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Degree of protection (IP) | `IP54` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| degree of impact strength (IK) | `IK07` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Operating / setting temperature (Min-Max) | `-15-50 °C` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Storage temperature (Min-Max) | `-20-70 °C` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Voltage type | `AC/DC` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Nominal voltage (Min-Max) | `18-27 V` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Supply current (Min-Max) | `0.04-1 A` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Frequency (Min-Max) | `50-60 Hz` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Sound level | `80 dB` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Standby consumption | `40 mA` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable nature for connection | `Flexible` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Cable section (Min-Max) | `1-2.5 mm²` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Label space / information surface | `Yes` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Fitted with rainproof plate protection | `Yes` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| With complemantary luminous signal | `No` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Control mode | `Wired` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Contains Batteries | `No` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Hands free | `Yes` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Loudness setting | `Yes` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Addressable | `No` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Door entry system with mobile application | `Yes` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Remote opening of gate / Electric door opener | `Yes` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Camera type | `Adjustable` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Video recorder angle | `100 °` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Max distance between internal and external unit | `150 m` | `351300-publisher-product-sheet.pdf` PDF p. 3 |
+| Communication rank type | `Other` | `351300-publisher-product-sheet.pdf` PDF p. 4 |
+| Connected object | `No` | `351300-publisher-product-sheet.pdf` PDF p. 4 |
+
+### Identity
+
+Section ID: `ownkb:section:d000307:s000009`
+
+Provenance cues: `catalogue`, `evidence`, `source`
+
+| Field | Value | Evidence |
+| --- | --- | --- |
+| `EN_ITEM.id_item` | `1461` | Canonical catalogue |
+| Technical item description | Wide angle A/V module | Canonical catalogue |
+| Item family | Source placeholder description `0`; key `20` | Canonical catalogue |
+| Main system | Video door entry system; key `4` | `AS_ITEM_SYSTEM` |
+| Main item model / `modobj` | `36` | `AS_ITEM_SYSTEM` |
+| Commercial record count | `1` | `EN_DEVICE` |
+
+#### Catalogue system and bus scope
+
+Section ID: `ownkb:section:d000307:s000010`
+
+Provenance cues: `catalogue`, `evidence`
+
+| System | Item model / modobj | Main mapping | Evidence |
+| --- | --- | --- | --- |
+| Video door entry system | `36` | Yes | Canonical item/system relationship |
+
+| Catalogue bus | Level | Evidence |
+| --- | --- | --- |
+| Multimedia | private riser | Canonical item/bus relationship |
+| Multimedia | public riser | Canonical item/bus relationship |
+
+These associations describe software applicability, not physical connector counts or observed services.
+
+### Firmware and hardware
+
+Section ID: `ownkb:section:d000307:s000011`
+
+Applicability cues: `firmware`, `revision`, `version`
+Uncertainty: `unknown`
+Provenance cues: `catalogue`, `source`
+
+| Firmware ID | Version | Revision | Build | Declared Modules | Default | Catalogue status |
+| --- | --- | --- | --- | --- | --- | --- |
+| `113` | `1` | `1` | `4` | `1` | Catalogue default | Official |
+| `637` | `1` | `2` | `25` | `1` | Not catalogue default | Official |
+| `637` | `1` | `2` | `30` | `1` | Not catalogue default | Official |
+
+Version / revision / build `-1` retains wildcard or unspecified applicability in the catalogue; it is distinct from Deprecated status. Status and default are metadata of this historical source snapshot, not present-day market availability or installed state. Installed firmware must be corroborated through the applicable diagnostic context.
+
+No installed release, hardware revision or microcontroller fingerprint is corroborated. Missing build rows mean unknown build, not build zero.
+
+#### Parameter and package associations
+
+Section ID: `ownkb:section:d000307:s000012`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `source`
+
+| Firmware | Parameter record | Catalogue brand scope | Line scope | Parameter family | Source path |
+| --- | --- | --- | --- | --- | --- |
+| `113` | `198` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0102` |
+| `637` | `1027` | BTicino (key `1`) | `7` | external software | `TiSferaDesign_0300` |
+
+All 2 parameter-file associations are shown. Brand and line keys are parameter scopes, not diagnostic identifiers. Referenced payloads were not included in this catalogue extraction and have not been inspected; their contents are not inferred from filenames.
+
+No `AS_FW_PACKAGE` association is stored. This is catalogue coverage, not a claim that manufacturer firmware downloads never existed.
+
+### Module, Object, and Virgin Object model
+
+Section ID: `ownkb:section:d000307:s000013`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `database`
+
+| Firmware | Module slot | External Object | Catalogue placement | Catalogue slot row ID | Catalogue Object key | Object/Firmware relation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `113` | `1` | `155` External unit | Fixed / designated metadata | `753` | `155` | `515` |
+| `113` | `1` | `420` Call Push button | Candidate alternative | `754` | `420` | `516` |
+| `113` | `1` | `426` Staircase light control | Candidate alternative | `755` | `426` | `517` |
+| `113` | `1` | `465` Switchboard call push button | Candidate alternative | `756` | `497` | `518` |
+| `637` | `1` | `155` External unit | Fixed / designated metadata | `2458` | `155` | `1110` |
+| `637` | `1` | `420` Call Push button | Candidate alternative | `2459` | `420` | `1111` |
+| `637` | `1` | `426` Staircase light control | Candidate alternative | `2460` | `426` | `1112` |
+| `637` | `1` | `465` Switchboard call push button | Candidate alternative | `2461` | `497` | `1113` |
+
+Module slot is the Device-local placement, not a database row identifier. Fixed / designated metadata and candidate membership do not prove the installed active Object; use the conditions and runtime diagnostics in their established contexts.
+
+#### Virgin Objects
+
+Section ID: `ownkb:section:d000307:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`
+
+| Firmware | External Virgin Object | Module slots | Permitted external Objects | Catalogue Virgin Object key | Firmware/Virgin relation |
+| --- | --- | --- | --- | --- | --- |
+| `113` | `505` Internal unit virgin pushbuttons | `1` | `418`, `421`, `422`, `423`, `424`, `425`, `426`, `429` | `505` | `39` |
+| `637` | `505` Internal unit virgin pushbuttons | `1` | `418`, `421`, `422`, `423`, `424`, `425`, `426`, `429` | `505` | `51` |
+
+### Configuration modes
+
+Section ID: `ownkb:section:d000307:s000015`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | Mode | Catalogue mode | Evidence |
+| --- | --- | --- | --- |
+| `113` | Product Programming | `3` | Canonical firmware/mode association |
+| `637` | Product Programming | `3` | Canonical firmware/mode association |
+
+| Firmware | Connection | Evidence |
+| --- | --- | --- |
+| `113` | USB | Canonical firmware/connection association |
+| `637` | USB | Canonical firmware/connection association |
+
+Product setup procedures and catalogue mode identifiers have different scopes. A mode association does not prove every reusable Object field is physically available.
+
+#### Manufacturer configuration and operating settings
+
+Section ID: `ownkb:section:d000307:s000016`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`, `evidence`
+
+Published product selectors and software settings are separate from catalogue mode IDs. Their domains, defaults and topology limits do not replace Firmware-specific filters.
+
+| Selector / setting | Published role or value | Evidence |
+| --- | --- | --- |
+| `P / N` | Entrance panel P from 0, `P=0` common / main; first called internal-unit N, normally 1 for common pushbuttons | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `S=0 /1 /2 /3` | SPRINT call-frequency pairs 1200/600, 1200/0, 1200/2400, 1200 Hz; compatible later Classe handsets choose among 16 melodies; `S=9` general call in one-family system | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `T=0 /1 /2 /3 /4 /5 /6 /7` | Absent=4 s; 1 s; 2 s; 3 s; while key pressed(max10 s); 6 s; 8 s; 10 s; longer timing requires 346210 `MOD=5` | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `M=0 /1 /2 /3` | Call and lock tones on / lock tone off / call tone off / both tones off | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `M=4 /5 /6 /7` | Same four tone combinations, with night backlighting always on | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `J1 fitted / removed` | Right button column only / both columns | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `J2 fitted / removed` | Auxiliary supply disabled / enabled | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Advanced P / lock timing` | `P=0..99`; lock `1..10` s or while release button held; software timing distinct from physical T map | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Software pushbutton roles` | Disabled by default; handset point / general call, stair lights or switchboard call; handset `0..3999`, switchboard `0..15` | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+| `Transfer / update` | Powered module; remove physical configurators and J1 for advanced software transfer; front mini-USB | `BT00598-c-EN` printed/PDF pp. 2-3; `RA00176AC_S_EN` pp. 6-14 |
+
+#### Commissioning software prerequisites
+
+Section ID: `ownkb:section:d000307:s000017`
+
+Provenance cues: `evidence`
+
+These are the retained readme requirements, separate from product electrical ratings and current operating-system compatibility.
+
+| Property | Published value | Evidence |
+| --- | --- | --- |
+| Windows / framework | `10 or11,64-bit;.NET4.8 or higher` | `TisferaDesign_README_v4` p.1 |
+| CPU / RAM | `10th-generation i5 or equivalent;8 GB minimum,16 GB recommended` | `TisferaDesign_README_v4` p.1 |
+| Disk / display | `500 MB;1366x768 minimum,1920x1080 recommended` | `TisferaDesign_README_v4` p.1 |
+| Market scope | `TiSferaDesign_es_04.xx.xx for Spanish market only` | `TisferaDesign_README_v4` p.1 |
+
+### Firmware-scoped configuration
+
+Section ID: `ownkb:section:d000307:s000018`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Domains and defaults are catalogue evidence. `AID` is a literal mask with no stored default or established character set; it is not a physical configurator.
+
+| Firmware | Field | Catalogue domain | Catalogue default | Meaning |
+| --- | --- | --- | --- | --- |
+| `113` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `113` | `P2` | `0..9` | `0` | P2; Configurator P2 |
+| `113` | `P1` | `0..6` | `0` | P1; Configurator P1 |
+| `113` | `N2` | `0..39` | `0` | N2; AssInternalUnitAddrHundreds |
+| `113` | `N1` | `0..99` | `0` | N1; AssInternalUnitAddrUnits |
+| `113` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `113` | `T` | `0..7` | `0` | T; Configurator T (time) - (0-7) |
+| `113` | `M` | `0..7` | `0` | M; Mode (0-7) |
+| `637` | `AID` | `********` = AID | Not specified in source | Device identity token; not a physical configurator |
+| `637` | `P2` | `0..9` | `0` | P2; Configurator P2 |
+| `637` | `P1` | `0..6` | `0` | P1; Configurator P1 |
+| `637` | `N2` | `0..39` | `0` | N2; AssInternalUnitAddrHundreds |
+| `637` | `N1` | `0..99` | `0` | N1; AssInternalUnitAddrUnits |
+| `637` | `S` | `0..4` | `0` | S; Configurator S (0-4) |
+| `637` | `T` | `0..7` | `0` | T; Configurator T (time) - (0-7) |
+| `637` | `M` | `0..7` | `0` | M; Mode (0-7) |
+
+### Object configuration surfaces
+
+Section ID: `ownkb:section:d000307:s000019`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+The following domains and defaults describe reusable Object definitions in the canonical MyHOME Suite `3.5.38` catalogue. Numeric values are catalogue values; product units and physical configurator limits are separate scopes. Defaults do not establish installed state. Apply the firmware-specific restrictions under Conditions, filters, and conversions after resolving the active Object.
+
+#### Object `155` - External unit
+
+Section ID: `ownkb:section:d000307:s000020`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | Address |
+| `N` | `0..99` | `0` | Associated Internal Unit address - units |
+| `M` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `RING_T_OUT` | `1..3` | `10` | RingTIMEOUT |
+| `CALL_T_OUT` | `10..180` | `30` | Call timeout |
+| `CONN_T_OUT` | `3..90` | `6` | ConnectionTimeOut |
+| `ASS_SWITCH` | `0..95` | `0` | AssociatedSwitchboard |
+| `ASSOCIATEDSWITCHBOARDADDRESSBOOK` | `0..15` | `0` | Switchboard associated to the device for the Video door-entry address book |
+| `BEEP_LOCK` | `0` = Disable; `1` = Enable | `1` | Beep on lock |
+| `BEEP_BUTT` | `0` = Disable; `1` = Enable | `1` | Beep on push button |
+| `BEEP_SES` | `0` = Disable; `1` = Enable | `1` | Beep on session change |
+| `NEXT_PE` | `0..95` | `0` | NextExtUnitInSliding |
+| `CAM` | `0..96` | `96` | AssociatedCamera |
+| `SPEECH_SYNT` | `0` = Disable; `1` = Enable | `0` | Speech sintesys |
+| `IS_VIDEO` | `0` = Undefined; `1` = Video; `2` = Audio | `0` | IS_VIDEO |
+
+#### Object `420` - Call Push button
+
+Section ID: `ownkb:section:d000307:s000021`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..99` | `0` | Associated Internal Unit address - units |
+| `N2` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `RING_TONE` | `0..3` | `0` | RingToneRequired |
+
+#### Object `426` - Staircase light control
+
+Section ID: `ownkb:section:d000307:s000022`
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..255` | `0` | Internal unit address |
+| `N2` | `0..15` | `0` | Internal unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `465` - Switchboard call push button
+
+Section ID: `ownkb:section:d000307:s000023`
+
+Provenance cues: `catalogue`
+
+Catalogue Object key `497` maps to external Object `465`.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `CDP_ADDRESS` | `0..15` | `0` | Address |
+| `RING_TONE` | `0..3` | `0` | RingToneRequired |
+
+#### Object `418` - Open lock control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000307:s000024`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same level; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Level |
+
+#### Object `421` - Cyclic autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000307:s000025`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `422` - Addressed autoswitch control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000307:s000026`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `423` - Relais Actuat Command(AA) (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000307:s000027`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `P` | `0..95` | `0` | External unit address |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `424` - Intercom control (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000307:s000028`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `N1` | `0..99` | `0` | Associated Internal Unit address - units |
+| `N2` | `0..39` | `0` | Associated Internal Unit address - hundreds |
+| `TO_ALL` | `0` = Point to point; `1` = General | `1` | Type of call |
+| `SEG_LEV` | `0` = Same; `1` = Riser; `2` = Building; `3` = Backbone | `0` | Segment |
+
+#### Object `425` - Telephonic Call (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000307:s000029`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `NUM_IN_LIST` | `0..15` | `0` | NumberIntoList |
+
+#### Object `429` - Paging button (Virgin-only candidate)
+
+Section ID: `ownkb:section:d000307:s000030`
+
+Applicability cues: `firmware`
+
+No direct firmware/Object association establishes reachability.
+
+| Field | Reusable domain | Reusable default | Meaning |
+| --- | --- | --- | --- |
+| `M` | `1` = Base; `2` = Advanced | `2` | Modality; mode(Base,Advanced) |
+| `AMPL_AREA` | `0..99` | `0` | Amplifier area |
+| `AMPL_UNIT` | `0..39` | `0` | Amplifier unit |
+| `ADDR_TYPE` | `0` = General; `1` = Ambient; `2` = Point to point | `0` | Addressing type |
+
+### Conditions, filters, and conversions
+
+Section ID: `ownkb:section:d000307:s000031`
+
+#### Slot conditions
+
+Section ID: `ownkb:section:d000307:s000032`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`, `not evidence`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+| Firmware | Module slot | External Object | Condition ID | Stored predicate | Conversion rule |
+| --- | --- | --- | --- | --- | --- |
+| all | Not applicable | Not applicable | None | No slot-condition rows associated | None |
+
+Empty predicates, missing condition rows and fixed placement metadata are not evidence of unconditional runtime activation. Preserve out-of-domain selectors and unresolved symbols as source irregularities; do not invent selection precedence.
+
+#### Object/Firmware restrictions
+
+Section ID: `ownkb:section:d000307:s000033`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `evidence`
+
+| Firmware | External Object | Filter ID | Field | Effective catalogue domain | Reusable default | Evidence / applicability |
+| --- | --- | --- | --- | --- | --- | --- |
+| `113` | `155` | `730` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `113` | `420` | `731` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `113` | `426` | `4105` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+| `637` | `155` | `1845` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `637` | `420` | `1846` | `TO_ALL` | `0` = Point to point; `1` = General (entire reusable range retained) | `1` | Type of call |
+| `637` | `426` | `4114` | `N1` | `100`; `101`; `102`; `103`; `104`; `105`; `106`; `107`; `108`; `109`; `110`; `111`; `112`; `113`; `114`; `115`; `116`; `117`; `118`; `119`; `120`; `121`; `122`; `123`; `124`; `125`; `126`; `127`; `128`; `129`; `130`; `131`; `132`; `133`; `134`; `135`; `136`; `137`; `138`; `139`; `140`; `141`; `142`; `143`; `144`; `145`; `146`; `147`; `148`; `149`; `150`; `151`; `152`; `153`; `154`; `155`; `156`; `157`; `158`; `159`; `160`; `161`; `162`; `163`; `164`; `165`; `166`; `167`; `168`; `169`; `170`; `171`; `172`; `173`; `174`; `175`; `176`; `177`; `178`; `179`; `180`; `181`; `182`; `183`; `184`; `185`; `186`; `187`; `188`; `189`; `190`; `191`; `192`; `193`; `194`; `195`; `196`; `197`; `198`; `199`; `200`; `201`; `202`; `203`; `204`; `205`; `206`; `207`; `208`; `209`; `210`; `211`; `212`; `213`; `214`; `215`; `216`; `217`; `218`; `219`; `220`; `221`; `222`; `223`; `224`; `225`; `226`; `227`; `228`; `229`; `230`; `231`; `232`; `233`; `234`; `235`; `236`; `237`; `238`; `239`; `240`; `241`; `242`; `243`; `244`; `245`; `246`; `247`; `248`; `249`; `250`; `251`; `252`; `253`; `254`; `255` | `0` | Internal unit address; reusable default `0` is outside this subset; filter supplies no replacement default |
+
+#### Device-specific conversions
+
+Section ID: `ownkb:section:d000307:s000034`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `limitation`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `source`
+
+| Referenced rule | Item-side condition | Object configuration result | Source path / limitation |
+| --- | --- | --- | --- |
+| None | Not applicable | No conversion reference associated with these slot rows | Canonical catalogue |
+
+These maps describe stored conversion branches after Object selection. Validate input against the exact firmware domain and output against the selected Object/Firmware restriction; a stored symbolic branch may be unreachable on this firmware. Generic evaluation and ambiguity handling remain in [Catalogue Resolution](../../internals/catalogue-resolution.md).
+
+### Diagnostic applicability
+
+Section ID: `ownkb:section:d000307:s000035`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `capture`, `catalogue`, `source`
+
+| Diagnostic surface | Device-specific use | Canonical reference |
+| --- | --- | --- |
+| `DIMENSION 1` | Corroborate item model `36` and variant identity in this Device’s diagnostic system context | [Device Identity](../../diagnostics/dim1-device-identity.md) |
+| `DIMENSION 2` | Read installed firmware and compare with the applicability table | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 3` | Obtain hardware revision; no source-backed installed value | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 6` | Obtain microcontroller identity; no fingerprint retained | [Dimension Reference](../../diagnostics/dimension-reference.md) |
+| `DIMENSION 30` | Resolve active Modules/Objects independently of candidate metadata | [Modules](../../diagnostics/dim30-modules.md) |
+| `DIMENSION 32` | Corroborate installed addressing and distinguish physical from reusable ranges | [Addressing](../../diagnostics/dim32-addressing.md) |
+| `DIMENSION 35` | Compare installed configuration with the exact firmware/Object restrictions | [Configuration](../../diagnostics/dim35-configuration.md) |
+
+These are catalogue-derived diagnostic candidates. No Device-specific response or support across all commercial variants is established by a hardware capture.
+
+### Functional applicability
+
+Section ID: `ownkb:section:d000307:s000036`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `evidence`
+
+| Catalogue Object / role | Applicability | Evidence |
+| --- | --- | --- |
+| `155` - External unit | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `420` - Call Push button | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `426` - Staircase light control | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+| `465` - Switchboard call push button | Only after resolving its Firmware/Module placement and attached restrictions | Canonical catalogue association |
+
+These are alternative catalogue-derived roles, not proof that every candidate is simultaneously configured. A user interface may control remote subsystems without instantiating their Objects locally. Main system / model mappings are not WHO values; diagnostic transport and exact runtime support remain uncorroborated. See [Functional Protocol](../../functional/) for canonical semantics.
+
+#### Reusable Object-system associations
+
+Section ID: `ownkb:section:d000307:s000037`
+
+Applicability cues: `firmware`, `not applicable`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+These are complete explicit catalogue associations for the candidate Objects. Multiple system rows are reusable metadata; they do not establish that the installed product has every corresponding subsystem. Catalogue system keys are independent of functional `WHO` values.
+
+| External Object / role | Catalogue system | Catalogue system key | Scope |
+| --- | --- | --- | --- |
+| `155` - External unit | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `420` - Call Push button | No stored Object-system association | Not applicable | Absence of this relation does not remove the explicit Firmware/Object association |
+| `426` - Staircase light control | Automation | `1` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Burglar alarm system | `3` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `426` - Staircase light control | Sound system | `5` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+| `465` - Switchboard call push button | Video door entry system | `4` | Reusable `AS_OBJECT_SYSTEM` relationship; active Firmware/Object remains independently resolved |
+
+No `AS_OBJECT_FUNCTION` special-function association is stored for these Objects.
+
+#### Related functional reference families
+
+Section ID: `ownkb:section:d000307:s000038`
+
+Applicability cues: `applies to`
+Uncertainty: `not established`
+Provenance cues: `catalogue`, `evidence`
+
+The correspondence below is a semantic cross-reference based on the named role and the canonical functional reference; it does not assert captured frames or support for every operation.
+
+| Catalogue role | Related canonical reference | Evidence limit |
+| --- | --- | --- |
+| Video-entry-related roles | [Basic video entry](../../functional/who-6-basic-video-door-entry/);[Video entry and telephony](../../functional/who-8-video-door-entry-telephony/) | Related canonical families; which namespace and operation applies to each installed component is not established by the product manual alone |
+
+### Observed behavior and corroboration
+
+Section ID: `ownkb:section:d000307:s000039`
+
+Provenance cues: `catalogue`
+
+No publishable Device-specific hardware captures or experiments are retained for this cluster. Manufacturer operating descriptions are documented behavior; catalogue relationships are implementation capability metadata. Neither is a measured response from an installed Physical Device.
+
+### Programming
+
+Section ID: `ownkb:section:d000307:s000040`
+
+Applicability cues: `firmware`
+Uncertainty: `not verified`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+Physical P numbers entrance panels from 0, with `P=0` reserved for the common / main panel. N assigns the first called internal unit; common pushbutton panels use `N=1`. S sets handset ringtone behavior and `S=9` gives the general call in one-family systems. T sets lock timing; M sets tone suppression and always-on backlighting. J1 connected enables the right button column; disconnected enables both columns. J2 disconnected enables additional supply. Advanced TiSferaDesign transfer requires removal of J1 and physical configurators, with the module powered. The 2024 software manual allows `P=0..99`, individual / general calls, stair-light and switchboard functions, handset `0..3999` and switchboard `0..15` destinations. These are software domains; apply the exact firmware filters below. The front mini-USB also supports firmware updates. Hierarchical 346310 operation is documented from firmware 01.02.31.
+
+Physical selectors and software domains are separate evidence. Apply the exact Firmware restrictions in the catalogue tables; a reusable default outside a filter remains an explicit catalogue inconsistency, without an inferred replacement. Registered paths and package labels are source associations, not verified payload encoding. The generic session / validation method remains in [Programming](../../programming/).
+
+#### Manufacturer selector and software settings
+
+Section ID: `ownkb:section:d000307:s000041`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+| Setting | Documented meaning / boundary | Evidence |
+| --- | --- | --- |
+| P / N | P identifies the entrance panel; common/main panel uses `P=0`. N is the first called handset; common pushbutton panels use `N=1`. | `BT00598-c-EN.pdf` p. 2 |
+| S: older Sprint L2 | 0: two-tone 1200/600 Hz; 1: two-tone 1200/0 Hz; 2: two-tone 1200/2400 Hz; 3: one-tone 1200 Hz. Classe 100/300 use S to associate one of 16 handset-selected preset bells. | `BT00598-c-EN.pdf` p. 2 |
+| S: general call | `S=9` provides the one-family general call. The firmware field S stores only `0..4`; the sources do not explain this mismatch. | `BT00598-c-EN.pdf` p. 2; canonical firmware fields |
+| T: lock timer | 0 (absent): 4 s; 1: 1 s; 2: 2 s; 3: 3 s; 4: while pressed, maximum 10 s; 5: 6 s; 6: 8 s; 7: 10 s. A 346210 actuator configured `MOD=5` is specified for extensions beyond 10 s. | `BT00598-c-EN.pdf` p. 2 |
+| M: tones / backlight | 0: all tones; 1: lock tone off; 2: call tone off; 3: both off. M=`4..7` repeat these tone choices with backlight always on and light sensor disabled. | `BT00598-c-EN.pdf` p. 2 |
+| J1 / J2 | J1 connected: right call-button column only; removed: both columns. Remove J1 and physical configurators for PC configuration. Remove J2 to enable local supply on terminals 1–2. | `BT00598-c-EN.pdf` pp. 2-3 |
+| Status indicators | Green door LED: door open; green communication LED: active communication; green call LED: forwarded call; red call LED: system busy. | `BT00598-c-EN.pdf` p. 1 |
+| PC speaker settings | P=`0..99`; enable/disable lock-release tone and call tone; lock duration `1..10` s or while the release button is pressed; handset-associated ringtone. | `RA00176AC_S_EN.pdf` p. 13; AA p. 13 |
+| PC pushbutton settings | Basic configuration disables keys. Select none, handset call, staircase lights or switchboard call. Point/general handset call; general hides destination. Handset `0..3999`; switchboard 0..15. | `RA00176AC_S_EN.pdf` p. 14; AA p. 14 |
+| PC transfer / update | Powered module, mini-USB/USB connection, automatically detected virtual COM device and prompted drivers. Offline project composition does not establish device connection or installed firmware. | `RA00176AC_S_EN.pdf` pp. 6-9; AA pp. 6-9 |
+
+### Source reconciliation
+
+Section ID: `ownkb:section:d000307:s000042`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`
+
+The exact sheet and exports establish this assembly independently of other Sfera speaker / camera products. Covers, assembled IP protection and impact ratings depend on the selected Sfera New/Robur front plate; a cover rating does not rate the uncovered electronics. Database External unit and pushbutton Objects are conditional configuration roles, not additional physical call keys. AA and AC TiSferaDesign manuals are retained as distinct revisions; the 2026 V4 readme requires 64-bit Windows 10/11 and .NET 4.8, not the older software prerequisite set. The shared shooting-field diagram distinguishes 351200 from 351300; their lens / field values are not interchangeable. FIS installation drawings corroborate the named assembly’s connectors and physical configuration.
+
+The exact restriction table identifies reusable defaults outside a Firmware/Object subset. These are catalogue conflicts; no replacement default is inferred.
+
+#### Source-specific operating boundaries
+
+Section ID: `ownkb:section:d000307:s000043`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `catalogue`, `source`, `specification`
+
+The 2026 English export classification disagrees with the 2017 exact sheet: standby 40 mA versus 15/20 mA with backlight off/on; operating temperature `-15..50` °C versus `-25..70` °C; IK07 versus IK08 for the named Sfera New covers and IK10 for Robur covers. Its AC/DC voltage-type classification does not replace the exact sheet’s dc-only bus supply; both give the nominal range `18..27 V`. The export’s camera classifications are not the source of the technical-sheet lens or shooting-field specification.
+
+No documented production boundary reconciles these attributes. The Addressable=No classification does not override P/N configuration; app capability belongs to a compatible assembled system, not proof that this module is an IP gateway. The export’s adjustable 100° camera classification does not match the exact 351300 wide-angle F2.5/f1.8 mm camera: 135° horizontal and 96° vertical, covering 240 × 115 cm at 50 cm. The 351200 ±10° aiming claim is not transferred to 351300. Both A/V sheets specify 1/3-inch colour sensor, 330 horizontal TV lines, 2:1 interlace, white illumination LEDs and an anti-mist heater. The retained FIS drawings dated 12/19-01 PC warn against strong backlighting; their lens-downward advice applies specifically to 351200.
+
+Firmware 01.02.31 is named for hierarchical switchboard operation in `BT00680-c-EN.pdf` p.1, but is absent from this catalogue snapshot (1.2 builds 25 and 30); compatibility is not extended to those builds by inference. AA and AC software sections 6-14 agree on the reviewed settings. The Virgin `505` label “Internal unit virgin pushbuttons” is reusable catalogue wording on this entrance-panel item; its candidate list does not establish additional installed roles. Staircase-light N1 retains default 0 outside its `100..255` filter. TO_ALL filters retain the complete point/general domain; no selection predicate or conversion establishes precedence. P1=`0..6` and P2=`0..9` are distinct catalogue fields, not an established encoding of the software’s full P=`0..99` domain.
+
+### Evidence limits and open work
+
+Section ID: `ownkb:section:d000307:s000044`
+
+Applicability cues: `firmware`, `revision`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+The production / firmware boundary for current exports, full assembled-panel electrical budget and measured call, lock and diagnostic behavior remain open.
+
+No installed hardware revision or microcontroller fingerprint is retained. Diagnostic candidates and manufacturer operating descriptions are source evidence, not measured responses. Catalogue extraction is complete for this item; further source discovery and runtime corroboration remain partial.
+
+#### Discovered sources outside this review
+
+Section ID: `ownkb:section:d000307:s000045`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+These publisher-linked files were identified but are not used as retained evidence in this dossier. Firmware / installers and declarations remain separate evidence families. A listed URL does not establish payload identity, installed release or tested compatibility.
+
+| Source | Remaining scope | Publisher provenance |
+| --- | --- | --- |
+| `LGRP-01030-V01.01-EN.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/LGRP-01030-V01.01-EN.pdf) |
+| `LGRP-2015-230-V1-EN.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/LGRP-2015-230-V1-EN.pdf) |
+| `Sfera.pdf` | Publisher-linked document not retained; its exact-product content remains unexamined | [Publisher listing](https://assets.legrand.com/pim/DOCUMENT/Sfera.pdf) |
+| `Sfera_2011AV_010235.fwz` | Firmware binary: payload, production / update applicability unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/Sfera_2011AV_010235.fwz) |
+| `TiSferaDesign_040024.exe` | Software installer: payload / installed compatibility unexamined | [Publisher listing](https://assets.legrand.com/pim/AUTRE/TiSferaDesign_040024.exe) |
+
+### Sources
+
+Section ID: `ownkb:section:d000307:s000046`
+
+Applicability cues: `firmware`
+Provenance cues: `catalogue`, `database`, `documentation`, `source`
+
+Complete implementation extraction uses the retained canonical `MHCatalogue.db`, SHA-256 `f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5`. Commercial / system / firmware / build associations, reusable fields and their ranges / defaults, slot/Object/Virgin relationships, every attached filter / condition / conversion, modes, connections, parameters and packages are separately scoped above. Archived documents and publisher provenance are paired in Documentation.
+
+- [Device Database Inventory](../inventory/)
+- [Canonical catalogue source and fingerprint](../../sources/myhome-suite/3.5.38/databases/)
+- [Device Source Index](../../sources/devices/index.md)
+- [Catalogue Resolution](../../internals/catalogue-resolution.md)
+- [Physical Devices](../../device-model/physical-devices.md)
+- [Programming](../../programming/)
+- [Semantic review record, 7 October 2026](../../project/review/device-reviews-0161-0170-2026-10-07.md#own-dev-0168)

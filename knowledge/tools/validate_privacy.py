@@ -24,13 +24,14 @@ GENERATED_SUFFIXES = {".json", ".jsonl", ".yaml", ".yml"}
 GENERATED_NAMES = {"llm-corpus.md"}
 
 OCTET = r"(?:25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})"
-from privacy_detection import CREDENTIAL_LITERAL_PATTERN, CREDENTIAL_TABLE_PATTERN, CREDENTIAL_UNLOCK_PATTERN, CREDENTIAL_FACTORY_PATTERN
+from privacy_detection import CREDENTIAL_LITERAL_PATTERN, CREDENTIAL_TABLE_PATTERN, CREDENTIAL_UNLOCK_PATTERN, CREDENTIAL_FACTORY_PATTERN, CREDENTIAL_QUALIFIED_DEFAULT_PATTERN
 
 PATTERNS = {
     "credential literal": CREDENTIAL_LITERAL_PATTERN,
     "credential table literal": CREDENTIAL_TABLE_PATTERN,
     "credential unlock code": CREDENTIAL_UNLOCK_PATTERN,
     "credential factory literal": CREDENTIAL_FACTORY_PATTERN,
+    "qualified credential default": CREDENTIAL_QUALIFIED_DEFAULT_PATTERN,
     "IPv4 address": re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"),
     "IPv4 protocol payload": re.compile(rf"(?<![0-9#*]){OCTET}(?:\*{OCTET}){{3}}(?![0-9#*])"),
     "IPv6 address": re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"),
@@ -73,6 +74,15 @@ def removed_device_ids() -> set[str]:
         values.update(device_id_values(path.read_text(encoding="utf-8")))
     return values
 
+def artifact_device_id_matches(text: str, suffix: str):
+    if suffix in {".json", ".jsonl"}:
+        # JSON escapes Markdown line breaks. Restore their boundary semantics
+        # without shifting offsets used for diagnostics. Even backslash pairs
+        # encode literal backslashes and must not become paragraph boundaries.
+        text = re.sub(r"(?<!\\)(?:\\\\)*\\n",
+                      lambda match: match.group()[:-2] + "\n ", text)
+    return installed_device_id_matches(text)
+
 def main() -> int:
     violations: list[tuple[Path, int, str]] = []
     try:
@@ -84,7 +94,7 @@ def main() -> int:
     for path in files:
         text = path.read_text(encoding="utf-8")
         relative = path.relative_to(KNOWLEDGE_ROOT.parent)
-        for match in installed_device_id_matches(text):
+        for match in artifact_device_id_matches(text, path.suffix.lower()):
             line_number = text.count("\n", 0, match.start) + 1
             violations.append((relative, line_number, "concrete Device ID"))
         for line_number, line in enumerate(text.splitlines(), 1):

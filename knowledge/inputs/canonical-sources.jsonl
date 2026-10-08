@@ -292,3 +292,16 @@
 {"classification":"publishable","source_id":"ownkb:source:s000839","source_path":"devices/definitions/own-dev-0153-two-channel-10a-universal-actuator.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000840","source_path":"devices/definitions/own-dev-0154-single-channel-10a-lighting-actuator.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000841","source_path":"devices/definitions/own-dev-0155-classe-300x13e-connected-video-internal-unit.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000883","source_path":"devices/definitions/own-dev-0156-hometouch-home-automation-video-entry-display.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000884","source_path":"devices/definitions/own-dev-0157-classe-100x16e-connected-video-internal-unit.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000885","source_path":"devices/definitions/own-dev-0158-easy-kit-connected-video-entry-kit.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000886","source_path":"devices/definitions/own-dev-0159-classe-300eos-connected-video-internal-unit.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000887","source_path":"devices/definitions/own-dev-0160-easy-kit-home-security-connected-internal-unit.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000888","source_path":"devices/definitions/own-dev-0161-light-now-shutter-actuator-control.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000889","source_path":"devices/definitions/own-dev-0162-two-wire-ip-interface.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000890","source_path":"devices/definitions/own-dev-0163-d45-ip-interface.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000891","source_path":"devices/definitions/own-dev-0164-axolute-eight-zone-touch-control.md","source_type":"canonical_documentation"}
+{"classification":"sanitize","source_id":"ownkb:source:s000892","source_path":"devices/definitions/own-dev-0165-two-wire-concierge-switchboard.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000893","source_path":"devices/definitions/own-dev-0166-sfera-audio-speaker-module.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000894","source_path":"devices/definitions/own-dev-0167-sfera-audio-video-module.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000895","source_path":"devices/definitions/own-dev-0168-sfera-wide-angle-audio-video-module.md","source_type":"canonical_documentation"}

@@ -9,6 +9,17 @@ from validate_privacy import PATTERNS
 
 
 class FactoryCredentialPreparation(unittest.TestCase):
+    def test_qualified_default_preserves_numeric_domain(self):
+        text = "| Installer authentication | Numeric `5`-digit password, `0..99999` in software; manufacturer documentation default `12345`; customization recommended. | Manual |"
+        prepared, classes = sanitize_privacy_text(text)
+        self.assertNotIn("12345", prepared)
+        self.assertIn("`0..99999`", prepared)
+        self.assertIn("default `[REDACTED]`", prepared)
+        self.assertIn("customization recommended", prepared)
+        self.assertIn("credential", classes)
+        self.assertTrue(PATTERNS["qualified credential default"].search(text))
+        self.assertFalse(PATTERNS["qualified credential default"].search(prepared))
+
     def test_numeric_table_credentials_keep_qualifications(self):
         for text in [
             "| Default OPEN password | `12345; published factory value` | Manual |",

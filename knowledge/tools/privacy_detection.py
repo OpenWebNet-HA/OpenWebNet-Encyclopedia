@@ -103,12 +103,18 @@ CREDENTIAL_UNLOCK_PATTERN = re.compile(
 # This exact factory credential is named in F455 recovery prose without a
 # repeated label. It is a credential, not an abstract protocol value.
 CREDENTIAL_FACTORY_PATTERN = re.compile(r"(?i)\bbasic_gw\b")
+# A qualified factory/default value can occur later in the password cell.
+# Match the credential context, rather than an unrelated number or domain.
+CREDENTIAL_QUALIFIED_DEFAULT_PATTERN = re.compile(
+    r"(?i)(\b(?:password|passwd)\b[^|\n]{0,160}?\b(?:manufacturer documentation|factory)\s+(?:default|value)\s+`)([A-Za-z0-9_]{4,})(?=`)"
+)
 
 NETWORK_TRANSFORMS = (
     ("credential", CREDENTIAL_LITERAL_PATTERN, r"\1 `[REDACTED]`"),
     ("credential", CREDENTIAL_TABLE_PATTERN, r"\1[REDACTED]"),
     ("credential", CREDENTIAL_UNLOCK_PATTERN, r"\1[REDACTED]"),
     ("credential", CREDENTIAL_FACTORY_PATTERN, "[REDACTED]"),
+    ("credential", CREDENTIAL_QUALIFIED_DEFAULT_PATTERN, r"\1[REDACTED]"),
     ("network_address", re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(rf"(?<![0-9#*]){OCTET}(?:\*{OCTET}){{3}}(?![0-9#*])"), "[NETWORK_ADDRESS]"),
     ("network_address", re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"), "[NETWORK_ADDRESS]"),

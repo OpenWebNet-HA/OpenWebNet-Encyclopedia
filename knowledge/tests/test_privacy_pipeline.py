@@ -27,6 +27,25 @@ def load_prepare_module():
 
 
 class PrivacyPipelineTests(unittest.TestCase):
+    def test_serialized_paragraphs_do_not_join_device_context_to_product_reference(self):
+        from validate_privacy import artifact_device_id_matches
+        prose = "Physically configured associated devices. Catalogue history is limited.\n\nEarlier manual names the captured344842 product classification."
+        self.assertEqual([], artifact_device_id_matches(json.dumps({"text": prose}), ".jsonl"))
+
+    def test_serialized_installed_identifiers_remain_blocked(self):
+        from validate_privacy import artifact_device_id_matches
+        for prose in ["Observed devices:\nA1B2C3D4, B2C3D4E5.",
+                      "Public product context.\n\nInstalled Device ID A1B2C3D4.",
+                      r"Installed Device ID \n A1B2C3D4."]:
+            with self.subTest(prose=prose):
+                self.assertTrue(artifact_device_id_matches(json.dumps({"text": prose}), ".jsonl"))
+
+    def test_serialized_line_break_normalization_preserves_diagnostic_offsets(self):
+        from validate_privacy import artifact_device_id_matches
+        text = json.dumps({"text": "Public prose.\n\nObserved Device A1B2C3D4."})
+        match = artifact_device_id_matches(text, ".jsonl")[0]
+        self.assertEqual("A1B2C3D4", text[match.start:match.end])
+
     @classmethod
     def setUpClass(cls):
         cls.pipeline = load_prepare_module()
