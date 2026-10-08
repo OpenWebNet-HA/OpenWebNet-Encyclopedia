@@ -948,52 +948,52 @@
     {
       "device_id": "OWN-DEV-0190",
       "path": "devices/definitions/own-dev-0190-mh201-hotel-room-scenario-manager.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0191",
       "path": "devices/definitions/own-dev-0191-3485std-burglar-alarm-local-contacts.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0192",
       "path": "devices/definitions/own-dev-0192-687408-colour-touchscreen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0193",
       "path": "devices/definitions/own-dev-0193-arteor-573960-colour-touchscreen.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0194",
       "path": "devices/definitions/own-dev-0194-pabx-288-telephone-switching-system.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0195",
       "path": "devices/definitions/own-dev-0195-arteor-573992-audio-video-web-server.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0196",
       "path": "devices/definitions/own-dev-0196-classe100-x12b-energy-display-video-handset.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0197",
       "path": "devices/definitions/own-dev-0197-ip55-wall-mounted-pir-sensor.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0198",
       "path": "devices/definitions/own-dev-0198-f459-driver-manager.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0199",
       "path": "devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0200",
@@ -1003,32 +1003,32 @@
     {
       "device_id": "OWN-DEV-0201",
       "path": "devices/definitions/own-dev-0201-living-now-k4652m3-three-function-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0202",
       "path": "devices/definitions/own-dev-0202-living-now-k4672m2l-light-actuator-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0203",
       "path": "devices/definitions/own-dev-0203-living-now-k4672m2s-shutter-actuator-control.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0204",
       "path": "devices/definitions/own-dev-0204-3454-temperature-probe-external-wired-sensors.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0205",
       "path": "devices/definitions/own-dev-0205-living-now-k8002l-light-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0206",
       "path": "devices/definitions/own-dev-0206-living-now-k8002s-shutter-actuator.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0207",
@@ -1038,7 +1038,7 @@
     {
       "device_id": "OWN-DEV-0208",
       "path": "devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
-      "state": "pending"
+      "state": "integrated"
     },
     {
       "device_id": "OWN-DEV-0209",
