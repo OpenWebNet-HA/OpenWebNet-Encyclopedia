@@ -29,6 +29,19 @@ Two published address forms are established:
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.
 
+## Gateway compatibility and hardware boundaries
+
+Support for `WHO 25` dry-contact and IR operations follows the general `WHO 25` gateway boundary:
+
+| Gateway model | `WHO 13 MODEL` | `WHO 25` dry contact / IR support | Behavior | Reference |
+| --- | --- | :---: | --- | --- |
+| MH200N (03565) | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
+| MH202 | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
+| F454 | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
+| MH200 (1st gen) | `4` | Unsupported | `NACK` (`*#*0##`) | Legrand WHO 25 v1.0.0, p. 13; empirical bench probe |
+
+The legacy MH200 (Model 4) does not process `WHO 25` dry-contact status requests (`*#25*WHERE##`) or events; all `WHO 25` requests return `NACK` (`*#*0##`).
+
 ## Functional navigation
 
 Dry contacts are indexed separately in [Functional Protocol](../README.md) so readers searching by function can reach this page directly while the canonical reference remains under `WHO 25`.

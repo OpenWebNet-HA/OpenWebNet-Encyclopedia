@@ -832,6 +832,7 @@
       "cen-relationship-1": "ownkb:section:d000060:s000004",
       "dry-contact-and-ir-relationship-1": "ownkb:section:d000060:s000005",
       "function-selection-1": "ownkb:section:d000060:s000003",
+      "gateway-boundaries-1": "ownkb:section:d000060:s000006",
       "reference-1": "ownkb:section:d000060:s000002",
       "who-25-transversal-functions-1": "ownkb:section:d000060:s000001"
     }
@@ -844,6 +845,7 @@
       "cen-configuration-model-1": "ownkb:section:d000061:s000011",
       "end-of-extended-pressure-what-24-1": "ownkb:section:d000061:s000008",
       "extended-pressure-what-23-1": "ownkb:section:d000061:s000007",
+      "gateway-compatibility-and-hardware-boundaries-1": "ownkb:section:d000061:s000014",
       "other-who-25-functions-1": "ownkb:section:d000061:s000013",
       "pushbutton-parameter-1": "ownkb:section:d000061:s000003",
       "relationship-to-cen-1": "ownkb:section:d000061:s000012",
@@ -859,6 +861,7 @@
     "sections": {
       "dry-contact-and-ir-1": "ownkb:section:d000062:s000001",
       "functional-navigation-1": "ownkb:section:d000062:s000004",
+      "gateway-compatibility-and-hardware-boundaries-1": "ownkb:section:d000062:s000005",
       "what-1": "ownkb:section:d000062:s000002",
       "where-1": "ownkb:section:d000062:s000003"
     }

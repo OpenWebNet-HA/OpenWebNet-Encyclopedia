@@ -103,6 +103,20 @@ This is materially different from Basic/Evolved CEN, where `WHO 15` `WHERE` can 
 
 The two systems should be modeled separately even when a physical command device is capable of both modes.
 
+## Gateway compatibility and hardware boundaries
+
+Gateway support for `WHO 25` is not uniform across OpenWebNet gateways:
+
+| Gateway model | `WHO 13 MODEL` | `WHO 25` support | Behavior | Evidence / Reference |
+| --- | --- | :---: | --- | --- |
+| MH200N | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
+| MH202 | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
+| F454 | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
+| MyHomeServer1 | `200` | Supported | `ACK` (`*#*1##`) | Implementation evidence (firmware oracle replay & live capture) |
+| MH200 (1st gen) | `4` | Unsupported | `NACK` (`*#*0##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); controlled test bench experiment (FW 2.1.0) |
+
+The first-generation MH200 (Model 4) explicitly lacks `WHO 25` support in its firmware. Action commands (e.g. `*25*21#1*21##`), state requests (`*#25*21##`), and Scenario Plus commands (`*25*11#0*11##`) sent to an MH200 return an immediate gateway `NACK` (`*#*0##`). Installations employing an MH200 require CEN (`WHO 15`) rather than CEN+ (`WHO 25`).
+
 ## Other `WHO 25` functions
 
 `WHO 25` also carries dry-contact and IR functions using `WHAT 31` and `32`. Those operations use different parameters and `WHERE` grammars and are documented in [Dry Contact and IR](dry-contact-ir.md).

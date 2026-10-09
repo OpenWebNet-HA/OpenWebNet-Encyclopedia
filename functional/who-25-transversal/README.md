@@ -25,3 +25,7 @@ CEN+ complements Basic/Evolved CEN under [`WHO 15`](../who-15-cen/). In CEN+, th
 The dry-contact/IR family uses `WHAT 31` for ON/detection and `WHAT 32` for OFF/no detection. It remains under the canonical `WHO 25` namespace even though its address grammar is unrelated to CEN+ virtual Objects.
 
 The [functional overview](../) provides alternate navigation by function while these pages remain organized under their canonical protocol namespace.
+
+## Gateway boundaries
+
+Gateway support for `WHO 25` is available on MH200N (03565), MH202, F454, and MyHomeServer1. The first-generation MH200 (`MODEL = 4`) does not support `WHO 25`; all `WHO 25` frames sent to an MH200 receive a gateway `NACK` (`*#*0##`).
