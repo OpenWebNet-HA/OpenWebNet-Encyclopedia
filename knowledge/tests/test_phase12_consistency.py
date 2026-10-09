@@ -31,7 +31,7 @@ class Phase12ConsistencyTests(unittest.TestCase):
         report = CONSISTENCY.validate_cross_artifact(ROOT, ROOT, manifest)
         self.assertEqual(135, report["canonical"]["documents"])
         self.assertEqual(7449, report["claims"]["records"])
-        self.assertEqual(1173, report["retrieval"]["chunks"])
+        self.assertEqual(1176, report["retrieval"]["chunks"])
         self.assertEqual(manifest["coverage"]["references"]["records"], report["references"]["records"])
         self.assertEqual(651, report["claims"]["domains"]["protocol"]["claims"])
         self.assertEqual(311, report["claims"]["domains"]["scenario-engine"]["claims"])

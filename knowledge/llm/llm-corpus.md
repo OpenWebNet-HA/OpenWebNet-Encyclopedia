@@ -8102,6 +8102,14 @@ The dry-contact/IR family uses `WHAT 31` for ON/detection and `WHAT 32` for OFF/
 
 The [functional overview](../) provides alternate navigation by function while these pages remain organized under their canonical protocol namespace.
 
+### Gateway boundaries
+
+Section ID: `ownkb:section:d000060:s000006`
+
+Applicability cues: `gateway`
+
+Gateway support for `WHO 25` is available on MH200N (03565), MH202, F454, and MyHomeServer1. The first-generation MH200 (`MODEL = 4`) does not support `WHO 25`; all `WHO 25` frames sent to an MH200 receive a gateway `NACK` (`*#*0##`).
+
 # Document: ownkb:document:d000061
 
 Source path: `functional/who-25-transversal/cen-plus.md`
@@ -8249,6 +8257,25 @@ Provenance cues: `source`
 
 The two systems should be modeled separately even when a physical command device is capable of both modes.
 
+### Gateway compatibility and hardware boundaries
+
+Section ID: `ownkb:section:d000061:s000014`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `capture`, `evidence`, `experiment`
+
+Gateway support for `WHO 25` is not uniform across OpenWebNet gateways:
+
+| Gateway model | `WHO 13 MODEL` | `WHO 25` support | Behavior | Evidence / Reference |
+| --- | --- | --- | --- | --- |
+| MH200N | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
+| MH202 | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
+| F454 | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
+| MyHomeServer1 | `200` | Supported | `ACK` (`*#*1##`) | Implementation evidence (firmware oracle replay & live capture) |
+| MH200 (1st gen) | `4` | Unsupported | `NACK` (`*#*0##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); controlled test bench experiment (FW 2.1.0) |
+
+The first-generation MH200 (Model 4) explicitly lacks `WHO 25` support in its firmware. Action commands (e.g. `*25*21#1*21##`), state requests (`*#25*21##`), and Scenario Plus commands (`*25*11#0*11##`) sent to an MH200 return an immediate gateway `NACK` (`*#*0##`). Installations employing an MH200 require CEN (`WHO 15`) rather than CEN+ (`WHO 25`).
+
 ### Other `WHO 25` functions
 
 Section ID: `ownkb:section:d000061:s000013`
@@ -8297,6 +8324,23 @@ Two published address forms are established:
 | `[1-9][1-9]` | Alarm dry-contact interfaces and IR devices configured using physical `Z` and `N` configurators |
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.
+
+### Gateway compatibility and hardware boundaries
+
+Section ID: `ownkb:section:d000062:s000005`
+
+Applicability cues: `gateway`
+
+Support for `WHO 25` dry-contact and IR operations follows the general `WHO 25` gateway boundary:
+
+| Gateway model | `WHO 13 MODEL` | `WHO 25` dry contact / IR support | Behavior | Reference |
+| --- | --- | --- | --- | --- |
+| MH200N (03565) | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
+| MH202 | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
+| F454 | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
+| MH200 (1st gen) | `4` | Unsupported | `NACK` (`*#*0##`) | Legrand WHO 25 v1.0.0, p. 13; empirical bench probe |
+
+The legacy MH200 (Model 4) does not process `WHO 25` dry-contact status requests (`*#25*WHERE##`) or events; all `WHO 25` requests return `NACK` (`*#*0##`).
 
 ### Functional navigation
 
