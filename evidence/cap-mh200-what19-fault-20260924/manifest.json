@@ -1,0 +1,40 @@
+{
+  "evidence_id": "EVID-MH200-WHAT19-FAULT",
+  "capture_id": "cap-mh200-what19-fault-20260924",
+  "title": "Lighting WHAT 19 Co-occurrence with WHO 1001 Diagnostic Mask on BTicino MH200",
+  "capture_kind": "active_observation",
+  "epistemic_status": "observed",
+  "confidence": "high",
+  "evidence_class": "public_capture",
+  "recorded_at": "2026-09-24T17:02:52Z",
+  "installation_id": "58964012-179b-5120-bfb6-b511ee2bcd0f",
+  "bus_id": "44420761-807c-5d98-a745-f3c794d37f30",
+  "gateway_id": "c9c79529-1399-5c4f-ac30-ec3bc466b291",
+  "environment": {
+    "gateway_model": "MH200",
+    "gateway_firmware": "2.1.0",
+    "bus_topology": "Main SCS bus"
+  },
+  "device_under_test": {
+    "sku": "BTicino Lighting Actuator",
+    "description": "2-channel lighting actuator (WHERE 74)",
+    "configured_where": "74",
+    "pseudonym_device_id": "7115822E"
+  },
+  "summary": "Active observation that querying an actuator in an anomaly state (*#1*74##) elicits *1*19*74## immediately followed by WHO 1001 autodiagnostic bitmask *#1001*74*11*111110111111111111110111## (bits 6 and 21 cleared). Proves that WHAT 19 is an unmapped status code associated with autodiagnostics, not a published ON state.",
+  "test_recipe": [
+    "1. Identify lighting actuator at WHERE 74 in diagnostic anomaly state.",
+    "2. Send status query *#1*74##.",
+    "3. Record immediate reply *1*19*74## (45ms later).",
+    "4. Record co-occurring autodiagnostic frame *#1001*74*11*111110111111111111110111## (82ms later)."
+  ],
+  "claims_supported": [
+    "claim.who1.what.19_unmapped_status",
+    "claim.who1001.dimension.11_diagnostic_mask_cooccurrence"
+  ],
+  "related_documents": [
+    "functional/who-1-lighting/what.md",
+    "diagnostics/address-discovery.md"
+  ],
+  "frame_count": 3
+}

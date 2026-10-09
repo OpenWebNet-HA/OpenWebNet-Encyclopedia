@@ -77,7 +77,8 @@ DIRECT_IMPLEMENTATION_SOURCES = {
 }
 
 
-def validate_claim_context(seed: dict, source_id: str, section: dict | None = None, review: dict | None = None) -> str:
+def validate_claim_context(seed: dict, source_id: str, section: dict | None = None, review: dict | None = None,
+                           source_unit_indexes: dict | None = None) -> str:
     """Fail closed on the context and provenance boundaries repaired in Phase 16."""
     identity, statement = seed["id"], seed["statement"].strip()
     if seed["epistemic_status"] == "inferred" and EPISTEMIC_META.search(statement):
@@ -92,7 +93,7 @@ def validate_claim_context(seed: dict, source_id: str, section: dict | None = No
     else:
         if section is None:
             raise ValueError(f"claim atomicity review lacks source section: {identity}")
-        published_statement = validate_atomicity_review(statement, section, review)
+        published_statement = validate_atomicity_review(statement, section, review, source_unit_indexes)
     if identity in WHO17_IMPLEMENTATION | WHO4_IMPLEMENTATION | ADDRESS_IMPLEMENTATION:
         version = seed["applicability"]["version"]
         if (seed["evidence_class"], source_id, seed["applicability"]["domain"],
@@ -140,6 +141,10 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
                "section_sha256", "evidence_class", "source_id", "evidence_note", "epistemic_status",
                "confidence", "applicability", "cautions", "questions", "claim_links", "value"}
     required = allowed - {"source_id", "evidence_note"}
+    # These caches belong to this immutable IR traversal only. A later render
+    # recomputes them, so source changes still fail their pinned reviews.
+    digests = {}
+    unit_indexes = {}
     for seed in seeds["claims"]:
         if set(seed) - allowed or not required <= set(seed):
             raise ValueError(f"invalid claim seed fields: {seed.get('id', '<unknown>')}")
@@ -147,7 +152,9 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
         if seed["section_id"] not in sections:
             raise ValueError(f"claim section missing: {identity}")
         doc, section = sections[seed["section_id"]]
-        digest = section_digest(section)
+        if section["id"] not in digests:
+            digests[section["id"]] = section_digest(section)
+        digest = digests[section["id"]]
         if digest != seed["section_sha256"]:
             raise ValueError(f"claim source section changed; review and repin {identity}: {doc['path']}")
         subject = refs.get(seed["subject_id"])
@@ -158,10 +165,19 @@ def claim_records(ir: dict, references: dict, seed_path: Path) -> list[dict]:
         source_id = seed.get("source_id", sources[doc["id"]])
         if source_id not in refs or refs[source_id]["kind"] != "source":
             raise ValueError(f"claim public source missing: {identity}")
-        published_statement = validate_claim_context(seed, source_id, section, contexts[identity]["atomicity"])
+        indexes = None
+        if contexts[identity]["atomicity"]["review_status"] == "reviewed-device-pilot":
+            from device_units import source_units
+            if section["id"] not in unit_indexes:
+                unit_indexes[section["id"]] = {u["key"]: u["block_index"] for u in source_units(section)}
+            indexes = unit_indexes[section["id"]]
+        published_statement = validate_claim_context(seed, source_id, section, contexts[identity]["atomicity"], indexes)
+        if contexts[identity]["atomicity"]["review_status"] == "reviewed-device-pilot":
+            if contexts[identity]["atomicity"]["source_unit_key"] != contexts[identity]["evidence"].get("source_unit_key"):
+                raise ValueError("Device atomicity and evidence reviews name different source units")
         if INTERNAL_MARKDOWN_AST_REPR.search(published_statement):
             raise ValueError(f"internal Markdown AST leaked into claim statement: {identity}")
-        validate_evidence_review(seed, section, contexts[identity]["evidence"], source_id, doc["path"])
+        validate_evidence_review(seed, section, contexts[identity]["evidence"], source_id, doc["path"], indexes)
         if seed["evidence_class"] == "canonical_documentation" and source_id != sources[doc["id"]]:
             raise ValueError(f"canonical source does not match section: {identity}")
         for field, kind in (("cautions", "caution"), ("questions", "question")):
@@ -225,7 +241,7 @@ def claim_coverage_metrics(ir: dict, claims: list[dict], coverage_path: Path) ->
     bounded_areas = ("protocol", "functional", "diagnostics", "programming", "device-model",
                      "internals", "reverse-engineering", "scenario-engine")
     target_documents = {area: [document for document in ir["documents"]
-                               if document["path"].startswith(area + "/")]
+                               if document["namespace_context"]["area"] == area]
                         for area in bounded_areas}
     actual_counts = Counter(claim["provenance"][0]["location"]["section_id"] for claim in claims)
     metrics = {"records": len(claims), "bounded_domains": {}}

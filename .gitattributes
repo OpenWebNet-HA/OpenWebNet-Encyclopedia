@@ -4,3 +4,7 @@ sources/myhome-suite/3.5.38/support/OpenQuery.txt -text
 # Machine KB artifacts and fixtures require deterministic LF endings.
 *.jsonl text eol=lf
 knowledge/** text eol=lf
+
+# Large complete Machine KB files; hydrate before reading or building.
+knowledge/claims/claims.jsonl filter=lfs diff=lfs merge=lfs -text
+knowledge/inputs/claim-records.json filter=lfs diff=lfs merge=lfs -text

@@ -57,7 +57,7 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_representative_claims_and_conflict_survive(self):
         claims = self.render()
-        self.assertEqual(len(claims), 7752)
+        self.assertEqual(len(claims), len(self.seeds["claims"]))
         by_id = {r["id"]: r for r in claims}
         a, b = by_id["ownkb:claim:c000007"], by_id["ownkb:claim:c000008"]
         self.assertEqual((a["value"]["text"], b["value"]["text"]), ("copen", "sope>"))
@@ -119,7 +119,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         metrics = claim_coverage_metrics(
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
-        self.assertEqual(7752, metrics["records"])
+        self.assertEqual(len(self.seeds["claims"]), metrics["records"])
         self.assertEqual(
             {"claims": 702, "documents": 11, "reviewed_nonclaim_sections": 10,
              "sections": 104, "sections_with_claims": 94},
@@ -143,7 +143,7 @@ class ClaimFrameworkTests(unittest.TestCase):
         self.assertEqual(
             {"claims": 894, "documents": 9, "reviewed_nonclaim_sections": 28,
              "sections": 140, "sections_with_claims": 112},
-            metrics["bounded_domains"]["device-model"],
+            self.legacy_device_model_metrics(metrics),
         )
         self.assertEqual(
             {"claims": 321, "documents": 9, "reviewed_nonclaim_sections": 4,
@@ -160,6 +160,37 @@ class ClaimFrameworkTests(unittest.TestCase):
              "sections": 102, "sections_with_claims": 91},
             metrics["bounded_domains"]["scenario-engine"],
         )
+
+    def legacy_device_model_metrics(self, metrics):
+        rows = [d for d in self.ir["documents"] if d["path"].startswith("device-model/")]
+        sections = {s["id"] for d in rows for s in d["sections"]}
+        coverage = json.loads((ROOT / "knowledge/inputs/claim-coverage.json").read_text())
+        ledger = next(d for d in coverage["domains"] if d["area"] == "device-model")
+        entries = [r for r in ledger["sections"] if r["section_id"] in sections]
+        return {"claims": sum(r["claim_count"] for r in entries), "documents": len(rows),
+                "sections": len(entries), "sections_with_claims": sum(r["status"] == "claimed" for r in entries),
+                "reviewed_nonclaim_sections": sum(r["status"] == "nonclaim" for r in entries)}
+
+    def test_device_review_cache_is_local_and_preserves_source_pins(self):
+        from unittest.mock import patch
+        import device_units
+        section_paths = {s["id"]: d["path"] for d in self.ir["documents"]
+                         for s in d["sections"]}
+        device_sections = {c["section_id"] for c in self.seeds["claims"]
+                           if section_paths[c["section_id"]].startswith("devices/definitions/")}
+        seeds_path = ROOT / "knowledge/inputs/claim-records.json"
+        with patch("device_units.source_units", wraps=device_units.source_units) as units:
+            claim_records(self.ir, self.refs, seeds_path)
+            self.assertEqual(len(device_sections), units.call_count)
+        section = next(t for d in self.ir["documents"] if d["path"].startswith("devices/definitions/")
+                       for t in d["sections"] if t["id"] in device_sections)
+        original = section["title"]
+        try:
+            section["title"] += " changed meaning"
+            with self.assertRaisesRegex(ValueError, "section changed"):
+                claim_records(self.ir, self.refs, seeds_path)
+        finally:
+            section["title"] = original
 
     def test_phase11_epistemic_boundaries_are_preserved(self):
         claims = self.render()

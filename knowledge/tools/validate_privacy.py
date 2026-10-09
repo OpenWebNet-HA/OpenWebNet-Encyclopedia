@@ -8,7 +8,8 @@ import sys
 from pathlib import Path
 
 from prepare_sources import read_manifest, safe_source_file
-from privacy_detection import device_id_values, installed_device_id_matches
+from large_files import require_kb_hydrated, require_hydrated
+from privacy_detection import device_id_values, installed_device_id_matches, PRIVATE_PATH_PATTERN
 
 KNOWLEDGE_ROOT = Path(__file__).resolve().parents[1]
 ROOT = KNOWLEDGE_ROOT.parent
@@ -24,7 +25,14 @@ GENERATED_SUFFIXES = {".json", ".jsonl", ".yaml", ".yml"}
 GENERATED_NAMES = {"llm-corpus.md"}
 
 OCTET = r"(?:25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})"
+from privacy_detection import CREDENTIAL_LITERAL_PATTERN, CREDENTIAL_TABLE_PATTERN, CREDENTIAL_UNLOCK_PATTERN, CREDENTIAL_FACTORY_PATTERN, CREDENTIAL_QUALIFIED_DEFAULT_PATTERN
+
 PATTERNS = {
+    "credential literal": CREDENTIAL_LITERAL_PATTERN,
+    "credential table literal": CREDENTIAL_TABLE_PATTERN,
+    "credential unlock code": CREDENTIAL_UNLOCK_PATTERN,
+    "credential factory literal": CREDENTIAL_FACTORY_PATTERN,
+    "qualified credential default": CREDENTIAL_QUALIFIED_DEFAULT_PATTERN,
     "IPv4 address": re.compile(rf"(?<![0-9]){OCTET}(?:\.{OCTET}){{3}}(?![0-9])"),
     "IPv4 protocol payload": re.compile(rf"(?<![0-9#*]){OCTET}(?:\*{OCTET}){{3}}(?![0-9#*])"),
     "IPv6 address": re.compile(r"(?i)(?<![0-9a-f:])(?:[0-9a-f]{1,4}:){2,7}[0-9a-f]{0,4}(?![0-9a-f:])"),
@@ -32,7 +40,7 @@ PATTERNS = {
     "email address": re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"),
     "UUID": re.compile(r"(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b"),
     "credential assignment": re.compile(r"(?i)\b(?:password|passwd|secret|api[ _-]?key|access[ _-]?token|cookie)\b\s*[:=]\s*(?![\"']?\[REDACTED\](?=[^A-Za-z0-9_]|$))[\"']?[^\s\"'<>]{4,}"),
-    "private filesystem path": re.compile(r"(?i)(?:/home/[^/\s]+|/users/[^/\s]+|[a-z]:\\users\\[^\\\s]+)"),
+    "private filesystem path": PRIVATE_PATH_PATTERN,
 }
 
 def generated_files() -> list[Path]:
@@ -67,10 +75,22 @@ def removed_device_ids() -> set[str]:
         values.update(device_id_values(path.read_text(encoding="utf-8")))
     return values
 
+def artifact_device_id_matches(text: str, suffix: str):
+    if suffix in {".json", ".jsonl"}:
+        # JSON escapes Markdown line breaks. Restore their boundary semantics
+        # without shifting offsets used for diagnostics. Even backslash pairs
+        # encode literal backslashes and must not become paragraph boundaries.
+        text = re.sub(r"(?<!\\)(?:\\\\)*\\n",
+                      lambda match: match.group()[:-2] + "\n ", text)
+    return installed_device_id_matches(text)
+
 def main() -> int:
     violations: list[tuple[Path, int, str]] = []
     try:
+        require_kb_hydrated(KNOWLEDGE_ROOT.parent)
         files = generated_files()
+        for path in files:
+            require_hydrated(path)
         source_values = removed_device_ids()
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(f"privacy validation failed: {error}", file=sys.stderr)
@@ -78,7 +98,7 @@ def main() -> int:
     for path in files:
         text = path.read_text(encoding="utf-8")
         relative = path.relative_to(KNOWLEDGE_ROOT.parent)
-        for match in installed_device_id_matches(text):
+        for match in artifact_device_id_matches(text, path.suffix.lower()):
             line_number = text.count("\n", 0, match.start) + 1
             violations.append((relative, line_number, "concrete Device ID"))
         for line_number, line in enumerate(text.splitlines(), 1):

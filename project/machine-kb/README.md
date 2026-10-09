@@ -2,7 +2,11 @@
 
 This directory is the durable operating record for the [Machine-Readable Knowledge Base](../../knowledge/). Read this page and the [roadmap](roadmap.md) at the start of a new implementation or release session, then inspect the current branch and affected files. The human-readable Encyclopedia remains authoritative; knowledge/ is its public machine projection.
 
-**Current state (2026-09-30): OpenWebNet Machine KB 0.1.1 is published under tag `machine-kb-v0.1.1` at validated release commit `40db576cae95fa3483121bab3bfdb68ea5e3c706`.** It is a compatible corrective patch over the 0.1.0 baseline: the released table-context claim rendering defect is repaired, schema vocabulary documentation is aligned, generated-text hygiene is fail-closed, and the formal public name is standardized without changing the 0.1.0 schema/artifact compatibility contract or stable-ID inventory.
+**Current status (2026-10-09):** all 210 accepted Device definitions and their Machine KB integrations are merged through [PR #48](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/48) and published in [OpenWebNet Machine KB 0.2.0](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/releases/tag/machine-kb-v0.2.0), tag `machine-kb-v0.2.0`, validated revision `447e4c731f44c1e753efb33f245be5444f15912c`. The dataset contains 73,915 claims and 7,929 chunks across 345 canonical documents. Independent Phase 15 assessment and all exact-release mechanical gates passed.
+
+**Published release:** [OpenWebNet Machine KB 0.2.0](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/releases/tag/machine-kb-v0.2.0) includes a hydrated offline bundle and `SHA256SUMS`. The [release notes](release-notes.md) and [audited statistics](release-statistics-0.2.0.json) describe its coverage of 541 catalogue commercial records and scoped inspection of 734 distinct PDFs. Release 0.1.2 remains the retained historical comparison baseline; earlier 0.1.0/0.1.1 tags and releases were withdrawn during archive/history cleanup. Historical certification records retain their exact-revision scope. The 0.1.0 schema/artifact contract and prior stable identities remain unchanged.
+
+**Working integration branch:** `docs/myopencommunity-integration` combines that published device work with the [MyOpenCommunity provenance audit](../review/myopencommunity-kb-provenance-audit.md). Its regenerated candidate contains 74,218 claims and 7,996 chunks across 346 canonical documents, with the 2.0.0 [provenance compatibility candidate](provenance-v2-migration.md). The [branch synchronization review](../review/myopencommunity-main-sync-2026-10-09.md) records revision-scoped ID reconciliation. These working artifacts are not the immutable 0.2.0 release.
 
 | File | Use |
 | --- | --- |
@@ -13,9 +17,9 @@ This directory is the durable operating record for the [Machine-Readable Knowled
 | [Decisions](decisions.md) | Durable implementation and policy decisions |
 | [Maintenance](maintenance.md) | Change and review workflow |
 | [Release Gates and Consumer Contract Status](release.md) | Verified final release checklist and authorization boundary |
-| [OpenWebNet Machine KB 0.1.1 Release Notes](release-notes.md) | Patch-release changes, compatibility, validation, privacy, consumer use, and licensing |
+| [OpenWebNet Machine KB 0.2.0 Release Notes](release-notes.md) | Coverage, changes, compatibility, validation, privacy, consumer use, and licensing |
 | [Review Ledger](review-ledger.md) | Findings, gaps, certification state, and final release-readiness disposition |
 
-The [Encyclopedia Core Values](../encyclopedia-core-values.md) govern evidence and epistemic discipline. The [Encyclopedia Style Guide](../encyclopedia-style-guide.md) governs human prose; machine schemas and serialization are separate. The privacy policy is a mandatory publication rule. These project-control pages describe the prepared 0.1.0 release revision. They do not themselves create the Git tag, GitHub Release, or external publication.
+The [Encyclopedia Core Values](../encyclopedia-core-values.md) govern evidence and epistemic discipline. The [Encyclopedia Style Guide](../encyclopedia-style-guide.md) governs human prose; machine schemas and serialization are separate. The privacy policy is a mandatory publication rule. Historical phase and release records retain their original candidate boundaries. Current candidate status is recorded above; these pages do not themselves authorize a merge, Git tag or GitHub Release.
 
-**Next:** after exact-commit validation, explicit authorization may create `machine-kb-v0.1.0` on that unchanged revision and publish the matching GitHub Release.
+**Next:** maintain the released evidence and consumer contract as new evidence arrives. The Device description and KB ingestion queues are complete. The working provenance compatibility candidate requires its own release review before publication.

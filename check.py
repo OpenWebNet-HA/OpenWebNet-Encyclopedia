@@ -175,13 +175,24 @@ def compare_outputs(first: Path, second: Path, manifest: dict) -> None:
 
 
 def main() -> int:
+    from large_files import require_kb_hydrated
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--catalogue-status-file", type=Path,
+                        help="CI setup's authenticated GitHub status proof instead of redistributing the private catalogue")
+    parser.add_argument("--catalogue-commit", help="Exact candidate commit checked by the private catalogue validator")
     args = parser.parse_args()
     if args.root.resolve() != ROOT:
         print("Machine KB check failed: this check must run from its repository root", file=sys.stderr)
         return 1
     try:
+        if bool(args.catalogue_status_file) != bool(args.catalogue_commit):
+            raise ValueError("Catalogue status file and candidate commit must be supplied together")
+        if args.catalogue_status_file:
+            sys.path.insert(0, str(ROOT / "devices/tools"))
+            from catalogue_ci_status import validate_proof
+            validate_proof(json.loads(args.catalogue_status_file.read_text()), args.catalogue_commit, ROOT)
+        require_kb_hydrated(ROOT)
         with tempfile.TemporaryDirectory(prefix="ownkb-check-") as temporary:
             base = Path(temporary)
             first, second = base / "first", base / "second"
@@ -201,7 +212,16 @@ def main() -> int:
                                  text=True, capture_output=True, check=False)
         if privacy.returncode:
             raise ValueError(privacy.stderr.strip() or "privacy validation failed")
-        print("Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, text hygiene, and privacy gates")
+        if args.catalogue_status_file:
+            validate_proof(json.loads(args.catalogue_status_file.read_text()), args.catalogue_commit, ROOT)
+            print("Device catalogue gate verified through authenticated exact-commit maintainer status; no private database is provisioned in CI")
+        else:
+            devices = subprocess.run(
+                [sys.executable, str(ROOT / "devices/tools/check-device-definitions.py")],
+                cwd=ROOT, text=True, capture_output=True, check=False)
+            if devices.returncode:
+                raise ValueError(devices.stderr.strip() or "Device definition completeness check failed")
+        print("Machine KB check passed: deterministic artifacts, manifest, schemas, cross-artifact consistency, references, text hygiene, privacy gates, and Device definition completeness")
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(f"Machine KB check failed: {error}", file=sys.stderr)
         return 1

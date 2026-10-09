@@ -3,18 +3,25 @@ on:
   pull_request:
     branches: [main, machine-knowledge-base]
   push:
-    branches: [main, machine-knowledge-base]
+    branches: [main, machine-knowledge-base, docs/devices-foundation]
   workflow_dispatch:
 permissions:
   contents: read
+  statuses: read
 jobs:
   machine-kb:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: {lfs: true}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: python -m pip install --disable-pip-version-check -r knowledge/tools/requirements-schema.txt
+      - name: Require exact-commit private catalogue validation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CATALOGUE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python devices/tools/catalogue_ci_status.py verify --commit "$CATALOGUE_COMMIT" --output "${{ runner.temp }}/catalogue-status.json"
       - name: Unit tests
         run: python -m unittest discover -s knowledge/tests -v
       - name: Schema validation
@@ -23,5 +30,9 @@ jobs:
         run: |
           python build.py
           git diff --exit-code -- knowledge
+      - name: Public catalogue-status transport regressions
+        run: python -m unittest discover -s devices/tools/tests -p test_ci_catalogue.py -v
       - name: Deterministic integrity, claims, and privacy
-        run: python check.py
+        env:
+          CATALOGUE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python check.py --catalogue-status-file "${{ runner.temp }}/catalogue-status.json" --catalogue-commit "$CATALOGUE_COMMIT"

@@ -1,8 +1,8 @@
 # OpenWebNet Machine KB Consumer Contract
 
-**Working contract:** Schema compatibility 2.0.0 adds structured original evidence and examination methods. See [Migration notes](provenance-v2-migration.md); no 2.0.0 release tag is created by this work.
+**Working contract:** This integration branch retains the 2.0.0 compatibility candidate for original evidence and examination methods. See [Provenance migration](provenance-v2-migration.md) and [Branch synchronization](../review/myopencommunity-main-sync-2026-10-09.md). No new release tag is created.
 
-**Release status:** OpenWebNet Machine KB 0.1.1 is published under `machine-kb-v0.1.1`. The 0.1.0 release remains the compatibility baseline; 0.1.1 keeps the same concrete 0.1.0 schema and artifact contract while correcting generated claim text and supporting documentation. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
+**Release status:** [OpenWebNet Machine KB 0.2.0](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/releases/tag/machine-kb-v0.2.0) publishes the accepted Device inventory while preserving the 0.1.0 schema and artifact contract. Release 0.1.2 is the retained historical comparison baseline. Earlier 0.1.0/0.1.1 tags and releases were withdrawn during archive/history cleanup. The human-readable Encyclopedia remains authoritative. The dataset is transport-neutral and can be consumed offline without a model, server, MCP, FastMCP, or a particular programming language.
 
 ## Publication surface
 

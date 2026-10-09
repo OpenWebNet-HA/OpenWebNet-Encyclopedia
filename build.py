@@ -20,6 +20,7 @@ from evidence_reviews import load_reviews, join_claim_evidence
 from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
 from validate_schema import validate_record, validate_registry  # noqa: E402
 from validate_text_hygiene import validate_generated_text  # noqa: E402
+from device_units import validate_device_units  # noqa: E402
 
 GENERATOR_VERSION = "ownkb-build-0.9.0"
 SCHEMA_COMPATIBILITY_VERSION = "2.0.0"
@@ -109,6 +110,7 @@ def build(root: Path, output_root: Path) -> Path:
     for claim in claims:
         if claim["id"] in reviews["claims"]:
             validate_record(claim)
+    validate_device_units(ir, claims, root / "knowledge/inputs/device-unit-review.json")
     claim_metrics = claim_coverage_metrics(ir, claims, root / "knowledge/inputs/claim-coverage.json")
     namespace_ids = {}
     for document in ir["documents"]:

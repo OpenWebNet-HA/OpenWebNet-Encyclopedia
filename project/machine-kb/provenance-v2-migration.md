@@ -1,6 +1,6 @@
 # Structured Provenance Migration
 
-The working branch moves schema compatibility to **2.0.0** with generator `ownkb-build-0.9.0`. This is a compatibility candidate, not a new published release. Immutable `machine-kb-v0.1.0` and `machine-kb-v0.1.1` remain available. Adding fields to closed public objects is breaking under the [schema-versioning policy](schema-versioning.md), even when older records omit them.
+The working branch moves schema compatibility to **2.0.0** with generator `ownkb-build-0.9.0`. This is a compatibility candidate, not a new published release. Published `machine-kb-v0.2.0` and the retained `machine-kb-v0.1.2` baseline keep their 0.1.0 parsing contract; earlier 0.1.0/0.1.1 releases were withdrawn during archive/history cleanup. Adding fields to closed public objects is breaking under the [schema-versioning policy](schema-versioning.md), even when older records omit them.
 
 ## Artifact versions
 
@@ -12,7 +12,7 @@ The working branch moves schema compatibility to **2.0.0** with generator `ownkb
 | ID lifecycle registry format | 0.1.0; schema dependency now resolves common types at 2.0.0 |
 | Privacy/prepared-source/source-manifest input schemas | Unchanged |
 
-No retained claim or reference ID is renumbered. Corrected claims keep their IDs; new IDs are allocated above the complete lifecycle registry, including retired IDs. Evidence finding IDs are stable review-ledger keys: append new keys, never regenerate them from section order or reuse withdrawn keys.
+Shared baseline and published main IDs are retained. Colliding unreleased integration IDs are resolved through the [revision-scoped branch migration](../review/myopencommunity-main-sync-2026-10-09.md); they cannot be global aliases because main assigned those spellings to different records. The working retrieval schema accepts both `ownkb:chunk:rNNNNNN` and the reconciled `ownkb:chunk:moc-rNNNNNN` form. This is part of the unreleased 2.0.0 candidate. Corrected claims keep their IDs; new IDs are allocated above the complete lifecycle registry, including retired IDs. Evidence finding IDs are stable review-ledger keys: append new keys, never regenerate them from section order or reuse withdrawn keys.
 
 ## Original evidence and explanation
 

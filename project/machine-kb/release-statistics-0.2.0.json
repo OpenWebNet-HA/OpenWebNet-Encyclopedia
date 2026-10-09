@@ -1,0 +1,40 @@
+{
+  "content_revision": "29a07b4934fd4fb5da3e5b04d841bc698bfc6c6f",
+  "comparison_tag": "machine-kb-v0.1.2",
+  "technical_device_definitions": 210,
+  "catalogue_commercial_records": 541,
+  "commercial_lookup_rows": 602,
+  "distinct_brand_line_reference_pairs": 601,
+  "catalogue_brand_labels": 4,
+  "catalogue_product_line_labels": 18,
+  "indexed_pdf_originals": 733,
+  "indexed_html_originals": 30,
+  "scoped_pdf_inspections_including_rejected_source": 734,
+  "new_review_pdf_originals": 80,
+  "new_review_html_originals": 3,
+  "new_registered_pdf_originals_since_0_1_2": 632,
+  "claims": 73915,
+  "device_derived_claims_added": 66466,
+  "canonical_documents": 345,
+  "retrieval_chunks": 7929,
+  "reference_records": 37678,
+  "live_stable_ids": 127796,
+  "prepared_device_source_units": 57493,
+  "claimed_device_source_units": 54702,
+  "nonclaim_device_source_units": 2791,
+  "method": {
+    "commercial_lookup": "Exact displayed brand/line and reference cells; the 572736 source conflict intentionally has two mappings. Printed-spacing aliases within a cell do not add another pair.",
+    "pdf_count": "Distinct registered SHA-256 fingerprints, classified by original media type, from the Device source index plus ST-00001842-EN examined and rejected for mismatched product scope in review 0111-0120. Applicable product sections were examined; this does not assert all pages of every multi-product document were read. HTML is separate despite archive URL suffixes.",
+    "new_review_originals": "Artifact-manifest SHA-256 set difference from 3014ce82e48429ad39ec486d3d9f341e47fa278a^, immediately before the first review archive addition, to the merged data revision.",
+    "new_release_originals": "Artifact-manifest SHA-256 set difference from machine-kb-v0.1.2 to the merged data revision; this includes description creation and reviews, not KB ingestion downloads."
+  },
+  "sources": [
+    "devices/index.md",
+    "devices/inventory/README.md",
+    "sources/devices/index.md",
+    "sources/artifact-manifest.yaml",
+    "project/review/device-reviews-0111-0120-2026-10-06.md",
+    "project/review/device-reviews-0151-0160-2026-10-07.md",
+    "knowledge/manifest.json"
+  ]
+}

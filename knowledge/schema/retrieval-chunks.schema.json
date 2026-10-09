@@ -30,7 +30,7 @@
     },
     "id": {
       "type": "string",
-      "pattern": "^ownkb:chunk:r[0-9]{6}$"
+      "pattern": "^ownkb:chunk:(?:moc-)?r[0-9]{6}$"
     },
     "kind": {
       "const": "retrieval_chunk"

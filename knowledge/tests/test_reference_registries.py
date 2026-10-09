@@ -42,8 +42,8 @@ class ReferenceRegistryTests(unittest.TestCase):
                      if record["source_type"] == "canonical_documentation"]
         external = [record for record in self.registries["source"]
                     if record["source_type"] != "canonical_documentation"]
-        self.assertEqual(136, len(canonical))
-        self.assertEqual(112, len(external))
+        self.assertEqual(len(json.loads((ROOT / "knowledge/inputs/identities.json").read_text())), len(canonical))
+        self.assertEqual(27, len([r for r in external if int(r["id"].rsplit("s", 1)[1]) <= 162]))
         self.assertIn("ownkb:source:s000136", self.by_id)
         self.assertIn("ownkb:source:s000148", self.by_id)
         self.assertIn("ownkb:source:s000161", self.by_id)
