@@ -1,10 +1,10 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** OpenWebNet Machine KB 0.1.2 is the retained published clean-history baseline. Earlier 0.1.0/0.1.1 tags and releases were withdrawn during archive/history cleanup; the dated sections below preserve their historical validation and publication evidence. Their 0.1.0 schema/artifact compatibility baseline remains unchanged.
+**Status:** [OpenWebNet Machine KB 0.2.0](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/releases/tag/machine-kb-v0.2.0) is published at validated revision `447e4c731f44c1e753efb33f245be5444f15912c`. Release 0.1.2 is the retained historical comparison baseline. Earlier 0.1.0/0.1.1 tags and releases were withdrawn during archive/history cleanup; the dated sections below preserve their historical validation and publication evidence. The 0.1.0 schema/artifact compatibility baseline remains unchanged.
 
 ## Device expansion release boundary - 2026-10-09
 
-The 210-Device expansion is merged at `29a07b4934fd4fb5da3e5b04d841bc698bfc6c6f` through PR #48. Independent Phase 15 assessment and all exact-candidate PR checks passed. The user authorized preparation of content release 0.2.0 with tag `machine-kb-v0.2.0`; publication remains subject to the exact-release gates. [Release notes](release-notes.md) and [statistics](release-statistics-0.2.0.json) record the scope. Post-merge/release checks must complete before tagging; no intervening data commit may be inserted after final validation. Historical checklist entries below apply only to their named revisions.
+The 210-Device expansion was merged at `29a07b4934fd4fb5da3e5b04d841bc698bfc6c6f` through PR #48 and published on 2026-10-09 as [OpenWebNet Machine KB 0.2.0](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/releases/tag/machine-kb-v0.2.0), tag `machine-kb-v0.2.0`, at exact validated revision `447e4c731f44c1e753efb33f245be5444f15912c`. Independent Phase 15 assessment applies to that candidate; exact-commit catalogue validation, hosted KB validation and Encyclopedia compliance passed. The hydrated offline bundle contains all 19 manifest artifacts, verified hashes and consumer guidance. Its SHA-256 is `32398d8f45260bb1989f6826a09f2ece49b10c9d6f33241756266c9eea10f5ad` (11,869,244 bytes, 29 files); `SHA256SUMS` is a separate release asset. [Release notes](release-notes.md) and [statistics](release-statistics-0.2.0.json) record coverage and evidence limits. Historical checklist entries below apply only to their named revisions.
 
 ## Intended consumer contract
 

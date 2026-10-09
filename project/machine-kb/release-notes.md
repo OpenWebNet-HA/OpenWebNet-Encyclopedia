@@ -36,7 +36,7 @@ Inspection was scoped to the applicable product material. The figures do not cla
 
 ## More knowledge, the same consumer contract
 
-| Public content | 0.1.2 | 0.2.0 candidate |
+| Public content | 0.1.2 | 0.2.0 |
 | --- | ---: | ---: |
 | Canonical documents | 135 | 345 |
 | Atomic claims | 7,449 | 73,915 |
@@ -48,7 +48,7 @@ The Device integration adds **66,466 claims**. All 57,493 prepared Device source
 
 Existing consumers keep the **0.1.0 schema, manifest and artifact-format contract**. No consumer schema migration is required. All 7,449 earlier generated claims, 1,173 earlier retrieval chunks and 11,353 earlier lifecycle entries remain unchanged; existing reference identities remain resolvable. Generator version remains `ownkb-build-0.8.2`.
 
-For offline use, the prepared release bundle contains the full data files, public schemas, manifest, ID registry and consumer guidance. GitHub's generated source archives may contain Git LFS pointers; consumers need hydrated files or the hydrated bundle. See [Consuming the Machine KB](../../knowledge/CONSUMING.md) for direct context, retrieval and claim-based integration.
+For offline use, the published release bundle contains the full data files, public schemas, manifest, ID registry and consumer guidance. GitHub's generated source archives may contain Git LFS pointers; consumers need hydrated files or the hydrated bundle. See [Consuming the Machine KB](../../knowledge/CONSUMING.md) for direct context, retrieval and claim-based integration.
 
 ## Reviewed, with uncertainty preserved
 
@@ -77,6 +77,6 @@ PDF counts use distinct archival SHA-256 fingerprints, so shared manuals are cou
 
 ## Release and licensing
 
-The intended release is **OpenWebNet Machine KB 0.2.0**, tag `machine-kb-v0.2.0`. The accepted dataset was merged through [PR #48](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/48) at `29a07b4934fd4fb5da3e5b04d841bc698bfc6c6f`. Preparation is complete; tag creation and publication await explicit authorization and the remaining exact-revision gates, including catalogue validation and bundle hashes. No intervening data change may be inserted after final validation.
+[OpenWebNet Machine KB 0.2.0](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/releases/tag/machine-kb-v0.2.0), tag `machine-kb-v0.2.0`, was published on 2026-10-09 at validated revision `447e4c731f44c1e753efb33f245be5444f15912c`. The accepted dataset was merged through [PR #48](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/48) at `29a07b4934fd4fb5da3e5b04d841bc698bfc6c6f`. Exact-release catalogue validation, hosted KB validation and Encyclopedia compliance passed before tagging. The hydrated offline bundle and `SHA256SUMS` are attached to the release; bundle SHA-256 is `32398d8f45260bb1989f6826a09f2ece49b10c9d6f33241756266c9eea10f5ad`.
 
 The retained comparison baseline is 0.1.2. Earlier 0.1.0/0.1.1 tags and releases were withdrawn during archive/history cleanup. Repository-authored content remains under Apache License 2.0; manufacturer originals and third-party material retain their own rights and provenance. The public bundle excludes the private catalogue database, manufacturer originals, Firmware/software payloads, credentials and installation-specific identifiers.

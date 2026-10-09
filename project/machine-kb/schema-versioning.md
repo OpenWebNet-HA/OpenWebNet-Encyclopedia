@@ -1,6 +1,6 @@
 # Schema, Format, and Release Versioning
 
-**Status:** Active policy. OpenWebNet Machine KB 0.1.2 is the retained release baseline; authorized content release 0.2.0 keeps the same 0.1.0 schema and artifact formats. Earlier 0.1.0/0.1.1 tags were withdrawn during archive/history cleanup. Content-release labels and parsing-contract versions remain separate.
+**Status:** Active policy. Published [OpenWebNet Machine KB 0.2.0](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/releases/tag/machine-kb-v0.2.0) keeps the 0.1.0 schema and artifact formats; 0.1.2 remains the retained historical comparison baseline. Earlier 0.1.0/0.1.1 tags were withdrawn during archive/history cleanup. Content-release labels and parsing-contract versions remain separate.
 
 Use `MAJOR.MINOR.PATCH` for the shared public contract and independently for each artifact format listed in the manifest. Git tags identify immutable content snapshots. The manifest declares the schema compatibility version, format version for each artifact, generator version, input-content digest, and exact artifact hashes.
 
