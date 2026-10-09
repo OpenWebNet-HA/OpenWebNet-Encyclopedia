@@ -1,6 +1,6 @@
 # Machine KB Roadmap and Completion State
 
-Snapshot: 2026-09-30. OpenWebNet Machine KB 0.1.1 is published under `machine-kb-v0.1.1`; the 0.1.0 compatibility contract remains unchanged. A phase is complete only after its acceptance work and checks pass and its state is recorded here. Historical phase notes are retained as implementation history.
+Snapshot: 2026-10-09. All 210 Device integrations are merged through PR #48. Content release 0.2.0 is authorized and being prepared; 0.1.2 is the retained published baseline following archive/history cleanup. The 0.1.0 compatibility contract remains unchanged. A phase is complete only after its acceptance work and checks pass and its state is recorded here. Historical phase notes are retained as implementation history.
 
 | Phase | Scope / completion gate | State |
 | --- | --- | --- |
@@ -149,7 +149,7 @@ On 2026-09-26, candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50` passed an in
 
 ## Next session
 
-OpenWebNet Machine KB 0.1.1 is published and the 0.1.0 claim-rendering issue is closed. Preserve `machine-kb-v0.1.1` as the immutable corrective snapshot while normal Encyclopedia and Machine KB maintenance continues. The completionist Device Library work can be incorporated into a later release once it reaches its intended coverage milestone.
+Complete the authorized 0.2.0 release: finish exact-revision validation, verify the hydrated distribution bundle and hashes, tag the validated commit and publish the release. The 210 Device definitions and their Machine KB integrations are merged and complete. Preserve 0.1.2 as the retained historical comparison baseline and the 0.1.0 parsing contract. The dated sections below retain their original validation scope.
 
 Do not introduce another commit between final validation and tag creation.
 

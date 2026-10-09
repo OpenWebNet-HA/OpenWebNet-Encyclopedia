@@ -1,10 +1,10 @@
 # Release Gates and Consumer Contract Status
 
-**Status:** OpenWebNet Machine KB 0.1.1 is published under `machine-kb-v0.1.1` at validated release commit `40db576cae95fa3483121bab3bfdb68ea5e3c706`. It repairs the 1,120 released 0.1.0 claim statements affected by table-context parser leakage, aligns schema vocabulary documentation, adds fail-closed generated-text hygiene validation, and standardizes the formal public name. Schema compatibility and artifact format versions remain 0.1.0, and the 11,353-ID compatibility baseline is unchanged.
+**Status:** OpenWebNet Machine KB 0.1.2 is the retained published clean-history baseline. Earlier 0.1.0/0.1.1 tags and releases were withdrawn during archive/history cleanup; the dated sections below preserve their historical validation and publication evidence. Their 0.1.0 schema/artifact compatibility baseline remains unchanged.
 
 ## Device expansion release boundary - 2026-10-09
 
-The 210-Device expansion is a merge candidate, not a new tagged release. Its migration and mechanical checks do not extend the independent certification of the historical baseline. The [merge preparation review](merge-preparation-2026-10-09.md) records current candidate gates. The pilot requires independent Phase 15 semantic certification before merge, tagging or release. Exact-revision validation and separate tag/release authorization also remain required; the historical checklists below apply only to their named revisions.
+The 210-Device expansion is merged at `29a07b4934fd4fb5da3e5b04d841bc698bfc6c6f` through PR #48. Independent Phase 15 assessment and all exact-candidate PR checks passed. The user authorized preparation of content release 0.2.0 with tag `machine-kb-v0.2.0`; publication remains subject to the exact-release gates. [Release notes](release-notes.md) and [statistics](release-statistics-0.2.0.json) record the scope. Post-merge/release checks must complete before tagging; no intervening data commit may be inserted after final validation. Historical checklist entries below apply only to their named revisions.
 
 ## Intended consumer contract
 
@@ -39,7 +39,7 @@ Schema compatibility versions are separate from content revisions recorded by Gi
 
 ## Distribution readiness
 
-Repository-authored content is covered by the repository's Apache License 2.0; source materials under sources/ and vendored third-party materials retain the rights and licensing terms of their publishers and authors. The [Machine KB 0.1.0 release notes](release-notes.md) record this boundary, actual manifest versions, compatibility baseline, certified-candidate relationship, and consumer requirements.
+Repository-authored content is covered by the repository's Apache License 2.0; source materials under sources/ and vendored third-party materials retain the rights and licensing terms of their publishers and authors. The [historical Machine KB 0.1.1 release notes](release-notes-0.1.1.md) record this boundary, actual manifest versions, compatibility baseline, certified-candidate relationship, and consumer requirements.
 
 The static [golden JSONL serialization vector](../../knowledge/schema/fixtures/valid/golden.jsonl) is documented in the [schema and controlled-vocabulary guide](../../knowledge/schema/README.md) and validated by the schema test suite. It is usable as data without MCP, FastMCP, an LLM, Python, or network access. Python tooling described in contributor documentation is optional validation/build machinery, not a consumer requirement.
 
