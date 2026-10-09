@@ -20,4 +20,4 @@ This directory is the durable operating record for the [Machine-Readable Knowled
 
 The [Encyclopedia Core Values](../encyclopedia-core-values.md) govern evidence and epistemic discipline. The [Encyclopedia Style Guide](../encyclopedia-style-guide.md) governs human prose; machine schemas and serialization are separate. The privacy policy is a mandatory publication rule. Historical phase and release records retain their original candidate boundaries. Current candidate status is recorded above; these pages do not themselves authorize a merge, Git tag or GitHub Release.
 
-**Next:** complete the exact-candidate merge gates, then review the merge pull request. Tagging and release of the expanded KB require separate authorization and independent semantic certification.
+**Next:** complete the exact-candidate merge gates, then review the merge pull request. Independent Phase 15 semantic certification remains required before merge, tagging or release under the pilot gate. Tagging and release also require separate authorization.

@@ -4,7 +4,7 @@
 
 ## Device expansion release boundary - 2026-10-09
 
-The 210-Device expansion is a merge candidate, not a new tagged release. Its migration and mechanical checks do not extend the independent certification of the historical baseline. The [merge preparation review](merge-preparation-2026-10-09.md) records current candidate gates. A later release requires independent semantic certification, exact-revision validation and separate tag/release authorization; the historical checklists below apply only to their named revisions.
+The 210-Device expansion is a merge candidate, not a new tagged release. Its migration and mechanical checks do not extend the independent certification of the historical baseline. The [merge preparation review](merge-preparation-2026-10-09.md) records current candidate gates. The pilot requires independent Phase 15 semantic certification before merge, tagging or release. Exact-revision validation and separate tag/release authorization also remain required; the historical checklists below apply only to their named revisions.
 
 ## Intended consumer contract
 
