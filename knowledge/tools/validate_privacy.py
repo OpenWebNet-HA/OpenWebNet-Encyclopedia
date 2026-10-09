@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from prepare_sources import read_manifest, safe_source_file
+from large_files import require_kb_hydrated, require_hydrated
 from privacy_detection import device_id_values, installed_device_id_matches, PRIVATE_PATH_PATTERN
 
 KNOWLEDGE_ROOT = Path(__file__).resolve().parents[1]
@@ -86,7 +87,10 @@ def artifact_device_id_matches(text: str, suffix: str):
 def main() -> int:
     violations: list[tuple[Path, int, str]] = []
     try:
+        require_kb_hydrated(KNOWLEDGE_ROOT.parent)
         files = generated_files()
+        for path in files:
+            require_hydrated(path)
         source_values = removed_device_ids()
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(f"privacy validation failed: {error}", file=sys.stderr)

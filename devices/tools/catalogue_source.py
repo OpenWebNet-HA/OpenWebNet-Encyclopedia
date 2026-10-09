@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import atexit
 import hashlib
+import os
 import subprocess
 import tempfile
 from pathlib import Path
@@ -34,6 +35,14 @@ def _verify(path: Path, entry: dict) -> None:
 def catalogue_path() -> Path:
     global _cached
     entry = _entry()
+
+    supplied = os.environ.get("OPENWEBNET_CATALOGUE_PATH")
+    if supplied:
+        path = Path(supplied)
+        if not path.is_file():
+            raise RuntimeError("Configured private catalogue copy is unavailable")
+        _verify(path, entry)
+        return path
 
     if LOCAL_DB.is_file():
         _verify(LOCAL_DB, entry)

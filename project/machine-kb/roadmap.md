@@ -22,6 +22,10 @@ Snapshot: 2026-09-30. OpenWebNet Machine KB 0.1.1 is published under `machine-kb
 | 15 | Independent factual and epistemic certification of the candidate | **Certified 2026-09-26** - independent recertification passed for candidate `5e5dda65b6ba8d5f4da2ec69126d4a9452455c50`; the certification does not itself merge, tag, publish, or complete the remaining release gates |
 | 16 | Remediate failed-certification findings and prepare a new candidate | **Complete (remediation only)** - systemic findings, bounded same-method defects, and control drift repaired; deterministic gates pass; no merge, tag, release, or certification is implied |
 
+## Device expansion candidate - 2026-10-09
+
+The [accepted Device expansion](device-expansion-0014-2026-10-08.md) integrates all 210 definitions through the shared IR and all four projections. The inventory has no pending definition; 57,493 prepared source units have reviewed dispositions. This work extends the published baseline under unchanged public schemas, without extending the historical certification to new claims. Final merge preparation is tracked in the [merge preparation review](merge-preparation-2026-10-09.md). The phase records below remain historical evidence for their named revisions.
+
 ## Phase 0 verification
 
 - Confirmed the clean remote branch at `8f3f8512f6c779209d618353e255e90842c5bcc2` before edits; existing Machine KB work was retained.

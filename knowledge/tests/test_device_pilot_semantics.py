@@ -66,6 +66,24 @@ class DevicePilotSemanticsTests(unittest.TestCase):
         self.assertTrue(all(c["epistemic_status"] != "observed" for c in rows))
         self.assertTrue(all("does not establish physical support or installed state" in c["statement"] for c in rows))
 
+    def test_calibration_steps_keep_order_source_and_key_referents(self):
+        by_id = {claim['id']: claim for claim in self.claims}
+        for start, source in ((8940, 'both sheets, printed/PDF p. 4'),
+                              (72441, 'ST-00002495-EN.pdf')):
+            for offset in range(6):
+                claim = by_id[f'ownkb:claim:c{start + offset:06}']
+                text = claim['statement']
+                self.assertIn(source, text)
+                self.assertIn(f'step {offset + 1} of 6', text)
+                self.assertNotEqual('observed', claim['epistemic_status'])
+                if offset:
+                    self.assertIn('Prerequisite preceding steps in order', text)
+                    self.assertIn('Hold the configuration key', text)
+                if offset == 1:
+                    self.assertIn('refers to the configuration key held in step 1', text)
+                if offset == 4:
+                    self.assertTrue('the moving shutter' in text or 'the actuator that measures' in text)
+
 
 if __name__ == "__main__":
     unittest.main()

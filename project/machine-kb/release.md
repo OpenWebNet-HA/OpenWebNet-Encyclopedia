@@ -2,6 +2,10 @@
 
 **Status:** OpenWebNet Machine KB 0.1.1 is published under `machine-kb-v0.1.1` at validated release commit `40db576cae95fa3483121bab3bfdb68ea5e3c706`. It repairs the 1,120 released 0.1.0 claim statements affected by table-context parser leakage, aligns schema vocabulary documentation, adds fail-closed generated-text hygiene validation, and standardizes the formal public name. Schema compatibility and artifact format versions remain 0.1.0, and the 11,353-ID compatibility baseline is unchanged.
 
+## Device expansion release boundary - 2026-10-09
+
+The 210-Device expansion is a merge candidate, not a new tagged release. Its migration and mechanical checks do not extend the independent certification of the historical baseline. The [merge preparation review](merge-preparation-2026-10-09.md) records current candidate gates. A later release requires independent semantic certification, exact-revision validation and separate tag/release authorization; the historical checklists below apply only to their named revisions.
+
 ## Intended consumer contract
 
 The published dataset must be usable by an independent offline consumer without Python, an LLM, MCP, FastMCP, or any network service. It identifies stable entities and records, human-readable labels, source and evidence provenance, epistemic status, applicability/version scope, namespaces, cautions, unresolved states, relationships, and privacy classification. The versioned manifest identifies artifact versions, the input-content digest, exact hashes, and record counts. Generated ownership and compatibility rules are explicit; source-provenance paths are public repository-relative paths.

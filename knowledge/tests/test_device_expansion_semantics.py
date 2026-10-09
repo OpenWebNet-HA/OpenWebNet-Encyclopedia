@@ -71,6 +71,27 @@ class DeviceExpansionSemanticsTests(unittest.TestCase):
         modules = [e for e in self.entities if e['label'].startswith('OWN-DEV-0013: Firmware') and e['entity_type'] == 'module']
         self.assertEqual(10, len(modules))  # five slots per distinct firmware definition
 
+    def test_ir_receiver_selector_functions_keep_their_mode_condition(self):
+        rows = [c for c in self.rows('OWN-DEV-0012')
+                if c['id'] in {f'ownkb:claim:c{i:06}' for i in range(16714, 16719)}]
+        self.assertEqual(5, len(rows))
+        for claim in rows:
+            # These are alternatives selected by physical configuration, not five
+            # unconditional Object capabilities or observations of an installation.
+            self.assertIn('one environment field `A`', claim['statement'])
+            self.assertIn('four per-channel physical selectors', claim['statement'])
+            self.assertIn('Depending on the selected mode', claim['statement'])
+            self.assertIn('`PLn/PFn` position may identify', claim['statement'])
+            self.assertNotEqual('observed', claim['epistemic_status'])
+
+    def test_load_panel_learning_predicate_keeps_all_four_slot_scope(self):
+        claim = next(c for c in self.rows('OWN-DEV-0020')
+                     if c['id'] == 'ownkb:claim:c018691')
+        self.assertIn('MyHOME Suite 3.5.38 catalogue', claim['statement'])
+        self.assertIn('all four slots carry the self-learning condition', claim['statement'])
+        self.assertIn('`M=1`; P1ab=0; P2a=0; P2b=0; P1cd=0; P2c=0; P2d=0', claim['statement'])
+        self.assertIn('do not prove runtime reachability', claim['statement'])
+
 
 if __name__ == '__main__':
     unittest.main()
