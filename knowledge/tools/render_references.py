@@ -120,8 +120,8 @@ def _base(seed: dict[str, Any], section_index: dict[str, dict[str, Any]]) -> dic
 def _canonical_sources(ir: dict[str, Any]) -> list[dict[str, Any]]:
     records = []
     for document in ir["documents"]:
-        first = document["sections"][0]
-        label = first["title"] or document["path"]
+        first = next((s for s in document["sections"] if s["blocks"]), document["sections"][0])
+        label = document["sections"][0]["title"] or document["path"]
         namespace_id = _namespace_for_document(document)
         record = {
             "applicability": _applicability(namespace_id), "cautions": [], "confidence": "high",

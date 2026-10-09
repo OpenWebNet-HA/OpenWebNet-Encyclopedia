@@ -114,7 +114,7 @@ Every page has one descriptive H1. Subsequent headings should reflect the concep
 
 Heading text should describe the content it introduces rather than use vague labels such as "More information".
 
-### 10. Follow a recommended reference-page flow without forcing a template
+### 10. Follow a recommended reference-page flow and established page-class architecture
 
 Where appropriate, reference pages should broadly progress through:
 
@@ -124,7 +124,9 @@ Where appropriate, reference pages should broadly progress through:
 4. evidence or source basis;
 5. limits, unresolved points, or related material.
 
-This is a recommended workflow, not a compulsory template. Different subject types may use different structures when that improves comprehension.
+This is a recommended workflow, not a single compulsory template for every subject type. Different subject types may use different structures when that improves comprehension.
+
+Where a mature class of pages has an established information architecture, new pages of that class should follow it unless the subject matter provides a substantive reason to differ. Structural variation should follow the information, not author convenience. Mature examples or a section-specific presentation profile may define the established pattern for a page class.
 
 ### 11. Split pages to support distinct ideas and navigability
 
@@ -134,7 +136,7 @@ Do not split merely to satisfy an arbitrary length threshold. Conversely, keep s
 
 Each documentation directory uses its `README.md` as its landing-page overview.
 
-### 12. Standardize recurring sections
+### 12. Standardize recurring sections and page-class structures
 
 When sections serve the same recurring purpose across pages, prefer stable names and ordering. Common examples include:
 
@@ -145,7 +147,13 @@ When sections serve the same recurring purpose across pages, prefer stable names
 - Source roles
 - Related material
 
-Variation is acceptable when the content genuinely requires a different distinction. Do not create near-synonymous recurring headings without a reason.
+Pages serving the same kind of reference purpose should also use stable section roles, ordering, and structured-data shapes where those structures are established.
+
+A section may define a presentation profile describing how this Style Guide applies to a particular page class, including expected table forms, recurring section roles, and canonical examples. Such profiles specialize the ESG; they do not replace it.
+
+A presentation profile may designate mature pages as normative exemplars for structure and editorial treatment. Exemplars define presentation conventions, not factual content; new pages must still derive their claims from their own evidence.
+
+Variation is acceptable when the content genuinely requires a different distinction. Do not create near-synonymous recurring headings or alternate structures without a reason.
 
 ## IV. Navigation and information presentation
 
@@ -159,22 +167,40 @@ Concepts should link to their canonical treatment. Non-canonical pages may provi
 
 Practical Guides are largely exempt from the non-duplication rule when repeating canonical material is necessary to keep a workflow independently executable and understandable.
 
-### 14. Match the presentation form to the information
+### 14. Match the presentation form to the information and keep structured facts structured
 
 Use:
 
-- prose for explanation, qualification, and interpretation;
+- prose for explanation, qualification, interpretation, reconciliation, and caveats;
 - tables for structured comparison or reference data with repeated fields;
 - ordered lists for actual sequences, procedures, or workflows;
 - unordered lists for non-sequential collections.
 
-Do not force explanatory material into oversized tables merely for compactness, and do not turn genuine procedures into prose when ordering matters.
+Repeated factual properties should remain structurally recognizable as data. When multiple facts share a common conceptual shape - for example property/value, field/domain, document/revision/source, or entity/reference/relationship - present them as a table when doing so materially improves scanning, comparison, provenance, or reuse.
+
+Do not convert a structured fact inventory into narrative prose merely because all of the facts can be mentioned in sentences. Conversely, do not force explanatory material, reasoning, caveats, or source reconciliation into oversized tables merely for compactness, and do not turn genuine procedures into prose when ordering matters.
 
 ### 15. Mark examples explicitly and keep evidence status visible
 
 Synthetic or illustrative examples must be explicitly identified as examples. They must never be presented in a way that could be mistaken for captured or experimentally observed traffic.
 
 When evidence class, uncertainty, or applicability materially affects interpretation, present that status visibly in the surrounding prose, table, or recurring evidence section rather than leaving it implicit.
+
+Where a structured fact inventory draws on materially different evidence classes, source revisions, or applicability scopes, make those distinctions visible at the appropriate granularity - for example through an Evidence, Source, Status, or Applicability column - rather than relegating all provenance to a paragraph after the table. This does not require every table to carry an evidence column when one source and one scope apply uniformly.
+
+### 16. Treat presentation as part of documentation completeness
+
+A fact is not adequately documented merely because it occurs somewhere on a page. It must be placed and presented so that a reader can recognize its role, scope, relationship to comparable facts, and evidence status without having to reconstruct an implicit data structure from prose.
+
+A page may therefore be factually populated but editorially incomplete. Human-facing completeness includes appropriate information architecture as well as content presence.
+
+### 17. Preserve conceptual source structure without exposing implementation serialization
+
+Preserve the useful conceptual structure of source material, but do not reproduce implementation serialization merely because it is structured.
+
+Database flags, storage types, internal row representations, encoded range machinery, and similar implementation details belong in human-facing reference material only when they are themselves relevant to the concept being documented.
+
+Translate implementation evidence into the Encyclopedia's conceptual model while preserving provenance, uncertainty, applicability, and material source distinctions.
 
 ## V. Editorial mechanics
 

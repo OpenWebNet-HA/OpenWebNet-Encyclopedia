@@ -185,3 +185,11 @@ A conforming consumer does not need:
 - network access.
 
 Those technologies can be useful adapters around the dataset, but none is part of the published Machine KB interface.
+
+## Complete large files
+
+`claims/claims.jsonl` and the maintainer input `inputs/claim-records.json` use Git LFS for transport. Their hydrated paths, UTF-8 formats, schemas and full-content hashes remain unchanged. Git pointer text is not KB data. Install Git LFS, enable it for your checkout with `git lfs install`, then run `git lfs pull` on the selected revision before reading or building. Validate downloaded artifact hashes against `manifest.json`. Alternatively, download the full individual file through the repository’s raw/download link and verify its manifest hash; a Git client is not a consumer requirement. After hydration, consumption remains offline and needs no Python, model or service. Builds and validation never fetch files automatically and reject an unhydrated checkout.
+
+GitHub source ZIP/tar downloads may contain pointers unless the repository administrator enables inclusion of LFS objects in archives. Do not assume such a download is complete: check the full artifact hashes, or use an LFS-enabled checkout. Do not read `git show REV:knowledge/claims/claims.jsonl` as a complete dataset: it returns the transport pointer for LFS revisions. Use a hydrated checkout of that revision. Historical ordinary-Git revisions remain unchanged.
+
+CI retrieves LFS files during checkout before running the same offline build and validation. This changes storage transport only; it does not certify, tag or release the dataset.

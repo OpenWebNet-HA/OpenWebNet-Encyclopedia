@@ -1,0 +1,1055 @@
+{
+  "definitions": [
+    {
+      "device_id": "OWN-DEV-0001",
+      "path": "devices/definitions/own-dev-0001-two-channel-universal-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0002",
+      "path": "devices/definitions/own-dev-0002-audio-video-web-server-gateway.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0003",
+      "path": "devices/definitions/own-dev-0003-flush-mounted-actuator-free-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0004",
+      "path": "devices/definitions/own-dev-0004-two-module-basic-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0005",
+      "path": "devices/definitions/own-dev-0005-two-module-special-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0006",
+      "path": "devices/definitions/own-dev-0006-two-module-zero-crossing-actuator-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0007",
+      "path": "devices/definitions/own-dev-0007-three-module-basic-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0008",
+      "path": "devices/definitions/own-dev-0008-flush-mounted-one-relay-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0009",
+      "path": "devices/definitions/own-dev-0009-four-zone-touch-multifunction-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0010",
+      "path": "devices/definitions/own-dev-0010-pir-us-daylight-presence-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0011",
+      "path": "devices/definitions/own-dev-0011-scenario-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0012",
+      "path": "devices/definitions/own-dev-0012-four-channel-ir-receiver.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0013",
+      "path": "devices/definitions/own-dev-0013-video-display.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0014",
+      "path": "devices/definitions/own-dev-0014-extended-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0015",
+      "path": "devices/definitions/own-dev-0015-myhome-screen-3-5.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0016",
+      "path": "devices/definitions/own-dev-0016-pir-flush-mounted-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0017",
+      "path": "devices/definitions/own-dev-0017-flush-mounted-temperature-central-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0018",
+      "path": "devices/definitions/own-dev-0018-local-display.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0019",
+      "path": "devices/definitions/own-dev-0019-three-module-touch-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0020",
+      "path": "devices/definitions/own-dev-0020-load-control-panel.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0021",
+      "path": "devices/definitions/own-dev-0021-one-relay-din-actuator-16-a.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0022",
+      "path": "devices/definitions/own-dev-0022-two-relay-din-actuator-10-a.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0023",
+      "path": "devices/definitions/own-dev-0023-four-relay-din-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0024",
+      "path": "devices/definitions/own-dev-0024-two-module-soft-touch-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0025",
+      "path": "devices/definitions/own-dev-0025-din-dimmer-1000-w.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0026",
+      "path": "devices/definitions/own-dev-0026-four-scenario-control-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0027",
+      "path": "devices/definitions/own-dev-0027-flush-mounted-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0028",
+      "path": "devices/definitions/own-dev-0028-rotary-regulation-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0029",
+      "path": "devices/definitions/own-dev-0029-radio-receiver-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0030",
+      "path": "devices/definitions/own-dev-0030-ballast-din-dimmer-1-10-v.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0031",
+      "path": "devices/definitions/own-dev-0031-pir-surface-ceiling-mounted-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0032",
+      "path": "devices/definitions/own-dev-0032-transmitting-radio-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0033",
+      "path": "devices/definitions/own-dev-0033-light-manager-control-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0034",
+      "path": "devices/definitions/own-dev-0034-radio-interface-temperature-probes.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0035",
+      "path": "devices/definitions/own-dev-0035-flush-mounted-radio-receiver-batteryless-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0036",
+      "path": "devices/definitions/own-dev-0036-key-card-switch.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0037",
+      "path": "devices/definitions/own-dev-0037-local-display-1-2-bus.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0038",
+      "path": "devices/definitions/own-dev-0038-probe-with-regulation.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0039",
+      "path": "devices/definitions/own-dev-0039-key-card-switch-rfid.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0040",
+      "path": "devices/definitions/own-dev-0040-fan-coil-probe.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0041",
+      "path": "devices/definitions/own-dev-0041-basic-temperature-probe.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0042",
+      "path": "devices/definitions/own-dev-0042-temperature-control-central-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0043",
+      "path": "devices/definitions/own-dev-0043-special-functions-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0044",
+      "path": "devices/definitions/own-dev-0044-shutter-control-bus.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0045",
+      "path": "devices/definitions/own-dev-0045-shutter-actuator-bus.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0046",
+      "path": "devices/definitions/own-dev-0046-display-thermostat-2-modules.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0047",
+      "path": "devices/definitions/own-dev-0047-myhome-screen-10.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0048",
+      "path": "devices/definitions/own-dev-0048-energy-display-2-modules.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0049",
+      "path": "devices/definitions/own-dev-0049-myhome-screen-10-capacitive.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0050",
+      "path": "devices/definitions/own-dev-0050-classe-300x.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0051",
+      "path": "devices/definitions/own-dev-0051-pir-ceiling-mounted-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0052",
+      "path": "devices/definitions/own-dev-0052-ballast-din-dimmer-0-10-v.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0053",
+      "path": "devices/definitions/own-dev-0053-ultrasonic-ceiling-sensor-ir-port.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0054",
+      "path": "devices/definitions/own-dev-0054-pir-us-ceiling-mounted-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0055",
+      "path": "devices/definitions/own-dev-0055-pir-us-wall-mounted-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0056",
+      "path": "devices/definitions/own-dev-0056-pir-wall-mounted-sensor-straight-range.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0057",
+      "path": "devices/definitions/own-dev-0057-pir-wall-mounted-sensor-short-range.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0058",
+      "path": "devices/definitions/own-dev-0058-pir-wall-mounted-sensor-dual-range.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0059",
+      "path": "devices/definitions/own-dev-0059-basic-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0060",
+      "path": "devices/definitions/own-dev-0060-basic-control-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0061",
+      "path": "devices/definitions/own-dev-0061-pir-wall-mounted-sensor-long-range.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0062",
+      "path": "devices/definitions/own-dev-0062-daylight-sensor-room-controller-rj45.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0063",
+      "path": "devices/definitions/own-dev-0063-occupancy-sensor-ir-zigbee.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0064",
+      "path": "devices/definitions/own-dev-0064-room-controller-2-output-16-a.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0065",
+      "path": "devices/definitions/own-dev-0065-memory-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0066",
+      "path": "devices/definitions/own-dev-0066-scenario-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0067",
+      "path": "devices/definitions/own-dev-0067-four-relay-din-actuator-16-a.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0068",
+      "path": "devices/definitions/own-dev-0068-one-module-one-relay-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0069",
+      "path": "devices/definitions/own-dev-0069-scs-dali-gateway.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0070",
+      "path": "devices/definitions/own-dev-0070-din-contacts-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0071",
+      "path": "devices/definitions/own-dev-0071-module-contacts-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0072",
+      "path": "devices/definitions/own-dev-0072-basic-contacts-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0073",
+      "path": "devices/definitions/own-dev-0073-din-dimmer-1000-va.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0074",
+      "path": "devices/definitions/own-dev-0074-din-dimmer-2x400-va.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0075",
+      "path": "devices/definitions/own-dev-0075-room-controller-4-output-0-10-v.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0076",
+      "path": "devices/definitions/own-dev-0076-room-controller-2-universal-dimming-outputs.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0077",
+      "path": "devices/definitions/own-dev-0077-multi-application-room-controller.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0078",
+      "path": "devices/definitions/own-dev-0078-scs-scs-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0079",
+      "path": "devices/definitions/own-dev-0079-room-controller-2-output-0-10-v.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0080",
+      "path": "devices/definitions/own-dev-0080-scenario-programmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0081",
+      "path": "devices/definitions/own-dev-0081-1-relay-din-actuator-16-a-100-240-v.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0082",
+      "path": "devices/definitions/own-dev-0082-room-controller-1-output-16-amps.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0083",
+      "path": "devices/definitions/own-dev-0083-2-relay-din-actuator-16-a-100-240-v.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0084",
+      "path": "devices/definitions/own-dev-0084-ip55-pir-wall-mounted-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0085",
+      "path": "devices/definitions/own-dev-0085-burglar-alarm-central-unit-with-communicator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0086",
+      "path": "devices/definitions/own-dev-0086-polyx-alarm.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0087",
+      "path": "devices/definitions/own-dev-0087-gsm-burglar-alarm-central-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0088",
+      "path": "devices/definitions/own-dev-0088-flush-mounted-alarm-central-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0089",
+      "path": "devices/definitions/own-dev-0089-webserver-audio-video-din.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0090",
+      "path": "devices/definitions/own-dev-0090-enhanced-webserver.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0091",
+      "path": "devices/definitions/own-dev-0091-stop-go.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0092",
+      "path": "devices/definitions/own-dev-0092-stop-go-btest.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0093",
+      "path": "devices/definitions/own-dev-0093-stop-go-plus.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0094",
+      "path": "devices/definitions/own-dev-0094-touch-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0095",
+      "path": "devices/definitions/own-dev-0095-burglar-alarm-central-unit-with-communicator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0096",
+      "path": "devices/definitions/own-dev-0096-pulses-counter-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0097",
+      "path": "devices/definitions/own-dev-0097-video-station.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0098",
+      "path": "devices/definitions/own-dev-0098-shutter-flush-mounted-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0099",
+      "path": "devices/definitions/own-dev-0099-flush-mounted-leading-dimmer-300-va.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0100",
+      "path": "devices/definitions/own-dev-0100-stereo-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0101",
+      "path": "devices/definitions/own-dev-0101-eight-output-din-actuator-16-a.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0102",
+      "path": "devices/definitions/own-dev-0102-multimedia-touch-screen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0103",
+      "path": "devices/definitions/own-dev-0103-eight-key-multifunction-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0104",
+      "path": "devices/definitions/own-dev-0104-do-not-disturb-make-up-room-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0105",
+      "path": "devices/definitions/own-dev-0105-do-not-disturb-make-up-room-indicator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0106",
+      "path": "devices/definitions/own-dev-0106-rfid-reader-and-outside-door-indicator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0107",
+      "path": "devices/definitions/own-dev-0107-legrand-multimedia-touch-screen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0108",
+      "path": "devices/definitions/own-dev-0108-classe-300-v13e-v13m.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0109",
+      "path": "devices/definitions/own-dev-0109-living-now-thermostat-with-display.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0110",
+      "path": "devices/definitions/own-dev-0110-two-module-myhome-unified-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0111",
+      "path": "devices/definitions/own-dev-0111-three-module-myhome-unified-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0112",
+      "path": "devices/definitions/own-dev-0112-myhome-lighting-command-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0113",
+      "path": "devices/definitions/own-dev-0113-myhome-shutter-command-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0114",
+      "path": "devices/definitions/own-dev-0114-living-now-light-digital-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0115",
+      "path": "devices/definitions/own-dev-0115-living-now-full-digital-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0116",
+      "path": "devices/definitions/own-dev-0116-living-now-alexa-voice-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0117",
+      "path": "devices/definitions/own-dev-0117-two-module-light-now-multifunction-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0118",
+      "path": "devices/definitions/own-dev-0118-light-now-lighting-actuator-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0119",
+      "path": "devices/definitions/own-dev-0119-three-module-light-now-multifunction-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0120",
+      "path": "devices/definitions/own-dev-0120-three-input-electricity-meter.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0121",
+      "path": "devices/definitions/own-dev-0121-load-management-central-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0122",
+      "path": "devices/definitions/own-dev-0122-load-actuator-current-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0123",
+      "path": "devices/definitions/own-dev-0123-load-management-automation-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0124",
+      "path": "devices/definitions/own-dev-0124-flush-mounted-load-management-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0125",
+      "path": "devices/definitions/own-dev-0125-scs-zigbee-gateway.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0126",
+      "path": "devices/definitions/own-dev-0126-eight-output-scs-dali-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0127",
+      "path": "devices/definitions/own-dev-0127-iryde-touch-phone.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0128",
+      "path": "devices/definitions/own-dev-0128-four-channel-dali-room-controller.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0129",
+      "path": "devices/definitions/own-dev-0129-polyx-memory-display.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0130",
+      "path": "devices/definitions/own-dev-0130-four-channel-1-10v-dimming-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0131",
+      "path": "devices/definitions/own-dev-0131-mh200n-scenario-programmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0132",
+      "path": "devices/definitions/own-dev-0132-burglar-alarm-pstn-communicator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0133",
+      "path": "devices/definitions/own-dev-0133-four-output-fil-pilote-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0134",
+      "path": "devices/definitions/own-dev-0134-energy-data-logger.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0135",
+      "path": "devices/definitions/own-dev-0135-colour-touch-screen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0136",
+      "path": "devices/definitions/own-dev-0136-infrared-air-conditioning-emitter.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0137",
+      "path": "devices/definitions/own-dev-0137-three-module-soft-touch-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0138",
+      "path": "devices/definitions/own-dev-0138-open-bacnet-gateway.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0139",
+      "path": "devices/definitions/own-dev-0139-led-cfl-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0140",
+      "path": "devices/definitions/own-dev-0140-normally-closed-relay-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0141",
+      "path": "devices/definitions/own-dev-0141-two-channel-normally-closed-relay-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0142",
+      "path": "devices/definitions/own-dev-0142-1-10v-ballast-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0143",
+      "path": "devices/definitions/own-dev-0143-400va-electronic-transformer-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0144",
+      "path": "devices/definitions/own-dev-0144-eight-output-temperature-control-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0145",
+      "path": "devices/definitions/own-dev-0145-two-output-0-10v-valve-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0146",
+      "path": "devices/definitions/own-dev-0146-relay-0-10v-fan-coil-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0147",
+      "path": "devices/definitions/own-dev-0147-two-relay-temperature-control-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0148",
+      "path": "devices/definitions/own-dev-0148-four-relay-temperature-control-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0149",
+      "path": "devices/definitions/own-dev-0149-hotel-ip-server.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0150",
+      "path": "devices/definitions/own-dev-0150-pulse-counter-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0151",
+      "path": "devices/definitions/own-dev-0151-mh202-scenario-programmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0152",
+      "path": "devices/definitions/own-dev-0152-f455-basic-gateway.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0153",
+      "path": "devices/definitions/own-dev-0153-two-channel-10a-universal-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0154",
+      "path": "devices/definitions/own-dev-0154-single-channel-10a-lighting-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0155",
+      "path": "devices/definitions/own-dev-0155-classe-300x13e-connected-video-internal-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0156",
+      "path": "devices/definitions/own-dev-0156-hometouch-home-automation-video-entry-display.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0157",
+      "path": "devices/definitions/own-dev-0157-classe-100x16e-connected-video-internal-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0158",
+      "path": "devices/definitions/own-dev-0158-easy-kit-connected-video-entry-kit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0159",
+      "path": "devices/definitions/own-dev-0159-classe-300eos-connected-video-internal-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0160",
+      "path": "devices/definitions/own-dev-0160-easy-kit-home-security-connected-internal-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0161",
+      "path": "devices/definitions/own-dev-0161-light-now-shutter-actuator-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0162",
+      "path": "devices/definitions/own-dev-0162-two-wire-ip-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0163",
+      "path": "devices/definitions/own-dev-0163-d45-ip-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0164",
+      "path": "devices/definitions/own-dev-0164-axolute-eight-zone-touch-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0165",
+      "path": "devices/definitions/own-dev-0165-two-wire-concierge-switchboard.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0166",
+      "path": "devices/definitions/own-dev-0166-sfera-audio-speaker-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0167",
+      "path": "devices/definitions/own-dev-0167-sfera-audio-video-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0168",
+      "path": "devices/definitions/own-dev-0168-sfera-wide-angle-audio-video-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0169",
+      "path": "devices/definitions/own-dev-0169-sfera-keypad-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0170",
+      "path": "devices/definitions/own-dev-0170-sfera-proximity-badge-reader.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0171",
+      "path": "devices/definitions/own-dev-0171-sfera-inductive-loop-speech-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0172",
+      "path": "devices/definitions/own-dev-0172-sfera-residents-display-module.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0173",
+      "path": "devices/definitions/own-dev-0173-sfera-night-day-wide-angle-camera.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0174",
+      "path": "devices/definitions/own-dev-0174-six-channel-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0175",
+      "path": "devices/definitions/own-dev-0175-matix-colour-touchscreen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0176",
+      "path": "devices/definitions/own-dev-0176-livinglight-air-colour-touchscreen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0177",
+      "path": "devices/definitions/own-dev-0177-axolute-eteris-colour-touchscreen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0178",
+      "path": "devices/definitions/own-dev-0178-mosaic-colour-touchscreen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0179",
+      "path": "devices/definitions/own-dev-0179-celiane-colour-touchscreen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0180",
+      "path": "devices/definitions/own-dev-0180-f401-shutter-motor-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0181",
+      "path": "devices/definitions/own-dev-0181-f414-127-resistive-inductive-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0182",
+      "path": "devices/definitions/own-dev-0182-f411-1-single-relay-din-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0183",
+      "path": "devices/definitions/own-dev-0183-f411-1fl-fluorescent-relay-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0184",
+      "path": "devices/definitions/own-dev-0184-f415-127-electronic-transformer-dimmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0185",
+      "path": "devices/definitions/own-dev-0185-legrand-area-manager.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0186",
+      "path": "devices/definitions/own-dev-0186-vigik-single-door-access-control-unit.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0187",
+      "path": "devices/definitions/own-dev-0187-vigik-portable-access-control-programmer.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0188",
+      "path": "devices/definitions/own-dev-0188-vigik-gprs-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0189",
+      "path": "devices/definitions/own-dev-0189-346891-two-wire-ip-interface.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0190",
+      "path": "devices/definitions/own-dev-0190-mh201-hotel-room-scenario-manager.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0191",
+      "path": "devices/definitions/own-dev-0191-3485std-burglar-alarm-local-contacts.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0192",
+      "path": "devices/definitions/own-dev-0192-687408-colour-touchscreen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0193",
+      "path": "devices/definitions/own-dev-0193-arteor-573960-colour-touchscreen.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0194",
+      "path": "devices/definitions/own-dev-0194-pabx-288-telephone-switching-system.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0195",
+      "path": "devices/definitions/own-dev-0195-arteor-573992-audio-video-web-server.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0196",
+      "path": "devices/definitions/own-dev-0196-classe100-x12b-energy-display-video-handset.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0197",
+      "path": "devices/definitions/own-dev-0197-ip55-wall-mounted-pir-sensor.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0198",
+      "path": "devices/definitions/own-dev-0198-f459-driver-manager.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0199",
+      "path": "devices/definitions/own-dev-0199-myhomeserver1-home-automation-server.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0200",
+      "path": "devices/definitions/own-dev-0200-living-now-k4652m2-multifunction-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0201",
+      "path": "devices/definitions/own-dev-0201-living-now-k4652m3-three-function-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0202",
+      "path": "devices/definitions/own-dev-0202-living-now-k4672m2l-light-actuator-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0203",
+      "path": "devices/definitions/own-dev-0203-living-now-k4672m2s-shutter-actuator-control.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0204",
+      "path": "devices/definitions/own-dev-0204-3454-temperature-probe-external-wired-sensors.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0205",
+      "path": "devices/definitions/own-dev-0205-living-now-k8002l-light-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0206",
+      "path": "devices/definitions/own-dev-0206-living-now-k8002s-shutter-actuator.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0207",
+      "path": "devices/definitions/own-dev-0207-f460-myhome-server.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0208",
+      "path": "devices/definitions/own-dev-0208-f461-myhome-server-third-party-integration.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0209",
+      "path": "devices/definitions/own-dev-0209-f459t-hvac-driver-manager.md",
+      "state": "integrated"
+    },
+    {
+      "device_id": "OWN-DEV-0210",
+      "path": "devices/definitions/own-dev-0210-345000-linea-5000-entrance-panel-display.md",
+      "state": "integrated"
+    }
+  ],
+  "format_version": "0.1.0"
+}

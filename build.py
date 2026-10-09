@@ -19,6 +19,7 @@ from serialization import json_bytes, jsonl_bytes, write_bytes  # noqa: E402
 from id_lifecycle import emitted_ids, validate_lifecycle  # noqa: E402
 from validate_schema import validate_registry  # noqa: E402
 from validate_text_hygiene import validate_generated_text  # noqa: E402
+from device_units import validate_device_units  # noqa: E402
 
 GENERATOR_VERSION = "ownkb-build-0.8.2"
 SCHEMA_COMPATIBILITY_VERSION = "0.1.0"
@@ -99,6 +100,7 @@ def build(root: Path, output_root: Path) -> Path:
     ir = build_ir(root, root / "knowledge/inputs/canonical-sources.jsonl", root / "knowledge/inputs/identities.json")
     references, section_references = reference_records(ir, root / "knowledge/inputs/reference-records.json")
     claims = claim_records(ir, references, root / "knowledge/inputs/claim-records.json")
+    validate_device_units(ir, claims, root / "knowledge/inputs/device-unit-review.json")
     claim_metrics = claim_coverage_metrics(ir, claims, root / "knowledge/inputs/claim-coverage.json")
     namespace_ids = {}
     for document in ir["documents"]:

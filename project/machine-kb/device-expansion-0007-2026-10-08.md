@@ -1,0 +1,42 @@
+# Accepted Device Machine KB expansion, batch 7
+
+This batch migrates four accepted definitions, OWN-DEV-0104 through OWN-DEV-0107. The candidate inventory has 111 integrated and 99 pending definitions. The unchanged closed inventory verifies all eight acceptance checks before ingestion. This migration does not independently certify, merge, tag or release the KB.
+
+## Conservation and evidence
+
+All 5,185 prepared units have explicit dispositions: 5,121 claimed and 64 reviewed nonclaim. The 650 original Device units are supplemented by the 4,534 complete public package-character associations and their provenance paragraph linked from Device 0107. The exact appendix and catalogue fingerprints are pinned through the existing narrow numeric preparation adapter before the ordinary privacy gate. Existing Device 0102 pins and all published identity mappings are preserved; the allocator assigns only new document/section/chunk identities. Each row retains headers, every cell and qualification, with exact section/unit fingerprints and evidence/atomicity keys.
+
+The candidate adds 5,204 claims and 73 configuration entities, including ten separately attributable assertions: three reciprocal unresolved conflict pairs, two revision-specific bundled-card records and two SKU-specific radio classifications. Firmware, Module/Object/Virgin, domains/defaults, conditions, filters, conversions, modes, connections, parameters and packages retain their complete source scope. Domains and defaults are separate assertions. Neither reusable roles nor default values are installed state; diagnostic surfaces remain candidates.
+
+Twenty existing registered originals are matched by public archival fingerprint and byte length; twenty new stable KB source references are added. No original or PDF is added. Manufacturer descriptions remain documented behavior, and unexamined parameter/software/package payloads remain unexamined. Concrete network examples are sanitized before parsing, claim extraction or ID allocation.
+
+## Material boundaries
+
+| Device | Preserved interpretation and evidence limits |
+| --- | --- |
+| OWN-DEV-0104 | Three established H4653/LN4653/067593 variants remain separate from an unreferenced Arteor colour legend. Two physical wiring modules contain one catalogue Module/Object489. Wildcard253 firmware, R1/R2/M fields and all modes are historical applicability, not installed firmware. Physical M0/1 cover layouts do not establish catalogue M2/MUR-only behavior; H4653 one-button export is unresolved against mode-specific covers. PC Ethernet uses external MH201, not an Ethernet port or gateway in this BUS control. LED percentage cycle, variant colours, exact EANs and source-specific dimensions remain scoped; payloads and runtime are unexamined. |
+| OWN-DEV-0105 | The H4650/LN4650/067590 family is explicitly NO RFID, unlike1681. One Object488 does not establish reader hardware from generic badge/group/door prose. Firmware R1/R2 zero defaults, Object R1R2 literal01 and filter3106 admitting0 remain conflicting layers with no replacement default. Physical L0..7 always enables DND; reusable software can disable it without a physical ninth choice. Bell contact and exact SKU230W exports are separate from Céliane ratings. Lot14w40 plus MH201/software gates visual alarm, not wildcard255 firmware. Extra A/PL/T hotel labels and L/L1 versus L1/L2 terminal notations remain unresolved. Room127 is an illustration of address27, not a widened domain. |
+| OWN-DEV-0106 | RFID reader H4651/LN4651/067591 is distinct from NO-RFID4650 despite shared Object488. Mifare Classic3547 and visual alarms require lot14w40; wildcard254 does not identify lot. Card13.56MHz radio differs from RF automation bus; bidirectional Yes/No export attributes retain their exact SKU scopes and are not unconditional contradictory hardware findings. Complete L0..7 mapping, physical decimal A/PL and T0=0.5s versus catalogue base16 address/tenths timer remain different layers with no conversion. Filter3105 admits0 outside literal01 default, and prose nonzero doorbell address lacks enforcement. Master-free permissive state,10s master/reset, separate customer/service procedures and configuration-dependent front-key/relay behavior are documented, not observed. |
+| OWN-DEV-0107 | Legrand1809/model48 remains distinct from BTicino1340/model41 despite reusable Object32. Four firmware definitions and eight parameter associations retain tuples/defaults and unexamined payloads. All five packages and4534 linked public character associations are scoped to3.5.38 catalogue metadata, not AID/network domains or installed glyph support. A/B bundled-card512MB/2GB is revision history; maximum2GB/non-HC-SD and simultaneous-drive limits retain product scope. Future USB webcam/WiFi/PSTN differs from configured LAN media. Serial is documented despite Ethernet/USB-only associations. Exact D/G software expands older user coverage without substituting BTicino errors. Required/conditional time, five software versus three seasonal user programs, audio increments and Mb notation remain unresolved; network examples are sanitized and never installed/default hardware evidence. |
+
+The terminal legend and wiring schematic retain distinct attributable values with a reciprocal conflict and open resolution. The touchscreen's obligatory versus conditional time condition and five software entries versus three user programs per season remain reciprocal unresolved pairs. Bundled SD capacity is packing revision history, not simultaneous contradictory hardware evidence. H4651 versus LN4651 bidirectional-radio classifications remain exact-SKU assertions and open questions, without manufacturing a direct contradiction across different variants. Neither classification is an RF-automation-bus assertion.
+
+The room-address reusable default remains literally `01` in the source and statement, with the existing integer representation `1`; filters 3105 and 3106 admit only `0` and provide no replacement default. Physical decimal R1/R2 and A/PL, reusable base-16 address labels and tenths-of-second timer labels remain separate layers. Production lot `14w40` is not a wildcard Firmware version. Examples of room labels and card procedures are publisher illustrations or specifications, not observations.
+
+All five touchscreen packages and every range association remain MyHOME Suite 3.5.38 catalogue metadata. They do not define AID/network character domains or establish installed glyph support. Legrand item 1809/model 48 is separate from BTicino item 1340/model 41 even though Object 32 is shared. Serial PC programming is retained as publisher evidence despite Ethernet/USB-only catalogue associations. USB webcam, Wi-Fi and PSTN future labels are not shipped support; configured LAN media remains separate, with historical service availability unknown.
+
+Public schemas, format, compatibility version and preparation code remain unchanged. New IDs append above prior mappings and lifecycle history; no previous assertion, context, reference seed, unit ledger or pin is replaced. Device Markdown and the already public appendix are unchanged. Category/index pages and raw databases are outside the Machine KB source topology.
+
+## Validation
+
+| Check | Outcome |
+| --- | --- |
+| Complete Machine KB check | Passed: deterministic clean builds, freshness, schema, context/evidence, conservation, references, lifecycle, privacy and Device completeness |
+| Relevant Machine KB regressions | 132 passed, including five new material-boundary cases; full regression runtime 33 minutes 4 seconds |
+| Device / schema / archive / ECV / ESG | Passed: 14 Device, eight schema and five supplement negative cases; 807 archive registrations; ECV/ESG objective checks passed (heuristic candidates remain advisory) |
+| Prior content and identity preservation | Passed against commit b59326c: all 42,086 prior claims/contexts, stable mappings, reference seeds and 107 Device unit ledgers preserved |
+| Diff inspection | Inspected complete affected semantic inputs and all four projections; prior corpus prefix and reference records preserved; whitespace check passed |
+
+Six new source scopes were clarified during curation; their exact evidence contexts were repaired before the successful rebuild and validation. No prior record or source pin was changed.
+
+This ledger records accepted-page migration and validation, not independent semantic certification or release.
