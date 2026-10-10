@@ -56,13 +56,13 @@ class BuildInfrastructureTests(unittest.TestCase):
             self.assertTrue(all(len(entry["sha256"]) == 64 for entry in manifest["artifacts"]))
             self.assertNotIn("guides/", first.read_text())
             self.assertEqual(136 + self.device_counts()[0], manifest["coverage"]["canonical"]["documents"])
-            self.assertEqual(1246 + self.device_counts()[1], manifest["coverage"]["retrieval"]["emitted_chunks"])
-            self.assertEqual(7876 + self.device_counts()[2], manifest["coverage"]["claims"]["records"])
+            self.assertEqual(1249 + self.device_counts()[1], manifest["coverage"]["retrieval"]["emitted_chunks"])
+            self.assertEqual(7900 + self.device_counts()[2], manifest["coverage"]["claims"]["records"])
             self.assertEqual(703, manifest["coverage"]["claims"]["bounded_domains"]["protocol"]["claims"])
-            self.assertEqual(3261, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
+            self.assertEqual(3266, manifest["coverage"]["claims"]["bounded_domains"]["functional"]["claims"])
             self.assertEqual(924, manifest["coverage"]["claims"]["bounded_domains"]["diagnostics"]["claims"])
             self.assertEqual(891, manifest["coverage"]["claims"]["bounded_domains"]["programming"]["claims"])
-            self.assertEqual(894 + self.device_counts()[2], manifest["coverage"]["claims"]["bounded_domains"]["device-model"]["claims"])
+            self.assertEqual(903 + self.device_counts()[2], manifest["coverage"]["claims"]["bounded_domains"]["device-model"]["claims"])
 
     def test_rendered_artifacts_preserve_context_and_exclude_guides(self):
         with tempfile.TemporaryDirectory() as temporary:

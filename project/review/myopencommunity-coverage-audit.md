@@ -1,5 +1,7 @@
 # MyOpenCommunity Coverage Audit
 
+This is the initial coverage snapshot. The subsequent [bounded closure review](myopencommunity-closure-review.md) records the current stopping point, later integrations and remaining evidence requirements; its completion scope does not convert indexed material into reviewed findings.
+
 This continuation starts at `b9263843860b19c77a7d0def8520ea2c055e8b46` on `docs/myopencommunity-integration`. It uses the four preserved repositories, their retained histories, the [first integration review](myopencommunity-integration.md), and the [source reassessment](myopencommunity-reassessment.md). Conversation findings are context, not a coverage boundary. Synced project sources and archived checkouts remain unchanged.
 
 ## Coverage and disposition records

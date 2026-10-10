@@ -285,6 +285,22 @@ For example, a preset position or load-dependent minimum level can have a value 
 
 A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol `slot`/value evidence and, where available, the resulting runtime behavior. Numeric equality alone is insufficient.
 
+## Historical touchscreen application configuration
+
+BtExperience at `TS10_1_0_23` imports XML into its own client Objects. These application identifiers and persistence rules are separate from catalogue Object IDs, Device programming and MyHOME Suite project export.
+
+| Input / mechanism | Client meaning |
+| --- | --- |
+| `conf.xml` | Local setup, including source and amplifier addresses; literal `-1` becomes an empty address |
+| `archive.xml` | Function definitions in `obj` elements and instances in `ist` elements |
+| String attributes | Instance values override definition defaults; absent attributes use those defaults |
+| `uii` | Application instance reference; duplicate registered values are fatal in this revision |
+| Amplifier-group `link` | Resolves an already-created, correctly typed amplifier; an unresolved reference asserts in assertion-enabled builds and is skipped otherwise |
+
+The importer processes definitions in document order, so amplifier members must precede groups that reference them. It retains repeated member references; group operations can therefore call a member more than once. A configured monochannel/multichannel function selects client behavior, without proving the deployed product's capabilities. See [Virtual and composite amplifier controllers](../functional/who-22-sound-diffusion/#virtual-and-composite-amplifier-controllers) for the distinct library controller model.
+
+Configuration documents are cached after loading. Saving marks the cached document as modified and restarts a single-shot ten-second save timer. Flushing attempts each modified write and then clears the pending set, including failed writes; this path provides no automatic retry or read-back confirmation. These are local XML persistence rules, not an acknowledgement of Device programming. See [Configuration closure evidence](../project/review/myopencommunity-closure-review.md#findings-and-canonical-placement).
+
 ## F411 simulator configuration
 
 The VDK 2.0 F411 model stores `A`, `PL`, and group separately for each simulated output, with Device mode and bus selection outside those output records. A simulated local click emits `WHO 1` using the output's concatenated `A`/`PL` address. Point, area, group, and general addressing are handled against the configured outputs.

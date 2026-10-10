@@ -145,6 +145,18 @@ The virtual amplifier publishes its own cached state and volume in the two repor
 
 The radio client interprets its cached frequency in hundredths of MHz: `9800` is 98.00 MHz, and a manual step changes it by `5` (50 kHz). It wraps above 108.00 MHz to 87.50 MHz and below 87.50 MHz to 108.00 MHz. With an unknown cached frequency, manual tuning sends nothing; automatic search still sends `WHAT 5` / `6`. BtExperience schedules a frequency read after manual tuning and waits for a report after automatic search. These are client policies; they do not resolve the published step-unit discrepancy or establish every tuner's band limits.
 
+### Virtual and composite amplifier controllers
+
+At `TS10_1_0_23`, the library's amplifier factory selects the configured local virtual amplifier for an exact address match. A general target or an area target containing that local address creates a composite controller with bus and local children. Other targets use the ordinary bus controller.
+
+| Composite operation | Library behavior |
+| --- | --- |
+| ON / OFF, volume up / down | Forwards the operation to each child |
+| Absolute volume | Uses the inherited general-address dimension `1` write at `5#3#0#0`; does not directly forward the value to the local child |
+| Received state | Produces no aggregate child-state values |
+
+The absolute-volume behavior also applies to an area composite because its base controller is constructed with general target `0`. It does not establish the effect of later bus echoes or a physical amplifier's response. BtExperience's application amplifier groups use a different mechanism: they call each linked member for power, relative volume and absolute volume. Their member references are [application Configuration](../../device-model/configuration.md#historical-touchscreen-application-configuration), rather than an OpenWebNet group address. See [Amplifier and simulator closure evidence](../../project/review/myopencommunity-closure-review.md#findings-and-canonical-placement).
+
 ### Source activity and RDS
 
 The library requests active areas with `*#22*2#SOURCE*13##`. A tested response at `5#2#SOURCE` carries sixteen flags for area indices `0..15`, replacing that source's cached area set; its matching `WHAT 2#4#AREA` notifications add an active area. An OFF state report clears the set. Selecting another source for a cached area removes that area from the previous source. In monochannel mode its `WHAT 2` notifications use area `0`. BtExperience exposes only indices `0..8` and emits an activity change when its area set crosses between empty and nonempty. These are internal state-model choices, not revised published area domains.

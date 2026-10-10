@@ -141,6 +141,24 @@ BtExperience's alarm clocks at `TS10_1_0_23` use a separate local scheduler and 
 
 Configuration stores volume in tens of percentage points, resolves the amplifier by an application Object reference, and selects the first configured source of the requested type. These fields are not bus addresses or a general OpenWebNet alarm schema. The scheduler does not establish missed-event recovery or duplicate-trigger suppression. Earlier implementations and corrections are scoped in [Alarm-clock history evidence](../project/review/myopencommunity-alarm-clock-history-review.md).
 
+## Generic simulator scripts
+
+MyHomeSystemEmulator's generic Device at retained revision `4f93f44ee5ec` uses a script-backed response model, separate from its product-specific models and the touchscreen scenario engine.
+
+| Mechanism | Simulator behavior |
+| --- | --- |
+| Trigger | Exact match on the stored `OPEN` string after the internal Device-destination check; no wildcard or functional `WHO` matcher |
+| Unmatched trigger | Reports a local missing-trigger error; this path does not itself construct an OpenWebNet `NACK` |
+| Action loop | Iterates from `from` through `repeat`, inclusive; `repeat` is the final index rather than an iteration count |
+| Output channel | `CMD` replies to the incoming source; `MON` targets the internal gateway and preserves the internal message ID; `GUI` calls the event handler |
+| Unknown channel | Emits no response for that message |
+| Reload | Replaces duplicate trigger keys with the last definition but retains old keys absent from the new document |
+| Saved configuration | Stores the bus and script-file reference, without embedding the script scenarios |
+
+Message substitution replaces `[index]` with the loop index and supports a numeric `[LOW..HIGH]` range. The reviewed implementation fails to advance when a remaining range starts at the beginning of the string; a controlled original-helper run exceeded a one-second bound before termination. Nonzero delay behavior, random distribution and malformed ranges are not certified. The worker places its delay after each message, rather than before the response.
+
+Source inspection establishes dispatch matching; controlled execution establishes the stated loader, substitution and zero-delay worker results. The complete threaded simulator, gateway transport and physical Devices were not executed. A scripted sound or status response consequently establishes the script's configured output, without demonstrating an audio model or hardware capability. See [Generic simulator closure evidence](../project/review/myopencommunity-closure-review.md#controlled-helper-execution).
+
 ## Relationship to `OPEN.db`
 
 `OPEN.db` describes MyHOME_Suite communication scenarios for diagnostics and Device programming. It does not define the Scenario Engine graph or replace the functional meanings of ScenarioDevices action frames.
