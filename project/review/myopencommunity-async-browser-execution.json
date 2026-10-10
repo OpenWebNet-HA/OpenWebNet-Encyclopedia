@@ -1,0 +1,490 @@
+{
+  "bodies": [
+    {
+      "body_sha256": "c4afc73d46df506d93963ec352ab7a5319e88fa4e2f73753b7b1da154aee64db",
+      "end_line": 788,
+      "file_sha256": "3997f05c704bfb02355204b6949df92b85b557d87d5ebebffa6119b3f9bb070d",
+      "git_blob": "a12f1189733662bf1d4c9a30dbf9937074041897",
+      "path": "BtObjects/mediaobjects.cpp",
+      "repository": "MyOpenCommunity/BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "start_line": 746,
+      "symbol": "SourceLocalMedia::scanPath"
+    },
+    {
+      "body_sha256": "0d13d2f810a8fa8267ad1a61f3403264bf5e2da7777f241efd72b26b0bb7a5de",
+      "end_line": 744,
+      "file_sha256": "3997f05c704bfb02355204b6949df92b85b557d87d5ebebffa6119b3f9bb070d",
+      "git_blob": "a12f1189733662bf1d4c9a30dbf9937074041897",
+      "path": "BtObjects/mediaobjects.cpp",
+      "repository": "MyOpenCommunity/BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "start_line": 722,
+      "symbol": "SourceLocalMedia::playFirstMediaContent"
+    },
+    {
+      "body_sha256": "ee10c2cde9bb56250b2b6b6cb0332336fcb3877853bef3d26cfa0e3b098572a5",
+      "end_line": 524,
+      "file_sha256": "4f71184b3ff6573b8b38df2c0c100b4f0bd36d075b374e36e44ee39090060dfd",
+      "git_blob": "e7e31fb489a3e7ad347c0d8ef219a071ce65d19c",
+      "path": "mediaplayer.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 512,
+      "symbol": "MediaPlayer::requestInitialPlayingInfo"
+    },
+    {
+      "body_sha256": "6798ccb280ae4eccae4a9ebfd8b0f8201aed1a6e88365df4013efb8be148f8e0",
+      "end_line": 659,
+      "file_sha256": "4f71184b3ff6573b8b38df2c0c100b4f0bd36d075b374e36e44ee39090060dfd",
+      "git_blob": "e7e31fb489a3e7ad347c0d8ef219a071ce65d19c",
+      "path": "mediaplayer.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 649,
+      "symbol": "MediaPlayer::infoReceived"
+    },
+    {
+      "body_sha256": "c0ad054d726dfdcfbab0dbadd039ffa2654e91018d21d79dda1e4c3ff833af84",
+      "end_line": 96,
+      "file_sha256": "4f71184b3ff6573b8b38df2c0c100b4f0bd36d075b374e36e44ee39090060dfd",
+      "git_blob": "e7e31fb489a3e7ad347c0d8ef219a071ce65d19c",
+      "path": "mediaplayer.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 78,
+      "symbol": "getAudioDataSearchMap"
+    },
+    {
+      "body_sha256": "fdd8ea5c9ed1450b589125bd06cd8f870ee5d53a352159bd2b8513a715ffe0c5",
+      "end_line": 122,
+      "file_sha256": "4f71184b3ff6573b8b38df2c0c100b4f0bd36d075b374e36e44ee39090060dfd",
+      "git_blob": "e7e31fb489a3e7ad347c0d8ef219a071ce65d19c",
+      "path": "mediaplayer.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 107,
+      "symbol": "parsePlayerOutput"
+    },
+    {
+      "body_sha256": "15c42532e4889a1f16f5604b9878a2696cf78a7fee3e277daba9f8fbec7eb449",
+      "end_line": 158,
+      "file_sha256": "4f71184b3ff6573b8b38df2c0c100b4f0bd36d075b374e36e44ee39090060dfd",
+      "git_blob": "e7e31fb489a3e7ad347c0d8ef219a071ce65d19c",
+      "path": "mediaplayer.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 124,
+      "symbol": "extractMPlayerInfo"
+    },
+    {
+      "body_sha256": "504a57049d628f163ec4854789a59fa1e1caa5043f41a0721139c89db95a1bfe",
+      "end_line": 167,
+      "file_sha256": "4f71184b3ff6573b8b38df2c0c100b4f0bd36d075b374e36e44ee39090060dfd",
+      "git_blob": "e7e31fb489a3e7ad347c0d8ef219a071ce65d19c",
+      "path": "mediaplayer.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 160,
+      "symbol": "startFakePlayer"
+    },
+    {
+      "body_sha256": "e146d4d3a7e664e08a843526e647062d62b3d2a9573b8676ea5638f803c24e05",
+      "end_line": 396,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 393,
+      "symbol": "XmlDevice::reset"
+    },
+    {
+      "body_sha256": "89a895b760804faba2c3587a3ca0be25896d44243ba65f193b224dca9799d0b9",
+      "end_line": 488,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 481,
+      "symbol": "XmlDevice::cleanSessionInfo"
+    },
+    {
+      "body_sha256": "fc382a48c81251190e7058a71940bf0a49a7ab355e92142742b4c2d5e4f6552b",
+      "end_line": 467,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 462,
+      "symbol": "XmlDevice::handleClientError"
+    },
+    {
+      "body_sha256": "e8db6bd6970c79763725614c59a41659cad383334de10736c0bafc83ae0c53d6",
+      "end_line": 479,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 469,
+      "symbol": "XmlDevice::sendFirstQueuedMessage"
+    },
+    {
+      "body_sha256": "54e208a83ca544cd4bb11759004cc68cc7415a1c79b706d6e64e03a32a6cf926",
+      "end_line": 493,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 490,
+      "symbol": "XmlDevice::sendCommand"
+    },
+    {
+      "body_sha256": "5501cbe6cffe2d511dca86dce28ffa31e9003f3385de1efe73bf7d84b056d87f",
+      "end_line": 636,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 622,
+      "symbol": "XmlDevice::parseAck"
+    },
+    {
+      "body_sha256": "e524abbd7500afa1d21c279f89caf506a3513ee7812fc51f371d47acf64982e3",
+      "end_line": 401,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 398,
+      "symbol": "XmlDevice::requestUPnPServers"
+    },
+    {
+      "body_sha256": "776009aa821e6d721e1b4e208c8208efe2ee26d07ab663f84fe6f996afc5b9ca",
+      "end_line": 406,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 403,
+      "symbol": "XmlDevice::selectServer"
+    },
+    {
+      "body_sha256": "366385633795a6edce580f8c8317ccd9d0e30f7ae7d3a03d8ad048ad66eaf868",
+      "end_line": 411,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 408,
+      "symbol": "XmlDevice::chDir"
+    },
+    {
+      "body_sha256": "170034020ae1fc7954a2f3d44316ea12a769011b22fb81431e0b43c3de8b54d4",
+      "end_line": 431,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 428,
+      "symbol": "XmlDevice::browseUp"
+    },
+    {
+      "body_sha256": "f46be5b35078c643e74330b7ac6d24260e78b814d069f0b0add0bd282c15fe6c",
+      "end_line": 447,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 441,
+      "symbol": "XmlDevice::listItems"
+    },
+    {
+      "body_sha256": "f5b2754e0a61e8317832a2ca0f20a51a44d6e4b9d7342d223b109c5eae4e49aa",
+      "end_line": 439,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 433,
+      "symbol": "XmlDevice::setContext"
+    },
+    {
+      "body_sha256": "c8088fc430409554ed44beb729fc86a8fe7468c44315b72f9c71deab068d747e",
+      "end_line": 521,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 516,
+      "symbol": "XmlDevice::select"
+    },
+    {
+      "body_sha256": "00d9aad1ca434d5d0f37b8a5b6a117429d8c7fd1526c16dc3c1c406abb659f63",
+      "end_line": 673,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 670,
+      "symbol": "XmlDevice::lastQueuedCommand"
+    },
+    {
+      "body_sha256": "92fe8e5b8fa39f4a71ae8d4d274ca1cfb361d789fcaf612704a2344a0d35db55",
+      "end_line": 678,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 675,
+      "symbol": "XmlDevice::lastAnsweredCommand"
+    },
+    {
+      "body_sha256": "35989928e923427efee3ce8731f0c327b83871c4803df722650027399f0ff582",
+      "end_line": 514,
+      "file_sha256": "811be9e5975a4f5403c41cd8a905333a87787b97d0e446435f4121d32d4b9269",
+      "git_blob": "93d411f1960ec15ef2bc56bee0099d4b6b8a4a77",
+      "path": "xmldevice.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 495,
+      "symbol": "XmlDevice::sendCommand(three arguments)"
+    },
+    {
+      "body_sha256": "62f7746c3d759ade47d5730d6d8b37fdf255aa1e77d5c646f25746b50a2c807c",
+      "end_line": 212,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 206,
+      "symbol": "UPnpClientBrowser::reset"
+    },
+    {
+      "body_sha256": "fb7df5ae557af288a7694a34884c6baac97c5f14365222045eb7cfedb1c77ecb",
+      "end_line": 221,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 214,
+      "symbol": "UPnpClientBrowser::enterDirectory"
+    },
+    {
+      "body_sha256": "24e94df17fceb35f97308bf161451398284e518b4c5027f6038d573b387101bf",
+      "end_line": 237,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 223,
+      "symbol": "UPnpClientBrowser::exitDirectory"
+    },
+    {
+      "body_sha256": "9702a8c7ba92da5e6f9e555fc2545dfc3b3e7976f2d1540d747aaa30d9a3a950",
+      "end_line": 242,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 239,
+      "symbol": "UPnpClientBrowser::getFileList"
+    },
+    {
+      "body_sha256": "648d0cd84c73db631b6543bfc5b292c4b28f77cc7d1289719f1cfff1b2c9551d",
+      "end_line": 266,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 255,
+      "symbol": "UPnpClientBrowser::getPreviousFileList"
+    },
+    {
+      "body_sha256": "94d207c5554aa06e131ab8a62406699af2764937291de81895d1b5d3161d4311",
+      "end_line": 279,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 268,
+      "symbol": "UPnpClientBrowser::getNextFileList"
+    },
+    {
+      "body_sha256": "3214e5a059ebe31d4d8188db59df05ba43320cbf42043512003fa4b44515a870",
+      "end_line": 284,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 281,
+      "symbol": "UPnpClientBrowser::getNumElements"
+    },
+    {
+      "body_sha256": "a82b1223c3556d553ef23e2a12beec739730b13b41bec61572e593407cbbc1ab",
+      "end_line": 289,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 286,
+      "symbol": "UPnpClientBrowser::getStartingElement"
+    },
+    {
+      "body_sha256": "268d4b19aa039d691d532683180e471b7b9d0639846dfa44376e0c513faad3ce",
+      "end_line": 304,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 301,
+      "symbol": "UPnpClientBrowser::isRoot"
+    },
+    {
+      "body_sha256": "d96d895a3bdd4b8fb0ff3bdcec3e9b515ab9feb28bbedfefd3eeba4cab0fcd12",
+      "end_line": 454,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 449,
+      "symbol": "UPnpClientBrowser::setContext"
+    },
+    {
+      "body_sha256": "0c6d8d3fa31aaf08ebd463232b9d02ae095d02487b6a95e55e538e4c4c810c90",
+      "end_line": 294,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 291,
+      "symbol": "UPnpClientBrowser::lastQueuedCommand"
+    },
+    {
+      "body_sha256": "99473df88ed99132b0c84635b8bf494ad3354143975a51e429ee6d96d32ea6fb",
+      "end_line": 299,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 296,
+      "symbol": "UPnpClientBrowser::lastAnsweredCommand"
+    },
+    {
+      "body_sha256": "85d930cf6514ef1255dacb2bd60534faca2c5e22ac25c9a4eeec12f6b19a0729",
+      "end_line": 391,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 327,
+      "symbol": "UPnpClientBrowser::handleResponse"
+    },
+    {
+      "body_sha256": "7ba0fb5b957b0ffc36b5b1655ab81e2a8bda9bb6bf71757f0d7a2ddca6793bdb",
+      "end_line": 447,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 393,
+      "symbol": "UPnpClientBrowser::handleError"
+    },
+    {
+      "body_sha256": "faccbcf4b48f2a0cbe8b4b1de8620766ecd2333befc5b6b77362033031bcdd2a",
+      "end_line": 253,
+      "file_sha256": "af5652efb5f4c22f883de0e9cfacab327ca4b7a38b4a46a2b2da8be1751d7afe",
+      "git_blob": "881947099d6869c57eef5b139633b8965c53d3e0",
+      "path": "treebrowser.cpp",
+      "repository": "MyOpenCommunity/libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "start_line": 244,
+      "symbol": "UPnpClientBrowser::getFileList(int)"
+    },
+    {
+      "body_sha256": "b34423adb18aeac7ef70096435d82f69a9c77720cb6e872806848b11eb214507",
+      "end_line": 169,
+      "file_sha256": "d6f0783f94d0f5fb27f9498cc9d3ca76ced231d975c0160aabdb1bef0bf252ee",
+      "git_blob": "897501e6712cc4bb2aba5b88c930e8e4ab3224f5",
+      "path": "BtObjects/folderlistmodel.cpp",
+      "repository": "MyOpenCommunity/BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "start_line": 149,
+      "symbol": "TreeBrowserListModelBase::TreeBrowserListModelBase"
+    },
+    {
+      "body_sha256": "744728e426902b0985618ff1b5b01d0f584a6f5d8596a2d5b3480e21fb8f4ccf",
+      "end_line": 220,
+      "file_sha256": "d6f0783f94d0f5fb27f9498cc9d3ca76ced231d975c0160aabdb1bef0bf252ee",
+      "git_blob": "897501e6712cc4bb2aba5b88c930e8e4ab3224f5",
+      "path": "BtObjects/folderlistmodel.cpp",
+      "repository": "MyOpenCommunity/BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "start_line": 213,
+      "symbol": "TreeBrowserListModelBase::setLoading"
+    },
+    {
+      "body_sha256": "a85c99fef1a82c45846c743661caf7845721727f7bec661ad6f459a855129fab",
+      "end_line": 620,
+      "file_sha256": "d6f0783f94d0f5fb27f9498cc9d3ca76ced231d975c0160aabdb1bef0bf252ee",
+      "git_blob": "897501e6712cc4bb2aba5b88c930e8e4ab3224f5",
+      "path": "BtObjects/folderlistmodel.cpp",
+      "repository": "MyOpenCommunity/BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "start_line": 582,
+      "symbol": "PagedFolderListModel::gotFileList"
+    }
+  ],
+  "compiler": "g++ (SUSE Linux) 16.2.1 20260929",
+  "helper_path": "project/review/checks/check_myopencommunity_async_browser_helpers.py",
+  "helper_sha256": "f9b3969694da0fda3bc453e4cf974430744fec270abd34f423459eaed90ac1a5",
+  "moc": "moc-qt5 5.15.19",
+  "qt_version": "5.15.19",
+  "results": [
+    {
+      "experiment": "scan",
+      "result": "controlled scan/request/lifetime scenarios passed"
+    },
+    {
+      "experiment": "metadata",
+      "result": "controlled native-Qt watcher scenarios passed"
+    },
+    {
+      "experiment": "probe",
+      "result": "controlled native-Qt process-probe scenarios passed"
+    },
+    {
+      "experiment": "browser",
+      "result": "controlled queue/browser/model scenarios passed"
+    }
+  ],
+  "scope": "Four controlled experiments: native Qt Core objects, event delivery, QProcess and QDir, with manual future completion instead of original QtConcurrent; substitute model caches, client connectivity, XML envelope/parser and dispatcher seams. No original suite, real MPlayer/GStreamer, network, bus, simulator or hardware."
+}

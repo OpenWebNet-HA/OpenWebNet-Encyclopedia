@@ -36,3 +36,22 @@ BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`, and libqtco
 The list manager emits a local server-down signal for track-selection or invalid-response server-down errors. Its error handler does not clear the current track or stop playback, and the reviewed BtExperience playlist does not connect that signal to termination or alarm fallback. Earlier touchscreen pages did consume it for page-state handling. These are implementation differences, not universal server-failure behavior.
 
 The UPnP source object supplies explicit selection playback but inherits a false first-content result rather than discovering an initial track automatically. See [Historical local playback](../who-22-sound-diffusion/#historical-local-playback) and [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md). No numeric `WHO 26` encoding or physical playback result follows from these client paths.
+
+### Browser state and recovery
+
+The same pinned libqtcommon browser and BtExperience paged model maintain local navigation state separately from service responses.
+
+| Operation / result | Implementation behavior |
+| --- | --- |
+| Enter a server or directory | Append its name before sending selection; a failure does not roll back that context |
+| Set navigation context | Change the local level before the response; success installs the pending context, while failure reports a generic error without restoring the previous level |
+| Return from a server to the server list | Set level to zero and request servers, retaining the old context until a separate reset clears it |
+| Browser reset | Clear level, rank and current context; retain pending context and queued commands. A later directory response can still increment the level |
+| Selection error | Browsing failure emits directory-change error, empty content emits empty-directory, and other failures emit generic error |
+| Parent-navigation error | Server-down emits generic error without changing level. Other errors at level one return locally to root and trim context; deeper errors emit directory-change error |
+| Model loading | Directory-change error clears the base model's loading flag; list-retrieval error clears the paged model's flag. Empty-directory and generic-error signals have no equivalent connection in these model constructors |
+| Paged reply admission | Ignore replies for an inactive model or with a local answered ordinal at or below the recorded discard boundary; this discards results without cancelling commands |
+
+Root server lists are cached locally. Service pages use one-based `rank` and a four-entry request size. Type filtering occurs after decoding, while `total` remains the service's unfiltered count. The paged model requests the next rank using the number of accepted entries. With a positive remaining count and an all-filtered page, it can repeatedly request the same rank; the archived mock tests do not exercise that service/filter combination.
+
+The shared OpenXml device queues commands while disconnected or while a session ID is outstanding. Queued dispatch waits for the welcome state; ACK return code `200` clears SID and PID and dispatches the next command. Session cleanup leaves the queue intact, and the device's reset method is unimplemented. Answered ordinals are local bookkeeping copied from the last sent command, not response identifiers verified against the service. Earlier libraries used different queue and stale-result handling. None of these policies establishes automatic recovery or a deployed gateway contract. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md) and [XML transport](../../protocol/stream-parsing.md#separate-multimedia-xml-transport).

@@ -240,6 +240,8 @@ BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9` connects loc
 | --- | --- |
 | IP-radio first-content result | Start the configured Web Radio playlist when nonempty, then report whether entries exist; no stream connection or decoding check |
 | USB/SD discovery | Search directories breadth first and stop at the first directory containing an audio-extension match; select an audio entry and build a playlist of that entry's file type |
+| Replacement discovery request | A mounted request marks the previous search's flag and starts another search. An unmounted or empty-path request reports failure before marking that flag |
+| Unavailable discovery path | The worker ignores directory-change failures; a missing root can leave it searching the process's current directory |
 | Playback start | Audio uses an MPlayer process; `Playing` follows process startup, without checking decoded or audible output |
 | Pause and resource release | Ordinary pause retains locally active audio output. Releasing output stops the process while reporting logical `Paused`; audio resume attempts a restart at the cached time |
 | Automatic next item | A transition to `Stopped` advances the playlist unless a user-change flag suppresses it or the rapid-loop guard fires |
@@ -253,6 +255,12 @@ Process failures have narrower handling than the playlist model suggests. While 
 The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. Other local audio-state consumers remain separate. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
 
 Earlier clients used different loop and resource-release handling. These changes identify software revisions, not deployed Firmware boundaries. See [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md) for inspected expectations, controlled helper execution and unresolved runtime conditions.
+
+The discovery class supplies no worker cancellation or join on destruction. Its parented completion watchers do not themselves establish that worker execution has stopped. Cancellation uses a shared flag polled between directory searches; visibility, model thread affinity and physical removal timing remain unverified.
+
+Local metadata extraction in libqtcommon at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2` starts a separate MPlayer process with null audio/video output. It accumulates output until `current_time` is found or a five-second elapsed guard is exceeded, then requests termination and waits up to 300 ms. Failed startup or early exit does not bypass that guard; the result may be partial or empty, without a success field. Matching uses the last occurrence of each requested property. Earlier code waited without an elapsed guard and used the first match.
+
+Replacing a metadata request schedules the previous watcher for deletion without cancelling or waiting for its worker. Completion reads the current watcher rather than the signal sender, and emits the result before deleting that current watcher. Controlled Qt delivery demonstrates replacement-result misattribution and deletion of a watcher created synchronously during notification. BtExperience merges returned properties into the current track information without matching a track identity. These are client/library limitations, not verified playback or Firmware behavior. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md).
 
 ## Source and speaker semantics
 
