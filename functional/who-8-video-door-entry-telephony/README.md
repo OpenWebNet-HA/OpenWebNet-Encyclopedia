@@ -66,6 +66,26 @@ The `WHAT 79` receive test establishes the field order with `KIND = 1`, `MMTYPE 
 
 The touchscreen application uses an 11-second association timer. It accepts the association result only while that timer is active; received `WHAT 78` and timer expiry end the pending association. Neither establishes a wire-protocol timeout. At `TS10_1_0_23`, a nonzero stored ID registers the association frame for connection initialization; changing the ID replaces that frame, and zero removes it without sending an unlink command. This supersedes an earlier delayed device-init path. See [Teleloop evidence](../../project/review/myopencommunity-intermediate-history-review.md#teleloop-association-and-session).
 
+### Local call audio in BtExperience
+
+At archived BtExperience revision `b88cdac9665d`, the call model delegates wire messages to the Video Door Entry library. Its volume and mute setters only cache values and notify the UI; the connected controls select local audio paths. They do not send a `WHO 8` volume or mute frame.
+
+| Event or state | Local client behavior |
+| --- | --- |
+| Incoming ringtone | With notifications enabled, ringtone exclusion suppresses sound but still enables `VdeRingtone` to interrupt multimedia. Disabling notifications returns before either action |
+| Ringtone completion | Call ringtones retain their audio state after playback stops; call-end handlers clear it. Floor-call playback uses automatic state release. An empty ringtone path returns before enabling the requested state |
+| Answer | Select SCS or IP video/intercom state; an intercom answer first clears sender/receiver pager states. Teleloop enables its separate state |
+| Pager audio | Microphone and speaker requests select sender and receiver pager states. Both use the video-call volume channel in this revision |
+| Call mute | The SCS call-to-mute transition preserves the selected path and uses a separate mute operation; the corresponding UI property alone does not perform it |
+| IP and teleloop routing | The UI enables these states, but this revision has no dedicated entry/exit routing cases for them. This does not establish whether a product supports IP calls or teleloop |
+| Camera cycling | Grabber state changes request audio disable/enable only while the selected audio state is `ScsVideoCall`. Process startup is not reported as running |
+
+Audio enable during camera cycling uses a 300-ms local timer. Explicit audio disable cancels it, but leaving the call state does not cancel it or make its callback check the current state. A controlled execution of the original controller issues an audio-on request after a call has ended; no physical audio outcome is established. This is not a bus timing requirement.
+
+The ringtone manager emits its completion notification before releasing an automatically managed state. A synchronous completion listener that starts another automatically managed ringtone can have that replacement state cleared by the subsequent cleanup. This is a revision-scoped callback limitation, not call-protocol behavior.
+
+The earlier TS10 library implementation has dedicated SCS and IP routing callbacks and a stack-based audio controller. See [Historical local audio arbitration](../who-22-sound-diffusion/#historical-local-audio-arbitration) and [Call/audio evidence](../../project/review/myopencommunity-audio-call-review.md) for revision and execution scope.
+
 ## Historical Guard Unit messaging
 
 The same touchscreen stack implements Guard Unit messages under `WHO 8`. This is distinct from the [`WHO 12` Messages namespace](../who-12-messages/).

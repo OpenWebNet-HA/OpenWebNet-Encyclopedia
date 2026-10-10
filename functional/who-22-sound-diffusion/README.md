@@ -289,6 +289,23 @@ The separate `AudioState` controller chooses the highest enabled state in its or
 
 Build selection and consumers matter: the pinned plugin supplies an ALSA `plughw=0.0` argument outside its X11 branch, while X11 leaves output selection to MPlayer. Older library branches contain OSS and different ALSA choices, and older audio-state implementations use different scaling and routing triggers. These settings are not amplifier volume scales or deployed Firmware boundaries. See [Video and native-runtime evidence](../../project/review/myopencommunity-video-runtime-review.md) for exact build/source scope, historical comparisons and execution conditions.
 
+### Historical local audio arbitration
+
+The TS10 non-X11 implementation retained at libqtdevices revision `13f0c2049666` uses an audio-state stack. Its build definition selects this implementation for PXA270 and a separate implementation for X11. These are software/build distinctions, not identified Firmware generations.
+
+| Mechanism | Earlier TS10 implementation | BtExperience `b88cdac9665d` |
+| --- | --- | --- |
+| Priority | Call, call-ringtone, floor-call and mute states precede alarm states, which precede ordinary playback/ringtones. Lower-priority requests remain below them until higher states are removed | Highest enabled enum state wins; repeated enabling sets a flag rather than pushing another occurrence |
+| Repeated current state | Push another occurrence and emit re-entry without rerunning path callbacks; one removal leaves the other occurrence | One disable clears the enabled flag |
+| Transition completion | The stack top changes before path transition completion. Direct audio access normally delays callbacks; a 10-second guard can force completion while the access flag remains true | Temporarily pause local multimedia, request output release and complete on the direct-access notification; eligible temporary playback resumes when local playback regains priority |
+| Source Configuration | Without a local source, local media and amplifier activity select separate playback states. With a configured source, source, amplifier or media activity retain the Sound Diffusion state | Registered source active-state notifications select the local routing scripts |
+
+The earlier local amplifier's temporary-off flag preserves its logical ON status. Volume changes while temporarily off update the cache without writing that volume; restoration uses the latest cached value when the amplifier is logically ON. Its virtual-amplifier temporary-off request schedules restoration after one second. This client timer is not an amplifier-wide protocol timeout.
+
+The older `WHO 8` [silence/restore events](../who-8-video-door-entry-telephony/#teleloop-and-local-multimedia-events) use a different consumer: it freezes the current level, publishes silenced level `1`, ignores repeated silence while frozen and schedules a 900-second fallback. Restore publishes the frozen level while in Sound Diffusion, or `0` outside it. These cached report choices and local timers do not establish how physical amplifiers respond.
+
+The call/mute callbacks preserve SCS or IP routing across mute transitions; the retained historical correction replaces microphone volume changes with a separate mute operation. See [Call/audio evidence](../../project/review/myopencommunity-audio-call-review.md) for exact revisions, original-helper conditions and unresolved device behavior. Current call UI and camera-cycling limitations are documented under [Local call audio](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience).
+
 ## Source and speaker semantics
 
 Source commands and reports use source addresses; volume/tone/balance operations generally apply to speaker endpoints or areas. `WHAT 35` carries routing intent by selecting a source while turning an amplifier on. Follow Me (`WHAT 34`) is a separate operation and should not be normalized to ordinary ON.
