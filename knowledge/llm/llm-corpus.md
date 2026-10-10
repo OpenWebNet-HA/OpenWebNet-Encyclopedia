@@ -8564,7 +8564,7 @@ Individual claims: `ownkb:claim:moc-c007789`, `ownkb:claim:moc-c007790`, `ownkb:
 Section ID: `ownkb:section:d000053:s000018`
 
 Cautions: `do not`
-Uncertainty: `not established`, `not verified`
+Uncertainty: `not verified`
 Provenance cues: `evidence`, `source`
 
 The archived touchscreen alarm clocks are local controllers using ordinary source, station, volume and amplifier operations. Their scheduling is separate from the sound protocol; see [Touchscreen alarm-clock scheduling](../../scenario-engine/execution-model.md#historical-touchscreen-alarm-clock-scheduling).
@@ -8580,7 +8580,7 @@ The archived touchscreen alarm clocks are local controllers using ordinary sourc
 
 The alarm controllers do not inspect acknowledgements or confirm physical playback. The earlier helper's stop operation turns off selected amplifiers; the compared controllers do not restore the preceding source or volume. BtExperience's “ringing” flag describes an active timer.
 
-For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. Reliable fallback for every USB/SD search or failed network stream is not established. See [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
+For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. The controller disconnects it after the first result and has no player-error subscription in this path. A later failed stream or exhausted playlist therefore does not itself trigger this fallback. USB/SD completion also has a cancellation-flag lifetime defect in the reviewed client. See [Local playback](#historical-local-playback) and [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
 
 Evidence finding `moc-e0084` (claimed): Alarm sound-helper dispatch
 Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
@@ -8613,6 +8613,13 @@ Individual claims: `ownkb:claim:moc-c007782`, `ownkb:claim:moc-c007783`, `ownkb:
   Conditions: Same original-body alarm harness, controlled timers/signals/delegates.
   Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
   Execution record: original_helper_in_adapted_harness - The same 32-comparison run checks the controller; not an independent second run.; Same original-body alarm harness, controlled timers/signals/delegates.. Inputs: Double-truncated ramp; Explicit Stop without OFF; Snooze/expiry/fallback. Record: `project/review/myopencommunity-alarm-clock-history-review.md` (32 comparisons).
+
+Evidence finding `moc-e0133` (claimed): Alarm fallback subscription ends after first result
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074021`
+- `ownkb:source:moc-s000239`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AlarmClock::startRinging; AlarmClock::mediaSourcePlaybackStatus](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/alarmclock.cpp#L395-L582) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074021
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
 
 #### Tone, balance, and presets
 
@@ -8762,6 +8769,143 @@ Individual claims: `ownkb:claim:moc-c007827`, `ownkb:claim:moc-c007828`
 - `ownkb:source:moc-s000244`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - createMediaInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/c4c72360b2983905a18b33ed48f6c70b31afce79/devices/test/test_media_device.cpp#L256-L293) at `c4c72360b2983905a18b33ed48f6c70b31afce79`. Review: `project/review/myopencommunity-integration.md`.
   Examination claims: ownkb:claim:moc-c007827, ownkb:claim:moc-c007828
   Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+#### Historical local playback
+
+Section ID: `ownkb:section:d000053:s000019`
+
+Applicability cues: `firmware`, `revision`, `scs`
+Cautions: `do not`
+Uncertainty: `not established`, `unresolved`
+Provenance cues: `evidence`, `source`
+
+BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9` connects local media to its virtual Sound Diffusion source. These are client policies, separate from amplifier power, bus acknowledgements and audible output.
+
+| Operation or result | Client behavior |
+| --- | --- |
+| IP-radio first-content result | Start the configured Web Radio playlist when nonempty, then report whether entries exist; no stream connection or decoding check |
+| USB/SD discovery | Search directories breadth first and stop at the first directory containing an audio-extension match; select an audio entry and build a playlist of that entry's file type |
+| Playback start | Audio uses an MPlayer process; `Playing` follows process startup, without checking decoded or audible output |
+| Pause and resource release | Ordinary pause retains locally active audio output. Releasing output stops the process while reporting logical `Paused`; audio resume attempts a restart at the cached time |
+| Automatic next item | A transition to `Stopped` advances the playlist unless a user-change flag suppresses it or the rapid-loop guard fires |
+| Rapid-loop guard | On reaching the item before the recorded starting index, suppress further advance and emit a loop notification if elapsed time is below `2 seconds * item count`; this is a retry heuristic, not a playback-error diagnosis |
+| Local media unmount | A matching local mount notification terminates the playlist when the current path begins with that mount path; it does not cancel the separate discovery worker |
+
+The USB/SD worker uses one flag for cancellation and unsuccessful search. Completion deletes the result flag before reading it for the first-content notification and does not clear the owning member. If that member still points to the deleted flag, a later mounted search can write through freed storage. Reliable completion and repeated-search behavior are therefore not established. Source selection also handles asynchronous results using the current source index, without matching the callback sender to the requested source.
+
+Process failures have narrower handling than the playlist model suggests. While active, the audio wrapper maps normal exit `0` to done, exit `1` or a crash to stopped; other normal exit codes emit neither completion signal. Its process-error handler only logs. Playlist retry and alarm fallback cannot be assumed to cover every failure.
+
+The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. Other local audio-state consumers remain separate. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
+
+Earlier clients used different loop and resource-release handling. These changes identify software revisions, not deployed Firmware boundaries. See [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md) for inspected expectations, controlled helper execution and unresolved runtime conditions.
+
+Evidence finding `moc-e0125` (claimed): First-content discovery and local playlist scope
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c073994`, `ownkb:claim:moc-c073995`, `ownkb:claim:moc-c073996`, `ownkb:claim:moc-c073997`
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceIpRadio::playFirstMediaContent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L627-L645) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073994
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::scanPath](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L746-L788) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073995, ownkb:claim:moc-c073997
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::generate](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L186-L227) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073996
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0126` (claimed): Logical playback state and output ownership
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c073998`, `ownkb:claim:moc-c073999`, `ownkb:claim:moc-c074000`, `ownkb:claim:moc-c074001`
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::MultiMediaPlayer; MultiMediaPlayer::mplayerStarted](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L51-L394) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073998
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::runMPlayer](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L401-L425) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073998
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::getPlayerState; MultiMediaPlayer::getAudioOutputState; MultiMediaPlayer::releaseOutputDevices; MultiMediaPlayer::mplayerStopped; MultiMediaPlayer::resume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L114-L421) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073999, ownkb:claim:moc-c074000, ownkb:claim:moc-c074001
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001139`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestMultiMediaPlayer::testPauseResume; TestMultiMediaPlayer::testPauseReleaseResume; TestMultiMediaPlayer::testReleaseResume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_multimedia_player.cpp#L225-L358) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073999, ownkb:claim:moc-c074000
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Inspected expected results; the archived suite was not executed.
+
+Evidence finding `moc-e0127` (claimed): Playlist retries and local removal handling
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074002`, `ownkb:claim:moc-c074003`, `ownkb:claim:moc-c074004`
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioVideoPlayer::handleMediaPlayerStateChange; PlayListPlayer::checkLoop](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L148-L491) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074002, ownkb:claim:moc-c074003
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001136`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - PlayListPlayer::checkLoop; PlayListPlayer::resetLoopCheck; AudioVideoPlayer::handleMediaPlayerStateChange](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L148-L491) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074002, ownkb:claim:moc-c074003
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - 18 controlled comparisons passed; no complete archived suite or real playback executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Normal exits 0, 1 and 2; crash exit; inactive wrapper.; Stopped playlist with and without user-change suppression.; Three-item loop at 5999 and 6000 ms; one-item loop; no active list; reset.; Track-selection, invalid and server-list errors; server-down and parse error.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001139`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestPlaylistPlayer::testLoopCheck; TestPlaylistPlayer::testResetLoopCheck](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_multimedia_player.cpp#L712-L750) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074003
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Inspected expected results; the archived suite was not executed.
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::directoryUnmounted; AudioVideoPlayer::AudioVideoPlayer; AudioVideoPlayer::terminate](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L128-L417) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074004
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0128` (claimed): USB/SD completion lifetime and callback attribution
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074005`, `ownkb:claim:moc-c074006`, `ownkb:claim:moc-c074007`
+- `ownkb:source:moc-s000207`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L720) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074005
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - AddressSanitizer detected the original completion body reading a heap termination flag after deletion. Worker scheduling, repeated-search write and physical effects were not executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Empty, cancelled completion result with a heap-allocated true termination flag.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L720) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074005
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L720) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074006
+  Conditions: For the owning-member write finding, the member still points to the completing search's deleted result flag; a replacement search can instead install a different flag.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::playFirstMediaContent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L722-L744) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074006
+  Conditions: For the owning-member write finding, the member still points to the completing search's deleted result flag; a replacement search can instead install a different flag.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceMultiMedia::addMediaSource; SourceMultiMedia::firstMediaContentStatus](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L940-L1004) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074007
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0129` (claimed): Audio process completion and error coverage
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074008`, `ownkb:claim:moc-c074009`, `ownkb:claim:moc-c074010`, `ownkb:claim:moc-c074011`
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L594-L622) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074008, ownkb:claim:moc-c074009, ownkb:claim:moc-c074010
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - 18 controlled comparisons passed; no complete archived suite or real playback executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Normal exits 0, 1 and 2; crash exit; inactive wrapper.; Stopped playlist with and without user-change suppression.; Three-item loop at 5999 and 6000 ms; one-item loop; no active list; reset.; Track-selection, invalid and server-list errors; server-down and parse error.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L594-L622) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074008, ownkb:claim:moc-c074009, ownkb:claim:moc-c074010
+  Conditions: The active guard returns without notification when the wrapper is inactive. LAYOUT_TS_10 additionally updates direct-access state before exit classification.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L624-L629) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074011
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0130` (claimed): Local player properties are distinct from backend commands
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074012`, `ownkb:claim:moc-c074013`
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::setVolume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L130-L138) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074012
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::setMute](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L140-L148) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074013
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0134` (deferred): Asynchronous discovery scheduling and removal interleavings
+Disposition reason: Flag lifetime defects are established, but full QtConcurrent worker/model thread affinity, memory visibility, late completion, cancellation, source destruction and mount-removal scheduling were not executed. No deterministic deployment outcome is asserted.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::playFirstMediaContent; SourceLocalMedia::scanPath; SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L788) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0135` (deferred): Complete media runtime and external backend behavior
+Disposition reason: Inspected original tests use MPlayer null audio output and depend on the archived Qt/GStreamer stack. Full suites, real stream failures, media decoders, seek fidelity and audible output were not executed; external player versions and deployed build configuration remain unestablished.
+- `ownkb:source:moc-s001139`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestMultiMediaPlayer::init; TestMultiMediaPlayer::testSeek; TestMultiMediaPlayer::testPlayMulti](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_multimedia_player.cpp#L54-L659) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Inspected original fixture and expectations; the archived test suite was not executed.; Pinned Qt/GStreamer/MPlayer test environment is not a deployed hardware observation.
 
 ### Source and speaker semantics
 
@@ -9722,6 +9866,54 @@ Disposition reason: Historical fixed test SID differs from mature UUID/reset beh
 - `ownkb:source:moc-s000176`: test_expectation_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtcommon - TestXmlClient::TestXmlClient; TestXmlClient::init; TestXmlClient::testDouble; TestXmlClient::testGarbage; TestXmlClient::testSimple](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_xmlclient.cpp#L27-L83) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-transport-history-review.md`.
   Examination claims: none - review context or unmaterialized finding
   Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+#### Local playlist integration
+
+Section ID: `ownkb:section:d000064:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `evidence`, `source`
+
+BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`, and libqtcommon at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`, share an OpenXml device between browsing and playlist control. Selecting a playlist entry sends its name to the service; the player updates the current URL when a track-selection response arrives. Next/previous adjusts the local index before the service response, so that index alone does not confirm successful selection.
+
+The list manager emits a local server-down signal for track-selection or invalid-response server-down errors. Its error handler does not clear the current track or stop playback, and the reviewed BtExperience playlist does not connect that signal to termination or alarm fallback. Earlier touchscreen pages did consume it for page-state handling. These are implementation differences, not universal server-failure behavior.
+
+The UPnP source object supplies explicit selection playback but inherits a false first-content result rather than discovering an initial track automatically. See [Historical local playback](../who-22-sound-diffusion/#historical-local-playback) and [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md). No numeric `WHO 26` encoding or physical playback result follows from these client paths.
+
+Evidence finding `moc-e0131` (claimed): UPnP playlist selection and asynchronous index
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074014`, `ownkb:claim:moc-c074015`, `ownkb:claim:moc-c074016`
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::PlayListPlayer; PlayListPlayer::generate(UPnPListModel *, int, int); PlayListPlayer::updateCurrentUpnp; PlayListPlayer::updateCurrent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L36-L328) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074014, ownkb:claim:moc-c074015
+  Conditions: UPnP generation overload at lines 229-249; the enclosing range also includes constructor and current-update methods.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001140`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - UPnPListModel::UPnPListModel; UPnPListModel::getXmlDevice](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/folderlistmodel.cpp#L640-L651) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074014
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001141`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpListManager::handleResponse; UPnpListManager::setStartingFile](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L104-L165) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074015
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001141`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpListManager::nextFile; UPnpListManager::previousFile](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L127-L139) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074016
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0132` (claimed): UPnP failure delivery and first-content boundary
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074017`, `ownkb:claim:moc-c074018`, `ownkb:claim:moc-c074019`, `ownkb:claim:moc-c074020`
+- `ownkb:source:moc-s001141`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpListManager::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L113-L125) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074017, ownkb:claim:moc-c074018
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001141`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - UPnpListManager::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L113-L125) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074017
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - 18 controlled comparisons passed; no complete archived suite or real playback executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Normal exits 0, 1 and 2; crash exit; inactive wrapper.; Stopped playlist with and without user-change suppression.; Three-item loop at 5999 and 6000 ms; one-item loop; no active list; reset.; Track-selection, invalid and server-list errors; server-down and parse error.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::PlayListPlayer; AudioVideoPlayer::AudioVideoPlayer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L36-L371) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074019
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceMedia::playFirstMediaContent; SourceUpnpMedia::startUpnpPlay](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L611-L799) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074020
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
 
 # Document: ownkb:document:d000065
 

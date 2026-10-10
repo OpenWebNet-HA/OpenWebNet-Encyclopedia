@@ -28,3 +28,11 @@ The BTicino touchscreen library at `TS10_1_0_23` implements a separate local Ope
 Selection uses the same `id` argument for a server, directory or file. Tested browsing outcomes include `browse_okay`, `empty_directory`, `already_at_root` and `no_such_directory`, depending on the operation. Track records contain a resource URL and, for audio, title, artist, album and duration. XML error text is mapped into local application errors; those enum numbers are not wire return codes.
 
 See [OpenXml service evidence](../../project/review/myopencommunity-coverage-audit.md#openxml-media-vocabulary).
+
+### Local playlist integration
+
+BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`, and libqtcommon at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`, share an OpenXml device between browsing and playlist control. Selecting a playlist entry sends its name to the service; the player updates the current URL when a track-selection response arrives. Next/previous adjusts the local index before the service response, so that index alone does not confirm successful selection.
+
+The list manager emits a local server-down signal for track-selection or invalid-response server-down errors. Its error handler does not clear the current track or stop playback, and the reviewed BtExperience playlist does not connect that signal to termination or alarm fallback. Earlier touchscreen pages did consume it for page-state handling. These are implementation differences, not universal server-failure behavior.
+
+The UPnP source object supplies explicit selection playback but inherits a false first-content result rather than discovering an initial track automatically. See [Historical local playback](../who-22-sound-diffusion/#historical-local-playback) and [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md). No numeric `WHO 26` encoding or physical playback result follows from these client paths.

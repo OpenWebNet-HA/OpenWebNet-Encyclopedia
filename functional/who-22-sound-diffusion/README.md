@@ -185,7 +185,7 @@ The archived touchscreen alarm clocks are local controllers using ordinary sourc
 
 The alarm controllers do not inspect acknowledgements or confirm physical playback. The earlier helper's stop operation turns off selected amplifiers; the compared controllers do not restore the preceding source or volume. BtExperience's “ringing” flag describes an active timer.
 
-For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. Reliable fallback for every USB/SD search or failed network stream is not established. See [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
+For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. The controller disconnects it after the first result and has no player-error subscription in this path. A later failed stream or exhausted playlist therefore does not itself trigger this fallback. USB/SD completion also has a cancellation-flag lifetime defect in the reviewed client. See [Local playback](#historical-local-playback) and [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
 
 ### Tone, balance, and presets
 
@@ -231,6 +231,28 @@ Exact tested examples are `*#22*7*#15*3***9*9**3*1*1*0*1##` for multichannel sou
 The virtual source's next/previous methods deliver local playback requests instead of sending bus frames. Its receiver accepts `WHAT 9` / `10` addressed to that source; the area-addressed delegate additionally accepts `WHAT 9` where the source is active. These method names do not redefine the published station/track command families. Source activation requests (`WHAT 1`) remain distinct from source-activity notifications (`WHAT 2`). BtExperience pauses local playback when no area remains active. This local player integration does not establish numeric [`WHO 26` UPnP Multimedia](../who-26-upnp-multimedia/) syntax.
 
 See [Sound Diffusion evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
+### Historical local playback
+
+BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9` connects local media to its virtual Sound Diffusion source. These are client policies, separate from amplifier power, bus acknowledgements and audible output.
+
+| Operation or result | Client behavior |
+| --- | --- |
+| IP-radio first-content result | Start the configured Web Radio playlist when nonempty, then report whether entries exist; no stream connection or decoding check |
+| USB/SD discovery | Search directories breadth first and stop at the first directory containing an audio-extension match; select an audio entry and build a playlist of that entry's file type |
+| Playback start | Audio uses an MPlayer process; `Playing` follows process startup, without checking decoded or audible output |
+| Pause and resource release | Ordinary pause retains locally active audio output. Releasing output stops the process while reporting logical `Paused`; audio resume attempts a restart at the cached time |
+| Automatic next item | A transition to `Stopped` advances the playlist unless a user-change flag suppresses it or the rapid-loop guard fires |
+| Rapid-loop guard | On reaching the item before the recorded starting index, suppress further advance and emit a loop notification if elapsed time is below `2 seconds * item count`; this is a retry heuristic, not a playback-error diagnosis |
+| Local media unmount | A matching local mount notification terminates the playlist when the current path begins with that mount path; it does not cancel the separate discovery worker |
+
+The USB/SD worker uses one flag for cancellation and unsuccessful search. Completion deletes the result flag before reading it for the first-content notification and does not clear the owning member. If that member still points to the deleted flag, a later mounted search can write through freed storage. Reliable completion and repeated-search behavior are therefore not established. Source selection also handles asynchronous results using the current source index, without matching the callback sender to the requested source.
+
+Process failures have narrower handling than the playlist model suggests. While active, the audio wrapper maps normal exit `0` to done, exit `1` or a crash to stopped; other normal exit codes emit neither completion signal. Its process-error handler only logs. Playlist retry and alarm fallback cannot be assumed to cover every failure.
+
+The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. Other local audio-state consumers remain separate. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
+
+Earlier clients used different loop and resource-release handling. These changes identify software revisions, not deployed Firmware boundaries. See [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md) for inspected expectations, controlled helper execution and unresolved runtime conditions.
 
 ## Source and speaker semantics
 
