@@ -252,15 +252,42 @@ The USB/SD worker uses one flag for cancellation and unsuccessful search. Comple
 
 Process failures have narrower handling than the playlist model suggests. While active, the audio wrapper maps normal exit `0` to done, exit `1` or a crash to stopped; other normal exit codes emit neither completion signal. Its process-error handler only logs. Playlist retry and alarm fallback cannot be assumed to cover every failure.
 
-The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. Other local audio-state consumers remain separate. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
+The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. The separate local routing controller is described below. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
 
 Earlier clients used different loop and resource-release handling. These changes identify software revisions, not deployed Firmware boundaries. See [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md) for inspected expectations, controlled helper execution and unresolved runtime conditions.
 
-The discovery class supplies no worker cancellation or join on destruction. Its parented completion watchers do not themselves establish that worker execution has stopped. Cancellation uses a shared flag polled between directory searches; visibility, model thread affinity and physical removal timing remain unverified.
+The discovery class supplies no worker cancellation or join on destruction. Its parented completion watchers do not themselves establish that worker execution has stopped. Cancellation uses a shared flag polled between directory searches; shared-flag visibility, model thread affinity and physical removal timing remain unverified. Controlled execution of the original dispatcher and worker under Qt 5 confirms that discovery can finish after its source owner is destroyed, using a gated model substitute.
 
 Local metadata extraction in libqtcommon at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2` starts a separate MPlayer process with null audio/video output. It accumulates output until `current_time` is found or a five-second elapsed guard is exceeded, then requests termination and waits up to 300 ms. Failed startup or early exit does not bypass that guard; the result may be partial or empty, without a success field. Matching uses the last occurrence of each requested property. Earlier code waited without an elapsed guard and used the first match.
 
-Replacing a metadata request schedules the previous watcher for deletion without cancelling or waiting for its worker. Completion reads the current watcher rather than the signal sender, and emits the result before deleting that current watcher. Controlled Qt delivery demonstrates replacement-result misattribution and deletion of a watcher created synchronously during notification. BtExperience merges returned properties into the current track information without matching a track identity. These are client/library limitations, not verified playback or Firmware behavior. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md).
+Replacing a metadata request schedules the previous watcher for deletion without cancelling or waiting for its worker. Completion reads the current watcher rather than the signal sender, and emits the result before deleting that current watcher. Controlled Qt delivery demonstrates replacement-result misattribution and deletion of a watcher created synchronously during notification. The latter also occurs with the original metadata worker and QtConcurrent dispatcher; deleting its owner does not cancel that worker in the controlled run. BtExperience merges returned properties into the current track information without matching a track identity. These are client/library limitations, not verified playback or Firmware behavior. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md).
+
+### Local video and audio routing
+
+At the same BtExperience revision, local video uses a separate GStreamer 0.10 executable; audio uses the shared MPlayer wrapper. These client choices do not define `WHO 7`, `16`, `22` or `26` wire semantics.
+
+| Path | Revision-scoped behavior |
+| --- | --- |
+| Video selection | Case-sensitive filename suffix matching selects `mpg`, `avi` and `mp4`; this is not content or codec detection |
+| Video launch and geometry | Launch `gstmediaplayer` beside the application with a display rectangle and track. The helper accepts absolute local paths or strings beginning with `http`; it centers video, shrinks to fit and does not enlarge it |
+| Resolution check | The separate MPlayer helper accepts parsed widths up to 320 and heights up to 240, and rejects missing resolution. The reviewed GStreamer launch does not call that check; it is not a general touchscreen/video limit |
+| Video pause/resume | Pause acknowledgement depends on parsing `state: paused`; resume reports locally when the command is sent. If the process has exited, resume launches the track again without restoring cached position |
+| Seek | The client's seek method sends to the audio player, and its position-start method excludes video. The standalone video helper accepts integer-second seek with flush/key-unit flags; this does not establish a connected video seek control or precise seeking |
+| Video completion/error | The helper's end-of-stream and decoder-error notifications both request ordinary application exit. The wrapper maps normal exit 0 to done, exit 1 or crash to stopped, and other normal codes to neither. Its process-error callback only logs |
+| Video metadata text | The helper periodically emits changed properties. The wrapper parses each read independently, without retaining an incomplete line; split property text can be truncated or lost |
+
+The paused-video exception in the client treats a zero exit while logically paused as stopped. This exception does not distinguish ordinary decoder errors from successful completion while playing. Actual GStreamer decoding, display output and seek accuracy remain unverified.
+
+The separate `AudioState` controller chooses the highest enabled state in its ordered enumeration. Its player-state callback skips `AboutToPause` before reevaluating direct audio access; output-state notifications remain a separate trigger. States above ringtone pause sound-diffusion playback, and temporarily paused sound diffusion is eligible to resume at ringtone or below. These are local arbitration policies, not SCS priorities.
+
+| Local control | Implementation behavior |
+| --- | --- |
+| Beep, local media and ringtone volume | Use the HP DAC control. Percentage 0 maps to 0, 1 to 20, and 2..100 maps by integer arithmetic to 21..118 |
+| SCS video/intercom-call volume | Use a separate ZL control, scaling percentage by `88 / 100` into a padded hexadecimal command argument. Call mute uses a separate operation |
+| Local playback mute | Entering the mute state sets the local playback hardware volume to zero. The multimedia property setter itself only caches and notifies |
+| Local sound-diffusion source activation | The registered source's active-state notification invokes local routing on/off scripts. The reviewed playback-state callback only updates its cached sound-diffusion flag |
+
+Build selection and consumers matter: the pinned plugin supplies an ALSA `plughw=0.0` argument outside its X11 branch, while X11 leaves output selection to MPlayer. Older library branches contain OSS and different ALSA choices, and older audio-state implementations use different scaling and routing triggers. These settings are not amplifier volume scales or deployed Firmware boundaries. See [Video and native-runtime evidence](../../project/review/myopencommunity-video-runtime-review.md) for exact build/source scope, historical comparisons and execution conditions.
 
 ## Source and speaker semantics
 

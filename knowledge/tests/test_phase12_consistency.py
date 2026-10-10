@@ -33,7 +33,7 @@ class Phase12ConsistencyTests(unittest.TestCase):
         self.assertEqual(len(json.loads((ROOT / "knowledge/inputs/claim-records.json").read_text())["claims"]), report["claims"]["records"])
         self.assertEqual(len(json.loads((ROOT / "knowledge/inputs/chunk-identities.json").read_text())), report["retrieval"]["chunks"])
         self.assertEqual(manifest["coverage"]["references"]["records"], report["references"]["records"])
-        self.assertEqual(702, report["claims"]["domains"]["protocol"]["claims"])
+        self.assertEqual(703, report["claims"]["domains"]["protocol"]["claims"])
         self.assertEqual(331, report["claims"]["domains"]["scenario-engine"]["claims"])
 
     def test_canonical_change_maps_stable_and_transitive_records(self):

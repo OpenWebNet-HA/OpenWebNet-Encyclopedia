@@ -55,3 +55,17 @@ The same pinned libqtcommon browser and BtExperience paged model maintain local 
 Root server lists are cached locally. Service pages use one-based `rank` and a four-entry request size. Type filtering occurs after decoding, while `total` remains the service's unfiltered count. The paged model requests the next rank using the number of accepted entries. With a positive remaining count and an all-filtered page, it can repeatedly request the same rank; the archived mock tests do not exercise that service/filter combination.
 
 The shared OpenXml device queues commands while disconnected or while a session ID is outstanding. Queued dispatch waits for the welcome state; ACK return code `200` clears SID and PID and dispatches the next command. Session cleanup leaves the queue intact, and the device's reset method is unimplemented. Answered ordinals are local bookkeeping copied from the last sent command, not response identifiers verified against the service. Earlier libraries used different queue and stale-result handling. None of these policies establishes automatic recovery or a deployed gateway contract. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md) and [XML transport](../../protocol/stream-parsing.md#separate-multimedia-xml-transport).
+
+The pinned device accepts a structurally valid header by adopting its SID, PID and addresses; it does not compare them with the outstanding request. The first valid header sets the welcome state even if its command is not `WMsg`. Command serialization generates a fresh UUID SID. Local answered ordinals therefore do not authenticate reply identity or guarantee increasing reply order.
+
+Controlled loopback execution with the original socket, XML decoder and queue demonstrates additional ordering limits:
+
+| Condition | Observed implementation behavior |
+| --- | --- |
+| Welcome arrives with commands queued | Its populated SID causes the first queued command to be requeued at the tail; welcome alone sends no command in that path. A subsequent ACK 200 releases the next queued command |
+| ACK 200 releases a command | Dispatch occurs inside ACK parsing, before the ACK response notification reaches consumers |
+| Response has different SID/PID | A valid synthetic response is accepted and attributed to the last sent ordinal; there is no outstanding-request identity check |
+| Disconnect during an outstanding command | Clear session state and retain unsent queued commands. The already sent command is not put back in that queue, and disconnect alone schedules no reconnect |
+| New command after disconnect | Request a new connection; the retained queue remains subject to welcome/header and ACK ordering on that connection |
+
+These observations use a synthetic local service under Qt 5, not a gateway, a UPnP server or the original Qt 4 application. They refine the implementation account without establishing the handshake expected by a deployed service. See [Video and native-runtime evidence](../../project/review/myopencommunity-video-runtime-review.md).

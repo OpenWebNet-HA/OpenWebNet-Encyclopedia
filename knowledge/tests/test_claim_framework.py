@@ -121,13 +121,13 @@ class ClaimFrameworkTests(unittest.TestCase):
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
         self.assertEqual(len(self.seeds["claims"]), metrics["records"])
         self.assertEqual(
-            {"claims": 702, "documents": 11, "reviewed_nonclaim_sections": 10,
+            {"claims": 703, "documents": 11, "reviewed_nonclaim_sections": 10,
              "sections": 104, "sections_with_claims": 94},
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 3195, "documents": 60, "reviewed_nonclaim_sections": 27,
-             "sections": 469, "sections_with_claims": 442},
+            {"claims": 3224, "documents": 60, "reviewed_nonclaim_sections": 27,
+             "sections": 470, "sections_with_claims": 443},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
