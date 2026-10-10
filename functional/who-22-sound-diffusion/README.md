@@ -254,6 +254,10 @@ Process failures have narrower handling than the playlist model suggests. While 
 
 The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. The separate local routing controller is described below. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
 
+The pause request is acknowledged by parsing the backend's pause marker. During release, the original wrapper changes its internal state before emitting the player-state notification, then emits the output-state notification. A receiver of the first notification can already read output as stopped. Releasing output from an ordinary paused state emits another public `Paused` notification. Controlled execution verifies this notification order with a synthetic slave process; [call interruption](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience) describes its conditional consequences.
+
+The same client's UPnP coordination selects one active local-media, Sound Diffusion or photo player. When another category becomes active, it terminates the other UPnP players, including paused ones, because they share browser/playlist state. Normal call restoration therefore does not guarantee restoration after another UPnP consumer takes over.
+
 Earlier clients used different loop and resource-release handling. These changes identify software revisions, not deployed Firmware boundaries. See [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md) for inspected expectations, controlled helper execution and unresolved runtime conditions.
 
 The discovery class supplies no worker cancellation or join on destruction. Its parented completion watchers do not themselves establish that worker execution has stopped. Cancellation uses a shared flag polled between directory searches; shared-flag visibility, model thread affinity and physical removal timing remain unverified. Controlled execution of the original dispatcher and worker under Qt 5 confirms that discovery can finish after its source owner is destroyed, using a gated model substitute.
@@ -278,7 +282,7 @@ At the same BtExperience revision, local video uses a separate GStreamer 0.10 ex
 
 The paused-video exception in the client treats a zero exit while logically paused as stopped. This exception does not distinguish ordinary decoder errors from successful completion while playing. Actual GStreamer decoding, display output and seek accuracy remain unverified.
 
-The separate `AudioState` controller chooses the highest enabled state in its ordered enumeration. Its player-state callback skips `AboutToPause` before reevaluating direct audio access; output-state notifications remain a separate trigger. States above ringtone pause sound-diffusion playback, and temporarily paused sound diffusion is eligible to resume at ringtone or below. These are local arbitration policies, not SCS priorities.
+The separate `AudioState` controller chooses the highest enabled state in its ordered enumeration. Its player-state callback skips `AboutToPause` before reevaluating direct audio access; output-state notifications remain a separate trigger. States above ringtone pause sound-diffusion playback, and temporarily paused sound diffusion is eligible to resume at ringtone or below. Controlled native-process execution with the original audio wrapper confirms that Sound Diffusion can remain logically paused with its process running and output reported active during a call. That role does not delay the controller through the local-media direct-access check. These are local arbitration policies, not SCS priorities.
 
 | Local control | Implementation behavior |
 | --- | --- |
@@ -304,7 +308,11 @@ The earlier local amplifier's temporary-off flag preserves its logical ON status
 
 The older `WHO 8` [silence/restore events](../who-8-video-door-entry-telephony/#teleloop-and-local-multimedia-events) use a different consumer: it freezes the current level, publishes silenced level `1`, ignores repeated silence while frozen and schedules a 900-second fallback. Restore publishes the frozen level while in Sound Diffusion, or `0` outside it. These cached report choices and local timers do not establish how physical amplifiers respond.
 
-The call/mute callbacks preserve SCS or IP routing across mute transitions; the retained historical correction replaces microphone volume changes with a separate mute operation. See [Call/audio evidence](../../project/review/myopencommunity-audio-call-review.md) for exact revisions, original-helper conditions and unresolved device behavior. Current call UI and camera-cycling limitations are documented under [Local call audio](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience).
+Earlier TouchX consumers differ. At libqtdevices `4f3483f36134`, media temporarily paused by a higher state retains its playback-stack entry and avoids pushing it again on resume. At `795d40817436`, the TouchX `WHO 8` disable/restore consumer uses temporary-off and reports OFF/ON while logically ON, rather than the frozen-level policy above. These are revision-specific client report policies, not alternative meanings of the wire events.
+
+Source and amplifier roles are selected from configuration, not proved hardware capabilities. The older Sound Diffusion page creates its virtual source/amplifier consumers from those roles. BtExperience `b88cdac9665d` instead registers the first matching local media-source object when its source address is nonempty; it can leave Sound Diffusion playback unregistered if none exists. X11 routing helpers can be empty while embedded branches request platform-specific scripts or device operations. Build selection alone does not establish their physical effect.
+
+The call/mute callbacks preserve SCS or IP routing across mute transitions; the retained historical correction replaces microphone volume changes with a separate mute operation. See [Call/audio evidence](../../project/review/myopencommunity-audio-call-review.md) and [Consumer and call-history evidence](../../project/review/myopencommunity-consumer-call-review.md) for exact revisions, original-helper conditions and unresolved device behavior. Current call UI and camera-cycling limitations are documented under [Local call audio](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience).
 
 ## Source and speaker semantics
 

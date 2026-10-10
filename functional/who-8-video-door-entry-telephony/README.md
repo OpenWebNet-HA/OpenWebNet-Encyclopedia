@@ -46,9 +46,9 @@ Tests establish `MMTYPE = 2` for audio and `4` for audio/video. The parser also 
 
 The implementation recognizes `KIND > 1000` as an IP call and takes the caller from the third `WHAT` parameter; SCS caller information can arrive separately in `WHAT 9`. Values with `KIND % 1000` in `101..105` mark movable cameras. Preserve the complete value rather than reducing it to the entrance-panel ordinal.
 
-The client keeps the original caller separately from the currently selected camera. A `WHAT 40` re-arm report updates the current address, media type and movable-camera flag, while cycling continues to target the original caller. Lock and movement commands use the current address. The `@` prefix used in decoded autoswitch notifications is a local application marker, not a wire-address prefix.
+The client keeps the original caller separately from the currently selected camera. A `WHAT 40` re-arm report updates the current address, media type and movable-camera flag, while cycling continues to target the original caller. Lock and movement commands use the current address. The `@` prefix used in decoded autoswitch notifications is a local application marker, not a wire-address prefix. Earlier code at `bc8ebb2f89d5` instead converts that decoded address to negative decimal text; the later change preserves the address text with `@`. Neither marker changes the transmitted address.
 
-Exact tests also distinguish call state: a floor call (`KIND 13`) emits a ringtone without replacing an existing call's stored `KIND` or `MMTYPE`. Ordinary answer, end and stop-video frames are ignored while idle; pager and teleloop handling have separate guards. These are touchscreen state choices, not requirements on every decoder. See [Call-state evidence](../../project/review/myopencommunity-intermediate-history-review.md#call-address-and-state).
+Exact tests also distinguish call state: a floor call (`KIND 13`) emits a ringtone without replacing an existing call's stored `KIND` or `MMTYPE`. At `TS10_1_0_23`, ordinary answer, end and stop-video frames are ignored while idle; pager and teleloop handling have separate guards. These are touchscreen state choices, not requirements on every decoder. Earlier library code at `12fd4e143a50` accepts these ordinary frames while idle when addressed to the local endpoint. The retained correction adds a call-state guard and corresponding zero-notification expectations. See [Call-state evidence](../../project/review/myopencommunity-intermediate-history-review.md#call-address-and-state) and [Consumer and call-history evidence](../../project/review/myopencommunity-consumer-call-review.md).
 
 The pager call/answer writers use broadcast `WHERE = 4` and include the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. Exact receive tests also accept a pager call addressed to the local endpoint and an answer with a non-broadcast `WHERE`. The client waits for the answer event when initiating a pager conversation; it does not derive SCS caller-address state from that answer alone. Its call-state guards are client behavior, not a universal broadcast-only receive rule. See [pager history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
 
@@ -81,6 +81,16 @@ At archived BtExperience revision `b88cdac9665d`, the call model delegates wire 
 | Camera cycling | Grabber state changes request audio disable/enable only while the selected audio state is `ScsVideoCall`. Process startup is not reported as running |
 
 Audio enable during camera cycling uses a 300-ms local timer. Explicit audio disable cancels it, but leaving the call state does not cancel it or make its callback check the current state. A controlled execution of the original controller issues an audio-on request after a call has ended; no physical audio outcome is established. This is not a bus timing requirement.
+
+Call interruption also depends on the audio backend's completion notification. With BtExperience `b88cdac9665d` and libqtcommon `825dc72cf0a4`, controlled native-process execution establishes:
+
+| Audio process result during output release | Local controller outcome |
+| --- | --- |
+| Normal exit `1` or process crash | Keep the track logically paused with output stopped; leaving the call attempts a playback restart |
+| Normal exit `0` | Treat playback as completed and clear the track; leaving the call returns to idle |
+| Another normal exit code | Emit neither completion notification; the process can be dead while the wrapper still reports active output and the call transition waits |
+
+The runs use a synthetic slave process with explicit exit conditions, native Qt signals and the original audio wrapper/controller. They do not establish real MPlayer exit conventions, physical output release or audible restoration. Ordinary pause retains the running process and active output; see [Local playback](../who-22-sound-diffusion/#historical-local-playback) and [Consumer and call-history evidence](../../project/review/myopencommunity-consumer-call-review.md).
 
 The ringtone manager emits its completion notification before releasing an automatically managed state. A synchronous completion listener that starts another automatically managed ringtone can have that replacement state cleared by the subsequent cleanup. This is a revision-scoped callback limitation, not call-protocol behavior.
 
