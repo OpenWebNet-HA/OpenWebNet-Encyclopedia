@@ -96,6 +96,10 @@ In particular:
 - absence of a record is not a negative assertion;
 - equal numeric values in different namespaces do not imply identity.
 
+For the 2.0.0 working contract, resolve every provenance entry rather than treating the first entry as the original source. `canonical_documentation` identifies the explanatory page. An original implementation source has `artifact_locator` with repository, revision, path, fingerprints and public locator. Its provenance `examination` records method, role, direct finding versus interpretation, relationship, code/offset location, applicable claim IDs, conditions and limitations. Only execution methods contain an execution result.
+
+Retrieval `evidence_support` carries reviewed findings, claim IDs and dispositions, including deferred and excluded findings. Preserve it alongside the text and resolve its original source IDs. Mixed sections can retain specification claims while adding implementation claims; never assign a section's strongest method to every sentence or claim. Confidence is a separate claim field, with no method ranking. See [Provenance contract migration](../project/machine-kb/provenance-v2-migration.md).
+
 The exact field vocabulary is documented in [`schema/README.md`](schema/README.md) and enforced by the JSON Schemas.
 
 ## MCP adapters

@@ -12,6 +12,8 @@ import subprocess
 import sys
 import time
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[2]
 REPOSITORY = "OpenWebNet-HA/OpenWebNet-Encyclopedia"
 CONTEXT = "Device catalogue validation"
@@ -20,12 +22,23 @@ PREFIX = "catalogue-inputs-sha256="
 
 
 def input_digest(root: Path) -> str:
-    """Include gate code, index, acceptance ledger, definitions and registered source metadata."""
+    """Bind catalogue and canonical-source checks to their exact public inputs."""
     paths = {p for p in (root / "devices").rglob("*")
              if p.is_file() and p.suffix in {".py", ".md", ".yaml", ".json"}}
     paths.update(root / name for name in (
         "sources/manifest.yaml", "sources/artifact-manifest.yaml", "check.py",
-        ".github/workflows/machine-kb.yml"))
+        ".github/workflows/machine-kb.yml", ".github/workflows/encyclopedia-compliance.yml",
+        "sources/archive/pdf-manifest.json", "project/review/checks/audit_source_coverage.py",
+        "project/review/checks/check_artifact_manifest.py"))
+    try:
+        manifest = yaml.safe_load((root / "sources/manifest.yaml").read_text())
+        for source_set in manifest["source_sets"].values():
+            for entry in source_set["files"]:
+                path = entry["path"]
+                if entry.get("storage") != "private-r2" and not path.startswith(("https://", "http://")):
+                    paths.add(root / "sources" / path)
+    except (yaml.YAMLError, KeyError, TypeError, AttributeError) as error:
+        raise ValueError("Canonical-source manifest is invalid") from error
     digest = hashlib.sha256()
     for path in sorted(paths, key=lambda p: p.relative_to(root).as_posix()):
         if root.resolve() not in path.resolve().parents:
@@ -85,6 +98,7 @@ def validate_local(commit: str, publish: bool) -> None:
             raise ValueError("Publishing requires the explicitly authorized catalogue validator account")
         post_status(commit, "pending", "Private catalogue validation is running")
     commands = [
+        [sys.executable, "project/review/checks/audit_source_coverage.py"],
         [sys.executable, "devices/tools/check-device-definitions.py", "--database", str(path)],
         [sys.executable, "-m", "unittest", "discover", "-s", "devices/tools/tests", "-v"],
     ]
@@ -100,7 +114,7 @@ def validate_local(commit: str, publish: bool) -> None:
         raise ValueError("Catalogue validation inputs changed during the run")
     if publish:
         post_status(commit, "success", PREFIX + before)
-    print("Private source fingerprint, Device completeness and catalogue regressions passed for " + commit)
+    print("Canonical sources, private catalogue, Device completeness and catalogue regressions passed for " + commit)
 
 
 def verify_remote(commit: str, output: Path, wait_seconds: int) -> None:

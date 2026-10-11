@@ -72,6 +72,10 @@ A measured-temperature request uses `*#4*WHERE*0##`; the response carries the te
 
 Published measured/status temperature fields use four decimal digits and can represent `0000..0500` (`0.0..50.0` °C) with 0.1 °C resolution in the documented zone-status exchanges. This representation is distinct from setpoint-writing constraints.
 
+### Historical signed-temperature interpretation
+
+The touchscreen probe objects interpret raw `1010` as `-10` tenths of °C (-1.0 °C); exact tests cover both controlled and external probe objects. The shared converter subtracts `1000` and negates values at or above `1000`, while nonnegative tenths remain unchanged. This is implementation evidence for signed probe readings, not an expansion of the published status range above or permission to send negative setpoints through every thermal operation. See [Signed-temperature evidence](../../project/review/myopencommunity-reassessment.md#hvac-values-and-partial-records).
+
 ## `DIMENSION 11` - fan-coil speed
 
 `DIMENSION 11` reports fan-coil speed in the published status model. ScenarioDevices additionally defines the write template `*#4*ZAZB*#11*val##`, establishing a MyHOME_Suite scenario action for fan-coil speed.
@@ -85,6 +89,8 @@ Read and write forms should therefore be distinguished by frame direction and op
 `DIMENSION 12` returns the complete probe state, combining the zone's target/status information with its operating context. It is the appropriate operation when a client needs more than the scalar measured temperature returned by `DIMENSION 0`.
 
 The public request is `*#4*WHERE*12##` for master-probe addresses `1..99`. The response `*#4*WHERE*12*T*3##` gives the setpoint after local offset: `T` ranges over `0020..0430` in 0.1 °C units. The trailing `3` is fixed in this published flow; the actual heating/conditioning/protection state is also returned in a separate `*4*WHAT*WHERE##` frame. Do not interpret the final `3` as a complete replacement for that state frame (page 16).
+
+The historical touchscreen client reconstructs its cached base setpoint by subtracting the known local offset from `T` while the knob is in its normal adjustment state. Its exact test combines offset `03` with `T=0250` and expects `0220` internally. The wire value remains 25.0 °C; the cached base value is 22.0 °C. See [probe-state evidence](../../project/review/myopencommunity-coverage-audit.md#probe-state-and-load-levels).
 
 ## `DIMENSION 13` - local set offset
 
@@ -102,6 +108,8 @@ Request `*#4*WHERE*13##`; response/event `*#4*WHERE*13*OFFSET##` (pages 16–17)
 
 These are codes, not signed decimal temperatures.
 
+The historical touchscreen stores central operation separately from the local selector. Product tests start with a central manual mode, display OFF or protection under local override, then show manual again after normal adjustment resumes. The client displays zero offset during those overrides. This [client-state precedence](../../project/review/myopencommunity-hvac-history-review.md#probe-state-and-fan-coil-corrections) does not establish a physical reset.
+
 ## `DIMENSION 14` - setpoint temperature
 
 `DIMENSION 14` is readable and writable. A zone setpoint written through the central unit uses `*#4*#WHERE*#14*T*M##`.
@@ -111,6 +119,10 @@ For this operation, `T` is encoded as four digits in `0050..0400` (5.0..40.0 °C
 The MyHOME_Suite functional parameter definitions likewise represent setpoint ranges and steps for Temperature Control operations; the exact parameter definition attached to the command remains authoritative for the implementation form being encoded.
 
 The public read form is `*#4*WHERE*14##`, with response `*#4*WHERE*14*T*3##` for probe addresses `1..99`. The read table specifies 0.1 °C resolution over `0050..0400`; it does not change the 0.5 °C step specified for writes (page 18).
+
+## Historical external-probe `DIMENSION 15`
+
+BTicino touchscreen tests at `TS10_1_0_23` establish the external-temperature query `*#4*WHERE*15#1##`. The test report `*#4*11*15*1*123*1111##` yields temperature value `123`, after the first report field `1`. The trailing `1111` is not interpreted by the probe class. Earlier request variants were corrected in the product history; they are not interchangeable read forms. See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
 
 ## `DIMENSION 19` - valve status
 
@@ -155,6 +167,12 @@ The source also labels each field `NULL` for current/insignificant values, witho
 
 The broad published `SP` range is an encoding range, not a claim that a particular split unit accepts every temperature.
 
+### Historical partial split writes
+
+The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+
+After a non-OFF write, the client checks the first matching `DIMENSION 22` report for the exact `WHERE`, comparing only supplied write fields whose positions are present in that report. It clears the pending check even on a mismatch or a short report, emits an error for a compared mismatch, and emits no positive confirmation. Later unsolicited reports do not repeat that comparison. This [one-report check](../../project/review/myopencommunity-hvac-history-review.md#partial-split-writes-and-report-checking) is a library policy and does not verify omitted report fields or physical attainment of the requested state.
+
 ## `DIMENSION 30` - holiday end
 
 The central unit uses separate date and time dimensions (pages 54, 57–58):
@@ -167,6 +185,38 @@ The central unit uses separate date and time dimensions (pages 54, 57–58):
 `D` is `01..31`, `M` is `01..12`, `Y` is `2000..2099`, `H` is `00..23`, and `MIN` is `00..59`. Validate the actual calendar date as well as individual field ranges.
 
 `DIMENSION 31` is omitted from the source's summary table but explicitly defined by its detailed flows. Some read examples mistakenly include the write marker; the response column and monitor forms establish the unprefixed report form. These operations set the deadline used by the [Temperature Control Commands](what.md).
+
+## Historical timed-manual `DIMENSION 32`
+
+The four-zone touchscreen class sets timed manual operation in two steps: `*4*312#0250#2*WHERE##`, then `*#4*WHERE*#32*H*MIN##` after 200 ms. The first duration is a dummy value overwritten by the second operation. The report parser consumes two values as a duration in hours and minutes, although source comments call the write an end time. Preserve this distinction rather than treating it as an absolute clock deadline. The delay and sequence are product behavior; no universal Firmware timing requirement is established.
+
+## Historical BACnet HVAC dimensions
+
+The BTicino touchscreen BACnet classes at `TS10_1_0_23` expose the following records under `WHO 4`. They are implementation extensions, not part of the public functional registry above. A read uses `*#4*WHERE*DIMENSION##`; a write uses `*#4*WHERE*#DIMENSION*VALUES##`.
+
+| Dimension / class | Ordered writable fields | Additional report fields, in order |
+| --- | --- | --- |
+| `50` - underfloor heating | setpoint, status, mode | temperature, fault flag, fault description |
+| `51` - AC split with fan coil | setpoint, status, mode, fan speed, air direction, reset filter fault | temperature, fault flag, fault description |
+| `52` - air handling unit | setpoint, status, mode, humidity setpoint, airflow setpoint, minimum airflow, maximum airflow, recirculation, fan speed | temperature, fault flag, fault description, humidity, airflow, air quality, antifreeze alarm |
+| `53` - variable air volume | setpoint, status, mode, airflow setpoint | temperature, fault flag, fault description |
+
+Reports can therefore contain 6, 9, 16, or 7 ordered fields respectively. The writer retains empty positions for unspecified fields; its internal `-1` sentinel is not transmitted. For example, a status-only fan-coil write is `*#4*WHERE*#51**1****##`.
+
+The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. The remaining enum domains are:
+
+| Field | Historical BACnet values |
+| --- | --- |
+| Fan speed, dimensions `51` / `52` | `0` automatic; `1` slow; `2` normal; `3` fast; `4` silent |
+| Air direction, dimension `51` | `0` automatic; `1` forward; `2` backward; `3` random; `4` slow cycling; `5` cycling; `6` fast cycling; `7` stop |
+
+A filter-reset write supplies `0` in the sixth value of dimension `51`: `*#4*WHERE*#51******0##`. The report decoder instead reads that position as a boolean filter flag. Write intent and report state therefore differ.
+
+The report tests also distinguish a missing trailing field from an empty field already present: absent numeric fields can retain an internal unset sentinel, while present empty positions are converted to zero. The decoder does not treat an empty report position as an instruction to preserve cached state. This behavior must not be imported into the partial-write semantics.
+
+These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
+
+See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
 
 ## Temperature fields are operation-specific
 

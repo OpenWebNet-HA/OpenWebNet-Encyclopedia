@@ -12,10 +12,12 @@ The same broad address family is shared with Automation, but `WHERE` remains sco
 | Environment / area | `A` | Addresses the Lighting Objects belonging to an environment |
 | Point to point | `APL` | Addresses an individual `A`/`PL` light point |
 | Group | `#GR` | Addresses the Lighting Objects belonging to a group |
-| Riser / level 3 | `0#3`, `A#3`, `#G#3`, or `APL#3` | Routes the corresponding scope on the riser/backbone level |
+| Riser / level 3 | `BASE#3` | Implementation model; applicability must be established for the selected operation |
 | Local bus / level 4 | `0#4#Int`, `A#4#Int`, `#G#4#Int`, or `APL#4#Int` | Routes the corresponding scope through local-bus interface `Int` |
 
-The canonical [`A`/`PL` grammar](../../protocol/addressing.md#lighting-and-automation-apl-grammar) defines the shared base ranges and the less-common forms that differ between Lighting and Automation. Advanced forms are modeled as a base target plus a routing qualifier: `#3` for the riser/backbone level or `#4#Int` for a local bus. The published `WHO 1` material establishes these qualifiers for General, Area, Group, and point targets. `Int` is the routing-interface address; for Lighting it is `01..09` or `11..15`. Leading zeroes and `#` markers are significant; a `WHERE` must be parsed as protocol syntax before numeric conversion.
+The canonical [`A`/`PL` grammar](../../protocol/addressing.md#lighting-and-automation-apl-grammar) defines the shared base ranges and the less-common forms that differ between Lighting and Automation. Advanced forms are modeled as a base target plus a routing qualifier; `#4#Int` selects a local bus. The published `WHO 1` material establishes `#4#Int` for General, Area, Group, and point targets. `Int` is the routing-interface address; for Lighting it is `01..09` or `11..15`. Leading zeroes and `#` markers are significant; a `WHERE` must be parsed as protocol syntax before numeric conversion.
+
+The published `WHERE` table does not enumerate `BASE#3` variants. Level-3 qualification is an implementation model, not proof of every Lighting target/operation combination. See [Level 3 / Riser](../../protocol/addressing.md#level-3--riser) for that evidence boundary and [historical matcher behavior](../../protocol/addressing.md#historical-touchscreen-address-matching) for the narrower client rules.
 
 ## MyHOME_Suite address rules
 

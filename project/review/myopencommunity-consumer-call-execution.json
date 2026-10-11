@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "pins": {
+    "BtExperience": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+    "libqtcommon": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2"
+  },
+  "helper_sha256": "89b33c3a9b0250f95f468ea4538126b7e44329b45f662946b439931d737a1394",
+  "original_files": [
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "gui/audiostate.cpp",
+      "blob": "c1cfb76bbe11d257c69161a96292fdd4f5e6187f",
+      "sha256": "b7fbecb2c70ded8fdf5ae02042a4ce2f0f7b38a5ff8d2f69ce685aac3b0840c0"
+    },
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "gui/audiostate.h",
+      "blob": "4f450b3ead7006fc96534488081fc887b420e302",
+      "sha256": "5af62814a1951b699f3e9a75452d857cfb72b154387e833751f6b856fe20774c"
+    },
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "BtObjects/multimediaplayer.cpp",
+      "blob": "2020069c57203a374a076a19f8916aa2401f6bff",
+      "sha256": "ca37065ed06985975eba2d762b3074d895799ed18e1040695bc583caa724fb59"
+    },
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "BtObjects/multimediaplayer.h",
+      "blob": "b3f0b8a548c9aed5db0edf1e8449e29df55539a0",
+      "sha256": "5a7683075bf676783ab8a72deb8d683955ff6a43465aa0ff0486bf0bc724b436"
+    },
+    {
+      "repository": "libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "path": "mediaplayer.cpp",
+      "blob": "e7e31fb489a3e7ad347c0d8ef219a071ce65d19c",
+      "sha256": "4f71184b3ff6573b8b38df2c0c100b4f0bd36d075b374e36e44ee39090060dfd"
+    },
+    {
+      "repository": "libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "path": "mediaplayer.h",
+      "blob": "47d1938caf5a74cbcbd9534ff610c2feac5272b8",
+      "sha256": "289873eaa2822133014c5f7008782922eb3545aae2bfd95c4a64e07e6fbb1de4"
+    },
+    {
+      "repository": "libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "path": "entryinfo.cpp",
+      "blob": "59ba97797a72594dfcc8eea5e0305a1605a74af8",
+      "sha256": "5ef3e99684036d7778c8ef01f0c00277965c6a386279c0223c51d1054714e399"
+    },
+    {
+      "repository": "libqtcommon",
+      "revision": "825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2",
+      "path": "entryinfo.h",
+      "blob": "9dc50015d9e09aa93e0b8fc1078e5ec585983e56",
+      "sha256": "3f8ff2e823f0d616cf0d0305478973cf8bf38e9ff8e5eb3d86b347ec8abf0c73"
+    }
+  ],
+  "compiler": "g++ (SUSE Linux) 16.2.1 20260929",
+  "qt": "5.15.19",
+  "results": [
+    {
+      "experiment": "original_audio_chain",
+      "result": "native pause acknowledgement, state/output ordering and exit-1 release/resume passed\ncall interruption with controlled exit 1 passed\ncall interruption with controlled exit crash passed\ncall interruption with controlled exit 0 passed\ncall interruption with controlled exit 2 passed\nnative Sound Diffusion pause/resume keeps process and reported output active passed",
+      "failed_tests": []
+    }
+  ],
+  "conditions": [
+    "Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.",
+    "Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.",
+    "Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.",
+    "Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.",
+    "No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes."
+  ]
+}

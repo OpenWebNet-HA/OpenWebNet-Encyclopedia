@@ -86,6 +86,8 @@ CEN+ supports virtual actions and event reporting. For pushbutton interactions, 
 
 The same event form can therefore represent an interaction originating from a physical CEN+ command or from a virtual action submitted through a gateway. The functional frame itself identifies the interaction, pushbutton and Object rather than its origin.
 
+Historical touchscreen scenario actions send the configured frame literally. Their CEN+ description labels and internal command identifiers do not select a wire `WHAT` or synthesize an extended-pressure sequence. See [Configured-action handling](../../scenario-engine/execution-model.md#historical-touchscreen-condition-evaluation) and [CEN/CEN+ implementation evidence](../../project/review/myopencommunity-cen-history-review.md#cen-and-cen-configured-actions).
+
 ## CEN+ configuration model
 
 The published CEN documentation states that CEN+ devices use Advanced Virtual Configuration and do not use a conventional SCS bus address for this function. The configured virtual Object becomes the OpenWebNet `WHERE`, while the button number is represented by the `WHAT` parameter.

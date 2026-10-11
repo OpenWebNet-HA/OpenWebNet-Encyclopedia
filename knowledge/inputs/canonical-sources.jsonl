@@ -1,3 +1,4 @@
+{"classification":"publishable","source_id":"ownkb:source:moc-s000163","source_path":"device-model/configurators.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000001","source_path":"device-model/README.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000002","source_path":"device-model/configuration.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000003","source_path":"device-model/firmware.md","source_type":"canonical_documentation"}
@@ -121,7 +122,6 @@
 {"classification":"publishable","source_id":"ownkb:source:s000121","source_path":"reverse-engineering/open-questions.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000122","source_path":"reverse-engineering/rejected-relationships.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000123","source_path":"reverse-engineering/relationship-register.md","source_type":"canonical_documentation"}
-{"classification":"publishable","source_id":"ownkb:source:s000160","source_path":"reverse-engineering/sound-matrix-routing.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000149","source_path":"scenario-engine/README.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000150","source_path":"scenario-engine/capability-coverage.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000151","source_path":"scenario-engine/capability-resolution.md","source_type":"canonical_documentation"}
@@ -133,6 +133,7 @@
 {"classification":"publishable","source_id":"ownkb:source:s000157","source_path":"scenario-engine/open-questions.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000158","source_path":"scenario-engine/parameters.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000159","source_path":"scenario-engine/sources-and-identifiers.md","source_type":"canonical_documentation"}
+{"classification":"publishable","source_id":"ownkb:source:s000160","source_path":"reverse-engineering/sound-matrix-routing.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000163","source_path":"devices/definitions/own-dev-0001-two-channel-universal-dimmer.md","source_type":"canonical_documentation"}
 {"classification":"sanitize","source_id":"ownkb:source:s000164","source_path":"devices/definitions/own-dev-0002-audio-video-web-server-gateway.md","source_type":"canonical_documentation"}
 {"classification":"publishable","source_id":"ownkb:source:s000165","source_path":"devices/definitions/own-dev-0010-pir-us-daylight-presence-sensor.md","source_type":"canonical_documentation"}

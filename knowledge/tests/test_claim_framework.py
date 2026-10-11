@@ -121,13 +121,13 @@ class ClaimFrameworkTests(unittest.TestCase):
             self.ir, claims, ROOT / "knowledge/inputs/claim-coverage.json")
         self.assertEqual(len(self.seeds["claims"]), metrics["records"])
         self.assertEqual(
-            {"claims": 651, "documents": 11, "reviewed_nonclaim_sections": 10,
-             "sections": 96, "sections_with_claims": 86},
+            {"claims": 703, "documents": 11, "reviewed_nonclaim_sections": 10,
+             "sections": 104, "sections_with_claims": 94},
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 2910, "documents": 60, "reviewed_nonclaim_sections": 26,
-             "sections": 427, "sections_with_claims": 401},
+            {"claims": 3266, "documents": 60, "reviewed_nonclaim_sections": 27,
+             "sections": 473, "sections_with_claims": 446},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
@@ -141,8 +141,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["programming"],
         )
         self.assertEqual(
-            {"claims": 890, "documents": 8, "reviewed_nonclaim_sections": 11,
-             "sections": 122, "sections_with_claims": 111},
+            {"claims": 903, "documents": 9, "reviewed_nonclaim_sections": 28,
+             "sections": 141, "sections_with_claims": 113},
             self.legacy_device_model_metrics(metrics),
         )
         self.assertEqual(
@@ -151,13 +151,13 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["internals"],
         )
         self.assertEqual(
-            {"claims": 551, "documents": 12, "reviewed_nonclaim_sections": 16,
-             "sections": 149, "sections_with_claims": 133},
+            {"claims": 551, "documents": 12, "reviewed_nonclaim_sections": 18,
+             "sections": 151, "sections_with_claims": 133},
             metrics["bounded_domains"]["reverse-engineering"],
         )
         self.assertEqual(
-            {"claims": 311, "documents": 11, "reviewed_nonclaim_sections": 11,
-             "sections": 100, "sections_with_claims": 89},
+            {"claims": 341, "documents": 11, "reviewed_nonclaim_sections": 11,
+             "sections": 103, "sections_with_claims": 92},
             metrics["bounded_domains"]["scenario-engine"],
         )
 

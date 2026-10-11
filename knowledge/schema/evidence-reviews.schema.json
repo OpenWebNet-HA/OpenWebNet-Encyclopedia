@@ -1,0 +1,399 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format_version": {
+      "const": "2.0.0"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{1,63}$"
+          },
+          "section_id": {
+            "type": "string",
+            "pattern": "^ownkb:section:"
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disposition": {
+            "enum": [
+              "claimed",
+              "corroborates",
+              "deferred",
+              "excluded"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^ownkb:claim:"
+            },
+            "uniqueItems": true
+          },
+          "review_path": {
+            "type": "string",
+            "pattern": "^project/review/[A-Za-z0-9._/-]+$"
+          },
+          "review_locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "source_id": {
+                  "type": "string",
+                  "pattern": "^ownkb:source:"
+                },
+                "evidence_class": {
+                  "enum": [
+                    "implementation_artifact",
+                    "firmware_interface",
+                    "public_capture",
+                    "public_experiment"
+                  ]
+                },
+                "examination": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "method": {
+                      "enum": [
+                        "source_inspection",
+                        "test_expectation_inspection",
+                        "helper_execution",
+                        "static_firmware_analysis",
+                        "dynamic_firmware_oracle",
+                        "hardware_observation"
+                      ]
+                    },
+                    "implementation_role": {
+                      "enum": [
+                        "client",
+                        "library",
+                        "simulator",
+                        "gateway",
+                        "firmware"
+                      ]
+                    },
+                    "conclusion_kind": {
+                      "enum": [
+                        "direct",
+                        "interpretation"
+                      ]
+                    },
+                    "relationship": {
+                      "enum": [
+                        "supports",
+                        "corroborates",
+                        "qualifies",
+                        "contradicts"
+                      ]
+                    },
+                    "code_location": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "symbol": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "start_line": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "end_line": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "symbol",
+                        "start_line",
+                        "end_line"
+                      ]
+                    },
+                    "conditions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "limitations": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "execution": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "material": {
+                          "enum": [
+                            "original_helper_in_adapted_harness",
+                            "original_test_suite",
+                            "simulator",
+                            "firmware_oracle",
+                            "physical_hardware"
+                          ]
+                        },
+                        "setup": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "uniqueItems": true
+                        },
+                        "result": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "record_path": {
+                          "type": "string",
+                          "pattern": "^project/review/[A-Za-z0-9._/-]+$"
+                        },
+                        "record_locator": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "material",
+                        "setup",
+                        "inputs",
+                        "result",
+                        "record_path",
+                        "record_locator"
+                      ]
+                    },
+                    "artifact_location": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "address_space": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "start_offset": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "end_offset": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "required": [
+                        "address_space",
+                        "start_offset",
+                        "end_offset"
+                      ]
+                    },
+                    "claim_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^ownkb:claim:"
+                      },
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "method",
+                    "implementation_role",
+                    "conclusion_kind",
+                    "relationship",
+                    "conditions",
+                    "limitations",
+                    "claim_ids"
+                  ],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "method": {
+                            "enum": [
+                              "helper_execution",
+                              "dynamic_firmware_oracle",
+                              "hardware_observation"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "method"
+                        ]
+                      },
+                      "then": {
+                        "required": [
+                          "execution"
+                        ]
+                      },
+                      "else": {
+                        "not": {
+                          "required": [
+                            "execution"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "oneOf": [
+                        {
+                          "required": [
+                            "code_location"
+                          ],
+                          "not": {
+                            "required": [
+                              "artifact_location"
+                            ]
+                          }
+                        },
+                        {
+                          "required": [
+                            "artifact_location"
+                          ],
+                          "not": {
+                            "required": [
+                              "code_location"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "if": {
+                        "properties": {
+                          "method": {
+                            "const": "helper_execution"
+                          }
+                        },
+                        "required": [
+                          "method"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "execution": {
+                            "properties": {
+                              "material": {
+                                "enum": [
+                                  "original_helper_in_adapted_harness",
+                                  "original_test_suite",
+                                  "simulator"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "if": {
+                        "properties": {
+                          "method": {
+                            "const": "dynamic_firmware_oracle"
+                          }
+                        },
+                        "required": [
+                          "method"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "execution": {
+                            "properties": {
+                              "material": {
+                                "enum": [
+                                  "firmware_oracle"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "if": {
+                        "properties": {
+                          "method": {
+                            "const": "hardware_observation"
+                          }
+                        },
+                        "required": [
+                          "method"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "execution": {
+                            "properties": {
+                              "material": {
+                                "enum": [
+                                  "physical_hardware"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "source_id",
+                "evidence_class",
+                "examination"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "section_id",
+          "summary",
+          "disposition",
+          "reason",
+          "claim_ids",
+          "review_path",
+          "review_locator",
+          "supports"
+        ]
+      }
+    }
+  },
+  "required": [
+    "format_version",
+    "findings"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openwebnet-ha.github.io/OpenWebNet-Encyclopedia/knowledge/schema/2.0.0/evidence-reviews.schema.json",
+  "title": "Reviewed implementation evidence observations"
+}

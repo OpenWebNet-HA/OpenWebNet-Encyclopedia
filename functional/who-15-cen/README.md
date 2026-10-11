@@ -84,6 +84,8 @@ Published virtual operations are:
 
 A corresponding frame is then visible to event-session clients when the CEN frame is read on the SCS bus.
 
+Historical touchscreen scenario entries can assign separate CEN button frames to enable, disable, start and stop actions. Those labels describe configured actions; the button numbers do not have universal scenario-management meanings. The configured frame is sent literally. See [Configured-action evidence](../../project/review/myopencommunity-cen-history-review.md#cen-and-cen-configured-actions).
+
 ## Event connection
 
 Event frames can originate from either a physical CEN-configured command or a virtual CEN operation sent by an OpenWebNet client. The wire form does not encode that origin distinction; consumers observing an event connection receive the CEN interaction itself.
@@ -91,6 +93,8 @@ Event frames can originate from either a physical CEN-configured command or a vi
 The published examples demonstrate normal, advanced and local-bus addresses, including `*15*01*0001##`, `*15*02*22##`, `*15*06*36#4#01##`, and their release/extended variants. These examples establish that the `#4#I4` suffix belongs to `WHERE`, while the `#1`/`#2`/`#3` suffix belongs to `WHAT`.
 
 ## Device configuration modes
+
+The `CEN` plug in a supported command-mode position selects scenario-programmer interactions. The same marking in another position need not select `WHO 15`: for example, a shutter control's `I=CEN` selects the riser, and an H4691/LN4691 thermostat's `COOL=CEN` selects a shared heating/cooling load. See [SCS Configurator Labels](../../device-model/configurators.md) for product and position scope.
 
 The CEN specification distinguishes how a physical command obtains its source identity:
 

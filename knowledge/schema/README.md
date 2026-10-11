@@ -1,6 +1,6 @@
 # OpenWebNet Machine KB Schemas and Controlled Vocabulary
 
-**OpenWebNet Machine KB 0.1.0 schema contract.** These curated JSON Schema Draft 2020-12 files define the initial public record and artifact formats used by `machine-kb-v0.1.0`. The human Encyclopedia remains authoritative. See the [consumer contract](../../project/machine-kb/consumer-contract.md), [consumer ingestion guide](../CONSUMING.md), and [privacy policy](../policy/privacy.md).
+**Working schema compatibility: 2.0.0.** These curated JSON Schema Draft 2020-12 files define the unpublished provenance compatibility candidate. Published Machine KB 0.2.0 and retained 0.1.2 use the 0.1.0 parsing contract. The human Encyclopedia remains authoritative. See the [consumer contract](../../project/machine-kb/consumer-contract.md), [consumer ingestion guide](../CONSUMING.md), and [privacy policy](../policy/privacy.md).
 
 | Schema | Applies to |
 | --- | --- |
@@ -9,6 +9,7 @@
 | [`id-registry.schema.json`](id-registry.schema.json) | Curated canonical ID lifecycle and one-step aliases |
 | [`manifest.schema.json`](manifest.schema.json) | Published-artifact inventory, hashes, record counts, coverage metrics, and compatibility metadata |
 | [`retrieval-chunks.schema.json`](retrieval-chunks.schema.json) | Retrieval section records with source context, privacy, qualification cues, and stable references |
+| [`evidence-reviews.schema.json`](evidence-reviews.schema.json) | Curated finding dispositions and claim-specific original examinations used during generation |
 | [`source-manifest.schema.json`](source-manifest.schema.json) | Closed pre-extraction source classification |
 | [`prepared-source.schema.json`](prepared-source.schema.json) | Privacy-gated prepared source records |
 | [`privacy-metadata.schema.json`](privacy-metadata.schema.json) | Public/sanitized privacy metadata |
@@ -52,3 +53,7 @@ python -m unittest discover -s knowledge/tools -p test_schema.py -v
 [`../../build.py`](../../build.py) produces `knowledge/manifest.json` and all generated machine artifacts from the shared IR and curated inputs. The manifest lists artifact/schema paths, SHA-256 hashes, format versions, and applicable record counts. It deliberately excludes its own hash. Its input digest covers the semantic IR and resolved reference records; it contains no timestamp, local path, random value, or consumer setting.
 
 Run [`../../check.py`](../../check.py) to perform two clean temporary builds, compare the bytes, validate schemas and canonical serialization, verify committed artifacts are fresh, check cross-artifact integrity, and run the final privacy gate. Both commands are local, deterministic, and model-free.
+
+## Working provenance contract
+
+The current branch uses schema compatibility 2.0.0. It adds original-artifact locators, structured examination methods and retrieval evidence dispositions. Finding IDs use the same grammar in review inputs, provenance and retrieval; the historical `moc-eNNNN` keys remain valid without limiting future firmware findings to that prefix. Published 0.2.0 and retained 0.1.2 snapshots remain unchanged; earlier 0.1.0/0.1.1 tags were withdrawn. See [Migration and field semantics](../../project/machine-kb/provenance-v2-migration.md).

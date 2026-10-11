@@ -29,7 +29,7 @@ Firmware is an implementation layer between the product model and its exposed Mo
 
 Section ID: `ownkb:section:d000001:s000002`
 
-Applicability cues: `firmware`
+Applicability cues: `firmware`, `scs`
 Provenance cues: `catalogue`, `evidence`, `source`
 
 | Subject | Page |
@@ -41,6 +41,7 @@ Provenance cues: `catalogue`, `evidence`, `source`
 | Logical functions and Object identity | [Objects](objects.md) |
 | Configurable Module templates and permitted Objects | [Virgin Objects](virgin-objects.md) |
 | Configuration definitions, values, constraints, and protocol representation | [Configuration](configuration.md) |
+| Physical plug labels, socket meanings, PUL and software counterparts | [SCS Configurator Labels](configurators.md) |
 
 ### Canonical model
 
@@ -266,10 +267,12 @@ A complete configuration UI may combine both scopes.
 
 Section ID: `ownkb:section:d000002:s000007`
 
-Applicability cues: `firmware`
+Applicability cues: `firmware`, `scs`
 Provenance cues: `catalogue`
 
 The canonical catalogue represents configuration mode and physical configurator semantics separately.
+
+For the literal meanings and functions of `PUL`, `SLA`, `O/I`, collective-address plugs, arrows and system-specific positions, see [SCS Configurator Labels](configurators.md). A plug label's established meaning is distinct from its product-specific legal positions, numerical encoding and runtime behavior.
 
 `EN_CONFIG_MODE` contains distinct records for Virtual Configuration, Advanced Configuration, Physical configuration, and Product Programming. `AS_FIRMWARE_CONFIG_MODE` records which modes a firmware supports. A firmware can support both Virtual and Advanced configuration, so neither label should be used as an umbrella synonym for all non-physical configuration.
 
@@ -530,6 +533,93 @@ Section ID: `ownkb:section:d000002:s000021`
 Provenance cues: `catalogue`, `evidence`
 
 A mapping between a UI field, catalogue definition, and protocol value requires compatible UI behavior, catalogue scope and index data, protocol `slot`/value evidence and, where available, the resulting runtime behavior. Numeric equality alone is insufficient.
+
+### Historical touchscreen application configuration
+
+Section ID: `ownkb:section:d000002:s000024`
+
+Applicability cues: `revision`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `evidence`, `source`
+
+BtExperience at `TS10_1_0_23` imports XML into its own client Objects. These application identifiers and persistence rules are separate from catalogue Object IDs, Device programming and MyHOME Suite project export.
+
+| Input / mechanism | Client meaning |
+| --- | --- |
+| `conf.xml` | Local setup, including source and amplifier addresses; literal `-1` becomes an empty address |
+| `archive.xml` | Function definitions in `obj` elements and instances in `ist` elements |
+| String attributes | Instance values override definition defaults; absent attributes use those defaults |
+| `uii` | Application instance reference; duplicate registered values are fatal in this revision |
+| Amplifier-group `link` | Resolves an already-created, correctly typed amplifier; an unresolved reference asserts in assertion-enabled builds and is skipped otherwise |
+
+The importer processes definitions in document order, so amplifier members must precede groups that reference them. It retains repeated member references; group operations can therefore call a member more than once. A configured monochannel/multichannel function selects client behavior, without proving the deployed product's capabilities. See [Virtual and composite amplifier controllers](../functional/who-22-sound-diffusion/#virtual-and-composite-amplifier-controllers) for the distinct library controller model.
+
+Configuration documents are cached after loading. Saving marks the cached document as modified and restarts a single-shot ten-second save timer. Flushing attempts each modified write and then clears the pending set, including failed writes; this path provides no automatic retry or read-back confirmation. These are local XML persistence rules, not an acknowledgement of Device programming. See [Configuration closure evidence](../project/review/myopencommunity-closure-review.md#findings-and-canonical-placement).
+
+Evidence finding `moc-e0171` (claimed): Touchscreen importer defaults, references and group controls
+Disposition reason: Reviewed exact-revision direct findings, with independent confidence and examination methods; no hardware generalization.
+Individual claims: `ownkb:claim:moc-c074123`, `ownkb:claim:moc-c074124`, `ownkb:claim:moc-c074125`, `ownkb:claim:moc-c074126`, `ownkb:claim:moc-c074127`, `ownkb:claim:moc-c074128`
+- `ownkb:source:moc-s001174`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - parseConfFile](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/configfile.cpp#L66-L118) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074123
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001182`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - getAttribute](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/xml_functions.cpp#L141-L154) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074124
+  Conditions: XmlObject passes its definition default to the inspected getAttribute implementation at the retained TS10_1_0_23 library pin; no deployed linkage or runtime is certified.
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001175`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - XmlObject::value](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/xmlobject.h#L64-L67) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074124
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001176`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - UiiMapper::insert](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/uiimapper.cpp#L24-L35) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074125
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - parseAmplifierGroup](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L195-L224) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074126, ownkb:claim:moc-c074127, ownkb:claim:moc-c074128
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001181`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - UiiMapper::value](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/uiimapper.h#L65-L79) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074126, ownkb:claim:moc-c074127
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001150`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - BtObjectsPlugin::createObjects](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/btobjectsplugin.cpp#L318-L722) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074127
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AmplifierGroup::setActive; AmplifierGroup::volumeUp; AmplifierGroup::volumeDown; AmplifierGroup::setVolume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L1259-L1287) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074128
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+
+Evidence finding `moc-e0172` (claimed): Touchscreen cached configuration and failed flush disposition
+Disposition reason: Reviewed exact-revision direct findings, with independent confidence and examination methods; no hardware generalization.
+Individual claims: `ownkb:claim:moc-c074129`, `ownkb:claim:moc-c074130`, `ownkb:claim:moc-c074131`
+- `ownkb:source:moc-s001174`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ConfigFile::getConfiguration](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/configfile.cpp#L176-L190) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074129
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001174`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ConfigFile::ConfigFile; ConfigFile::saveConfiguration](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/configfile.cpp#L167-L198) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074130
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001174`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ConfigFile::flushModifiedFiles; ConfigFile::saveConfigFile](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/configfile.cpp#L200-L215) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074131
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+
+### F411 simulator configuration
+
+Section ID: `ownkb:section:d000002:s000023`
+
+Cautions: `do not`, `must not`
+Provenance cues: `evidence`, `source`
+
+The VDK 2.0 F411 model stores `A`, `PL`, and group separately for each simulated output, with Device mode and bus selection outside those output records. A simulated local click emits `WHO 1` using the output's concatenated `A`/`PL` address. Point, area, group, and general addressing are handled against the configured outputs.
+
+In its `PUL` mode, the model suppresses general/area commands and status responses while still handling point/group targets. These are executable simulator choices; the source does not establish a complete physical F411 configuration or prove equivalence between its output records and MyHOME Suite Modules. Its simplified decoder treats any command other than `WHAT 1` as OFF, which must not be adopted as a protocol rule. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
+Manufacturer F411-family sheets independently establish PUL exclusion of Room and General commands. The simulator's group handling and collective status suppression do not establish physical behavior; Suite help and an older manufacturer guide differ explicitly on PUL group commands. See [PUL collective commands and status](configurators.md#collective-commands-and-status) for the source scopes. PUL on a lighting command is an established momentary function, while actuator/local-control modes must be read separately.
+
+Evidence finding `moc-e0080` (claimed): F411 simulator Configuration and PUL guards
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007753`, `ownkb:claim:moc-c007754`, `ownkb:claim:moc-c007755`, `ownkb:claim:moc-c007756`
+- `ownkb:source:moc-s000236`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - F411xmlserializer::deserialize; F411xmlserializer::serialize](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F411_DEV_PGIN/f411xmlserializer.cpp#L24-L138) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007753, ownkb:claim:moc-c007754, ownkb:claim:moc-c007755, ownkb:claim:moc-c007756
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000235`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtF411_dev::BtF411_dev; BtF411_dev::HandleMessage; BtF411_dev::ReceiveMessage; BtF411_dev::attachChild; BtF411_dev::cancelCmd; BtF411_dev::execCommand; BtF411_dev::executeCmd; BtF411_dev::findLed; BtF411_dev::getApl; BtF411_dev::getID; BtF411_dev::getModeTypeValues; BtF411_dev::registerEventHnd; BtF411_dev::save; BtF411_dev::sendACK; BtF411_dev::setApl; BtF411_dev::setID; BtF411_dev::setResoucesFileName; BtF411_dev::setSuperior; BtF411_dev::unRegisterEventHnd; BtF411_dev::~BtF411_dev](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F411_DEV_PGIN/btf411dev.cpp#L22-L499) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007753, ownkb:claim:moc-c007754, ownkb:claim:moc-c007755, ownkb:claim:moc-c007756
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
 
 ### Sources
 
@@ -4055,9 +4145,9 @@ Area: `functional`
 
 Section ID: `ownkb:section:d000024:s000001`
 
-Applicability cues: `firmware`, `gateway`, `version`
+Applicability cues: `firmware`, `gateway`, `revision`, `version`
 Cautions: `must not`
-Provenance cues: `evidence`, `specification`
+Provenance cues: `evidence`, `source`, `specification`
 
 The functional reference combines several evidence classes. They answer different questions and must not be treated as interchangeable.
 
@@ -4068,6 +4158,8 @@ The functional reference combines several evidence classes. They answer differen
 | `OPEN.db` | MyHOME Suite namespace identity, diagnostic-family mapping, address rules, and associated management templates | Complete ordinary functional vocabulary |
 | ScenarioDevices databases | Functional actions exposed by the scenario engine and their concrete frames where present | Every legal command or a universal Device capability |
 | `MHCatalogue.db` | Physical Device, firmware, Module, Object, and configuration applicability | A complete functional command registry |
+| Historical source and inspected test assertions | Executable code paths and expected results at a pinned implementation revision | A passed test suite, physical behavior, or support by every Device/Firmware |
+| Executed original helper | Results of the recorded helper run under its stated harness conditions | A complete application/suite pass or physical behavior beyond those conditions |
 | Observed traffic | Behavior of the captured Device/gateway/software version | Universal behavior outside the observed conditions |
 
 ### Public specification coverage
@@ -4106,7 +4198,9 @@ The [ZigBee Interface Specification](https://archive.openwebnet-ha.org/sha256/9f
 
 Section ID: `ownkb:section:d000024:s000003`
 
-Provenance cues: `evidence`
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
 
 Notable relationships established outside the public functional PDFs include:
 
@@ -4117,6 +4211,8 @@ Notable relationships established outside the public functional PDFs include:
 - diagnostic-family assignments such as `1001`, `1004`, `1008`, `1013`, `1018`, `1023`, and `1027`.
 
 These additions should be labelled as implementation evidence. A diagnostic-family association does not copy diagnostic `WHAT` or `DIMENSION` semantics into the functional namespace.
+
+The preserved BTicino touchscreen libraries and VDK simulator add separately scoped historical evidence for [Video Door Entry and messaging](who-8-video-door-entry-telephony/), [Alarm controls](who-5-alarm/protocol.md#historical-password-controls), [Platform properties](who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties), [Energy compatibility](who-18-energy-management/what.md#historical-graph-request-variants), [HVAC records](who-4-temperature-control/dimensions.md#historical-bacnet-hvac-dimensions), [Sound Diffusion](who-22-sound-diffusion/#historical-touchscreen-syntax-and-extensions), and [ScenarioPlus](who-25-transversal/#historical-scenarioplus-controls). Their scope, source pins, inspected assertions, exclusions, and existing-reference corroboration are recorded in the [MyOpenCommunity Integration Review](../project/review/myopencommunity-integration.md). The [Machine-readable evidence audit](../project/review/myopencommunity-kb-provenance-audit.md) traces these explanations to individual claims and original archived files. Controlled helper runs have separate methods and conditions; simulator results do not establish physical Device behavior.
 
 ### Absence rules
 
@@ -4175,6 +4271,18 @@ The activation frame is `*0*N*WHERE##`, where `N` is the stored scenario number 
 A command connection returns `ACK` when the command has been sent to the bus and `NACK` when it has not. The corresponding functional event is reported with the same `*0*N*WHERE##` form.
 
 The MyHOME_Suite ScenarioDevices capability model also exposes `*0*N*WHERE##` as a scenario action. This confirms that the higher-level scenario engine invokes the same functional `WHO 0` operation; the trigger/condition/action model itself is not part of the `WHO 0` wire grammar.
+
+Evidence finding `moc-e0123` (corroborates): Existing scenario activation grammar corroborated by archived serializer
+Disposition reason: Published frame grammar already has its original specification source. Archive construction is additional scoped corroboration, so no duplicate claim is allocated.
+Individual claims: `ownkb:claim:c001295`
+- `ownkb:source:moc-s000178`: test_expectation_inspection; library; direct; corroborates. [MyOpenCommunity/libqtdevices - TestScenarioDevice::sendActivateScenario](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_scenario_device.cpp#L46-L51) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:c001295
+  Conditions: Configured scenario number within the library API range.
+  Limitations: Corroborates serializer form only; does not establish physical capacity, bus transmission or gateway acceptance.; Inspected source/expectations; no complete archived-suite pass asserted.
+- `ownkb:source:moc-s000177`: source_inspection; library; direct; corroborates. [MyOpenCommunity/libqtdevices - ScenarioDevice::activateScenario](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/scenario_device.cpp#L55-L60) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:c001295
+  Conditions: Configured scenario number within the library API range.
+  Limitations: Corroborates serializer form only; does not establish physical capacity, bus transmission or gateway acceptance.; Inspected source/expectations; no complete archived-suite pass asserted.
 
 ### `WHERE`
 
@@ -4254,7 +4362,62 @@ Cautions: `must not`
 
 `WHO 0` operates scenario modules and stored scenario memories. [`WHO 17`](../who-17-scenario-management/) addresses scenario execution on scenario-programmer/gateway devices using Start, Stop, Enable and Disable operations. The two namespaces are related functionally but have different `WHAT` and `WHERE` models and must not be merged.
 
+### Historical touchscreen behavior
+
+Section ID: `ownkb:section:d000025:s000012`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino client at `TS10_1_0_23` also accepts unparameterized `*0*40*WHERE##` and `*0*41*WHERE##` as programming-state indications without a selected scenario. Only the unparameterized start indication bypasses the client's module-address check, allowing another module's programming event to affect its cached state. This is client behavior, not proof that every physical module starts recording together.
+
+Other programming and lock indications require an exact match of the complete configured `WHERE`, including any interface suffix. The library keeps programming status separate from its unlock cache: a start indication sets that cache without emitting an unlock value, so a following `44` can be suppressed. Repeated `43` still produces a lock value; an end indication does not update the unlock cache.
+
+The touchscreen's configured scenario entries apply a further local state model:
+
+| Received indication | Entry state before | Entry state after |
+| --- | --- | --- |
+| Start recording this scenario | Unlocked | Editing |
+| Start recording another scenario, or no selected scenario | Unlocked | Locked |
+| Start recording | Locked or Editing | Unchanged |
+| End recording, including another scenario | Any | Unlocked |
+| Lock / unlock | Any | Locked / Unlocked |
+
+These are client transitions, not guarantees about F420 recording or storage. Activation, erase, unavailable and memory-full indications are not forwarded by this library decoder. See [Programming-state evidence](../../project/review/myopencommunity-scenario-history-review.md#programming-state-and-address-matching).
+
+Its basic IR air-conditioning control sends configured actions through `WHO 0`; its advanced split control instead uses [`WHO 4`, `DIMENSION 22`](../who-4-temperature-control/dimensions.md#dimension-22---split-control). The UI category does not determine the wire namespace or a universal OFF command. The scenario library's `1..31` API assertions likewise do not extend the published F420 or 3456 capacities. See [historical client evidence](../../project/review/myopencommunity-coverage-audit.md#scenario-and-basic-ir-controls).
+
 See the [functional overview](../) for navigation by `WHO` and by function, [Scenario Engine](../../scenario-engine/) for the MyHOME_Suite trigger/condition/action capability model, and [Protocol](../../protocol/) for common frame/session syntax.
+
+Evidence finding `moc-e0013` (claimed): Scenario library programming/cache behavior
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007579`, `ownkb:claim:moc-c007580`, `ownkb:claim:moc-c007581`, `ownkb:claim:moc-c007582`, `ownkb:claim:moc-c007583`, `ownkb:claim:moc-c007584`, `ownkb:claim:moc-c007585`
+- `ownkb:source:moc-s000177`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ScenarioDevice::ScenarioDevice; ScenarioDevice::activateScenario; ScenarioDevice::deleteAll; ScenarioDevice::deleteScenario; ScenarioDevice::init; ScenarioDevice::parseFrame; ScenarioDevice::requestStatus; ScenarioDevice::startProgramming; ScenarioDevice::stopProgramming](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/scenario_device.cpp#L44-L156) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007579, ownkb:claim:moc-c007580, ownkb:claim:moc-c007581, ownkb:claim:moc-c007582, ownkb:claim:moc-c007583, ownkb:claim:moc-c007584, ownkb:claim:moc-c007585
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000178`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestScenarioDevice::cleanupTestCase; TestScenarioDevice::init; TestScenarioDevice::initTestCase; TestScenarioDevice::receiveDeviceIsProgrammingAtStartup; TestScenarioDevice::receiveGenericModuleIsProgramming; TestScenarioDevice::receiveGenericStartProgramming; TestScenarioDevice::receiveGenericStopProgramming; TestScenarioDevice::receiveLockDevice; TestScenarioDevice::receiveStartProgramming; TestScenarioDevice::receiveStopProgramming; TestScenarioDevice::receiveUnlockDevice; TestScenarioDevice::sendActivateScenario; TestScenarioDevice::sendDeleteAll; TestScenarioDevice::sendDeleteScenario; TestScenarioDevice::sendRequestStatus; TestScenarioDevice::sendStartProgramming; TestScenarioDevice::sendStopProgramming](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_scenario_device.cpp#L31-L155) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0014` (claimed): Configured scenario entry transitions
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007586`, `ownkb:claim:moc-c007587`, `ownkb:claim:moc-c007588`
+- `ownkb:source:moc-s000179`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ScenarioModule::ScenarioModule; ScenarioModule::changeStatus; ScenarioModule::deleteScenario; ScenarioModule::getStatus; ScenarioModule::startProgramming; ScenarioModule::stopProgramming; ScenarioModule::valueReceived; SimpleScenario::SimpleScenario; SimpleScenario::activate; parseScenarioModule](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/scenarioobjects.cpp#L47-L273) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007586, ownkb:claim:moc-c007587, ownkb:claim:moc-c007588
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000180`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestScenarioAdvanced::testDeviceCondition; TestScenarioAdvanced::testTimeCondition; TestScenarioAdvanced::testTimeDeviceCondition; TestScenarioAdvanced::testWeekdayCondition; TestScenarioAdvanced::testWeekdays; TestScenarioAdvancedDeviceEdit::cleanup; TestScenarioAdvancedDeviceEdit::init; TestScenarioAdvancedDeviceEdit::testAmplifierConditionInit; TestScenarioAdvancedDeviceEdit::testAmplifierConditionOnOff; TestScenarioAdvancedDeviceEdit::testConditionReset; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionInit; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionOnOff; TestScenarioAdvancedDeviceEdit::testDimmerConditionInit; TestScenarioAdvancedDeviceEdit::testDimmerConditionOnOff; TestScenarioAdvancedDeviceEdit::testLightConditionInit; TestScenarioAdvancedDeviceEdit::testLightConditionOnOff; TestScenarioAdvancedDeviceEdit::testTemperatureConditionInit; TestScenarioAdvancedTime::cleanup; TestScenarioAdvancedTime::init; TestScenarioAdvancedTime::testTimeoutFuture; TestScenarioAdvancedTime::testTimeoutPast; TestScenarioModule::checkMethod; TestScenarioModule::cleanup; TestScenarioModule::init; TestScenarioModule::initTestCase; TestScenarioModule::testActivateScenario; TestScenarioModule::testReceiveLock; TestScenarioModule::testReceiveLock_data; TestScenarioModule::testReceiveStart; TestScenarioModule::testReceiveStartOtherScenario; TestScenarioModule::testReceiveStartOtherScenario_data; TestScenarioModule::testReceiveStart_data; TestScenarioModule::testReceiveStop; TestScenarioModule::testReceiveStop_data; TestScenarioModule::testReceiveUnlock; TestScenarioModule::testReceiveUnlock_data; TestScenarioModule::testStartProgramming; TestScenarioModule::testStopProgramming; packStartValues; packValues](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_scenario_objects.cpp#L61-L619) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0015` (claimed): IR category and namespace selection
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007589`
+- `ownkb:source:moc-s000181`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SplitBasicCommand::SplitBasicCommand; SplitBasicCommand::appendCommand; SplitBasicCommand::execute; SplitBasicCommandGroup::SplitBasicCommandGroup; SplitBasicCommandGroup::apply; SplitBasicProgram::SplitBasicProgram; SplitBasicScenario::SplitBasicScenario; SplitBasicScenario::addProgram; SplitBasicScenario::apply; SplitBasicScenario::execute; SplitBasicScenario::getProgram; SplitBasicScenario::getPrograms; SplitBasicScenario::getTemperature; SplitBasicScenario::getTemperatureEnabled; SplitBasicScenario::getTemperatureIsValid; SplitBasicScenario::setProgram; SplitBasicScenario::valueReceived; parseSplitBasicCommand; parseSplitBasicCommandGroup; parseSplitBasicScenario](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/splitbasicscenario.cpp#L34-L284) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-coverage-audit.md`.
+  Examination claims: ownkb:claim:moc-c007589
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000182`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SplitAdvancedCommand::SplitAdvancedCommand; SplitAdvancedCommand::appendCommand; SplitAdvancedCommand::execute; SplitAdvancedCommandGroup::SplitAdvancedCommandGroup; SplitAdvancedCommandGroup::apply; SplitAdvancedProgram::SplitAdvancedProgram; SplitAdvancedScenario::SplitAdvancedScenario; SplitAdvancedScenario::addProgram; SplitAdvancedScenario::apply; SplitAdvancedScenario::execute; SplitAdvancedScenario::getCount; SplitAdvancedScenario::getMode; SplitAdvancedScenario::getModes; SplitAdvancedScenario::getProgramName; SplitAdvancedScenario::getPrograms; SplitAdvancedScenario::getSetPoint; SplitAdvancedScenario::getSetPointMax; SplitAdvancedScenario::getSetPointMin; SplitAdvancedScenario::getSetPointStep; SplitAdvancedScenario::getSpeed; SplitAdvancedScenario::getSpeeds; SplitAdvancedScenario::getSwing; SplitAdvancedScenario::getSwings; SplitAdvancedScenario::getTemperature; SplitAdvancedScenario::getTemperatureEnabled; SplitAdvancedScenario::getTemperatureIsValid; SplitAdvancedScenario::nextSpeed; SplitAdvancedScenario::nextSwing; SplitAdvancedScenario::prevSpeed; SplitAdvancedScenario::prevSwing; SplitAdvancedScenario::reset; SplitAdvancedScenario::resetProgram; SplitAdvancedScenario::sendOffCommand; SplitAdvancedScenario::sendScenarioCommand; SplitAdvancedScenario::setMode; SplitAdvancedScenario::setProgram; SplitAdvancedScenario::setSetPoint; SplitAdvancedScenario::sync; SplitAdvancedScenario::valueReceived; parseEnumeration; parseSplitAdvancedCommand; parseSplitAdvancedCommandGroup; parseSplitAdvancedScenario](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/splitadvancedscenario.cpp#L43-L588) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-coverage-audit.md`.
+  Examination claims: ownkb:claim:moc-c007589
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
 
 # Document: ownkb:document:d000026
 
@@ -4296,6 +4459,8 @@ Provenance cues: `evidence`
 Section ID: `ownkb:section:d000026:s000003`
 
 Applicability cues: `scs`
+Cautions: `do not`
+Provenance cues: `evidence`
 
 Ordinary command/status frames use `*1*WHAT*WHERE##`; status requests use `*#1*WHERE##`. `DIMENSION` operations use the common frame classes defined in [`DIMENSION`](../../protocol/dimensions.md).
 
@@ -4306,6 +4471,18 @@ Lighting uses the SCS `A`/`PL` address family, with point-to-point, environment,
 Lighting Management is a distinct protocol namespace under [`WHO 24`](../who-24-lighting-management/). Diagnostic discovery and configuration of Lighting-capable Devices belong to the diagnostic protocol rather than to functional `WHO 1` traffic.
 
 For the Device → Module → Object → Configuration model, see [Device Model](../../device-model/).
+
+The historical touchscreen's configured Lighting groups dispatch commands to linked Objects individually, rather than constructing a `#GR` address. Its “staircase light” Object delegates to [`WHO 8` Video Door Entry](../who-8-video-door-entry-telephony/) rather than `WHO 1`. Application groups and category labels therefore do not establish a wire address or namespace. See [Product selection evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
+
+Evidence finding `moc-e0016` (claimed): Lighting application groups and delegates
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007590`, `ownkb:claim:moc-c007591`
+- `ownkb:source:moc-s000183`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Dimmer100::Dimmer100; Dimmer100::decreaseLevel; Dimmer100::decreaseLevel100; Dimmer100::getObjectId; Dimmer100::getOffSpeed; Dimmer100::getOnSpeed; Dimmer100::getStepAmount; Dimmer100::getStepSpeed; Dimmer100::increaseLevel; Dimmer100::increaseLevel100; Dimmer100::setActive; Dimmer100::setOffSpeed; Dimmer100::setOnSpeed; Dimmer100::setPercentage; Dimmer100::setStepAmount; Dimmer100::setStepSpeed; Dimmer100::turn; Dimmer100::valueReceived; Dimmer100Group::Dimmer100Group; Dimmer100Group::decreaseLevel100; Dimmer100Group::increaseLevel100; Dimmer::Dimmer; Dimmer::decreaseLevel; Dimmer::decreaseLevel10; Dimmer::getObjectId; Dimmer::getPercentage; Dimmer::increaseLevel; Dimmer::increaseLevel10; Dimmer::isBroken; Dimmer::setBroken; Dimmer::setPercentage; Dimmer::valueReceived; DimmerGroup::DimmerGroup; DimmerGroup::decreaseLevel; DimmerGroup::increaseLevel; Light::Light; Light::getFTime; Light::getFTimes; Light::getHours; Light::getMinutes; Light::getObjectId; Light::getObjectKey; Light::getSeconds; Light::isActive; Light::isAutoTurnOff; Light::isTimingEnabled; Light::nextFTime; Light::prevFTime; Light::setActive; Light::setHours; Light::setMinutes; Light::setSeconds; Light::setTimingEnabled; Light::turn; Light::valueReceived; LightGroup::LightGroup; LightGroup::setActive; StaircaseLight::StaircaseLight; StaircaseLight::releaseAfterDelay; StaircaseLight::setActive; StaircaseLight::staircaseLightActivate; StaircaseLight::staircaseLightRelease; convertQObjectList; findDumberObject; parseDimmer; parseDimmer100; parseLight; parseLightGroup; parseStaircaseLight](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/lightobjects.cpp#L45-L774) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007590, ownkb:claim:moc-c007591
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000184`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestDimmer100::init; TestDimmer100::testLevelDown; TestDimmer100::testLevelDown100; TestDimmer100::testLevelUp; TestDimmer100::testLevelUp100; TestDimmer100::testOffSpeed; TestDimmer100::testOnSpeed; TestDimmer100::testOnSpeedNotUsed; TestDimmer100::testReceiveLevel; TestDimmer100::testSetLevel; TestDimmer100::testSetStatus; TestDimmer100::testSetTiming; TestDimmer100::testStepAmount; TestDimmer100::testStepSpeed; TestDimmer100::testTurnOnWithFTimeDisabled; TestDimmer100::testTurnOnWithFTimeEnabled; TestDimmer::init; TestDimmer::initObjects; TestDimmer::testBroken; TestDimmer::testLevelDown; TestDimmer::testLevelUp; TestDimmer::testReceiveLevel; TestDimmer::testSetLevel; TestDimmer::testTurnOnWithFTimeDisabled; TestLight::cleanup; TestLight::init; TestLight::initObjects; TestLight::testReceiveStatus; TestLight::testSetHours; TestLight::testSetMinutes; TestLight::testSetSeconds; TestLight::testSetStatus; TestLight::testSetTiming; TestLight::testTurnOnWithFTimeDisabled; TestLight::testTurnOnWithFTimeEnabled](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_light_objects.cpp#L29-L458) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 # Document: ownkb:document:d000027
 
@@ -4327,16 +4504,20 @@ The same broad address family is shared with Automation, but `WHERE` remains sco
 
 Section ID: `ownkb:section:d000027:s000002`
 
+Provenance cues: `evidence`
+
 | Scope | `WHERE` form | Role |
 | --- | --- | --- |
 | General | `0` | Addresses the complete Lighting system |
 | Environment / area | `A` | Addresses the Lighting Objects belonging to an environment |
 | Point to point | `APL` | Addresses an individual `A`/`PL` light point |
 | Group | `#GR` | Addresses the Lighting Objects belonging to a group |
-| Riser / level 3 | `0#3`, `A#3`, `#G#3`, or `APL#3` | Routes the corresponding scope on the riser/backbone level |
+| Riser / level 3 | `BASE#3` | Implementation model; applicability must be established for the selected operation |
 | Local bus / level 4 | `0#4#Int`, `A#4#Int`, `#G#4#Int`, or `APL#4#Int` | Routes the corresponding scope through local-bus interface `Int` |
 
-The canonical [`A`/`PL` grammar](../../protocol/addressing.md#lighting-and-automation-apl-grammar) defines the shared base ranges and the less-common forms that differ between Lighting and Automation. Advanced forms are modeled as a base target plus a routing qualifier: `#3` for the riser/backbone level or `#4#Int` for a local bus. The published `WHO 1` material establishes these qualifiers for General, Area, Group, and point targets. `Int` is the routing-interface address; for Lighting it is `01..09` or `11..15`. Leading zeroes and `#` markers are significant; a `WHERE` must be parsed as protocol syntax before numeric conversion.
+The canonical [`A`/`PL` grammar](../../protocol/addressing.md#lighting-and-automation-apl-grammar) defines the shared base ranges and the less-common forms that differ between Lighting and Automation. Advanced forms are modeled as a base target plus a routing qualifier; `#4#Int` selects a local bus. The published `WHO 1` material establishes `#4#Int` for General, Area, Group, and point targets. `Int` is the routing-interface address; for Lighting it is `01..09` or `11..15`. Leading zeroes and `#` markers are significant; a `WHERE` must be parsed as protocol syntax before numeric conversion.
+
+The published `WHERE` table does not enumerate `BASE#3` variants. Level-3 qualification is an implementation model, not proof of every Lighting target/operation combination. See [Level 3 / Riser](../../protocol/addressing.md#level-3--riser) for that evidence boundary and [historical matcher behavior](../../protocol/addressing.md#historical-touchscreen-address-matching) for the narrower client rules.
 
 ### MyHOME_Suite address rules
 
@@ -4403,7 +4584,7 @@ Cautions: `must not`
 Section ID: `ownkb:section:d000028:s000003`
 
 Applicability cues: `firmware`
-Cautions: `must not`
+Cautions: `must not`, `not evidence`
 Provenance cues: `documentation`, `evidence`, `source`
 
 Write:
@@ -4425,6 +4606,18 @@ A 27 September 2026 [public MH200/F418U2 trace](https://github.com/GreenGrassBlu
 
 The same MH200/F418U2 trace also observed coarse `WHAT` commands and subsequent fine-level reads: `WHAT 3 -> LEVEL100 110`, `WHAT 5 -> LEVEL100 130`, `WHAT 7 -> LEVEL100 150`, and `WHAT 10 -> LEVEL100 200`. These are Device-path observations, not a replacement for the published `WHAT` table; the exact relationship between the coarse command labels and the F418U2 fine-level state remains implementation evidence rather than a universal encoding rule.
 
+At `TS10_1_0_23`, the touchscreen library treats `LEVEL100 = 100` as OFF while retaining its previously cached level. It emits no fresh level or speed from that OFF report; speed is forwarded only from a `DIMENSION 1` report while ON. A dimension write can update the local level without refreshing speed. Retained level and speed therefore need their own freshness, separate from ON/OFF state. These are decoder/cache choices, not evidence that the actuator reports its previous level while OFF. See [Client-state evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
+
+Evidence finding `moc-e0017` (claimed): Fine dimmer cache freshness
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007592`, `ownkb:claim:moc-c007593`, `ownkb:claim:moc-c007594`
+- `ownkb:source:moc-s000185`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - Dimmer100Device::Dimmer100Device; Dimmer100Device::decreaseLevel100; Dimmer100Device::delayedLevelRequest; Dimmer100Device::increaseLevel100; Dimmer100Device::init; Dimmer100Device::parseFrame; Dimmer100Device::requestDimmer100Status; Dimmer100Device::requestPullStatus; Dimmer100Device::setLevel100; Dimmer100Device::turnOff; Dimmer100Device::turnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/lighting_device.cpp#L383-L461) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007592, ownkb:claim:moc-c007593, ownkb:claim:moc-c007594
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000186`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestDimmer100Device::cleanup; TestDimmer100Device::getRequestStatusFrame; TestDimmer100Device::init; TestDimmer100Device::receiveDimmer100Status; TestDimmer100Device::receiveDimmer100StatusLevel0; TestDimmer100Device::receiveGlobalDecrementLevel100; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullBase; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullBase; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmer100Device::receiveGlobalIncrementLevel100; TestDimmer100Device::sendDimmer100DecreaseLevel; TestDimmer100Device::sendDimmer100IncreaseLevel; TestDimmer100Device::sendRequestDimmer100Status; TestDimmer100Device::sendSetLevel100; TestDimmer100Device::testAdvancedDetection; TestDimmer100Device::testAdvancedDetection2; TestDimmer100Device::testRequestLevel100; TestDimmerDevice::cleanup; TestDimmerDevice::cleanupDimmer; TestDimmerDevice::init; TestDimmerDevice::initDimmer; TestDimmerDevice::receiveDimmer100Level; TestDimmerDevice::receiveDimmer100WriteLevel; TestDimmerDevice::receiveDimmerLevel; TestDimmerDevice::receiveDimmerProblem; TestDimmerDevice::receiveGlobalDecrementLevel; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullBase; TestDimmerDevice::receiveGlobalDimmer100IncDecPull; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmerDevice::receiveGlobalDimmer100SetlevelPull; TestDimmerDevice::receiveGlobalIncrementLevel; TestDimmerDevice::receiveLightOnRequestLevel; TestDimmerDevice::sendDimmerDecreaseLevel; TestDimmerDevice::sendDimmerIncreaseLevel; TestDimmerDevice::sendPullRequestIfNeeded; TestDimmerDevice::sendSetLevel100; TestDimmerDevice::testAdvancedDetection; TestDimmerDevice::testAdvancedDetection2; TestDimmerDevice::testRequestLevel; TestLightingDevice::checkPullUnknown; TestLightingDevice::cleanup; TestLightingDevice::cleanupLightingDevice; TestLightingDevice::getRequestStatusFrame; TestLightingDevice::init; TestLightingDevice::initLightingDevice; TestLightingDevice::receiveFixedTiming; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullAdvanced; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullBase; TestLightingDevice::receiveGlobalDimmer100OnOffPull; TestLightingDevice::receiveInvalidVariableTiming; TestLightingDevice::receiveLightOnOff; TestLightingDevice::receiveLightOnOffNotPull; TestLightingDevice::receiveLightOnOffNotPullAdvUnknown; TestLightingDevice::receiveLightOnOffNotPullExt; TestLightingDevice::receiveLightOnOffPull; TestLightingDevice::receiveLightOnOffPullExt; TestLightingDevice::receiveLightOnOffUnknown; TestLightingDevice::receiveLightOnOffUnknown2; TestLightingDevice::receiveLightOnOffUnknownExt; TestLightingDevice::receiveLightOnOffUnknownExt2; TestLightingDevice::receiveVariableTiming; TestLightingDevice::sendFixedTiming; TestLightingDevice::sendPullRequestIfNeeded; TestLightingDevice::sendRequestStatus; TestLightingDevice::sendRequestVariableTiming; TestLightingDevice::sendTurnOn; TestLightingDevice::sendVariableTiming; TestLightingDevice::setParams; TestLightingDevice::testAdvancedDetection2; TestLightingDevice::testInvalidDimensionFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_lighting_device.cpp#L32-L887) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
 ### `DIMENSION 2` - temporization
 
 Section ID: `ownkb:section:d000028:s000004`
@@ -4436,6 +4629,44 @@ Section ID: `ownkb:section:d000028:s000004`
 ```
 
 This explicit duration is distinct from fixed-duration `WHAT 11..18` commands. The published event flow after a write reports ordinary Lighting state and, for a dimmer, a fine-grained level/speed report.
+
+#### Historical timer handling
+
+Section ID: `ownkb:section:d000028:s000011`
+
+Applicability cues: `gateway`
+Provenance cues: `evidence`
+
+The BTicino touchscreen library at `TS10_1_0_23` ignores the report payload `255*255*255` as unusable timer state. It retains `0*0*0` as a zero duration. This is implementation evidence for interpreting historical reports, not an extension of the published minute/second ranges. See [Lighting evidence](../../project/review/myopencommunity-integration.md#lighting-and-automation).
+
+The touchscreen's timed fine-dimmer action sends ON, with its configured transition speed when positive, followed by the fixed-duration command or `DIMENSION 2` write. Its ordinary timed-light action sends the timer operation directly. For example, a fine-dimmer action with speed `123` and duration of 15 hours, 0 minutes and 3 seconds sends:
+
+```text
+*1*1#123*WHERE##
+*#1*WHERE*#2*15*0*3##
+```
+
+Exact application tests establish this order. It is an application action sequence, not a requirement to precede every timer write with ON or evidence of gateway acceptance.
+
+Evidence finding `moc-e0018` (claimed): Timer report sentinel
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007595`
+- `ownkb:source:moc-s000185`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - Dimmer100Device::Dimmer100Device; Dimmer100Device::decreaseLevel100; Dimmer100Device::delayedLevelRequest; Dimmer100Device::increaseLevel100; Dimmer100Device::init; Dimmer100Device::parseFrame; Dimmer100Device::requestDimmer100Status; Dimmer100Device::requestPullStatus; Dimmer100Device::setLevel100; Dimmer100Device::turnOff; Dimmer100Device::turnOn; DimmerDevice::DimmerDevice; DimmerDevice::decreaseLevel; DimmerDevice::delayedLevelRequest; DimmerDevice::increaseLevel; DimmerDevice::isFrameHandled; DimmerDevice::parseFrame; DimmerDevice::setLevel100; LightingDevice::LightingDevice; LightingDevice::fixedTiming; LightingDevice::init; LightingDevice::isFrameHandled; LightingDevice::isInitialized; LightingDevice::parseFrame; LightingDevice::requestPullStatus; LightingDevice::requestStatus; LightingDevice::requestVariableTiming; LightingDevice::setTimingBehaviour; LightingDevice::turnOff; LightingDevice::turnOn; LightingDevice::variableTiming; dimmer100LevelTo10; dimmerLevelTo100](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/lighting_device.cpp#L48-L461) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007595
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000186`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestDimmer100Device::cleanup; TestDimmer100Device::getRequestStatusFrame; TestDimmer100Device::init; TestDimmer100Device::receiveDimmer100Status; TestDimmer100Device::receiveDimmer100StatusLevel0; TestDimmer100Device::receiveGlobalDecrementLevel100; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullBase; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullBase; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmer100Device::receiveGlobalIncrementLevel100; TestDimmer100Device::sendDimmer100DecreaseLevel; TestDimmer100Device::sendDimmer100IncreaseLevel; TestDimmer100Device::sendRequestDimmer100Status; TestDimmer100Device::sendSetLevel100; TestDimmer100Device::testAdvancedDetection; TestDimmer100Device::testAdvancedDetection2; TestDimmer100Device::testRequestLevel100; TestDimmerDevice::cleanup; TestDimmerDevice::cleanupDimmer; TestDimmerDevice::init; TestDimmerDevice::initDimmer; TestDimmerDevice::receiveDimmer100Level; TestDimmerDevice::receiveDimmer100WriteLevel; TestDimmerDevice::receiveDimmerLevel; TestDimmerDevice::receiveDimmerProblem; TestDimmerDevice::receiveGlobalDecrementLevel; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullBase; TestDimmerDevice::receiveGlobalDimmer100IncDecPull; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmerDevice::receiveGlobalDimmer100SetlevelPull; TestDimmerDevice::receiveGlobalIncrementLevel; TestDimmerDevice::receiveLightOnRequestLevel; TestDimmerDevice::sendDimmerDecreaseLevel; TestDimmerDevice::sendDimmerIncreaseLevel; TestDimmerDevice::sendPullRequestIfNeeded; TestDimmerDevice::sendSetLevel100; TestDimmerDevice::testAdvancedDetection; TestDimmerDevice::testAdvancedDetection2; TestDimmerDevice::testRequestLevel; TestLightingDevice::checkPullUnknown; TestLightingDevice::cleanup; TestLightingDevice::cleanupLightingDevice; TestLightingDevice::getRequestStatusFrame; TestLightingDevice::init; TestLightingDevice::initLightingDevice; TestLightingDevice::receiveFixedTiming; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullAdvanced; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullBase; TestLightingDevice::receiveGlobalDimmer100OnOffPull; TestLightingDevice::receiveInvalidVariableTiming; TestLightingDevice::receiveLightOnOff; TestLightingDevice::receiveLightOnOffNotPull; TestLightingDevice::receiveLightOnOffNotPullAdvUnknown; TestLightingDevice::receiveLightOnOffNotPullExt; TestLightingDevice::receiveLightOnOffPull; TestLightingDevice::receiveLightOnOffPullExt; TestLightingDevice::receiveLightOnOffUnknown; TestLightingDevice::receiveLightOnOffUnknown2; TestLightingDevice::receiveLightOnOffUnknownExt; TestLightingDevice::receiveLightOnOffUnknownExt2; TestLightingDevice::receiveVariableTiming; TestLightingDevice::sendFixedTiming; TestLightingDevice::sendPullRequestIfNeeded; TestLightingDevice::sendRequestStatus; TestLightingDevice::sendRequestVariableTiming; TestLightingDevice::sendTurnOn; TestLightingDevice::sendVariableTiming; TestLightingDevice::setParams; TestLightingDevice::testAdvancedDetection2; TestLightingDevice::testInvalidDimensionFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_lighting_device.cpp#L32-L887) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007595
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0019` (claimed): Timed Lighting dispatch order
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007596`
+- `ownkb:source:moc-s000184`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestDimmer100::init; TestDimmer100::testLevelDown; TestDimmer100::testLevelDown100; TestDimmer100::testLevelUp; TestDimmer100::testLevelUp100; TestDimmer100::testOffSpeed; TestDimmer100::testOnSpeed; TestDimmer100::testOnSpeedNotUsed; TestDimmer100::testReceiveLevel; TestDimmer100::testSetLevel; TestDimmer100::testSetStatus; TestDimmer100::testSetTiming; TestDimmer100::testStepAmount; TestDimmer100::testStepSpeed; TestDimmer100::testTurnOnWithFTimeDisabled; TestDimmer100::testTurnOnWithFTimeEnabled; TestDimmer::init; TestDimmer::initObjects; TestDimmer::testBroken; TestDimmer::testLevelDown; TestDimmer::testLevelUp; TestDimmer::testReceiveLevel; TestDimmer::testSetLevel; TestDimmer::testTurnOnWithFTimeDisabled; TestLight::cleanup; TestLight::init; TestLight::initObjects; TestLight::testReceiveStatus; TestLight::testSetHours; TestLight::testSetMinutes; TestLight::testSetSeconds; TestLight::testSetStatus; TestLight::testSetTiming; TestLight::testTurnOnWithFTimeDisabled; TestLight::testTurnOnWithFTimeEnabled](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_light_objects.cpp#L29-L458) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007596
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+- `ownkb:source:moc-s000183`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Dimmer100::Dimmer100; Dimmer100::decreaseLevel; Dimmer100::decreaseLevel100; Dimmer100::getObjectId; Dimmer100::getOffSpeed; Dimmer100::getOnSpeed; Dimmer100::getStepAmount; Dimmer100::getStepSpeed; Dimmer100::increaseLevel; Dimmer100::increaseLevel100; Dimmer100::setActive; Dimmer100::setOffSpeed; Dimmer100::setOnSpeed; Dimmer100::setPercentage; Dimmer100::setStepAmount; Dimmer100::setStepSpeed; Dimmer100::turn; Dimmer100::valueReceived; Dimmer100Group::Dimmer100Group; Dimmer100Group::decreaseLevel100; Dimmer100Group::increaseLevel100; Dimmer::Dimmer; Dimmer::decreaseLevel; Dimmer::decreaseLevel10; Dimmer::getObjectId; Dimmer::getPercentage; Dimmer::increaseLevel; Dimmer::increaseLevel10; Dimmer::isBroken; Dimmer::setBroken; Dimmer::setPercentage; Dimmer::valueReceived; DimmerGroup::DimmerGroup; DimmerGroup::decreaseLevel; DimmerGroup::increaseLevel; Light::Light; Light::getFTime; Light::getFTimes; Light::getHours; Light::getMinutes; Light::getObjectId; Light::getObjectKey; Light::getSeconds; Light::isActive; Light::isAutoTurnOff; Light::isTimingEnabled; Light::nextFTime; Light::prevFTime; Light::setActive; Light::setHours; Light::setMinutes; Light::setSeconds; Light::setTimingEnabled; Light::turn; Light::valueReceived; LightGroup::LightGroup; LightGroup::setActive; StaircaseLight::StaircaseLight; StaircaseLight::releaseAfterDelay; StaircaseLight::setActive; StaircaseLight::staircaseLightActivate; StaircaseLight::staircaseLightRelease; convertQObjectList; findDumberObject; parseDimmer; parseDimmer100; parseLight; parseLightGroup; parseStaircaseLight](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/lightobjects.cpp#L45-L774) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007596
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
 
 ### `DIMENSION 3` - only Objects that are ON
 
@@ -4508,6 +4739,49 @@ Provenance cues: `catalogue`
 
 The global `WHO 1` vocabulary does not imply that every Lighting Object implements every operation. Validate Device/firmware/Object applicability through the catalogue model where available.
 
+#### Historical collective-command state handling
+
+Section ID: `ownkb:section:d000028:s000012`
+
+Cautions: `do not`, `must not`
+Uncertainty: `unknown`, `unresolved`
+Provenance cues: `documentation`, `evidence`, `specification`
+
+The touchscreen's Lighting/Automation state manager compares a collective command with a later point report to classify whether an endpoint follows that command. Exact tests distinguish a light remaining OFF after general ON from one reporting ON. Point reports alone do not establish that classification, and an unsupported advanced command can leave it unresolved.
+
+This is a client capability-detection strategy, not a complete specification of a PUL-configured actuator. Manufacturer documentation establishes PUL's basic functions, including Room/General command exclusion on the cited actuators; group filtering and status responses require their own scope. See [PUL behavior](../../device-model/configurators.md#pul-behavior). Collective traffic must not automatically overwrite every point's observed state. The client's polling delays and classification names remain application policy. See [Collective-command evidence](../../project/review/myopencommunity-reassessment.md#lighting-and-automation-state).
+
+In the same client's dimmer cache, a relative command while OFF turns the cached state ON without applying the step to the remembered level. While ON, coarse steps are clamped to `WHAT 2..10`, and fine steps to `1..100`. For ordinary ON/OFF frames, a collective ON schedules a delayed level query when the cached level is unknown; OFF cancels that query, while a point ON does not schedule it. These assumptions explain the client's displayed state and do not substitute for a point report.
+
+Evidence finding `moc-e0020` (claimed): Collective-command capability classification
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007597`, `ownkb:claim:moc-c007598`
+- `ownkb:source:moc-s000171`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - PullDevice::PullDevice; PullDevice::delayedStatusRequest; PullDevice::manageFrame; PullStateManager::PullStateManager; PullStateManager::getPullMode; PullStateManager::moreFrameNeeded; PullStateManager::setStatusRequested; checkAddressIsForMe; getEnvironment](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/pulldevice.cpp#L47-L273) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-reassessment.md`.
+  Examination claims: ownkb:claim:moc-c007597, ownkb:claim:moc-c007598
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000187`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestPullManager::parseFrames; TestPullManager::testDimmer; TestPullManager::testDimmer100; TestPullManager::testDimmer100_2; TestPullManager::testDimmer100_3; TestPullManager::testDimmer100_decreaseLevel; TestPullManager::testDimmer100_decreaseLevel_100; TestPullManager::testDimmer100_decreaseLevel_old; TestPullManager::testDimmer100_increaseLevel; TestPullManager::testDimmer100_increaseLevel_100; TestPullManager::testDimmer100_increaseLevel_old; TestPullManager::testDimmer100_off; TestPullManager::testDimmer100_off_100; TestPullManager::testDimmer100_on; TestPullManager::testDimmer100_on_100; TestPullManager::testDimmer100_receiveIncreaseLevel10; TestPullManager::testDimmer100_setLevel; TestPullManager::testDimmer100_setLevel_100; TestPullManager::testDimmer100_timing; TestPullManager::testDimmer100_variabletiming; TestPullManager::testDimmer2; TestPullManager::testDimmer3; TestPullManager::testDimmer_decreaseLevel; TestPullManager::testDimmer_decreaseLevel_100; TestPullManager::testDimmer_decreaseLevel_old; TestPullManager::testDimmer_increaseLevel; TestPullManager::testDimmer_increaseLevel_100; TestPullManager::testDimmer_increaseLevel_old; TestPullManager::testDimmer_off; TestPullManager::testDimmer_off_100; TestPullManager::testDimmer_on; TestPullManager::testDimmer_on_100; TestPullManager::testDimmer_setLevel; TestPullManager::testDimmer_setLevel_100; TestPullManager::testDimmer_timing; TestPullManager::testDimmer_variabletiming; TestPullManager::testSimpleLight; TestPullManager::testSimpleLight2; TestPullManager::testSimpleLight_decreaseLevel; TestPullManager::testSimpleLight_decreaseLevel_100; TestPullManager::testSimpleLight_increaseLevel; TestPullManager::testSimpleLight_increaseLevel_100; TestPullManager::testSimpleLight_off; TestPullManager::testSimpleLight_off_100; TestPullManager::testSimpleLight_on; TestPullManager::testSimpleLight_on_100; TestPullManager::testSimpleLight_setLevel; TestPullManager::testSimpleLight_setLevel_100; TestPullManager::testSimpleLight_timing; TestPullManager::testSimpleLight_variabletiming; TestPullManager::testVariableTiming; TestPullManager::testVariableTiming2; TestPullManager::testVariableTiming3; TestPullManager::testVariableTiming4](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_pull_manager.cpp#L28-L937) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-reassessment.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0021` (claimed): Relative dimmer and collective ON cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007599`, `ownkb:claim:moc-c007600`, `ownkb:claim:moc-c007601`
+- `ownkb:source:moc-s000185`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - Dimmer100Device::Dimmer100Device; Dimmer100Device::decreaseLevel100; Dimmer100Device::delayedLevelRequest; Dimmer100Device::increaseLevel100; Dimmer100Device::init; Dimmer100Device::parseFrame; Dimmer100Device::requestDimmer100Status; Dimmer100Device::requestPullStatus; Dimmer100Device::setLevel100; Dimmer100Device::turnOff; Dimmer100Device::turnOn; DimmerDevice::DimmerDevice; DimmerDevice::decreaseLevel; DimmerDevice::delayedLevelRequest; DimmerDevice::increaseLevel; DimmerDevice::isFrameHandled; DimmerDevice::parseFrame; DimmerDevice::setLevel100; LightingDevice::LightingDevice; LightingDevice::fixedTiming; LightingDevice::init; LightingDevice::isFrameHandled; LightingDevice::isInitialized; LightingDevice::parseFrame; LightingDevice::requestPullStatus; LightingDevice::requestStatus; LightingDevice::requestVariableTiming; LightingDevice::setTimingBehaviour; LightingDevice::turnOff; LightingDevice::turnOn; LightingDevice::variableTiming; dimmer100LevelTo10; dimmerLevelTo100](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/lighting_device.cpp#L48-L461) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007599, ownkb:claim:moc-c007600, ownkb:claim:moc-c007601
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000186`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestDimmer100Device::cleanup; TestDimmer100Device::getRequestStatusFrame; TestDimmer100Device::init; TestDimmer100Device::receiveDimmer100Status; TestDimmer100Device::receiveDimmer100StatusLevel0; TestDimmer100Device::receiveGlobalDecrementLevel100; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullBase; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullBase; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmer100Device::receiveGlobalIncrementLevel100; TestDimmer100Device::sendDimmer100DecreaseLevel; TestDimmer100Device::sendDimmer100IncreaseLevel; TestDimmer100Device::sendRequestDimmer100Status; TestDimmer100Device::sendSetLevel100; TestDimmer100Device::testAdvancedDetection; TestDimmer100Device::testAdvancedDetection2; TestDimmer100Device::testRequestLevel100; TestDimmerDevice::cleanup; TestDimmerDevice::cleanupDimmer; TestDimmerDevice::init; TestDimmerDevice::initDimmer; TestDimmerDevice::receiveDimmer100Level; TestDimmerDevice::receiveDimmer100WriteLevel; TestDimmerDevice::receiveDimmerLevel; TestDimmerDevice::receiveDimmerProblem; TestDimmerDevice::receiveGlobalDecrementLevel; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullBase; TestDimmerDevice::receiveGlobalDimmer100IncDecPull; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmerDevice::receiveGlobalDimmer100SetlevelPull; TestDimmerDevice::receiveGlobalIncrementLevel; TestDimmerDevice::receiveLightOnRequestLevel; TestDimmerDevice::sendDimmerDecreaseLevel; TestDimmerDevice::sendDimmerIncreaseLevel; TestDimmerDevice::sendPullRequestIfNeeded; TestDimmerDevice::sendSetLevel100; TestDimmerDevice::testAdvancedDetection; TestDimmerDevice::testAdvancedDetection2; TestDimmerDevice::testRequestLevel; TestLightingDevice::checkPullUnknown; TestLightingDevice::cleanup; TestLightingDevice::cleanupLightingDevice; TestLightingDevice::getRequestStatusFrame; TestLightingDevice::init; TestLightingDevice::initLightingDevice; TestLightingDevice::receiveFixedTiming; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullAdvanced; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullBase; TestLightingDevice::receiveGlobalDimmer100OnOffPull; TestLightingDevice::receiveInvalidVariableTiming; TestLightingDevice::receiveLightOnOff; TestLightingDevice::receiveLightOnOffNotPull; TestLightingDevice::receiveLightOnOffNotPullAdvUnknown; TestLightingDevice::receiveLightOnOffNotPullExt; TestLightingDevice::receiveLightOnOffPull; TestLightingDevice::receiveLightOnOffPullExt; TestLightingDevice::receiveLightOnOffUnknown; TestLightingDevice::receiveLightOnOffUnknown2; TestLightingDevice::receiveLightOnOffUnknownExt; TestLightingDevice::receiveLightOnOffUnknownExt2; TestLightingDevice::receiveVariableTiming; TestLightingDevice::sendFixedTiming; TestLightingDevice::sendPullRequestIfNeeded; TestLightingDevice::sendRequestStatus; TestLightingDevice::sendRequestVariableTiming; TestLightingDevice::sendTurnOn; TestLightingDevice::sendVariableTiming; TestLightingDevice::setParams; TestLightingDevice::testAdvancedDetection2; TestLightingDevice::testInvalidDimensionFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_lighting_device.cpp#L32-L887) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0096` (deferred): PUL status and group behavior on hardware
+Disposition reason: Matcher classification and simulator guards do not establish physical status-response or group-filtering policy. Manufacturer-defined PUL functions remain independently documented.
+- `ownkb:source:moc-s000171`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - PullDevice::PullDevice; PullDevice::delayedStatusRequest; PullDevice::manageFrame; PullStateManager::PullStateManager; PullStateManager::getPullMode; PullStateManager::moreFrameNeeded; PullStateManager::setStatusRequested; checkAddressIsForMe; getEnvironment](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/pulldevice.cpp#L47-L273) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000235`: source_inspection; simulator; interpretation; qualifies. [MyOpenCommunity/MyHomeSystemEmulator - BtF411_dev::BtF411_dev; BtF411_dev::HandleMessage; BtF411_dev::ReceiveMessage; BtF411_dev::attachChild; BtF411_dev::cancelCmd; BtF411_dev::execCommand; BtF411_dev::executeCmd; BtF411_dev::findLed; BtF411_dev::getApl; BtF411_dev::getID; BtF411_dev::getModeTypeValues; BtF411_dev::registerEventHnd; BtF411_dev::save; BtF411_dev::sendACK; BtF411_dev::setApl; BtF411_dev::setID; BtF411_dev::setResoucesFileName; BtF411_dev::setSuperior; BtF411_dev::unRegisterEventHnd; BtF411_dev::~BtF411_dev](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F411_DEV_PGIN/btf411dev.cpp#L22-L499) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Evidence basis
 
 Section ID: `ownkb:section:d000028:s000010`
@@ -4547,6 +4821,50 @@ Cautions: `must not`
 The parameterized forms `0#SPEED` and `1#SPEED` switch OFF or ON using the requested transition speed. `30#LEVELS#SPEED` and `31#LEVELS#SPEED` change several levels at the specified speed. These forms must not be reduced to their leading numeric `WHAT`.
 
 For the published speed field, `0` means the last speed used, `1..254` are explicit speeds, and `255` selects the default speed.
+
+#### Historical client level conversion
+
+Section ID: `ownkb:section:d000029:s000009`
+
+Provenance cues: `evidence`
+
+The touchscreen library converts coarse `WHAT 2..10` into cached fine levels `1, 10, 20, 30, 40, 50, 60, 75, 100` respectively. Its exact tests include `WHAT 9` becoming cached level `75`. This is the client's conversion table, distinct from the published percentage labels above; it does not prove a physical output curve. Compare the [observed F418U2 coarse/fine relationship](dimensions.md#dimension-1---level-and-speed) and [conversion evidence](../../project/review/myopencommunity-coverage-audit.md#coarse-lighting-levels).
+
+The inverse conversion used by the coarse dimmer setter rounds requested fine levels as follows:
+
+| Requested level | Sent `WHAT` |
+| --- | --- |
+| `0` | `0` |
+| `1..4` | `2` |
+| `5..15` | `3` |
+| `16..25` | `4` |
+| `26..35` | `5` |
+| `36..45` | `6` |
+| `46..53` | `7` |
+| `54..67` | `8` |
+| `68..85` | `9` |
+| `86..100` | `10` |
+
+This setter ignores its speed argument. An exact test sends `*1*9*WHERE##` for requested level `75` and speed `9`; the fine-level setter instead sends `*#1*WHERE*#1*175*9##`. These are library choices, not additional protocol ranges or evidence of a physical output curve.
+
+The same library decodes `*1*19*WHERE##` as a dimmer-problem indication. The touchscreen sets a local fault flag and clears it on a decoded ON/OFF state, including OFF. This establishes historical client handling, not the fault's physical cause or a universal recovery condition. See [Lighting and Automation evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
+
+Evidence finding `moc-e0022` (claimed): Coarse/fine Lighting conversion
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007602`, `ownkb:claim:moc-c007603`, `ownkb:claim:moc-c007604`, `ownkb:claim:moc-c007605`
+- `ownkb:source:moc-s000185`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - Dimmer100Device::setLevel100; DimmerDevice::setLevel100; dimmer100LevelTo10; dimmerLevelTo100](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/lighting_device.cpp#L48-L422) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007602, ownkb:claim:moc-c007603, ownkb:claim:moc-c007604, ownkb:claim:moc-c007605
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000186`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestDimmer100Device::cleanup; TestDimmer100Device::getRequestStatusFrame; TestDimmer100Device::init; TestDimmer100Device::receiveDimmer100Status; TestDimmer100Device::receiveDimmer100StatusLevel0; TestDimmer100Device::receiveGlobalDecrementLevel100; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100IncDecNonPullBase; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100OnOffNonPullBase; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmer100Device::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmer100Device::receiveGlobalIncrementLevel100; TestDimmer100Device::sendDimmer100DecreaseLevel; TestDimmer100Device::sendDimmer100IncreaseLevel; TestDimmer100Device::sendRequestDimmer100Status; TestDimmer100Device::sendSetLevel100; TestDimmer100Device::testAdvancedDetection; TestDimmer100Device::testAdvancedDetection2; TestDimmer100Device::testRequestLevel100; TestDimmerDevice::cleanup; TestDimmerDevice::cleanupDimmer; TestDimmerDevice::init; TestDimmerDevice::initDimmer; TestDimmerDevice::receiveDimmer100Level; TestDimmerDevice::receiveDimmer100WriteLevel; TestDimmerDevice::receiveDimmerLevel; TestDimmerDevice::receiveDimmerProblem; TestDimmerDevice::receiveGlobalDecrementLevel; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100IncDecNonPullBase; TestDimmerDevice::receiveGlobalDimmer100IncDecPull; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullAdvanced; TestDimmerDevice::receiveGlobalDimmer100SetlevelNonPullBase; TestDimmerDevice::receiveGlobalDimmer100SetlevelPull; TestDimmerDevice::receiveGlobalIncrementLevel; TestDimmerDevice::receiveLightOnRequestLevel; TestDimmerDevice::sendDimmerDecreaseLevel; TestDimmerDevice::sendDimmerIncreaseLevel; TestDimmerDevice::sendPullRequestIfNeeded; TestDimmerDevice::sendSetLevel100; TestDimmerDevice::testAdvancedDetection; TestDimmerDevice::testAdvancedDetection2; TestDimmerDevice::testRequestLevel; TestLightingDevice::checkPullUnknown; TestLightingDevice::cleanup; TestLightingDevice::cleanupLightingDevice; TestLightingDevice::getRequestStatusFrame; TestLightingDevice::init; TestLightingDevice::initLightingDevice; TestLightingDevice::receiveFixedTiming; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullAdvanced; TestLightingDevice::receiveGlobalDimmer100OnOffNonPullBase; TestLightingDevice::receiveGlobalDimmer100OnOffPull; TestLightingDevice::receiveInvalidVariableTiming; TestLightingDevice::receiveLightOnOff; TestLightingDevice::receiveLightOnOffNotPull; TestLightingDevice::receiveLightOnOffNotPullAdvUnknown; TestLightingDevice::receiveLightOnOffNotPullExt; TestLightingDevice::receiveLightOnOffPull; TestLightingDevice::receiveLightOnOffPullExt; TestLightingDevice::receiveLightOnOffUnknown; TestLightingDevice::receiveLightOnOffUnknown2; TestLightingDevice::receiveLightOnOffUnknownExt; TestLightingDevice::receiveLightOnOffUnknownExt2; TestLightingDevice::receiveVariableTiming; TestLightingDevice::sendFixedTiming; TestLightingDevice::sendPullRequestIfNeeded; TestLightingDevice::sendRequestStatus; TestLightingDevice::sendRequestVariableTiming; TestLightingDevice::sendTurnOn; TestLightingDevice::sendVariableTiming; TestLightingDevice::setParams; TestLightingDevice::testAdvancedDetection2; TestLightingDevice::testInvalidDimensionFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_lighting_device.cpp#L32-L887) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007602, ownkb:claim:moc-c007603, ownkb:claim:moc-c007604
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0023` (claimed): Application dimmer fault cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007606`
+- `ownkb:source:moc-s000183`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Dimmer100::Dimmer100; Dimmer100::decreaseLevel; Dimmer100::decreaseLevel100; Dimmer100::getObjectId; Dimmer100::getOffSpeed; Dimmer100::getOnSpeed; Dimmer100::getStepAmount; Dimmer100::getStepSpeed; Dimmer100::increaseLevel; Dimmer100::increaseLevel100; Dimmer100::setActive; Dimmer100::setOffSpeed; Dimmer100::setOnSpeed; Dimmer100::setPercentage; Dimmer100::setStepAmount; Dimmer100::setStepSpeed; Dimmer100::turn; Dimmer100::valueReceived; Dimmer100Group::Dimmer100Group; Dimmer100Group::decreaseLevel100; Dimmer100Group::increaseLevel100; Dimmer::Dimmer; Dimmer::decreaseLevel; Dimmer::decreaseLevel10; Dimmer::getObjectId; Dimmer::getPercentage; Dimmer::increaseLevel; Dimmer::increaseLevel10; Dimmer::isBroken; Dimmer::setBroken; Dimmer::setPercentage; Dimmer::valueReceived; DimmerGroup::DimmerGroup; DimmerGroup::decreaseLevel; DimmerGroup::increaseLevel; Light::Light; Light::getFTime; Light::getFTimes; Light::getHours; Light::getMinutes; Light::getObjectId; Light::getObjectKey; Light::getSeconds; Light::isActive; Light::isAutoTurnOff; Light::isTimingEnabled; Light::nextFTime; Light::prevFTime; Light::setActive; Light::setHours; Light::setMinutes; Light::setSeconds; Light::setTimingEnabled; Light::turn; Light::valueReceived; LightGroup::LightGroup; LightGroup::setActive; StaircaseLight::StaircaseLight; StaircaseLight::releaseAfterDelay; StaircaseLight::setActive; StaircaseLight::staircaseLightActivate; StaircaseLight::staircaseLightRelease; convertQObjectList; findDumberObject; parseDimmer; parseDimmer100; parseLight; parseLightGroup; parseStaircaseLight](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/lightobjects.cpp#L45-L774) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007606
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
 
 ### Timed operations
 
@@ -5126,7 +5444,7 @@ Section ID: `ownkb:section:d000036:s000001`
 
 Applicability cues: `firmware`, `gateway`, `scs`, `tcp`, `version`, `zigbee`
 Cautions: `must not`
-Provenance cues: `evidence`, `specification`
+Provenance cues: `specification`
 
 This page records the **published SCS/TCP external-interface `WHO 13` `DIMENSION` registry** and separately scoped implementation observations. The published specification explicitly identifies whether each listed property is readable or writable; its registry must not be treated as proof that later gateway implementations expose no additional `DIMENSION` values.
 
@@ -5146,7 +5464,7 @@ The ZigBee OpenWebNet interface defines a separate `WHO 13` `DIMENSION` set. Som
 | `23` | Kernel version | R | `V*R*B` |
 | `24` | Distribution version | R | `V*R*B` |
 
-The table above is the complete `DIMENSION` registry defined by the preserved classic SCS/TCP `WHO 13` specification. It is a **published-registry boundary**, not a universal implementation ceiling. Later gateway observations are recorded below only where first-hand evidence exists.
+The table above is the complete `DIMENSION` registry defined by the preserved classic SCS/TCP `WHO 13` specification. It is a **published-registry boundary**, not a universal implementation ceiling. Later gateway observations and historical touchscreen extensions are separately scoped below.
 
 ### Read form
 
@@ -5322,6 +5640,47 @@ Together, `DIMENSION 16`, `23`, and `24` expose three distinct software layers: 
 
 A first-hand MH202 information request returned an empty value payload for this read (`*#13**24*##`) rather than the published three-component tuple. This is implementation evidence, not a redefinition of the published schema. Parsers should preserve the raw response and tolerate a gateway that cannot supply all published version components.
 
+### Historical touchscreen platform properties
+
+Section ID: `ownkb:section:d000036:s000017`
+
+Applicability cues: `gateway`, `version`
+Cautions: `avoid`
+Uncertainty: `not established`, `unresolved`
+Provenance cues: `evidence`
+
+The BTicino `PlatformDevice` implementation and tests at `TS10_1_0_23` establish additional empty-`WHERE` properties:
+
+| `DIMENSION` | Implemented meaning | Evidence-supported access / payload |
+| --- | --- | --- |
+| `9` | LAN enabled | Read/report/write; `0` disabled, `1` enabled |
+| `20` | PIC version | Read/report; first returned value used as the PIC version |
+| `50` | Network gateway | Read/report; four decimal IPv4 octets |
+| `51` | Primary DNS | Read/report; four decimal IPv4 octets |
+| `52` | Secondary DNS | Read/report; four decimal IPv4 octets |
+
+For example, the exact test report `*#13**20*22*40*05##` yields PIC value `22`. The other two fields are not decoded by this class; their meaning remains unresolved. The [Energy Management compatibility policy](../who-18-energy-management/what.md#historical-graph-request-variants) uses that first value with a cutoff of `22`.
+
+The library emits LAN writes as `*#13**#9*STATE##`, then requests state after 1 second to avoid a request overtaking its write on another connection. Its clock writes also have specific variants: `*#13**#0*13*12*11**##` leaves the time-zone field empty and adds a trailing empty field; combined writes use `*#13**#22*H*M*S**00*D*M*Y##`. Date writes always supply weekday `00` rather than calculating it. These are client emission choices, not revisions of the published clock schema.
+
+Support by an F454, MH202, or other external gateway is not established by these touchscreen tests. See [Platform evidence](../../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
+
+Evidence finding `moc-e0024` (claimed): Platform property and clock implementation
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007607`, `ownkb:claim:moc-c007608`, `ownkb:claim:moc-c007609`, `ownkb:claim:moc-c007610`, `ownkb:claim:moc-c007611`
+- `ownkb:source:moc-s000188`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestPlatformDevice::cleanupTestCase; TestPlatformDevice::initTestCase; TestPlatformDevice::receiveDate; TestPlatformDevice::receiveDateTime; TestPlatformDevice::receiveDns1; TestPlatformDevice::receiveDns2; TestPlatformDevice::receiveFirmwareVersion; TestPlatformDevice::receiveGateway; TestPlatformDevice::receiveIp; TestPlatformDevice::receiveKernelVersion; TestPlatformDevice::receiveMacAddress; TestPlatformDevice::receiveNetmask; TestPlatformDevice::receivePicVersion; TestPlatformDevice::receiveStatus; TestPlatformDevice::receiveTime; TestPlatformDevice::sendSetDate; TestPlatformDevice::sendSetTime](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_platform_device.cpp#L33-L137) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007607, ownkb:claim:moc-c007608, ownkb:claim:moc-c007609, ownkb:claim:moc-c007610, ownkb:claim:moc-c007611
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+- `ownkb:source:moc-s000164`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - PlatformDevice::PlatformDevice; PlatformDevice::enableLan; PlatformDevice::extractVersionValues; PlatformDevice::init; PlatformDevice::parseFrame; PlatformDevice::requestDNS1; PlatformDevice::requestDNS2; PlatformDevice::requestFirmwareVersion; PlatformDevice::requestGateway; PlatformDevice::requestIp; PlatformDevice::requestKernelVersion; PlatformDevice::requestMacAddress; PlatformDevice::requestNetmask; PlatformDevice::requestPicVersion; PlatformDevice::requestStatus; PlatformDevice::sendRequest; PlatformDevice::setDate; PlatformDevice::setDateTime; PlatformDevice::setTime](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/platform_device.cpp#L42-L219) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007607, ownkb:claim:moc-c007608, ownkb:claim:moc-c007609, ownkb:claim:moc-c007610, ownkb:claim:moc-c007611
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0094` (deferred): Full PIC tuple and external gateway deployment
+Disposition reason: The other DIMENSION 20 values are not decoded, and F454/MH202 deployment is not verified. Requires independent specification or captures; no universal claim extracted.
+- `ownkb:source:moc-s000164`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - PlatformDevice::PlatformDevice; PlatformDevice::enableLan; PlatformDevice::extractVersionValues; PlatformDevice::init; PlatformDevice::parseFrame; PlatformDevice::requestDNS1; PlatformDevice::requestDNS2; PlatformDevice::requestFirmwareVersion; PlatformDevice::requestGateway; PlatformDevice::requestIp; PlatformDevice::requestKernelVersion; PlatformDevice::requestMacAddress; PlatformDevice::requestNetmask; PlatformDevice::requestPicVersion; PlatformDevice::requestStatus; PlatformDevice::sendRequest; PlatformDevice::setDate; PlatformDevice::setDateTime; PlatformDevice::setTime](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/platform_device.cpp#L42-L219) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Observed implementation extension: `DIMENSION 40`
 
 Section ID: `ownkb:section:d000036:s000015`
@@ -5347,13 +5706,11 @@ The evidence therefore establishes a readable gateway property with a two-value 
 Section ID: `ownkb:section:d000036:s000016`
 
 Applicability cues: `firmware`, `gateway`, `revision`, `scs`, `tcp`, `version`, `zigbee`
-Cautions: `do not`
-Uncertainty: `unresolved`
-Provenance cues: `evidence`, `specification`
+Provenance cues: `evidence`
 
 ZigBee `WHO 13` explicitly defines `DIMENSION 17` as hardware version. That is established for the ZigBee interface revision documented in [ZigBee Network Management](zigbee-network-management.md#dimension-16-and-17---firmware-and-hardware-versions), but numeric equality does not establish the same meaning for classic SCS/TCP gateways.
 
-`DIMENSION 20` is likewise not assigned a classic SCS/TCP meaning on this page. The currently preserved canonical classic specification, ZigBee specification, MyHOME Suite `OPEN.db`, and the two gateway-information captures examined for this correction do not establish its SCS/TCP payload semantics. The unresolved provenance and required evidence are tracked in [Open Questions](../../reverse-engineering/open-questions.md#who-13-gateway-properties).
+`DIMENSION 20` has the separately scoped historical PIC-version interpretation above. That evidence does not establish a full version tuple or applicability to the F454/MH202 captures. The remaining questions are tracked in [Open Questions](../../reverse-engineering/open-questions.md#who-13-gateway-properties).
 
 # Document: ownkb:document:d000037
 
@@ -5862,6 +6219,8 @@ The address must be parsed according to the CEN grammar. Values such as `0001`, 
 Section ID: `ownkb:section:d000039:s000008`
 
 Applicability cues: `gateway`, `scs`
+Cautions: `do not`
+Provenance cues: `evidence`
 
 A client can generate a virtual CEN interaction by writing the same functional frames on an action connection. The gateway returns `ACK` when it accepts the frame for transmission.
 
@@ -5875,6 +6234,18 @@ Published virtual operations are:
 | Extended pressure | `*15*BUTTON#3*WHERE##` |
 
 A corresponding frame is then visible to event-session clients when the CEN frame is read on the SCS bus.
+
+Historical touchscreen scenario entries can assign separate CEN button frames to enable, disable, start and stop actions. Those labels describe configured actions; the button numbers do not have universal scenario-management meanings. The configured frame is sent literally. See [Configured-action evidence](../../project/review/myopencommunity-cen-history-review.md#cen-and-cen-configured-actions).
+
+Evidence finding `moc-e0025` (claimed): Configured CEN-family actions
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007612`
+- `ownkb:source:moc-s000179`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ScheduledScenario::ScheduledScenario; ScheduledScenario::disable; ScheduledScenario::enable; ScheduledScenario::hasDisable; ScheduledScenario::hasEnable; ScheduledScenario::hasStart; ScheduledScenario::hasStop; ScheduledScenario::start; ScheduledScenario::stop; parseSchedCommand; parseScheduledScenario](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/scenarioobjects.cpp#L62-L340) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007612
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000180`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestScenarioAdvanced::testDeviceCondition; TestScenarioAdvanced::testTimeCondition; TestScenarioAdvanced::testTimeDeviceCondition; TestScenarioAdvanced::testWeekdayCondition; TestScenarioAdvanced::testWeekdays; TestScenarioAdvancedDeviceEdit::cleanup; TestScenarioAdvancedDeviceEdit::init; TestScenarioAdvancedDeviceEdit::testAmplifierConditionInit; TestScenarioAdvancedDeviceEdit::testAmplifierConditionOnOff; TestScenarioAdvancedDeviceEdit::testConditionReset; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionInit; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionOnOff; TestScenarioAdvancedDeviceEdit::testDimmerConditionInit; TestScenarioAdvancedDeviceEdit::testDimmerConditionOnOff; TestScenarioAdvancedDeviceEdit::testLightConditionInit; TestScenarioAdvancedDeviceEdit::testLightConditionOnOff; TestScenarioAdvancedDeviceEdit::testTemperatureConditionInit; TestScenarioAdvancedTime::cleanup; TestScenarioAdvancedTime::init; TestScenarioAdvancedTime::testTimeoutFuture; TestScenarioAdvancedTime::testTimeoutPast; TestScenarioModule::checkMethod; TestScenarioModule::cleanup; TestScenarioModule::init; TestScenarioModule::initTestCase; TestScenarioModule::testActivateScenario; TestScenarioModule::testReceiveLock; TestScenarioModule::testReceiveLock_data; TestScenarioModule::testReceiveStart; TestScenarioModule::testReceiveStartOtherScenario; TestScenarioModule::testReceiveStartOtherScenario_data; TestScenarioModule::testReceiveStart_data; TestScenarioModule::testReceiveStop; TestScenarioModule::testReceiveStop_data; TestScenarioModule::testReceiveUnlock; TestScenarioModule::testReceiveUnlock_data; TestScenarioModule::testStartProgramming; TestScenarioModule::testStopProgramming; packStartValues; packValues](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_scenario_objects.cpp#L61-L619) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 ### Event connection
 
@@ -5890,6 +6261,8 @@ Section ID: `ownkb:section:d000039:s000010`
 
 Applicability cues: `scs`
 Provenance cues: `source`, `specification`
+
+The `CEN` plug in a supported command-mode position selects scenario-programmer interactions. The same marking in another position need not select `WHO 15`: for example, a shutter control's `I=CEN` selects the riser, and an H4691/LN4691 thermostat's `COOL=CEN` selects a shared heating/cooling load. See [SCS Configurator Labels](../../device-model/configurators.md) for product and position scope.
 
 The CEN specification distinguishes how a physical command obtains its source identity:
 
@@ -5997,7 +6370,7 @@ Implementations perform directed selection with a three-digit `WHERE` outside bo
 *16*3*1ES##     route the amplifiers of environment E to source S
 ```
 
-`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Environment `0` does not occur in this form, because `10S` is a source device address.
+`E` is the environment digit of the amplifier addressing above, and `S` the source identifier used by `101`-`109`. Captures and historical source demonstrate environments `1..8`; environment `9` remains unverified. Environment `0` does not occur in this form, because `10S` is a source device address.
 
 | Frame | Effect |
 | --- | --- |
@@ -6010,6 +6383,33 @@ Routing is announced per environment, so every amplifier sharing an environment 
 Wall controls observed on one plant release the outgoing source with `*16*13*10S##` before routing; the routing frame alone was sufficient on the other. A routed environment reports the status of its amplifiers in response.
 
 **Confidence: corroborated**, from captures on two installations (MH200 and MH200N, both with F441M), a controlled source change on one of them, and the `WHO 22` counterparts on the other. It is not published in [`WHO 16`](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). The evidence path, competing reading, and open questions are recorded in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md). Base-band installations, the `#E` environment form, and sources above 4 are untested.
+
+#### Historical implementation corroboration
+
+Section ID: `ownkb:section:d000040:s000013`
+
+Provenance cues: `evidence`, `source`
+
+The February 2008 BTouch implementation both decodes `1ES` routing and emits it when assigning an alarm-clock source to environments `1..8`. It derives `E = (WHERE - 100) / 10` and `S = WHERE - 100 - 10*E`. Its matrix model admits sources `1..4`. This independently corroborates the captured interpretation without establishing base-band `WHAT 0`, routing through `#E`, or sources `5..9`.
+
+The same matrix class requests `*#16*1000*11##` and reads eight returned values as active sources for environments `1..8`, in order. This is an implementation extension; `WHERE = 1000` is not an ordinary source address, and no corresponding write is established. See [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md#historical-implementation-evidence).
+
+Evidence finding `moc-e0027` (claimed): Earlier WHO 16 matrix decoder
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007614`, `ownkb:claim:moc-c007615`
+- `ownkb:source:moc-s000189`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - frame_interpreter.cpp reviewed class/record definitions](https://github.com/OpenWebNet-HA/libqtdevices/blob/79e92d2d43bd893ce9af5f3234b75830144c7aca/frame_interpreter.cpp#L1-L2993) at `79e92d2d43bd893ce9af5f3234b75830144c7aca`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007614, ownkb:claim:moc-c007615
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000190`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - device.cpp reviewed class/record definitions](https://github.com/OpenWebNet-HA/libqtdevices/blob/79e92d2d43bd893ce9af5f3234b75830144c7aca/device.cpp#L1-L736) at `79e92d2d43bd893ce9af5f3234b75830144c7aca`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007614, ownkb:claim:moc-c007615
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0028` (claimed): Earlier WHO 16 alarm route writer
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007616`
+- `ownkb:source:moc-s000191`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - sveglia.cpp reviewed class/record definitions](https://github.com/OpenWebNet-HA/libqtdevices/blob/79e92d2d43bd893ce9af5f3234b75830144c7aca/sveglia.cpp#L1-L944) at `79e92d2d43bd893ce9af5f3234b75830144c7aca`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007616
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
 
 ### `DIMENSION` values
 
@@ -6075,9 +6475,11 @@ RDS text is carried as eight separate decimal ASCII codes, not as literal charac
 Section ID: `ownkb:section:d000040:s000008`
 
 Cautions: `do not`
-Provenance cues: `source`
+Provenance cues: `evidence`, `source`
 
 Relative `WHAT` operations and absolute `DIMENSION` values are complementary. Do not reconstruct authoritative volume, tone, or frequency state solely by counting relative commands when a corresponding report is available.
+
+Some historical touchscreen decoders keep amplifier volume and ON/OFF state separately: a volume report can update the level without setting the amplifier ON. A received level alone is therefore insufficient evidence of power state for these clients.
 
 Support is target-dependent: amplifier addresses accept amplifier operations; source addresses accept source/tuner operations. A namespace-level identifier does not imply applicability to both.
 
@@ -6092,6 +6494,33 @@ Provenance cues: `source`
 
 One MH200N was observed emitting a `WHO 22` counterpart for every `WHO 16` sound event it reported, including amplifier power, volume, source power, routing and RDS. That correspondence is established for that Device and was used to corroborate the addressing above; it does not establish a general mapping, and an MH200 on another plant emitted no `WHO 22` frames at all. The observed pairs are tabulated in [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md).
 
+#### Historical mixed-dialect clients
+
+Section ID: `ownkb:section:d000040:s000014`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+BTouch migrated sound operations separately. During the 2008..2009 transition it could send `WHO 22` amplifier power or source-selection commands while retaining `WHO 16` volume, tuning, station writes, and RDS. The matrix parser briefly accepted both dialects before its September 2009 change to `WHO 22` routing reports. This proves mixed-dialect application behavior, but does not identify which bus component generated the paired MH200N reports. See [Sound implementation evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
+Historical alarm-clock clients also combine `WHO 22` routing with `WHO 16` amplifier volume and power. Their startup and volume-ramp policies belong to the local controller; no deployed Firmware boundary is established. See [Historical alarm-clock control](../who-22-sound-diffusion/#historical-alarm-clock-control) and [Alarm-clock history evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
+
+Evidence finding `moc-e0113` (deferred): Mixed dialect origin and deployment
+Disposition reason: Operation-specific mixed-dialect facts are extracted in the pinned historical matrix claims. What remains unresolved is the origin of paired MH200N captures and deployed product/Firmware mapping, which code chronology does not establish.
+- `ownkb:source:moc-s000243`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - frame_interpreter.cpp reviewed class/record definitions](https://github.com/OpenWebNet-HA/libqtdevices/blob/66ff93636979fa4b7f7a9ac3593da51b3a6e81c1/frame_interpreter.cpp#L1-L3309) at `66ff93636979fa4b7f7a9ac3593da51b3a6e81c1`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000242`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - device.cpp reviewed class/record definitions](https://github.com/OpenWebNet-HA/libqtdevices/blob/66ff93636979fa4b7f7a9ac3593da51b3a6e81c1/device.cpp#L1-L668) at `66ff93636979fa4b7f7a9ac3593da51b3a6e81c1`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0121` (claimed): Intermediate mixed-dialect matrix behavior
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007825`, `ownkb:claim:moc-c007826`
+- `ownkb:source:moc-s000243`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - frame_interpreter_sound_matr_device; frame_interpreter_sound_device::get_init_messages](https://github.com/OpenWebNet-HA/libqtdevices/blob/66ff93636979fa4b7f7a9ac3593da51b3a6e81c1/frame_interpreter.cpp#L1652-L1878) at `66ff93636979fa4b7f7a9ac3593da51b3a6e81c1`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007825, ownkb:claim:moc-c007826
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Evidence basis
 
 Section ID: `ownkb:section:d000040:s000010`
@@ -6100,7 +6529,9 @@ Provenance cues: `source`, `specification`
 
 Tables, ranges, and flows come from [`WHO 16` specification](https://archive.openwebnet-ha.org/sha256/07/06/0706a1ea9eb3646175b6bb1e6b7d23e5c1a0e403e4d6c1d8d65730bb7b7467c6.pdf). Where the global table lists a property without a detailed allowed-message flow, this page says so explicitly.
 
-The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
+The amplifier address structure and the matrix routing form are not in that specification. They come from captures on two independent installations, corroborated by historical product source, and are marked with their confidence where they appear; [Sound Matrix Source Routing](../../reverse-engineering/sound-matrix-routing.md) holds the claim records.
+
+Historical client state handling and the separately revised sound components are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md).
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
 
@@ -6374,6 +6805,34 @@ The address prefix is not merely routing metadata. It constrains the operation s
 
 A decoder should therefore resolve the `WHERE` family before interpreting the complete operation.
 
+### Historical Stop&Go address discrepancy
+
+Section ID: `ownkb:section:d000043:s000006`
+
+Applicability cues: `firmware`, `gateway`
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+The `TS10_1_0_23` product configurations use instance addresses `22`, `23`, and `25` for Stop&Go, Plus, and BTest respectively. A February 2013 correction explicitly adds prefix `2` to those fixtures. The configuration parser passes each instance's complete `where` to the device class, which emits it unchanged.
+
+This conflicts with the published `1N` family. The source establishes a historical product configuration choice, but does not identify a gateway translation, applicable Firmware, complete `2N` domain, or physical Device acceptance. Preserve the configured address when investigating that product; do not replace the published family or infer interchangeability. See [Stop&Go address evidence](../../project/review/myopencommunity-reassessment.md#stopgo-address-discrepancy).
+
+Evidence finding `moc-e0029` (claimed): Configured Stop&Go addresses
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007617`
+- `ownkb:source:moc-s000192`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - StopAndGo::StopAndGo; StopAndGo::getAutoReset; StopAndGo::getStatus; StopAndGo::setAutoReset; StopAndGo::valueReceived; StopAndGoBTest::StopAndGoBTest; StopAndGoBTest::apply; StopAndGoBTest::decreaseAutoTestFrequency; StopAndGoBTest::getAutoTest; StopAndGoBTest::getAutoTestFrequency; StopAndGoBTest::increaseAutoTestFrequency; StopAndGoBTest::reset; StopAndGoBTest::setAutoTest; StopAndGoBTest::setAutoTestFrequency; StopAndGoBTest::valueReceived; StopAndGoPlus::StopAndGoPlus; StopAndGoPlus::close; StopAndGoPlus::getDiagnostic; StopAndGoPlus::open; StopAndGoPlus::setDiagnostic; StopAndGoPlus::valueReceived; parseStopAndGo; parseStopAndGoBTest; parseStopAndGoPlus](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/stopandgoobjects.cpp#L31-L279) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007617
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000193`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestStopAndGo::cleanup; TestStopAndGo::init; TestStopAndGo::initObjects; TestStopAndGo::initTestCase; TestStopAndGo::testReceiveAutoReset; TestStopAndGo::testReceiveStatus; TestStopAndGo::testSendAutoReset; TestStopAndGoBTest::init; TestStopAndGoBTest::testReceiveAutoTest; TestStopAndGoBTest::testReceiveAutoTestFrequency; TestStopAndGoBTest::testSendAutoTest; TestStopAndGoBTest::testSendAutoTestFrequency; TestStopAndGoPlus::init; TestStopAndGoPlus::testReceiveDiagnostic; TestStopAndGoPlus::testSendDiagnostic](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_stopandgo_objects.cpp#L49-L320) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0095` (deferred): Stop&Go physical address conflict
+Disposition reason: The configured 2N addresses and published 1N forms are retained as distinct evidence; physical model/Firmware mapping requires captures.
+- `ownkb:source:moc-s000192`: source_inspection; client; interpretation; qualifies. [MyOpenCommunity/BtExperience - StopAndGo::StopAndGo; StopAndGo::getAutoReset; StopAndGo::getStatus; StopAndGo::setAutoReset; StopAndGo::valueReceived; StopAndGoBTest::StopAndGoBTest; StopAndGoBTest::apply; StopAndGoBTest::decreaseAutoTestFrequency; StopAndGoBTest::getAutoTest; StopAndGoBTest::getAutoTestFrequency; StopAndGoBTest::increaseAutoTestFrequency; StopAndGoBTest::reset; StopAndGoBTest::setAutoTest; StopAndGoBTest::setAutoTestFrequency; StopAndGoBTest::valueReceived; StopAndGoPlus::StopAndGoPlus; StopAndGoPlus::close; StopAndGoPlus::getDiagnostic; StopAndGoPlus::open; StopAndGoPlus::setDiagnostic; StopAndGoPlus::valueReceived; parseStopAndGo; parseStopAndGoBTest; parseStopAndGoPlus](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/stopandgoobjects.cpp#L31-L279) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Actuator suffix
 
 Section ID: `ownkb:section:d000043:s000004`
@@ -6553,13 +7012,35 @@ This operation couples the accumulated value with the timestamp of its reset bou
 
 Section ID: `ownkb:section:d000044:s000012`
 
-Provenance cues: `specification`
+Cautions: `warning`
+Provenance cues: `evidence`, `specification`
 
 Request: `*#18*WHERE*73##`
 
 Response/event: `*#18*WHERE*73*level##`
 
-The published range for `level` is `1..3`. The public specification does not assign a more detailed semantic label to each individual numeric level, so those meanings remain unspecified.
+The published range for `level` is `1..3`. The public specification does not assign a more detailed semantic label to each individual numeric level.
+
+The historical touchscreen library labels `1` OK, `2` warning and `3` critical; its product tests preserve that ordering. These are the client's load-level classifications. The recovered implementation does not establish numerical differential-current thresholds or hardware trip guarantees. See [load-level evidence](../../project/review/myopencommunity-coverage-audit.md#probe-state-and-load-levels).
+
+Evidence finding `moc-e0040` (claimed): Load differential-current labels
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007642`
+- `ownkb:source:moc-s000198`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - LoadsDevice::LoadsDevice; LoadsDevice::enable; LoadsDevice::forceOff; LoadsDevice::forceOn; LoadsDevice::init; LoadsDevice::parseFrame; LoadsDevice::requestCurrent; LoadsDevice::requestCurrentUpdateStart; LoadsDevice::requestCurrentUpdateStop; LoadsDevice::requestLevel; LoadsDevice::requestStatus; LoadsDevice::requestTotal; LoadsDevice::resetTotal; LoadsDevice::~LoadsDevice](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/loads_device.cpp#L44-L173) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007642
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000199`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestLoadsDevice::cleanupTestCase; TestLoadsDevice::initTestCase; TestLoadsDevice::receiveCurrent; TestLoadsDevice::receiveLoad; TestLoadsDevice::receiveStatus; TestLoadsDevice::receiveTotals; TestLoadsDevice::sendForceOff; TestLoadsDevice::sendForceOn; TestLoadsDevice::sendRequestCurrent; TestLoadsDevice::sendRequestLevel; TestLoadsDevice::sendRequestStatus; TestLoadsDevice::sendRequestTotal; TestLoadsDevice::sendResetCommand](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_loads_device.cpp#L33-L145) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0112` (excluded): Load API names versus published forcing semantics
+Disposition reason: Published enable/forcing meanings cannot be redefined from these API names. Literal forceOn=74, forceOff(150)=73#15 and enable=73 are extracted separately; the confirmation TODO is in forceOff(), not enable().
+- `ownkb:source:moc-s000199`: test_expectation_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - TestLoadsDevice::cleanupTestCase; TestLoadsDevice::initTestCase; TestLoadsDevice::receiveCurrent; TestLoadsDevice::receiveLoad; TestLoadsDevice::receiveStatus; TestLoadsDevice::receiveTotals; TestLoadsDevice::sendForceOff; TestLoadsDevice::sendForceOn; TestLoadsDevice::sendRequestCurrent; TestLoadsDevice::sendRequestLevel; TestLoadsDevice::sendRequestStatus; TestLoadsDevice::sendRequestTotal; TestLoadsDevice::sendResetCommand](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_loads_device.cpp#L33-L145) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+- `ownkb:source:moc-s000198`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - LoadsDevice::LoadsDevice; LoadsDevice::enable; LoadsDevice::forceOff; LoadsDevice::forceOn; LoadsDevice::init; LoadsDevice::parseFrame; LoadsDevice::requestCurrent; LoadsDevice::requestCurrentUpdateStart; LoadsDevice::requestCurrentUpdateStop; LoadsDevice::requestLevel; LoadsDevice::requestStatus; LoadsDevice::requestTotal; LoadsDevice::resetTotal; LoadsDevice::~LoadsDevice](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/loads_device.cpp#L44-L173) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
 
 ### Stop&Go status
 
@@ -6695,6 +7176,215 @@ Parsers should decode these frames by `WHO`, `WHERE`, `DIMENSION` and payload sh
 
 See [`WHAT` Reference](what.md) for command-driven historical transmission and actuator control, and [Addressing](addressing.md) for the device-family address grammar.
 
+### Historical touchscreen extensions
+
+Section ID: `ownkb:section:d000044:s000023`
+
+Applicability cues: `zigbee`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The following operations and decoding choices are implementation evidence from the BTicino library at `TS10_1_0_23`. They do not establish support by every `WHO 18` Device or by the ZigBee variant.
+
+#### Stop&Go self-test interval
+
+Section ID: `ownkb:section:d000044:s000024`
+
+Provenance cues: `evidence`
+
+`DIMENSION 212` is read with `*#18*WHERE*212##` and written with `*#18*WHERE*#212*DAYS##`. The library defines `DAYS = 1..180`. Its tests independently verify all thirteen bits of `DIMENSION 250`, confirming the published `b13` through `b1` wire order, with opened state at the rightmost bit. See [Stop&Go evidence](../../project/review/myopencommunity-integration.md#stopgo).
+
+Evidence finding `moc-e0031` (claimed): Stop&Go interval and bit cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007620`, `ownkb:claim:moc-c007621`
+- `ownkb:source:moc-s000194`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - StopAndGoBTestDevice::StopAndGoBTestDevice; StopAndGoBTestDevice::init; StopAndGoBTestDevice::parseFrame; StopAndGoBTestDevice::requestSelftestFreq; StopAndGoBTestDevice::sendDiffSelftestActivation; StopAndGoBTestDevice::sendDiffSelftestDisactivation; StopAndGoBTestDevice::sendSelftestFreq; StopAndGoDevice::StopAndGoDevice; StopAndGoDevice::init; StopAndGoDevice::parseFrame; StopAndGoDevice::requestCompressedICMState; StopAndGoDevice::requestICMState; StopAndGoDevice::sendAutoResetActivation; StopAndGoDevice::sendAutoResetDisactivation; StopAndGoPlusDevice::StopAndGoPlusDevice; StopAndGoPlusDevice::sendClose; StopAndGoPlusDevice::sendOpen; StopAndGoPlusDevice::sendTrackingSystemActivation; StopAndGoPlusDevice::sendTrackingSystemDisactivation; getStatusValue](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/stopandgo_device.cpp#L52-L192) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007620, ownkb:claim:moc-c007621
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000195`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestStopAndGoBTestDevice::cleanup; TestStopAndGoBTestDevice::init; TestStopAndGoBTestDevice::receiveSelftestFreq; TestStopAndGoBTestDevice::requestSelftestFreq; TestStopAndGoBTestDevice::sendDiffSelftestActivation; TestStopAndGoBTestDevice::sendDiffSelftestDisactivation; TestStopAndGoBTestDevice::sendSelftestFreq; TestStopAndGoDevice::cleanup; TestStopAndGoDevice::init; TestStopAndGoDevice::receiveICMState; TestStopAndGoDevice::requestICMState; TestStopAndGoDevice::sendAutoResetActivation; TestStopAndGoDevice::sendAutoResetDisactivation; TestStopAndGoDevice::testSingleState; TestStopAndGoPlusDevice::cleanup; TestStopAndGoPlusDevice::init; TestStopAndGoPlusDevice::sendClose; TestStopAndGoPlusDevice::sendOpen; TestStopAndGoPlusDevice::sendTrackingSystemActivation; TestStopAndGoPlusDevice::sendTrackingSystemDisactivation](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_stopandgo_device.cpp#L35-L268) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007620, ownkb:claim:moc-c007621
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+#### Measurement families and automatic updates
+
+Section ID: `ownkb:section:d000044:s000025`
+
+Configuration modes in this application differ from the `Type` selector on the wire:
+
+| Application mode | Measurement family | Current-value `DIMENSION` | Update `Type` |
+| --- | --- | --- | --- |
+| `1` | Electricity | `113` | `1` |
+| `2` | Water | `1134` | `4` |
+| `3` | Gas | `1130` | `2` |
+| `4` | Hot water | `1134` | `4` |
+| `5` | Heating/conditioning | `1132` | `3` |
+
+Current-value reads use `*#18*WHERE*DIMENSION##` and reports carry a scalar value. The application requests automatic updates with `*#18*WHERE*#1200#Type*255##` and stops them with `*#18*WHERE*#1200#Type*0##`. Hot water shares the water selector. These additional selectors extend the published active-power-only description for this implementation.
+
+The client falls back to 10-second polling until automatic-update support is detected. An update-control report can switch the client to newer graph handling; a received stop while updates are still wanted causes it to request updates again. Neither the polling interval nor that capability heuristic defines a Device's physical sampling interval.
+
+Evidence finding `moc-e0032` (claimed): Energy measurement mode choices
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007622`, `ownkb:claim:moc-c007623`
+- `ownkb:source:moc-s000196`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - EnergyData::EnergyData; EnergyData::cacheGraphData; EnergyData::cacheLastYearGraphData; EnergyData::cacheValueData; EnergyData::cacheYearGraphData; EnergyData::checkConsumptionGoal; EnergyData::checkConsumptionGoals; EnergyData::checkLastYearGraphDataIsValid; EnergyData::checkYearGraphDataIsValid; EnergyData::createGraph; EnergyData::getAdvanced; EnergyData::getCumulativeUnit; EnergyData::getCurrentUnit; EnergyData::getDecimals; EnergyData::getEnergyType; EnergyData::getFamilyName; EnergyData::getFamilyType; EnergyData::getGoalExceeded; EnergyData::getGoals; EnergyData::getGoalsEnabled; EnergyData::getGraph; EnergyData::getObjectId; EnergyData::getObjectKey; EnergyData::getRate; EnergyData::getRateDecimals; EnergyData::getThresholdEnabled; EnergyData::getThresholdLevel; EnergyData::getThresholds; EnergyData::getUnit; EnergyData::getValue; EnergyData::graphDestroyed; EnergyData::isValidDate; EnergyData::itemDestroyed; EnergyData::requestCumulativeLastYear; EnergyData::requestCumulativeYear; EnergyData::requestCurrentUpdateStart; EnergyData::requestCurrentUpdateStop; EnergyData::requestUpdate; EnergyData::setGoals; EnergyData::setGoalsEnabled; EnergyData::setThresholdEnabled; EnergyData::setThresholds; EnergyData::testAutomaticUpdates; EnergyData::testGraphData; EnergyData::testValueData; EnergyData::trimCache; EnergyData::valueReceived; EnergyGraph::EnergyGraph; EnergyGraph::getDate; EnergyGraph::getDecimals; EnergyGraph::getGraph; EnergyGraph::getGraphBar; EnergyGraph::getGraphType; EnergyGraph::getMaxValue; EnergyGraph::graphEqual; EnergyGraph::isValid; EnergyGraph::requestUpdate; EnergyGraph::setGraph; EnergyGraphBar::EnergyGraphBar; EnergyGraphBar::getIndex; EnergyGraphBar::getLabel; EnergyGraphBar::getValue; EnergyGraphObject::EnergyGraphObject; EnergyGraphObject::getDate; EnergyGraphObject::getEnergyData; EnergyGraphObject::getGraph; EnergyGraphObject::getGraphType; EnergyGraphObject::getMeasureType; EnergyGraphObject::setDate; EnergyGraphObject::setEnergyData; EnergyGraphObject::setGraphType; EnergyGraphObject::setMeasureType; EnergyGraphObject::updateGraph; EnergyItem::EnergyItem; EnergyItem::getConsumptionGoal; EnergyItem::getDate; EnergyItem::getDecimals; EnergyItem::getFamily; EnergyItem::getGoalEnabled; EnergyItem::getMeasureUnit; EnergyItem::getValue; EnergyItem::getValueType; EnergyItem::isValid; EnergyItem::requestUpdate; EnergyItem::setValue; EnergyItemCurrent::EnergyItemCurrent; EnergyItemCurrent::getMeasureUnit; EnergyItemCurrent::getThresholdLevel; EnergyItemCurrent::getThresholds; EnergyItemCurrent::getValue; EnergyItemCurrent::setThresholds; EnergyItemObject::EnergyItemObject; EnergyItemObject::getDate; EnergyItemObject::getEnergyData; EnergyItemObject::getItem; EnergyItemObject::getMeasureType; EnergyItemObject::getValueType; EnergyItemObject::setDate; EnergyItemObject::setEnergyData; EnergyItemObject::setMeasureType; EnergyItemObject::setValueType; EnergyItemObject::updateItem; dateContainsToday; doDeleteLater; getGraphElementCount; mapDimensionToGraphType; mapDimensionToItemType; normalizeDate; parseEnergyData; removeValue; unitConversionFactor; updateEnergyData; valueRange](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/energydata.cpp#L81-L1578) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007622, ownkb:claim:moc-c007623
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0033` (claimed): Automatic active-power updates
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007624`, `ownkb:claim:moc-c007625`, `ownkb:claim:moc-c007626`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007624, ownkb:claim:moc-c007625, ownkb:claim:moc-c007626
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0109` (claimed): Energy typed selector construction
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007797`, `ownkb:claim:moc-c007798`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007797, ownkb:claim:moc-c007798
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+#### Electricity thresholds
+
+Section ID: `ownkb:section:d000044:s000026`
+
+Provenance cues: `evidence`, `source`
+
+| Operation | Implemented form / payload |
+| --- | --- |
+| Read threshold state | `*#18*WHERE*516##` |
+| Threshold-state report | `*#18*WHERE*516*EXCEEDED1*ENABLED1*EXCEEDED2*ENABLED2##` |
+| Read threshold `N` | `*#18*WHERE*517#N##` |
+| Threshold-value report | `*#18*WHERE*517#N*VALUE##` |
+| Write threshold `N` | `*#18*WHERE*#517#N*VALUE##` |
+
+`N` is `1` or `2`; the library's zero-based index is converted before transmission. A disabled threshold takes precedence over its exceeded flag in the application's displayed state. The source does not establish a general threshold-value range or physical unit for every target.
+
+The touchscreen application disables a threshold by writing value `0`, then restores its last nonzero value when re-enabled. A zero report updates the current value without clearing that remembered value; enabled state comes from `516`. This cache behavior is an application choice, not a guarantee that every Device accepts zero as a disable command. See [threshold evidence](../../project/review/myopencommunity-coverage-audit.md#threshold-enable-state).
+
+Evidence finding `moc-e0036` (claimed): Energy threshold fields
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007631`, `ownkb:claim:moc-c007632`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007631, ownkb:claim:moc-c007632
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0037` (claimed): Consumer threshold cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007633`, `ownkb:claim:moc-c007634`
+- `ownkb:source:moc-s000196`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - EnergyData::EnergyData; EnergyData::cacheGraphData; EnergyData::cacheLastYearGraphData; EnergyData::cacheValueData; EnergyData::cacheYearGraphData; EnergyData::checkConsumptionGoal; EnergyData::checkConsumptionGoals; EnergyData::checkLastYearGraphDataIsValid; EnergyData::checkYearGraphDataIsValid; EnergyData::createGraph; EnergyData::getAdvanced; EnergyData::getCumulativeUnit; EnergyData::getCurrentUnit; EnergyData::getDecimals; EnergyData::getEnergyType; EnergyData::getFamilyName; EnergyData::getFamilyType; EnergyData::getGoalExceeded; EnergyData::getGoals; EnergyData::getGoalsEnabled; EnergyData::getGraph; EnergyData::getObjectId; EnergyData::getObjectKey; EnergyData::getRate; EnergyData::getRateDecimals; EnergyData::getThresholdEnabled; EnergyData::getThresholdLevel; EnergyData::getThresholds; EnergyData::getUnit; EnergyData::getValue; EnergyData::graphDestroyed; EnergyData::isValidDate; EnergyData::itemDestroyed; EnergyData::requestCumulativeLastYear; EnergyData::requestCumulativeYear; EnergyData::requestCurrentUpdateStart; EnergyData::requestCurrentUpdateStop; EnergyData::requestUpdate; EnergyData::setGoals; EnergyData::setGoalsEnabled; EnergyData::setThresholdEnabled; EnergyData::setThresholds; EnergyData::testAutomaticUpdates; EnergyData::testGraphData; EnergyData::testValueData; EnergyData::trimCache; EnergyData::valueReceived; EnergyGraph::EnergyGraph; EnergyGraph::getDate; EnergyGraph::getDecimals; EnergyGraph::getGraph; EnergyGraph::getGraphBar; EnergyGraph::getGraphType; EnergyGraph::getMaxValue; EnergyGraph::graphEqual; EnergyGraph::isValid; EnergyGraph::requestUpdate; EnergyGraph::setGraph; EnergyGraphBar::EnergyGraphBar; EnergyGraphBar::getIndex; EnergyGraphBar::getLabel; EnergyGraphBar::getValue; EnergyGraphObject::EnergyGraphObject; EnergyGraphObject::getDate; EnergyGraphObject::getEnergyData; EnergyGraphObject::getGraph; EnergyGraphObject::getGraphType; EnergyGraphObject::getMeasureType; EnergyGraphObject::setDate; EnergyGraphObject::setEnergyData; EnergyGraphObject::setGraphType; EnergyGraphObject::setMeasureType; EnergyGraphObject::updateGraph; EnergyItem::EnergyItem; EnergyItem::getConsumptionGoal; EnergyItem::getDate; EnergyItem::getDecimals; EnergyItem::getFamily; EnergyItem::getGoalEnabled; EnergyItem::getMeasureUnit; EnergyItem::getValue; EnergyItem::getValueType; EnergyItem::isValid; EnergyItem::requestUpdate; EnergyItem::setValue; EnergyItemCurrent::EnergyItemCurrent; EnergyItemCurrent::getMeasureUnit; EnergyItemCurrent::getThresholdLevel; EnergyItemCurrent::getThresholds; EnergyItemCurrent::getValue; EnergyItemCurrent::setThresholds; EnergyItemObject::EnergyItemObject; EnergyItemObject::getDate; EnergyItemObject::getEnergyData; EnergyItemObject::getItem; EnergyItemObject::getMeasureType; EnergyItemObject::getValueType; EnergyItemObject::setDate; EnergyItemObject::setEnergyData; EnergyItemObject::setMeasureType; EnergyItemObject::setValueType; EnergyItemObject::updateItem; dateContainsToday; doDeleteLater; getGraphElementCount; mapDimensionToGraphType; mapDimensionToItemType; normalizeDate; parseEnergyData; removeValue; unitConversionFactor; updateEnergyData; valueRange](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/energydata.cpp#L81-L1578) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007633, ownkb:claim:moc-c007634
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0117` (claimed): Threshold-state field order and display priority
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007818`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007818
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0118` (claimed): Threshold disabled display priority
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007819`
+- `ownkb:source:moc-s000196`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - EnergyData::EnergyData; EnergyData::cacheGraphData; EnergyData::cacheLastYearGraphData; EnergyData::cacheValueData; EnergyData::cacheYearGraphData; EnergyData::checkConsumptionGoal; EnergyData::checkConsumptionGoals; EnergyData::checkLastYearGraphDataIsValid; EnergyData::checkYearGraphDataIsValid; EnergyData::createGraph; EnergyData::getAdvanced; EnergyData::getCumulativeUnit; EnergyData::getCurrentUnit; EnergyData::getDecimals; EnergyData::getEnergyType; EnergyData::getFamilyName; EnergyData::getFamilyType; EnergyData::getGoalExceeded; EnergyData::getGoals; EnergyData::getGoalsEnabled; EnergyData::getGraph; EnergyData::getObjectId; EnergyData::getObjectKey; EnergyData::getRate; EnergyData::getRateDecimals; EnergyData::getThresholdEnabled; EnergyData::getThresholdLevel; EnergyData::getThresholds; EnergyData::getUnit; EnergyData::getValue; EnergyData::graphDestroyed; EnergyData::isValidDate; EnergyData::itemDestroyed; EnergyData::requestCumulativeLastYear; EnergyData::requestCumulativeYear; EnergyData::requestCurrentUpdateStart; EnergyData::requestCurrentUpdateStop; EnergyData::requestUpdate; EnergyData::setGoals; EnergyData::setGoalsEnabled; EnergyData::setThresholdEnabled; EnergyData::setThresholds; EnergyData::testAutomaticUpdates; EnergyData::testGraphData; EnergyData::testValueData; EnergyData::trimCache; EnergyData::valueReceived; EnergyGraph::EnergyGraph; EnergyGraph::getDate; EnergyGraph::getDecimals; EnergyGraph::getGraph; EnergyGraph::getGraphBar; EnergyGraph::getGraphType; EnergyGraph::getMaxValue; EnergyGraph::graphEqual; EnergyGraph::isValid; EnergyGraph::requestUpdate; EnergyGraph::setGraph; EnergyGraphBar::EnergyGraphBar; EnergyGraphBar::getIndex; EnergyGraphBar::getLabel; EnergyGraphBar::getValue; EnergyGraphObject::EnergyGraphObject; EnergyGraphObject::getDate; EnergyGraphObject::getEnergyData; EnergyGraphObject::getGraph; EnergyGraphObject::getGraphType; EnergyGraphObject::getMeasureType; EnergyGraphObject::setDate; EnergyGraphObject::setEnergyData; EnergyGraphObject::setGraphType; EnergyGraphObject::setMeasureType; EnergyGraphObject::updateGraph; EnergyItem::EnergyItem; EnergyItem::getConsumptionGoal; EnergyItem::getDate; EnergyItem::getDecimals; EnergyItem::getFamily; EnergyItem::getGoalEnabled; EnergyItem::getMeasureUnit; EnergyItem::getValue; EnergyItem::getValueType; EnergyItem::isValid; EnergyItem::requestUpdate; EnergyItem::setValue; EnergyItemCurrent::EnergyItemCurrent; EnergyItemCurrent::getMeasureUnit; EnergyItemCurrent::getThresholdLevel; EnergyItemCurrent::getThresholds; EnergyItemCurrent::getValue; EnergyItemCurrent::setThresholds; EnergyItemObject::EnergyItemObject; EnergyItemObject::getDate; EnergyItemObject::getEnergyData; EnergyItemObject::getItem; EnergyItemObject::getMeasureType; EnergyItemObject::getValueType; EnergyItemObject::setDate; EnergyItemObject::setEnergyData; EnergyItemObject::setMeasureType; EnergyItemObject::setValueType; EnergyItemObject::updateItem; dateContainsToday; doDeleteLater; getGraphElementCount; mapDimensionToGraphType; mapDimensionToItemType; normalizeDate; parseEnergyData; removeValue; unitConversionFactor; updateEnergyData; valueRange](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/energydata.cpp#L81-L1578) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007819
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+#### Legacy graph values and unavailable data
+
+Section ID: `ownkb:section:d000044:s000027`
+
+Cautions: `do not`, `must not`
+Provenance cues: `evidence`, `source`
+
+Older graph reports under `56`, `57`, and `510` contain packet numbers and byte-valued samples, including values assembled across packet boundaries. In the older daily graph, a single sample `255` is replaced with zero. In paired decoding, the value is `high*256 + low`, with only the complete pair `255*255` replaced with zero; `(3,255)` is explicitly tested as valid. For electricity the library multiplies older graph values by 100; the other application modes use a factor of 1. This follows executable behavior rather than the source's broader scaling comment. Newer `511..514` reports use tagged scalar samples as described above.
+
+The exact tests and decoder establish these older packet layouts. Payload positions below follow the packet number:
+
+| Report selector | Packet layout used by the client |
+| --- | --- |
+| `56#M#D` | Packet `1`: ignore first payload value, take the second as hour `1`; packets `2..8`: three hourly bytes each; packet `9`: hours `23` and `24`, then the daily-total high byte; packet `10`: daily-total low byte |
+| `57#M` | Skip packet `1`; concatenate the three bytes from each packet `2..17`, then decode pairs across packet boundaries for the 24 hourly values |
+| `510#M` | Packet `1`: two bytes; subsequent packets: three bytes; concatenate and decode pairs, stopping at the calendar month's day count |
+
+For example, `*#18*WHERE*510#M*1*3*255##` produces a first daily value of `102300` in electricity mode. The skipped header values remain uninterpreted. The older monthly-average decoder divides reconstructed hourly totals by the month's day count, or completed days in the current month, with a minimum divisor of 1. Newer hourly averages are consumed directly.
+
+A trailing unpaired byte produces no value. The partial-month test establishes decoding of a truncated packet prefix, not recovery from missing interior packets or reordering. The newer client decoders also assign graph positions by arrival order rather than the received tag. BtExperience can fill absent positions with zero when expanding a current-period graph for display; a displayed zero therefore need not represent a received zero measurement. See [packet and cache evidence](../../project/review/myopencommunity-energy-history-review.md#packet-decoding-and-cache-boundaries).
+
+The same library converts raw scalar measurement/totalizer value `4294967295` to zero, including actuator `DIMENSION 72`. Its scalar test preserves `4294967294` as an unsigned value; the normalization must not be extended to all values above the signed 32-bit maximum. Preserve the raw value when retaining evidence: this normalization cannot distinguish unavailable data from actual zero consumption and is not a universal protocol sentinel definition.
+
+`DIMENSION 51` remains the all-time totalizer. The library separately assembles a rolling total for the current and previous eleven months. BtExperience instead constructs its calendar-year graph and total from January onward, waiting for all required monthly values; it also has a separate rolling twelve-month view. These are derived application values, not additional wire dimensions.
+
+Month-only graph replies carry no year field. This historical library assigns a month to the latest occurrence not later than the current month, then subtracts another year for `514`. That date reconstruction is a client policy, separate from the published current-year/previous-year descriptions. It does not establish a Device's retained-history depth. Explicit `52#Y#M` replies use `2000 + Y`. See [date and total evidence](../../project/review/myopencommunity-energy-history-review.md#dates-units-and-derived-totals).
+
+Source comments label electricity as watt, water as litres, gas as dm³, and hot-water/heating quantities as calories. These are historical application unit labels; they do not resolve the published energy/power terminology or establish physical measurement units across all Devices. On detecting newer graph support, the library resubmits its pending graph request using the newer form.
+
+See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
+
+Evidence finding `moc-e0038` (claimed): Legacy energy byte decoding
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007635`, `ownkb:claim:moc-c007636`, `ownkb:claim:moc-c007637`, `ownkb:claim:moc-c007638`, `ownkb:claim:moc-c007639`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007635, ownkb:claim:moc-c007636, ownkb:claim:moc-c007637, ownkb:claim:moc-c007638, ownkb:claim:moc-c007639
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007635, ownkb:claim:moc-c007636, ownkb:claim:moc-c007638
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0039` (claimed): Energy consumer derived totals
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007640`, `ownkb:claim:moc-c007641`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007640, ownkb:claim:moc-c007641
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000196`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - EnergyData::EnergyData; EnergyData::cacheGraphData; EnergyData::cacheLastYearGraphData; EnergyData::cacheValueData; EnergyData::cacheYearGraphData; EnergyData::checkConsumptionGoal; EnergyData::checkConsumptionGoals; EnergyData::checkLastYearGraphDataIsValid; EnergyData::checkYearGraphDataIsValid; EnergyData::createGraph; EnergyData::getAdvanced; EnergyData::getCumulativeUnit; EnergyData::getCurrentUnit; EnergyData::getDecimals; EnergyData::getEnergyType; EnergyData::getFamilyName; EnergyData::getFamilyType; EnergyData::getGoalExceeded; EnergyData::getGoals; EnergyData::getGoalsEnabled; EnergyData::getGraph; EnergyData::getObjectId; EnergyData::getObjectKey; EnergyData::getRate; EnergyData::getRateDecimals; EnergyData::getThresholdEnabled; EnergyData::getThresholdLevel; EnergyData::getThresholds; EnergyData::getUnit; EnergyData::getValue; EnergyData::graphDestroyed; EnergyData::isValidDate; EnergyData::itemDestroyed; EnergyData::requestCumulativeLastYear; EnergyData::requestCumulativeYear; EnergyData::requestCurrentUpdateStart; EnergyData::requestCurrentUpdateStop; EnergyData::requestUpdate; EnergyData::setGoals; EnergyData::setGoalsEnabled; EnergyData::setThresholdEnabled; EnergyData::setThresholds; EnergyData::testAutomaticUpdates; EnergyData::testGraphData; EnergyData::testValueData; EnergyData::trimCache; EnergyData::valueReceived; EnergyGraph::EnergyGraph; EnergyGraph::getDate; EnergyGraph::getDecimals; EnergyGraph::getGraph; EnergyGraph::getGraphBar; EnergyGraph::getGraphType; EnergyGraph::getMaxValue; EnergyGraph::graphEqual; EnergyGraph::isValid; EnergyGraph::requestUpdate; EnergyGraph::setGraph; EnergyGraphBar::EnergyGraphBar; EnergyGraphBar::getIndex; EnergyGraphBar::getLabel; EnergyGraphBar::getValue; EnergyGraphObject::EnergyGraphObject; EnergyGraphObject::getDate; EnergyGraphObject::getEnergyData; EnergyGraphObject::getGraph; EnergyGraphObject::getGraphType; EnergyGraphObject::getMeasureType; EnergyGraphObject::setDate; EnergyGraphObject::setEnergyData; EnergyGraphObject::setGraphType; EnergyGraphObject::setMeasureType; EnergyGraphObject::updateGraph; EnergyItem::EnergyItem; EnergyItem::getConsumptionGoal; EnergyItem::getDate; EnergyItem::getDecimals; EnergyItem::getFamily; EnergyItem::getGoalEnabled; EnergyItem::getMeasureUnit; EnergyItem::getValue; EnergyItem::getValueType; EnergyItem::isValid; EnergyItem::requestUpdate; EnergyItem::setValue; EnergyItemCurrent::EnergyItemCurrent; EnergyItemCurrent::getMeasureUnit; EnergyItemCurrent::getThresholdLevel; EnergyItemCurrent::getThresholds; EnergyItemCurrent::getValue; EnergyItemCurrent::setThresholds; EnergyItemObject::EnergyItemObject; EnergyItemObject::getDate; EnergyItemObject::getEnergyData; EnergyItemObject::getItem; EnergyItemObject::getMeasureType; EnergyItemObject::getValueType; EnergyItemObject::setDate; EnergyItemObject::setEnergyData; EnergyItemObject::setMeasureType; EnergyItemObject::setValueType; EnergyItemObject::updateItem; dateContainsToday; doDeleteLater; getGraphElementCount; mapDimensionToGraphType; mapDimensionToItemType; normalizeDate; parseEnergyData; removeValue; unitConversionFactor; updateEnergyData; valueRange](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/energydata.cpp#L81-L1578) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007640, ownkb:claim:moc-c007641
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0108` (claimed): Legacy energy packet layout
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007792`, `ownkb:claim:moc-c007793`, `ownkb:claim:moc-c007794`, `ownkb:claim:moc-c007795`, `ownkb:claim:moc-c007796`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007792, ownkb:claim:moc-c007793, ownkb:claim:moc-c007794, ownkb:claim:moc-c007795, ownkb:claim:moc-c007796
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007792, ownkb:claim:moc-c007793, ownkb:claim:moc-c007794
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+### F520 simulator scope
+
+Section ID: `ownkb:section:d000044:s000028`
+
+Applicability cues: `firmware`
+Cautions: `limitation`, `not evidence`
+Provenance cues: `evidence`
+
+The VDK 2.0 F520 model implements scalar reads `51..54` and `113`, and the `57`, `58`, `59`, and `510` command/report mappings above. Its `511` daily read also returns tagged samples. `72` totalizer and `75` reset handlers are explicitly unimplemented in this model; that absence does not establish a limitation of physical F520 hardware.
+
+The simulator's `113` read emits the active-power report through its monitor path without sending the same report to the originating request socket. This is a model limitation, not a channel rule for physical F520 devices. See [simulator dispatch evidence](../../project/review/myopencommunity-coverage-audit.md#simulator-dispatch).
+
+The simulator reads measurements from configured files and uses a fixed year value `13`. Its periodic-power handler parses the leading write marker in `#1200#Type` as an empty numeric component; the internal switch value `0` is not evidence for a separate public dimension-zero update operation. Simulation timing and generated totals should not be used to infer hardware precision, energy integration, or current Firmware behavior. See [Simulator evidence](../../project/review/myopencommunity-integration.md#simulator-models).
+
+Its `52#Y#M` handler selects file data by month without using `Y`. For `512`, the built model computes tag `25` by dividing the sum of its 24 hourly averages by 24. A resource copy uses a different calculation and is not selected by the plugin build. Its `514` values subtract previous-year file values from current-file values. These model choices cannot establish year retention or the physical Device's historical-value calculations. See [F520 history evidence](../../project/review/myopencommunity-energy-history-review.md#f520-model-lineage).
+
+Evidence finding `moc-e0041` (claimed): F520 simulator behavior
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007643`, `ownkb:claim:moc-c007644`, `ownkb:claim:moc-c007645`, `ownkb:claim:moc-c007646`, `ownkb:claim:moc-c007647`, `ownkb:claim:moc-c007648`
+- `ownkb:source:moc-s000200`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtF520_dev::BtF520_dev; BtF520_dev::HandleMessage; BtF520_dev::ReceiveMessage; BtF520_dev::UpdateTime; BtF520_dev::activePwrTimeout; BtF520_dev::attachChild; BtF520_dev::cancelCmd; BtF520_dev::commandFrame; BtF520_dev::executeCmd; BtF520_dev::getID; BtF520_dev::registerEventHnd; BtF520_dev::requestFrame; BtF520_dev::save; BtF520_dev::sendACK; BtF520_dev::setID; BtF520_dev::setSuperior; BtF520_dev::unRegisterEventHnd; BtF520_dev::~BtF520_dev](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F520_DEV_PGIN/btf520_dev.cpp#L54-L672) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007643, ownkb:claim:moc-c007644, ownkb:claim:moc-c007645, ownkb:claim:moc-c007646, ownkb:claim:moc-c007647, ownkb:claim:moc-c007648
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 # Document: ownkb:document:d000045
 
 Source path: `functional/who-18-energy-management/what.md`
@@ -6733,6 +7423,32 @@ Section ID: `ownkb:section:d000045:s000003`
 The command forms are `*18*26*WHERE##` and `*18*27*WHERE##`. Successful command processing is acknowledged with `ACK`.
 
 Stop&Go status is read separately through `DIMENSION 250..263`; see [`DIMENSION` Reference](dimensions.md).
+
+#### Historical Stop&Go controls
+
+Section ID: `ownkb:section:d000045:s000015`
+
+Provenance cues: `evidence`, `source`
+
+BTicino touchscreen tests at `TS10_1_0_23` establish additional Stop&Go commands:
+
+| `WHAT` | Implemented operation |
+| --- | --- |
+| `21` / `22` | Open / close |
+| `23` / `24` | Enable / disable differential self-test |
+| `28` / `29` | Enable / disable tracking |
+
+They use the ordinary `*18*WHAT*WHERE##` form. The library schedules a `DIMENSION 250` read after each control to reconcile state. Earlier source labels reversed `21` and `22`; a documented correction and the mature tests establish the order above. The scheduled read is a client strategy, not a required protocol sequence. See [Stop&Go evidence](../../project/review/myopencommunity-integration.md#stopgo).
+
+Evidence finding `moc-e0030` (claimed): Stop&Go writer vocabulary
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007618`, `ownkb:claim:moc-c007619`
+- `ownkb:source:moc-s000194`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - StopAndGoBTestDevice::StopAndGoBTestDevice; StopAndGoBTestDevice::init; StopAndGoBTestDevice::parseFrame; StopAndGoBTestDevice::requestSelftestFreq; StopAndGoBTestDevice::sendDiffSelftestActivation; StopAndGoBTestDevice::sendDiffSelftestDisactivation; StopAndGoBTestDevice::sendSelftestFreq; StopAndGoDevice::StopAndGoDevice; StopAndGoDevice::init; StopAndGoDevice::parseFrame; StopAndGoDevice::requestCompressedICMState; StopAndGoDevice::requestICMState; StopAndGoDevice::sendAutoResetActivation; StopAndGoDevice::sendAutoResetDisactivation; StopAndGoPlusDevice::StopAndGoPlusDevice; StopAndGoPlusDevice::sendClose; StopAndGoPlusDevice::sendOpen; StopAndGoPlusDevice::sendTrackingSystemActivation; StopAndGoPlusDevice::sendTrackingSystemDisactivation; getStatusValue](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/stopandgo_device.cpp#L52-L192) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007618, ownkb:claim:moc-c007619
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000195`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestStopAndGoBTestDevice::cleanup; TestStopAndGoBTestDevice::init; TestStopAndGoBTestDevice::receiveSelftestFreq; TestStopAndGoBTestDevice::requestSelftestFreq; TestStopAndGoBTestDevice::sendDiffSelftestActivation; TestStopAndGoBTestDevice::sendDiffSelftestDisactivation; TestStopAndGoBTestDevice::sendSelftestFreq; TestStopAndGoDevice::cleanup; TestStopAndGoDevice::init; TestStopAndGoDevice::receiveICMState; TestStopAndGoDevice::requestICMState; TestStopAndGoDevice::sendAutoResetActivation; TestStopAndGoDevice::sendAutoResetDisactivation; TestStopAndGoDevice::testSingleState; TestStopAndGoPlusDevice::cleanup; TestStopAndGoPlusDevice::init; TestStopAndGoPlusDevice::sendClose; TestStopAndGoPlusDevice::sendOpen; TestStopAndGoPlusDevice::sendTrackingSystemActivation; TestStopAndGoPlusDevice::sendTrackingSystemDisactivation](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_stopandgo_device.cpp#L35-L268) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007618
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
 
 ### Historical-series commands
 
@@ -6773,6 +7489,60 @@ Section ID: `ownkb:section:d000045:s000008`
 
 `*18*510#M*WHERE##` starts transmission through `DIMENSION 514`. The tag identifies the measure/day, `1..31`.
 
+#### Historical graph request variants
+
+Section ID: `ownkb:section:d000045:s000016`
+
+Applicability cues: `firmware`, `gateway`, `version`
+Cautions: `avoid`, `do not`
+Provenance cues: `evidence`, `source`
+
+The touchscreen library selects request syntax independently of the returned graph encoding. Its compatibility mode treats the first [PIC version value](../who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties) `<= 22` as old PIC. Exact tests establish this matrix:
+
+| Graph encoding / operation | Normal command `WHAT` | Old-PIC read `DIMENSION` | Report `DIMENSION` |
+| --- | --- | --- | --- |
+| Older daily graph | `52#M#D` | `56#M#D` | `56` |
+| Older monthly-average graph | `53#M` | `57#M` | `57` |
+| Older monthly graph | `56#M` | `510#M` | `510` |
+| Newer daily graph | `57#M#D` | `511#M#D` | `511` |
+| Newer monthly-average graph | `58#M` | `512#M` | `512` |
+| Newer monthly graph | `59#M` | `513#M` | `513` |
+
+Thus a newer daily graph can be requested as `*18*57#M#D*WHERE##` or, in old-PIC compatibility mode, `*#18*WHERE*511#M#D##`. These are historical implementation variants, not a rule that every Device accepts both forms. The PIC cutoff is a library policy; graph capability is detected separately.
+
+The library can also force the read forms regardless of the reported PIC version. That option changes request syntax without forcing older graph decoding. It was introduced to avoid command traffic interrupting graph replies; the source does not identify the affected Device/Firmware combinations. See [graph-request history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
+
+BtExperience at `TS10_1_0_23` selects this forced-read option when constructing configured measurement objects. These objects initially use the older graph encoding and can switch to newer decoding independently; they do not consult the PIC property to choose command versus read syntax. Earlier consumers used the library's automatic PIC selection. The application's `advanced` measurement property reflects detected graph support, whereas the similarly named load Configuration flag controls the application's consumption-meter presentation. Neither establishes a physical retention period. See [Energy/PIC selection evidence](../../project/review/myopencommunity-energy-history-review.md#request-selection-and-capability-state).
+
+The client sends graph requests through one connection to retain ordering and places the monthly graph request last because source comments report transmit/receive problems in some PIC versions. The affected Firmware versions are unspecified. Its assumption of ordered, uninterrupted graph packets is not a protocol-wide delivery guarantee. See [Energy evidence](../../project/review/myopencommunity-integration.md#energy-generations-and-measurements).
+
+Evidence finding `moc-e0034` (claimed): PIC-dependent graph request selection
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007627`, `ownkb:claim:moc-c007628`, `ownkb:claim:moc-c007629`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007627, ownkb:claim:moc-c007628, ownkb:claim:moc-c007629
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0035` (claimed): Consumer graph selection
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007630`
+- `ownkb:source:moc-s000196`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - EnergyData::EnergyData; EnergyData::cacheGraphData; EnergyData::cacheLastYearGraphData; EnergyData::cacheValueData; EnergyData::cacheYearGraphData; EnergyData::checkConsumptionGoal; EnergyData::checkConsumptionGoals; EnergyData::checkLastYearGraphDataIsValid; EnergyData::checkYearGraphDataIsValid; EnergyData::createGraph; EnergyData::getAdvanced; EnergyData::getCumulativeUnit; EnergyData::getCurrentUnit; EnergyData::getDecimals; EnergyData::getEnergyType; EnergyData::getFamilyName; EnergyData::getFamilyType; EnergyData::getGoalExceeded; EnergyData::getGoals; EnergyData::getGoalsEnabled; EnergyData::getGraph; EnergyData::getObjectId; EnergyData::getObjectKey; EnergyData::getRate; EnergyData::getRateDecimals; EnergyData::getThresholdEnabled; EnergyData::getThresholdLevel; EnergyData::getThresholds; EnergyData::getUnit; EnergyData::getValue; EnergyData::graphDestroyed; EnergyData::isValidDate; EnergyData::itemDestroyed; EnergyData::requestCumulativeLastYear; EnergyData::requestCumulativeYear; EnergyData::requestCurrentUpdateStart; EnergyData::requestCurrentUpdateStop; EnergyData::requestUpdate; EnergyData::setGoals; EnergyData::setGoalsEnabled; EnergyData::setThresholdEnabled; EnergyData::setThresholds; EnergyData::testAutomaticUpdates; EnergyData::testGraphData; EnergyData::testValueData; EnergyData::trimCache; EnergyData::valueReceived; EnergyGraph::EnergyGraph; EnergyGraph::getDate; EnergyGraph::getDecimals; EnergyGraph::getGraph; EnergyGraph::getGraphBar; EnergyGraph::getGraphType; EnergyGraph::getMaxValue; EnergyGraph::graphEqual; EnergyGraph::isValid; EnergyGraph::requestUpdate; EnergyGraph::setGraph; EnergyGraphBar::EnergyGraphBar; EnergyGraphBar::getIndex; EnergyGraphBar::getLabel; EnergyGraphBar::getValue; EnergyGraphObject::EnergyGraphObject; EnergyGraphObject::getDate; EnergyGraphObject::getEnergyData; EnergyGraphObject::getGraph; EnergyGraphObject::getGraphType; EnergyGraphObject::getMeasureType; EnergyGraphObject::setDate; EnergyGraphObject::setEnergyData; EnergyGraphObject::setGraphType; EnergyGraphObject::setMeasureType; EnergyGraphObject::updateGraph; EnergyItem::EnergyItem; EnergyItem::getConsumptionGoal; EnergyItem::getDate; EnergyItem::getDecimals; EnergyItem::getFamily; EnergyItem::getGoalEnabled; EnergyItem::getMeasureUnit; EnergyItem::getValue; EnergyItem::getValueType; EnergyItem::isValid; EnergyItem::requestUpdate; EnergyItem::setValue; EnergyItemCurrent::EnergyItemCurrent; EnergyItemCurrent::getMeasureUnit; EnergyItemCurrent::getThresholdLevel; EnergyItemCurrent::getThresholds; EnergyItemCurrent::getValue; EnergyItemCurrent::setThresholds; EnergyItemObject::EnergyItemObject; EnergyItemObject::getDate; EnergyItemObject::getEnergyData; EnergyItemObject::getItem; EnergyItemObject::getMeasureType; EnergyItemObject::getValueType; EnergyItemObject::setDate; EnergyItemObject::setEnergyData; EnergyItemObject::setMeasureType; EnergyItemObject::setValueType; EnergyItemObject::updateItem; dateContainsToday; doDeleteLater; getGraphElementCount; mapDimensionToGraphType; mapDimensionToItemType; normalizeDate; parseEnergyData; removeValue; unitConversionFactor; updateEnergyData; valueRange](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/energydata.cpp#L81-L1578) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007630
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0115` (claimed): Exact graph request compatibility matrix
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007805`, `ownkb:claim:moc-c007806`, `ownkb:claim:moc-c007807`, `ownkb:claim:moc-c007808`, `ownkb:claim:moc-c007809`, `ownkb:claim:moc-c007810`
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomaticUpdates::AutomaticUpdates; AutomaticUpdates::flushCurrentUpdateStop; AutomaticUpdates::getEnergyType; AutomaticUpdates::handleAutomaticUpdate; AutomaticUpdates::pollingTimeout; AutomaticUpdates::requestCurrent; AutomaticUpdates::requestCurrentUpdate; AutomaticUpdates::requestCurrentUpdateStart; AutomaticUpdates::requestCurrentUpdateStop; AutomaticUpdates::sendUpdateStart; AutomaticUpdates::sendUpdateStop; AutomaticUpdates::setHasNewFrames; AutomaticUpdates::stoppingTimeout; EnergyConversions::convertToMoney; EnergyConversions::convertToRawData; EnergyDevice::EnergyDevice; EnergyDevice::computeMonthGraphData; EnergyDevice::fillCumulativeDay; EnergyDevice::fillMonthlyAverage; EnergyDevice::fillYearGraphData; EnergyDevice::fillYearTotalData; EnergyDevice::flushCurrentUpdateStop; EnergyDevice::getDateFromFrame; EnergyDevice::getEnergyType; EnergyDevice::init; EnergyDevice::isAdvanced; EnergyDevice::parseCumulativeDayGraph16Bit; EnergyDevice::parseCumulativeDayGraph8Bit; EnergyDevice::parseCumulativeMonthGraph32Bit; EnergyDevice::parseCumulativeMonthGraph8Bit; EnergyDevice::parseDailyAverageGraph16Bit; EnergyDevice::parseDailyAverageGraph8Bit; EnergyDevice::parseFrame; EnergyDevice::platformValueReceived; EnergyDevice::requestCumulativeDay; EnergyDevice::requestCumulativeDayGraph; EnergyDevice::requestCumulativeDayGraph16Bit; EnergyDevice::requestCumulativeDayGraph8Bit; EnergyDevice::requestCumulativeMonth; EnergyDevice::requestCumulativeMonthGraph; EnergyDevice::requestCumulativeMonthGraph32Bit; EnergyDevice::requestCumulativeMonthGraph8Bit; EnergyDevice::requestCumulativeYear; EnergyDevice::requestCumulativeYearGraph; EnergyDevice::requestCurrent; EnergyDevice::requestCurrentUpdate; EnergyDevice::requestCurrentUpdateStart; EnergyDevice::requestCurrentUpdateStop; EnergyDevice::requestDailyAverageGraph; EnergyDevice::requestDailyAverageGraph16Bit; EnergyDevice::requestDailyAverageGraph8Bit; EnergyDevice::requestMontlyAverage; EnergyDevice::requestThresholdState; EnergyDevice::requestThresholdValue; EnergyDevice::sendInit; EnergyDevice::sendRequest; EnergyDevice::setHasNewFrames; EnergyDevice::setThresholdValue; EnergyDevice::~EnergyDevice; getValue; modeToEnergyType](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L77-L1062) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007805, ownkb:claim:moc-c007806, ownkb:claim:moc-c007807, ownkb:claim:moc-c007808, ownkb:claim:moc-c007809, ownkb:claim:moc-c007810
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000197`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestEnergyDevice::cleanup; TestEnergyDevice::doSendUpdateStart; TestEnergyDevice::doSendUpdateStop; TestEnergyDevice::init; TestEnergyDevice::receiveCumulativeDay; TestEnergyDevice::receiveCumulativeDay16Bit; TestEnergyDevice::receiveCumulativeDay2; TestEnergyDevice::receiveCumulativeDayRequest; TestEnergyDevice::receiveCumulativeMonth; TestEnergyDevice::receiveCumulativeMonthGraph; TestEnergyDevice::receiveCumulativeMonthGraph2; TestEnergyDevice::receiveCumulativeMonthGraph3; TestEnergyDevice::receiveCumulativeMonthGraph32Bit; TestEnergyDevice::receiveCumulativeMonthGraph32Bit2; TestEnergyDevice::receiveCumulativeMonthGraphPrevYear32Bit; TestEnergyDevice::receiveCumulativeMonthRequest; TestEnergyDevice::receiveCumulativeYear; TestEnergyDevice::receiveCumulativeYearGraph; TestEnergyDevice::receiveCurrent; TestEnergyDevice::receiveDailyAverageGraph; TestEnergyDevice::receiveDailyAverageGraph16Bit; TestEnergyDevice::receiveDailyAverageGraph2; TestEnergyDevice::receiveDayGraph; TestEnergyDevice::receiveDayGraph16Bit; TestEnergyDevice::receiveDayGraph2; TestEnergyDevice::receiveDayGraph3; TestEnergyDevice::receiveInvalidFrameRequestCumulativeDayGraph16Bit; TestEnergyDevice::receiveInvalidFrameRequestCumulativeMonthGraph32Bit; TestEnergyDevice::receiveInvalidFrameRequestDailyAverageGraph16Bit; TestEnergyDevice::receiveMonthlyAverage; TestEnergyDevice::receiveMonthlyAverage16Bit; TestEnergyDevice::receivePic; TestEnergyDevice::receiveThresholdState; TestEnergyDevice::receiveThresholdValue; TestEnergyDevice::receiveUpdateInterval; TestEnergyDevice::receiveUpdateStop; TestEnergyDevice::sendRequestCumulativeDayGraph16Bit; TestEnergyDevice::sendRequestCumulativeDayGraph16BitOldPic; TestEnergyDevice::sendRequestCumulativeDayGraph8Bit; TestEnergyDevice::sendRequestCumulativeDayGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeMonth; TestEnergyDevice::sendRequestCumulativeMonth2; TestEnergyDevice::sendRequestCumulativeMonthGraph32Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph32BitOldPic; TestEnergyDevice::sendRequestCumulativeMonthGraph8Bit; TestEnergyDevice::sendRequestCumulativeMonthGraph8BitOldPic; TestEnergyDevice::sendRequestCumulativeYearGraph; TestEnergyDevice::sendRequestCurrent; TestEnergyDevice::sendRequestCurrent2; TestEnergyDevice::sendRequestCurrent3; TestEnergyDevice::sendRequestCurrent4; TestEnergyDevice::sendRequestDailyAverageGraph16Bit; TestEnergyDevice::sendRequestDailyAverageGraph16BitOldPic; TestEnergyDevice::sendRequestDailyAverageGraph8Bit; TestEnergyDevice::sendRequestDailyAverageGraph8BitOldPic; TestEnergyDevice::sendRequestThresholdState; TestEnergyDevice::sendRequestThresholdValue; TestEnergyDevice::sendUpdateStart; TestEnergyDevice::sendUpdateStop; TestEnergyDevice::testConsecutiveGraphFrames; TestEnergyDevice::testGetDateFromFrame; TestEnergyDevice::testSetThresholdValue; TestEnergyDevice::testUpdateRestartAutomatic1; TestEnergyDevice::testUpdateRestartAutomatic2; TestEnergyDevice::testUpdateRestartAutomatic3; TestEnergyDevice::testUpdateRestartAutomatic4; TestEnergyDevice::testUpdateStartAutomatic; TestEnergyDevice::testUpdateStartPolling; TestEnergyDevice::testUpdateStop; getDate](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_energy_device.cpp#L67-L1132) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-energy-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007805, ownkb:claim:moc-c007806, ownkb:claim:moc-c007807, ownkb:claim:moc-c007808, ownkb:claim:moc-c007809, ownkb:claim:moc-c007810
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
 ### Actuator commands
 
 Section ID: `ownkb:section:d000045:s000009`
@@ -6781,7 +7551,20 @@ Section ID: `ownkb:section:d000045:s000009`
 
 Section ID: `ownkb:section:d000045:s000010`
 
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `evidence`
+
 `*18*71*WHERE##` enables the addressed Energy Management actuator.
+
+The historical touchscreen library's API names differ from these published operations: `forceOn()` sends `74`, `forceOff(150)` sends `73#15`, and `enable()` sends `73`. These are serializers at `TS10_1_0_23`, with a confirmation TODO on the duration-based method; they do not redefine the published enable/forcing meanings or establish gateway acceptance. See [implementation evidence](../../project/review/myopencommunity-kb-provenance-audit.md).
+
+Evidence finding `moc-e0124` (claimed): Load API literal serializers with misleading method names
+Disposition reason: Direct serializer outputs are supported in revision scope. Their names and TODO do not change published physical enable/forcing semantics.
+Individual claims: `ownkb:claim:moc-c007829`, `ownkb:claim:moc-c007830`, `ownkb:claim:moc-c007831`
+- `ownkb:source:moc-s000198`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - LoadsDevice::enable; LoadsDevice::forceOn; LoadsDevice::forceOff](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/loads_device.cpp#L63-L77) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007829, ownkb:claim:moc-c007830, ownkb:claim:moc-c007831
+  Limitations: Actual serialization only; method labels do not establish physical effect or gateway acceptance.
 
 #### Force for a specified time
 
@@ -7040,6 +7823,38 @@ Automation uses the SCS `A`/`PL` addressing family also used by Lighting, but th
 
 For the common OpenWebNet frame language, see [Protocol](../../protocol/). For the Device → Module → Object → Configuration model used to describe physical Automation devices, see [Device Model](../../device-model/).
 
+### Historical product labels
+
+Section ID: `ownkb:section:d000048:s000004`
+
+Provenance cues: `evidence`
+
+The touchscreen product's Automation section includes two-state Objects implemented through [`WHO 1` Lighting](../who-1-lighting/), contacts through [`WHO 25`](../who-25-transversal/dry-contact-ir.md), and door-entry controls through [`WHO 8`](../who-8-video-door-entry-telephony/). Its three-state movement Objects use `WHO 2`. A product category or UI label therefore does not determine the wire namespace.
+
+Its configured Automation groups can also contain lists of Objects whose commands are sent individually. That application grouping is distinct from the published `#GR` collective address. See [Product namespace evidence](../../project/review/myopencommunity-reassessment.md#product-model-boundaries).
+
+The product's “safe” three-state controls send UP or DOWN on press and STOP on release, using the ordinary `WHAT 1`, `2` and `0` commands. The Configuration flag selects this control behavior; it does not select an advanced priority command or establish a physical safety guarantee. The historical Automation decoder handles those three states without implementing the published positioning dimensions. See [Control behavior evidence](../../project/review/myopencommunity-lighting-automation-history-review.md).
+
+Evidence finding `moc-e0042` (claimed): Automation application product routing
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007649`, `ownkb:claim:moc-c007650`, `ownkb:claim:moc-c007651`
+- `ownkb:source:moc-s000201`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Automation3::Automation3; Automation3::getObjectId; Automation3::getObjectKey; Automation3::getStatus; Automation3::goDown; Automation3::goUp; Automation3::setStatus; Automation3::stop; Automation3::valueReceived; AutomationContact::AutomationContact; AutomationContact::isActive; AutomationContact::valueReceived; AutomationGroup2::AutomationGroup2; AutomationGroup2::setActive; AutomationGroup3::AutomationGroup3; AutomationGroup3::goDown; AutomationGroup3::goUp; AutomationGroup3::setStatus; AutomationGroup3::stop; AutomationLight::AutomationLight; AutomationLight::activate; AutomationLight::getObjectId; AutomationVDE::AutomationVDE; AutomationVDE::activate; AutomationVDE::deactivate; parseAutomation2; parseAutomation3; parseAutomationGroup2; parseAutomationGroup3; parseAutomationVDE](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/automationobjects.cpp#L34-L391) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007649, ownkb:claim:moc-c007650, ownkb:claim:moc-c007651
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000202`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestAutomation3::cleanup; TestAutomation3::init; TestAutomation3::testReceiveStatus; TestAutomation3::testSetStatus; TestAutomation3::testUpDownStop](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_automation_objects.cpp#L29-L108) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0043` (claimed): Ordinary Automation decoder coverage
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007652`
+- `ownkb:source:moc-s000203`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomationDevice::AutomationDevice; AutomationDevice::goDown; AutomationDevice::goUp; AutomationDevice::init; AutomationDevice::parseFrame; AutomationDevice::requestPullStatus; AutomationDevice::requestStatus; AutomationDevice::stop; PPTStatDevice::PPTStatDevice; PPTStatDevice::init; PPTStatDevice::parseFrame; PPTStatDevice::requestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/automation_device.cpp#L38-L115) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007652
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000204`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAutomationDevice::cleanupTestCase; TestAutomationDevice::initTestCase; TestAutomationDevice::receiveDown; TestAutomationDevice::receiveStop; TestAutomationDevice::receiveUp; TestAutomationDevice::sendGoDown; TestAutomationDevice::sendGoUp; TestAutomationDevice::sendStop; TestPPTStatDevice::cleanupTestCase; TestPPTStatDevice::initTestCase; TestPPTStatDevice::receiveStatus; TestPPTStatDevice::sendRequestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_automation_device.cpp#L36-L119) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-lighting-automation-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
 # Document: ownkb:document:d000049
 
 Source path: `functional/who-2-automation/addressing.md`
@@ -7173,6 +7988,8 @@ Section ID: `ownkb:section:d000050:s000005`
 
 Section ID: `ownkb:section:d000050:s000006`
 
+Applicability cues: `scs`
+
 | Value | Meaning |
 | --- | --- |
 | `0` | Normal |
@@ -7180,6 +7997,8 @@ Section ID: `ownkb:section:d000050:s000006`
 | `13` | Disabled |
 | `14` | Command not executed |
 | `15` | PUL |
+
+`PUL` is the named actuator mode, not the monostable up/down command selector or a movement state. Manufacturer mode tables and their collective-filtering scope are described in [SCS Configurator Labels](../../device-model/configurators.md#pul-behavior). The status flag alone does not identify a physical plug, active Configuration method or universal group/status-request policy.
 
 For general, environment, or group requests, the server can return one `DIMENSION 10` status frame for each Automation Object in the addressed scope. This expansion is part of the functional addressing behavior rather than a change to the four-value payload.
 
@@ -7598,7 +8417,7 @@ Absolute `DIMENSION` state complements relative `WHAT` operations. Prefer report
 
 Section ID: `ownkb:section:d000053:s000007`
 
-Provenance cues: `source`
+Provenance cues: `evidence`, `source`
 
 | Dimension | Report payload following the dimension |
 | --- | --- |
@@ -7613,7 +8432,7 @@ Provenance cues: `source`
 | `19` | `PRESET` |
 | `20` | `LOUDNESS` |
 
-The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The source does not supply a complete RDS text encoding or band-value domain.
+The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The published source does not supply a complete RDS text encoding or band-value domain; the historical RDS decoding evidence below establishes a narrower implementation format.
 
 Examples with unambiguous separators in the detailed flows include:
 
@@ -7637,11 +8456,987 @@ Source dimension requests use the general-source form `5#2#SOURCE_ID` in these f
 Section ID: `ownkb:section:d000053:s000008`
 
 Cautions: `do not`
-Provenance cues: `catalogue`, `evidence`, `source`, `specification`
+Uncertainty: `unresolved`
+Provenance cues: `catalogue`, `source`, `specification`
 
 The detailed specification is not uniformly reliable as a copy-and-send frame catalogue. Speaker power examples omit separators that appear in the address table; speaker writes for dimensions `1..4` join the dimension marker to `WHERE` without the normal `*`; preset commands `55`/`56` contain an early `##`; and some tone-response dimension numbers disagree with the requested tone. RDS commands `31`/`32` are printed without a normal `WHERE` field. The source also shows `WHAT 21` source notifications outside its summary table.
 
-Preserve these as source discrepancies. The ordinary frame grammar suggests possible corrections, but captures or implementation evidence are needed before treating a repaired frame as established. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+Preserve these as source discrepancies. The tested forms below resolve speaker volume writes, preset commands, power-control emissions, and RDS syntax for the historical touchscreen implementation. Other tone-response discrepancies and the meaning of the published `WHAT 21` notification remain unresolved. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+
+Evidence finding `moc-e0044` (claimed): Sound wire examples inspected in archived tests
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:c002785`
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAlarmSoundDiffDevice::cleanupTestCase; TestAlarmSoundDiffDevice::init; TestAlarmSoundDiffDevice::initTestCase; TestAlarmSoundDiffDevice::receiveAreaUpdate; TestAlarmSoundDiffDevice::receiveRadioStation; TestAlarmSoundDiffDevice::receiveSource; TestAlarmSoundDiffDevice::receiveStatus; TestAlarmSoundDiffDevice::receiveStatusOff; TestAlarmSoundDiffDevice::receiveVolume; TestAlarmSoundDiffDevice::sendSetVolume; TestAlarmSoundDiffDevice::setCurrentArea; TestAlarmSoundDiffDevice::testStartAlarm; TestAlarmSoundDiffDevice::testStopAlarm; TestAmplifierDevice::TestAmplifierDevice; TestAmplifierDevice::cleanupTestCase; TestAmplifierDevice::initAmplifier; TestAmplifierDevice::initTestCase; TestAmplifierDevice::receiveStatus; TestAmplifierDevice::receiveVolume; TestAmplifierDevice::sendRequestStatus; TestAmplifierDevice::sendSetVolume; TestAmplifierDevice::sendTurnOff; TestAmplifierDevice::sendTurnOn; TestAmplifierDevice::sendVolumeDown; TestAmplifierDevice::sendVolumeUp; TestAmplifierDevice::testCrash; TestAuxDevice::cleanupTestCase; TestAuxDevice::initTestCase; TestAuxDevice::receiveStatus; TestAuxDevice::sendRequestStatus; TestPowerAmplifierDevice::cleanupTestCase; TestPowerAmplifierDevice::initPowerAmplifier; TestPowerAmplifierDevice::initTestCase; TestPowerAmplifierDevice::receiveBalance; TestPowerAmplifierDevice::receiveBass; TestPowerAmplifierDevice::receiveLoud; TestPowerAmplifierDevice::receivePreset; TestPowerAmplifierDevice::receiveTreble; TestPowerAmplifierDevice::sendBalanceDown; TestPowerAmplifierDevice::sendBalanceUp; TestPowerAmplifierDevice::sendBassDown; TestPowerAmplifierDevice::sendBassUp; TestPowerAmplifierDevice::sendLoudOff; TestPowerAmplifierDevice::sendLoudOn; TestPowerAmplifierDevice::sendNextPreset; TestPowerAmplifierDevice::sendPrevPreset; TestPowerAmplifierDevice::sendSetPreset; TestPowerAmplifierDevice::sendTrebleDown; TestPowerAmplifierDevice::sendTrebleUp; TestRadioSourceDevice::cleanupTestCase; TestRadioSourceDevice::initRadioSource; TestRadioSourceDevice::initTestCase; TestRadioSourceDevice::receiveFrequency; TestRadioSourceDevice::receiveMemorizedStation; TestRadioSourceDevice::receiveRDS; TestRadioSourceDevice::receiveStopRDS; TestRadioSourceDevice::sendFrequenceDownAutomatic; TestRadioSourceDevice::sendFrequenceDownManual; TestRadioSourceDevice::sendFrequenceUpAutomatic; TestRadioSourceDevice::sendFrequenceUpManual; TestRadioSourceDevice::sendRequestFrequency; TestRadioSourceDevice::sendSaveStation; TestRadioSourceDevice::sendSetStation; TestSourceDevice::TestSourceDevice; TestSourceDevice::cleanupTestCase; TestSourceDevice::initSource; TestSourceDevice::initTestCase; TestSourceDevice::receiveStatus1; TestSourceDevice::receiveStatus2; TestSourceDevice::receiveTrack; TestSourceDevice::sendGeneralTurnOn; TestSourceDevice::sendNextTrack; TestSourceDevice::sendPrevTrack; TestSourceDevice::sendRequestActiveAreas; TestSourceDevice::sendRequestTrack; TestSourceDevice::sendTurnOn; TestSourceDevice::testActiveAreas; TestSourceDevice::testActiveAreas2; TestSourceDevice::testMonochannelArea; TestVirtualAmplifierDevice::cleanupTestCase; TestVirtualAmplifierDevice::initTestCase; TestVirtualAmplifierDevice::initVirtualAmplifier; TestVirtualAmplifierDevice::receiveAmplifierOff; TestVirtualAmplifierDevice::receiveAmplifierOn; TestVirtualAmplifierDevice::receiveSetVolume; TestVirtualAmplifierDevice::receiveTemporaryOff; TestVirtualAmplifierDevice::receiveVolumeDown; TestVirtualAmplifierDevice::receiveVolumeUp; TestVirtualAmplifierDevice::sendSetVolume; TestVirtualAmplifierDevice::sendTurnOff; TestVirtualAmplifierDevice::sendTurnOn; TestVirtualAmplifierDevice::sendUpdateStatus; TestVirtualAmplifierDevice::sendUpdateVolume; TestVirtualAmplifierDevice::sendVolumeDown; TestVirtualAmplifierDevice::sendVolumeUp; TestVirtualSourceDevice::cleanupTestCase; TestVirtualSourceDevice::initTestCase; TestVirtualSourceDevice::initVirtualSource; TestVirtualSourceDevice::receiveNextTrack; TestVirtualSourceDevice::receivePrevTrack; TestVirtualSourceDevice::receiveSourceOff; TestVirtualSourceDevice::receiveSourceOn; TestVirtualSourceDevice::sendNextTrack; TestVirtualSourceDevice::sendPrevTrack; TestVirtualSourceDevice::testInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L38-L1001) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:c002785
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+### Historical touchscreen syntax and extensions
+
+Section ID: `ownkb:section:d000053:s000012`
+
+Cautions: `do not`
+Uncertainty: `unknown`
+Provenance cues: `source`
+
+Exact BTicino tests at `TS10_1_0_23` resolve several malformed published examples for that implementation:
+
+| Operation | Tested emission |
+| --- | --- |
+| Speaker OFF | `*22*0#4#AREA*3#AREA#POINT##` |
+| Speaker ON using Follow Me | `*22*34#4#AREA*3#AREA#POINT##` |
+| Absolute volume | `*#22*3#AREA#POINT*#1*VOLUME##` |
+| Next / previous preset | `*22*55*3#AREA#POINT##` / `*22*56*3#AREA#POINT##` |
+| RDS start / stop | `*22*31*2#SOURCE##` / `*22*32*2#SOURCE##` |
+| Automatic tuning up / down | `*22*5*2#SOURCE##` / `*22*6*2#SOURCE##` |
+| Manual tuning up / down | `*22*5#STEP*2#SOURCE##` / `*22*6#STEP*2#SOURCE##` |
+| Select source for one area | `*22*35#4#AREA#SOURCE*3#AREA#0##` |
+| Select stored station | `*#22*2#SOURCE*#6*STATION##` |
+| Virtual amplifier state report | `*#22*5#3#AREA#POINT*12*STATE*3##` |
+| Virtual amplifier volume report | `*#22*5#3#AREA#POINT*1*VOLUME##` |
+
+The application maps amplifier-area configuration `#A` to `WHERE = 4#A`, and general amplifier configuration `0` to `5#3#0#0`. Tests also recognize `*22*0#4#15*5#1#1##` as a special general-OFF notification. That recognition does not establish an arbitrary sender-address domain.
+
+The virtual amplifier publishes its own cached state and volume in the two report forms above, including during initialization with OFF and volume `0`. Its volume controls generate local requests; they do not by themselves confirm playback or a physical amplifier's state. Area/general controllers containing that virtual amplifier dispatch power and relative-volume operations to both the bus and the local amplifier.
+
+The radio client interprets its cached frequency in hundredths of MHz: `9800` is 98.00 MHz, and a manual step changes it by `5` (50 kHz). It wraps above 108.00 MHz to 87.50 MHz and below 87.50 MHz to 108.00 MHz. With an unknown cached frequency, manual tuning sends nothing; automatic search still sends `WHAT 5` / `6`. BtExperience schedules a frequency read after manual tuning and waits for a report after automatic search. These are client policies; they do not resolve the published step-unit discrepancy or establish every tuner's band limits.
+
+Evidence finding `moc-e0045` (claimed): WHO 22 area and general target conversion
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007653`, `ownkb:claim:moc-c007654`
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAlarmSoundDiffDevice::cleanupTestCase; TestAlarmSoundDiffDevice::init; TestAlarmSoundDiffDevice::initTestCase; TestAlarmSoundDiffDevice::receiveAreaUpdate; TestAlarmSoundDiffDevice::receiveRadioStation; TestAlarmSoundDiffDevice::receiveSource; TestAlarmSoundDiffDevice::receiveStatus; TestAlarmSoundDiffDevice::receiveStatusOff; TestAlarmSoundDiffDevice::receiveVolume; TestAlarmSoundDiffDevice::sendSetVolume; TestAlarmSoundDiffDevice::setCurrentArea; TestAlarmSoundDiffDevice::testStartAlarm; TestAlarmSoundDiffDevice::testStopAlarm; TestAmplifierDevice::TestAmplifierDevice; TestAmplifierDevice::cleanupTestCase; TestAmplifierDevice::initAmplifier; TestAmplifierDevice::initTestCase; TestAmplifierDevice::receiveStatus; TestAmplifierDevice::receiveVolume; TestAmplifierDevice::sendRequestStatus; TestAmplifierDevice::sendSetVolume; TestAmplifierDevice::sendTurnOff; TestAmplifierDevice::sendTurnOn; TestAmplifierDevice::sendVolumeDown; TestAmplifierDevice::sendVolumeUp; TestAmplifierDevice::testCrash; TestAuxDevice::cleanupTestCase; TestAuxDevice::initTestCase; TestAuxDevice::receiveStatus; TestAuxDevice::sendRequestStatus; TestPowerAmplifierDevice::cleanupTestCase; TestPowerAmplifierDevice::initPowerAmplifier; TestPowerAmplifierDevice::initTestCase; TestPowerAmplifierDevice::receiveBalance; TestPowerAmplifierDevice::receiveBass; TestPowerAmplifierDevice::receiveLoud; TestPowerAmplifierDevice::receivePreset; TestPowerAmplifierDevice::receiveTreble; TestPowerAmplifierDevice::sendBalanceDown; TestPowerAmplifierDevice::sendBalanceUp; TestPowerAmplifierDevice::sendBassDown; TestPowerAmplifierDevice::sendBassUp; TestPowerAmplifierDevice::sendLoudOff; TestPowerAmplifierDevice::sendLoudOn; TestPowerAmplifierDevice::sendNextPreset; TestPowerAmplifierDevice::sendPrevPreset; TestPowerAmplifierDevice::sendSetPreset; TestPowerAmplifierDevice::sendTrebleDown; TestPowerAmplifierDevice::sendTrebleUp; TestRadioSourceDevice::cleanupTestCase; TestRadioSourceDevice::initRadioSource; TestRadioSourceDevice::initTestCase; TestRadioSourceDevice::receiveFrequency; TestRadioSourceDevice::receiveMemorizedStation; TestRadioSourceDevice::receiveRDS; TestRadioSourceDevice::receiveStopRDS; TestRadioSourceDevice::sendFrequenceDownAutomatic; TestRadioSourceDevice::sendFrequenceDownManual; TestRadioSourceDevice::sendFrequenceUpAutomatic; TestRadioSourceDevice::sendFrequenceUpManual; TestRadioSourceDevice::sendRequestFrequency; TestRadioSourceDevice::sendSaveStation; TestRadioSourceDevice::sendSetStation; TestSourceDevice::TestSourceDevice; TestSourceDevice::cleanupTestCase; TestSourceDevice::initSource; TestSourceDevice::initTestCase; TestSourceDevice::receiveStatus1; TestSourceDevice::receiveStatus2; TestSourceDevice::receiveTrack; TestSourceDevice::sendGeneralTurnOn; TestSourceDevice::sendNextTrack; TestSourceDevice::sendPrevTrack; TestSourceDevice::sendRequestActiveAreas; TestSourceDevice::sendRequestTrack; TestSourceDevice::sendTurnOn; TestSourceDevice::testActiveAreas; TestSourceDevice::testActiveAreas2; TestSourceDevice::testMonochannelArea; TestVirtualAmplifierDevice::cleanupTestCase; TestVirtualAmplifierDevice::initTestCase; TestVirtualAmplifierDevice::initVirtualAmplifier; TestVirtualAmplifierDevice::receiveAmplifierOff; TestVirtualAmplifierDevice::receiveAmplifierOn; TestVirtualAmplifierDevice::receiveSetVolume; TestVirtualAmplifierDevice::receiveTemporaryOff; TestVirtualAmplifierDevice::receiveVolumeDown; TestVirtualAmplifierDevice::receiveVolumeUp; TestVirtualAmplifierDevice::sendSetVolume; TestVirtualAmplifierDevice::sendTurnOff; TestVirtualAmplifierDevice::sendTurnOn; TestVirtualAmplifierDevice::sendUpdateStatus; TestVirtualAmplifierDevice::sendUpdateVolume; TestVirtualAmplifierDevice::sendVolumeDown; TestVirtualAmplifierDevice::sendVolumeUp; TestVirtualSourceDevice::cleanupTestCase; TestVirtualSourceDevice::initTestCase; TestVirtualSourceDevice::initVirtualSource; TestVirtualSourceDevice::receiveNextTrack; TestVirtualSourceDevice::receivePrevTrack; TestVirtualSourceDevice::receiveSourceOff; TestVirtualSourceDevice::receiveSourceOn; TestVirtualSourceDevice::sendNextTrack; TestVirtualSourceDevice::sendPrevTrack; TestVirtualSourceDevice::testInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L38-L1001) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007653, ownkb:claim:moc-c007654
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AlarmSoundDiffDevice::AlarmSoundDiffDevice; AlarmSoundDiffDevice::addAmplifier; AlarmSoundDiffDevice::addSource; AlarmSoundDiffDevice::amplifierValueReceived; AlarmSoundDiffDevice::isValid; AlarmSoundDiffDevice::requestStation; AlarmSoundDiffDevice::setActiveArea; AlarmSoundDiffDevice::setReceiveFrames; AlarmSoundDiffDevice::setVolume; AlarmSoundDiffDevice::sourceValueReceived; AlarmSoundDiffDevice::startAlarm; AlarmSoundDiffDevice::stopAlarm; AlarmSoundDiffDevice::updateActiveSource; AmplifierDevice::AmplifierDevice; AmplifierDevice::checkAddressIsForMe; AmplifierDevice::createDevice; AmplifierDevice::createVirtualDevice; AmplifierDevice::getAmplifierArea; AmplifierDevice::init; AmplifierDevice::isAreaAddress; AmplifierDevice::isGeneralAddress; AmplifierDevice::parseFrame; AmplifierDevice::requestStatus; AmplifierDevice::requestVolume; AmplifierDevice::setIsMultichannel; AmplifierDevice::setVirtualAmplifierWhere; AmplifierDevice::setVolume; AmplifierDevice::turnOff; AmplifierDevice::turnOn; AmplifierDevice::volumeDown; AmplifierDevice::volumeUp; AuxDevice::AuxDevice; AuxDevice::init; AuxDevice::parseFrame; AuxDevice::requestStatus; CompositeAmplifierDevice::CompositeAmplifierDevice; CompositeAmplifierDevice::get_key; CompositeAmplifierDevice::parseFrame; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::volumeDown; CompositeAmplifierDevice::volumeUp; PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp; RadioSourceDevice::RadioSourceDevice; RadioSourceDevice::frequenceDown; RadioSourceDevice::frequenceUp; RadioSourceDevice::init; RadioSourceDevice::parseFrame; RadioSourceDevice::requestFrequency; RadioSourceDevice::requestStartRDS; RadioSourceDevice::requestStopRDS; RadioSourceDevice::saveStation; RadioSourceDevice::setStation; RadioSourceDevice::stopRDS; SourceDevice::SourceDevice; SourceDevice::init; SourceDevice::isActive; SourceDevice::nextTrack; SourceDevice::parseFrame; SourceDevice::parseFrameAmplifiers; SourceDevice::parseFrameOtherSources; SourceDevice::prevTrack; SourceDevice::requestActiveAreas; SourceDevice::requestTrack; SourceDevice::sendTurnOn; SourceDevice::setIsMultichannel; SourceDevice::turnOn; VirtualAmplifierDevice::VirtualAmplifierDevice; VirtualAmplifierDevice::init; VirtualAmplifierDevice::parseFrame; VirtualAmplifierDevice::setVolume; VirtualAmplifierDevice::turnOff; VirtualAmplifierDevice::turnOn; VirtualAmplifierDevice::updateStatus; VirtualAmplifierDevice::updateVolume; VirtualAmplifierDevice::volumeDown; VirtualAmplifierDevice::volumeUp; VirtualSourceDevice::VirtualSourceDevice; VirtualSourceDevice::createMediaInitFrame; VirtualSourceDevice::nextTrack; VirtualSourceDevice::parseFrame; VirtualSourceDevice::prevTrack; VirtualSourceDevice::turnOn; createAmplifierWhere; getAmplifierPoint](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L84-L1333) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007653, ownkb:claim:moc-c007654
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0046` (claimed): Virtual amplifier cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007655`, `ownkb:claim:moc-c007656`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AmplifierDevice::AmplifierDevice; AmplifierDevice::checkAddressIsForMe; AmplifierDevice::createDevice; AmplifierDevice::createVirtualDevice; AmplifierDevice::getAmplifierArea; AmplifierDevice::init; AmplifierDevice::isAreaAddress; AmplifierDevice::isGeneralAddress; AmplifierDevice::parseFrame; AmplifierDevice::requestStatus; AmplifierDevice::requestVolume; AmplifierDevice::setIsMultichannel; AmplifierDevice::setVirtualAmplifierWhere; AmplifierDevice::setVolume; AmplifierDevice::turnOff; AmplifierDevice::turnOn; AmplifierDevice::volumeDown; AmplifierDevice::volumeUp; CompositeAmplifierDevice::CompositeAmplifierDevice; CompositeAmplifierDevice::get_key; CompositeAmplifierDevice::parseFrame; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::volumeDown; CompositeAmplifierDevice::volumeUp; PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp; VirtualAmplifierDevice::VirtualAmplifierDevice; VirtualAmplifierDevice::init; VirtualAmplifierDevice::parseFrame; VirtualAmplifierDevice::setVolume; VirtualAmplifierDevice::turnOff; VirtualAmplifierDevice::turnOn; VirtualAmplifierDevice::updateStatus; VirtualAmplifierDevice::updateVolume; VirtualAmplifierDevice::volumeDown; VirtualAmplifierDevice::volumeUp](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L737-L1296) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007655, ownkb:claim:moc-c007656
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0111` (claimed): Sound direct writer examples
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007802`, `ownkb:claim:moc-c007803`, `ownkb:claim:moc-c007804`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AlarmSoundDiffDevice::AlarmSoundDiffDevice; AlarmSoundDiffDevice::addAmplifier; AlarmSoundDiffDevice::addSource; AlarmSoundDiffDevice::amplifierValueReceived; AlarmSoundDiffDevice::isValid; AlarmSoundDiffDevice::requestStation; AlarmSoundDiffDevice::setActiveArea; AlarmSoundDiffDevice::setReceiveFrames; AlarmSoundDiffDevice::setVolume; AlarmSoundDiffDevice::sourceValueReceived; AlarmSoundDiffDevice::startAlarm; AlarmSoundDiffDevice::stopAlarm; AlarmSoundDiffDevice::updateActiveSource; AmplifierDevice::AmplifierDevice; AmplifierDevice::checkAddressIsForMe; AmplifierDevice::createDevice; AmplifierDevice::createVirtualDevice; AmplifierDevice::getAmplifierArea; AmplifierDevice::init; AmplifierDevice::isAreaAddress; AmplifierDevice::isGeneralAddress; AmplifierDevice::parseFrame; AmplifierDevice::requestStatus; AmplifierDevice::requestVolume; AmplifierDevice::setIsMultichannel; AmplifierDevice::setVirtualAmplifierWhere; AmplifierDevice::setVolume; AmplifierDevice::turnOff; AmplifierDevice::turnOn; AmplifierDevice::volumeDown; AmplifierDevice::volumeUp; AuxDevice::AuxDevice; AuxDevice::init; AuxDevice::parseFrame; AuxDevice::requestStatus; CompositeAmplifierDevice::CompositeAmplifierDevice; CompositeAmplifierDevice::get_key; CompositeAmplifierDevice::parseFrame; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::volumeDown; CompositeAmplifierDevice::volumeUp; PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp; RadioSourceDevice::RadioSourceDevice; RadioSourceDevice::frequenceDown; RadioSourceDevice::frequenceUp; RadioSourceDevice::init; RadioSourceDevice::parseFrame; RadioSourceDevice::requestFrequency; RadioSourceDevice::requestStartRDS; RadioSourceDevice::requestStopRDS; RadioSourceDevice::saveStation; RadioSourceDevice::setStation; RadioSourceDevice::stopRDS; SourceDevice::SourceDevice; SourceDevice::init; SourceDevice::isActive; SourceDevice::nextTrack; SourceDevice::parseFrame; SourceDevice::parseFrameAmplifiers; SourceDevice::parseFrameOtherSources; SourceDevice::prevTrack; SourceDevice::requestActiveAreas; SourceDevice::requestTrack; SourceDevice::sendTurnOn; SourceDevice::setIsMultichannel; SourceDevice::turnOn; VirtualAmplifierDevice::VirtualAmplifierDevice; VirtualAmplifierDevice::init; VirtualAmplifierDevice::parseFrame; VirtualAmplifierDevice::setVolume; VirtualAmplifierDevice::turnOff; VirtualAmplifierDevice::turnOn; VirtualAmplifierDevice::updateStatus; VirtualAmplifierDevice::updateVolume; VirtualAmplifierDevice::volumeDown; VirtualAmplifierDevice::volumeUp; VirtualSourceDevice::VirtualSourceDevice; VirtualSourceDevice::createMediaInitFrame; VirtualSourceDevice::nextTrack; VirtualSourceDevice::parseFrame; VirtualSourceDevice::prevTrack; VirtualSourceDevice::turnOn; createAmplifierWhere; getAmplifierPoint](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L84-L1333) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007802, ownkb:claim:moc-c007803, ownkb:claim:moc-c007804
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAlarmSoundDiffDevice::cleanupTestCase; TestAlarmSoundDiffDevice::init; TestAlarmSoundDiffDevice::initTestCase; TestAlarmSoundDiffDevice::receiveAreaUpdate; TestAlarmSoundDiffDevice::receiveRadioStation; TestAlarmSoundDiffDevice::receiveSource; TestAlarmSoundDiffDevice::receiveStatus; TestAlarmSoundDiffDevice::receiveStatusOff; TestAlarmSoundDiffDevice::receiveVolume; TestAlarmSoundDiffDevice::sendSetVolume; TestAlarmSoundDiffDevice::setCurrentArea; TestAlarmSoundDiffDevice::testStartAlarm; TestAlarmSoundDiffDevice::testStopAlarm; TestAmplifierDevice::TestAmplifierDevice; TestAmplifierDevice::cleanupTestCase; TestAmplifierDevice::initAmplifier; TestAmplifierDevice::initTestCase; TestAmplifierDevice::receiveStatus; TestAmplifierDevice::receiveVolume; TestAmplifierDevice::sendRequestStatus; TestAmplifierDevice::sendSetVolume; TestAmplifierDevice::sendTurnOff; TestAmplifierDevice::sendTurnOn; TestAmplifierDevice::sendVolumeDown; TestAmplifierDevice::sendVolumeUp; TestAmplifierDevice::testCrash; TestAuxDevice::cleanupTestCase; TestAuxDevice::initTestCase; TestAuxDevice::receiveStatus; TestAuxDevice::sendRequestStatus; TestPowerAmplifierDevice::cleanupTestCase; TestPowerAmplifierDevice::initPowerAmplifier; TestPowerAmplifierDevice::initTestCase; TestPowerAmplifierDevice::receiveBalance; TestPowerAmplifierDevice::receiveBass; TestPowerAmplifierDevice::receiveLoud; TestPowerAmplifierDevice::receivePreset; TestPowerAmplifierDevice::receiveTreble; TestPowerAmplifierDevice::sendBalanceDown; TestPowerAmplifierDevice::sendBalanceUp; TestPowerAmplifierDevice::sendBassDown; TestPowerAmplifierDevice::sendBassUp; TestPowerAmplifierDevice::sendLoudOff; TestPowerAmplifierDevice::sendLoudOn; TestPowerAmplifierDevice::sendNextPreset; TestPowerAmplifierDevice::sendPrevPreset; TestPowerAmplifierDevice::sendSetPreset; TestPowerAmplifierDevice::sendTrebleDown; TestPowerAmplifierDevice::sendTrebleUp; TestRadioSourceDevice::cleanupTestCase; TestRadioSourceDevice::initRadioSource; TestRadioSourceDevice::initTestCase; TestRadioSourceDevice::receiveFrequency; TestRadioSourceDevice::receiveMemorizedStation; TestRadioSourceDevice::receiveRDS; TestRadioSourceDevice::receiveStopRDS; TestRadioSourceDevice::sendFrequenceDownAutomatic; TestRadioSourceDevice::sendFrequenceDownManual; TestRadioSourceDevice::sendFrequenceUpAutomatic; TestRadioSourceDevice::sendFrequenceUpManual; TestRadioSourceDevice::sendRequestFrequency; TestRadioSourceDevice::sendSaveStation; TestRadioSourceDevice::sendSetStation; TestSourceDevice::TestSourceDevice; TestSourceDevice::cleanupTestCase; TestSourceDevice::initSource; TestSourceDevice::initTestCase; TestSourceDevice::receiveStatus1; TestSourceDevice::receiveStatus2; TestSourceDevice::receiveTrack; TestSourceDevice::sendGeneralTurnOn; TestSourceDevice::sendNextTrack; TestSourceDevice::sendPrevTrack; TestSourceDevice::sendRequestActiveAreas; TestSourceDevice::sendRequestTrack; TestSourceDevice::sendTurnOn; TestSourceDevice::testActiveAreas; TestSourceDevice::testActiveAreas2; TestSourceDevice::testMonochannelArea; TestVirtualAmplifierDevice::cleanupTestCase; TestVirtualAmplifierDevice::initTestCase; TestVirtualAmplifierDevice::initVirtualAmplifier; TestVirtualAmplifierDevice::receiveAmplifierOff; TestVirtualAmplifierDevice::receiveAmplifierOn; TestVirtualAmplifierDevice::receiveSetVolume; TestVirtualAmplifierDevice::receiveTemporaryOff; TestVirtualAmplifierDevice::receiveVolumeDown; TestVirtualAmplifierDevice::receiveVolumeUp; TestVirtualAmplifierDevice::sendSetVolume; TestVirtualAmplifierDevice::sendTurnOff; TestVirtualAmplifierDevice::sendTurnOn; TestVirtualAmplifierDevice::sendUpdateStatus; TestVirtualAmplifierDevice::sendUpdateVolume; TestVirtualAmplifierDevice::sendVolumeDown; TestVirtualAmplifierDevice::sendVolumeUp; TestVirtualSourceDevice::cleanupTestCase; TestVirtualSourceDevice::initTestCase; TestVirtualSourceDevice::initVirtualSource; TestVirtualSourceDevice::receiveNextTrack; TestVirtualSourceDevice::receivePrevTrack; TestVirtualSourceDevice::receiveSourceOff; TestVirtualSourceDevice::receiveSourceOn; TestVirtualSourceDevice::sendNextTrack; TestVirtualSourceDevice::sendPrevTrack; TestVirtualSourceDevice::testInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L38-L1001) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+#### Virtual and composite amplifier controllers
+
+Section ID: `ownkb:section:d000053:s000022`
+
+Applicability cues: `applies to`
+Provenance cues: `evidence`
+
+At `TS10_1_0_23`, the library's amplifier factory selects the configured local virtual amplifier for an exact address match. A general target or an area target containing that local address creates a composite controller with bus and local children. Other targets use the ordinary bus controller.
+
+| Composite operation | Library behavior |
+| --- | --- |
+| ON / OFF, volume up / down | Forwards the operation to each child |
+| Absolute volume | Uses the inherited general-address dimension `1` write at `5#3#0#0`; does not directly forward the value to the local child |
+| Received state | Produces no aggregate child-state values |
+
+The absolute-volume behavior also applies to an area composite because its base controller is constructed with general target `0`. It does not establish the effect of later bus echoes or a physical amplifier's response. BtExperience's application amplifier groups use a different mechanism: they call each linked member for power, relative volume and absolute volume. Their member references are [application Configuration](../../device-model/configuration.md#historical-touchscreen-application-configuration), rather than an OpenWebNet group address. See [Amplifier and simulator closure evidence](../../project/review/myopencommunity-closure-review.md#findings-and-canonical-placement).
+
+Evidence finding `moc-e0170` (claimed): Virtual and composite amplifier factory and inherited controls
+Disposition reason: Reviewed exact-revision direct findings, with independent confidence and examination methods; no hardware generalization.
+Individual claims: `ownkb:claim:moc-c074118`, `ownkb:claim:moc-c074119`, `ownkb:claim:moc-c074120`, `ownkb:claim:moc-c074121`, `ownkb:claim:moc-c074122`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AmplifierDevice::createDevice](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L784-L803) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074118, ownkb:claim:moc-c074119
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::volumeUp; CompositeAmplifierDevice::volumeDown](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L1100-L1122) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074120
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - CompositeAmplifierDevice::CompositeAmplifierDevice; AmplifierDevice::setVolume; createAmplifierWhere](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L769-L1093) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074121
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001173`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - CompositeAmplifierDevice declaration](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.h#L623-L645) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074121
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - CompositeAmplifierDevice::parseFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L1124-L1131) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074122
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+
+#### Source activity and RDS
+
+Section ID: `ownkb:section:d000053:s000013`
+
+Provenance cues: `source`
+
+The library requests active areas with `*#22*2#SOURCE*13##`. A tested response at `5#2#SOURCE` carries sixteen flags for area indices `0..15`, replacing that source's cached area set; its matching `WHAT 2#4#AREA` notifications add an active area. An OFF state report clears the set. Selecting another source for a cached area removes that area from the previous source. In monochannel mode its `WHAT 2` notifications use area `0`. BtExperience exposes only indices `0..8` and emits an activity change when its area set crosses between empty and nonempty. These are internal state-model choices, not revised published area domains.
+
+The tested source-selection method with no area supplied sends eight commands, one for each area `1..8`, using the selection form above. Supplying literal area `0` instead sends one command for area `0`. Application-wide selection and an explicit zero-area request are therefore distinct; neither establishes a universal broadcast form.
+
+`DIMENSION 10` carries decimal character codes. The tested report `*#22*2#SOURCE*10*104*101*108*108*111*33##` decodes to `hello!`; no fixed eight-character limit is established by that test. The client starts RDS for its first subscriber and delays stopping after the last subscriber by 100 ms, allowing a new subscriber to cancel the pending stop. It re-requests RDS after a stop report only while updates remain enabled. This is subscription policy, not a mandatory protocol response or Device timing rule.
+
+Evidence finding `moc-e0047` (claimed): Tuner and RDS client behavior
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007657`, `ownkb:claim:moc-c007658`, `ownkb:claim:moc-c007659`, `ownkb:claim:moc-c007660`, `ownkb:claim:moc-c007661`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - RadioSourceDevice::RadioSourceDevice; RadioSourceDevice::frequenceDown; RadioSourceDevice::frequenceUp; RadioSourceDevice::init; RadioSourceDevice::parseFrame; RadioSourceDevice::requestFrequency; RadioSourceDevice::requestStartRDS; RadioSourceDevice::requestStopRDS; RadioSourceDevice::saveStation; RadioSourceDevice::setStation; RadioSourceDevice::stopRDS](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L491-L636) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007657, ownkb:claim:moc-c007658, ownkb:claim:moc-c007659, ownkb:claim:moc-c007660, ownkb:claim:moc-c007661
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestRadioSourceDevice::cleanupTestCase; TestRadioSourceDevice::initRadioSource; TestRadioSourceDevice::initTestCase; TestRadioSourceDevice::receiveFrequency; TestRadioSourceDevice::receiveMemorizedStation; TestRadioSourceDevice::receiveRDS; TestRadioSourceDevice::receiveStopRDS; TestRadioSourceDevice::sendFrequenceDownAutomatic; TestRadioSourceDevice::sendFrequenceDownManual; TestRadioSourceDevice::sendFrequenceUpAutomatic; TestRadioSourceDevice::sendFrequenceUpManual; TestRadioSourceDevice::sendRequestFrequency; TestRadioSourceDevice::sendSaveStation; TestRadioSourceDevice::sendSetStation](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L361-L461) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0048` (claimed): Source area/activity cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007662`, `ownkb:claim:moc-c007663`, `ownkb:claim:moc-c007664`, `ownkb:claim:moc-c007665`, `ownkb:claim:moc-c007666`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - RadioSourceDevice::RadioSourceDevice; RadioSourceDevice::frequenceDown; RadioSourceDevice::frequenceUp; RadioSourceDevice::init; RadioSourceDevice::parseFrame; RadioSourceDevice::requestFrequency; RadioSourceDevice::requestStartRDS; RadioSourceDevice::requestStopRDS; RadioSourceDevice::saveStation; RadioSourceDevice::setStation; RadioSourceDevice::stopRDS; SourceDevice::SourceDevice; SourceDevice::init; SourceDevice::isActive; SourceDevice::nextTrack; SourceDevice::parseFrame; SourceDevice::parseFrameAmplifiers; SourceDevice::parseFrameOtherSources; SourceDevice::prevTrack; SourceDevice::requestActiveAreas; SourceDevice::requestTrack; SourceDevice::sendTurnOn; SourceDevice::setIsMultichannel; SourceDevice::turnOn; VirtualSourceDevice::VirtualSourceDevice; VirtualSourceDevice::createMediaInitFrame; VirtualSourceDevice::nextTrack; VirtualSourceDevice::parseFrame; VirtualSourceDevice::prevTrack; VirtualSourceDevice::turnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L308-L733) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007662, ownkb:claim:moc-c007663, ownkb:claim:moc-c007664, ownkb:claim:moc-c007665, ownkb:claim:moc-c007666
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestRadioSourceDevice::cleanupTestCase; TestRadioSourceDevice::initRadioSource; TestRadioSourceDevice::initTestCase; TestRadioSourceDevice::receiveFrequency; TestRadioSourceDevice::receiveMemorizedStation; TestRadioSourceDevice::receiveRDS; TestRadioSourceDevice::receiveStopRDS; TestRadioSourceDevice::sendFrequenceDownAutomatic; TestRadioSourceDevice::sendFrequenceDownManual; TestRadioSourceDevice::sendFrequenceUpAutomatic; TestRadioSourceDevice::sendFrequenceUpManual; TestRadioSourceDevice::sendRequestFrequency; TestRadioSourceDevice::sendSaveStation; TestRadioSourceDevice::sendSetStation; TestSourceDevice::TestSourceDevice; TestSourceDevice::cleanupTestCase; TestSourceDevice::initSource; TestSourceDevice::initTestCase; TestSourceDevice::receiveStatus1; TestSourceDevice::receiveStatus2; TestSourceDevice::receiveTrack; TestSourceDevice::sendGeneralTurnOn; TestSourceDevice::sendNextTrack; TestSourceDevice::sendPrevTrack; TestSourceDevice::sendRequestActiveAreas; TestSourceDevice::sendRequestTrack; TestSourceDevice::sendTurnOn; TestSourceDevice::testActiveAreas; TestSourceDevice::testActiveAreas2; TestSourceDevice::testMonochannelArea; TestVirtualSourceDevice::cleanupTestCase; TestVirtualSourceDevice::initTestCase; TestVirtualSourceDevice::initVirtualSource; TestVirtualSourceDevice::receiveNextTrack; TestVirtualSourceDevice::receivePrevTrack; TestVirtualSourceDevice::receiveSourceOff; TestVirtualSourceDevice::receiveSourceOn; TestVirtualSourceDevice::sendNextTrack; TestVirtualSourceDevice::sendPrevTrack; TestVirtualSourceDevice::testInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L199-L553) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0049` (claimed): Source consumer display boundary
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007667`, `ownkb:claim:moc-c007668`
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceBase::SourceBase; SourceBase::getActiveAreas; SourceBase::getCurrentTrack; SourceBase::getSourceObject; SourceBase::getType; SourceBase::initializeObject; SourceBase::isActive; SourceBase::isActiveInArea; SourceBase::nextTrack; SourceBase::previousTrack; SourceBase::setActive; SourceBase::setActiveGeneral; SourceBase::setSourceObject; SourceBase::valueReceived; SourceObject::SourceObject; SourceObject::getObjectKey; SourceObject::initializeObject; SourceObject::isActiveInArea; SourceObject::nextTrack; SourceObject::previousTrack; SourceObject::scsSourceActiveAreasChanged; SourceObject::scsSourceForGeneralAmbientChanged; SourceObject::scsSourceObjectChanged; SourceObject::setActive; SourceObject::setActiveGeneral](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L480-L914) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007667, ownkb:claim:moc-c007668
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0087` (corroborates): Retained sound helper execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007657`, `ownkb:claim:moc-c007658`, `ownkb:claim:moc-c007659`, `ownkb:claim:moc-c007660`, `ownkb:claim:moc-c007661`, `ownkb:claim:moc-c007662`, `ownkb:claim:moc-c007663`, `ownkb:claim:moc-c007664`, `ownkb:claim:moc-c007665`, `ownkb:claim:moc-c007666`
+- `ownkb:source:moc-s000206`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - AlarmSoundDiffDevice::AlarmSoundDiffDevice; AlarmSoundDiffDevice::addAmplifier; AlarmSoundDiffDevice::addSource; AlarmSoundDiffDevice::amplifierValueReceived; AlarmSoundDiffDevice::isValid; AlarmSoundDiffDevice::requestStation; AlarmSoundDiffDevice::setActiveArea; AlarmSoundDiffDevice::setReceiveFrames; AlarmSoundDiffDevice::setVolume; AlarmSoundDiffDevice::sourceValueReceived; AlarmSoundDiffDevice::startAlarm; AlarmSoundDiffDevice::stopAlarm; AlarmSoundDiffDevice::updateActiveSource; AmplifierDevice::AmplifierDevice; AmplifierDevice::checkAddressIsForMe; AmplifierDevice::createDevice; AmplifierDevice::createVirtualDevice; AmplifierDevice::getAmplifierArea; AmplifierDevice::init; AmplifierDevice::isAreaAddress; AmplifierDevice::isGeneralAddress; AmplifierDevice::parseFrame; AmplifierDevice::requestStatus; AmplifierDevice::requestVolume; AmplifierDevice::setIsMultichannel; AmplifierDevice::setVirtualAmplifierWhere; AmplifierDevice::setVolume; AmplifierDevice::turnOff; AmplifierDevice::turnOn; AmplifierDevice::volumeDown; AmplifierDevice::volumeUp; AuxDevice::AuxDevice; AuxDevice::init; AuxDevice::parseFrame; AuxDevice::requestStatus; CompositeAmplifierDevice::CompositeAmplifierDevice; CompositeAmplifierDevice::get_key; CompositeAmplifierDevice::parseFrame; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::volumeDown; CompositeAmplifierDevice::volumeUp; PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp; RadioSourceDevice::RadioSourceDevice; RadioSourceDevice::frequenceDown; RadioSourceDevice::frequenceUp; RadioSourceDevice::init; RadioSourceDevice::parseFrame; RadioSourceDevice::requestFrequency; RadioSourceDevice::requestStartRDS; RadioSourceDevice::requestStopRDS; RadioSourceDevice::saveStation; RadioSourceDevice::setStation; RadioSourceDevice::stopRDS; SourceDevice::SourceDevice; SourceDevice::init; SourceDevice::isActive; SourceDevice::nextTrack; SourceDevice::parseFrame; SourceDevice::parseFrameAmplifiers; SourceDevice::parseFrameOtherSources; SourceDevice::prevTrack; SourceDevice::requestActiveAreas; SourceDevice::requestTrack; SourceDevice::sendTurnOn; SourceDevice::setIsMultichannel; SourceDevice::turnOn; VirtualAmplifierDevice::VirtualAmplifierDevice; VirtualAmplifierDevice::init; VirtualAmplifierDevice::parseFrame; VirtualAmplifierDevice::setVolume; VirtualAmplifierDevice::turnOff; VirtualAmplifierDevice::turnOn; VirtualAmplifierDevice::updateStatus; VirtualAmplifierDevice::updateVolume; VirtualAmplifierDevice::volumeDown; VirtualAmplifierDevice::volumeUp; VirtualSourceDevice::VirtualSourceDevice; VirtualSourceDevice::createMediaInitFrame; VirtualSourceDevice::nextTrack; VirtualSourceDevice::parseFrame; VirtualSourceDevice::prevTrack; VirtualSourceDevice::turnOn; createAmplifierWhere; getAmplifierPoint](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L84-L1333) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007657, ownkb:claim:moc-c007658, ownkb:claim:moc-c007659, ownkb:claim:moc-c007660, ownkb:claim:moc-c007661, ownkb:claim:moc-c007662, ownkb:claim:moc-c007663, ownkb:claim:moc-c007664, ownkb:claim:moc-c007665, ownkb:claim:moc-c007666
+  Conditions: Qt5 Core, 22 unchanged original bodies; controlled OpenMsg fields, output, signals, scheduling and delegates.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 31 comparisons passed across the scoped review harness; no real event-loop, transport or hardware.; Qt5 Core, 22 unchanged original bodies; controlled OpenMsg fields, output, signals, scheduling and delegates.. Inputs: RDS subscription and stop receipt; Tuning/wrap/unknown cache. Record: `project/review/myopencommunity-sound-history-review.md` (31 comparisons).
+
+#### Local volume and display scales
+
+Section ID: `ownkb:section:d000053:s000017`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+The historical touchscreen implementation distinguishes local audio settings `L = 0..8` from amplifier volume `V = 0..31`:
+
+| Conversion | Implementation behavior |
+| --- | --- |
+| Local setting to amplifier volume | Round `L * 31 / 8` to the nearest integer |
+| Amplifier volume to local setting | Round `V * 8 / 31` to the nearest integer |
+| BtExperience percentage setting `P` to amplifier volume | Integer truncation of `P * 31 / 100` |
+| Amplifier volume to BtExperience percentage setting | Integer truncation of `V * 100 / 31` |
+| TS10 volume icon | Integer truncation of `V * 8 / 31`, giving indices `0..8` |
+| TS3.5 volume icon | Indices `1..9` for bands `0..3`, `4..7`, `8..11`, `12..14`, `15..17`, `18..20`, `21..23`, `24..27`, `28..31`, respectively |
+
+For example, amplifier volume `3` becomes local setting `1` but TS10 icon `0`. The conversion loses precision; icon indices and local settings are not interchangeable with the transmitted value or a calibrated loudness percentage. These are application/build choices, not a Firmware-wide volume rule. See [Volume conversion evidence](../../project/review/myopencommunity-remaining-source-review.md#volume-conversion-evidence).
+
+The separately tested BtExperience percentage API sends volume `19` for `62%` and displays `38%` for reported volume `12`. Its integer conversions are not exact inverses. Earlier application versions used raw amplifier values; this change does not identify a Firmware generation.
+
+Evidence finding `moc-e0053` (claimed): Percentage amplifier conversion
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007684`, `ownkb:claim:moc-c007685`
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Amplifier::Amplifier; Amplifier::getArea; Amplifier::getVolume; Amplifier::isActive; Amplifier::setActive; Amplifier::setActiveOnSource; Amplifier::setVolume; Amplifier::valueReceived; Amplifier::volumeDown; Amplifier::volumeUp; PowerAmplifier::PowerAmplifier; PowerAmplifier::balanceLeft; PowerAmplifier::balanceRight; PowerAmplifier::bassDown; PowerAmplifier::bassUp; PowerAmplifier::getBalance; PowerAmplifier::getBass; PowerAmplifier::getLoud; PowerAmplifier::getPreset; PowerAmplifier::getPresetDescription; PowerAmplifier::getPresets; PowerAmplifier::getTreble; PowerAmplifier::nextPreset; PowerAmplifier::previousPreset; PowerAmplifier::setLoud; PowerAmplifier::setPreset; PowerAmplifier::trebleDown; PowerAmplifier::trebleUp; PowerAmplifier::valueReceived](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L1166-L1471) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007684, ownkb:claim:moc-c007685
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000208`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestAmplifier::cleanup; TestAmplifier::init; TestAmplifier::initObjects; TestAmplifier::testReceiveActive; TestAmplifier::testReceiveVolume; TestAmplifier::testSetActive; TestAmplifier::testSetVolume; TestPowerAmplifier::init; TestPowerAmplifier::testBalance; TestPowerAmplifier::testBass; TestPowerAmplifier::testLoud; TestPowerAmplifier::testPreset; TestPowerAmplifier::testPreset2; TestPowerAmplifier::testReceiveBalance; TestPowerAmplifier::testReceiveBass; TestPowerAmplifier::testReceiveLoud; TestPowerAmplifier::testReceivePreset; TestPowerAmplifier::testReceiveTreble; TestPowerAmplifier::testTreble; TestSoundAmbient::cleanup; TestSoundAmbient::init; TestSoundAmbient::testActiveAmplifiers; TestSoundAmbient::testActiveSource; TestSourceAux::init; TestSourceBase::cleanup; TestSourceBase::initObjects; TestSourceBase::testNextTrack; TestSourceBase::testPreviousTrack; TestSourceBase::testReceiveAreaChanged; TestSourceBase::testReceiveCurrentTrack; TestSourceBase::testSetActive; TestSourceRadio::init; TestSourceRadio::testFrequencyDown; TestSourceRadio::testFrequencyUp; TestSourceRadio::testNextStation; TestSourceRadio::testPreviousStation; TestSourceRadio::testReceiveFrequency; TestSourceRadio::testReceiveRds; TestSourceRadio::testReceiveStation; TestSourceRadio::testSearchDown; TestSourceRadio::testSearchUp; TestSourceRadio::testSetStation](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_media_objects.cpp#L28-L704) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007685
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0105` (claimed): Earlier local and graphical volume scales
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007789`, `ownkb:claim:moc-c007790`, `ownkb:claim:moc-c007791`
+- `ownkb:source:moc-s000241`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - localVolumeToAmplifier|scsToLocalVolume|scsToGraphicalVolume](https://github.com/OpenWebNet-HA/libqtdevices/blob/20b67275c780d5d0d4643ef446eabe6ad28877e5/generic_functions.cpp#L508-L550) at `20b67275c780d5d0d4643ef446eabe6ad28877e5`. Review: `project/review/myopencommunity-remaining-source-review.md`.
+  Examination claims: ownkb:claim:moc-c007789, ownkb:claim:moc-c007790, ownkb:claim:moc-c007791
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0106` (corroborates): Retained local-volume execution
+Disposition reason: Independent retained helper execution, not a physical calibration or complete archived suite.
+Individual claims: `ownkb:claim:moc-c007789`, `ownkb:claim:moc-c007790`, `ownkb:claim:moc-c007791`
+- `ownkb:source:moc-s000241`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - localVolumeToAmplifier|scsToLocalVolume|scsToGraphicalVolume](https://github.com/OpenWebNet-HA/libqtdevices/blob/20b67275c780d5d0d4643ef446eabe6ad28877e5/generic_functions.cpp#L508-L550) at `20b67275c780d5d0d4643ef446eabe6ad28877e5`. Review: `project/review/myopencommunity-remaining-source-review.md`.
+  Examination claims: ownkb:claim:moc-c007789, ownkb:claim:moc-c007790, ownkb:claim:moc-c007791
+  Conditions: Three unchanged original conversion bodies compiled with Qt5 qRound in each of two layout branches.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 86 comparisons passed per branch, 172 in total; complete application and physical calibration excluded.; Three unchanged original conversion bodies compiled with Qt5 qRound in each of two layout branches.. Inputs: All thirty-two amplifier values; Invalid -1 and 32; Nine local values and round trips. Record: `project/review/myopencommunity-remaining-source-review.md` (172 comparisons).
+
+#### Historical alarm-clock control
+
+Section ID: `ownkb:section:d000053:s000018`
+
+Cautions: `do not`
+Uncertainty: `not verified`
+Provenance cues: `evidence`, `source`
+
+The archived touchscreen alarm clocks are local controllers using ordinary source, station, volume and amplifier operations. Their scheduling is separate from the sound protocol; see [Touchscreen alarm-clock scheduling](../../scenario-engine/execution-model.md#historical-touchscreen-alarm-clock-scheduling).
+
+| Controller / operation | Implementation behavior |
+| --- | --- |
+| Earlier `libqtdevices` helper startup | Select source for area `0`, select a nonzero station if the source is a radio, then process selected amplifiers in address order. In multichannel mode, select that source once per selected area `1..8` before setting volume and issuing Follow Me |
+| Earlier helper initial volume | Use each stored amplifier value below `10`; start higher targets at `8`. Negative stored values exclude amplifiers. These are alarm settings, not revised volume domains |
+| BtExperience startup at `TS10_1_0_23` | Starting the timer sends no sound command. The first 3-second tick selects the source through the amplifier controller, writes volume `0`, then activates the amplifier; the exact single-amplifier test selects its area |
+| BtExperience volume ramp | Tick `t` proposes integer `t * 100 / 31` percent, writing only while this is at most the configured percentage. The amplifier's percentage conversion truncates again: the tested `25%` target sends levels `0..7`, then no further increase in the tested sequence |
+| BtExperience snooze / automatic expiry | Snooze sends amplifier OFF and waits 5 minutes before restarting the ramp. The final sound tick sends OFF and stops the timers; the nominal ringing interval is 2 minutes |
+| BtExperience explicit Stop | Stops ringing and snooze timers without an amplifier OFF command. The popup's Stop action calls this method; snooze and expiry have separate OFF behavior |
+
+The alarm controllers do not inspect acknowledgements or confirm physical playback. The earlier helper's stop operation turns off selected amplifiers; the compared controllers do not restore the preceding source or volume. BtExperience's “ringing” flag describes an active timer.
+
+For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. The controller disconnects it after the first result and has no player-error subscription in this path. A later failed stream or exhausted playlist therefore does not itself trigger this fallback. USB/SD completion also has a cancellation-flag lifetime defect in the reviewed client. See [Local playback](#historical-local-playback) and [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
+
+Evidence finding `moc-e0084` (claimed): Alarm sound-helper dispatch
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007777`, `ownkb:claim:moc-c007778`, `ownkb:claim:moc-c007779`, `ownkb:claim:moc-c007780`, `ownkb:claim:moc-c007781`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AlarmSoundDiffDevice::AlarmSoundDiffDevice; AlarmSoundDiffDevice::addAmplifier; AlarmSoundDiffDevice::addSource; AlarmSoundDiffDevice::amplifierValueReceived; AlarmSoundDiffDevice::isValid; AlarmSoundDiffDevice::requestStation; AlarmSoundDiffDevice::setActiveArea; AlarmSoundDiffDevice::setReceiveFrames; AlarmSoundDiffDevice::setVolume; AlarmSoundDiffDevice::sourceValueReceived; AlarmSoundDiffDevice::startAlarm; AlarmSoundDiffDevice::stopAlarm; AlarmSoundDiffDevice::updateActiveSource](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L84-L305) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007777, ownkb:claim:moc-c007778, ownkb:claim:moc-c007779, ownkb:claim:moc-c007780, ownkb:claim:moc-c007781
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAlarmSoundDiffDevice::cleanupTestCase; TestAlarmSoundDiffDevice::init; TestAlarmSoundDiffDevice::initTestCase; TestAlarmSoundDiffDevice::receiveAreaUpdate; TestAlarmSoundDiffDevice::receiveRadioStation; TestAlarmSoundDiffDevice::receiveSource; TestAlarmSoundDiffDevice::receiveStatus; TestAlarmSoundDiffDevice::receiveStatusOff; TestAlarmSoundDiffDevice::receiveVolume; TestAlarmSoundDiffDevice::sendSetVolume; TestAlarmSoundDiffDevice::setCurrentArea; TestAlarmSoundDiffDevice::testStartAlarm; TestAlarmSoundDiffDevice::testStopAlarm](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L38-L196) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0085` (claimed): Touchscreen alarm sound lifecycle
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007782`, `ownkb:claim:moc-c007783`, `ownkb:claim:moc-c007784`, `ownkb:claim:moc-c007785`, `ownkb:claim:moc-c007786`, `ownkb:claim:moc-c007787`, `ownkb:claim:moc-c007788`
+- `ownkb:source:moc-s000239`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AlarmClock::AlarmClock; AlarmClock::alarmTick; AlarmClock::apply; AlarmClock::checkRequestManagement; AlarmClock::decrementAmbient; AlarmClock::decrementVolume; AlarmClock::getAlarmType; AlarmClock::getAmbient; AlarmClock::getAmplifier; AlarmClock::getAmplifierInterface; AlarmClock::getDays; AlarmClock::getDescription; AlarmClock::getHour; AlarmClock::getMinute; AlarmClock::getSource; AlarmClock::getValidityStatus; AlarmClock::getVolume; AlarmClock::incrementAmbient; AlarmClock::incrementVolume; AlarmClock::isRinging; AlarmClock::isTriggerOnFridays; AlarmClock::isTriggerOnMondays; AlarmClock::isTriggerOnSaturdays; AlarmClock::isTriggerOnSundays; AlarmClock::isTriggerOnThursdays; AlarmClock::isTriggerOnTuesdays; AlarmClock::isTriggerOnWednesdays; AlarmClock::mediaSourcePlaybackStatus; AlarmClock::postpone; AlarmClock::qmlValueChanged; AlarmClock::reset; AlarmClock::restart; AlarmClock::setAlarmType; AlarmClock::setAmplifier; AlarmClock::setDays; AlarmClock::setDescription; AlarmClock::setEnabled; AlarmClock::setHour; AlarmClock::setMinute; AlarmClock::setSource; AlarmClock::setTriggerOnFridays; AlarmClock::setTriggerOnMondays; AlarmClock::setTriggerOnSaturdays; AlarmClock::setTriggerOnSundays; AlarmClock::setTriggerOnThursdays; AlarmClock::setTriggerOnTuesdays; AlarmClock::setTriggerOnWednesdays; AlarmClock::setTriggerOnWeekdays; AlarmClock::setVolume; AlarmClock::soundDiffusionSetVolume; AlarmClock::soundDiffusionStop; AlarmClock::start; AlarmClock::startRinging; AlarmClock::stop; AlarmClock::triggersIfHasTo; AlarmClock::updateAmbient; AlarmClock::valueReceived; parseAlarmClocks; updateAlarmClocks](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/alarmclock.cpp#L72-L803) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007782, ownkb:claim:moc-c007783, ownkb:claim:moc-c007784, ownkb:claim:moc-c007785, ownkb:claim:moc-c007786, ownkb:claim:moc-c007787, ownkb:claim:moc-c007788
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Amplifier::setVolume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L1196-L1201) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007783, ownkb:claim:moc-c007784
+  Limitations: Source inspection of the pinned dependency; no archived-suite pass or physical observation asserted.
+- `ownkb:source:moc-s000240`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestAlarmClockBeep::cleanup; TestAlarmClockBeep::init; TestAlarmClockBeep::testFirstTick; TestAlarmClockBeep::testLastTick; TestAlarmClockBeep::testPostpone; TestAlarmClockBeep::testRestart; TestAlarmClockBeep::testRestartExpired; TestAlarmClockBeep::testStart; TestAlarmClockBeep::testStop; TestAlarmClockBeep::testTick; TestAlarmClockSoundDiffusion::cleanup; TestAlarmClockSoundDiffusion::cleanupTestCase; TestAlarmClockSoundDiffusion::init; TestAlarmClockSoundDiffusion::initTestCase; TestAlarmClockSoundDiffusion::testFirstTick; TestAlarmClockSoundDiffusion::testLastTick; TestAlarmClockSoundDiffusion::testPostpone; TestAlarmClockSoundDiffusion::testRestart; TestAlarmClockSoundDiffusion::testRestartExpired; TestAlarmClockSoundDiffusion::testStart; TestAlarmClockSoundDiffusion::testStop; TestAlarmClockSoundDiffusion::testTick](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_alarm_clock.cpp#L31-L300) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007784
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0091` (corroborates): Retained alarm ramp/Stop execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007782`, `ownkb:claim:moc-c007783`, `ownkb:claim:moc-c007784`, `ownkb:claim:moc-c007785`, `ownkb:claim:moc-c007786`, `ownkb:claim:moc-c007787`, `ownkb:claim:moc-c007788`
+- `ownkb:source:moc-s000239`: helper_execution; client; direct; supports. [MyOpenCommunity/BtExperience - AlarmClock::AlarmClock; AlarmClock::alarmTick; AlarmClock::apply; AlarmClock::checkRequestManagement; AlarmClock::decrementAmbient; AlarmClock::decrementVolume; AlarmClock::getAlarmType; AlarmClock::getAmbient; AlarmClock::getAmplifier; AlarmClock::getAmplifierInterface; AlarmClock::getDays; AlarmClock::getDescription; AlarmClock::getHour; AlarmClock::getMinute; AlarmClock::getSource; AlarmClock::getValidityStatus; AlarmClock::getVolume; AlarmClock::incrementAmbient; AlarmClock::incrementVolume; AlarmClock::isRinging; AlarmClock::isTriggerOnFridays; AlarmClock::isTriggerOnMondays; AlarmClock::isTriggerOnSaturdays; AlarmClock::isTriggerOnSundays; AlarmClock::isTriggerOnThursdays; AlarmClock::isTriggerOnTuesdays; AlarmClock::isTriggerOnWednesdays; AlarmClock::mediaSourcePlaybackStatus; AlarmClock::postpone; AlarmClock::qmlValueChanged; AlarmClock::reset; AlarmClock::restart; AlarmClock::setAlarmType; AlarmClock::setAmplifier; AlarmClock::setDays; AlarmClock::setDescription; AlarmClock::setEnabled; AlarmClock::setHour; AlarmClock::setMinute; AlarmClock::setSource; AlarmClock::setTriggerOnFridays; AlarmClock::setTriggerOnMondays; AlarmClock::setTriggerOnSaturdays; AlarmClock::setTriggerOnSundays; AlarmClock::setTriggerOnThursdays; AlarmClock::setTriggerOnTuesdays; AlarmClock::setTriggerOnWednesdays; AlarmClock::setTriggerOnWeekdays; AlarmClock::setVolume; AlarmClock::soundDiffusionSetVolume; AlarmClock::soundDiffusionStop; AlarmClock::start; AlarmClock::startRinging; AlarmClock::stop; AlarmClock::triggersIfHasTo; AlarmClock::updateAmbient; AlarmClock::valueReceived; parseAlarmClocks; updateAlarmClocks](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/alarmclock.cpp#L72-L803) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007782, ownkb:claim:moc-c007783, ownkb:claim:moc-c007784, ownkb:claim:moc-c007785, ownkb:claim:moc-c007786, ownkb:claim:moc-c007787, ownkb:claim:moc-c007788
+  Conditions: Same original-body alarm harness, controlled timers/signals/delegates.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - The same 32-comparison run checks the controller; not an independent second run.; Same original-body alarm harness, controlled timers/signals/delegates.. Inputs: Double-truncated ramp; Explicit Stop without OFF; Snooze/expiry/fallback. Record: `project/review/myopencommunity-alarm-clock-history-review.md` (32 comparisons).
+
+Evidence finding `moc-e0133` (claimed): Alarm fallback subscription ends after first result
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074021`
+- `ownkb:source:moc-s000239`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AlarmClock::startRinging; AlarmClock::mediaSourcePlaybackStatus](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/alarmclock.cpp#L395-L582) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074021
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+#### Tone, balance, and presets
+
+Section ID: `ownkb:section:d000053:s000014`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`
+
+| Wire value | Touchscreen interpretation |
+| --- | --- |
+| High/low tone, dimensions `2` / `4` | integer `raw / 3 - 10`; tests include `0 -> -10`, `30 -> 0`, `60 -> 10` |
+| Balance, dimension `17` | leading `0` means left, otherwise right; remaining digits divided by 3 give magnitude |
+| Preset `2..11` | built-in application indices `0..9` |
+| Preset `16..25` | custom application indices `10..19` |
+
+Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
+
+At `TS10_1_0_23`, the power-amplifier client uses the following controls:
+
+| Operation | Client behavior |
+| --- | --- |
+| Initialization | Request state `12`, volume `1`, preset `19`, high/low tones `2` / `4`, balance `17` and loudness `20` |
+| Preset selection | Convert application indices `0..9` to wire values `2..11`, and `10..19` to `16..25`. The setter forwards values outside those application ranges unchanged; this is not validation of additional presets |
+| Tone and balance adjustment | Send relative commands with step `1`; the Equalizer menu selects an existing preset immediately |
+| Loudness | Write dimension `20` with `1` or `0` immediately |
+| Display state | Start with local zero/false defaults; update tone, balance, preset and loudness from reports, notifying only when a cached value changes. These controls have no Save/Reset transaction or playback confirmation |
+
+Custom preset names are application Configuration. BtExperience includes only enabled custom entries, preserving their configured IDs while appending them after the ten built-ins. Selection uses the entry ID, but the current description uses the reported application index as a list row. Those numbers can differ: the entry configured as the first custom preset has ID `11`, which the setter sends as wire preset `17`, while a report for wire preset `16` selects description row `10`. Sparse lists can display the wrong name or no name. Use the wire mapping above rather than menu IDs or labels to identify a preset.
+
+The reviewed power-amplifier client does not decode medium tones `3`, 3D `18` or equalizer-band selectors `21#1`, `21#2` or `21#3`, and its Equalizer menu supplies no band editor or custom-curve programming operation. This establishes the client's coverage, not the amplifier's capabilities. Earlier client revisions used different preset conversions and loudness-write syntax; they do not establish Firmware generations. See [Equalizer and preset evidence](../../project/review/myopencommunity-equalizer-history-review.md).
+
+Relative balance direction remains unresolved between sources: exact client tests emit `42#1` from the method labelled left and `43#1` from right, reversing the published `WHAT` labels above. The method names and their historical correction do not independently establish physical direction.
+
+Evidence finding `moc-e0050` (claimed): Tone balance and preset implementation
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007669`, `ownkb:claim:moc-c007670`, `ownkb:claim:moc-c007671`, `ownkb:claim:moc-c007672`, `ownkb:claim:moc-c007673`, `ownkb:claim:moc-c007674`, `ownkb:claim:moc-c007675`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L1134-L1296) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007669, ownkb:claim:moc-c007670, ownkb:claim:moc-c007671, ownkb:claim:moc-c007672, ownkb:claim:moc-c007673, ownkb:claim:moc-c007674, ownkb:claim:moc-c007675
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestPowerAmplifierDevice::cleanupTestCase; TestPowerAmplifierDevice::initPowerAmplifier; TestPowerAmplifierDevice::initTestCase; TestPowerAmplifierDevice::receiveBalance; TestPowerAmplifierDevice::receiveBass; TestPowerAmplifierDevice::receiveLoud; TestPowerAmplifierDevice::receivePreset; TestPowerAmplifierDevice::receiveTreble; TestPowerAmplifierDevice::sendBalanceDown; TestPowerAmplifierDevice::sendBalanceUp; TestPowerAmplifierDevice::sendBassDown; TestPowerAmplifierDevice::sendBassUp; TestPowerAmplifierDevice::sendLoudOff; TestPowerAmplifierDevice::sendLoudOn; TestPowerAmplifierDevice::sendNextPreset; TestPowerAmplifierDevice::sendPrevPreset; TestPowerAmplifierDevice::sendSetPreset; TestPowerAmplifierDevice::sendTrebleDown; TestPowerAmplifierDevice::sendTrebleUp](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L806-L976) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007669, ownkb:claim:moc-c007670, ownkb:claim:moc-c007671, ownkb:claim:moc-c007672
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0051` (claimed): Preset Configuration/model composition
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007676`, `ownkb:claim:moc-c007677`, `ownkb:claim:moc-c007678`, `ownkb:claim:moc-c007679`, `ownkb:claim:moc-c007680`
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PowerAmplifier::PowerAmplifier; PowerAmplifier::balanceLeft; PowerAmplifier::balanceRight; PowerAmplifier::bassDown; PowerAmplifier::bassUp; PowerAmplifier::getBalance; PowerAmplifier::getBass; PowerAmplifier::getLoud; PowerAmplifier::getPreset; PowerAmplifier::getPresetDescription; PowerAmplifier::getPresets; PowerAmplifier::getTreble; PowerAmplifier::nextPreset; PowerAmplifier::previousPreset; PowerAmplifier::setLoud; PowerAmplifier::setPreset; PowerAmplifier::trebleDown; PowerAmplifier::trebleUp; PowerAmplifier::valueReceived; PowerAmplifierPreset::PowerAmplifierPreset; PowerAmplifierPreset::getName; parsePowerAmplifier](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L226-L1471) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007676, ownkb:claim:moc-c007677, ownkb:claim:moc-c007678, ownkb:claim:moc-c007679, ownkb:claim:moc-c007680
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - PowerAmplifierDevice::setPreset](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L1278-L1286) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007678, ownkb:claim:moc-c007679
+  Limitations: Source inspection of the pinned dependency; no archived-suite pass or physical observation asserted.
+- `ownkb:source:moc-s000208`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestAmplifier::cleanup; TestAmplifier::init; TestAmplifier::initObjects; TestAmplifier::testReceiveActive; TestAmplifier::testReceiveVolume; TestAmplifier::testSetActive; TestAmplifier::testSetVolume; TestPowerAmplifier::init; TestPowerAmplifier::testBalance; TestPowerAmplifier::testBass; TestPowerAmplifier::testLoud; TestPowerAmplifier::testPreset; TestPowerAmplifier::testPreset2; TestPowerAmplifier::testReceiveBalance; TestPowerAmplifier::testReceiveBass; TestPowerAmplifier::testReceiveLoud; TestPowerAmplifier::testReceivePreset; TestPowerAmplifier::testReceiveTreble; TestPowerAmplifier::testTreble; TestSoundAmbient::cleanup; TestSoundAmbient::init; TestSoundAmbient::testActiveAmplifiers; TestSoundAmbient::testActiveSource; TestSourceAux::init; TestSourceBase::cleanup; TestSourceBase::initObjects; TestSourceBase::testNextTrack; TestSourceBase::testPreviousTrack; TestSourceBase::testReceiveAreaChanged; TestSourceBase::testReceiveCurrentTrack; TestSourceBase::testSetActive; TestSourceRadio::init; TestSourceRadio::testFrequencyDown; TestSourceRadio::testFrequencyUp; TestSourceRadio::testNextStation; TestSourceRadio::testPreviousStation; TestSourceRadio::testReceiveFrequency; TestSourceRadio::testReceiveRds; TestSourceRadio::testReceiveStation; TestSourceRadio::testSearchDown; TestSourceRadio::testSearchUp; TestSourceRadio::testSetStation](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_media_objects.cpp#L28-L704) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0088` (corroborates): Retained equalizer library execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007669`, `ownkb:claim:moc-c007670`, `ownkb:claim:moc-c007671`, `ownkb:claim:moc-c007672`, `ownkb:claim:moc-c007673`, `ownkb:claim:moc-c007674`, `ownkb:claim:moc-c007675`
+- `ownkb:source:moc-s000206`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L1134-L1296) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007669, ownkb:claim:moc-c007670, ownkb:claim:moc-c007671, ownkb:claim:moc-c007672, ownkb:claim:moc-c007673, ownkb:claim:moc-c007674, ownkb:claim:moc-c007675
+  Conditions: Qt5 Core/XML, 39 original methods and inline XML helper; actual DOM parsing with controlled fields, base cache, signals, ownership and translation.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 89 comparisons passed across the review harness; QML, external parsing and physical playback excluded.; Qt5 Core/XML, 39 original methods and inline XML helper; actual DOM parsing with controlled fields, base cache, signals, ownership and translation.. Inputs: Tone/balance/loudness conversion; Twenty preset mappings and gaps; Unvalidated setter forwarding. Record: `project/review/myopencommunity-equalizer-history-review.md` (89 comparisons).
+
+Evidence finding `moc-e0089` (corroborates): Retained equalizer consumer execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007676`, `ownkb:claim:moc-c007677`, `ownkb:claim:moc-c007678`, `ownkb:claim:moc-c007679`, `ownkb:claim:moc-c007680`
+- `ownkb:source:moc-s000207`: helper_execution; client; direct; supports. [MyOpenCommunity/BtExperience - PowerAmplifier::PowerAmplifier; PowerAmplifier::balanceLeft; PowerAmplifier::balanceRight; PowerAmplifier::bassDown; PowerAmplifier::bassUp; PowerAmplifier::getBalance; PowerAmplifier::getBass; PowerAmplifier::getLoud; PowerAmplifier::getPreset; PowerAmplifier::getPresetDescription; PowerAmplifier::getPresets; PowerAmplifier::getTreble; PowerAmplifier::nextPreset; PowerAmplifier::previousPreset; PowerAmplifier::setLoud; PowerAmplifier::setPreset; PowerAmplifier::trebleDown; PowerAmplifier::trebleUp; PowerAmplifier::valueReceived; PowerAmplifierPreset::PowerAmplifierPreset; PowerAmplifierPreset::getName; parsePowerAmplifier](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L226-L1471) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007676, ownkb:claim:moc-c007677, ownkb:claim:moc-c007678, ownkb:claim:moc-c007679, ownkb:claim:moc-c007680
+  Conditions: Same recorded Qt5 equalizer harness; actual DOM parsing and original factory/list helpers, controlled ownership and translation.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - The same 89-comparison run verifies composition; this is not an independent second run.; Same recorded Qt5 equalizer harness; actual DOM parsing and original factory/list helpers, controlled ownership and translation.. Inputs: Enabled tags; Parent/instance fallback; Sparse ID/row composition. Record: `project/review/myopencommunity-equalizer-history-review.md` (89 comparisons).
+
+Evidence finding `moc-e0098` (deferred): Physical balance direction and custom curves
+Disposition reason: Left/right labels conflict with the PDF. Custom labels and missing decoder branches do not establish curves or physical capability; captures and product evidence remain necessary.
+- `ownkb:source:moc-s000206`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - AlarmSoundDiffDevice::AlarmSoundDiffDevice; AlarmSoundDiffDevice::addAmplifier; AlarmSoundDiffDevice::addSource; AlarmSoundDiffDevice::amplifierValueReceived; AlarmSoundDiffDevice::isValid; AlarmSoundDiffDevice::requestStation; AlarmSoundDiffDevice::setActiveArea; AlarmSoundDiffDevice::setReceiveFrames; AlarmSoundDiffDevice::setVolume; AlarmSoundDiffDevice::sourceValueReceived; AlarmSoundDiffDevice::startAlarm; AlarmSoundDiffDevice::stopAlarm; AlarmSoundDiffDevice::updateActiveSource; AmplifierDevice::AmplifierDevice; AmplifierDevice::checkAddressIsForMe; AmplifierDevice::createDevice; AmplifierDevice::createVirtualDevice; AmplifierDevice::getAmplifierArea; AmplifierDevice::init; AmplifierDevice::isAreaAddress; AmplifierDevice::isGeneralAddress; AmplifierDevice::parseFrame; AmplifierDevice::requestStatus; AmplifierDevice::requestVolume; AmplifierDevice::setIsMultichannel; AmplifierDevice::setVirtualAmplifierWhere; AmplifierDevice::setVolume; AmplifierDevice::turnOff; AmplifierDevice::turnOn; AmplifierDevice::volumeDown; AmplifierDevice::volumeUp; AuxDevice::AuxDevice; AuxDevice::init; AuxDevice::parseFrame; AuxDevice::requestStatus; CompositeAmplifierDevice::CompositeAmplifierDevice; CompositeAmplifierDevice::get_key; CompositeAmplifierDevice::parseFrame; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::volumeDown; CompositeAmplifierDevice::volumeUp; PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp; RadioSourceDevice::RadioSourceDevice; RadioSourceDevice::frequenceDown; RadioSourceDevice::frequenceUp; RadioSourceDevice::init; RadioSourceDevice::parseFrame; RadioSourceDevice::requestFrequency; RadioSourceDevice::requestStartRDS; RadioSourceDevice::requestStopRDS; RadioSourceDevice::saveStation; RadioSourceDevice::setStation; RadioSourceDevice::stopRDS; SourceDevice::SourceDevice; SourceDevice::init; SourceDevice::isActive; SourceDevice::nextTrack; SourceDevice::parseFrame; SourceDevice::parseFrameAmplifiers; SourceDevice::parseFrameOtherSources; SourceDevice::prevTrack; SourceDevice::requestActiveAreas; SourceDevice::requestTrack; SourceDevice::sendTurnOn; SourceDevice::setIsMultichannel; SourceDevice::turnOn; VirtualAmplifierDevice::VirtualAmplifierDevice; VirtualAmplifierDevice::init; VirtualAmplifierDevice::parseFrame; VirtualAmplifierDevice::setVolume; VirtualAmplifierDevice::turnOff; VirtualAmplifierDevice::turnOn; VirtualAmplifierDevice::updateStatus; VirtualAmplifierDevice::updateVolume; VirtualAmplifierDevice::volumeDown; VirtualAmplifierDevice::volumeUp; VirtualSourceDevice::VirtualSourceDevice; VirtualSourceDevice::createMediaInitFrame; VirtualSourceDevice::nextTrack; VirtualSourceDevice::parseFrame; VirtualSourceDevice::prevTrack; VirtualSourceDevice::turnOn; createAmplifierWhere; getAmplifierPoint](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L84-L1333) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000207`: source_inspection; client; interpretation; qualifies. [MyOpenCommunity/BtExperience - Amplifier::Amplifier; Amplifier::getArea; Amplifier::getVolume; Amplifier::isActive; Amplifier::setActive; Amplifier::setActiveOnSource; Amplifier::setVolume; Amplifier::valueReceived; Amplifier::volumeDown; Amplifier::volumeUp; AmplifierGroup::AmplifierGroup; AmplifierGroup::setActive; AmplifierGroup::setActiveOnSource; AmplifierGroup::setVolume; AmplifierGroup::volumeDown; AmplifierGroup::volumeUp; MediaDevice::MediaDevice; MediaDevice::getMountPoint; MediaDevice::getRootPath; PowerAmplifier::PowerAmplifier; PowerAmplifier::balanceLeft; PowerAmplifier::balanceRight; PowerAmplifier::bassDown; PowerAmplifier::bassUp; PowerAmplifier::getBalance; PowerAmplifier::getBass; PowerAmplifier::getLoud; PowerAmplifier::getPreset; PowerAmplifier::getPresetDescription; PowerAmplifier::getPresets; PowerAmplifier::getTreble; PowerAmplifier::nextPreset; PowerAmplifier::previousPreset; PowerAmplifier::setLoud; PowerAmplifier::setPreset; PowerAmplifier::trebleDown; PowerAmplifier::trebleUp; PowerAmplifier::valueReceived; PowerAmplifierPreset::PowerAmplifierPreset; PowerAmplifierPreset::getName; SoundAmbient::SoundAmbient; SoundAmbient::connectAmplifiers; SoundAmbient::connectSources; SoundAmbient::getHasActiveAmplifier; SoundAmbient::getPreviousSource; SoundAmbient::initializeObject; SoundAmbient::updateActiveAmplifier; SoundAmbient::updateActiveSource; SoundAmbientBase::SoundAmbientBase; SoundAmbientBase::getArea; SoundAmbientBase::getCurrentSource; SoundAmbientBase::getUii; SoundAmbientBase::setCurrentSource; SoundGeneralAmbient::SoundGeneralAmbient; SoundGeneralAmbient::connectSources; SoundGeneralAmbient::setSource; SourceAux::SourceAux; SourceBase::SourceBase; SourceBase::getActiveAreas; SourceBase::getCurrentTrack; SourceBase::getSourceObject; SourceBase::getType; SourceBase::initializeObject; SourceBase::isActive; SourceBase::isActiveInArea; SourceBase::nextTrack; SourceBase::previousTrack; SourceBase::setActive; SourceBase::setActiveGeneral; SourceBase::setSourceObject; SourceBase::valueReceived; SourceIpRadio::SourceIpRadio; SourceIpRadio::playFirstMediaContent; SourceIpRadio::startPlay; SourceLocalMedia::SourceLocalMedia; SourceLocalMedia::getMountPoint; SourceLocalMedia::getRootPath; SourceLocalMedia::pathScanComplete; SourceLocalMedia::playFirstMediaContent; SourceLocalMedia::scanPath; SourceLocalMedia::startPlay; SourceMedia::SourceMedia; SourceMedia::getAudioVideoPlayer; SourceMedia::getMediaPlayer; SourceMedia::nextTrack; SourceMedia::playFirstMediaContent; SourceMedia::previousTrack; SourceMedia::restart; SourceMedia::togglePause; SourceMultiMedia::SourceMultiMedia; SourceMultiMedia::addMediaSource; SourceMultiMedia::firstMediaContentStatus; SourceMultiMedia::getAudioVideoPlayer; SourceMultiMedia::nextSource; SourceMultiMedia::startLocalPlayback; SourceMultiMedia::valueReceived; SourceObject::SourceObject; SourceObject::getObjectKey; SourceObject::initializeObject; SourceObject::isActiveInArea; SourceObject::nextTrack; SourceObject::previousTrack; SourceObject::scsSourceActiveAreasChanged; SourceObject::scsSourceForGeneralAmbientChanged; SourceObject::scsSourceObjectChanged; SourceObject::setActive; SourceObject::setActiveGeneral; SourceRadio::SourceRadio; SourceRadio::frequencyDown; SourceRadio::frequencyUp; SourceRadio::getCurrentFrequency; SourceRadio::getRdsText; SourceRadio::getSavedStationsCount; SourceRadio::nextStation; SourceRadio::previousStation; SourceRadio::requestFrequency; SourceRadio::saveStation; SourceRadio::searchDown; SourceRadio::searchUp; SourceRadio::setCurrentStation; SourceRadio::startRdsUpdates; SourceRadio::stopRdsUpdates; SourceRadio::valueReceived; SourceUpnpMedia::SourceUpnpMedia; SourceUpnpMedia::startUpnpPlay; createLocalSources; makeAbsolute; makeModelPath; parseAmplifier; parseAmplifierGroup; parseAuxSource; parseGeneralAmplifier; parseMultimediaSource; parsePowerAmplifier; parseRadioSource](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L62-L1471) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-equalizer-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+#### Virtual-amplifier temporary-off events
+
+Section ID: `ownkb:section:d000053:s000016`
+
+The historical virtual amplifier treats `*22*0#4#AREA*6##` and `*22*22#4#AREA*5#3#AREA#POINT##` as temporary-off events. Its tests show that the second form is matched by area rather than the final point: multichannel mode ignores another area's event, while monochannel mode accepts it. The class describes a one-second local interruption without changing its persistent ON/OFF state. This is touchscreen amplifier behavior, not a universal mute duration or a complete domain for `WHAT 22`.
+
+Evidence finding `moc-e0110` (claimed): Temporary sound OFF client behavior
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007799`, `ownkb:claim:moc-c007800`, `ownkb:claim:moc-c007801`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AmplifierDevice::AmplifierDevice; AmplifierDevice::checkAddressIsForMe; AmplifierDevice::createDevice; AmplifierDevice::createVirtualDevice; AmplifierDevice::getAmplifierArea; AmplifierDevice::init; AmplifierDevice::isAreaAddress; AmplifierDevice::isGeneralAddress; AmplifierDevice::parseFrame; AmplifierDevice::requestStatus; AmplifierDevice::requestVolume; AmplifierDevice::setIsMultichannel; AmplifierDevice::setVirtualAmplifierWhere; AmplifierDevice::setVolume; AmplifierDevice::turnOff; AmplifierDevice::turnOn; AmplifierDevice::volumeDown; AmplifierDevice::volumeUp; CompositeAmplifierDevice::CompositeAmplifierDevice; CompositeAmplifierDevice::get_key; CompositeAmplifierDevice::parseFrame; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::volumeDown; CompositeAmplifierDevice::volumeUp; PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp; VirtualAmplifierDevice::VirtualAmplifierDevice; VirtualAmplifierDevice::init; VirtualAmplifierDevice::parseFrame; VirtualAmplifierDevice::setVolume; VirtualAmplifierDevice::turnOff; VirtualAmplifierDevice::turnOn; VirtualAmplifierDevice::updateStatus; VirtualAmplifierDevice::updateVolume; VirtualAmplifierDevice::volumeDown; VirtualAmplifierDevice::volumeUp](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L737-L1296) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007799, ownkb:claim:moc-c007800, ownkb:claim:moc-c007801
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAmplifierDevice::TestAmplifierDevice; TestAmplifierDevice::cleanupTestCase; TestAmplifierDevice::initAmplifier; TestAmplifierDevice::initTestCase; TestAmplifierDevice::receiveStatus; TestAmplifierDevice::receiveVolume; TestAmplifierDevice::sendRequestStatus; TestAmplifierDevice::sendSetVolume; TestAmplifierDevice::sendTurnOff; TestAmplifierDevice::sendTurnOn; TestAmplifierDevice::sendVolumeDown; TestAmplifierDevice::sendVolumeUp; TestAmplifierDevice::testCrash; TestPowerAmplifierDevice::cleanupTestCase; TestPowerAmplifierDevice::initPowerAmplifier; TestPowerAmplifierDevice::initTestCase; TestPowerAmplifierDevice::receiveBalance; TestPowerAmplifierDevice::receiveBass; TestPowerAmplifierDevice::receiveLoud; TestPowerAmplifierDevice::receivePreset; TestPowerAmplifierDevice::receiveTreble; TestPowerAmplifierDevice::sendBalanceDown; TestPowerAmplifierDevice::sendBalanceUp; TestPowerAmplifierDevice::sendBassDown; TestPowerAmplifierDevice::sendBassUp; TestPowerAmplifierDevice::sendLoudOff; TestPowerAmplifierDevice::sendLoudOn; TestPowerAmplifierDevice::sendNextPreset; TestPowerAmplifierDevice::sendPrevPreset; TestPowerAmplifierDevice::sendSetPreset; TestPowerAmplifierDevice::sendTrebleDown; TestPowerAmplifierDevice::sendTrebleUp; TestVirtualAmplifierDevice::cleanupTestCase; TestVirtualAmplifierDevice::initTestCase; TestVirtualAmplifierDevice::initVirtualAmplifier; TestVirtualAmplifierDevice::receiveAmplifierOff; TestVirtualAmplifierDevice::receiveAmplifierOn; TestVirtualAmplifierDevice::receiveSetVolume; TestVirtualAmplifierDevice::receiveTemporaryOff; TestVirtualAmplifierDevice::receiveVolumeDown; TestVirtualAmplifierDevice::receiveVolumeUp; TestVirtualAmplifierDevice::sendSetVolume; TestVirtualAmplifierDevice::sendTurnOff; TestVirtualAmplifierDevice::sendTurnOn; TestVirtualAmplifierDevice::sendUpdateStatus; TestVirtualAmplifierDevice::sendUpdateVolume; TestVirtualAmplifierDevice::sendVolumeDown; TestVirtualAmplifierDevice::sendVolumeUp](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L556-L976) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-sound-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+#### Local multimedia initialization
+
+Section ID: `ownkb:section:d000053:s000015`
+
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+The virtual-source writer emits a private setup form at `WHERE = 7`, `DIMENSION = #15`:
+
+`*#22*7*#15*SOURCE*AREA*POINT*9*9**MATRIX_INPUT*IS_SOURCE*IS_GATEWAY*IS_AMPLIFIER*READS_SCS##`
+
+Empty source configuration becomes `0`; absent amplifier area/point remain empty. `MATRIX_INPUT` is the source address only in multichannel source mode. Flags reflect the writer's local configuration, with `IS_GATEWAY = 1` and `READS_SCS` set when a source or amplifier is configured. The two `9` fields and the empty field after them remain semantically unresolved.
+
+Exact tested examples are `*#22*7*#15*3***9*9**3*1*1*0*1##` for multichannel source 3 and `*#22*7*#15*0*2*8*9*9***0*1*1*1##` for amplifier 28. This establishes product initialization traffic, not a general readable multimedia property. Earlier source emitted a different payload layout.
+
+The virtual source's next/previous methods deliver local playback requests instead of sending bus frames. Its receiver accepts `WHAT 9` / `10` addressed to that source; the area-addressed delegate additionally accepts `WHAT 9` where the source is active. These method names do not redefine the published station/track command families. Source activation requests (`WHAT 1`) remain distinct from source-activity notifications (`WHAT 2`). BtExperience pauses local playback when no area remains active. This local player integration does not establish numeric [`WHO 26` UPnP Multimedia](../who-26-upnp-multimedia/) syntax.
+
+See [Sound Diffusion evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
+Evidence finding `moc-e0052` (claimed): Private multimedia initialization
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007681`, `ownkb:claim:moc-c007682`, `ownkb:claim:moc-c007683`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - VirtualSourceDevice::createMediaInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L715-L733) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007681, ownkb:claim:moc-c007682, ownkb:claim:moc-c007683
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAlarmSoundDiffDevice::cleanupTestCase; TestAlarmSoundDiffDevice::init; TestAlarmSoundDiffDevice::initTestCase; TestAlarmSoundDiffDevice::receiveAreaUpdate; TestAlarmSoundDiffDevice::receiveRadioStation; TestAlarmSoundDiffDevice::receiveSource; TestAlarmSoundDiffDevice::receiveStatus; TestAlarmSoundDiffDevice::receiveStatusOff; TestAlarmSoundDiffDevice::receiveVolume; TestAlarmSoundDiffDevice::sendSetVolume; TestAlarmSoundDiffDevice::setCurrentArea; TestAlarmSoundDiffDevice::testStartAlarm; TestAlarmSoundDiffDevice::testStopAlarm; TestAmplifierDevice::TestAmplifierDevice; TestAmplifierDevice::cleanupTestCase; TestAmplifierDevice::initAmplifier; TestAmplifierDevice::initTestCase; TestAmplifierDevice::receiveStatus; TestAmplifierDevice::receiveVolume; TestAmplifierDevice::sendRequestStatus; TestAmplifierDevice::sendSetVolume; TestAmplifierDevice::sendTurnOff; TestAmplifierDevice::sendTurnOn; TestAmplifierDevice::sendVolumeDown; TestAmplifierDevice::sendVolumeUp; TestAmplifierDevice::testCrash; TestAuxDevice::cleanupTestCase; TestAuxDevice::initTestCase; TestAuxDevice::receiveStatus; TestAuxDevice::sendRequestStatus; TestPowerAmplifierDevice::cleanupTestCase; TestPowerAmplifierDevice::initPowerAmplifier; TestPowerAmplifierDevice::initTestCase; TestPowerAmplifierDevice::receiveBalance; TestPowerAmplifierDevice::receiveBass; TestPowerAmplifierDevice::receiveLoud; TestPowerAmplifierDevice::receivePreset; TestPowerAmplifierDevice::receiveTreble; TestPowerAmplifierDevice::sendBalanceDown; TestPowerAmplifierDevice::sendBalanceUp; TestPowerAmplifierDevice::sendBassDown; TestPowerAmplifierDevice::sendBassUp; TestPowerAmplifierDevice::sendLoudOff; TestPowerAmplifierDevice::sendLoudOn; TestPowerAmplifierDevice::sendNextPreset; TestPowerAmplifierDevice::sendPrevPreset; TestPowerAmplifierDevice::sendSetPreset; TestPowerAmplifierDevice::sendTrebleDown; TestPowerAmplifierDevice::sendTrebleUp; TestRadioSourceDevice::cleanupTestCase; TestRadioSourceDevice::initRadioSource; TestRadioSourceDevice::initTestCase; TestRadioSourceDevice::receiveFrequency; TestRadioSourceDevice::receiveMemorizedStation; TestRadioSourceDevice::receiveRDS; TestRadioSourceDevice::receiveStopRDS; TestRadioSourceDevice::sendFrequenceDownAutomatic; TestRadioSourceDevice::sendFrequenceDownManual; TestRadioSourceDevice::sendFrequenceUpAutomatic; TestRadioSourceDevice::sendFrequenceUpManual; TestRadioSourceDevice::sendRequestFrequency; TestRadioSourceDevice::sendSaveStation; TestRadioSourceDevice::sendSetStation; TestSourceDevice::TestSourceDevice; TestSourceDevice::cleanupTestCase; TestSourceDevice::initSource; TestSourceDevice::initTestCase; TestSourceDevice::receiveStatus1; TestSourceDevice::receiveStatus2; TestSourceDevice::receiveTrack; TestSourceDevice::sendGeneralTurnOn; TestSourceDevice::sendNextTrack; TestSourceDevice::sendPrevTrack; TestSourceDevice::sendRequestActiveAreas; TestSourceDevice::sendRequestTrack; TestSourceDevice::sendTurnOn; TestSourceDevice::testActiveAreas; TestSourceDevice::testActiveAreas2; TestSourceDevice::testMonochannelArea; TestVirtualAmplifierDevice::cleanupTestCase; TestVirtualAmplifierDevice::initTestCase; TestVirtualAmplifierDevice::initVirtualAmplifier; TestVirtualAmplifierDevice::receiveAmplifierOff; TestVirtualAmplifierDevice::receiveAmplifierOn; TestVirtualAmplifierDevice::receiveSetVolume; TestVirtualAmplifierDevice::receiveTemporaryOff; TestVirtualAmplifierDevice::receiveVolumeDown; TestVirtualAmplifierDevice::receiveVolumeUp; TestVirtualAmplifierDevice::sendSetVolume; TestVirtualAmplifierDevice::sendTurnOff; TestVirtualAmplifierDevice::sendTurnOn; TestVirtualAmplifierDevice::sendUpdateStatus; TestVirtualAmplifierDevice::sendUpdateVolume; TestVirtualAmplifierDevice::sendVolumeDown; TestVirtualAmplifierDevice::sendVolumeUp; TestVirtualSourceDevice::cleanupTestCase; TestVirtualSourceDevice::initTestCase; TestVirtualSourceDevice::initVirtualSource; TestVirtualSourceDevice::receiveNextTrack; TestVirtualSourceDevice::receivePrevTrack; TestVirtualSourceDevice::receiveSourceOff; TestVirtualSourceDevice::receiveSourceOn; TestVirtualSourceDevice::sendNextTrack; TestVirtualSourceDevice::sendPrevTrack; TestVirtualSourceDevice::testInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L38-L1001) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0103` (deferred): Private initialization unknown fields
+Disposition reason: The two 9/empty positions are emitted but their protocol meaning and external gateway applicability remain unresolved.
+- `ownkb:source:moc-s000206`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - AlarmSoundDiffDevice::AlarmSoundDiffDevice; AlarmSoundDiffDevice::addAmplifier; AlarmSoundDiffDevice::addSource; AlarmSoundDiffDevice::amplifierValueReceived; AlarmSoundDiffDevice::isValid; AlarmSoundDiffDevice::requestStation; AlarmSoundDiffDevice::setActiveArea; AlarmSoundDiffDevice::setReceiveFrames; AlarmSoundDiffDevice::setVolume; AlarmSoundDiffDevice::sourceValueReceived; AlarmSoundDiffDevice::startAlarm; AlarmSoundDiffDevice::stopAlarm; AlarmSoundDiffDevice::updateActiveSource; AmplifierDevice::AmplifierDevice; AmplifierDevice::checkAddressIsForMe; AmplifierDevice::createDevice; AmplifierDevice::createVirtualDevice; AmplifierDevice::getAmplifierArea; AmplifierDevice::init; AmplifierDevice::isAreaAddress; AmplifierDevice::isGeneralAddress; AmplifierDevice::parseFrame; AmplifierDevice::requestStatus; AmplifierDevice::requestVolume; AmplifierDevice::setIsMultichannel; AmplifierDevice::setVirtualAmplifierWhere; AmplifierDevice::setVolume; AmplifierDevice::turnOff; AmplifierDevice::turnOn; AmplifierDevice::volumeDown; AmplifierDevice::volumeUp; AuxDevice::AuxDevice; AuxDevice::init; AuxDevice::parseFrame; AuxDevice::requestStatus; CompositeAmplifierDevice::CompositeAmplifierDevice; CompositeAmplifierDevice::get_key; CompositeAmplifierDevice::parseFrame; CompositeAmplifierDevice::turnOff; CompositeAmplifierDevice::turnOn; CompositeAmplifierDevice::volumeDown; CompositeAmplifierDevice::volumeUp; PowerAmplifierDevice::PowerAmplifierDevice; PowerAmplifierDevice::balanceLeft; PowerAmplifierDevice::balanceRight; PowerAmplifierDevice::bassDown; PowerAmplifierDevice::bassUp; PowerAmplifierDevice::init; PowerAmplifierDevice::loudOff; PowerAmplifierDevice::loudOn; PowerAmplifierDevice::nextPreset; PowerAmplifierDevice::parseFrame; PowerAmplifierDevice::prevPreset; PowerAmplifierDevice::requestBalance; PowerAmplifierDevice::requestBass; PowerAmplifierDevice::requestLoud; PowerAmplifierDevice::requestPreset; PowerAmplifierDevice::requestTreble; PowerAmplifierDevice::setPreset; PowerAmplifierDevice::trebleDown; PowerAmplifierDevice::trebleUp; RadioSourceDevice::RadioSourceDevice; RadioSourceDevice::frequenceDown; RadioSourceDevice::frequenceUp; RadioSourceDevice::init; RadioSourceDevice::parseFrame; RadioSourceDevice::requestFrequency; RadioSourceDevice::requestStartRDS; RadioSourceDevice::requestStopRDS; RadioSourceDevice::saveStation; RadioSourceDevice::setStation; RadioSourceDevice::stopRDS; SourceDevice::SourceDevice; SourceDevice::init; SourceDevice::isActive; SourceDevice::nextTrack; SourceDevice::parseFrame; SourceDevice::parseFrameAmplifiers; SourceDevice::parseFrameOtherSources; SourceDevice::prevTrack; SourceDevice::requestActiveAreas; SourceDevice::requestTrack; SourceDevice::sendTurnOn; SourceDevice::setIsMultichannel; SourceDevice::turnOn; VirtualAmplifierDevice::VirtualAmplifierDevice; VirtualAmplifierDevice::init; VirtualAmplifierDevice::parseFrame; VirtualAmplifierDevice::setVolume; VirtualAmplifierDevice::turnOff; VirtualAmplifierDevice::turnOn; VirtualAmplifierDevice::updateStatus; VirtualAmplifierDevice::updateVolume; VirtualAmplifierDevice::volumeDown; VirtualAmplifierDevice::volumeUp; VirtualSourceDevice::VirtualSourceDevice; VirtualSourceDevice::createMediaInitFrame; VirtualSourceDevice::nextTrack; VirtualSourceDevice::parseFrame; VirtualSourceDevice::prevTrack; VirtualSourceDevice::turnOn; createAmplifierWhere; getAmplifierPoint](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L84-L1333) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0114` (excluded): Earlier multimedia initialization layouts
+Disposition reason: Historical inspected layouts are extracted in their own revision scope; transferring their malformed separators or earlier fields into current canonical grammar is excluded.
+- `ownkb:source:moc-s000244`: test_expectation_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - test_media_device.cpp reviewed class/record definitions](https://github.com/OpenWebNet-HA/libqtdevices/blob/c4c72360b2983905a18b33ed48f6c70b31afce79/devices/test/test_media_device.cpp#L1-L590) at `c4c72360b2983905a18b33ed48f6c70b31afce79`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0122` (claimed): Earlier inspected initialization field layouts
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007827`, `ownkb:claim:moc-c007828`
+- `ownkb:source:moc-s000244`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - createMediaInitFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/c4c72360b2983905a18b33ed48f6c70b31afce79/devices/test/test_media_device.cpp#L256-L293) at `c4c72360b2983905a18b33ed48f6c70b31afce79`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007827, ownkb:claim:moc-c007828
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+#### Historical local playback
+
+Section ID: `ownkb:section:d000053:s000019`
+
+Applicability cues: `firmware`, `revision`, `scs`
+Cautions: `do not`
+Uncertainty: `may`, `not established`, `not verified`, `unresolved`
+Provenance cues: `evidence`, `source`
+
+BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9` connects local media to its virtual Sound Diffusion source. These are client policies, separate from amplifier power, bus acknowledgements and audible output.
+
+| Operation or result | Client behavior |
+| --- | --- |
+| IP-radio first-content result | Start the configured Web Radio playlist when nonempty, then report whether entries exist; no stream connection or decoding check |
+| USB/SD discovery | Search directories breadth first and stop at the first directory containing an audio-extension match; select an audio entry and build a playlist of that entry's file type |
+| Replacement discovery request | A mounted request marks the previous search's flag and starts another search. An unmounted or empty-path request reports failure before marking that flag |
+| Unavailable discovery path | The worker ignores directory-change failures; a missing root can leave it searching the process's current directory |
+| Playback start | Audio uses an MPlayer process; `Playing` follows process startup, without checking decoded or audible output |
+| Pause and resource release | Ordinary pause retains locally active audio output. Releasing output stops the process while reporting logical `Paused`; audio resume attempts a restart at the cached time |
+| Automatic next item | A transition to `Stopped` advances the playlist unless a user-change flag suppresses it or the rapid-loop guard fires |
+| Rapid-loop guard | On reaching the item before the recorded starting index, suppress further advance and emit a loop notification if elapsed time is below `2 seconds * item count`; this is a retry heuristic, not a playback-error diagnosis |
+| Local media unmount | A matching local mount notification terminates the playlist when the current path begins with that mount path; it does not cancel the separate discovery worker |
+
+The USB/SD worker uses one flag for cancellation and unsuccessful search. Completion deletes the result flag before reading it for the first-content notification and does not clear the owning member. If that member still points to the deleted flag, a later mounted search can write through freed storage. Reliable completion and repeated-search behavior are therefore not established. Source selection also handles asynchronous results using the current source index, without matching the callback sender to the requested source.
+
+Process failures have narrower handling than the playlist model suggests. While active, the audio wrapper maps normal exit `0` to done, exit `1` or a crash to stopped; other normal exit codes emit neither completion signal. Its process-error handler only logs. Playlist retry and alarm fallback cannot be assumed to cover every failure.
+
+The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. The separate local routing controller is described below. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
+
+The pause request is acknowledged by parsing the backend's pause marker. During release, the original wrapper changes its internal state before emitting the player-state notification, then emits the output-state notification. A receiver of the first notification can already read output as stopped. Releasing output from an ordinary paused state emits another public `Paused` notification. Controlled execution verifies this notification order with a synthetic slave process; [call interruption](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience) describes its conditional consequences.
+
+The same client's UPnP coordination selects one active local-media, Sound Diffusion or photo player. When another category becomes active, it terminates the other UPnP players, including paused ones, because they share browser/playlist state. Normal call restoration therefore does not guarantee restoration after another UPnP consumer takes over.
+
+Earlier clients used different loop and resource-release handling. These changes identify software revisions, not deployed Firmware boundaries. See [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md) for inspected expectations, controlled helper execution and unresolved runtime conditions.
+
+The discovery class supplies no worker cancellation or join on destruction. Its parented completion watchers do not themselves establish that worker execution has stopped. Cancellation uses a shared flag polled between directory searches; shared-flag visibility, model thread affinity and physical removal timing remain unverified. Controlled execution of the original dispatcher and worker under Qt 5 confirms that discovery can finish after its source owner is destroyed, using a gated model substitute.
+
+Local metadata extraction in libqtcommon at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2` starts a separate MPlayer process with null audio/video output. It accumulates output until `current_time` is found or a five-second elapsed guard is exceeded, then requests termination and waits up to 300 ms. Failed startup or early exit does not bypass that guard; the result may be partial or empty, without a success field. Matching uses the last occurrence of each requested property. Earlier code waited without an elapsed guard and used the first match.
+
+Replacing a metadata request schedules the previous watcher for deletion without cancelling or waiting for its worker. Completion reads the current watcher rather than the signal sender, and emits the result before deleting that current watcher. Controlled Qt delivery demonstrates replacement-result misattribution and deletion of a watcher created synchronously during notification. The latter also occurs with the original metadata worker and QtConcurrent dispatcher; deleting its owner does not cancel that worker in the controlled run. BtExperience merges returned properties into the current track information without matching a track identity. These are client/library limitations, not verified playback or Firmware behavior. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md).
+
+Evidence finding `moc-e0125` (claimed): First-content discovery and local playlist scope
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c073994`, `ownkb:claim:moc-c073995`, `ownkb:claim:moc-c073996`, `ownkb:claim:moc-c073997`
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceIpRadio::playFirstMediaContent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L627-L645) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073994
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::scanPath](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L746-L788) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073995, ownkb:claim:moc-c073997
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::generate](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L186-L227) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073996
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0126` (claimed): Logical playback state and output ownership
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c073998`, `ownkb:claim:moc-c073999`, `ownkb:claim:moc-c074000`, `ownkb:claim:moc-c074001`
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::MultiMediaPlayer; MultiMediaPlayer::mplayerStarted](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L51-L394) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073998
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::runMPlayer](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L401-L425) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073998
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::getPlayerState; MultiMediaPlayer::getAudioOutputState; MultiMediaPlayer::releaseOutputDevices; MultiMediaPlayer::mplayerStopped; MultiMediaPlayer::resume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L114-L421) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073999, ownkb:claim:moc-c074000, ownkb:claim:moc-c074001
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001139`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestMultiMediaPlayer::testPauseResume; TestMultiMediaPlayer::testPauseReleaseResume; TestMultiMediaPlayer::testReleaseResume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_multimedia_player.cpp#L225-L358) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c073999, ownkb:claim:moc-c074000
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Inspected expected results; the archived suite was not executed.
+
+Evidence finding `moc-e0127` (claimed): Playlist retries and local removal handling
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074002`, `ownkb:claim:moc-c074003`, `ownkb:claim:moc-c074004`
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioVideoPlayer::handleMediaPlayerStateChange; PlayListPlayer::checkLoop](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L148-L491) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074002, ownkb:claim:moc-c074003
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001136`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - PlayListPlayer::checkLoop; PlayListPlayer::resetLoopCheck; AudioVideoPlayer::handleMediaPlayerStateChange](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L148-L491) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074002, ownkb:claim:moc-c074003
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - 18 controlled comparisons passed; no complete archived suite or real playback executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Normal exits 0, 1 and 2; crash exit; inactive wrapper.; Stopped playlist with and without user-change suppression.; Three-item loop at 5999 and 6000 ms; one-item loop; no active list; reset.; Track-selection, invalid and server-list errors; server-down and parse error.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001139`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestPlaylistPlayer::testLoopCheck; TestPlaylistPlayer::testResetLoopCheck](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_multimedia_player.cpp#L712-L750) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074003
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Inspected expected results; the archived suite was not executed.
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::directoryUnmounted; AudioVideoPlayer::AudioVideoPlayer; AudioVideoPlayer::terminate](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L128-L417) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074004
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0128` (claimed): USB/SD completion lifetime and callback attribution
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074005`, `ownkb:claim:moc-c074006`, `ownkb:claim:moc-c074007`
+- `ownkb:source:moc-s000207`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L720) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074005
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - AddressSanitizer detected the original completion body reading a heap termination flag after deletion. Worker scheduling, repeated-search write and physical effects were not executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Empty, cancelled completion result with a heap-allocated true termination flag.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L720) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074005
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L720) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074006
+  Conditions: For the owning-member write finding, the member still points to the completing search's deleted result flag; a replacement search can instead install a different flag.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::playFirstMediaContent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L722-L744) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074006
+  Conditions: For the owning-member write finding, the member still points to the completing search's deleted result flag; a replacement search can instead install a different flag.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceMultiMedia::addMediaSource; SourceMultiMedia::firstMediaContentStatus](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L940-L1004) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074007
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0129` (claimed): Audio process completion and error coverage
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074008`, `ownkb:claim:moc-c074009`, `ownkb:claim:moc-c074010`, `ownkb:claim:moc-c074011`
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L594-L622) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074008, ownkb:claim:moc-c074009, ownkb:claim:moc-c074010
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - 18 controlled comparisons passed; no complete archived suite or real playback executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Normal exits 0, 1 and 2; crash exit; inactive wrapper.; Stopped playlist with and without user-change suppression.; Three-item loop at 5999 and 6000 ms; one-item loop; no active list; reset.; Track-selection, invalid and server-list errors; server-down and parse error.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L594-L622) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074008, ownkb:claim:moc-c074009, ownkb:claim:moc-c074010
+  Conditions: The active guard returns without notification when the wrapper is inactive. LAYOUT_TS_10 additionally updates direct-access state before exit classification.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L624-L629) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074011
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0130` (claimed): Local player properties are distinct from backend commands
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074012`, `ownkb:claim:moc-c074013`
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::setVolume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L130-L138) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074012
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::setMute](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L140-L148) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074013
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0134` (deferred): Asynchronous discovery scheduling and removal interleavings
+Disposition reason: Native QtConcurrent discovery dispatcher/worker survives owner destruction under a gated substitute model. Original unsafe completion, Qt GUI/model affinity, concurrent flag visibility and physical-removal races remain deferred.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::playFirstMediaContent; SourceLocalMedia::scanPath; SourceLocalMedia::pathScanComplete](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L680-L788) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - SourceLocalMedia::playFirstMediaContent; SourceLocalMedia::scanPath](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L722-L788) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Conditions: Original request/scan bodies use native QtConcurrent::run; a gated substitute directory model and mounted synthetic temporary *.mp3 directory are supplied.; The owner is deleted after the worker enters the model gate and before it is released; the completion slot is an empty substitute, not the original unsafe slot.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - original discovery dispatcher/worker survives owner destruction under a gated model seam; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: Original request/scan bodies use native QtConcurrent::run; a gated substitute directory model and mounted synthetic temporary *.mp3 directory are supplied.; The owner is deleted after the worker enters the model gate and before it is released; the completion slot is an empty substitute, not the original unsafe slot.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+
+Evidence finding `moc-e0135` (deferred): Complete media runtime and external backend behavior
+Disposition reason: Inspected original tests use MPlayer null audio output and depend on the archived Qt/GStreamer stack. Full suites, real stream failures, media decoders, seek fidelity and audible output were not executed; external player versions and deployed build configuration remain unestablished.
+- `ownkb:source:moc-s001139`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestMultiMediaPlayer::init; TestMultiMediaPlayer::testSeek; TestMultiMediaPlayer::testPlayMulti](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_multimedia_player.cpp#L54-L659) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Inspected original fixture and expectations; the archived test suite was not executed.; Pinned Qt/GStreamer/MPlayer test environment is not a deployed hardware observation.
+
+Evidence finding `moc-e0136` (claimed): Discovery request replacement and directory failure scope
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope are retained independently.
+Individual claims: `ownkb:claim:moc-c074022`, `ownkb:claim:moc-c074023`, `ownkb:claim:moc-c074024`
+- `ownkb:source:moc-s000207`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - SourceLocalMedia::playFirstMediaContent; SourceLocalMedia::scanPath](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L722-L788) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074022, ownkb:claim:moc-c074023
+  Conditions: Native Qt directory traversal uses a synthetic temporary directory and a controlled *.mp3 filter/model clone; missing root and pre-cancel/no-match cases are controlled inputs.; QtConcurrent::run is substituted by manually completed QFutureInterface futures; parented native QFutureWatchers are used. The archived pathScanComplete body is deliberately not executed.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - scan: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: Native Qt directory traversal uses a synthetic temporary directory and a controlled *.mp3 filter/model clone; missing root and pre-cancel/no-match cases are controlled inputs.; QtConcurrent::run is substituted by manually completed QFutureInterface futures; parented native QFutureWatchers are used. The archived pathScanComplete body is deliberately not executed.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::playFirstMediaContent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L722-L744) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074022
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::scanPath](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L746-L788) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074023
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001142`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia declaration](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.h#L404-L435) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074024
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceLocalMedia::SourceLocalMedia; SourceLocalMedia::playFirstMediaContent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L648-L744) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074024
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+
+Evidence finding `moc-e0137` (claimed): Metadata subprocess result and historical guard
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope are retained independently.
+Individual claims: `ownkb:claim:moc-c074025`, `ownkb:claim:moc-c074026`, `ownkb:claim:moc-c074027`, `ownkb:claim:moc-c074028`, `ownkb:claim:moc-c074029`, `ownkb:claim:moc-c074030`
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - startFakePlayer](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L160-L167) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074025
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - startFakePlayer; extractMPlayerInfo; parsePlayerOutput](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L107-L167) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074026, ownkb:claim:moc-c074027, ownkb:claim:moc-c074028
+  Conditions: Complete required metadata, repeated title, partial stdout followed by exit 17, and a missing executable are supplied. External elapsed measurement accepts 4900-8000 ms; the unchanged original guard remains strictly greater than 5000 ms.; Native QProcess runs a synthetic local executable producing MPlayer-shaped text; no real MPlayer or media decoder runs.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - probe: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: Complete required metadata, repeated title, partial stdout followed by exit 17, and a missing executable are supplied. External elapsed measurement accepts 4900-8000 ms; the unchanged original guard remains strictly greater than 5000 ms.; Native QProcess runs a synthetic local executable producing MPlayer-shaped text; no real MPlayer or media decoder runs.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - extractMPlayerInfo](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L124-L158) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074026, ownkb:claim:moc-c074027
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - parsePlayerOutput](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L107-L122) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074028
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001143`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - startFakePlayer](https://github.com/OpenWebNet-HA/libqtcommon/blob/430e187d510f6ad98f2f945d3bb445343f36a6ef/mediaplayer.cpp#L103-L131) at `430e187d510f6ad98f2f945d3bb445343f36a6ef`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074029
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001143`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - parsePlayerOutput](https://github.com/OpenWebNet-HA/libqtcommon/blob/430e187d510f6ad98f2f945d3bb445343f36a6ef/mediaplayer.cpp#L85-L101) at `430e187d510f6ad98f2f945d3bb445343f36a6ef`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074030
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+
+Evidence finding `moc-e0138` (claimed): Metadata watcher attribution and client consumption
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope are retained independently.
+Individual claims: `ownkb:claim:moc-c074031`, `ownkb:claim:moc-c074032`, `ownkb:claim:moc-c074033`, `ownkb:claim:moc-c074034`
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::requestInitialPlayingInfo; MediaPlayer::infoReceived](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L512-L659) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074031, ownkb:claim:moc-c074032, ownkb:claim:moc-c074033
+  Conditions: A completion event from an old watcher is deliberately delivered after the replacement future has finished, before deferred deletion. A direct notification receiver starts another request before the original slot returns.; Native QFutureWatcher and Qt posted-event delivery are used with manually completed QFutureInterface futures replacing QtConcurrent::run.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - metadata: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: A completion event from an old watcher is deliberately delivered after the replacement future has finished, before deferred deletion. A direct notification receiver starts another request before the original slot returns.; Native QFutureWatcher and Qt posted-event delivery are used with manually completed QFutureInterface futures replacing QtConcurrent::run.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::requestInitialPlayingInfo; MediaPlayer::infoReceived](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L512-L659) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074031, ownkb:claim:moc-c074033
+  Conditions: A local executable supplies synthetic MPlayer-shaped output. A direct notification receiver requests replacement; another owner is deleted before awaiting its delayed worker result. Resolution stdout is 320x240 then 321x240.; Original MediaPlayer translation unit/header use native QtConcurrent::run and QFutureWatcher; hardware functions disabled, multiple players enabled, LAYOUT_TS_10 absent.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - original MediaPlayer with native QtConcurrent: reentrant watcher removal, surviving worker, video suffix selection and video-resolution boundaries passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: A local executable supplies synthetic MPlayer-shaped output. A direct notification receiver requests replacement; another owner is deleted before awaiting its delayed worker result. Resolution stdout is 320x240 then 321x240.; Original MediaPlayer translation unit/header use native QtConcurrent::run and QFutureWatcher; hardware functions disabled, multiple players enabled, LAYOUT_TS_10 absent.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::requestInitialPlayingInfo](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L512-L524) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074031
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::infoReceived](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L649-L659) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074032, ownkb:claim:moc-c074033
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::playerInfoReceived; MultiMediaPlayer::updateTrackInfo(QVariantMap)](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L187-L374) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074034
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+
+Evidence finding `moc-e0163` (claimed): Native player notification ordering during release
+Disposition reason: Reviewed revision-scoped findings with exact original artifacts and distinct examination methods.
+Individual claims: `ownkb:claim:moc-c074108`, `ownkb:claim:moc-c074109`
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::setPlayerState; MultiMediaPlayer::getPlayerState; MultiMediaPlayer::getAudioOutputState; MultiMediaPlayer::mplayerStopped](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L114-L421) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074108, ownkb:claim:moc-c074109
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001137`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - MultiMediaPlayer::setPlayerState; MultiMediaPlayer::mplayerStopped](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L376-L421) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074108, ownkb:claim:moc-c074109
+  Conditions: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Native Qt 5 QProcess/timers/signals; hardware functions record requests, config/source and unused video dependencies are substitutes. No injected pause/release callbacks.; Synthetic slave child supplies explicit pause text and controlled termination outcomes; real MPlayer conventions and audible output are not measured.
+  Execution record: original_helper_in_adapted_harness - native pause acknowledgement, state/output ordering and exit-1 release/resume passed
+call interruption with controlled exit 1 passed
+call interruption with controlled exit crash passed
+call interruption with controlled exit 0 passed
+call interruption with controlled exit 2 passed
+native Sound Diffusion pause/resume keeps process and reported output active passed; g++ C++17; native Qt 5.15.19 Core/Concurrent; complete original producer/controller translation units and controlled local child.. Inputs: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.. Record: `project/review/myopencommunity-consumer-call-review.md` (## Controlled helper execution).
+
+Evidence finding `moc-e0165` (claimed): Shared UPnP playlist coordination can discard paused playback
+Disposition reason: Reviewed revision-scoped findings with exact original artifacts and distinct examination methods.
+Individual claims: `ownkb:claim:moc-c074111`
+- `ownkb:source:moc-s001165`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GlobalProperties::manageUpnpPlayers](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/globalproperties.cpp#L668-L700) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074111
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+
+Evidence finding `moc-e0168` (corroborates): Native original audio termination corroborates retained classifications
+Disposition reason: Original QProcess completion callbacks run against synthetic explicit exits; this corroborates prior source inspection, not physical playback.
+Individual claims: `ownkb:claim:moc-c074008`, `ownkb:claim:moc-c074009`, `ownkb:claim:moc-c074010`
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L594-L622) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074008, ownkb:claim:moc-c074009, ownkb:claim:moc-c074010
+  Conditions: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Native Qt 5 QProcess/timers/signals; hardware functions record requests, config/source and unused video dependencies are substitutes. No injected pause/release callbacks.; Synthetic slave child supplies explicit pause text and controlled termination outcomes; real MPlayer conventions and audible output are not measured.
+  Execution record: original_helper_in_adapted_harness - native pause acknowledgement, state/output ordering and exit-1 release/resume passed
+call interruption with controlled exit 1 passed
+call interruption with controlled exit crash passed
+call interruption with controlled exit 0 passed
+call interruption with controlled exit 2 passed
+native Sound Diffusion pause/resume keeps process and reported output active passed; g++ C++17; native Qt 5.15.19 Core/Concurrent; complete original producer/controller translation units and controlled local child.. Inputs: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.. Record: `project/review/myopencommunity-consumer-call-review.md` (## Controlled helper execution).
+
+#### Local video and audio routing
+
+Section ID: `ownkb:section:d000053:s000020`
+
+Applicability cues: `firmware`, `revision`, `scs`
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+At the same BtExperience revision, local video uses a separate GStreamer 0.10 executable; audio uses the shared MPlayer wrapper. These client choices do not define `WHO 7`, `16`, `22` or `26` wire semantics.
+
+| Path | Revision-scoped behavior |
+| --- | --- |
+| Video selection | Case-sensitive filename suffix matching selects `mpg`, `avi` and `mp4`; this is not content or codec detection |
+| Video launch and geometry | Launch `gstmediaplayer` beside the application with a display rectangle and track. The helper accepts absolute local paths or strings beginning with `http`; it centers video, shrinks to fit and does not enlarge it |
+| Resolution check | The separate MPlayer helper accepts parsed widths up to 320 and heights up to 240, and rejects missing resolution. The reviewed GStreamer launch does not call that check; it is not a general touchscreen/video limit |
+| Video pause/resume | Pause acknowledgement depends on parsing `state: paused`; resume reports locally when the command is sent. If the process has exited, resume launches the track again without restoring cached position |
+| Seek | The client's seek method sends to the audio player, and its position-start method excludes video. The standalone video helper accepts integer-second seek with flush/key-unit flags; this does not establish a connected video seek control or precise seeking |
+| Video completion/error | The helper's end-of-stream and decoder-error notifications both request ordinary application exit. The wrapper maps normal exit 0 to done, exit 1 or crash to stopped, and other normal codes to neither. Its process-error callback only logs |
+| Video metadata text | The helper periodically emits changed properties. The wrapper parses each read independently, without retaining an incomplete line; split property text can be truncated or lost |
+
+The paused-video exception in the client treats a zero exit while logically paused as stopped. This exception does not distinguish ordinary decoder errors from successful completion while playing. Actual GStreamer decoding, display output and seek accuracy remain unverified.
+
+The separate `AudioState` controller chooses the highest enabled state in its ordered enumeration. Its player-state callback skips `AboutToPause` before reevaluating direct audio access; output-state notifications remain a separate trigger. States above ringtone pause sound-diffusion playback, and temporarily paused sound diffusion is eligible to resume at ringtone or below. Controlled native-process execution with the original audio wrapper confirms that Sound Diffusion can remain logically paused with its process running and output reported active during a call. That role does not delay the controller through the local-media direct-access check. These are local arbitration policies, not SCS priorities.
+
+| Local control | Implementation behavior |
+| --- | --- |
+| Beep, local media and ringtone volume | Use the HP DAC control. Percentage 0 maps to 0, 1 to 20, and 2..100 maps by integer arithmetic to 21..118 |
+| SCS video/intercom-call volume | Use a separate ZL control, scaling percentage by `88 / 100` into a padded hexadecimal command argument. Call mute uses a separate operation |
+| Local playback mute | Entering the mute state sets the local playback hardware volume to zero. The multimedia property setter itself only caches and notifies |
+| Local sound-diffusion source activation | The registered source's active-state notification invokes local routing on/off scripts. The reviewed playback-state callback only updates its cached sound-diffusion flag |
+
+Build selection and consumers matter: the pinned plugin supplies an ALSA `plughw=0.0` argument outside its X11 branch, while X11 leaves output selection to MPlayer. Older library branches contain OSS and different ALSA choices, and older audio-state implementations use different scaling and routing triggers. These settings are not amplifier volume scales or deployed Firmware boundaries. See [Video and native-runtime evidence](../../project/review/myopencommunity-video-runtime-review.md) for exact build/source scope, historical comparisons and execution conditions.
+
+Evidence finding `moc-e0144` (claimed): Video backend selection, geometry and resolution boundaries
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c074051`, `ownkb:claim:moc-c074052`, `ownkb:claim:moc-c074053`, `ownkb:claim:moc-c074054`, `ownkb:claim:moc-c074055`
+- `ownkb:source:moc-s001137`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - isVideoFile](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L37-L42) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074051
+  Conditions: Original isVideoFile body is separately extracted and executes with unchanged original entryinfo.cpp under Qt 5.; Synthetic clip.mpg, clip.avi and clip.mp4 are accepted; clip.MP4 and clip.mp3 are rejected. The whole BtExperience multimedia player does not execute.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - original MediaPlayer with native QtConcurrent: reentrant watcher removal, surviving worker, video suffix selection and video-resolution boundaries passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: Original isVideoFile body is separately extracted and executes with unchanged original entryinfo.cpp under Qt 5.; Synthetic clip.mpg, clip.avi and clip.mp4 are accepted; clip.MP4 and clip.mp3 are rejected. The whole BtExperience multimedia player does not execute.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - isVideoFile](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L37-L42) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074051
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001151`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - video_files; getFileExtensions](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/entryinfo.cpp#L7-L76) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074051
+  Limitations: Exact archived artifact/revision; supporting constants, table or build selection inspected, not executed as a separate experiment.; No deployed build, physical decoder, device capability or Firmware boundary is established.
+- `ownkb:source:moc-s001146`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayer::play; GstMediaPlayer::runMPlayer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/gstmediaplayer.cpp#L93-L127) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074052
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001153`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GStreamer build dependencies](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmediaplayer.pro#L18-L21) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074052
+  Limitations: Exact archived artifact/revision; supporting constants, table or build selection inspected, not executed as a separate experiment.; No deployed build, physical decoder, device capability or Firmware boundary is established.
+- `ownkb:source:moc-s001147`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayerImplementation::setTrack](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmediaplayer.cpp#L80-L119) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074053
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001147`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayerImplementation::centerOverlay](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmediaplayer.cpp#L121-L138) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074054
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::play](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L197-L209) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074055
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::checkVideoResolution](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L300-L319) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074055
+  Conditions: A local executable supplies synthetic MPlayer-shaped output. A direct notification receiver requests replacement; another owner is deleted before awaiting its delayed worker result. Resolution stdout is 320x240 then 321x240.; Original MediaPlayer translation unit/header use native QtConcurrent::run and QFutureWatcher; hardware functions disabled, multiple players enabled, LAYOUT_TS_10 absent.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - original MediaPlayer with native QtConcurrent: reentrant watcher removal, surviving worker, video suffix selection and video-resolution boundaries passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: A local executable supplies synthetic MPlayer-shaped output. A direct notification receiver requests replacement; another owner is deleted before awaiting its delayed worker result. Resolution stdout is 320x240 then 321x240.; Original MediaPlayer translation unit/header use native QtConcurrent::run and QFutureWatcher; hardware functions disabled, multiple players enabled, LAYOUT_TS_10 absent.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::checkVideoResolution](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L300-L319) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074055
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001152`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MAX_VIDEO_WIDTH; MAX_VIDEO_HEIGHT](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.h#L35-L36) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074055
+  Limitations: Exact archived artifact/revision; supporting constants, table or build selection inspected, not executed as a separate experiment.; No deployed build, physical decoder, device capability or Firmware boundary is established.
+
+Evidence finding `moc-e0145` (claimed): Video pause, resume and distinct seek consumers
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c074056`, `ownkb:claim:moc-c074057`, `ownkb:claim:moc-c074058`, `ownkb:claim:moc-c074059`, `ownkb:claim:moc-c074060`
+- `ownkb:source:moc-s001146`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayer::getPlayingInfo](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/gstmediaplayer.cpp#L168-L180) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074056
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001146`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayer::resume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/gstmediaplayer.cpp#L146-L151) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074057
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::resume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L226-L253) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074058
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::seek; MultiMediaPlayer::playAt](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L211-L275) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074059
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001148`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMain::parseLine](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmain.cpp#L145-L172) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074060
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001147`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayerImplementation::seek](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmediaplayer.cpp#L203-L209) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074060
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001148`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - GstMain::parseLine](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmain.cpp#L145-L172) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Conditions: Integer seek/track/rectangle commands, fragmented metadata, a synthetic stopped signal and process exit categories are controlled inputs.; Original GstMain control and wrapper parsing/exit bodies use a synthetic QObject backend; no GStreamer API, decoder, sink or hardware runs.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - original GStreamer control glue with synthetic backend: command parsing, split metadata and zero-exit error-signal classification passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: Integer seek/track/rectangle commands, fragmented metadata, a synthetic stopped signal and process exit categories are controlled inputs.; Original GstMain control and wrapper parsing/exit bodies use a synthetic QObject backend; no GStreamer API, decoder, sink or hardware runs.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+
+Evidence finding `moc-e0146` (claimed): Video completion and fragmented metadata scope
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c074061`, `ownkb:claim:moc-c074062`, `ownkb:claim:moc-c074063`, `ownkb:claim:moc-c074064`
+- `ownkb:source:moc-s001147`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayerImplementation::handleBusMessage](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmediaplayer.cpp#L140-L176) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074061
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001148`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMain::GstMain; main](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmain.cpp#L56-L212) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074061
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001146`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - GstMediaPlayer::mplayerFinished; parsePlayerOutput](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/gstmediaplayer.cpp#L28-L203) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074062, ownkb:claim:moc-c074064
+  Conditions: Integer seek/track/rectangle commands, fragmented metadata, a synthetic stopped signal and process exit categories are controlled inputs.; Original GstMain control and wrapper parsing/exit bodies use a synthetic QObject backend; no GStreamer API, decoder, sink or hardware runs.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - original GStreamer control glue with synthetic backend: command parsing, split metadata and zero-exit error-signal classification passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: Integer seek/track/rectangle commands, fragmented metadata, a synthetic stopped signal and process exit categories are controlled inputs.; Original GstMain control and wrapper parsing/exit bodies use a synthetic QObject backend; no GStreamer API, decoder, sink or hardware runs.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001146`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/gstmediaplayer.cpp#L182-L203) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074062
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001146`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GstMediaPlayer::mplayerError](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/gstmediaplayer.cpp#L205-L211) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074063
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001146`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - parsePlayerOutput; GstMediaPlayer::getPlayingInfo](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/gstmediaplayer.cpp#L28-L180) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074064
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001148`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - GstMain::GstMain](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gstmediaplayer/gstmain.cpp#L56-L84) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Conditions: Integer seek/track/rectangle commands, fragmented metadata, a synthetic stopped signal and process exit categories are controlled inputs.; Original GstMain control and wrapper parsing/exit bodies use a synthetic QObject backend; no GStreamer API, decoder, sink or hardware runs.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - original GStreamer control glue with synthetic backend: command parsing, split metadata and zero-exit error-signal classification passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: Integer seek/track/rectangle commands, fragmented metadata, a synthetic stopped signal and process exit categories are controlled inputs.; Original GstMain control and wrapper parsing/exit bodies use a synthetic QObject backend; no GStreamer API, decoder, sink or hardware runs.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+
+Evidence finding `moc-e0147` (claimed): Platform audio priority and player state notifications
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c074065`, `ownkb:claim:moc-c074066`, `ownkb:claim:moc-c074067`, `ownkb:claim:moc-c074068`
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::updateState](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L183-L217) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074065
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::checkPlayerState; AudioState::registerMediaPlayer; AudioState::registerSoundPlayer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L256-L532) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074066
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::updateAudioPaths; AudioState::pauseSoundDiffusionPlayer; AudioState::resumeActivePlayer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L318-L643) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074067
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::registerLocalSource; AudioState::sourceActiveChanged; AudioState::changeSoundDiffusionAccess](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L297-L519) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074068
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+
+Evidence finding `moc-e0148` (claimed): Platform audio scales and build arguments
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c074069`, `ownkb:claim:moc-c074070`, `ownkb:claim:moc-c074071`, `ownkb:claim:moc-c074072`
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - setHpDacVolume](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L67-L76) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074069
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - setZlVolume; setZlMute](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L78-L93) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074070
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::setVolume; MultiMediaPlayer::setMute](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L130-L148) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074071
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::updateAudioPaths](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L318-L429) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074071
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s001150`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - BtObjectsPlugin::BtObjectsPlugin](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/btobjectsplugin.cpp#L239-L316) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074072
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+
+Evidence finding `moc-e0164` (claimed): Native Sound Diffusion suspension differs from local output release
+Disposition reason: Reviewed revision-scoped findings with exact original artifacts and distinct examination methods.
+Individual claims: `ownkb:claim:moc-c074110`
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::pause; MultiMediaPlayer::mplayerPaused](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L217-L426) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074110
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::pause; MediaPlayer::actuallyPaused](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L427-L460) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074110
+  Conditions: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Native Qt 5 QProcess/timers/signals; hardware functions record requests, config/source and unused video dependencies are substitutes. No injected pause/release callbacks.; Synthetic slave child supplies explicit pause text and controlled termination outcomes; real MPlayer conventions and audible output are not measured.
+  Execution record: original_helper_in_adapted_harness - native pause acknowledgement, state/output ordering and exit-1 release/resume passed
+call interruption with controlled exit 1 passed
+call interruption with controlled exit crash passed
+call interruption with controlled exit 0 passed
+call interruption with controlled exit 2 passed
+native Sound Diffusion pause/resume keeps process and reported output active passed; g++ C++17; native Qt 5.15.19 Core/Concurrent; complete original producer/controller translation units and controlled local child.. Inputs: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.. Record: `project/review/myopencommunity-consumer-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001149`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - AudioState::pauseSoundDiffusionPlayer; AudioState::checkDirectAudioAccess](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L458-L623) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074110
+  Conditions: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Native Qt 5 QProcess/timers/signals; hardware functions record requests, config/source and unused video dependencies are substitutes. No injected pause/release callbacks.; Synthetic slave child supplies explicit pause text and controlled termination outcomes; real MPlayer conventions and audible output are not measured.
+  Execution record: original_helper_in_adapted_harness - native pause acknowledgement, state/output ordering and exit-1 release/resume passed
+call interruption with controlled exit 1 passed
+call interruption with controlled exit crash passed
+call interruption with controlled exit 0 passed
+call interruption with controlled exit 2 passed
+native Sound Diffusion pause/resume keeps process and reported output active passed; g++ C++17; native Qt 5.15.19 Core/Concurrent; complete original producer/controller translation units and controlled local child.. Inputs: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.. Record: `project/review/myopencommunity-consumer-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::pauseSoundDiffusionPlayer; AudioState::checkDirectAudioAccess](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L458-L623) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074110
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+
+#### Historical local audio arbitration
+
+Section ID: `ownkb:section:d000053:s000021`
+
+Applicability cues: `firmware`, `revision`, `scs`
+Cautions: `do not`
+Uncertainty: `unresolved`
+Provenance cues: `evidence`, `source`
+
+The TS10 non-X11 implementation retained at libqtdevices revision `13f0c2049666` uses an audio-state stack. Its build definition selects this implementation for PXA270 and a separate implementation for X11. These are software/build distinctions, not identified Firmware generations.
+
+| Mechanism | Earlier TS10 implementation | BtExperience `b88cdac9665d` |
+| --- | --- | --- |
+| Priority | Call, call-ringtone, floor-call and mute states precede alarm states, which precede ordinary playback/ringtones. Lower-priority requests remain below them until higher states are removed | Highest enabled enum state wins; repeated enabling sets a flag rather than pushing another occurrence |
+| Repeated current state | Push another occurrence and emit re-entry without rerunning path callbacks; one removal leaves the other occurrence | One disable clears the enabled flag |
+| Transition completion | The stack top changes before path transition completion. Direct audio access normally delays callbacks; a 10-second guard can force completion while the access flag remains true | Temporarily pause local multimedia, request output release and complete on the direct-access notification; eligible temporary playback resumes when local playback regains priority |
+| Source Configuration | Without a local source, local media and amplifier activity select separate playback states. With a configured source, source, amplifier or media activity retain the Sound Diffusion state | Registered source active-state notifications select the local routing scripts |
+
+The earlier local amplifier's temporary-off flag preserves its logical ON status. Volume changes while temporarily off update the cache without writing that volume; restoration uses the latest cached value when the amplifier is logically ON. Its virtual-amplifier temporary-off request schedules restoration after one second. This client timer is not an amplifier-wide protocol timeout.
+
+The older `WHO 8` [silence/restore events](../who-8-video-door-entry-telephony/#teleloop-and-local-multimedia-events) use a different consumer: it freezes the current level, publishes silenced level `1`, ignores repeated silence while frozen and schedules a 900-second fallback. Restore publishes the frozen level while in Sound Diffusion, or `0` outside it. These cached report choices and local timers do not establish how physical amplifiers respond.
+
+Earlier TouchX consumers differ. At libqtdevices `4f3483f36134`, media temporarily paused by a higher state retains its playback-stack entry and avoids pushing it again on resume. At `795d40817436`, the TouchX `WHO 8` disable/restore consumer uses temporary-off and reports OFF/ON while logically ON, rather than the frozen-level policy above. These are revision-specific client report policies, not alternative meanings of the wire events.
+
+Source and amplifier roles are selected from configuration, not proved hardware capabilities. The older Sound Diffusion page creates its virtual source/amplifier consumers from those roles. BtExperience `b88cdac9665d` instead registers the first matching local media-source object when its source address is nonempty; it can leave Sound Diffusion playback unregistered if none exists. X11 routing helpers can be empty while embedded branches request platform-specific scripts or device operations. Build selection alone does not establish their physical effect.
+
+The call/mute callbacks preserve SCS or IP routing across mute transitions; the retained historical correction replaces microphone volume changes with a separate mute operation. See [Call/audio evidence](../../project/review/myopencommunity-audio-call-review.md) and [Consumer and call-history evidence](../../project/review/myopencommunity-consumer-call-review.md) for exact revisions, original-helper conditions and unresolved device behavior. Current call UI and camera-cycling limitations are documented under [Local call audio](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience).
+
+Evidence finding `moc-e0153` (claimed): Older non-X11 stack priority and reentry
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074081`, `ownkb:claim:moc-c074082`, `ownkb:claim:moc-c074083`
+- `ownkb:source:moc-s001154`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtdevices - AudioStateMachine::toState](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L294-L321) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074081
+  Conditions: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; No original Qt 4 application, QML call UI or original QtTest suite runs.; Qt 5 adapted harness; hardware/process calls record requests only and player acknowledgements are synthetic.
+  Execution record: original_helper_in_adapted_harness - PASS original older priority graph, native 10-second guard and logical amplifier temporary silence; g++ C++17 and native Qt 5.15.19 Core/Xml timers and signals, with explicit controlled substitutes.. Inputs: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.. Record: `project/review/myopencommunity-audio-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001154`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AudioStateMachine::toState](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L294-L321) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074081
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001155`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtdevices - StateMachine::toState; StateMachine::removeState](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/statemachine.cpp#L130-L172) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074082
+  Conditions: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; No original Qt 4 application, QML call UI or original QtTest suite runs.; Qt 5 adapted harness; hardware/process calls record requests only and player acknowledgements are synthetic.
+  Execution record: original_helper_in_adapted_harness - PASS original stack, native delayed audio timer, flag routing, controlled pause/resume, ringtone lifetime and reentrant cleanup; g++ C++17 and native Qt 5.15.19 Core/Xml timers and signals, with explicit controlled substitutes.. Inputs: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.. Record: `project/review/myopencommunity-audio-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001155`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - StateMachine::toState; StateMachine::removeState; StateMachine::exitCurrentState](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/statemachine.cpp#L130-L172) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074082
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001156`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TS10 hardware source selection](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/ts_10.pri#L33-L46) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074083
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0154` (claimed): Older pending transition and forced completion
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074084`, `ownkb:claim:moc-c074085`
+- `ownkb:source:moc-s001154`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AudioStateMachine::AudioStateMachine; AudioStateMachine::changeState; AudioStateMachine::forceStateChange; AudioStateMachine::completeStateChange](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L212-L369) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074084, ownkb:claim:moc-c074085
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001154`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtdevices - AudioStateMachine::changeState; AudioStateMachine::forceStateChange; AudioStateMachine::completeStateChange](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L323-L369) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074084, ownkb:claim:moc-c074085
+  Conditions: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; No original Qt 4 application, QML call UI or original QtTest suite runs.; Qt 5 adapted harness; hardware/process calls record requests only and player acknowledgements are synthetic.
+  Execution record: original_helper_in_adapted_harness - PASS original older priority graph, native 10-second guard and logical amplifier temporary silence; g++ C++17 and native Qt 5.15.19 Core/Xml timers and signals, with explicit controlled substitutes.. Inputs: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.. Record: `project/review/myopencommunity-audio-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001155`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - StateMachine::toState](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/statemachine.cpp#L130-L146) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074084
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0155` (claimed): Older source configuration and temporary amplifier silence
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074086`, `ownkb:claim:moc-c074087`, `ownkb:claim:moc-c074088`
+- `ownkb:source:moc-s001154`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AudioStateMachine::setLocalAmplifierTemporaryOff; AudioStateMachine::setLocalAmplifierVolume; AudioStateMachine::setLocalAmplifierStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L412-L463) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074086
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001154`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtdevices - AudioStateMachine::setLocalAmplifierTemporaryOff; AudioStateMachine::setLocalAmplifierVolume; AudioStateMachine::getLocalAmplifierStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L433-L463) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074086
+  Conditions: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; No original Qt 4 application, QML call UI or original QtTest suite runs.; Qt 5 adapted harness; hardware/process calls record requests only and player acknowledgements are synthetic.
+  Execution record: original_helper_in_adapted_harness - PASS original older priority graph, native 10-second guard and logical amplifier temporary silence; g++ C++17 and native Qt 5.15.19 Core/Xml timers and signals, with explicit controlled substitutes.. Inputs: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.. Record: `project/review/myopencommunity-audio-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001154`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AudioStateMachine::manageMediaPlaybackStates](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L379-L410) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074087
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001157`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - Temporary-off timeout definition](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/sounddiffusionpage.cpp#L55-L56) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074088
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001157`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - LocalAmplifier::valueReceived; LocalAmplifier::reenableLocalAmplifier](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/sounddiffusionpage.cpp#L740-L811) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074088
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0156` (claimed): Separate WHO 8 local-amplifier silence consumer
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074089`, `ownkb:claim:moc-c074090`
+- `ownkb:source:moc-s001158`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - VideoDoorEntryDevice::parseFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/devices/videodoorentry_device.cpp#L243-L373) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074089, ownkb:claim:moc-c074090
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001157`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - LocalAmplifier::vctValueReceived; LocalAmplifier::restoreVolume](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/sounddiffusionpage.cpp#L671-L726) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074089, ownkb:claim:moc-c074090
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001157`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - Restoration timeout definition](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/sounddiffusionpage.cpp#L55-L56) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074090
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0166` (claimed): Configured source registration and historical client roles
+Disposition reason: Reviewed revision-scoped findings with exact original artifacts and distinct examination methods.
+Individual claims: `ownkb:claim:moc-c074112`, `ownkb:claim:moc-c074113`, `ownkb:claim:moc-c074114`, `ownkb:claim:moc-c074115`
+- `ownkb:source:moc-s001165`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - GlobalProperties::initAudio](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/globalproperties.cpp#L205-L271) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074112, ownkb:claim:moc-c074113
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001166`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - AudioPlayerPage::AudioPlayerPage; AudioPlayerPage::audioStateChanged; AudioPlayerPage::playbackStarted; AudioPlayerPage::playbackStopped](https://github.com/OpenWebNet-HA/libqtdevices/blob/4f3483f36134535323872525c1a186d3289eaff3/touchx/audioplayer.cpp#L96-L213) at `4f3483f36134535323872525c1a186d3289eaff3`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074114
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001167`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - LocalAmplifier::vctValueReceived](https://github.com/OpenWebNet-HA/libqtdevices/blob/795d408174360ad3f115ce136e35cd4351eb66eb/touchx/sounddiffusionpage.cpp#L643-L659) at `795d408174360ad3f115ce136e35cd4351eb66eb`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074115
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
 
 ### Source and speaker semantics
 
@@ -7680,9 +9475,13 @@ This is **established for that Device** and was used to corroborate the `WHO 16`
 
 Section ID: `ownkb:section:d000053:s000011`
 
-Provenance cues: `specification`
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `source`, `specification`
 
 Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](https://archive.openwebnet-ha.org/sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
+
+Archived test examples are inspected expectations, rather than a claim that the complete suite passed. Recorded original-helper executions retain their controlled conditions separately. The client forms, source caches, local feedback, tuning and display conversions are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md). Retained software revisions do not identify deployed Firmware generations.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.
 
@@ -8078,6 +9877,44 @@ Applicability cues: `zigbee`
 | Dry contact / IR | [Dry Contact and IR](dry-contact-ir.md) | `WHAT 31..32`; state/event parameter `0`/`1` |
 | ZigBee binding | [ZigBee Binding](zigbee-binding.md) | `WHAT 33..37`; ZigBee product-and-Unit `WHERE` |
 
+### Historical ScenarioPlus controls
+
+Section ID: `ownkb:section:d000060:s000006`
+
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` family under `WHO 25`:
+
+| Operation | Implemented frame |
+| --- | --- |
+| ON | `*25*11#0*WHERE##` |
+| OFF | `*25*12*WHERE##` |
+| Increase | `*25*13#0#5*WHERE##` |
+| Decrease | `*25*14#0#5*WHERE##` |
+| Stop | `*25*15*WHERE##` |
+
+These are executable implementation forms at `TS10_1_0_23`, separate from CEN+ `21..28`. Earlier source used increment/decrement suffix `#1`; the 2010 correction uses `#5`. The meaning and accepted range of this step parameter, and the complete ScenarioPlus address domain, are not independently established. Do not apply the CEN+ virtual-Object range automatically. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
+An earlier touchscreen controller sends increase/decrease on press, repeats the command using a one-second timer, and sends stop when release cancels the active timer. This is application behavior, separate from CEN+ `22..24` held-button events. The `ScenarioPlusDevice` API supplies command writers without a dedicated state decoder; sending ON/OFF does not establish an observed scenario state. See [Controller and feedback evidence](../../project/review/myopencommunity-cen-history-review.md#scenarioplus-writers-and-controller).
+
+Evidence finding `moc-e0054` (claimed): ScenarioPlus writer and press controller
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007686`, `ownkb:claim:moc-c007687`
+- `ownkb:source:moc-s000177`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ScenarioPlusDevice::ScenarioPlusDevice; ScenarioPlusDevice::decrease; ScenarioPlusDevice::increase; ScenarioPlusDevice::stop; ScenarioPlusDevice::turnOff; ScenarioPlusDevice::turnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/scenario_device.cpp#L159-L186) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007686, ownkb:claim:moc-c007687
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000178`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestScenarioDevice::cleanupTestCase; TestScenarioDevice::init; TestScenarioDevice::initTestCase; TestScenarioDevice::receiveDeviceIsProgrammingAtStartup; TestScenarioDevice::receiveGenericModuleIsProgramming; TestScenarioDevice::receiveGenericStartProgramming; TestScenarioDevice::receiveGenericStopProgramming; TestScenarioDevice::receiveLockDevice; TestScenarioDevice::receiveStartProgramming; TestScenarioDevice::receiveStopProgramming; TestScenarioDevice::receiveUnlockDevice; TestScenarioDevice::sendActivateScenario; TestScenarioDevice::sendDeleteAll; TestScenarioDevice::sendDeleteScenario; TestScenarioDevice::sendRequestStatus; TestScenarioDevice::sendStartProgramming; TestScenarioDevice::sendStopProgramming](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_scenario_device.cpp#L31-L155) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007686
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0120` (claimed): Earlier ScenarioPlus press controller
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007823`, `ownkb:claim:moc-c007824`
+- `ownkb:source:moc-s000245`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - Scenario|timerEvent|increase|decrease|stop](https://github.com/OpenWebNet-HA/libqtdevices/blob/20b67275c780d5d0d4643ef446eabe6ad28877e5/bann_scenario.cpp#L19-L389) at `20b67275c780d5d0d4643ef446eabe6ad28877e5`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007823, ownkb:claim:moc-c007824
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Function selection
 
 Section ID: `ownkb:section:d000060:s000003`
@@ -8217,10 +10054,24 @@ These operations use the same virtual Object/pushbutton addressing model. Their 
 Section ID: `ownkb:section:d000061:s000010`
 
 Applicability cues: `gateway`, `scs`
+Cautions: `do not`
+Provenance cues: `evidence`
 
 CEN+ supports virtual actions and event reporting. For pushbutton interactions, a client sends the functional frame on an action connection and receives `ACK`; event-session clients receive the corresponding frame when the gateway reads the CEN+ event on the SCS bus.
 
 The same event form can therefore represent an interaction originating from a physical CEN+ command or from a virtual action submitted through a gateway. The functional frame itself identifies the interaction, pushbutton and Object rather than its origin.
+
+Historical touchscreen scenario actions send the configured frame literally. Their CEN+ description labels and internal command identifiers do not select a wire `WHAT` or synthesize an extended-pressure sequence. See [Configured-action handling](../../scenario-engine/execution-model.md#historical-touchscreen-condition-evaluation) and [CEN/CEN+ implementation evidence](../../project/review/myopencommunity-cen-history-review.md#cen-and-cen-configured-actions).
+
+Evidence finding `moc-e0026` (claimed): Configured CEN-family actions
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007613`
+- `ownkb:source:moc-s000179`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ScheduledScenario::ScheduledScenario; ScheduledScenario::disable; ScheduledScenario::enable; ScheduledScenario::hasDisable; ScheduledScenario::hasEnable; ScheduledScenario::hasStart; ScheduledScenario::hasStop; ScheduledScenario::start; ScheduledScenario::stop; parseSchedCommand; parseScheduledScenario](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/scenarioobjects.cpp#L62-L340) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007613
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000180`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestScenarioAdvanced::testDeviceCondition; TestScenarioAdvanced::testTimeCondition; TestScenarioAdvanced::testTimeDeviceCondition; TestScenarioAdvanced::testWeekdayCondition; TestScenarioAdvanced::testWeekdays; TestScenarioAdvancedDeviceEdit::cleanup; TestScenarioAdvancedDeviceEdit::init; TestScenarioAdvancedDeviceEdit::testAmplifierConditionInit; TestScenarioAdvancedDeviceEdit::testAmplifierConditionOnOff; TestScenarioAdvancedDeviceEdit::testConditionReset; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionInit; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionOnOff; TestScenarioAdvancedDeviceEdit::testDimmerConditionInit; TestScenarioAdvancedDeviceEdit::testDimmerConditionOnOff; TestScenarioAdvancedDeviceEdit::testLightConditionInit; TestScenarioAdvancedDeviceEdit::testLightConditionOnOff; TestScenarioAdvancedDeviceEdit::testTemperatureConditionInit; TestScenarioAdvancedTime::cleanup; TestScenarioAdvancedTime::init; TestScenarioAdvancedTime::testTimeoutFuture; TestScenarioAdvancedTime::testTimeoutPast; TestScenarioModule::checkMethod; TestScenarioModule::cleanup; TestScenarioModule::init; TestScenarioModule::initTestCase; TestScenarioModule::testActivateScenario; TestScenarioModule::testReceiveLock; TestScenarioModule::testReceiveLock_data; TestScenarioModule::testReceiveStart; TestScenarioModule::testReceiveStartOtherScenario; TestScenarioModule::testReceiveStartOtherScenario_data; TestScenarioModule::testReceiveStart_data; TestScenarioModule::testReceiveStop; TestScenarioModule::testReceiveStop_data; TestScenarioModule::testReceiveUnlock; TestScenarioModule::testReceiveUnlock_data; TestScenarioModule::testStartProgramming; TestScenarioModule::testStopProgramming; packStartValues; packValues](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_scenario_objects.cpp#L61-L619) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 ### CEN+ configuration model
 
@@ -8297,6 +10148,44 @@ Two published address forms are established:
 | `[1-9][1-9]` | Alarm dry-contact interfaces and IR devices configured using physical `Z` and `N` configurators |
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.
+
+### Historical contact interpretation
+
+Section ID: `ownkb:section:d000062:s000005`
+
+Provenance cues: `evidence`
+
+BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#0` and `31#1` as contact closed, and `32#0` and `32#1` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
+The client combines replies and events into one local boolean; its `DIM_STATUS` identifier is not a wire `DIMENSION`. It compares numeric addresses and forwards repeated decoded values. That matching behavior does not establish leading-zero normalization, routed contact support or a wider address domain.
+
+BtExperience selects this `WHO 25` receiver for its Automation contact Objects, preserving the configured `WHERE`. Its displayed state starts locally as inactive and emits a change notification only when the boolean changes. The initial display therefore is not a confirmed contact reading, and the change-only notification policy does not redefine bus events. See [Contact-client evidence](../../project/review/myopencommunity-cen-history-review.md#contact-receipt-and-product-state).
+
+Evidence finding `moc-e0055` (claimed): Contact library interpretation
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007688`, `ownkb:claim:moc-c007689`, `ownkb:claim:moc-c007690`
+- `ownkb:source:moc-s000203`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomationDevice::AutomationDevice; AutomationDevice::goDown; AutomationDevice::goUp; AutomationDevice::init; AutomationDevice::parseFrame; AutomationDevice::requestPullStatus; AutomationDevice::requestStatus; AutomationDevice::stop; PPTStatDevice::PPTStatDevice; PPTStatDevice::init; PPTStatDevice::parseFrame; PPTStatDevice::requestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/automation_device.cpp#L38-L115) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007688, ownkb:claim:moc-c007689, ownkb:claim:moc-c007690
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000204`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAutomationDevice::cleanupTestCase; TestAutomationDevice::initTestCase; TestAutomationDevice::receiveDown; TestAutomationDevice::receiveStop; TestAutomationDevice::receiveUp; TestAutomationDevice::sendGoDown; TestAutomationDevice::sendGoUp; TestAutomationDevice::sendStop; TestPPTStatDevice::cleanupTestCase; TestPPTStatDevice::initTestCase; TestPPTStatDevice::receiveStatus; TestPPTStatDevice::sendRequestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_automation_device.cpp#L36-L119) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007688, ownkb:claim:moc-c007689
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0056` (claimed): Contact application cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007691`
+- `ownkb:source:moc-s000201`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Automation3::Automation3; Automation3::getObjectId; Automation3::getObjectKey; Automation3::getStatus; Automation3::goDown; Automation3::goUp; Automation3::setStatus; Automation3::stop; Automation3::valueReceived; AutomationContact::AutomationContact; AutomationContact::isActive; AutomationContact::valueReceived; AutomationGroup2::AutomationGroup2; AutomationGroup2::setActive; AutomationGroup3::AutomationGroup3; AutomationGroup3::goDown; AutomationGroup3::goUp; AutomationGroup3::setStatus; AutomationGroup3::stop; AutomationLight::AutomationLight; AutomationLight::activate; AutomationLight::getObjectId; AutomationVDE::AutomationVDE; AutomationVDE::activate; AutomationVDE::deactivate; parseAutomation2; parseAutomation3; parseAutomationGroup2; parseAutomationGroup3; parseAutomationVDE](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/automationobjects.cpp#L34-L391) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007691
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0092` (corroborates): Retained contact execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007688`, `ownkb:claim:moc-c007689`, `ownkb:claim:moc-c007690`
+- `ownkb:source:moc-s000203`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - AutomationDevice::AutomationDevice; AutomationDevice::goDown; AutomationDevice::goUp; AutomationDevice::init; AutomationDevice::parseFrame; AutomationDevice::requestPullStatus; AutomationDevice::requestStatus; AutomationDevice::stop; PPTStatDevice::PPTStatDevice; PPTStatDevice::init; PPTStatDevice::parseFrame; PPTStatDevice::requestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/automation_device.cpp#L38-L115) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-cen-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007688, ownkb:claim:moc-c007689, ownkb:claim:moc-c007690
+  Conditions: Qt5 Core, 22 original bodies; controlled parser fields, output, signal, construction and timer seams.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 21 comparisons passed across the review harness; original parameter preservation remains inspected-test evidence.; Qt5 Core, 22 original bodies; controlled parser fields, output, signal, construction and timer seams.. Inputs: Contact query/decode/repeats; Local initialization and changed notifications. Record: `project/review/myopencommunity-cen-history-review.md` (21 comparisons).
 
 ### Functional navigation
 
@@ -8468,7 +10357,263 @@ The current implementation corpus establishes the namespace but does not yet sup
 
 Parsers should therefore preserve `WHO 26` traffic losslessly and expose unknown fields as raw values. Semantics from `WHO 7`, `16`, or `22` must not be copied into this namespace without direct evidence.
 
-This page intentionally records the strongest established model rather than filling the missing vocabulary by analogy.
+### Historical OpenXml client
+
+Section ID: `ownkb:section:d000064:s000004`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen library at `TS10_1_0_23` implements a separate local OpenXml media service. Its [UTF-8 envelope and framing](../../protocol/stream-parsing.md#separate-multimedia-xml-transport) are distinct from numeric OpenWebNet frames. The following XML tags are verified in its serializers and response tests; they do not establish corresponding numeric `WHAT` values or support by external gateways.
+
+| XML request | Arguments | Response tag and decoded content |
+| --- | --- | --- |
+| `RW26C1` | None | `AW26C1`: `server/name` list |
+| `RW26C2` | `id` | `AW26C2`: selected `current_server`, directory `status_browse`, or selected track's `DIDL-Lite` metadata |
+| `CW26C7` | None | `AW26C7`: parent-directory browsing result |
+| `CW26C10` / `CW26C11` | None | `AW26C10` / `AW26C11`: next / previous track metadata |
+| `RW26C15` | `rank`, `delta` | `AW26C15`: `total`, `rank`, directory names and track records |
+| `CW26C16` | `server`, slash-joined `path` | `AW26C16`: navigation-context result |
+
+Selection uses the same `id` argument for a server, directory or file. Tested browsing outcomes include `browse_okay`, `empty_directory`, `already_at_root` and `no_such_directory`, depending on the operation. Track records contain a resource URL and, for audio, title, artist, album and duration. XML error text is mapped into local application errors; those enum numbers are not wire return codes.
+
+See [OpenXml service evidence](../../project/review/myopencommunity-coverage-audit.md#openxml-media-vocabulary).
+
+Evidence finding `moc-e0057` (claimed): OpenXml multimedia operations
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007692`, `ownkb:claim:moc-c007693`, `ownkb:claim:moc-c007694`, `ownkb:claim:moc-c007695`
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::XmlDevice; XmlDevice::browseUp; XmlDevice::buildCommand; XmlDevice::chDir; XmlDevice::cleanSessionInfo; XmlDevice::handleClientError; XmlDevice::handleData; XmlDevice::lastAnsweredCommand; XmlDevice::lastQueuedCommand; XmlDevice::listItems; XmlDevice::nextFile; XmlDevice::parseAck; XmlDevice::parseHeader; XmlDevice::parseXml; XmlDevice::previousFile; XmlDevice::requestUPnPServers; XmlDevice::reset; XmlDevice::select; XmlDevice::selectFile; XmlDevice::selectServer; XmlDevice::sendCommand; XmlDevice::sendFirstQueuedMessage; XmlDevice::setContext; XmlDevice::~XmlDevice; dump_xml; getFileType; getMetadata; handle_browseup; handle_browsing; handle_listitems; handle_notifications; handle_selection; handle_setcontext; handle_upnp_server_list; handle_welcome_message; uuid2str; uuidhex](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L62-L678) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-coverage-audit.md`.
+  Examination claims: ownkb:claim:moc-c007692, ownkb:claim:moc-c007693, ownkb:claim:moc-c007694, ownkb:claim:moc-c007695
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000210`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - TestXmlDevice::cleanupTestCase; TestXmlDevice::initTestCase; TestXmlDevice::testBadHeader; TestXmlDevice::testBadXml; TestXmlDevice::testBrowseUpFail; TestXmlDevice::testBrowseUpServerDown; TestXmlDevice::testBrowseUpSuccess; TestXmlDevice::testBuildCommand; TestXmlDevice::testBuildCommandWithArg; TestXmlDevice::testChdir; TestXmlDevice::testChdirEmpty; TestXmlDevice::testChdirNotFound; TestXmlDevice::testChdirServerDown; TestXmlDevice::testHeader; TestXmlDevice::testListItems; TestXmlDevice::testListItemsServerDown; TestXmlDevice::testNextTrack; TestXmlDevice::testNextTrackServerDown; TestXmlDevice::testPrevTrack; TestXmlDevice::testPrevTrackServerDown; TestXmlDevice::testResetWithAck; TestXmlDevice::testServerList; TestXmlDevice::testServerListEmpty; TestXmlDevice::testServerSelection; TestXmlDevice::testServerSelectionEmpty; TestXmlDevice::testServerSelectionNoAnswer; TestXmlDevice::testServerSelectionServerDown; TestXmlDevice::testSetContextFail; TestXmlDevice::testSetContextServerDown; TestXmlDevice::testSetContextSuccess; TestXmlDevice::testTrackSelection; TestXmlDevice::testTrackSelectionServerDown; TestXmlDevice::testUnhandledResponse; TestXmlDevice::testWelcome](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_xmldevice.cpp#L29-L1036) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-coverage-audit.md`.
+  Examination claims: ownkb:claim:moc-c007692, ownkb:claim:moc-c007693
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0099` (deferred): Numeric WHO 26 and SID contract
+Disposition reason: Historical fixed test SID differs from mature UUID/reset behavior; neither establishes a universal SID contract or numeric WHO 26 frame vocabulary.
+- `ownkb:source:moc-s000175`: source_inspection; client; interpretation; qualifies. [MyOpenCommunity/libqtcommon - XmlClient::XmlClient; XmlClient::connectToHost; XmlClient::disconnectFromHost; XmlClient::isConnected; XmlClient::parseData; XmlClient::receiveData; XmlClient::sendCommand; XmlClient::socketError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmlclient.cpp#L34-L107) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000176`: test_expectation_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtcommon - TestXmlClient::TestXmlClient; TestXmlClient::init; TestXmlClient::testDouble; TestXmlClient::testGarbage; TestXmlClient::testSimple](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_xmlclient.cpp#L27-L83) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+#### Local playlist integration
+
+Section ID: `ownkb:section:d000064:s000005`
+
+Applicability cues: `revision`
+Provenance cues: `evidence`, `source`
+
+BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`, and libqtcommon at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`, share an OpenXml device between browsing and playlist control. Selecting a playlist entry sends its name to the service; the player updates the current URL when a track-selection response arrives. Next/previous adjusts the local index before the service response, so that index alone does not confirm successful selection.
+
+The list manager emits a local server-down signal for track-selection or invalid-response server-down errors. Its error handler does not clear the current track or stop playback, and the reviewed BtExperience playlist does not connect that signal to termination or alarm fallback. Earlier touchscreen pages did consume it for page-state handling. These are implementation differences, not universal server-failure behavior.
+
+The UPnP source object supplies explicit selection playback but inherits a false first-content result rather than discovering an initial track automatically. See [Historical local playback](../who-22-sound-diffusion/#historical-local-playback) and [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md). No numeric `WHO 26` encoding or physical playback result follows from these client paths.
+
+Evidence finding `moc-e0131` (claimed): UPnP playlist selection and asynchronous index
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074014`, `ownkb:claim:moc-c074015`, `ownkb:claim:moc-c074016`
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::PlayListPlayer; PlayListPlayer::generate(UPnPListModel *, int, int); PlayListPlayer::updateCurrentUpnp; PlayListPlayer::updateCurrent](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L36-L328) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074014, ownkb:claim:moc-c074015
+  Conditions: UPnP generation overload at lines 229-249; the enclosing range also includes constructor and current-update methods.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001140`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - UPnPListModel::UPnPListModel; UPnPListModel::getXmlDevice](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/folderlistmodel.cpp#L640-L651) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074014
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001141`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpListManager::handleResponse; UPnpListManager::setStartingFile](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L104-L165) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074015
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001141`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpListManager::nextFile; UPnpListManager::previousFile](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L127-L139) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074016
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+Evidence finding `moc-e0132` (claimed): UPnP failure delivery and first-content boundary
+Disposition reason: Reviewed revision-scoped finding; source inspection, inspected expectations and controlled executions are mapped separately.
+Individual claims: `ownkb:claim:moc-c074017`, `ownkb:claim:moc-c074018`, `ownkb:claim:moc-c074019`, `ownkb:claim:moc-c074020`
+- `ownkb:source:moc-s001141`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpListManager::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L113-L125) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074017, ownkb:claim:moc-c074018
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s001141`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - UPnpListManager::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/list_manager.cpp#L113-L125) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074017
+  Conditions: LAYOUT_TS_10 omitted; the display/audio-state update branch of mplayerFinished is not exercised.; Original method bodies extracted unchanged from the exact Git pins; public body hashes and helper reproduction procedure are recorded in the playback execution report.
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Controlled substitute process/list/clock/XML or completion-watcher/model seams; no original suite, Qt event loop, media decoder, network, bus or hardware.
+  Execution record: original_helper_in_adapted_harness - 18 controlled comparisons passed; no complete archived suite or real playback executed.; g++ C++17 with controlled substitute process-signal, list, clock, XML and completion-watcher/model/sender seams; completion compiled separately with AddressSanitizer.. Inputs: Normal exits 0, 1 and 2; crash exit; inactive wrapper.; Stopped playlist with and without user-change suppression.; Three-item loop at 5999 and 6000 ms; one-item loop; no active list; reset.; Track-selection, invalid and server-list errors; server-down and parse error.. Record: `project/review/myopencommunity-playback-history-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001136`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PlayListPlayer::PlayListPlayer; AudioVideoPlayer::AudioVideoPlayer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/playlistplayer.cpp#L36-L371) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074019
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+- `ownkb:source:moc-s000207`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - SourceMedia::playFirstMediaContent; SourceUpnpMedia::startUpnpPlay](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L611-L799) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-playback-history-review.md`.
+  Examination claims: ownkb:claim:moc-c074020
+  Limitations: Applies only to the pinned implementation and supplied build context; does not identify deployed product/Firmware behavior.; Executable behavior read from source; no runtime or physical observation is claimed.
+
+#### Browser state and recovery
+
+Section ID: `ownkb:section:d000064:s000006`
+
+Applicability cues: `gateway`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The same pinned libqtcommon browser and BtExperience paged model maintain local navigation state separately from service responses.
+
+| Operation / result | Implementation behavior |
+| --- | --- |
+| Enter a server or directory | Append its name before sending selection; a failure does not roll back that context |
+| Set navigation context | Change the local level before the response; success installs the pending context, while failure reports a generic error without restoring the previous level |
+| Return from a server to the server list | Set level to zero and request servers, retaining the old context until a separate reset clears it |
+| Browser reset | Clear level, rank and current context; retain pending context and queued commands. A later directory response can still increment the level |
+| Selection error | Browsing failure emits directory-change error, empty content emits empty-directory, and other failures emit generic error |
+| Parent-navigation error | Server-down emits generic error without changing level. Other errors at level one return locally to root and trim context; deeper errors emit directory-change error |
+| Model loading | Directory-change error clears the base model's loading flag; list-retrieval error clears the paged model's flag. Empty-directory and generic-error signals have no equivalent connection in these model constructors |
+| Paged reply admission | Ignore replies for an inactive model or with a local answered ordinal at or below the recorded discard boundary; this discards results without cancelling commands |
+
+Root server lists are cached locally. Service pages use one-based `rank` and a four-entry request size. Type filtering occurs after decoding, while `total` remains the service's unfiltered count. The paged model requests the next rank using the number of accepted entries. With a positive remaining count and an all-filtered page, it can repeatedly request the same rank; the archived mock tests do not exercise that service/filter combination.
+
+The shared OpenXml device queues commands while disconnected or while a session ID is outstanding. Queued dispatch waits for the welcome state; ACK return code `200` clears SID and PID and dispatches the next command. Session cleanup leaves the queue intact, and the device's reset method is unimplemented. Answered ordinals are local bookkeeping copied from the last sent command, not response identifiers verified against the service. Earlier libraries used different queue and stale-result handling. None of these policies establishes automatic recovery or a deployed gateway contract. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md) and [XML transport](../../protocol/stream-parsing.md#separate-multimedia-xml-transport).
+
+The pinned device accepts a structurally valid header by adopting its SID, PID and addresses; it does not compare them with the outstanding request. The first valid header sets the welcome state even if its command is not `WMsg`. Command serialization generates a fresh UUID SID. Local answered ordinals therefore do not authenticate reply identity or guarantee increasing reply order.
+
+Controlled loopback execution with the original socket, XML decoder and queue demonstrates additional ordering limits:
+
+| Condition | Observed implementation behavior |
+| --- | --- |
+| Welcome arrives with commands queued | Its populated SID causes the first queued command to be requeued at the tail; welcome alone sends no command in that path. A subsequent ACK 200 releases the next queued command |
+| ACK 200 releases a command | Dispatch occurs inside ACK parsing, before the ACK response notification reaches consumers |
+| Response has different SID/PID | A valid synthetic response is accepted and attributed to the last sent ordinal; there is no outstanding-request identity check |
+| Disconnect during an outstanding command | Clear session state and retain unsent queued commands. The already sent command is not put back in that queue, and disconnect alone schedules no reconnect |
+| New command after disconnect | Request a new connection; the retained queue remains subject to welcome/header and ACK ordering on that connection |
+
+These observations use a synthetic local service under Qt 5, not a gateway, a UPnP server or the original Qt 4 application. They refine the implementation account without establishing the handshake expected by a deployed service. See [Video and native-runtime evidence](../../project/review/myopencommunity-video-runtime-review.md).
+
+Evidence finding `moc-e0139` (claimed): OpenXml browser navigation state and late replies
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope are retained independently.
+Individual claims: `ownkb:claim:moc-c074035`, `ownkb:claim:moc-c074036`, `ownkb:claim:moc-c074037`, `ownkb:claim:moc-c074038`, `ownkb:claim:moc-c074039`
+- `ownkb:source:moc-s001144`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::enterDirectory; UPnpClientBrowser::setContext; UPnpClientBrowser::exitDirectory; UPnpClientBrowser::reset; UPnpClientBrowser::handleError; UPnpClientBrowser::handleResponse](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L206-L454) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074035, ownkb:claim:moc-c074036, ownkb:claim:moc-c074037, ownkb:claim:moc-c074038, ownkb:claim:moc-c074039
+  Conditions: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - browser: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::enterDirectory; UPnpClientBrowser::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L214-L447) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074035
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::setContext; UPnpClientBrowser::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L393-L454) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074036
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::exitDirectory](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L223-L237) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074037
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::reset](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L206-L212) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074038
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::handleResponse](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L327-L391) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074039
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+
+Evidence finding `moc-e0140` (claimed): Browser error delivery and model loading hooks
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope are retained independently.
+Individual claims: `ownkb:claim:moc-c074040`, `ownkb:claim:moc-c074041`, `ownkb:claim:moc-c074042`
+- `ownkb:source:moc-s001144`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L393-L447) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074040, ownkb:claim:moc-c074041
+  Conditions: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - browser: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::handleError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L393-L447) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074040, ownkb:claim:moc-c074041
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001140`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - TreeBrowserListModelBase::TreeBrowserListModelBase](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/folderlistmodel.cpp#L149-L169) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074042
+  Conditions: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - browser: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001140`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TreeBrowserListModelBase::TreeBrowserListModelBase; PagedFolderListModel::PagedFolderListModel](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/folderlistmodel.cpp#L149-L455) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074042
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+
+Evidence finding `moc-e0141` (claimed): UPnP filtering pagination and stale-result admission
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope are retained independently.
+Individual claims: `ownkb:claim:moc-c074043`, `ownkb:claim:moc-c074044`, `ownkb:claim:moc-c074045`, `ownkb:claim:moc-c074046`
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::getFileList(int); UPnpClientBrowser::getNextFileList](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L244-L279) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074043
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001144`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::handleResponse](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L327-L391) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074044
+  Conditions: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - browser: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001144`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - UPnpClientBrowser::handleResponse](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/treebrowser.cpp#L327-L391) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074044
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s001140`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - PagedFolderListModel::gotFileList](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/folderlistmodel.cpp#L582-L620) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074045, ownkb:claim:moc-c074046
+  Conditions: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - browser: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001140`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - PagedFolderListModel::gotFileList](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/folderlistmodel.cpp#L582-L620) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074045, ownkb:claim:moc-c074046
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+
+Evidence finding `moc-e0142` (claimed): OpenXml command queue and local reply bookkeeping
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope are retained independently.
+Individual claims: `ownkb:claim:moc-c074047`, `ownkb:claim:moc-c074048`, `ownkb:claim:moc-c074049`, `ownkb:claim:moc-c074050`
+- `ownkb:source:moc-s000209`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - XmlDevice::sendCommand(three arguments); XmlDevice::sendFirstQueuedMessage; XmlDevice::parseAck; XmlDevice::cleanSessionInfo; XmlDevice::reset](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L393-L636) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074047, ownkb:claim:moc-c074048, ownkb:claim:moc-c074049
+  Conditions: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.
+  Limitations: Controlled scheduling and substituted interfaces establish only the stated test conditions; original Qt 4 behavior, worker thread affinity, shared-flag memory visibility and physical removal timing remain unresolved.; Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original helper bodies execute in an adapted Qt 5 harness; the original QtConcurrent worker dispatcher and archived application/test suite are not run.
+  Execution record: original_helper_in_adapted_harness - browser: controlled scenarios passed; see hash-pinned execution record for exact bodies and substitutions.; g++ C++17, Qt 5.15.19 Core, native event delivery/QProcess/QDir plus explicitly recorded controlled seams.. Inputs: An inactive model, equal/older answered ordinal, generic/empty/list errors, late CHDIR after reset, failed context change, and three empty filtered pages with total 8/range 0..4 are controlled inputs.; Native Qt signals and the original browser/queue methods run with controlled client connectivity, SID, ACK text, response variants, model cache and range. XML parsing, command envelope construction and networking are substituted.; The paged-model constructor is a substitute reproducing its listRetrieveError hookup; only the original base constructor and gotFileList body execute. The native abstract model data/row implementations are empty substitutes.. Record: `project/review/myopencommunity-async-browser-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::sendCommand(three arguments)](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L495-L514) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074047
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::sendFirstQueuedMessage; XmlDevice::parseAck](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L469-L636) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074048
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::cleanSessionInfo; XmlDevice::reset](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L393-L488) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074049
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::parseXml; XmlDevice::handleClientError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L462-L580) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: ownkb:claim:moc-c074050
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Executable behavior inspected in source; no claim of runtime execution or original test-suite success.
+
+Evidence finding `moc-e0143` (deferred): Complete original browser runtime and archived mock coverage
+Disposition reason: Original Qt 5 socket/framing/decoder/queue/reconnect paths now execute against a synthetic loopback service. Real UPnP service ordering/filtering, deployed OpenXml handshake, Qt 4 runtime and gateway/hardware behavior remain deferred; fixed mock ordinals do not validate reply identity.
+- `ownkb:source:moc-s001145`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestTreeBrowserListModelBase::testNavigation; TestTreeBrowserListModelBase::testListItems](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_filebrowser.cpp#L465-L529) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-async-browser-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway or audible-output observation.; Original expected results inspected; archived tests were not executed. Mock fixed ordinals do not exercise arbitrary late service replies.
+
+Evidence finding `moc-e0149` (claimed): OpenXml header adoption and queue notification ordering
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c074073`, `ownkb:claim:moc-c074074`, `ownkb:claim:moc-c074075`, `ownkb:claim:moc-c074076`, `ownkb:claim:moc-c074077`, `ownkb:claim:moc-c074078`
+- `ownkb:source:moc-s000209`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - XmlDevice::parseHeader; XmlDevice::sendFirstQueuedMessage; XmlDevice::sendCommand(three arguments); XmlDevice::parseAck; XmlDevice::parseXml; XmlDevice::cleanSessionInfo; XmlDevice::handleClientError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L462-L636) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074073, ownkb:claim:moc-c074074, ownkb:claim:moc-c074075, ownkb:claim:moc-c074076, ownkb:claim:moc-c074077, ownkb:claim:moc-c074078
+  Conditions: A separate first AW26C1 header, without WMsg, establishes welcome state.; Original XmlClient/XmlDevice files, Qt 5 Core/Network/Xml and localhost QTcpServer are used; a friend adapter changes only the endpoint and exposes state.; Two actual socket reads split UTF-8; partial XML is retained across peer disconnect. Offline requests, nonempty header SID, ACK 200, mismatched SID/PID, and a new request after disconnection are synthetic controlled inputs.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - native loopback framing, non-WMsg welcome state, mismatched identity, welcome rotation, ACK attribution and reconnect scenarios passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: A separate first AW26C1 header, without WMsg, establishes welcome state.; Original XmlClient/XmlDevice files, Qt 5 Core/Network/Xml and localhost QTcpServer are used; a friend adapter changes only the endpoint and exposes state.; Two actual socket reads split UTF-8; partial XML is retained across peer disconnect. Offline requests, nonempty header SID, ACK 200, mismatched SID/PID, and a new request after disconnection are synthetic controlled inputs.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::parseHeader](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L582-L616) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074073, ownkb:claim:moc-c074074
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::sendFirstQueuedMessage; XmlDevice::sendCommand(three arguments)](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L469-L514) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074075, ownkb:claim:moc-c074078
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::parseAck; XmlDevice::parseXml](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L523-L636) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074076
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::cleanSessionInfo; XmlDevice::handleClientError; XmlDevice::XmlDevice](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L366-L488) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074077
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+
+Evidence finding `moc-e0150` (claimed): Fresh OpenXml SID and stale serializer expectations
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c074079`
+- `ownkb:source:moc-s000209`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - XmlDevice::buildCommand](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L638-L668) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074079
+  Conditions: 30 test methods pass and two fail; lifecycle entries add two passed entries. The two serializer tests expect fixed SID while buildCommand generates a fresh UUID.; Original XmlClient/XmlDevice files and original TestXmlDevice class/methods execute unchanged under Qt 5 with a minimal QCoreApplication QtTest driver.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - Totals: 32 passed, 2 failed, 0 skipped, 0 blacklisted, 1ms Failed methods: testBuildCommand, testBuildCommandWithArg; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: 30 test methods pass and two fail; lifecycle entries add two passed entries. The two serializer tests expect fixed SID while buildCommand generates a fresh UUID.; Original XmlClient/XmlDevice files and original TestXmlDevice class/methods execute unchanged under Qt 5 with a minimal QCoreApplication QtTest driver.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000209`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlDevice::buildCommand](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmldevice.cpp#L638-L668) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074079
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+- `ownkb:source:moc-s000210`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - TestXmlDevice::testBuildCommand; TestXmlDevice::testBuildCommandWithArg](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_xmldevice.cpp#L892-L956) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c074079
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Original expected result inspected separately from actual execution.
 
 # Document: ownkb:document:d000065
 
@@ -8733,6 +10878,8 @@ The MyHOME_Suite `OPEN.db` address-rule definitions represent Temperature Contro
 
 These implementation forms complement the public functional grammar. The selected operation determines which rule is valid; clients must not normalize all Temperature Control `WHERE` values to one integer zone identifier.
 
+The physical `ZA`/`ZB` positions identify the zone; actuator `N` and probe Slave numbering have separate roles. A numeric plug in a probe's `SLA` socket is distinct from the lettered `SLA` plug in `MOD`. See [Temperature Control configurators](../../device-model/configurators.md#temperature-control) for the manufacturer-defined count, numbering and product scopes.
+
 ### Actuator addressing
 
 Section ID: `ownkb:section:d000068:s000004`
@@ -8745,7 +10892,40 @@ Section ID: `ownkb:section:d000068:s000005`
 
 A leading `#` identifies central-unit scope in the published functional grammar. `#0` addresses the central unit itself; `#N` addresses zone `N` through the central unit. Central-unit commands include zone mode changes, setpoint changes, program/scenario selection, and holiday operations.
 
+### Historical central-unit variants
+
+Section ID: `ownkb:section:d000068:s000006`
+
+Applicability cues: `firmware`
+Provenance cues: `evidence`, `source`
+
+The BTouch source distinguishes 3550 (99-zone) and 4695 (four-zone) central units. The mature four-zone probe implementation composes a probe/zone address with a central selector, such as `23#1`, and writes a controlled setpoint through `#23#1`. These application variants must remain distinct from ordinary `#N` central-zone addressing.
+
+The touchscreen Configuration parser selects the following command targets, with `Z` the configured zone and `C` the configured four-zone central selector:
+
+| Operation | 99-zone Configuration | Four-zone Configuration |
+| --- | --- | --- |
+| Central-unit command | `#0` | `#0#C` |
+| Controlled zone command / setpoint write | `#Z` | `#Z#C` |
+| Fan-coil `DIMENSION 11` request / write | `Z` | `Z` |
+
+The fan-coil target is passed separately from the composed central-zone address. These are [verified client mappings](../../project/review/myopencommunity-hvac-history-review.md#configuration-and-address-selection), not a universal address rewrite for every `WHO 4` operation. Basic IR air-conditioning actions use the separate [`WHO 0` scenario namespace](../who-0-scenarios/README.md#historical-touchscreen-behavior).
+
+For the four-zone case where probe and central share an address, the source describes a missing setpoint-change notification after entering manual mode. The client schedules a setpoint read after 10 seconds if the report has not arrived. The affected Firmware revisions are not named. This workaround is implementation evidence, not a deadline or a defect established for every 4695. Older external-probe code describes addresses `x00` with `x = 1..9`; that historical rule does not override the exact test addresses used by the later [external-temperature operation](dimensions.md#historical-external-probe-dimension-15).
+
+See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
+
 See [`WHAT` Reference](what.md) for central-unit commands, [`DIMENSION` Reference](dimensions.md) for operation-specific payloads, and [Addressing](../../protocol/addressing.md) for the common system-scoped addressing model.
+
+Evidence finding `moc-e0058` (claimed): Central-unit Configuration choices
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007696`, `ownkb:claim:moc-c007697`
+- `ownkb:source:moc-s000211`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ThermalControlUnit4Zones::ThermalControlUnit4Zones; ThermalControlUnit99Zones::ThermalControlUnit99Zones; ThermalControlUnit99Zones::getScenarios; ThermalControlUnit99Zones::setScenarios; ThermalControlUnit::ThermalControlUnit; ThermalControlUnit::getCurrentModality; ThermalControlUnit::getCurrentModalityId; ThermalControlUnit::getMaximumManualTemperature; ThermalControlUnit::getMinimumManualTemperature; ThermalControlUnit::getModalities; ThermalControlUnit::getObjectKey; ThermalControlUnit::getPrograms; ThermalControlUnit::getSeason; ThermalControlUnit::setPrograms; ThermalControlUnit::setSeason; ThermalControlUnit::valueReceived; ThermalControlUnitAntifreeze::ThermalControlUnitAntifreeze; ThermalControlUnitAntifreeze::apply; ThermalControlUnitManual::ThermalControlUnitManual; ThermalControlUnitManual::apply; ThermalControlUnitManual::getMaximumManualTemperature; ThermalControlUnitManual::getMinimumManualTemperature; ThermalControlUnitManual::getTemperature; ThermalControlUnitManual::setTemperature; ThermalControlUnitManual::valueReceived; ThermalControlUnitObject::ThermalControlUnitObject; ThermalControlUnitObject::getName; ThermalControlUnitObject::reset; ThermalControlUnitOff::ThermalControlUnitOff; ThermalControlUnitOff::apply; ThermalControlUnitProgram::ThermalControlUnitProgram; ThermalControlUnitProgram::apply; ThermalControlUnitProgram::getProgramDescription; ThermalControlUnitProgram::getProgramId; ThermalControlUnitProgram::getProgramIndex; ThermalControlUnitProgram::getPrograms; ThermalControlUnitProgram::setProgramIndex; ThermalControlUnitProgram::valueReceived; ThermalControlUnitScenario::ThermalControlUnitScenario; ThermalControlUnitScenario::apply; ThermalControlUnitScenario::getScenarioDescription; ThermalControlUnitScenario::getScenarioId; ThermalControlUnitScenario::getScenarioIndex; ThermalControlUnitScenario::getScenarios; ThermalControlUnitScenario::setScenarioIndex; ThermalControlUnitScenario::valueReceived; ThermalControlUnitTimedManual::ThermalControlUnitTimedManual; ThermalControlUnitTimedManual::apply; ThermalControlUnitTimedManual::emitTimeSignals; ThermalControlUnitTimedManual::getHours; ThermalControlUnitTimedManual::getMinutes; ThermalControlUnitTimedManual::getSeconds; ThermalControlUnitTimedManual::setHours; ThermalControlUnitTimedManual::setMinutes; ThermalControlUnitTimedManual::setSeconds; ThermalControlUnitTimedManual::toHours; ThermalControlUnitTimedManual::toMinutes; ThermalControlUnitTimedManual::toSeconds; ThermalControlUnitTimedManual::valueReceived; ThermalControlUnitTimedProgram::ThermalControlUnitTimedProgram; ThermalControlUnitTimedProgram::apply; ThermalControlUnitTimedProgram::emitDateSignals; ThermalControlUnitTimedProgram::emitTimeSignals; ThermalControlUnitTimedProgram::getDays; ThermalControlUnitTimedProgram::getHours; ThermalControlUnitTimedProgram::getMinutes; ThermalControlUnitTimedProgram::getMonths; ThermalControlUnitTimedProgram::getSeconds; ThermalControlUnitTimedProgram::getYears; ThermalControlUnitTimedProgram::setDays; ThermalControlUnitTimedProgram::setHours; ThermalControlUnitTimedProgram::setMinutes; ThermalControlUnitTimedProgram::setMonths; ThermalControlUnitTimedProgram::setSeconds; ThermalControlUnitTimedProgram::setYears; ThermalControlUnitTimedProgram::valueReceived; ThermalRegulationProgram::ThermalRegulationProgram; parseControlUnit4; parseControlUnit99; parseZone4; parseZone99](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/thermalobjects.cpp#L60-L1015) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007696, ownkb:claim:moc-c007697
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000212`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ThermalControlledProbe::ThermalControlledProbe; ThermalControlledProbe::getCentralType; ThermalControlledProbe::getControlUnit; ThermalControlledProbe::getLocalOffset; ThermalControlledProbe::getLocalProbeStatus; ThermalControlledProbe::getMaximumManualTemperature; ThermalControlledProbe::getMinimumManualTemperature; ThermalControlledProbe::getObjectKey; ThermalControlledProbe::getProbeStatus; ThermalControlledProbe::getSetpoint; ThermalControlledProbe::getTemperature; ThermalControlledProbe::setProbeStatus; ThermalControlledProbe::setSetpoint; ThermalControlledProbe::valueReceived; ThermalControlledProbeFancoil::ThermalControlledProbeFancoil; ThermalControlledProbeFancoil::getFancoil; ThermalControlledProbeFancoil::setFancoil; ThermalControlledProbeFancoil::valueReceived; ThermalNonControlledProbe::ThermalNonControlledProbe; ThermalNonControlledProbe::getObjectKey; ThermalNonControlledProbe::getTemperature; ThermalNonControlledProbe::valueReceived; parseExternalNonControlledProbes](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/thermalprobes.cpp#L32-L282) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007696, ownkb:claim:moc-c007697
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
 
 # Document: ownkb:document:d000069
 
@@ -8841,6 +11021,40 @@ A measured-temperature request uses `*#4*WHERE*0##`; the response carries the te
 
 Published measured/status temperature fields use four decimal digits and can represent `0000..0500` (`0.0..50.0` °C) with 0.1 °C resolution in the documented zone-status exchanges. This representation is distinct from setpoint-writing constraints.
 
+#### Historical signed-temperature interpretation
+
+Section ID: `ownkb:section:d000069:s000022`
+
+Provenance cues: `evidence`
+
+The touchscreen probe objects interpret raw `1010` as `-10` tenths of °C (-1.0 °C); exact tests cover both controlled and external probe objects. The shared converter subtracts `1000` and negates values at or above `1000`, while nonnegative tenths remain unchanged. This is implementation evidence for signed probe readings, not an expansion of the published status range above or permission to send negative setpoints through every thermal operation. See [Signed-temperature evidence](../../project/review/myopencommunity-reassessment.md#hvac-values-and-partial-records).
+
+Evidence finding `moc-e0066` (claimed): Probe signed-temperature consumer
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007712`
+- `ownkb:source:moc-s000212`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ThermalControlledProbe::ThermalControlledProbe; ThermalControlledProbe::getCentralType; ThermalControlledProbe::getControlUnit; ThermalControlledProbe::getLocalOffset; ThermalControlledProbe::getLocalProbeStatus; ThermalControlledProbe::getMaximumManualTemperature; ThermalControlledProbe::getMinimumManualTemperature; ThermalControlledProbe::getObjectKey; ThermalControlledProbe::getProbeStatus; ThermalControlledProbe::getSetpoint; ThermalControlledProbe::getTemperature; ThermalControlledProbe::setProbeStatus; ThermalControlledProbe::setSetpoint; ThermalControlledProbe::valueReceived; ThermalControlledProbeFancoil::ThermalControlledProbeFancoil; ThermalControlledProbeFancoil::getFancoil; ThermalControlledProbeFancoil::setFancoil; ThermalControlledProbeFancoil::valueReceived; ThermalNonControlledProbe::ThermalNonControlledProbe; ThermalNonControlledProbe::getObjectKey; ThermalNonControlledProbe::getTemperature; ThermalNonControlledProbe::valueReceived; parseExternalNonControlledProbes](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/thermalprobes.cpp#L32-L282) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007712
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000221`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestThermalControlledProbes::cleanup; TestThermalControlledProbes::compareClientCommand; TestThermalControlledProbes::init; TestThermalControlledProbes::initObjects; TestThermalControlledProbes::testReceiveLocalOffset; TestThermalControlledProbes::testReceiveLocalStatus; TestThermalControlledProbes::testReceiveSetPoint; TestThermalControlledProbes::testReceiveStatus; TestThermalControlledProbes::testReceiveTemperature; TestThermalControlledProbes::testSetProbeStatus; TestThermalControlledProbes::testSetSetPoint; TestThermalControlledProbesFancoil::init; TestThermalControlledProbesFancoil::testReceiveFancoilSpeed; TestThermalControlledProbesFancoil::testSetFancoilSpeed; TestThermalNonControlledProbes::cleanup; TestThermalNonControlledProbes::init; TestThermalNonControlledProbes::testReceiveTemperature](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_thermalprobes_object.cpp#L52-L324) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0067` (claimed): Common temperature-conversion discrepancy
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007713`, `ownkb:claim:moc-c007714`
+- `ownkb:source:moc-s000222`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - bt2Celsius; bt2Fahrenheit; celsius2Bt; celsiusString; fahrenheit2Bt; fahrenheitString; toCelsius; toFahrenheit](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/scaleconversion.cpp#L28-L107) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-coverage-audit.md`.
+  Examination claims: ownkb:claim:moc-c007713, ownkb:claim:moc-c007714
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0107` (corroborates): Retained temperature helper execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007713`, `ownkb:claim:moc-c007714`
+- `ownkb:source:moc-s000222`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtcommon - bt2Celsius; bt2Fahrenheit; celsius2Bt; celsiusString; fahrenheit2Bt; fahrenheitString; toCelsius; toFahrenheit](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/scaleconversion.cpp#L28-L107) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-coverage-audit.md`.
+  Examination claims: ownkb:claim:moc-c007713, ownkb:claim:moc-c007714
+  Conditions: Original Celsius/Fahrenheit conversion helpers compiled separately without altering their arithmetic.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - Six checks passed; 1000 yields Celsius zero but Fahrenheit 2120, not an extra wire sentinel.; Original Celsius/Fahrenheit conversion helpers compiled separately without altering their arithmetic.. Inputs: 1010 to Celsius -10 and Fahrenheit 302; Boundary 1000; Inverse recovery of 1010. Record: `project/review/myopencommunity-coverage-audit.md` (All six checks passed).
+
 ### `DIMENSION 11` - fan-coil speed
 
 Section ID: `ownkb:section:d000069:s000008`
@@ -8858,10 +11072,23 @@ Read and write forms should therefore be distinguished by frame direction and op
 Section ID: `ownkb:section:d000069:s000009`
 
 Cautions: `do not`
+Provenance cues: `evidence`
 
 `DIMENSION 12` returns the complete probe state, combining the zone's target/status information with its operating context. It is the appropriate operation when a client needs more than the scalar measured temperature returned by `DIMENSION 0`.
 
 The public request is `*#4*WHERE*12##` for master-probe addresses `1..99`. The response `*#4*WHERE*12*T*3##` gives the setpoint after local offset: `T` ranges over `0020..0430` in 0.1 °C units. The trailing `3` is fixed in this published flow; the actual heating/conditioning/protection state is also returned in a separate `*4*WHAT*WHERE##` frame. Do not interpret the final `3` as a complete replacement for that state frame (page 16).
+
+The historical touchscreen client reconstructs its cached base setpoint by subtracting the known local offset from `T` while the knob is in its normal adjustment state. Its exact test combines offset `03` with `T=0250` and expects `0220` internally. The wire value remains 25.0 °C; the cached base value is 22.0 °C. See [probe-state evidence](../../project/review/myopencommunity-coverage-audit.md#probe-state-and-load-levels).
+
+Evidence finding `moc-e0059` (claimed): Probe reported/setpoint cache
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007698`, `ownkb:claim:moc-c007699`
+- `ownkb:source:moc-s000213`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ControlledProbeDevice::ControlledProbeDevice; ControlledProbeDevice::parseFrame; ControlledProbeDevice::requestFancoilStatus; ControlledProbeDevice::requestSetpoint; ControlledProbeDevice::requestStatus; ControlledProbeDevice::setAutomatic; ControlledProbeDevice::setFancoilSpeed; ControlledProbeDevice::setManual; ControlledProbeDevice::setOff; ControlledProbeDevice::setProtection; NonControlledProbeDevice::NonControlledProbeDevice; NonControlledProbeDevice::parseFrame; NonControlledProbeDevice::requestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/probe_device.cpp#L68-L328) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007698, ownkb:claim:moc-c007699
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000214`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestControlledProbeDevice::cleanupTestCase; TestControlledProbeDevice::initTestCase; TestControlledProbeDevice::receiveAntifreeze; TestControlledProbeDevice::receiveAuto; TestControlledProbeDevice::receiveFancoilStatus; TestControlledProbeDevice::receiveHeatingAndRequestStatus; TestControlledProbeDevice::receiveLocalAntifreeze; TestControlledProbeDevice::receiveLocalOff; TestControlledProbeDevice::receiveLocalOffset1; TestControlledProbeDevice::receiveLocalOffset2; TestControlledProbeDevice::receiveManual; TestControlledProbeDevice::receiveOff; TestControlledProbeDevice::receiveSetPoint; TestControlledProbeDevice::receiveSetPointAdjusted; TestControlledProbeDevice::receiveTemperature; TestControlledProbeDevice::sendRequestFancoilStatus; TestControlledProbeDevice::sendRequestStatus; TestControlledProbeDevice::sendSetAutomatic; TestControlledProbeDevice::sendSetFancoilSpeed; TestControlledProbeDevice::sendSetManual; TestExternalProbeDevice::cleanupTestCase; TestExternalProbeDevice::initTestCase; TestExternalProbeDevice::receiveTemperature; TestExternalProbeDevice::sendRequestStatus; TestExternalProbeDevice::testCrash; TestNonControlledProbeDevice::cleanupTestCase; TestNonControlledProbeDevice::initTestCase; TestNonControlledProbeDevice::receiveTemperature; TestNonControlledProbeDevice::sendRequestStatus; TestNonControlledProbeDevice::testCrash](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_probe_device.cpp#L37-L279) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 ### `DIMENSION 13` - local set offset
 
@@ -8881,6 +11108,15 @@ Request `*#4*WHERE*13##`; response/event `*#4*WHERE*13*OFFSET##` (pages 16–17)
 
 These are codes, not signed decimal temperatures.
 
+The historical touchscreen stores central operation separately from the local selector. Product tests start with a central manual mode, display OFF or protection under local override, then show manual again after normal adjustment resumes. The client displays zero offset during those overrides. This [client-state precedence](../../project/review/myopencommunity-hvac-history-review.md#probe-state-and-fan-coil-corrections) does not establish a physical reset.
+
+Evidence finding `moc-e0060` (claimed): Thermal application overrides
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007700`
+- `ownkb:source:moc-s000212`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ThermalControlledProbe::ThermalControlledProbe; ThermalControlledProbe::getCentralType; ThermalControlledProbe::getControlUnit; ThermalControlledProbe::getLocalOffset; ThermalControlledProbe::getLocalProbeStatus; ThermalControlledProbe::getMaximumManualTemperature; ThermalControlledProbe::getMinimumManualTemperature; ThermalControlledProbe::getObjectKey; ThermalControlledProbe::getProbeStatus; ThermalControlledProbe::getSetpoint; ThermalControlledProbe::getTemperature; ThermalControlledProbe::setProbeStatus; ThermalControlledProbe::setSetpoint; ThermalControlledProbe::valueReceived; ThermalControlledProbeFancoil::ThermalControlledProbeFancoil; ThermalControlledProbeFancoil::getFancoil; ThermalControlledProbeFancoil::setFancoil; ThermalControlledProbeFancoil::valueReceived; ThermalNonControlledProbe::ThermalNonControlledProbe; ThermalNonControlledProbe::getObjectKey; ThermalNonControlledProbe::getTemperature; ThermalNonControlledProbe::valueReceived; parseExternalNonControlledProbes](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/thermalprobes.cpp#L32-L282) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007700
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### `DIMENSION 14` - setpoint temperature
 
 Section ID: `ownkb:section:d000069:s000011`
@@ -8892,6 +11128,24 @@ For this operation, `T` is encoded as four digits in `0050..0400` (5.0..40.0 °C
 The MyHOME_Suite functional parameter definitions likewise represent setpoint ranges and steps for Temperature Control operations; the exact parameter definition attached to the command remains authoritative for the implementation form being encoded.
 
 The public read form is `*#4*WHERE*14##`, with response `*#4*WHERE*14*T*3##` for probe addresses `1..99`. The read table specifies 0.1 °C resolution over `0050..0400`; it does not change the 0.5 °C step specified for writes (page 18).
+
+### Historical external-probe `DIMENSION 15`
+
+Section ID: `ownkb:section:d000069:s000018`
+
+Provenance cues: `evidence`
+
+BTicino touchscreen tests at `TS10_1_0_23` establish the external-temperature query `*#4*WHERE*15#1##`. The test report `*#4*11*15*1*123*1111##` yields temperature value `123`, after the first report field `1`. The trailing `1111` is not interpreted by the probe class. Earlier request variants were corrected in the product history; they are not interchangeable read forms. See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
+
+Evidence finding `moc-e0061` (claimed): External-probe interpretation
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007701`
+- `ownkb:source:moc-s000213`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ControlledProbeDevice::ControlledProbeDevice; ControlledProbeDevice::parseFrame; ControlledProbeDevice::requestFancoilStatus; ControlledProbeDevice::requestSetpoint; ControlledProbeDevice::requestStatus; ControlledProbeDevice::setAutomatic; ControlledProbeDevice::setFancoilSpeed; ControlledProbeDevice::setManual; ControlledProbeDevice::setOff; ControlledProbeDevice::setProtection; NonControlledProbeDevice::NonControlledProbeDevice; NonControlledProbeDevice::parseFrame; NonControlledProbeDevice::requestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/probe_device.cpp#L68-L328) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007701
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000214`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestControlledProbeDevice::cleanupTestCase; TestControlledProbeDevice::initTestCase; TestControlledProbeDevice::receiveAntifreeze; TestControlledProbeDevice::receiveAuto; TestControlledProbeDevice::receiveFancoilStatus; TestControlledProbeDevice::receiveHeatingAndRequestStatus; TestControlledProbeDevice::receiveLocalAntifreeze; TestControlledProbeDevice::receiveLocalOff; TestControlledProbeDevice::receiveLocalOffset1; TestControlledProbeDevice::receiveLocalOffset2; TestControlledProbeDevice::receiveManual; TestControlledProbeDevice::receiveOff; TestControlledProbeDevice::receiveSetPoint; TestControlledProbeDevice::receiveSetPointAdjusted; TestControlledProbeDevice::receiveTemperature; TestControlledProbeDevice::sendRequestFancoilStatus; TestControlledProbeDevice::sendRequestStatus; TestControlledProbeDevice::sendSetAutomatic; TestControlledProbeDevice::sendSetFancoilSpeed; TestControlledProbeDevice::sendSetManual; TestExternalProbeDevice::cleanupTestCase; TestExternalProbeDevice::initTestCase; TestExternalProbeDevice::receiveTemperature; TestExternalProbeDevice::sendRequestStatus; TestExternalProbeDevice::testCrash; TestNonControlledProbeDevice::cleanupTestCase; TestNonControlledProbeDevice::initTestCase; TestNonControlledProbeDevice::receiveTemperature; TestNonControlledProbeDevice::sendRequestStatus; TestNonControlledProbeDevice::testCrash](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_probe_device.cpp#L37-L279) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 ### `DIMENSION 19` - valve status
 
@@ -8947,6 +11201,27 @@ The source also labels each field `NULL` for current/insignificant values, witho
 
 The broad published `SP` range is an encoding range, not a claim that a particular split unit accepts every temperature.
 
+#### Historical partial split writes
+
+Section ID: `ownkb:section:d000069:s000019`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The touchscreen tests resolve the published `NULL` ambiguity for that implementation: omitted values are empty fields. Fan-mode and dehumidification writes include `*#4*45#1*#22*3**1*1##` and `*#4*45#1*#22*4**1*1##`; OFF uses a payload `0***`. This is implementation evidence for partial updates, not proof of support by every split unit or address variant.
+
+After a non-OFF write, the client checks the first matching `DIMENSION 22` report for the exact `WHERE`, comparing only supplied write fields whose positions are present in that report. It clears the pending check even on a mismatch or a short report, emits an error for a compared mismatch, and emits no positive confirmation. Later unsolicited reports do not repeat that comparison. This [one-report check](../../project/review/myopencommunity-hvac-history-review.md#partial-split-writes-and-report-checking) is a library policy and does not verify omitted report fields or physical attainment of the requested state.
+
+Evidence finding `moc-e0062` (claimed): Partial split writes and local report checking
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007702`, `ownkb:claim:moc-c007703`, `ownkb:claim:moc-c007704`
+- `ownkb:source:moc-s000215`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AdvancedAirConditioningDevice::AdvancedAirConditioningDevice; AdvancedAirConditioningDevice::activateScenario; AdvancedAirConditioningDevice::parseFrame; AdvancedAirConditioningDevice::requestStatus; AdvancedAirConditioningDevice::setStatus; AdvancedAirConditioningDevice::statusToString; AdvancedAirConditioningDevice::turnOff; AirConditioningDevice::AirConditioningDevice; AirConditioningDevice::activateScenario; AirConditioningDevice::sendCommand; AirConditioningDevice::setOffCommand; AirConditioningDevice::turnOff](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/airconditioning_device.cpp#L32-L152) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007702, ownkb:claim:moc-c007703, ownkb:claim:moc-c007704
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000216`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAdvancedAirConditioningDevice::cleanupTestCase; TestAdvancedAirConditioningDevice::initTestCase; TestAdvancedAirConditioningDevice::receiveSetStatusNotSet; TestAdvancedAirConditioningDevice::receiveSetStatusSetError; TestAdvancedAirConditioningDevice::receiveSetStatusSetOk; TestAdvancedAirConditioningDevice::sendRequestStatus; TestAdvancedAirConditioningDevice::testStatusToString; TestAdvancedAirConditioningDevice::testStatusToString2; TestAdvancedAirConditioningDevice::testStatusToString3; TestAdvancedAirConditioningDevice::testStatusToString4; TestAirConditioningDevice::cleanupTestCase; TestAirConditioningDevice::compareCommand; TestAirConditioningDevice::initTestCase; TestAirConditioningDevice::sendActivateScenario; TestAirConditioningDevice::sendSendCommand; TestAirConditioningDevice::sendTurnOff](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_air_conditioning_device.cpp#L31-L164) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007702, ownkb:claim:moc-c007703, ownkb:claim:moc-c007704
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
 ### `DIMENSION 30` - holiday end
 
 Section ID: `ownkb:section:d000069:s000015`
@@ -8963,6 +11238,87 @@ The central unit uses separate date and time dimensions (pages 54, 57–58):
 `D` is `01..31`, `M` is `01..12`, `Y` is `2000..2099`, `H` is `00..23`, and `MIN` is `00..59`. Validate the actual calendar date as well as individual field ranges.
 
 `DIMENSION 31` is omitted from the source's summary table but explicitly defined by its detailed flows. Some read examples mistakenly include the write marker; the response column and monitor forms establish the unprefixed report form. These operations set the deadline used by the [Temperature Control Commands](what.md).
+
+### Historical timed-manual `DIMENSION 32`
+
+Section ID: `ownkb:section:d000069:s000020`
+
+Applicability cues: `firmware`
+Provenance cues: `source`
+
+The four-zone touchscreen class sets timed manual operation in two steps: `*4*312#0250#2*WHERE##`, then `*#4*WHERE*#32*H*MIN##` after 200 ms. The first duration is a dummy value overwritten by the second operation. The report parser consumes two values as a duration in hours and minutes, although source comments call the write an end time. Preserve this distinction rather than treating it as an absolute clock deadline. The delay and sequence are product behavior; no universal Firmware timing requirement is established.
+
+Evidence finding `moc-e0063` (claimed): Timed manual library sequence
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007705`, `ownkb:claim:moc-c007706`
+- `ownkb:source:moc-s000217`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ThermalDevice4Zones::ThermalDevice4Zones; ThermalDevice4Zones::maximumTemp; ThermalDevice4Zones::setEndTime; ThermalDevice4Zones::setManualTempTimed; ThermalDevice4Zones::type; ThermalDevice99Zones::ThermalDevice99Zones; ThermalDevice99Zones::maximumTemp; ThermalDevice99Zones::setScenario; ThermalDevice99Zones::type; ThermalDevice::ThermalDevice; ThermalDevice::commandRange; ThermalDevice::init; ThermalDevice::minimumTemp; ThermalDevice::parseFrame; ThermalDevice::sendWriteRequest; ThermalDevice::setHolidayDateTime; ThermalDevice::setHolidayEndDate; ThermalDevice::setHolidayEndTime; ThermalDevice::setManualTemp; ThermalDevice::setOff; ThermalDevice::setProtection; ThermalDevice::setSummer; ThermalDevice::setWeekProgram; ThermalDevice::setWeekendDateTime; ThermalDevice::setWinter](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/thermal_device.cpp#L87-L425) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007705, ownkb:claim:moc-c007706
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000218`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestThermalDevice4Zones::cleanupTestCase; TestThermalDevice4Zones::initTestCase; TestThermalDevice4Zones::sendSetManualTempTimed; TestThermalDevice99Zones::cleanupTestCase; TestThermalDevice99Zones::initTestCase; TestThermalDevice99Zones::sendSetScenario; TestThermalDevice::checkStatusSeason; TestThermalDevice::checkStatusSeasonProgram; TestThermalDevice::checkStatusSeasonTemperature; TestThermalDevice::holidayDateFrame; TestThermalDevice::holidayTimeFrame; TestThermalDevice::receiveHolidayEndTime; TestThermalDevice::receiveManualTimedDuration; TestThermalDevice::receiveSummerHoliday; TestThermalDevice::receiveSummerManual; TestThermalDevice::receiveSummerManualTimed; TestThermalDevice::receiveSummerOff; TestThermalDevice::receiveSummerProgram; TestThermalDevice::receiveSummerProtection; TestThermalDevice::receiveSummerScenario; TestThermalDevice::receiveSummerWeekend; TestThermalDevice::receiveWeekendEndDate; TestThermalDevice::receiveWinterHoliday; TestThermalDevice::receiveWinterManual; TestThermalDevice::receiveWinterManualTimed; TestThermalDevice::receiveWinterOff; TestThermalDevice::receiveWinterProgram; TestThermalDevice::receiveWinterProtection; TestThermalDevice::receiveWinterScenario; TestThermalDevice::receiveWinterWeekend; TestThermalDevice::sendSetHolidayDateTime; TestThermalDevice::sendSetManualTemp; TestThermalDevice::sendSetOff; TestThermalDevice::sendSetProtection; TestThermalDevice::sendSetSummer; TestThermalDevice::sendSetWeekProgram; TestThermalDevice::sendSetWeekendDateTime; TestThermalDevice::sendSetWinter; TestThermalDevice::setTestDevice](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_thermal_device.cpp#L37-L328) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+### Historical BACnet HVAC dimensions
+
+Section ID: `ownkb:section:d000069:s000021`
+
+Cautions: `must not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen BACnet classes at `TS10_1_0_23` expose the following records under `WHO 4`. They are implementation extensions, not part of the public functional registry above. A read uses `*#4*WHERE*DIMENSION##`; a write uses `*#4*WHERE*#DIMENSION*VALUES##`.
+
+| Dimension / class | Ordered writable fields | Additional report fields, in order |
+| --- | --- | --- |
+| `50` - underfloor heating | setpoint, status, mode | temperature, fault flag, fault description |
+| `51` - AC split with fan coil | setpoint, status, mode, fan speed, air direction, reset filter fault | temperature, fault flag, fault description |
+| `52` - air handling unit | setpoint, status, mode, humidity setpoint, airflow setpoint, minimum airflow, maximum airflow, recirculation, fan speed | temperature, fault flag, fault description, humidity, airflow, air quality, antifreeze alarm |
+| `53` - variable air volume | setpoint, status, mode, airflow setpoint | temperature, fault flag, fault description |
+
+Reports can therefore contain 6, 9, 16, or 7 ordered fields respectively. The writer retains empty positions for unspecified fields; its internal `-1` sentinel is not transmitted. For example, a status-only fan-coil write is `*#4*WHERE*#51**1****##`.
+
+The class enums define status `0` inactive / `1` active, and mode `0` inactive, `1` winter, `2` summer, `3` fan, `4` dry, `5` normal automatic, `6` fast automatic, `7` energy-saving automatic. The remaining enum domains are:
+
+| Field | Historical BACnet values |
+| --- | --- |
+| Fan speed, dimensions `51` / `52` | `0` automatic; `1` slow; `2` normal; `3` fast; `4` silent |
+| Air direction, dimension `51` | `0` automatic; `1` forward; `2` backward; `3` random; `4` slow cycling; `5` cycling; `6` fast cycling; `7` stop |
+
+A filter-reset write supplies `0` in the sixth value of dimension `51`: `*#4*WHERE*#51******0##`. The report decoder instead reads that position as a boolean filter flag. Write intent and report state therefore differ.
+
+The report tests also distinguish a missing trailing field from an empty field already present: absent numeric fields can retain an internal unset sentinel, while present empty positions are converted to zero. The decoder does not treat an empty report position as an instruction to preserve cached state. This behavior must not be imported into the partial-write semantics.
+
+These domains belong to this BACnet adapter model, not every `WHO 4` target. Numeric scaling and fault-description codes require the relevant adapter/Device evidence.
+
+See [Temperature Control evidence](../../project/review/myopencommunity-integration.md#temperature-control).
+
+Evidence finding `moc-e0065` (claimed): BACnet adapter fields
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007708`, `ownkb:claim:moc-c007709`, `ownkb:claim:moc-c007710`, `ownkb:claim:moc-c007711`
+- `ownkb:source:moc-s000219`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ACSplitWithFanCoilDevice::ACSplitWithFanCoilDevice; ACSplitWithFanCoilDevice::State::State; ACSplitWithFanCoilDevice::init; ACSplitWithFanCoilDevice::parseFrame; ACSplitWithFanCoilDevice::requestStatus; ACSplitWithFanCoilDevice::resetFilterFault; ACSplitWithFanCoilDevice::setStatus; ACSplitWithFanCoilDevice::statusToWhat; ACSplitWithFanCoilDevice::turnOff; ACSplitWithFanCoilDevice::turnOn; AirHandlingDevice::AirHandlingDevice; AirHandlingDevice::State::State; AirHandlingDevice::init; AirHandlingDevice::parseFrame; AirHandlingDevice::requestStatus; AirHandlingDevice::setStatus; AirHandlingDevice::statusToWhat; AirHandlingDevice::turnOff; AirHandlingDevice::turnOn; UnderfloorHeatingDevice::State::State; UnderfloorHeatingDevice::UnderfloorHeatingDevice; UnderfloorHeatingDevice::init; UnderfloorHeatingDevice::parseFrame; UnderfloorHeatingDevice::requestStatus; UnderfloorHeatingDevice::setStatus; UnderfloorHeatingDevice::statusToWhat; UnderfloorHeatingDevice::turnOff; UnderfloorHeatingDevice::turnOn; VariableAirVolumeDevice::State::State; VariableAirVolumeDevice::VariableAirVolumeDevice; VariableAirVolumeDevice::init; VariableAirVolumeDevice::parseFrame; VariableAirVolumeDevice::requestStatus; VariableAirVolumeDevice::setStatus; VariableAirVolumeDevice::statusToWhat; VariableAirVolumeDevice::turnOff; VariableAirVolumeDevice::turnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/bacnet_device.cpp#L32-L669) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007708, ownkb:claim:moc-c007709, ownkb:claim:moc-c007710, ownkb:claim:moc-c007711
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000220`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestACSplitWithFanCoilDevice::cleanupTestCase; TestACSplitWithFanCoilDevice::initTestCase; TestACSplitWithFanCoilDevice::receiveActiveStatus; TestACSplitWithFanCoilDevice::receiveAirDirectionStatus; TestACSplitWithFanCoilDevice::receiveFanStatus; TestACSplitWithFanCoilDevice::receiveFilterStatus; TestACSplitWithFanCoilDevice::receiveGeneralFaultStatus; TestACSplitWithFanCoilDevice::receiveModeStatus; TestACSplitWithFanCoilDevice::receiveStatus; TestACSplitWithFanCoilDevice::receiveTemperatureStatus; TestACSplitWithFanCoilDevice::sendRequestStatus; TestACSplitWithFanCoilDevice::sendResetFilterStatus; TestACSplitWithFanCoilDevice::sendSetActiveStatus; TestACSplitWithFanCoilDevice::sendSetAirDirectionStatus; TestACSplitWithFanCoilDevice::sendSetFanStatus; TestACSplitWithFanCoilDevice::sendSetModeStatus; TestACSplitWithFanCoilDevice::sendSetStatus; TestACSplitWithFanCoilDevice::sendSetTemperatureStatus; TestACSplitWithFanCoilDevice::sendTurnOff; TestACSplitWithFanCoilDevice::sendTurnOn; TestAirHandlingDevice::cleanupTestCase; TestAirHandlingDevice::initTestCase; TestAirHandlingDevice::receiveActiveStatus; TestAirHandlingDevice::receiveActualAirFlowStatus; TestAirHandlingDevice::receiveActualAirQualityStatus; TestAirHandlingDevice::receiveActualHumidityStatus; TestAirHandlingDevice::receiveActualTemperatureStatus; TestAirHandlingDevice::receiveAirFlowStatus; TestAirHandlingDevice::receiveAntiFreezeAlarmStatus; TestAirHandlingDevice::receiveFanStatus; TestAirHandlingDevice::receiveGeneralFaultStatus; TestAirHandlingDevice::receiveHumidityStatus; TestAirHandlingDevice::receiveMaxAirFlowStatus; TestAirHandlingDevice::receiveMinAirFlowStatus; TestAirHandlingDevice::receiveModeStatus; TestAirHandlingDevice::receiveRecirculationStatus; TestAirHandlingDevice::receiveStatus; TestAirHandlingDevice::receiveTemperatureStatus; TestAirHandlingDevice::sendRequestStatus; TestAirHandlingDevice::sendSetActiveStatus; TestAirHandlingDevice::sendSetAirFlowStatus; TestAirHandlingDevice::sendSetFanStatus; TestAirHandlingDevice::sendSetHumidityStatus; TestAirHandlingDevice::sendSetMaxAirFlowStatus; TestAirHandlingDevice::sendSetMinAirFlowStatus; TestAirHandlingDevice::sendSetModeStatus; TestAirHandlingDevice::sendSetRecirculationStatus; TestAirHandlingDevice::sendSetStatus; TestAirHandlingDevice::sendSetTemperatureStatus; TestAirHandlingDevice::sendTurnOff; TestAirHandlingDevice::sendTurnOn; TestUnderfloorHeatingDevice::cleanupTestCase; TestUnderfloorHeatingDevice::initTestCase; TestUnderfloorHeatingDevice::receiveActiveStatus; TestUnderfloorHeatingDevice::receiveActualTemperatureStatus; TestUnderfloorHeatingDevice::receiveGeneralFaultStatus; TestUnderfloorHeatingDevice::receiveModeStatus; TestUnderfloorHeatingDevice::receiveStatus; TestUnderfloorHeatingDevice::receiveTemperatureStatus; TestUnderfloorHeatingDevice::sendRequestStatus; TestUnderfloorHeatingDevice::sendSetActiveStatus; TestUnderfloorHeatingDevice::sendSetModeStatus; TestUnderfloorHeatingDevice::sendSetStatus; TestUnderfloorHeatingDevice::sendSetTemperatureStatus; TestUnderfloorHeatingDevice::sendTurnOff; TestUnderfloorHeatingDevice::sendTurnOn; TestVariableAirVolumeDevice::cleanupTestCase; TestVariableAirVolumeDevice::initTestCase; TestVariableAirVolumeDevice::receiveActiveStatus; TestVariableAirVolumeDevice::receiveActualTemperatureStatus; TestVariableAirVolumeDevice::receiveAirFLowStatus; TestVariableAirVolumeDevice::receiveGeneralFaultStatus; TestVariableAirVolumeDevice::receiveModeStatus; TestVariableAirVolumeDevice::receiveStatus; TestVariableAirVolumeDevice::receiveTemperatureStatus; TestVariableAirVolumeDevice::sendRequestStatus; TestVariableAirVolumeDevice::sendSetActiveStatus; TestVariableAirVolumeDevice::sendSetAirFlowStatus; TestVariableAirVolumeDevice::sendSetModeStatus; TestVariableAirVolumeDevice::sendSetStatus; TestVariableAirVolumeDevice::sendSetTemperatureStatus; TestVariableAirVolumeDevice::sendTurnOff; TestVariableAirVolumeDevice::sendTurnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_bacnet_device.cpp#L32-L1041) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0097` (deferred): BACnet units, faults and deployment
+Disposition reason: Executable field shape is extracted; units, fault meanings and deployment mappings lack independent adapter/hardware evidence.
+- `ownkb:source:moc-s000219`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - ACSplitWithFanCoilDevice::ACSplitWithFanCoilDevice; ACSplitWithFanCoilDevice::State::State; ACSplitWithFanCoilDevice::init; ACSplitWithFanCoilDevice::parseFrame; ACSplitWithFanCoilDevice::requestStatus; ACSplitWithFanCoilDevice::resetFilterFault; ACSplitWithFanCoilDevice::setStatus; ACSplitWithFanCoilDevice::statusToWhat; ACSplitWithFanCoilDevice::turnOff; ACSplitWithFanCoilDevice::turnOn; AirHandlingDevice::AirHandlingDevice; AirHandlingDevice::State::State; AirHandlingDevice::init; AirHandlingDevice::parseFrame; AirHandlingDevice::requestStatus; AirHandlingDevice::setStatus; AirHandlingDevice::statusToWhat; AirHandlingDevice::turnOff; AirHandlingDevice::turnOn; UnderfloorHeatingDevice::State::State; UnderfloorHeatingDevice::UnderfloorHeatingDevice; UnderfloorHeatingDevice::init; UnderfloorHeatingDevice::parseFrame; UnderfloorHeatingDevice::requestStatus; UnderfloorHeatingDevice::setStatus; UnderfloorHeatingDevice::statusToWhat; UnderfloorHeatingDevice::turnOff; UnderfloorHeatingDevice::turnOn; VariableAirVolumeDevice::State::State; VariableAirVolumeDevice::VariableAirVolumeDevice; VariableAirVolumeDevice::init; VariableAirVolumeDevice::parseFrame; VariableAirVolumeDevice::requestStatus; VariableAirVolumeDevice::setStatus; VariableAirVolumeDevice::statusToWhat; VariableAirVolumeDevice::turnOff; VariableAirVolumeDevice::turnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/bacnet_device.cpp#L32-L669) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0116` (claimed): Ordered BACnet adapter records
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007811`, `ownkb:claim:moc-c007812`, `ownkb:claim:moc-c007813`, `ownkb:claim:moc-c007814`, `ownkb:claim:moc-c007815`, `ownkb:claim:moc-c007816`, `ownkb:claim:moc-c007817`
+- `ownkb:source:moc-s000220`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestACSplitWithFanCoilDevice::cleanupTestCase; TestACSplitWithFanCoilDevice::initTestCase; TestACSplitWithFanCoilDevice::receiveActiveStatus; TestACSplitWithFanCoilDevice::receiveAirDirectionStatus; TestACSplitWithFanCoilDevice::receiveFanStatus; TestACSplitWithFanCoilDevice::receiveFilterStatus; TestACSplitWithFanCoilDevice::receiveGeneralFaultStatus; TestACSplitWithFanCoilDevice::receiveModeStatus; TestACSplitWithFanCoilDevice::receiveStatus; TestACSplitWithFanCoilDevice::receiveTemperatureStatus; TestACSplitWithFanCoilDevice::sendRequestStatus; TestACSplitWithFanCoilDevice::sendResetFilterStatus; TestACSplitWithFanCoilDevice::sendSetActiveStatus; TestACSplitWithFanCoilDevice::sendSetAirDirectionStatus; TestACSplitWithFanCoilDevice::sendSetFanStatus; TestACSplitWithFanCoilDevice::sendSetModeStatus; TestACSplitWithFanCoilDevice::sendSetStatus; TestACSplitWithFanCoilDevice::sendSetTemperatureStatus; TestACSplitWithFanCoilDevice::sendTurnOff; TestACSplitWithFanCoilDevice::sendTurnOn; TestAirHandlingDevice::cleanupTestCase; TestAirHandlingDevice::initTestCase; TestAirHandlingDevice::receiveActiveStatus; TestAirHandlingDevice::receiveActualAirFlowStatus; TestAirHandlingDevice::receiveActualAirQualityStatus; TestAirHandlingDevice::receiveActualHumidityStatus; TestAirHandlingDevice::receiveActualTemperatureStatus; TestAirHandlingDevice::receiveAirFlowStatus; TestAirHandlingDevice::receiveAntiFreezeAlarmStatus; TestAirHandlingDevice::receiveFanStatus; TestAirHandlingDevice::receiveGeneralFaultStatus; TestAirHandlingDevice::receiveHumidityStatus; TestAirHandlingDevice::receiveMaxAirFlowStatus; TestAirHandlingDevice::receiveMinAirFlowStatus; TestAirHandlingDevice::receiveModeStatus; TestAirHandlingDevice::receiveRecirculationStatus; TestAirHandlingDevice::receiveStatus; TestAirHandlingDevice::receiveTemperatureStatus; TestAirHandlingDevice::sendRequestStatus; TestAirHandlingDevice::sendSetActiveStatus; TestAirHandlingDevice::sendSetAirFlowStatus; TestAirHandlingDevice::sendSetFanStatus; TestAirHandlingDevice::sendSetHumidityStatus; TestAirHandlingDevice::sendSetMaxAirFlowStatus; TestAirHandlingDevice::sendSetMinAirFlowStatus; TestAirHandlingDevice::sendSetModeStatus; TestAirHandlingDevice::sendSetRecirculationStatus; TestAirHandlingDevice::sendSetStatus; TestAirHandlingDevice::sendSetTemperatureStatus; TestAirHandlingDevice::sendTurnOff; TestAirHandlingDevice::sendTurnOn; TestUnderfloorHeatingDevice::cleanupTestCase; TestUnderfloorHeatingDevice::initTestCase; TestUnderfloorHeatingDevice::receiveActiveStatus; TestUnderfloorHeatingDevice::receiveActualTemperatureStatus; TestUnderfloorHeatingDevice::receiveGeneralFaultStatus; TestUnderfloorHeatingDevice::receiveModeStatus; TestUnderfloorHeatingDevice::receiveStatus; TestUnderfloorHeatingDevice::receiveTemperatureStatus; TestUnderfloorHeatingDevice::sendRequestStatus; TestUnderfloorHeatingDevice::sendSetActiveStatus; TestUnderfloorHeatingDevice::sendSetModeStatus; TestUnderfloorHeatingDevice::sendSetStatus; TestUnderfloorHeatingDevice::sendSetTemperatureStatus; TestUnderfloorHeatingDevice::sendTurnOff; TestUnderfloorHeatingDevice::sendTurnOn; TestVariableAirVolumeDevice::cleanupTestCase; TestVariableAirVolumeDevice::initTestCase; TestVariableAirVolumeDevice::receiveActiveStatus; TestVariableAirVolumeDevice::receiveActualTemperatureStatus; TestVariableAirVolumeDevice::receiveAirFLowStatus; TestVariableAirVolumeDevice::receiveGeneralFaultStatus; TestVariableAirVolumeDevice::receiveModeStatus; TestVariableAirVolumeDevice::receiveStatus; TestVariableAirVolumeDevice::receiveTemperatureStatus; TestVariableAirVolumeDevice::sendRequestStatus; TestVariableAirVolumeDevice::sendSetActiveStatus; TestVariableAirVolumeDevice::sendSetAirFlowStatus; TestVariableAirVolumeDevice::sendSetModeStatus; TestVariableAirVolumeDevice::sendSetStatus; TestVariableAirVolumeDevice::sendSetTemperatureStatus; TestVariableAirVolumeDevice::sendTurnOff; TestVariableAirVolumeDevice::sendTurnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_bacnet_device.cpp#L32-L1041) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007811, ownkb:claim:moc-c007812, ownkb:claim:moc-c007813, ownkb:claim:moc-c007814
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+- `ownkb:source:moc-s000219`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ACSplitWithFanCoilDevice::ACSplitWithFanCoilDevice; ACSplitWithFanCoilDevice::State::State; ACSplitWithFanCoilDevice::init; ACSplitWithFanCoilDevice::parseFrame; ACSplitWithFanCoilDevice::requestStatus; ACSplitWithFanCoilDevice::resetFilterFault; ACSplitWithFanCoilDevice::setStatus; ACSplitWithFanCoilDevice::statusToWhat; ACSplitWithFanCoilDevice::turnOff; ACSplitWithFanCoilDevice::turnOn; AirHandlingDevice::AirHandlingDevice; AirHandlingDevice::State::State; AirHandlingDevice::init; AirHandlingDevice::parseFrame; AirHandlingDevice::requestStatus; AirHandlingDevice::setStatus; AirHandlingDevice::statusToWhat; AirHandlingDevice::turnOff; AirHandlingDevice::turnOn; UnderfloorHeatingDevice::State::State; UnderfloorHeatingDevice::UnderfloorHeatingDevice; UnderfloorHeatingDevice::init; UnderfloorHeatingDevice::parseFrame; UnderfloorHeatingDevice::requestStatus; UnderfloorHeatingDevice::setStatus; UnderfloorHeatingDevice::statusToWhat; UnderfloorHeatingDevice::turnOff; UnderfloorHeatingDevice::turnOn; VariableAirVolumeDevice::State::State; VariableAirVolumeDevice::VariableAirVolumeDevice; VariableAirVolumeDevice::init; VariableAirVolumeDevice::parseFrame; VariableAirVolumeDevice::requestStatus; VariableAirVolumeDevice::setStatus; VariableAirVolumeDevice::statusToWhat; VariableAirVolumeDevice::turnOff; VariableAirVolumeDevice::turnOn](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/bacnet_device.cpp#L32-L669) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007811, ownkb:claim:moc-c007812, ownkb:claim:moc-c007813, ownkb:claim:moc-c007814
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000248`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - BACnet status, mode, fan-speed and air-direction enum declarations](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/bacnet_device.h#L39-L776) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007815, ownkb:claim:moc-c007816, ownkb:claim:moc-c007817
+  Limitations: Pinned original definition only; no physical behavior or complete archived-suite pass asserted.
 
 ### Temperature fields are operation-specific
 
@@ -9059,6 +11415,7 @@ A zone controlled through the central unit uses central-unit addressing; for exa
 
 Section ID: `ownkb:section:d000070:s000005`
 
+Applicability cues: `firmware`
 Cautions: `do not`, `must not`
 Provenance cues: `source`
 
@@ -9080,6 +11437,18 @@ These operations target the central unit with `WHERE = #0`. The detailed flows o
 For daily holiday commands, the return-program parameter is `1101..1103` for heating, `2101..2103` for conditioning, and `3101..3103` for generic mode. The multi-day vacation commands use `3101..3103` in all three contexts. Daily-holiday event examples instead show the selected ordinal after `115#` or `215#`. Retain that command/report distinction. The deadline itself is set/read with [holiday date and time properties](dimensions.md#dimension-30---holiday-end).
 
 Example: `*4*3102*#0##` selects weekly program 2 in the current thermal context. A reply/event can use the resolved heating or conditioning program code. An acknowledgement confirms submission, not that the requested mode was physically attained.
+
+The historical touchscreen's calendar-based setters send three frames in order: select the return program, write the end date with `DIMENSION 30`, then write the end time with `DIMENSION 31`. For daily holiday mode, the first payload is `315#PROGRAM`; for vacation mode, it is `33002#PROGRAM`. The vacation setter uses two days as a dummy value before supplying the explicit deadline. This [tested client sequence](../../project/review/myopencommunity-hvac-history-review.md#calendar-mode-sequences) does not establish a two-day minimum or a Firmware timing requirement.
+
+Evidence finding `moc-e0064` (claimed): Calendar thermal library sequence
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007707`
+- `ownkb:source:moc-s000217`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - ThermalDevice4Zones::ThermalDevice4Zones; ThermalDevice4Zones::maximumTemp; ThermalDevice4Zones::setEndTime; ThermalDevice4Zones::setManualTempTimed; ThermalDevice4Zones::type; ThermalDevice99Zones::ThermalDevice99Zones; ThermalDevice99Zones::maximumTemp; ThermalDevice99Zones::setScenario; ThermalDevice99Zones::type; ThermalDevice::ThermalDevice; ThermalDevice::commandRange; ThermalDevice::init; ThermalDevice::minimumTemp; ThermalDevice::parseFrame; ThermalDevice::sendWriteRequest; ThermalDevice::setHolidayDateTime; ThermalDevice::setHolidayEndDate; ThermalDevice::setHolidayEndTime; ThermalDevice::setManualTemp; ThermalDevice::setOff; ThermalDevice::setProtection; ThermalDevice::setSummer; ThermalDevice::setWeekProgram; ThermalDevice::setWeekendDateTime; ThermalDevice::setWinter](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/thermal_device.cpp#L87-L425) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007707
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000218`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestThermalDevice4Zones::cleanupTestCase; TestThermalDevice4Zones::initTestCase; TestThermalDevice4Zones::sendSetManualTempTimed; TestThermalDevice99Zones::cleanupTestCase; TestThermalDevice99Zones::initTestCase; TestThermalDevice99Zones::sendSetScenario; TestThermalDevice::checkStatusSeason; TestThermalDevice::checkStatusSeasonProgram; TestThermalDevice::checkStatusSeasonTemperature; TestThermalDevice::holidayDateFrame; TestThermalDevice::holidayTimeFrame; TestThermalDevice::receiveHolidayEndTime; TestThermalDevice::receiveManualTimedDuration; TestThermalDevice::receiveSummerHoliday; TestThermalDevice::receiveSummerManual; TestThermalDevice::receiveSummerManualTimed; TestThermalDevice::receiveSummerOff; TestThermalDevice::receiveSummerProgram; TestThermalDevice::receiveSummerProtection; TestThermalDevice::receiveSummerScenario; TestThermalDevice::receiveSummerWeekend; TestThermalDevice::receiveWeekendEndDate; TestThermalDevice::receiveWinterHoliday; TestThermalDevice::receiveWinterManual; TestThermalDevice::receiveWinterManualTimed; TestThermalDevice::receiveWinterOff; TestThermalDevice::receiveWinterProgram; TestThermalDevice::receiveWinterProtection; TestThermalDevice::receiveWinterScenario; TestThermalDevice::receiveWinterWeekend; TestThermalDevice::sendSetHolidayDateTime; TestThermalDevice::sendSetManualTemp; TestThermalDevice::sendSetOff; TestThermalDevice::sendSetProtection; TestThermalDevice::sendSetSummer; TestThermalDevice::sendSetWeekProgram; TestThermalDevice::sendSetWeekendDateTime; TestThermalDevice::sendSetWinter; TestThermalDevice::setTestDevice](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_thermal_device.cpp#L37-L328) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-hvac-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 ### Zone setup commands
 
@@ -9245,6 +11614,67 @@ Published `WHO 5` `WHERE` values include:
 
 Zone `0` is used for inputs and the three internal sirens in the published model. Alarm addressing is therefore its own `WHO 5` grammar and must not be parsed as Lighting/Automation A/PL.
 
+### Historical event validation
+
+Section ID: `ownkb:section:d000073:s000002`
+
+Provenance cues: `evidence`, `source`
+
+The `TS10_1_0_23` touchscreen library and its tests use these numeric event-source filters:
+
+| Event | `WHAT` | Accepted `WHERE` |
+| --- | --- | --- |
+| Engaged / partialized zone | `11` / `18` | `#1..#8` |
+| Intrusion | `15` | `#1..#8` |
+| Tamper | `16` | `#0..#15` |
+| Anti-panic | `17` | `#9` |
+| Technical alarm / reset | `12` / `13` | `#1..#15` |
+
+These are library filters, not a replacement for every published sensor address. Armed/disarmed reports (`WHAT 8`/`9`) are handled without a `WHERE` check. The parser also lacks a numeric-conversion success check for `#N`; its permissiveness does not establish additional valid addresses.
+
+BtExperience applies another filter before adding decoded events to its alarm list:
+
+| Event | Required local Configuration |
+| --- | --- |
+| Intrusion | Matching configured zone |
+| Technical alarm | Matching configured auxiliary source |
+| Tamper at source `0..8` | Matching configured zone |
+| Tamper at source `9..15`, anti-panic at `9` | No configured source required |
+
+A wire event can therefore be decoded and still omitted from the displayed list. The library handles armed/disarmed state, zone engagement/partialization and the four alarm families above; it does not forward every published maintenance, battery, mains or silent-alarm value to this product model.
+
+See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events), the [Alarm history review](../../project/review/myopencommunity-alarm-history-review.md), and [Protocol](protocol.md#event-connection) for local list behavior.
+
+Evidence finding `moc-e0068` (claimed): Alarm library event filtering
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007715`, `ownkb:claim:moc-c007716`
+- `ownkb:source:moc-s000223`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AntintrusionDevice::AntintrusionDevice; AntintrusionDevice::_partializeZone; AntintrusionDevice::parseFrame; AntintrusionDevice::partializeZone; AntintrusionDevice::requestStatus; AntintrusionDevice::sendActivationFrame; AntintrusionDevice::sendPartializationFrame; AntintrusionDevice::setPartialization; AntintrusionDevice::toggleActivation; zoneNumber](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/antintrusion_device.cpp#L45-L168) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007715, ownkb:claim:moc-c007716
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000224`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAntintrusionDevice::cleanup; TestAntintrusionDevice::init; TestAntintrusionDevice::receiveAntipanicAlarm; TestAntintrusionDevice::receiveIntrusionAlarm; TestAntintrusionDevice::receiveResetTechnicalAlarm; TestAntintrusionDevice::receiveSystemInserted; TestAntintrusionDevice::receiveSystemMaintenance; TestAntintrusionDevice::receiveTamperAlarm; TestAntintrusionDevice::receiveTechnicalAlarm; TestAntintrusionDevice::receiveZoneInserted; TestAntintrusionDevice::receiveZonePartialized; TestAntintrusionDevice::sendRequestStatus; TestAntintrusionDevice::sendToggleActivation1; TestAntintrusionDevice::sendToggleActivation2; TestAntintrusionDevice::sendToggleActivation3; TestAntintrusionDevice::testSetPartialization](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_antintrusion_device.cpp#L30-L196) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0069` (claimed): Alarm application list and zone interpretation
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007717`, `ownkb:claim:moc-c007718`, `ownkb:claim:moc-c007719`
+- `ownkb:source:moc-s000225`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AntintrusionAlarm::AntintrusionAlarm; AntintrusionAlarm::getDateTime; AntintrusionAlarm::getName; AntintrusionAlarm::getNumber; AntintrusionAlarm::getSource; AntintrusionAlarm::getType; AntintrusionAlarmSource::AntintrusionAlarmSource; AntintrusionAlarmSource::getNumber; AntintrusionScenario::AntintrusionScenario; AntintrusionScenario::apply; AntintrusionScenario::getDescription; AntintrusionScenario::isSelected; AntintrusionScenario::verifySelection; AntintrusionSystem::AntintrusionSystem; AntintrusionSystem::addAlarm; AntintrusionSystem::canPartialize; AntintrusionSystem::getAlarms; AntintrusionSystem::getCurrentScenario; AntintrusionSystem::getScenarios; AntintrusionSystem::getZones; AntintrusionSystem::handleCodeTimeout; AntintrusionSystem::isDuplicateAlarm; AntintrusionSystem::removeAlarm; AntintrusionSystem::requestPartialization; AntintrusionSystem::setStatus; AntintrusionSystem::toggleActivation; AntintrusionSystem::valueReceived; AntintrusionZone::AntintrusionZone; AntintrusionZone::getActive; AntintrusionZone::getSelected; AntintrusionZone::setActive; AntintrusionZone::setSelected; createAntintrusionSystem; findAlarmSource; parseAntintrusionAux; parseAntintrusionScenario; parseAntintrusionZone](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/antintrusionsystem.cpp#L34-L582) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007717, ownkb:claim:moc-c007718, ownkb:claim:moc-c007719
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000226`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestAntintrusionSystem::checkAlarmedZones; TestAntintrusionSystem::checkWaitingResponse; TestAntintrusionSystem::cleanup; TestAntintrusionSystem::compareClientCommand; TestAntintrusionSystem::init; TestAntintrusionSystem::initTestCase; TestAntintrusionSystem::setSystemActive; TestAntintrusionSystem::setZonesInserted; TestAntintrusionSystem::testActivateSystem; TestAntintrusionSystem::testAlarmOnNotConfiguredZone; TestAntintrusionSystem::testAntipanicAlarm; TestAntintrusionSystem::testClearAlarmsOnInsert; TestAntintrusionSystem::testIntrusionAlarm; TestAntintrusionSystem::testModifyPartializationWithRightCode; TestAntintrusionSystem::testModifyPartializationWithWrongCode; TestAntintrusionSystem::testNoDoubleAlarms; TestAntintrusionSystem::testPartializationTimeout; TestAntintrusionSystem::testPartializationWithSystemInserted; TestAntintrusionSystem::testPartializationWithoutModification; TestAntintrusionSystem::testPasswordFail; TestAntintrusionSystem::testResetTechnicalAlarm; TestAntintrusionSystem::testTamperingAlarm; TestAntintrusionSystem::testTechnicalAlarm; TestAntintrusionSystem::testTechnicalAlarmOnNotConfiguredZone; TestAntintrusionSystem::testToggleActivation; TestAntintrusionSystem::testToggleActivationTimeout; TestAntintrusionSystem::unselectFirstTwoZones; splitZones](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_antintrusion_object.cpp#L55-L490) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0119` (claimed): Alarm decoder accepted-source domains
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007820`, `ownkb:claim:moc-c007821`, `ownkb:claim:moc-c007822`
+- `ownkb:source:moc-s000223`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AntintrusionDevice::AntintrusionDevice; AntintrusionDevice::_partializeZone; AntintrusionDevice::parseFrame; AntintrusionDevice::partializeZone; AntintrusionDevice::requestStatus; AntintrusionDevice::sendActivationFrame; AntintrusionDevice::sendPartializationFrame; AntintrusionDevice::setPartialization; AntintrusionDevice::toggleActivation; zoneNumber](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/antintrusion_device.cpp#L45-L168) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007820, ownkb:claim:moc-c007821, ownkb:claim:moc-c007822
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000224`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAntintrusionDevice::cleanup; TestAntintrusionDevice::init; TestAntintrusionDevice::receiveAntipanicAlarm; TestAntintrusionDevice::receiveIntrusionAlarm; TestAntintrusionDevice::receiveResetTechnicalAlarm; TestAntintrusionDevice::receiveSystemInserted; TestAntintrusionDevice::receiveSystemMaintenance; TestAntintrusionDevice::receiveTamperAlarm; TestAntintrusionDevice::receiveTechnicalAlarm; TestAntintrusionDevice::receiveZoneInserted; TestAntintrusionDevice::receiveZonePartialized; TestAntintrusionDevice::sendRequestStatus; TestAntintrusionDevice::sendToggleActivation1; TestAntintrusionDevice::sendToggleActivation2; TestAntintrusionDevice::sendToggleActivation3; TestAntintrusionDevice::testSetPartialization](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_antintrusion_device.cpp#L30-L196) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
 # Document: ownkb:document:d000074
 
 Source path: `functional/who-5-alarm/protocol.md`
@@ -9277,13 +11707,72 @@ The `#N` form is a zone selector, not a numeric point-to-point address. See [Add
 
 Section ID: `ownkb:section:d000074:s000004`
 
+Cautions: `not evidence`
+Provenance cues: `evidence`, `source`
+
 Alarm state changes are also emitted as events. Consumers should normalize events using the pair `(WHAT, WHERE)` because the same `WHAT` family can describe central-unit, zone, sensor, or auxiliary context depending on `WHERE`.
+
+The historical BtExperience client at `TS10_1_0_23` keeps a local alarm list with the [configured-source filters](addressing.md#historical-event-validation). It suppresses repeated entries with the same alarm type and source number, removes a technical entry on `WHAT 13`, and clears the list when reported state changes from disarmed to armed. Its timestamps record local receipt time. This list is not evidence of a complete panel event journal, and clearing it does not send an alarm-reset command.
 
 ### Programming values
 
 Section ID: `ownkb:section:d000074:s000005`
 
 The published vocabulary includes `WHAT 26` and `27` for start/stop programming. These belong to the historical `WHO 5` functional protocol. They are not the same subsystem as the MyHOME_Suite Device/Object configuration protocol documented under [Programming](../../programming/).
+
+### Historical password controls
+
+Section ID: `ownkb:section:d000074:s000007`
+
+Applicability cues: `firmware`, `gateway`
+Cautions: `do not`
+Uncertainty: `not established`
+Provenance cues: `evidence`
+
+The BTicino touchscreen implementation at `TS10_1_0_23` emits the following controls. These extend the published status-oriented surface; applicability to other alarm panels or gateway Firmware is not established.
+
+| Operation | Implemented frame |
+| --- | --- |
+| Toggle armed/disarmed state using a password | `*5*36#PASSWORD*0##` |
+| Set zone partialization | `*5*50#PASSWORD#MASK*0##` |
+| Request central-unit state | `*#5*0##` |
+
+`MASK` contains eight textual bits, left to right for zones `1..8`; `1` means partialized. For example, `11000001` selects zones 1, 2, and 8. The central target `0` is the library's form, distinct from the published request above. The password's format and acceptance rules are not established by the tests; do not log password-bearing frames unredacted.
+
+When arming with changed partialization, the implementation sends `50`, waits 6 seconds, sends `36`, then waits another 5 seconds before requesting state. Other password controls are followed by a state request after 5 seconds. These delays and the optimistic local armed-state update are application choices, not protocol deadlines.
+
+BtExperience supplies password feedback from reported state rather than a password-validation response:
+
+| Operation | Local feedback check |
+| --- | --- |
+| Toggle armed/disarmed state | While awaiting feedback after initialization, changed armed state indicates success; unchanged state indicates refusal when no partialization reports are pending |
+| Change partialization | Count reports for configured zones; after as many reports as configured zones, any observed zone-state change indicates success, otherwise refusal |
+
+The partialization check does not require distinct zone reports or verify the requested mask. Repeated reports can complete the count before every zone is confirmed. The client permits this operation only while disarmed and after local selection changes; selecting an alarm scenario edits the local zone selection before a password control is submitted. Received zone state also replaces that selection. These are client policies, not panel restrictions or `WHO 0` scenario commands.
+
+The product has a separate 10-second feedback timeout, which can expire before the library's delayed 11-second status request in the combined partialization-and-arm sequence. It also emits a timeout immediately when a partialization request cannot be submitted locally. A timeout does not establish password refusal. Neither the local feedback signals nor an ACK establish password acceptance or complete mask application.
+
+See [Alarm evidence](../../project/review/myopencommunity-integration.md#alarm-controls-and-events) and the [Alarm history review](../../project/review/myopencommunity-alarm-history-review.md).
+
+Evidence finding `moc-e0070` (claimed): Alarm password writer and timers
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007720`, `ownkb:claim:moc-c007721`, `ownkb:claim:moc-c007722`
+- `ownkb:source:moc-s000223`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AntintrusionDevice::AntintrusionDevice; AntintrusionDevice::_partializeZone; AntintrusionDevice::parseFrame; AntintrusionDevice::partializeZone; AntintrusionDevice::requestStatus; AntintrusionDevice::sendActivationFrame; AntintrusionDevice::sendPartializationFrame; AntintrusionDevice::setPartialization; AntintrusionDevice::toggleActivation; zoneNumber](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/antintrusion_device.cpp#L45-L168) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007720, ownkb:claim:moc-c007721, ownkb:claim:moc-c007722
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000224`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAntintrusionDevice::cleanup; TestAntintrusionDevice::init; TestAntintrusionDevice::receiveAntipanicAlarm; TestAntintrusionDevice::receiveIntrusionAlarm; TestAntintrusionDevice::receiveResetTechnicalAlarm; TestAntintrusionDevice::receiveSystemInserted; TestAntintrusionDevice::receiveSystemMaintenance; TestAntintrusionDevice::receiveTamperAlarm; TestAntintrusionDevice::receiveTechnicalAlarm; TestAntintrusionDevice::receiveZoneInserted; TestAntintrusionDevice::receiveZonePartialized; TestAntintrusionDevice::sendRequestStatus; TestAntintrusionDevice::sendToggleActivation1; TestAntintrusionDevice::sendToggleActivation2; TestAntintrusionDevice::sendToggleActivation3; TestAntintrusionDevice::testSetPartialization](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_antintrusion_device.cpp#L30-L196) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0071` (claimed): Alarm application feedback
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007723`, `ownkb:claim:moc-c007724`, `ownkb:claim:moc-c007725`
+- `ownkb:source:moc-s000225`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AntintrusionAlarm::AntintrusionAlarm; AntintrusionAlarm::getDateTime; AntintrusionAlarm::getName; AntintrusionAlarm::getNumber; AntintrusionAlarm::getSource; AntintrusionAlarm::getType; AntintrusionAlarmSource::AntintrusionAlarmSource; AntintrusionAlarmSource::getNumber; AntintrusionScenario::AntintrusionScenario; AntintrusionScenario::apply; AntintrusionScenario::getDescription; AntintrusionScenario::isSelected; AntintrusionScenario::verifySelection; AntintrusionSystem::AntintrusionSystem; AntintrusionSystem::addAlarm; AntintrusionSystem::canPartialize; AntintrusionSystem::getAlarms; AntintrusionSystem::getCurrentScenario; AntintrusionSystem::getScenarios; AntintrusionSystem::getZones; AntintrusionSystem::handleCodeTimeout; AntintrusionSystem::isDuplicateAlarm; AntintrusionSystem::removeAlarm; AntintrusionSystem::requestPartialization; AntintrusionSystem::setStatus; AntintrusionSystem::toggleActivation; AntintrusionSystem::valueReceived; AntintrusionZone::AntintrusionZone; AntintrusionZone::getActive; AntintrusionZone::getSelected; AntintrusionZone::setActive; AntintrusionZone::setSelected; createAntintrusionSystem; findAlarmSource; parseAntintrusionAux; parseAntintrusionScenario; parseAntintrusionZone](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/antintrusionsystem.cpp#L34-L582) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007723, ownkb:claim:moc-c007724, ownkb:claim:moc-c007725
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000226`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestAntintrusionSystem::checkAlarmedZones; TestAntintrusionSystem::checkWaitingResponse; TestAntintrusionSystem::cleanup; TestAntintrusionSystem::compareClientCommand; TestAntintrusionSystem::init; TestAntintrusionSystem::initTestCase; TestAntintrusionSystem::setSystemActive; TestAntintrusionSystem::setZonesInserted; TestAntintrusionSystem::testActivateSystem; TestAntintrusionSystem::testAlarmOnNotConfiguredZone; TestAntintrusionSystem::testAntipanicAlarm; TestAntintrusionSystem::testClearAlarmsOnInsert; TestAntintrusionSystem::testIntrusionAlarm; TestAntintrusionSystem::testModifyPartializationWithRightCode; TestAntintrusionSystem::testModifyPartializationWithWrongCode; TestAntintrusionSystem::testNoDoubleAlarms; TestAntintrusionSystem::testPartializationTimeout; TestAntintrusionSystem::testPartializationWithSystemInserted; TestAntintrusionSystem::testPartializationWithoutModification; TestAntintrusionSystem::testPasswordFail; TestAntintrusionSystem::testResetTechnicalAlarm; TestAntintrusionSystem::testTamperingAlarm; TestAntintrusionSystem::testTechnicalAlarm; TestAntintrusionSystem::testTechnicalAlarmOnNotConfiguredZone; TestAntintrusionSystem::testToggleActivation; TestAntintrusionSystem::testToggleActivationTimeout; TestAntintrusionSystem::unselectFirstTwoZones; splitZones](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_antintrusion_object.cpp#L55-L490) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 ### Write support
 
@@ -9402,6 +11891,24 @@ The address table labels `4001` as endpoint 2 even though the adjacent entries s
 
 Several response/receive rows print arrows inconsistent with their section headings and descriptions. The table above reports the sending/receiving section roles, not a repaired observed transcript. Exact direction and error-code behavior require product evidence. Camera OFF's short form and broadcast-call sentinel must not be normalized into the ordinary three-field command grammar.
 
+### Historical camera simulator
+
+Section ID: `ownkb:section:d000076:s000006`
+
+Applicability cues: `gateway`
+Provenance cues: `evidence`
+
+The VDK 2.0 camera model activates configured camera `N` when it receives `*6*0*WHERE##` with numeric `WHERE = 4000 + N`. Its manual tests demonstrate switching between `4001` and `4002`; the previously active model deactivates when another camera is selected. A local 60-second timer also deactivates it. Images are served from configured JPEG files through the simulator gateway, not produced by physical camera hardware.
+
+The simulator exposes camera indices `0..99`, broader than the published L4686SDK `4000..4095` range. It neither corroborates the full L4686SDK operation set nor establishes a physical Device timeout. Its test document contains malformed ACK spellings, so the canonical ACK syntax remains that in [Acknowledgements](../../protocol/acknowledgements.md). See [Camera simulator evidence](../../project/review/myopencommunity-reassessment.md#simulator-and-fixture-boundaries).
+
+Evidence finding `moc-e0072` (claimed): Camera simulator behavior
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007726`, `ownkb:claim:moc-c007727`
+- `ownkb:source:moc-s000227`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - Btcam_dev::Btcam_dev; Btcam_dev::CreateHTMLResp; Btcam_dev::HandleMessage; Btcam_dev::ReceiveMessage; Btcam_dev::attachChild; Btcam_dev::cancelCmd; Btcam_dev::execCommand; Btcam_dev::executeCmd; Btcam_dev::getID; Btcam_dev::registerEventHnd; Btcam_dev::save; Btcam_dev::setID; Btcam_dev::setMode; Btcam_dev::setSuperior; Btcam_dev::stopTimer; Btcam_dev::unRegisterEventHnd; Btcam_dev::~Btcam_dev](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_CAM_DEV_PGIN/btcam_dev.cpp#L38-L387) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007726, ownkb:claim:moc-c007727
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Protocol boundary
 
 Section ID: `ownkb:section:d000076:s000005`
@@ -9506,7 +12013,9 @@ Area: `functional`
 
 Section ID: `ownkb:section:d000078:s000001`
 
-`WHO 8` identifies the OpenWebNet Video Door Entry and telephony system. The current corpus establishes the namespace and a narrow MyHOME Suite service operation, but not a complete public functional grammar.
+Provenance cues: `specification`
+
+`WHO 8` identifies the OpenWebNet Video Door Entry and telephony system. `OPEN.db` establishes the namespace and MyHOME Suite service metadata. The preserved touchscreen implementation separately establishes its historical call and messaging behavior. It does not contain a complete public functional specification.
 
 ### Established implementation evidence
 
@@ -9524,6 +12033,375 @@ Provenance cues: `database`
 
 The template establishes that MyHOME Suite associates a service-identification operation with this system. Because the database does not enumerate the substituted `WHAT` semantics here, it does not justify a `WHAT` table.
 
+### Historical touchscreen call model
+
+Section ID: `ownkb:section:d000078:s000005`
+
+Applicability cues: `gateway`, `scs`
+Uncertainty: `not established`
+Provenance cues: `evidence`
+
+The following forms are implementation evidence from `VideoDoorEntryDevice` and its inspected test expectations at `TS10_1_0_23`. They describe the MyHome_Screen call stack, not guaranteed capabilities of every Video Door Entry gateway. `LOCAL`, `CALLER`, and `TARGET` are addresses in that stack; their full valid domains are not established.
+
+| Operation | Implemented form |
+| --- | --- |
+| Call | `*8*1#KIND#MMTYPE#CALLER*TARGET##` |
+| Answer | `*8*2#KIND#MMTYPE*LOCAL##` |
+| End call | `*8*3#KIND#MMTYPE*4LOCAL##` |
+| Camera autoswitch | `*8*4#LOCAL*TARGET##` |
+| Cycle external units | `*8*6#LOCAL*ORIGINAL_CALLER##` |
+| Caller-address report, SCS | `*8*9#KIND#MMTYPE*CALLER##` |
+| Open / release lock | `*8*19*TARGET##` / `*8*20*TARGET##` |
+| Stair light ON / OFF | `*8*21*LOCAL##` / `*8*22*LOCAL##` |
+| Call process ready | `*8*37#MODE*LOCAL##` |
+| Re-arm session, SCS | `*8*40#KIND#MMTYPE*CALLER##` |
+| Camera up / down / left / right | `*8*59#PHASE*CALLER##` through `*8*62#PHASE*CALLER##` |
+
+The end-call writer concatenates literal `4` before the local address; it is not a `#4` routing qualifier. For call-process readiness, `MODE` is `1` SCS or `2` IP. Camera movement uses `PHASE = 1` press/start and `2` release/stop. During a call, lock operations target the current caller; otherwise the implementation uses the local address.
+
+| `KIND` base value | Implemented call kind |
+| --- | --- |
+| `1..4` | Entrance panels PE1..PE4 |
+| `5` | Camera autoswitch |
+| `6` / `7` | Internal / external intercom |
+| `13` | Floor call |
+| `14` | Pager call |
+
+Tests establish `MMTYPE = 2` for audio and `4` for audio/video. The parser also treats end-call `MMTYPE = 3` as a stop-video notification in SCS mode. Its fallback classification of other values as audio/video does not establish those values' protocol meanings.
+
+The implementation recognizes `KIND > 1000` as an IP call and takes the caller from the third `WHAT` parameter; SCS caller information can arrive separately in `WHAT 9`. Values with `KIND % 1000` in `101..105` mark movable cameras. Preserve the complete value rather than reducing it to the entrance-panel ordinal.
+
+The client keeps the original caller separately from the currently selected camera. A `WHAT 40` re-arm report updates the current address, media type and movable-camera flag, while cycling continues to target the original caller. Lock and movement commands use the current address. The `@` prefix used in decoded autoswitch notifications is a local application marker, not a wire-address prefix. Earlier code at `bc8ebb2f89d5` instead converts that decoded address to negative decimal text; the later change preserves the address text with `@`. Neither marker changes the transmitted address.
+
+Exact tests also distinguish call state: a floor call (`KIND 13`) emits a ringtone without replacing an existing call's stored `KIND` or `MMTYPE`. At `TS10_1_0_23`, ordinary answer, end and stop-video frames are ignored while idle; pager and teleloop handling have separate guards. These are touchscreen state choices, not requirements on every decoder. Earlier library code at `12fd4e143a50` accepts these ordinary frames while idle when addressed to the local endpoint. The retained correction adds a call-state guard and corresponding zero-notification expectations. See [Call-state evidence](../../project/review/myopencommunity-intermediate-history-review.md#call-address-and-state) and [Consumer and call-history evidence](../../project/review/myopencommunity-consumer-call-review.md).
+
+The pager call/answer writers use broadcast `WHERE = 4` and include the local address after `KIND` and `MMTYPE`, for example `*8*1#14#2#11*4##`. Exact receive tests also accept a pager call addressed to the local endpoint and an answer with a non-broadcast `WHERE`. The client waits for the answer event when initiating a pager conversation; it does not derive SCS caller-address state from that answer alone. Its call-state guards are client behavior, not a universal broadcast-only receive rule. See [pager history](../../project/review/myopencommunity-coverage-audit.md#historical-corrections).
+
+Evidence finding `moc-e0073` (claimed): Video-door-entry library serializers
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007728`, `ownkb:claim:moc-c007729`, `ownkb:claim:moc-c007730`, `ownkb:claim:moc-c007731`, `ownkb:claim:moc-c007732`, `ownkb:claim:moc-c007733`
+- `ownkb:source:moc-s000228`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - BasicVideoDoorEntryDevice::BasicVideoDoorEntryDevice; BasicVideoDoorEntryDevice::initVctProcess; BasicVideoDoorEntryDevice::openLock; BasicVideoDoorEntryDevice::parseFrame; BasicVideoDoorEntryDevice::releaseLock; BasicVideoDoorEntryDevice::stairLightActivate; BasicVideoDoorEntryDevice::stairLightRelease; VideoDoorEntryDevice::VideoDoorEntryDevice; VideoDoorEntryDevice::answerCall; VideoDoorEntryDevice::answerPagerCall; VideoDoorEntryDevice::cameraMovePress; VideoDoorEntryDevice::cameraMoveRelease; VideoDoorEntryDevice::cameraOn; VideoDoorEntryDevice::createLinkTeleloopFrame; VideoDoorEntryDevice::cycleExternalUnits; VideoDoorEntryDevice::endCall; VideoDoorEntryDevice::externalIntercomCall; VideoDoorEntryDevice::getTeleloopId; VideoDoorEntryDevice::internalIntercomCall; VideoDoorEntryDevice::linkTeleLoop; VideoDoorEntryDevice::moveDownPress; VideoDoorEntryDevice::moveDownRelease; VideoDoorEntryDevice::moveLeftPress; VideoDoorEntryDevice::moveLeftRelease; VideoDoorEntryDevice::moveRightPress; VideoDoorEntryDevice::moveRightRelease; VideoDoorEntryDevice::moveUpPress; VideoDoorEntryDevice::moveUpRelease; VideoDoorEntryDevice::openLock; VideoDoorEntryDevice::pagerCall; VideoDoorEntryDevice::parseFrame; VideoDoorEntryDevice::releaseLock; VideoDoorEntryDevice::resetCallState; VideoDoorEntryDevice::setTeleloopId; VideoDoorEntryDevice::stairLightActivate; VideoDoorEntryDevice::stairLightRelease; VideoDoorEntryDevice::startTeleLoop](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/videodoorentry_device.cpp#L53-L482) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007728, ownkb:claim:moc-c007729, ownkb:claim:moc-c007730, ownkb:claim:moc-c007731, ownkb:claim:moc-c007732, ownkb:claim:moc-c007733
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000229`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestVideoDoorEntryDevice::cleanupTestCase; TestVideoDoorEntryDevice::init; TestVideoDoorEntryDevice::initTestCase; TestVideoDoorEntryDevice::receiveAnswer; TestVideoDoorEntryDevice::receiveAudioCall; TestVideoDoorEntryDevice::receiveAutoswitchCall; TestVideoDoorEntryDevice::receiveCallerAddress1; TestVideoDoorEntryDevice::receiveCallerAddress2; TestVideoDoorEntryDevice::receiveCallerAddress3; TestVideoDoorEntryDevice::receiveEndOfCall; TestVideoDoorEntryDevice::receiveFloorCall; TestVideoDoorEntryDevice::receiveIncomingCall; TestVideoDoorEntryDevice::receiveIncomingIpCall; TestVideoDoorEntryDevice::receiveIncomingIpCall2; TestVideoDoorEntryDevice::receivePagerAnswer; TestVideoDoorEntryDevice::receivePagerAnswerWithWhere; TestVideoDoorEntryDevice::receivePagerCall; TestVideoDoorEntryDevice::receivePagerCallAndInitiatesConversation; TestVideoDoorEntryDevice::receivePagerCallWithWhere; TestVideoDoorEntryDevice::receivePagerCallWithWrongWhere; TestVideoDoorEntryDevice::receiveRearmSession; TestVideoDoorEntryDevice::receiveRearmSession2; TestVideoDoorEntryDevice::receiveStopVideo; TestVideoDoorEntryDevice::receiveTeleloopAnswer; TestVideoDoorEntryDevice::receiveTeleloopSession; TestVideoDoorEntryDevice::receiveTeleloopTimeout; TestVideoDoorEntryDevice::receiveUnconnectedAnswer; TestVideoDoorEntryDevice::receiveUnconnectedEndOfCall; TestVideoDoorEntryDevice::receiveUnconnectedStopVideo; TestVideoDoorEntryDevice::sendAnswerCall; TestVideoDoorEntryDevice::sendCameraOn; TestVideoDoorEntryDevice::sendCycleExternalUnits; TestVideoDoorEntryDevice::sendEndCall; TestVideoDoorEntryDevice::sendExternalIntercomCall; TestVideoDoorEntryDevice::sendInitVctProcess; TestVideoDoorEntryDevice::sendInternalIntercomCall; TestVideoDoorEntryDevice::sendMoveDownPress; TestVideoDoorEntryDevice::sendMoveDownRelease; TestVideoDoorEntryDevice::sendMoveLeftPress; TestVideoDoorEntryDevice::sendMoveLeftRelease; TestVideoDoorEntryDevice::sendMoveRightPress; TestVideoDoorEntryDevice::sendMoveRightRelease; TestVideoDoorEntryDevice::sendMoveUpPress; TestVideoDoorEntryDevice::sendMoveUpRelease; TestVideoDoorEntryDevice::sendOpenLock; TestVideoDoorEntryDevice::sendPagerAnswer; TestVideoDoorEntryDevice::sendPagerCall; TestVideoDoorEntryDevice::sendReleaseLock; TestVideoDoorEntryDevice::sendStairLightActivate; TestVideoDoorEntryDevice::sendStairLightRelease; TestVideoDoorEntryDevice::simulateCallerAddress; TestVideoDoorEntryDevice::simulateIncomingCall](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_videodoorentry_device.cpp#L33-L755) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007728, ownkb:claim:moc-c007729, ownkb:claim:moc-c007730, ownkb:claim:moc-c007731, ownkb:claim:moc-c007732, ownkb:claim:moc-c007733
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0074` (claimed): Video-door-entry library state
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007734`, `ownkb:claim:moc-c007735`, `ownkb:claim:moc-c007736`
+- `ownkb:source:moc-s000228`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - BasicVideoDoorEntryDevice::BasicVideoDoorEntryDevice; BasicVideoDoorEntryDevice::initVctProcess; BasicVideoDoorEntryDevice::openLock; BasicVideoDoorEntryDevice::parseFrame; BasicVideoDoorEntryDevice::releaseLock; BasicVideoDoorEntryDevice::stairLightActivate; BasicVideoDoorEntryDevice::stairLightRelease; VideoDoorEntryDevice::VideoDoorEntryDevice; VideoDoorEntryDevice::answerCall; VideoDoorEntryDevice::answerPagerCall; VideoDoorEntryDevice::cameraMovePress; VideoDoorEntryDevice::cameraMoveRelease; VideoDoorEntryDevice::cameraOn; VideoDoorEntryDevice::createLinkTeleloopFrame; VideoDoorEntryDevice::cycleExternalUnits; VideoDoorEntryDevice::endCall; VideoDoorEntryDevice::externalIntercomCall; VideoDoorEntryDevice::getTeleloopId; VideoDoorEntryDevice::internalIntercomCall; VideoDoorEntryDevice::linkTeleLoop; VideoDoorEntryDevice::moveDownPress; VideoDoorEntryDevice::moveDownRelease; VideoDoorEntryDevice::moveLeftPress; VideoDoorEntryDevice::moveLeftRelease; VideoDoorEntryDevice::moveRightPress; VideoDoorEntryDevice::moveRightRelease; VideoDoorEntryDevice::moveUpPress; VideoDoorEntryDevice::moveUpRelease; VideoDoorEntryDevice::openLock; VideoDoorEntryDevice::pagerCall; VideoDoorEntryDevice::parseFrame; VideoDoorEntryDevice::releaseLock; VideoDoorEntryDevice::resetCallState; VideoDoorEntryDevice::setTeleloopId; VideoDoorEntryDevice::stairLightActivate; VideoDoorEntryDevice::stairLightRelease; VideoDoorEntryDevice::startTeleLoop](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/videodoorentry_device.cpp#L53-L482) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007734, ownkb:claim:moc-c007735, ownkb:claim:moc-c007736
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000229`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestVideoDoorEntryDevice::cleanupTestCase; TestVideoDoorEntryDevice::init; TestVideoDoorEntryDevice::initTestCase; TestVideoDoorEntryDevice::receiveAnswer; TestVideoDoorEntryDevice::receiveAudioCall; TestVideoDoorEntryDevice::receiveAutoswitchCall; TestVideoDoorEntryDevice::receiveCallerAddress1; TestVideoDoorEntryDevice::receiveCallerAddress2; TestVideoDoorEntryDevice::receiveCallerAddress3; TestVideoDoorEntryDevice::receiveEndOfCall; TestVideoDoorEntryDevice::receiveFloorCall; TestVideoDoorEntryDevice::receiveIncomingCall; TestVideoDoorEntryDevice::receiveIncomingIpCall; TestVideoDoorEntryDevice::receiveIncomingIpCall2; TestVideoDoorEntryDevice::receivePagerAnswer; TestVideoDoorEntryDevice::receivePagerAnswerWithWhere; TestVideoDoorEntryDevice::receivePagerCall; TestVideoDoorEntryDevice::receivePagerCallAndInitiatesConversation; TestVideoDoorEntryDevice::receivePagerCallWithWhere; TestVideoDoorEntryDevice::receivePagerCallWithWrongWhere; TestVideoDoorEntryDevice::receiveRearmSession; TestVideoDoorEntryDevice::receiveRearmSession2; TestVideoDoorEntryDevice::receiveStopVideo; TestVideoDoorEntryDevice::receiveTeleloopAnswer; TestVideoDoorEntryDevice::receiveTeleloopSession; TestVideoDoorEntryDevice::receiveTeleloopTimeout; TestVideoDoorEntryDevice::receiveUnconnectedAnswer; TestVideoDoorEntryDevice::receiveUnconnectedEndOfCall; TestVideoDoorEntryDevice::receiveUnconnectedStopVideo; TestVideoDoorEntryDevice::sendAnswerCall; TestVideoDoorEntryDevice::sendCameraOn; TestVideoDoorEntryDevice::sendCycleExternalUnits; TestVideoDoorEntryDevice::sendEndCall; TestVideoDoorEntryDevice::sendExternalIntercomCall; TestVideoDoorEntryDevice::sendInitVctProcess; TestVideoDoorEntryDevice::sendInternalIntercomCall; TestVideoDoorEntryDevice::sendMoveDownPress; TestVideoDoorEntryDevice::sendMoveDownRelease; TestVideoDoorEntryDevice::sendMoveLeftPress; TestVideoDoorEntryDevice::sendMoveLeftRelease; TestVideoDoorEntryDevice::sendMoveRightPress; TestVideoDoorEntryDevice::sendMoveRightRelease; TestVideoDoorEntryDevice::sendMoveUpPress; TestVideoDoorEntryDevice::sendMoveUpRelease; TestVideoDoorEntryDevice::sendOpenLock; TestVideoDoorEntryDevice::sendPagerAnswer; TestVideoDoorEntryDevice::sendPagerCall; TestVideoDoorEntryDevice::sendReleaseLock; TestVideoDoorEntryDevice::sendStairLightActivate; TestVideoDoorEntryDevice::sendStairLightRelease; TestVideoDoorEntryDevice::simulateCallerAddress; TestVideoDoorEntryDevice::simulateIncomingCall](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_videodoorentry_device.cpp#L33-L755) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0167` (claimed): Earlier call receive policy and local autoswitch marker
+Disposition reason: Reviewed revision-scoped findings with exact original artifacts and distinct examination methods.
+Individual claims: `ownkb:claim:moc-c074116`, `ownkb:claim:moc-c074117`
+- `ownkb:source:moc-s001170`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestVideoDoorEntryDevice::receiveAnswerCall; TestVideoDoorEntryDevice::receiveEndOfCall; TestVideoDoorEntryDevice::receiveStopVideo](https://github.com/OpenWebNet-HA/libqtdevices/blob/12fd4e143a50e9ac9fc4bdd4dfaff67c9202cbe7/devices/test/test_videodoorentry_device.cpp#L235-L300) at `12fd4e143a50e9ac9fc4bdd4dfaff67c9202cbe7`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074116
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Expected assertions inspected; the original QtTest suite was not run and is not reported as passing.
+- `ownkb:source:moc-s001168`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - VideoDoorEntryDevice::parseFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/12fd4e143a50e9ac9fc4bdd4dfaff67c9202cbe7/devices/videodoorentry_device.cpp#L208-L334) at `12fd4e143a50e9ac9fc4bdd4dfaff67c9202cbe7`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074116
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001171`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestVideoDoorEntryDevice::receiveIncomingIpCall2](https://github.com/OpenWebNet-HA/libqtdevices/blob/bc8ebb2f89d5d918e13c9d10eb04441751d17f7d/devices/test/test_videodoorentry_device.cpp#L199-L218) at `bc8ebb2f89d5d918e13c9d10eb04441751d17f7d`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074117
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Expected assertions inspected; the original QtTest suite was not run and is not reported as passing.
+- `ownkb:source:moc-s001169`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - VideoDoorEntryDevice::parseFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/bc8ebb2f89d5d918e13c9d10eb04441751d17f7d/devices/videodoorentry_device.cpp#L209-L339) at `bc8ebb2f89d5d918e13c9d10eb04441751d17f7d`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074117
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001172`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - VideoDoorEntryDevice::parseFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/b3ee23d3a978a041f419a3100a5c723f8980b6c9/devices/videodoorentry_device.cpp#L214-L344) at `b3ee23d3a978a041f419a3100a5c723f8980b6c9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074117
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+
+#### Teleloop and local multimedia events
+
+Section ID: `ownkb:section:d000078:s000006`
+
+Provenance cues: `evidence`
+
+| `WHAT` | Implementation meaning / form |
+| --- | --- |
+| `63` / `64` | Silence / restore the local multimedia amplifier; received events |
+| `76` | Start teleloop: `*8*76*LOCAL##` |
+| `77` | Associate teleloop: `*8*77#ID*LOCAL##`; received value identifies the association |
+| `78` | Teleloop timeout event: `*8*78*LOCAL##` |
+| `79` | Tested session event: `*8*79#KIND#MMTYPE#ID*LOCAL##` |
+
+The `WHAT 79` receive test establishes the field order with `KIND = 1`, `MMTYPE = 4` and `ID = 5`. The decoder emits a boolean session event during a call; it does not validate those parameters against the association. The application treats that event as a teleloop answer to a pending, unanswered call.
+
+The touchscreen application uses an 11-second association timer. It accepts the association result only while that timer is active; received `WHAT 78` and timer expiry end the pending association. Neither establishes a wire-protocol timeout. At `TS10_1_0_23`, a nonzero stored ID registers the association frame for connection initialization; changing the ID replaces that frame, and zero removes it without sending an unlink command. This supersedes an earlier delayed device-init path. See [Teleloop evidence](../../project/review/myopencommunity-intermediate-history-review.md#teleloop-association-and-session).
+
+Evidence finding `moc-e0075` (claimed): Teleloop library messages
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007737`, `ownkb:claim:moc-c007738`
+- `ownkb:source:moc-s000228`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - BasicVideoDoorEntryDevice::BasicVideoDoorEntryDevice; BasicVideoDoorEntryDevice::initVctProcess; BasicVideoDoorEntryDevice::openLock; BasicVideoDoorEntryDevice::parseFrame; BasicVideoDoorEntryDevice::releaseLock; BasicVideoDoorEntryDevice::stairLightActivate; BasicVideoDoorEntryDevice::stairLightRelease; VideoDoorEntryDevice::VideoDoorEntryDevice; VideoDoorEntryDevice::answerCall; VideoDoorEntryDevice::answerPagerCall; VideoDoorEntryDevice::cameraMovePress; VideoDoorEntryDevice::cameraMoveRelease; VideoDoorEntryDevice::cameraOn; VideoDoorEntryDevice::createLinkTeleloopFrame; VideoDoorEntryDevice::cycleExternalUnits; VideoDoorEntryDevice::endCall; VideoDoorEntryDevice::externalIntercomCall; VideoDoorEntryDevice::getTeleloopId; VideoDoorEntryDevice::internalIntercomCall; VideoDoorEntryDevice::linkTeleLoop; VideoDoorEntryDevice::moveDownPress; VideoDoorEntryDevice::moveDownRelease; VideoDoorEntryDevice::moveLeftPress; VideoDoorEntryDevice::moveLeftRelease; VideoDoorEntryDevice::moveRightPress; VideoDoorEntryDevice::moveRightRelease; VideoDoorEntryDevice::moveUpPress; VideoDoorEntryDevice::moveUpRelease; VideoDoorEntryDevice::openLock; VideoDoorEntryDevice::pagerCall; VideoDoorEntryDevice::parseFrame; VideoDoorEntryDevice::releaseLock; VideoDoorEntryDevice::resetCallState; VideoDoorEntryDevice::setTeleloopId; VideoDoorEntryDevice::stairLightActivate; VideoDoorEntryDevice::stairLightRelease; VideoDoorEntryDevice::startTeleLoop](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/videodoorentry_device.cpp#L53-L482) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007737, ownkb:claim:moc-c007738
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000229`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestVideoDoorEntryDevice::cleanupTestCase; TestVideoDoorEntryDevice::init; TestVideoDoorEntryDevice::initTestCase; TestVideoDoorEntryDevice::receiveAnswer; TestVideoDoorEntryDevice::receiveAudioCall; TestVideoDoorEntryDevice::receiveAutoswitchCall; TestVideoDoorEntryDevice::receiveCallerAddress1; TestVideoDoorEntryDevice::receiveCallerAddress2; TestVideoDoorEntryDevice::receiveCallerAddress3; TestVideoDoorEntryDevice::receiveEndOfCall; TestVideoDoorEntryDevice::receiveFloorCall; TestVideoDoorEntryDevice::receiveIncomingCall; TestVideoDoorEntryDevice::receiveIncomingIpCall; TestVideoDoorEntryDevice::receiveIncomingIpCall2; TestVideoDoorEntryDevice::receivePagerAnswer; TestVideoDoorEntryDevice::receivePagerAnswerWithWhere; TestVideoDoorEntryDevice::receivePagerCall; TestVideoDoorEntryDevice::receivePagerCallAndInitiatesConversation; TestVideoDoorEntryDevice::receivePagerCallWithWhere; TestVideoDoorEntryDevice::receivePagerCallWithWrongWhere; TestVideoDoorEntryDevice::receiveRearmSession; TestVideoDoorEntryDevice::receiveRearmSession2; TestVideoDoorEntryDevice::receiveStopVideo; TestVideoDoorEntryDevice::receiveTeleloopAnswer; TestVideoDoorEntryDevice::receiveTeleloopSession; TestVideoDoorEntryDevice::receiveTeleloopTimeout; TestVideoDoorEntryDevice::receiveUnconnectedAnswer; TestVideoDoorEntryDevice::receiveUnconnectedEndOfCall; TestVideoDoorEntryDevice::receiveUnconnectedStopVideo; TestVideoDoorEntryDevice::sendAnswerCall; TestVideoDoorEntryDevice::sendCameraOn; TestVideoDoorEntryDevice::sendCycleExternalUnits; TestVideoDoorEntryDevice::sendEndCall; TestVideoDoorEntryDevice::sendExternalIntercomCall; TestVideoDoorEntryDevice::sendInitVctProcess; TestVideoDoorEntryDevice::sendInternalIntercomCall; TestVideoDoorEntryDevice::sendMoveDownPress; TestVideoDoorEntryDevice::sendMoveDownRelease; TestVideoDoorEntryDevice::sendMoveLeftPress; TestVideoDoorEntryDevice::sendMoveLeftRelease; TestVideoDoorEntryDevice::sendMoveRightPress; TestVideoDoorEntryDevice::sendMoveRightRelease; TestVideoDoorEntryDevice::sendMoveUpPress; TestVideoDoorEntryDevice::sendMoveUpRelease; TestVideoDoorEntryDevice::sendOpenLock; TestVideoDoorEntryDevice::sendPagerAnswer; TestVideoDoorEntryDevice::sendPagerCall; TestVideoDoorEntryDevice::sendReleaseLock; TestVideoDoorEntryDevice::sendStairLightActivate; TestVideoDoorEntryDevice::sendStairLightRelease; TestVideoDoorEntryDevice::simulateCallerAddress; TestVideoDoorEntryDevice::simulateIncomingCall](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_videodoorentry_device.cpp#L33-L755) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0076` (claimed): Teleloop application/cache behavior
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007739`, `ownkb:claim:moc-c007740`, `ownkb:claim:moc-c007741`
+- `ownkb:source:moc-s000230`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - CCTV::CCTV; CCTV::activateCall; CCTV::answerCall; CCTV::associationTimeout; CCTV::callerAddress; CCTV::cameraOn; CCTV::delayedAnswerCall; CCTV::disactivateCall; CCTV::endCall; CCTV::getAssociatedTeleloopId; CCTV::getBrightness; CCTV::getColor; CCTV::getContrast; CCTV::getRingExclusion; CCTV::getRingtone; CCTV::getTeleloopAssociating; CCTV::grabberStateReceived; CCTV::nextCamera; CCTV::openLock; CCTV::releaseLock; CCTV::resumeVideo; CCTV::setAssociatedTeleloopId; CCTV::setAutoOpen; CCTV::setBrightness; CCTV::setColor; CCTV::setContrast; CCTV::setHandsFree; CCTV::setRingExclusion; CCTV::setRingtone; CCTV::stairLightActivate; CCTV::stairLightRelease; CCTV::startTeleloopAssociation; CCTV::startVideo; CCTV::stopVideo; CCTV::valueReceived; ExternalPlace::ExternalPlace; Intercom::Intercom; Intercom::activateCall; Intercom::answerCall; Intercom::answerPagerCall; Intercom::disactivateCall; Intercom::endCall; Intercom::getRingExclusion; Intercom::getRingtone; Intercom::getTalker; Intercom::setRingtone; Intercom::startCall; Intercom::startPagerCall; Intercom::valueReceived; VDEBase::VDEBase; VDEBase::callActive; VDEBase::callInProgress; VDEBase::exitingCall; VDEBase::getExternalPlaces; VDEBase::getMovingCamera; VDEBase::getMute; VDEBase::getTalker; VDEBase::getTeleloop; VDEBase::getVolume; VDEBase::isIpCall; VDEBase::moveDownPress; VDEBase::moveDownRelease; VDEBase::moveLeftPress; VDEBase::moveLeftRelease; VDEBase::moveRightPress; VDEBase::moveRightRelease; VDEBase::moveUpPress; VDEBase::moveUpRelease; VDEBase::setCallActive; VDEBase::setCallInProgress; VDEBase::setExitingCall; VDEBase::setMute; VDEBase::setTalkerFromWhere; VDEBase::setTeleloop; VDEBase::setVolume; createCCTV; createIntercom; parseExternalIntercom; parseExternalPlace; parseInternalIntercom; parsePager; parseSwitchboard; parseVdeCamera](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/vct.cpp#L44-L999) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007739, ownkb:claim:moc-c007740
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000231`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - DevicesCache::DevicesCache; DevicesCache::addInitCommandFrame; DevicesCache::checkLazyUpdate; DevicesCache::clear; DevicesCache::contains; DevicesCache::devicesCreated; DevicesCache::get; DevicesCache::initOpenserverDevices; DevicesCache::insert; DevicesCache::removeInitCommandFrame; DevicesCache::setLazyUpdate; DevicesCache::~DevicesCache](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/devices_cache.cpp#L36-L136) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007741
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+#### Local call audio in BtExperience
+
+Section ID: `ownkb:section:d000078:s000008`
+
+Applicability cues: `revision`, `scs`
+Cautions: `do not`, `limitation`
+Provenance cues: `evidence`
+
+At archived BtExperience revision `b88cdac9665d`, the call model delegates wire messages to the Video Door Entry library. Its volume and mute setters only cache values and notify the UI; the connected controls select local audio paths. They do not send a `WHO 8` volume or mute frame.
+
+| Event or state | Local client behavior |
+| --- | --- |
+| Incoming ringtone | With notifications enabled, ringtone exclusion suppresses sound but still enables `VdeRingtone` to interrupt multimedia. Disabling notifications returns before either action |
+| Ringtone completion | Call ringtones retain their audio state after playback stops; call-end handlers clear it. Floor-call playback uses automatic state release. An empty ringtone path returns before enabling the requested state |
+| Answer | Select SCS or IP video/intercom state; an intercom answer first clears sender/receiver pager states. Teleloop enables its separate state |
+| Pager audio | Microphone and speaker requests select sender and receiver pager states. Both use the video-call volume channel in this revision |
+| Call mute | The SCS call-to-mute transition preserves the selected path and uses a separate mute operation; the corresponding UI property alone does not perform it |
+| IP and teleloop routing | The UI enables these states, but this revision has no dedicated entry/exit routing cases for them. This does not establish whether a product supports IP calls or teleloop |
+| Camera cycling | Grabber state changes request audio disable/enable only while the selected audio state is `ScsVideoCall`. Process startup is not reported as running |
+
+Audio enable during camera cycling uses a 300-ms local timer. Explicit audio disable cancels it, but leaving the call state does not cancel it or make its callback check the current state. A controlled execution of the original controller issues an audio-on request after a call has ended; no physical audio outcome is established. This is not a bus timing requirement.
+
+Call interruption also depends on the audio backend's completion notification. With BtExperience `b88cdac9665d` and libqtcommon `825dc72cf0a4`, controlled native-process execution establishes:
+
+| Audio process result during output release | Local controller outcome |
+| --- | --- |
+| Normal exit `1` or process crash | Keep the track logically paused with output stopped; leaving the call attempts a playback restart |
+| Normal exit `0` | Treat playback as completed and clear the track; leaving the call returns to idle |
+| Another normal exit code | Emit neither completion notification; the process can be dead while the wrapper still reports active output and the call transition waits |
+
+The runs use a synthetic slave process with explicit exit conditions, native Qt signals and the original audio wrapper/controller. They do not establish real MPlayer exit conventions, physical output release or audible restoration. Ordinary pause retains the running process and active output; see [Local playback](../who-22-sound-diffusion/#historical-local-playback) and [Consumer and call-history evidence](../../project/review/myopencommunity-consumer-call-review.md).
+
+The ringtone manager emits its completion notification before releasing an automatically managed state. A synchronous completion listener that starts another automatically managed ringtone can have that replacement state cleared by the subsequent cleanup. This is a revision-scoped callback limitation, not call-protocol behavior.
+
+The earlier TS10 library implementation has dedicated SCS and IP routing callbacks and a stack-based audio controller. See [Historical local audio arbitration](../who-22-sound-diffusion/#historical-local-audio-arbitration) and [Call/audio evidence](../../project/review/myopencommunity-audio-call-review.md) for revision and execution scope.
+
+Evidence finding `moc-e0157` (claimed): Call mute and earlier IP route callbacks
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074091`, `ownkb:claim:moc-c074092`, `ownkb:claim:moc-c074093`
+- `ownkb:source:moc-s001154`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AudioStateMachine::stateScsVideoCallEntered; AudioStateMachine::stateScsVideoCallExited; AudioStateMachine::stateIpVideoCallEntered; AudioStateMachine::stateIpVideoCallExited; AudioStateMachine::stateMuteEntered; AudioStateMachine::stateMuteExited](https://github.com/OpenWebNet-HA/libqtdevices/blob/13f0c2049666d234e9cd4b0396863da01636d0f5/ts_10/audiostatemachine.cpp#L643-L715) at `13f0c2049666d234e9cd4b0396863da01636d0f5`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074091
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001149`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - AudioState::updateAudioPaths; AudioState::enableState; AudioState::disableState](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L157-L429) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074092, ownkb:claim:moc-c074093
+  Conditions: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; No original Qt 4 application, QML call UI or original QtTest suite runs.; Qt 5 adapted harness; hardware/process calls record requests only and player acknowledgements are synthetic.
+  Execution record: original_helper_in_adapted_harness - PASS original stack, native delayed audio timer, flag routing, controlled pause/resume, ringtone lifetime and reentrant cleanup; g++ C++17 and native Qt 5.15.19 Core/Xml timers and signals, with explicit controlled substitutes.. Inputs: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.. Record: `project/review/myopencommunity-audio-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001159`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Video and intercom answer handlers](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/skins/default/Components/EventManager.qml#L201-L256) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074092
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::updateAudioPaths](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L318-L429) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074092
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::enableState; AudioState::disableState](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L157-L173) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074093
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0158` (claimed): Call UI reservation pager and property consumers
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074094`, `ownkb:claim:moc-c074095`, `ownkb:claim:moc-c074096`, `ownkb:claim:moc-c074097`
+- `ownkb:source:moc-s001159`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Video and intercom ringtone handlers](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/skins/default/Components/EventManager.qml#L215-L283) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074094
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001159`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Intercom answer handler](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/skins/default/Components/EventManager.qml#L246-L256) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074095
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Local state-to-volume table](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L39-L57) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074096
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001160`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - State and volume declarations](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.h#L46-L88) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074096
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s000230`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - VDEBase::setVolume; VDEBase::setMute](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/vct.cpp#L162-L182) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074097
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001162`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Mute and volume handlers](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/skins/default/VideoCamera.qml#L49-L60) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074097
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001161`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Mute and volume handlers](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/skins/default/Components/ControlCall.qml#L67-L85) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074097
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0159` (claimed): Ringtone state lifetime and completion reentry
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074098`, `ownkb:claim:moc-c074099`, `ownkb:claim:moc-c074100`
+- `ownkb:source:moc-s001163`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - RingtoneManager::playRingtoneAndKeepState; RingtoneManager::playRingtone; RingtoneManager::playerStateChange; RingtoneManager::exitStateIfNeeded](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/ringtonemanager.cpp#L106-L193) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074098, ownkb:claim:moc-c074099, ownkb:claim:moc-c074100
+  Conditions: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; No original Qt 4 application, QML call UI or original QtTest suite runs.; Qt 5 adapted harness; hardware/process calls record requests only and player acknowledgements are synthetic.
+  Execution record: original_helper_in_adapted_harness - PASS original stack, native delayed audio timer, flag routing, controlled pause/resume, ringtone lifetime and reentrant cleanup; g++ C++17 and native Qt 5.15.19 Core/Xml timers and signals, with explicit controlled substitutes.. Inputs: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.. Record: `project/review/myopencommunity-audio-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001163`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - RingtoneManager::playRingtoneAndKeepState; RingtoneManager::playRingtone; RingtoneManager::playerStateChange; RingtoneManager::exitStateIfNeeded](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/ringtonemanager.cpp#L106-L193) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074098, ownkb:claim:moc-c074099, ownkb:claim:moc-c074100
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001159`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Call-end and floor-ringtone handlers](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/skins/default/Components/EventManager.qml#L106-L193) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074098
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0160` (claimed): Call interruption and delayed camera audio
+Disposition reason: Revision-scoped findings with exact underlying sources and separately recorded examination methods.
+Individual claims: `ownkb:claim:moc-c074101`, `ownkb:claim:moc-c074102`, `ownkb:claim:moc-c074103`, `ownkb:claim:moc-c074104`
+- `ownkb:source:moc-s001149`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - AudioState::pauseActivePlayer; AudioState::completeTransition; AudioState::resumeActivePlayer; AudioState::vdeEnable; AudioState::runVdeOn; AudioState::updateAudioPaths](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L318-L643) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074101, ownkb:claim:moc-c074103, ownkb:claim:moc-c074104
+  Conditions: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; No original Qt 4 application, QML call UI or original QtTest suite runs.; Qt 5 adapted harness; hardware/process calls record requests only and player acknowledgements are synthetic.
+  Execution record: original_helper_in_adapted_harness - PASS original stack, native delayed audio timer, flag routing, controlled pause/resume, ringtone lifetime and reentrant cleanup; g++ C++17 and native Qt 5.15.19 Core/Xml timers and signals, with explicit controlled substitutes.. Inputs: Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.; Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.; No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes.; Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.. Record: `project/review/myopencommunity-audio-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::pauseActivePlayer; AudioState::completeTransition; AudioState::resumeActivePlayer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L448-L643) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074101
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001159`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - Grabber-state handler](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/skins/default/Components/EventManager.qml#L186-L199) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074102, ownkb:claim:moc-c074103
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s000230`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - CCTV::grabberStateReceived](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/vct.cpp#L747-L754) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074102
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::AudioState; AudioState::vdeEnable; AudioState::runVdeOn; AudioState::updateAudioPaths](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L137-L446) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074103, ownkb:claim:moc-c074104
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Executable behavior read in source; no runtime success implied.
+
+Evidence finding `moc-e0161` (deferred): Original call tests and full GUI execution boundary
+Disposition reason: Pinned original call test expectations are read, including manually invoked hands-free/association callbacks and mock process checks. QtQuick 1.1, original Qt 4 UI, real call service, hardware audio and every historical test variant remain unexecuted; helper passes do not close these questions.
+- `ownkb:source:moc-s001164`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestVideoDoorEntry::testHandsFree; TestVideoDoorEntry::testCCTVTeleloopTimeouTimer; TestVideoDoorEntry::testCCTVOutgoingCallTerminatedByTouch](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_videodoorentry_objects.cpp#L519-L983) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-audio-call-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Exact archived implementation and revision scope; no deployed build, physical bus, gateway, audible-output or Firmware-boundary observation.; Original expected assertion inspected; this is not a claim that the original suite ran or passed.
+
+Evidence finding `moc-e0162` (claimed): Native producer consequences for local call interruption
+Disposition reason: Reviewed revision-scoped findings with exact original artifacts and distinct examination methods.
+Individual claims: `ownkb:claim:moc-c074105`, `ownkb:claim:moc-c074106`, `ownkb:claim:moc-c074107`
+- `ownkb:source:moc-s001137`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - MultiMediaPlayer::mplayerDone; MultiMediaPlayer::mplayerStopped; MultiMediaPlayer::releaseOutputDevices](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L260-L456) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074105, ownkb:claim:moc-c074106, ownkb:claim:moc-c074107
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001137`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - MultiMediaPlayer::mplayerDone; MultiMediaPlayer::mplayerStopped](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/multimediaplayer.cpp#L396-L456) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074105, ownkb:claim:moc-c074106, ownkb:claim:moc-c074107
+  Conditions: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Native Qt 5 QProcess/timers/signals; hardware functions record requests, config/source and unused video dependencies are substitutes. No injected pause/release callbacks.; Synthetic slave child supplies explicit pause text and controlled termination outcomes; real MPlayer conventions and audible output are not measured.
+  Execution record: original_helper_in_adapted_harness - native pause acknowledgement, state/output ordering and exit-1 release/resume passed
+call interruption with controlled exit 1 passed
+call interruption with controlled exit crash passed
+call interruption with controlled exit 0 passed
+call interruption with controlled exit 2 passed
+native Sound Diffusion pause/resume keeps process and reported output active passed; g++ C++17; native Qt 5.15.19 Core/Concurrent; complete original producer/controller translation units and controlled local child.. Inputs: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.. Record: `project/review/myopencommunity-consumer-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L594-L622) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074105, ownkb:claim:moc-c074106, ownkb:claim:moc-c074107
+  Conditions: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Native Qt 5 QProcess/timers/signals; hardware functions record requests, config/source and unused video dependencies are substitutes. No injected pause/release callbacks.; Synthetic slave child supplies explicit pause text and controlled termination outcomes; real MPlayer conventions and audible output are not measured.
+  Execution record: original_helper_in_adapted_harness - native pause acknowledgement, state/output ordering and exit-1 release/resume passed
+call interruption with controlled exit 1 passed
+call interruption with controlled exit crash passed
+call interruption with controlled exit 0 passed
+call interruption with controlled exit 2 passed
+native Sound Diffusion pause/resume keeps process and reported output active passed; g++ C++17; native Qt 5.15.19 Core/Concurrent; complete original producer/controller translation units and controlled local child.. Inputs: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.. Record: `project/review/myopencommunity-consumer-call-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001138`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - MediaPlayer::mplayerFinished](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/mediaplayer.cpp#L594-L622) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074105, ownkb:claim:moc-c074106, ownkb:claim:moc-c074107
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001149`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AudioState::pauseActivePlayer; AudioState::resumeActivePlayer; AudioState::completeTransition](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L448-L643) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074105, ownkb:claim:moc-c074106, ownkb:claim:moc-c074107
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Executable behavior inspected in source; no runtime success implied.
+- `ownkb:source:moc-s001149`: helper_execution; client; direct; corroborates. [MyOpenCommunity/BtExperience - AudioState::pauseActivePlayer; AudioState::resumeActivePlayer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/gui/audiostate.cpp#L559-L643) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: ownkb:claim:moc-c074105, ownkb:claim:moc-c074106, ownkb:claim:moc-c074107
+  Conditions: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Native Qt 5 QProcess/timers/signals; hardware functions record requests, config/source and unused video dependencies are substitutes. No injected pause/release callbacks.; Synthetic slave child supplies explicit pause text and controlled termination outcomes; real MPlayer conventions and audible output are not measured.
+  Execution record: original_helper_in_adapted_harness - native pause acknowledgement, state/output ordering and exit-1 release/resume passed
+call interruption with controlled exit 1 passed
+call interruption with controlled exit crash passed
+call interruption with controlled exit 0 passed
+call interruption with controlled exit 2 passed
+native Sound Diffusion pause/resume keeps process and reported output active passed; g++ C++17; native Qt 5.15.19 Core/Concurrent; complete original producer/controller translation units and controlled local child.. Inputs: Build defines MEDIAPLAYER_DISABLE_HARDWARE_FUNCTIONS, MEDIAPLAYER_MULTIPLE_PLAYERS and BT_EXPERIENCE_TODO_REVIEW_ME; original hardware access is disabled and separate QProcess player instances are selected.; Complete original MediaPlayer, MultiMediaPlayer, AudioState and EntryInfo files run with native Qt 5 timers, QProcess and signals.; No original QtTest suite, original Qt 4 GUI, QML, physical audio, bus or deployed firmware executes.; Routing and hardware functions record requests; source/config dependencies are substitutes. Unused GStreamer seam aborts if video playback is attempted.; Synthetic slave child emits a controlled pause marker and SIGTERM exits 0, 1, 2 or unhandled-signal crash; these are not measured MPlayer exits.. Record: `project/review/myopencommunity-consumer-call-review.md` (## Controlled helper execution).
+
+Evidence finding `moc-e0169` (deferred): Historical call-suite execution and deployment remain unresolved
+Disposition reason: All selected retained call-test method variants and exact assertions are inspected. Manual timer callbacks, mock writers/processes and intermediate expectations do not establish passed original suites, physical timeout behavior, complete QML runtime or deployed backend outcomes.
+- `ownkb:source:moc-s001164`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestVideoDoorEntry::testHandsFree; TestVideoDoorEntry::testCCTVTeleloopTimeouTimer](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_videodoorentry_objects.cpp#L794-L983) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-consumer-call-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Exact archived implementation/revision scope; no physical audio, deployed Firmware boundary, bus or gateway observation.; Expected assertions inspected; the original QtTest suite was not run and is not reported as passing.
+
+### Historical Guard Unit messaging
+
+Section ID: `ownkb:section:d000078:s000007`
+
+Uncertainty: `unknown`
+Provenance cues: `evidence`
+
+The same touchscreen stack implements Guard Unit messages under `WHO 8`. This is distinct from the [`WHO 12` Messages namespace](../who-12-messages/).
+
+| Stage | Tested or implemented form |
+| --- | --- |
+| Begin from Guard Unit | `*8*9012#ID*LOCAL#00#GUARD##` |
+| Ready / busy reply | `*8*9013*GUARD#00#LOCAL##` / `*8*9014*GUARD#00#LOCAL##` |
+| Parameter block | `*#8*LOCAL#00#GUARD*#9001*VALUES##` |
+| Message data | `*#8*LOCAL#00#GUARD*#9002*CHAR1*CHAR2*...##` |
+| Checksum | `*8*9017#CHECKSUM*LOCAL#00#GUARD##` |
+| End | `*8*9001*LOCAL#00#GUARD##` |
+| Bad checksum reply | `*8*9015#VALUE*GUARD#00#LOCAL##` |
+| Timeout reply | `*8*9016#COUNT*GUARD#00#LOCAL##` |
+
+`9001` therefore has distinct parameter-write and ordinary end-command roles. The tests preserve the `00` address component and the empty positions within parameter blocks; the complete parameter schema remains unknown.
+
+Data values are decimal 16-bit character codes appended as `QChar` values. The message parser expects U+000E, a timestamp `dd/MM/yy hh:mm`, U+000F, then text. Its test parses `08/03/10 17:32` as 8 March 2010 at 17:32. This establishes the historical application format, not an arbitrary UTF-8 text payload.
+
+The checksum helper splits each 16-bit character into high byte then low byte. For unsigned byte sequence `b[0..n-1]` with non-negative modulo reduction, the low checksum byte is `(1 + sum(b)) mod 256`; the high byte is `(n + sum(i*b[n-i], i=1..n-1)) mod 256`. Combining high then low byte reproduces the exact test vector `Bticino` followed by U+F0E2 -> `0xE49B`; this is not a named standard CRC.
+
+The archived helper uses plain `char` and C++ remainder, so this formula is not a byte-exact description for every input/build. For U+FFFF alone, the original helper returns `-1` with signed `char`, versus `511` (`0x01FF`) with unsigned `char`. Physical Guard Unit behavior for such input remains unconfirmed. See [Checksum evidence](../../project/review/myopencommunity-intermediate-history-review.md#message-checksum-and-test-limits).
+
+Verification uses the rightmost five decimal characters of the received checksum argument. On failure, the receiver replies with that numeric value in `9015`, then clears the pending message before a later end frame can publish it. The rejection argument is therefore not necessarily the begin frame's message ID.
+
+At `TS10_1_0_23`, the 5-second inactivity timer restarts after parameter/data blocks and a matching checksum. A timeout reports the accumulated UTF-16 code-unit count, not the checksum byte count. An active receive answers another begin with busy. Older implementation revisions used a 3-second timer and optional `#8` address components; these are historical variants, not permission to normalize arbitrary addresses. See [Messaging evidence](../../project/review/myopencommunity-integration.md#video-door-entry-and-messaging).
+
+Evidence finding `moc-e0077` (claimed): Guard message library protocol and buffer
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007742`, `ownkb:claim:moc-c007743`, `ownkb:claim:moc-c007744`, `ownkb:claim:moc-c007745`, `ownkb:claim:moc-c007746`, `ownkb:claim:moc-c007747`
+- `ownkb:source:moc-s000232`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - MessageDevice::MessageDevice; MessageDevice::cleanup; MessageDevice::parseFrame; MessageDevice::resetTimer; MessageDevice::sendBusy; MessageDevice::sendReady; MessageDevice::sendTimeout; MessageDevice::sendWrongChecksum; MessageDevice::timeout; MessageDevicePrivate::checksum; MessageDevicePrivate::parseMessage](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/message_device.cpp#L46-L215) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007742, ownkb:claim:moc-c007743, ownkb:claim:moc-c007744, ownkb:claim:moc-c007745, ownkb:claim:moc-c007746, ownkb:claim:moc-c007747
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000233`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestMessageDevice::cleanup; TestMessageDevice::connectFailed; TestMessageDevice::init; TestMessageDevice::receiveBeginMessage; TestMessageDevice::receiveCompleteMessage; TestMessageDevice::receiveTimeout; TestMessageDevice::receiveWrongChecksum; TestMessageDevice::sendBusy; TestMessageDevice::sendReady; TestMessageDevice::sendTimeout; TestMessageDevice::sendWrongChecksum; TestMessageDevice::testChecksum; TestMessageDevice::testParseMessage](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_message_device.cpp#L45-L265) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0078` (claimed): Guard checksum and assertion limitations
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007748`, `ownkb:claim:moc-c007749`, `ownkb:claim:moc-c007750`
+- `ownkb:source:moc-s000232`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - MessageDevice::MessageDevice; MessageDevice::cleanup; MessageDevice::parseFrame; MessageDevice::resetTimer; MessageDevice::sendBusy; MessageDevice::sendReady; MessageDevice::sendTimeout; MessageDevice::sendWrongChecksum; MessageDevice::timeout; MessageDevicePrivate::checksum; MessageDevicePrivate::parseMessage](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/message_device.cpp#L46-L215) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007748
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000247`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - Message; operator==(const Message &, const Message &)](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/message_device.h#L33-L45) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007749
+  Limitations: Pinned original definition only; no physical behavior or complete archived-suite pass asserted.
+- `ownkb:source:moc-s000233`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestMessageDevice::cleanup; TestMessageDevice::connectFailed; TestMessageDevice::init; TestMessageDevice::receiveBeginMessage; TestMessageDevice::receiveCompleteMessage; TestMessageDevice::receiveTimeout; TestMessageDevice::receiveWrongChecksum; TestMessageDevice::sendBusy; TestMessageDevice::sendReady; TestMessageDevice::sendTimeout; TestMessageDevice::sendWrongChecksum; TestMessageDevice::testChecksum; TestMessageDevice::testParseMessage](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_message_device.cpp#L45-L265) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007750
+  Limitations: Inspected expected-result/assertion expression, not an archived-suite pass.
+
+Evidence finding `moc-e0086` (corroborates): Retained Guard helper execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007742`, `ownkb:claim:moc-c007743`, `ownkb:claim:moc-c007744`, `ownkb:claim:moc-c007745`, `ownkb:claim:moc-c007746`, `ownkb:claim:moc-c007747`, `ownkb:claim:moc-c007748`, `ownkb:claim:moc-c007749`
+- `ownkb:source:moc-s000232`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - MessageDevice::MessageDevice; MessageDevice::cleanup; MessageDevice::parseFrame; MessageDevice::resetTimer; MessageDevice::sendBusy; MessageDevice::sendReady; MessageDevice::sendTimeout; MessageDevice::sendWrongChecksum; MessageDevice::timeout; MessageDevicePrivate::checksum; MessageDevicePrivate::parseMessage](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/message_device.cpp#L46-L215) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007742, ownkb:claim:moc-c007743, ownkb:claim:moc-c007744, ownkb:claim:moc-c007745, ownkb:claim:moc-c007746, ownkb:claim:moc-c007747, ownkb:claim:moc-c007748
+  Conditions: Qt5 unchanged checksum/text/equality helpers compiled separately with signed and unsigned char; controlled construction and fields.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - Sixteen comparisons passed; checksum char-signedness and equality weakness retained.; Qt5 unchanged checksum/text/equality helpers compiled separately with signed and unsigned char; controlled construction and fields.. Inputs: ASCII and non-ASCII checksum cases; Direct text-preservation checks; Eight comparisons per char build. Record: `project/review/myopencommunity-intermediate-history-review.md` (16 comparisons).
+- `ownkb:source:moc-s000247`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - Message; operator==(const Message &, const Message &)](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/message_device.h#L33-L45) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007749
+  Conditions: Qt5 unchanged checksum/text/equality helpers compiled separately with signed and unsigned char; controlled construction and fields.
+  Limitations: Same retained targeted helper run, not an independent second execution or hardware test.
+  Execution record: original_helper_in_adapted_harness - Sixteen comparisons passed; checksum char-signedness and equality weakness retained.; Qt5 unchanged checksum/text/equality helpers compiled separately with signed and unsigned char; controlled construction and fields.. Inputs: ASCII and non-ASCII checksum cases; Direct text-preservation checks; Eight comparisons per char build. Record: `project/review/myopencommunity-intermediate-history-review.md` (16 comparisons).
+
+Evidence finding `moc-e0100` (deferred): Guard unknown fields and physical non-ASCII behavior
+Disposition reason: Recorded char builds establish helper behavior only. Unknown parameters, deployed character encoding and hardware checksum behavior need independent evidence.
+- `ownkb:source:moc-s000232`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - MessageDevice::MessageDevice; MessageDevice::cleanup; MessageDevice::parseFrame; MessageDevice::resetTimer; MessageDevice::sendBusy; MessageDevice::sendReady; MessageDevice::sendTimeout; MessageDevice::sendWrongChecksum; MessageDevice::timeout; MessageDevicePrivate::checksum; MessageDevicePrivate::parseMessage](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/message_device.cpp#L46-L215) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-intermediate-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Evidence boundary
 
 Section ID: `ownkb:section:d000078:s000003`
@@ -9539,10 +12417,11 @@ Diagnostic traffic belongs to `WHO 1008`; the numeric relationship does not make
 
 Section ID: `ownkb:section:d000078:s000004`
 
+Cautions: `do not`
 Uncertainty: `unknown`
-Provenance cues: `database`, `specification`
+Provenance cues: `specification`
 
-Recognize the namespace, preserve unknown fields losslessly, and label only the address form and generic identification operation established above. Device-specific Video Door Entry behavior requires a canonical specification, a database template with resolved parameters, or observed traffic.
+Decode the historical forms only in the applicable touchscreen context. Preserve other fields losslessly, including unknown call kinds, message parameters, and addresses. Device-specific applicability still requires a resolved implementation, specification, or observed traffic; the historical classes do not establish a universal grammar.
 
 See [MyHOME Suite `OPEN.db` Coverage](../open-db-coverage.md), [`WHO 6`](../who-6-basic-video-door-entry/), and [`WHO 7`](../who-7-multimedia-video/).
 
@@ -9573,12 +12452,52 @@ The Alarm specification's references to AUX targets demonstrate cross-system use
 
 Section ID: `ownkb:section:d000079:s000003`
 
+Applicability cues: `scs`
+Cautions: `do not`
 Uncertainty: `unknown`
-Provenance cues: `evidence`
+Provenance cues: `evidence`, `source`
 
 The current integrated corpus establishes the Auxiliaries namespace and its use by MyHOME_Suite, but does not justify a complete independent `WHAT`/`DIMENSION` table beyond supported implementation evidence. Unknown values remain unspecified rather than inferred from generic binary-control behavior.
 
+The historical BTicino touchscreen library and exact tests at `TS10_1_0_23` establish the following narrower status model:
+
+| Operation | Implemented form | Client interpretation |
+| --- | --- | --- |
+| Request auxiliary status | `*#9*WHERE##` | Sent during device initialization |
+| Receive ON indication | `*9*1*WHERE##` | Boolean true |
+| Receive OFF indication | `*9*0*WHERE##` | Boolean false |
+
+The decoder requires a command/event frame and an exact match of the complete configured `WHERE`; other `WHAT` values yield no status update. Its `DIM_STATUS` identifier is a local library value, not a wire `DIMENSION`. This evidence does not establish an auxiliary-address range, a dimension read/write vocabulary, or a physical response/acknowledgement sequence.
+
+The library forwards repeated ON/OFF reports. Its scenario-condition consumer applies a separate policy: the first matching report can trigger, while repeated matches are suppressed until a nonmatching report arrives. See [historical touchscreen condition evaluation](../../scenario-engine/execution-model.md#historical-touchscreen-condition-evaluation) for initialization and condition-change behavior.
+
+Alarm auxiliary-source configuration selects the separate `WHO 5` technical-alarm path; its source-number limits do not define the `WHO 9` address domain. Sound-source entries labelled AUX instead use the [`WHO 16`](../who-16-sound-system/) / [`WHO 22`](../who-22-sound-diffusion/) sound dialects. See [auxiliary implementation evidence](../../project/review/myopencommunity-auxiliary-history-review.md) for the scoped tests and historical corrections.
+
+The physical `AUX` plug, the numeric channel in an `AUX` socket and an analogue audio connector marked AUX have distinct roles. Manufacturer-defined configuration examples are maintained in [SCS Configurator Labels](../../device-model/configurators.md#positions-and-functions); neither a shared label nor a product's channel range establishes one universal auxiliary wire grammar.
+
 See [Protocol](../../protocol/) for common frame syntax and [`WHO 5` - Alarm](../who-5-alarm/) for Alarm-side AUX references.
+
+Evidence finding `moc-e0079` (claimed): Auxiliary library state interpretation
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007751`, `ownkb:claim:moc-c007752`
+- `ownkb:source:moc-s000206`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - AuxDevice::AuxDevice; AuxDevice::init; AuxDevice::parseFrame; AuxDevice::requestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L1299-L1333) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-auxiliary-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007751, ownkb:claim:moc-c007752
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000234`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - device::manageFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/device.cpp#L206-L214) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-auxiliary-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007751, ownkb:claim:moc-c007752
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000205`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestAuxDevice::cleanupTestCase; TestAuxDevice::initTestCase; TestAuxDevice::receiveStatus; TestAuxDevice::sendRequestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_media_device.cpp#L979-L1001) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-auxiliary-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007751
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.
+
+Evidence finding `moc-e0093` (corroborates): Retained auxiliary execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007751`, `ownkb:claim:moc-c007752`
+- `ownkb:source:moc-s000206`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - AuxDevice::AuxDevice; AuxDevice::init; AuxDevice::parseFrame; AuxDevice::requestStatus](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/media_device.cpp#L1299-L1333) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-auxiliary-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007751, ownkb:claim:moc-c007752
+  Conditions: Qt5 Core, 13 original bodies; controlled OpenMsg fields/classification, signals, construction and query dispatch.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 29 comparisons passed across the bounded review harness; routed-looking WHERE is opaque input, not routed hardware evidence.; Qt5 Core, 13 original bodies; controlled OpenMsg fields/classification, signals, construction and query dispatch.. Inputs: Exact address comparison; Nonmatching family/WHAT; Repeated status. Record: `project/review/myopencommunity-auxiliary-history-review.md` (29 comparisons).
 
 # Document: ownkb:document:d000080
 
@@ -9874,10 +12793,12 @@ One especially important exclusion is `EN_DEVICE.code`: it is a product code/SKU
 
 Section ID: `ownkb:section:d000082:s000008`
 
-Applicability cues: `firmware`
+Applicability cues: `firmware`, `scs`
 Provenance cues: `catalogue`
 
 Physical configuration is a firmware-contextual catalogue problem. The catalogue does not provide one global table that maps a raw configurator number to a universal meaning, nor does it require a hand-maintained topology table for each firmware.
+
+The manufacturer-defined meanings of plug labels and socket names are documented in [SCS Configurator Labels](../device-model/configurators.md). Contextual numerical encoding does not make established functions such as PUL pushbutton control or SLA follower operation uncertain.
 
 #### Configuration-mode boundary
 
@@ -13168,6 +16089,66 @@ OpenWebNet acknowledgement frames do not carry transaction identifiers. Correlat
 
 On a command session, keep at most one unresolved request unless the specific gateway behavior proves that pipelining is supported. On an event session, do not attach an unrelated asynchronous event to a pending command merely because it arrives nearby in time.
 
+#### Ordering across connections
+
+Section ID: `ownkb:section:d000103:s000007`
+
+Provenance cues: `evidence`
+
+Request ordering on one connection does not order operations on another. Historical BTicino clients explicitly handle this: LAN writes are sent immediately and followed by a delayed status read, while energy graph requests are directed through one connection. These are application strategies against observed ordering problems, not protocol timing constants. See [Platform and ordering evidence](../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
+
+Evidence finding `moc-e0001` (claimed): Client cross-connection ordering strategies
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007528`, `ownkb:claim:moc-c007529`
+- `ownkb:source:moc-s000164`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - PlatformDevice::enableLan](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/platform_device.cpp#L76-L87) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007528
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000165`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - EnergyDevice::sendRequest](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/energy_device.cpp#L385-L394) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007529
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000166`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - FrameSender::FrameSender; FrameSender::delayFrames; FrameSender::sendCommandFrame; FrameSender::sendFrame; FrameSender::sendFrameNow; FrameSender::sendInit; FrameSender::sendInitNow; FrameSender::setClients; FrameSender::subscribeAck; FrameSender::~FrameSender](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/frame_classes.cpp#L56-L130) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+#### Historical client correlation and replay
+
+Section ID: `ownkb:section:d000103:s000009`
+
+Cautions: `do not`
+
+The touchscreen writer associates each ACK/NACK with the oldest pending frame on that connection, then notifies subscribers for the original frame's `WHO`. Two initial acknowledgement positions are reserved for connection and channel setup. Exact tests cover mixed namespaces and multiple subscribers; the ACK itself still carries no namespace or request identifier.
+
+This writer processes only ACK/NACK input; it does not collect status or dimension result frames received on the writer connection. Functional reports are dispatched separately by the reader's `WHO` subscriptions. Its operation-ACK tests therefore do not establish complete command-session result correlation. See [Dispatch and test limits](../project/review/myopencommunity-transport-history-review.md#local-client-setup-and-dispatch).
+
+Within one queued send batch, this writer removes byte-identical duplicates. On its proactive inactivity reconnect, it requeues frames whose acknowledgements remain outstanding before newly queued traffic. This is client behavior, not a delivery guarantee: absence of an ACK does not prove that an operation had no effect, and replay is not inherently safe for non-idempotent commands. See [Writer tests and implementation](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
+
+Evidence finding `moc-e0003` (claimed): Touchscreen FIFO acknowledgement and replay
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007533`, `ownkb:claim:moc-c007534`, `ownkb:claim:moc-c007535`, `ownkb:claim:moc-c007536`, `ownkb:claim:moc-c007537`, `ownkb:claim:moc-c007538`, `ownkb:claim:moc-c007539`
+- `ownkb:source:moc-s000168`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - ClientWriter::ClientWriter; ClientWriter::delayFrames; ClientWriter::manageFrame; ClientWriter::sendChannelId; ClientWriter::sendDelayedFrames; ClientWriter::sendFrameOpen; ClientWriter::sendFrames; ClientWriter::setDelay; ClientWriter::socketConnected; ClientWriter::subscribeAck; ClientWriter::unsubscribeAck](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/openclient.cpp#L286-L483) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007533, ownkb:claim:moc-c007534, ownkb:claim:moc-c007535, ownkb:claim:moc-c007536, ownkb:claim:moc-c007537, ownkb:claim:moc-c007538, ownkb:claim:moc-c007539
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000169`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/libqtcommon - FrameSenderMock::FrameSenderMock; FrameSenderMock::manageAck; FrameSenderMock::manageNak; TestClientWriter::TestClientWriter; TestClientWriter::createClient; TestClientWriter::newConnection; TestClientWriter::readAll; TestClientWriter::testAck; TestClientWriter::testAckMultipleReceivers; TestClientWriter::testAckMultipleWho; TestClientWriter::testAckNotReceived; TestClientWriter::testDelay; TestClientWriter::testDuplicates; TestClientWriter::testMultipleAckNak; TestClientWriter::testMultipleFrames; TestClientWriter::testNak; TestClientWriter::testResendUnackedFramesOnReconnect; TestClientWriter::testSingleFrame; TestClientWriter::waitForData](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_clientwriter.cpp#L32-L363) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+#### Simulator fallback acknowledgements
+
+Section ID: `ownkb:section:d000103:s000008`
+
+Applicability cues: `firmware`, `tcp`
+Cautions: `not evidence`
+Provenance cues: `evidence`
+
+The VDK 2.0 F454 model returns a fallback ACK after a 500 ms timeout for a pending status request, even when no Device result arrived; other unhandled TCP operations receive NACK. Its internal plant-message identifiers are not fields in the wire ACK. This is simulator behavior, not evidence that physical F454 Firmware uses that deadline or acceptance policy. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
+Evidence finding `moc-e0002` (claimed): F454-model fallback ACK
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007530`, `ownkb:claim:moc-c007531`, `ownkb:claim:moc-c007532`
+- `ownkb:source:moc-s000167`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - timeout|Timeout|Nack|ACK](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_own_GTW_PGIN/btowngtw.cpp#L23-L343) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007530, ownkb:claim:moc-c007531, ownkb:claim:moc-c007532
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Error handling
 
 Section ID: `ownkb:section:d000103:s000005`
@@ -13353,6 +16334,72 @@ The public `WHO 1` material explicitly enumerates all four forms. The public `WH
 The source documents differ in the range they state for the interface field: the Lighting document gives `01..09` and `11..15`, while the Automation document expresses it as `[0-1][1-9]` (`01..09`, `11..19`). This is a source-level constraint discrepancy within the shared concept. Implementations should preserve that discrepancy until Device/interface evidence establishes whether the broader range is universally valid.
 
 Examples include `13#4#03` for point `A=1, PL=3` through interface `03`, and `0311#4#12` for extended point `A=03, PL=11` through interface `12`.
+
+#### F422 simulator boundary behavior
+
+Section ID: `ownkb:section:d000104:s000014`
+
+Cautions: `do not`
+Provenance cues: `documentation`, `evidence`
+
+The VDK 2.0 F422 model corroborates local-bus qualification for non-general targets: it matches `BASE#4#I3I4`, removes the qualifier when forwarding onto the subordinate bus, and appends it to returned non-general traffic. ACK/NACK feedback is forwarded without address rewriting.
+
+This model is incomplete: it forwards qualified general target `0` before checking the routing level or interface, and its empty-component splitting does not preserve every group form. Those shortcuts do not establish physical F422 routing behavior or new legal `WHO 2` collective forms. Its configurable interface range is also narrower than the product documentation. See [Simulator evidence](../project/review/myopencommunity-integration.md#simulator-models).
+
+Evidence finding `moc-e0004` (claimed): F422-model routing transformations
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007540`, `ownkb:claim:moc-c007541`, `ownkb:claim:moc-c007542`, `ownkb:claim:moc-c007543`, `ownkb:claim:moc-c007544`
+- `ownkb:source:moc-s000170`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtF422_dev::ReceiveMessage](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F422_DEV_PGIN/btf422_dev.cpp#L201-L252) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007540
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000170`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtF422_dev::ReceiveMsgLocalBUS](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F422_DEV_PGIN/btf422_dev.cpp#L254-L280) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007541, ownkb:claim:moc-c007542
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000170`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtF422_dev::ReceiveMessage](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F422_DEV_PGIN/btf422_dev.cpp#L212-L229) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007543
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000170`: source_inspection; simulator; interpretation; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtF422_dev::ReceiveMessage](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F422_DEV_PGIN/btf422_dev.cpp#L212-L239) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-integration.md`.
+  Examination claims: ownkb:claim:moc-c007544
+  Limitations: Address-form loss is derived from SkipEmptyParts and rebuilding WHERE from the first component; it was not established by a recorded simulator run.; Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+#### Historical touchscreen address matching
+
+Section ID: `ownkb:section:d000104:s000015`
+
+Provenance cues: `evidence`
+
+The `TS10_1_0_23` Lighting/Automation matcher distinguishes an unqualified general target from a general target on one routing level. Its exact tests include:
+
+| Incoming `WHERE` | Configured target | Matcher result |
+| --- | --- | --- |
+| `0` | `0312#4#12` | General match across levels |
+| `0#3` | `0312#4#12` | No match |
+| `0#3` | `01` | General match on the unqualified level |
+| `0#4#12` | `0312#4#12` | General match through interface `12` |
+| `0#4#01` | `0312#4#12` | No match |
+| `00#4#12` | `0015#4#12` | Environment `00` match |
+| `100` | `1001` | Environment `10` match |
+| `3#3` | `0313` | Environment `03` match |
+| `3` | `0313#4#12` | No match |
+
+The matcher first compares complete address strings for an exact match. Incoming `#3` is then treated as the unqualified level for collective matching; the configured qualifier is not normalized. Consequently, point `12#3` does not match configured point `12`, and incoming `0#3` does not match configured `12#3`. Local-bus qualifiers are compared as strings. See [Matcher qualification evidence](../project/review/myopencommunity-transport-history-review.md#address-matcher-lineage).
+
+Its group test deliberately does not derive group membership from a point address: `#45` does not match `34#4#45` merely because the same digits occur in the interface. Configured group membership needs separate evidence. These are client matching rules, not additional legal address ranges or proof of physical interface forwarding. See [Address matching evidence](../project/review/myopencommunity-reassessment.md#address-matching).
+
+Evidence finding `moc-e0005` (claimed): Pinned address-matcher outcomes
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007545`, `ownkb:claim:moc-c007546`, `ownkb:claim:moc-c007547`, `ownkb:claim:moc-c007548`, `ownkb:claim:moc-c007549`, `ownkb:claim:moc-c007550`, `ownkb:claim:moc-c007551`, `ownkb:claim:moc-c007552`, `ownkb:claim:moc-c007553`, `ownkb:claim:moc-c007554`, `ownkb:claim:moc-c007555`, `ownkb:claim:moc-c007556`
+- `ownkb:source:moc-s000171`: helper_execution; library; direct; supports. [MyOpenCommunity/libqtdevices - splitWhere; getEnvironment; checkAddressIsForMe](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/pulldevice.cpp#L35-L99) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007545, ownkb:claim:moc-c007546, ownkb:claim:moc-c007547, ownkb:claim:moc-c007548, ownkb:claim:moc-c007549, ownkb:claim:moc-c007550, ownkb:claim:moc-c007551, ownkb:claim:moc-c007552, ownkb:claim:moc-c007553, ownkb:claim:moc-c007554, ownkb:claim:moc-c007555, ownkb:claim:moc-c007556
+  Conditions: Unchanged splitWhere/getEnvironment/checkAddressIsForMe bodies and original test-function bodies compiled with Qt5; QtTest scaffolding replaced by assertion reporting.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - All 34 comparisons passed in the retained targeted run.; Unchanged splitWhere/getEnvironment/checkAddressIsForMe bodies and original test-function bodies compiled with Qt5; QtTest scaffolding replaced by assertion reporting.. Inputs: 29 archived comparisons; Five independent qualifier/equality comparisons. Record: `project/review/myopencommunity-transport-history-review.md` (34 comparisons PASS).
+- `ownkb:source:moc-s000171`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - splitWhere; getEnvironment; checkAddressIsForMe](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/pulldevice.cpp#L35-L99) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007545, ownkb:claim:moc-c007546, ownkb:claim:moc-c007547, ownkb:claim:moc-c007548, ownkb:claim:moc-c007549, ownkb:claim:moc-c007550, ownkb:claim:moc-c007551, ownkb:claim:moc-c007552, ownkb:claim:moc-c007553, ownkb:claim:moc-c007554, ownkb:claim:moc-c007555, ownkb:claim:moc-c007556
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000172`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - TestCheckAddress::testCheckAddressEnvironment0; TestCheckAddress::testCheckAddressEnvironment10; TestCheckAddress::testCheckAddressEnvironmentLevel3; TestCheckAddress::testCheckAddressEnvironmentLevel4; TestCheckAddress::testCheckAddressGlobal; TestCheckAddress::testCheckAddressGlobalInterface; TestCheckAddress::testCheckAddressGlobalInterfaceFalse; TestCheckAddress::testCheckAddressGlobalLevel3; TestCheckAddress::testCheckAddressGlobalLevel4; TestCheckAddress::testCheckAddressGroup; TestCheckAddress::testCheckAddressPointToPoint](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/test/test_checkaddress.cpp#L28-L115) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
 
 ### Parsing rules
 
@@ -14075,6 +17122,46 @@ This is a specialized gateway session. It is distinct from functional scenario a
 
 The public source gives the session boundary and selector but not a general-purpose programming API. The functional F420 frames are documented under [`WHO 0`](../functional/who-0-scenarios/).
 
+### Historical local touchscreen channels
+
+Section ID: `ownkb:section:d000109:s000009`
+
+Applicability cues: `gateway`, `tcp`
+Cautions: `do not`, `must not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen client at `TS10_1_0_23` uses four channels to its local OpenWebNet server:
+
+| Client role | Selector |
+| --- | --- |
+| Monitor | `*99*1##` |
+| Supervisor | `*99*10##` |
+| Command writer | `*99*9##` |
+| Request writer | `*99*0##` |
+
+The request writer sends status and dimension requests; the supervisor uses the reader interface. This local use of selector `0` differs from the published scenario-programming role above and does not establish a general external-gateway request session. Likewise, the local supervisor selector is implementation evidence rather than an addition to the published gateway session table.
+
+This client's connected flag and connection-up notification are set on TCP connection establishment, before sending the channel selector. They do not establish receipt of the server greeting, selector acceptance, or authentication success. Applications using this local lifecycle must not equate its connected state with the active-session state of the published gateway workflow. See [Local setup evidence](../project/review/myopencommunity-transport-history-review.md#local-client-setup-and-dispatch).
+
+The VDK 2.0 simulator recognizes the same four selectors, but names `0` command and `9` request. Its labels do not change the published commands/actions selector. Neither implementation establishes external-gateway authentication behavior. See [Local channel evidence](../project/review/myopencommunity-reassessment.md#transport-and-session-boundaries).
+
+Evidence finding `moc-e0006` (claimed): Local touchscreen channels and connected state
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007557`, `ownkb:claim:moc-c007558`, `ownkb:claim:moc-c007559`, `ownkb:claim:moc-c007560`
+- `ownkb:source:moc-s000168`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - Client::socketConnected; ClientReader::sendChannelId; ClientWriter::sendChannelId](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/openclient.cpp#L141-L319) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007557, ownkb:claim:moc-c007558, ownkb:claim:moc-c007559, ownkb:claim:moc-c007560
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000173`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - 99|newConnection](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_own_GTW_PGIN/tcpserver.cpp#L24-L84) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007557, ownkb:claim:moc-c007558, ownkb:claim:moc-c007559, ownkb:claim:moc-c007560
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0012` (claimed): VDK local channel names
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007578`
+- `ownkb:source:moc-s000173`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - TcpServer::TcpServer; TcpServer::acceptConnection; TcpServer::clientDisconnected; TcpServer::cmdRead; TcpServer::init; TcpServer::startRead; TcpServer::write; TcpServer::~TcpServer](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_own_GTW_PGIN/tcpserver.cpp#L34-L174) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007578
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
 ### Authentication branch
 
 Section ID: `ownkb:section:d000109:s000006`
@@ -14214,6 +17301,129 @@ Section ID: `ownkb:section:d000110:s000009`
 Keep protocol values as strings until their field grammar has been identified. This preserves leading zeroes, fixed-width Device IDs, empty fields, routing qualifiers, and encoded values that merely look decimal.
 
 Only the system-specific decoder should expose typed integers, temperatures, durations, masks, or identifiers.
+
+### Historical implementation limits
+
+Section ID: `ownkb:section:d000110:s000011`
+
+Applicability cues: `tcp`
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen frame helpers independently construct command, status request, dimension request, and dimension write families using the forms in [Frame Syntax](frame-syntax.md). Their parameter names do not redefine the wire fields: a helper can accept a complete dimension selector and value string in a variable named `what`.
+
+At `TS10_1_0_23`, frame-family recognition delegates to a separate OpenWebNet stack absent from the four preserved repositories. The constructors establish serialization behavior, but do not establish that stack's complete acceptance grammar. The local byte framer drains consecutive `##`-terminated chunks and retains an incomplete tail, without finding a leading `*` or enforcing a buffer limit. Its disconnect/reconnect methods also retain that tail. These implementation limits do not replace the incremental guidance above. See [Numeric framing evidence](../project/review/myopencommunity-transport-history-review.md#numeric-framing-and-classification).
+
+The touchscreen reader also explicitly ignores status-request frames received on the monitor channel, following a historical multi-touchscreen failure. That filtering is client policy; a bus-event parser should still recognize the request family rather than assume that all incoming traffic is a state report.
+
+The VDK 2.0 parser instead splits fields while dropping empty components and calls hash-prefixed functional traffic “diagnostics”. Neither behavior defines protocol grammar. In particular, it is unsuitable as evidence that empty `WHERE` or partial-write values can be discarded, or that every `*#WHO` frame belongs to a diagnostic namespace. See [Frame and parser evidence](../project/review/myopencommunity-integration.md#frame-families-and-parsing).
+
+That simulator parser also rejects ordinary `WHO 0` commands. Its active TCP read handler shares an incomplete-frame buffer across clients and returns after emitting the first functional frame, losing further frames already consumed in the same read. These are simulator limitations, not restrictions on [Scenarios](../functional/who-0-scenarios/) or OpenWebNet stream behavior. See [Simulator transport evidence](../project/review/myopencommunity-transport-history-review.md#simulator-parser-and-active-read-path).
+
+Evidence finding `moc-e0007` (claimed): Touchscreen frame construction and absent classifier
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007561`, `ownkb:claim:moc-c007562`, `ownkb:claim:moc-c007563`, `ownkb:claim:moc-c007564`, `ownkb:claim:moc-c007565`
+- `ownkb:source:moc-s000246`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - createCommandFrame; createDimensionFrame](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/frame_functions.cpp#L46-L54) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007561
+  Limitations: Source inspection of the pinned dependency; no archived-suite pass or physical observation asserted.
+- `ownkb:source:moc-s000166`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtdevices - FrameReceiver::FrameReceiver; FrameReceiver::setClientsMonitor; FrameReceiver::subscribeMonitor; FrameReceiver::~FrameReceiver; FrameSender::FrameSender; FrameSender::delayFrames; FrameSender::sendCommandFrame; FrameSender::sendFrame; FrameSender::sendFrameNow; FrameSender::sendInit; FrameSender::sendInitNow; FrameSender::setClients; FrameSender::subscribeAck; FrameSender::~FrameSender](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/frame_classes.cpp#L30-L130) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007562, ownkb:claim:moc-c007563, ownkb:claim:moc-c007564, ownkb:claim:moc-c007565
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000168`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - Client::disconnectFromHost; Client::readFromServer; Client::socketConnected; Client::socketFrameRead; ClientWriter::socketConnected](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/openclient.cpp#L141-L400) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007562, ownkb:claim:moc-c007563, ownkb:claim:moc-c007564, ownkb:claim:moc-c007565
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0008` (corroborates): Executed local framing seams
+Disposition reason: Execution independently corroborates the pinned framer claims; recorded separately from source inspection.
+Individual claims: `ownkb:claim:moc-c007563`, `ownkb:claim:moc-c007564`
+- `ownkb:source:moc-s000168`: helper_execution; client; direct; supports. [MyOpenCommunity/libqtdevices - Client::disconnectFromHost; Client::readFromServer; Client::socketFrameRead](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/openclient.cpp#L160-L203) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007563, ownkb:claim:moc-c007564
+  Conditions: Unchanged local builder/framer/setup method bodies compiled with Qt5; controlled byte-input and callback seams.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 13 comparisons passed, including retained-prefix behavior.; Unchanged local builder/framer/setup method bodies compiled with Qt5; controlled byte-input and callback seams.. Inputs: Consecutive frames; Incomplete buffer across disconnect; Leading garbage and CRLF. Record: `project/review/myopencommunity-transport-history-review.md` (13 comparisons PASS).
+
+Evidence finding `moc-e0009` (claimed): VDK parser limitations
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007566`, `ownkb:claim:moc-c007567`, `ownkb:claim:moc-c007568`, `ownkb:claim:moc-c007569`
+- `ownkb:source:moc-s000174`: helper_execution; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - OpenMsg::OpenMsg; OpenMsg::getFrameType; OpenMsg::parse](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/libplant/openmsg.cpp#L22-L70) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007566, ownkb:claim:moc-c007567, ownkb:claim:moc-c007568, ownkb:claim:moc-c007569
+  Conditions: Unchanged VDK parser/serializer sources compiled with Qt5 Core; no hardware transport.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 17 comparisons passed reproducing the documented parser/serializer choices.; Unchanged VDK parser/serializer sources compiled with Qt5 Core; no hardware transport.. Inputs: Delimiter-free input; Empty WHERE; Partial-write empty fields; WHO 0. Record: `project/review/myopencommunity-transport-history-review.md` (17 comparisons PASS).
+- `ownkb:source:moc-s000174`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - OpenMsg::OpenMsg; OpenMsg::getFrameType; OpenMsg::parse](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/libplant/openmsg.cpp#L22-L70) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007566, ownkb:claim:moc-c007567, ownkb:claim:moc-c007568, ownkb:claim:moc-c007569
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0010` (claimed): Active simulator TCP read path
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007570`, `ownkb:claim:moc-c007571`, `ownkb:claim:moc-c007572`
+- `ownkb:source:moc-s000173`: helper_execution; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - TcpServer::startRead](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_own_GTW_PGIN/tcpserver.cpp#L77-L121) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007570, ownkb:claim:moc-c007571, ownkb:claim:moc-c007572
+  Conditions: Unchanged active simulator read-handler body with controlled byte-input/callback seams; no oversized input.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - Seven comparisons passed, reproducing lost consumed tails and cross-client fragment combination.; Unchanged active simulator read-handler body with controlled byte-input/callback seams; no oversized input.. Inputs: Consecutive functional frames; Fragments supplied from different clients; Split terminator. Record: `project/review/myopencommunity-transport-history-review.md` (7 comparisons PASS).
+- `ownkb:source:moc-s000173`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - TcpServer::startRead](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_own_GTW_PGIN/tcpserver.cpp#L77-L121) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007570, ownkb:claim:moc-c007571, ownkb:claim:moc-c007572
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `moc-e0102` (deferred): Absent external classifier and malformed-input domain
+Disposition reason: The external OpenMsg classifier is absent from these archives. Constructor and controlled field seams cannot establish its full grammar or malformed-input behavior.
+- `ownkb:source:moc-s000166`: source_inspection; library; interpretation; qualifies. [MyOpenCommunity/libqtdevices - FrameReceiver::FrameReceiver; FrameReceiver::setClientsMonitor; FrameReceiver::subscribeMonitor; FrameReceiver::~FrameReceiver; FrameSender::FrameSender; FrameSender::delayFrames; FrameSender::sendCommandFrame; FrameSender::sendFrame; FrameSender::sendFrameNow; FrameSender::sendInit; FrameSender::sendInitNow; FrameSender::setClients; FrameSender::subscribeAck; FrameSender::~FrameSender](https://github.com/OpenWebNet-HA/libqtdevices/blob/736f41c4df17d8782f15b441c59bdf72a56f56ed/frame_classes.cpp#L30-L130) at `736f41c4df17d8782f15b441c59bdf72a56f56ed`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+#### Separate multimedia XML transport
+
+Section ID: `ownkb:section:d000110:s000012`
+
+Applicability cues: `tcp`
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+The touchscreen common library also implements a UTF-8 TCP transport framed by `<OWNxml ...>` and `</OWNxml>`, with namespace `http://www.bticino.it/xopen/v1`. Three original framing tests pass in an isolated Qt 5 execution. Their assertions cover consecutive XML messages and surrounding unrelated text, although the consecutive/garbage loops do not compare every second extracted message. Its envelope contains `Hdr/MsgID` (`SID`, `PID`), `Dst/IP`, `Src/IP`, and a `Cmd` element.
+
+The final library preserves whitespace inside an extracted message, but converts each transport read from UTF-8 separately. A multibyte character split across reads can therefore be corrupted even when XML envelope buffering succeeds. Envelope extraction does not establish complete incremental UTF-8 decoding. The original socket also retains partial XML across disconnect/reconnect. Controlled loopback execution joins an old connection's partial envelope with new input and reproduces split-character corruption; these are library limits, not XML transport requirements. See [Native runtime evidence](../project/review/myopencommunity-video-runtime-review.md). See [XML buffering evidence](../project/review/myopencommunity-transport-history-review.md#xml-buffering-and-assertion-limits).
+
+These are XML transport fields, not transaction identifiers in ordinary `*...##` frames. Media-server browsing and track-selection operations use this separate interface; the source does not establish their numeric mapping to [`WHO 26`](../functional/who-26-upnp-multimedia/). XML acknowledgements and session identifiers must therefore remain distinct from [OpenWebNet acknowledgements](acknowledgements.md). See [Multimedia transport evidence](../project/review/myopencommunity-reassessment.md#multimedia-xml-boundary).
+
+Evidence finding `moc-e0011` (claimed): OpenXml envelope and incremental decoding
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007573`, `ownkb:claim:moc-c007574`, `ownkb:claim:moc-c007575`, `ownkb:claim:moc-c007576`, `ownkb:claim:moc-c007577`
+- `ownkb:source:moc-s000175`: helper_execution; client; direct; supports. [MyOpenCommunity/libqtcommon - XmlClient::XmlClient; XmlClient::connectToHost; XmlClient::disconnectFromHost; XmlClient::isConnected; XmlClient::parseData; XmlClient::receiveData; XmlClient::sendCommand; XmlClient::socketError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmlclient.cpp#L34-L107) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007573, ownkb:claim:moc-c007574, ownkb:claim:moc-c007575, ownkb:claim:moc-c007576
+  Conditions: Unchanged XML receive/parse helpers compiled with Qt5 using controlled byte-input/callback seams and direct checks of both payloads.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - Six comparisons passed; split UTF-8 input produced two U+FFFD characters.; Unchanged XML receive/parse helpers compiled with Qt5 using controlled byte-input/callback seams and direct checks of both payloads.. Inputs: Complete UTF-8 character é; Its two bytes delivered in separate reads; Two envelopes with surrounding text. Record: `project/review/myopencommunity-transport-history-review.md` (6 comparisons PASS).
+- `ownkb:source:moc-s000175`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtcommon - XmlClient::XmlClient; XmlClient::connectToHost; XmlClient::disconnectFromHost; XmlClient::isConnected; XmlClient::parseData; XmlClient::receiveData; XmlClient::sendCommand; XmlClient::socketError](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmlclient.cpp#L34-L107) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007573, ownkb:claim:moc-c007574, ownkb:claim:moc-c007575, ownkb:claim:moc-c007576
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000176`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/libqtcommon - TestXmlClient::TestXmlClient; TestXmlClient::init; TestXmlClient::testDouble; TestXmlClient::testGarbage; TestXmlClient::testSimple](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_xmlclient.cpp#L27-L83) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-transport-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007577
+  Limitations: Inspected assertion coverage; no archived test pass asserted.
+
+Evidence finding `moc-e0151` (claimed): XML reconnect buffer and corroborated independent UTF-8 reads
+Disposition reason: Reviewed exact-revision implementation findings; examination method and controlled runtime scope remain separate.
+Individual claims: `ownkb:claim:moc-c007576`, `ownkb:claim:moc-c074080`
+- `ownkb:source:moc-s000175`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - XmlClient::receiveData; XmlClient::parseData](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmlclient.cpp#L66-L107) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c007576, ownkb:claim:moc-c074080
+  Conditions: A separate first AW26C1 header, without WMsg, establishes welcome state.; Original XmlClient/XmlDevice files, Qt 5 Core/Network/Xml and localhost QTcpServer are used; a friend adapter changes only the endpoint and exposes state.; Two actual socket reads split UTF-8; partial XML is retained across peer disconnect. Offline requests, nonempty header SID, ACK 200, mismatched SID/PID, and a new request after disconnection are synthetic controlled inputs.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - native loopback framing, non-WMsg welcome state, mismatched identity, welcome rotation, ACK attribution and reconnect scenarios passed; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: A separate first AW26C1 header, without WMsg, establishes welcome state.; Original XmlClient/XmlDevice files, Qt 5 Core/Network/Xml and localhost QTcpServer are used; a friend adapter changes only the endpoint and exposes state.; Two actual socket reads split UTF-8; partial XML is retained across peer disconnect. Offline requests, nonempty header SID, ACK 200, mismatched SID/PID, and a new request after disconnection are synthetic controlled inputs.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000175`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - XmlClient::receiveData; XmlClient::disconnectFromHost; XmlClient::connectToHost](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/xmlclient.cpp#L46-L76) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c007576, ownkb:claim:moc-c074080
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Executable behavior inspected in source; no runtime or original test success implied.
+
+Evidence finding `moc-e0152` (corroborates): Original XML framing tests executed under Qt 5
+Disposition reason: Three original framing test methods pass under Qt 5. Double/garbage loops do not validate every second decoded message; native loopback tests separately cover reconnect and split UTF-8.
+Individual claims: `ownkb:claim:moc-c007577`
+- `ownkb:source:moc-s000176`: helper_execution; library; direct; corroborates. [MyOpenCommunity/libqtcommon - TestXmlClient::testSimple; TestXmlClient::testDouble; TestXmlClient::testGarbage](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_xmlclient.cpp#L37-L83) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c007577
+  Conditions: Original XmlClient/XmlDevice files and original TestXmlClient class/methods execute unchanged under Qt 5 with a minimal QCoreApplication QtTest driver.; Three original framing test methods run; lifecycle entries contribute to reported totals. The double/garbage loops do not assert every retained second message.
+  Limitations: Exact archived implementation/revision scope; no deployed build, physical bus, gateway, audible-output or firmware-boundary observation.; Qt 5.15.19 adapted test environment; neither the complete original Qt 4 application nor hardware runs.
+  Execution record: original_helper_in_adapted_harness - Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms; g++ C++17, native Qt 5.15.19 Core/Network/Xml/Test/Concurrent and explicitly recorded controlled seams.. Inputs: Original XmlClient/XmlDevice files and original TestXmlClient class/methods execute unchanged under Qt 5 with a minimal QCoreApplication QtTest driver.; Three original framing test methods run; lifecycle entries contribute to reported totals. The double/garbage loops do not assert every retained second message.. Record: `project/review/myopencommunity-video-runtime-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s000176`: test_expectation_inspection; library; direct; corroborates. [MyOpenCommunity/libqtcommon - TestXmlClient::testSimple; TestXmlClient::testDouble; TestXmlClient::testGarbage](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_xmlclient.cpp#L37-L83) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-video-runtime-review.md`.
+  Examination claims: ownkb:claim:moc-c007577
+  Limitations: Expected assertions and loop bounds inspected; successful execution does not add assertions absent from the original tests.
 
 ### Evidence basis
 
@@ -15631,7 +18841,7 @@ Confidence describes support for one precisely scoped claim. It is not a score f
 
 Section ID: `ownkb:section:d000118:s000002`
 
-Applicability cues: `firmware`
+Applicability cues: `firmware`, `gateway`
 Cautions: `limitation`
 Uncertainty: `may`
 Provenance cues: `capture`, `catalogue`, `database`, `documentation`, `evidence`, `source`, `specification`
@@ -15649,6 +18859,19 @@ Provenance cues: `capture`, `catalogue`, `database`, `documentation`, `evidence`
 | Controlled Device change | causal evidence linking one input to one output | may still be product-specific |
 | MyHOME Suite UI | labels, visibility, editability, and application behavior | does not establish wire or storage encoding alone |
 | Product documentation | hardware layout and supported physical configuration | may not describe advanced/Virtual configuration or later revisions |
+
+Examination method is separate from evidence class and confidence:
+
+| Method | Establishes within its recorded scope | Limitation |
+| --- | --- | --- |
+| Source inspection | behavior of the examined executable code path | no execution or deployment observation |
+| Test-expectation inspection | an assertion's expected value and tested input | does not show that the test passed |
+| Original-helper execution | the recorded result with the stated seams, inputs and environment | does not certify a full legacy suite or physical Device |
+| Static firmware analysis | properties of the pinned firmware artifact and analyzed path | execution and reachability may require separate evidence |
+| Dynamic firmware oracle | the result from the identified firmware and oracle setup | emulator, harness and input conditions limit the result |
+| Hardware observation | behavior of the identified Device under captured conditions | does not establish universal support |
+
+Keep the client, library, simulator, gateway or firmware role explicit. An Encyclopedia section is the explanation; the archived file, assertion, firmware artifact or capture is the underlying evidence. Several methods can support different findings in the same section. Shared code or a reused run is not independent corroboration.
 
 No source class is universally superior. A declared local foreign key is decisive for a database relationship; it cannot establish the meaning of a diagnostic field. A capture proves that one Device emitted a frame; it cannot establish universal support.
 
@@ -16392,13 +19615,13 @@ Section ID: `ownkb:section:d000121:s000002`
 
 Section ID: `ownkb:section:d000121:s000003`
 
-Applicability cues: `gateway`, `scs`, `tcp`, `version`, `zigbee`
-Cautions: `do not`, `not evidence`
-Provenance cues: `capture`, `evidence`, `source`
+Applicability cues: `firmware`, `gateway`, `version`, `zigbee`
+Cautions: `do not`, `must not`
+Provenance cues: `source`
 
-Prior gateway-identification research has flagged `WHO 13 DIMENSION 20` as an encountered property, but the currently preserved evidence chain does not yet establish its classic SCS/TCP semantics. The canonical classic `WHO_13.pdf` registry does not define it, the ZigBee `WHO 13` registry does not define it, canonical MyHOME Suite `OPEN.db` provides no functional `WHO 13 DIMENSION 20` template, and the preserved F454 and MH202 gateway-information captures examined in the current correction do not contain it.
+Historical BTicino touchscreen source and tests now establish `DIMENSION 20` as a PIC-version read whose first returned value is consumed by the application. The exact report `*#13**20*22*40*05##` is tested; the latter two fields are not decoded. See [Historical Platform Properties](../functional/who-13-integration-gateway/dimensions.md#historical-touchscreen-platform-properties).
 
-This is a **provenance gap**, not evidence that the property does not exist. Promotion to the functional reference requires the specific canonical source or first-hand capture that establishes the request/response form and payload, followed by semantic corroboration. Do not infer a meaning from diagnostic `DIMENSION 6` microcontroller-version fields or from any numerically similar namespace.
+The remaining questions are the complete payload semantics and support across external gateway models/Firmware. The F454 and MH202 captures examined earlier do not contain it. The public classic registry still does not define it; diagnostic microcontroller-version fields and ZigBee identifiers must not be substituted by numeric analogy.
 
 #### `DIMENSION 40`
 
@@ -16593,10 +19816,10 @@ The routing address `1ES` and the amplifier decomposition `EA` are corroborated 
 
 Section ID: `ownkb:section:d000121:s000021`
 
-Uncertainty: `may`
-Provenance cues: `source`, `specification`
+Uncertainty: `unknown`
+Provenance cues: `evidence`, `source`, `specification`
 
-`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form may be a private mechanism or a published one that has not been located. No examined source contains it. A specification, a Legrand application note, or a stored frame template naming this address would settle its provenance.
+`WHO 16` specifies source cycling but no directed assignment of a source to an amplifier. The captured `1ES` form is now corroborated by a historical BTouch emitter and decoder. Its public/private specification status remains unknown. A protocol specification or application note would establish that status; source evidence currently covers environments `1..8` and four-source matrix state, leaving environment `9` unverified.
 
 #### Environment form `#E` in routing
 
@@ -16625,8 +19848,20 @@ Both observed plants have four-input matrices and two-digit amplifier addresses.
 Section ID: `ownkb:section:d000121:s000025`
 
 Applicability cues: `gateway`
+Provenance cues: `source`
 
-One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only.
+One MH200N emits a `WHO 22` counterpart for every `WHO 16` sound event; an MH200 emits none. Whether that is gateway behaviour, matrix behaviour, or a configuration option is not distinguished by the captures, which observe the bus from the gateway only. Historical BTouch source proves that clients themselves could emit both dialects by operation, but does not identify the origin of these paired reports.
+
+### Historical implementation discrepancies
+
+Section ID: `ownkb:section:d000121:s000026`
+
+Applicability cues: `firmware`, `gateway`
+Provenance cues: `capture`, `evidence`
+
+The preserved touchscreen product configuration uses a Stop&Go address prefix `2`, while the published Energy Management reference specifies `1N`. The library emits configured addresses unchanged; no recovered capture or gateway mapping explains the difference. Which Device/Firmware or local-server path accepts the historical forms, and are they translated before reaching the physical bus? See [Energy Management Addressing](../functional/who-18-energy-management/addressing.md#historical-stopgo-address-discrepancy).
+
+Local touchscreen channel `*99*0##`, supervisor channel `*99*10##`, and multimedia XML transport likewise require endpoint-specific compatibility evidence before use on external gateways. Their implementation roles are documented under [Connection and Sessions](../protocol/sessions.md#historical-local-touchscreen-channels) and [Stream Parsing](../protocol/stream-parsing.md#separate-multimedia-xml-transport).
 
 ### Evidence priorities
 
@@ -16638,7 +19873,7 @@ Provenance cues: `capture`, `database`
 WHO 1 dimmer `DIMENSION 4` is runtime-established on the tested F418U2 through MH202 and F454, but not on the newly captured MH200/F418U2 path: explicit DIM4 requests received no response in the captured windows, and a positive DIM4 write did not change the subsequently read DIM1 level. The same MH200 trace preserved an OFF-state DIM1 request as DIM1, unlike the F454 rewrite to DIM4. The remaining questions are therefore narrower: the exact `ON/OFFspeed` encoding, whether F454 DIM4 write failure is systematic, whether MH200 DIM4 absence is gateway-wide/firmware-specific or interaction-specific, and whether the tester-reported F414/MH200 timeout/NACK can be reproduced in a raw preserved exchange.
 The highest-value next observations are:
 
-1. recover the canonical provenance for classic `WHO 13 DIMENSION 20` and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
+1. resolve the remaining `WHO 13 DIMENSION 20` fields and gateway applicability, and obtain a discriminating `DIMENSION 40` observation across a different gateway or firmware revision;
 2. one successful non-Lighting `DIMENSION 32` response whose candidate `SYS` values differ;
 3. controlled `DIMENSION 4` and `5` captures across known physical configurator changes;
 4. a controlled Device/item case exercising concrete, wildcarded, multiple, or missing firmware build records;
@@ -17983,6 +21218,177 @@ Provenance cues: `evidence`
 
 An acknowledgement and an observed state change answer different questions and should not be collapsed into one success flag.
 
+### Historical touchscreen condition evaluation
+
+Section ID: `ownkb:section:d000129:s000009`
+
+Cautions: `do not`
+Provenance cues: `evidence`
+
+The BTicino touchscreen `libqtcommon` condition evaluator provides a separate application model. Its tests establish that initial Lighting state initializes a condition without firing it, repeated satisfied states do not fire again, and a later unsatisfied-to-satisfied transition emits the condition event.
+
+Saving an unchanged predicate neither re-requests state nor rearms it. For a changed predicate, the evaluator clears a previously satisfied state while preserving initialization; the next matching state can therefore fire. If the old predicate was unsatisfied, it clears initialization and suppresses the next managed state event. Unrelated values do not initialize a predicate.
+
+Initialization is condition-specific: the Auxiliary test permits the first matching `WHO 9` state to fire, then suppresses repeats. Other tested predicates include inclusive dimmer/volume ranges and a temperature band of ±10 tenths of the selected scale around the threshold, giving ±1.0 °C or ±1.0 °F. These are application operands, not Device thresholds. A bare dimmer ON value without a level substitutes local value `1`; it does not establish a measured output level. Volume evaluation uses the cached amplifier ON state; ON alone does not supply a volume operand.
+
+The product's advanced-scenario tests also establish enable and weekday gating. With both time and Device conditions, a Device transition alone does not start the action: the time event checks the current Device condition. Without a time condition, the Device event can start the action. The action sends its configured literal frame through the command writer.
+
+| Advanced-scenario control | Touchscreen behavior |
+| --- | --- |
+| Automatic trigger | Requires enabled state and the current weekday; time and Device gates apply as above |
+| Manual Start | Sends the action directly, bypassing enabled, weekday, time and Device gates |
+| Enable / disable | Changes and persists a local flag; does not send a `WHO 17` command or itself trigger the action |
+| Weekday selection | Bit `0` is Monday, bit `6` Sunday; editable weekday values also govern automatic execution before Save |
+
+Time conditions use the touchscreen's local clock and a single-shot timer, rearmed after timeout. Date/time notifications recalculate the interval from that local clock; their payload is not used as the trigger time. The implementation wraps the interval within 24 hours, without establishing calendar recurrence, daylight-saving handling or recovery of missed events. Resetting editable time values does not immediately rearm the timer.
+
+Advanced-scenario Configuration selects active time and Device conditions and a literal action frame. Action type and Command IDs supply descriptions; they do not render or select the frame's namespace. A scheduled-scenario control instead sends separately configured Start, Stop, Enable and Disable frames when present. Its label does not establish a touchscreen scheduler or execution-state feedback. Use the literal frame to distinguish [`WHO 17`](../functional/who-17-scenario-management/), [`WHO 15` CEN](../functional/who-15-cen/), and [`WHO 25` CEN+ or Scenario Plus](../functional/who-25-transversal/).
+
+Local “started” notifications follow action dispatch and do not establish acknowledgement or Device execution. See [Scenario and condition history evidence](../project/review/myopencommunity-scenario-history-review.md#conditions-and-automatic-execution) for assertion scope and historical corrections.
+
+This is implementation evidence for the touchscreen engine at `TS10_1_0_23`. It does not resolve MyHOME Suite ScenarioDevices matching IDs, graph persistence, or a universal OpenWebNet trigger policy. See [Application condition evidence](../project/review/myopencommunity-integration.md#application-condition-evaluation) and [Additional predicate and scheduling evidence](../project/review/myopencommunity-reassessment.md#condition-and-scenario-behavior).
+
+Evidence finding `moc-e0081` (claimed): Common condition evaluation
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007757`, `ownkb:claim:moc-c007758`, `ownkb:claim:moc-c007759`, `ownkb:claim:moc-c007760`, `ownkb:claim:moc-c007761`, `ownkb:claim:moc-c007762`
+- `ownkb:source:moc-s000237`: source_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - DeviceCondition::DeviceCondition; DeviceCondition::Down; DeviceCondition::DownHeld; DeviceCondition::Up; DeviceCondition::UpHeld; DeviceCondition::conditionChanged; DeviceCondition::getConditionAsString; DeviceCondition::getDefaultState; DeviceCondition::getOffState; DeviceCondition::getState; DeviceCondition::getSupportedInitMode; DeviceCondition::get_condition_value; DeviceCondition::get_current_value; DeviceCondition::get_max; DeviceCondition::get_min; DeviceCondition::get_step; DeviceCondition::get_step_held; DeviceCondition::isTrue; DeviceCondition::onConditionReset; DeviceCondition::onConditionSaved; DeviceCondition::reset; DeviceCondition::save; DeviceCondition::setDevice; DeviceCondition::setState; DeviceCondition::setSupportedInitMode; DeviceCondition::set_condition_value; DeviceCondition::set_current_value; DeviceCondition::updateText; DeviceCondition::valueReceived; DeviceConditionAux::DeviceConditionAux; DeviceConditionAux::Draw; DeviceConditionAux::getDefaultState; DeviceConditionAux::get_max; DeviceConditionAux::parseValues; DeviceConditionAux::set_condition_value; DeviceConditionDimming100::DeviceConditionDimming100; DeviceConditionDimming100::Down; DeviceConditionDimming100::Draw; DeviceConditionDimming100::Up; DeviceConditionDimming100::conditionChanged; DeviceConditionDimming100::getConditionAsString; DeviceConditionDimming100::getDefaultState; DeviceConditionDimming100::getOffState; DeviceConditionDimming100::getState; DeviceConditionDimming100::get_condition_value_max; DeviceConditionDimming100::get_condition_value_min; DeviceConditionDimming100::get_current_value; DeviceConditionDimming100::get_current_value_max; DeviceConditionDimming100::get_current_value_min; DeviceConditionDimming100::get_max; DeviceConditionDimming100::get_min; DeviceConditionDimming100::onConditionReset; DeviceConditionDimming100::onConditionSaved; DeviceConditionDimming100::parseValues; DeviceConditionDimming100::setState; DeviceConditionDimming100::set_condition_value; DeviceConditionDimming100::set_condition_value_max; DeviceConditionDimming100::set_condition_value_min; DeviceConditionDimming100::set_current_value_max; DeviceConditionDimming100::set_current_value_min; DeviceConditionDimming::DeviceConditionDimming; DeviceConditionDimming::Down; DeviceConditionDimming::Draw; DeviceConditionDimming::Up; DeviceConditionDimming::conditionChanged; DeviceConditionDimming::getConditionAsString; DeviceConditionDimming::getDefaultState; DeviceConditionDimming::getOffState; DeviceConditionDimming::getState; DeviceConditionDimming::get_condition_value_max; DeviceConditionDimming::get_condition_value_min; DeviceConditionDimming::get_current_value; DeviceConditionDimming::get_current_value_max; DeviceConditionDimming::get_current_value_min; DeviceConditionDimming::get_max; DeviceConditionDimming::get_min; DeviceConditionDimming::onConditionReset; DeviceConditionDimming::onConditionSaved; DeviceConditionDimming::parseValues; DeviceConditionDimming::setState; DeviceConditionDimming::set_condition_value; DeviceConditionDimming::set_condition_value_max; DeviceConditionDimming::set_condition_value_min; DeviceConditionDimming::set_current_value_max; DeviceConditionDimming::set_current_value_min; DeviceConditionLight::DeviceConditionLight; DeviceConditionLight::Draw; DeviceConditionLight::getDefaultState; DeviceConditionLight::getOffState; DeviceConditionLight::get_max; DeviceConditionLight::parseValues; DeviceConditionLight::set_condition_value; DeviceConditionTemperature::DeviceConditionTemperature; DeviceConditionTemperature::Draw; DeviceConditionTemperature::getConditionAsString; DeviceConditionTemperature::get_max; DeviceConditionTemperature::get_min; DeviceConditionTemperature::parseValues; DeviceConditionVolume::DeviceConditionVolume; DeviceConditionVolume::Down; DeviceConditionVolume::Draw; DeviceConditionVolume::Up; DeviceConditionVolume::conditionChanged; DeviceConditionVolume::getConditionAsString; DeviceConditionVolume::getDefaultState; DeviceConditionVolume::getOffState; DeviceConditionVolume::getState; DeviceConditionVolume::get_condition_value_max; DeviceConditionVolume::get_condition_value_min; DeviceConditionVolume::get_current_value_max; DeviceConditionVolume::get_current_value_min; DeviceConditionVolume::get_max; DeviceConditionVolume::get_min; DeviceConditionVolume::onConditionReset; DeviceConditionVolume::onConditionSaved; DeviceConditionVolume::parseValues; DeviceConditionVolume::setState; DeviceConditionVolume::set_condition_value_max; DeviceConditionVolume::set_condition_value_min; DeviceConditionVolume::set_current_value_max; DeviceConditionVolume::set_current_value_min](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/scenevodevicescond.cpp#L40-L1159) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007757, ownkb:claim:moc-c007758, ownkb:claim:moc-c007759, ownkb:claim:moc-c007760, ownkb:claim:moc-c007761, ownkb:claim:moc-c007762
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000238`: test_expectation_inspection; library; direct; supports. [MyOpenCommunity/libqtcommon - TestScenEvoDevicesCond::TestScenEvoDevicesCond; TestScenEvoDevicesCond::checkCondition; TestScenEvoDevicesCond::init; TestScenEvoDevicesCond::testAux; TestScenEvoDevicesCond::testAuxAtStart; TestScenEvoDevicesCond::testAuxConditionChange1; TestScenEvoDevicesCond::testAuxConditionChange2; TestScenEvoDevicesCond::testAuxConditionChange3; TestScenEvoDevicesCond::testDimming100ConditionChange1; TestScenEvoDevicesCond::testDimming100ConditionChange2; TestScenEvoDevicesCond::testDimming100ConditionChange3; TestScenEvoDevicesCond::testDimming100Off; TestScenEvoDevicesCond::testDimming100Range1; TestScenEvoDevicesCond::testDimming100Range2; TestScenEvoDevicesCond::testDimming100Range3; TestScenEvoDevicesCond::testDimming100Range4; TestScenEvoDevicesCond::testDimmingConditionChange1; TestScenEvoDevicesCond::testDimmingConditionChange2; TestScenEvoDevicesCond::testDimmingConditionChange3; TestScenEvoDevicesCond::testDimmingOff; TestScenEvoDevicesCond::testDimmingRange1; TestScenEvoDevicesCond::testDimmingRange2; TestScenEvoDevicesCond::testDimmingRange3; TestScenEvoDevicesCond::testExternalTemperature1; TestScenEvoDevicesCond::testExternalTemperature2; TestScenEvoDevicesCond::testExternalTemperature3; TestScenEvoDevicesCond::testExternalTemperatureConditionChange1; TestScenEvoDevicesCond::testExternalTemperatureConditionChange2; TestScenEvoDevicesCond::testExternalTemperatureConditionChange3; TestScenEvoDevicesCond::testExternalTemperatureMinMax; TestScenEvoDevicesCond::testInternalTemperature1; TestScenEvoDevicesCond::testInternalTemperature2; TestScenEvoDevicesCond::testInternalTemperature3; TestScenEvoDevicesCond::testInternalTemperatureConditionChange1; TestScenEvoDevicesCond::testInternalTemperatureConditionChange2; TestScenEvoDevicesCond::testInternalTemperatureConditionChange3; TestScenEvoDevicesCond::testInternalTemperatureMinMax; TestScenEvoDevicesCond::testLightConditionChange1; TestScenEvoDevicesCond::testLightConditionChange2; TestScenEvoDevicesCond::testLightConditionChange3; TestScenEvoDevicesCond::testLightOff; TestScenEvoDevicesCond::testLightOn; TestScenEvoDevicesCond::testVolumeConditionChange1; TestScenEvoDevicesCond::testVolumeConditionChange2; TestScenEvoDevicesCond::testVolumeConditionChange3; TestScenEvoDevicesCond::testVolumeOff; TestScenEvoDevicesCond::testVolumeOn; TestScenEvoDevicesCond::testVolumeRange1; TestScenEvoDevicesCond::testVolumeRange2; TestScenEvoDevicesCond::testVolumeRange3; TestScenEvoDevicesCond::testVolumeRange4; TestScenEvoDevicesCond::~TestScenEvoDevicesCond; updateText](https://github.com/OpenWebNet-HA/libqtcommon/blob/825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2/test/test_scenevodevicescond.cpp#L43-L731) at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0082` (claimed): Touchscreen advanced scenario scheduler
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007763`, `ownkb:claim:moc-c007764`, `ownkb:claim:moc-c007765`, `ownkb:claim:moc-c007766`, `ownkb:claim:moc-c007767`, `ownkb:claim:moc-c007768`, `ownkb:claim:moc-c007769`
+- `ownkb:source:moc-s000179`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - ActionObject::ActionObject; ActionObject::buildDescriptionMap; ActionObject::getDescription; ActionObject::getTarget; ActionObject::sendFrame; AdvancedScenario::AdvancedScenario; AdvancedScenario::deviceConditionSatisfied; AdvancedScenario::enableObject; AdvancedScenario::getAction; AdvancedScenario::getDays; AdvancedScenario::getDeviceCondition; AdvancedScenario::getTimeCondition; AdvancedScenario::isDayEnabled; AdvancedScenario::isEnabled; AdvancedScenario::reset; AdvancedScenario::save; AdvancedScenario::setDayEnabled; AdvancedScenario::setEnabled; AdvancedScenario::start; AdvancedScenario::timeConditionSatisfied; DeviceConditionObject::DeviceConditionObject; DeviceConditionObject::conditionDown; DeviceConditionObject::conditionDownHeld; DeviceConditionObject::conditionUp; DeviceConditionObject::conditionUpHeld; DeviceConditionObject::enableObject; DeviceConditionObject::getConditionType; DeviceConditionObject::getDescription; DeviceConditionObject::getOnOff; DeviceConditionObject::getRangeValues; DeviceConditionObject::getTriggerAsString; DeviceConditionObject::isSatisfied; DeviceConditionObject::reset; DeviceConditionObject::save; DeviceConditionObject::setOnOff; DeviceConditionObject::updateText; TimeConditionObject::TimeConditionObject; TimeConditionObject::getHours; TimeConditionObject::getMinutes; TimeConditionObject::reset; TimeConditionObject::resetTimer; TimeConditionObject::save; TimeConditionObject::setHours; TimeConditionObject::setMinutes; TimeConditionObject::valueReceived; parseAdvancedScenario; updateAdvancedScenario](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/scenarioobjects.cpp#L92-L1027) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007763, ownkb:claim:moc-c007764, ownkb:claim:moc-c007765, ownkb:claim:moc-c007766, ownkb:claim:moc-c007767, ownkb:claim:moc-c007768, ownkb:claim:moc-c007769
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000180`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestScenarioAdvanced::testDeviceCondition; TestScenarioAdvanced::testTimeCondition; TestScenarioAdvanced::testTimeDeviceCondition; TestScenarioAdvanced::testWeekdayCondition; TestScenarioAdvanced::testWeekdays; TestScenarioAdvancedDeviceEdit::cleanup; TestScenarioAdvancedDeviceEdit::init; TestScenarioAdvancedDeviceEdit::testAmplifierConditionInit; TestScenarioAdvancedDeviceEdit::testAmplifierConditionOnOff; TestScenarioAdvancedDeviceEdit::testConditionReset; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionInit; TestScenarioAdvancedDeviceEdit::testDimmer100ConditionOnOff; TestScenarioAdvancedDeviceEdit::testDimmerConditionInit; TestScenarioAdvancedDeviceEdit::testDimmerConditionOnOff; TestScenarioAdvancedDeviceEdit::testLightConditionInit; TestScenarioAdvancedDeviceEdit::testLightConditionOnOff; TestScenarioAdvancedDeviceEdit::testTemperatureConditionInit; TestScenarioAdvancedTime::cleanup; TestScenarioAdvancedTime::init; TestScenarioAdvancedTime::testTimeoutFuture; TestScenarioAdvancedTime::testTimeoutPast; TestScenarioModule::checkMethod; TestScenarioModule::cleanup; TestScenarioModule::init; TestScenarioModule::initTestCase; TestScenarioModule::testActivateScenario; TestScenarioModule::testReceiveLock; TestScenarioModule::testReceiveLock_data; TestScenarioModule::testReceiveStart; TestScenarioModule::testReceiveStartOtherScenario; TestScenarioModule::testReceiveStartOtherScenario_data; TestScenarioModule::testReceiveStart_data; TestScenarioModule::testReceiveStop; TestScenarioModule::testReceiveStop_data; TestScenarioModule::testReceiveUnlock; TestScenarioModule::testReceiveUnlock_data; TestScenarioModule::testStartProgramming; TestScenarioModule::testStopProgramming; packStartValues; packValues](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_scenario_objects.cpp#L61-L619) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-scenario-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+### Historical touchscreen alarm-clock scheduling
+
+Section ID: `ownkb:section:d000129:s000010`
+
+Cautions: `do not`
+Provenance cues: `evidence`, `source`
+
+BtExperience's alarm clocks at `TS10_1_0_23` use a separate local scheduler and ordinary [sound controls](../functional/who-22-sound-diffusion/#historical-alarm-clock-control).
+
+| Setting / event | Application behavior |
+| --- | --- |
+| Weekdays | Bit `6` is Monday, bit `0` Sunday, reversing the advanced-scenario order above |
+| No selected weekdays | One-shot alarm; triggering disables subsequent automatic scheduling |
+| Enabled state | Arms the automatic timer; disabling stops it. Direct calls to the trigger method do not themselves check enabled state |
+| Next trigger | Uses the local date and selected hour/minute; a time already reached schedules the following day. Selected weekdays are checked at timeout, then the timer is rearmed |
+| Editable time / weekdays | Changed values recalculate the timer before Save; Reset emits changes and recalculates it too |
+| Date/time report | Recalculates from the touchscreen clock, without using the report payload as the alarm time |
+| Snooze restart | Resets the tick counter within a nominal 30-minute window from the original start; its time-of-day comparison does not establish correct behavior across midnight or clock changes |
+
+Configuration stores volume in tens of percentage points, resolves the amplifier by an application Object reference, and selects the first configured source of the requested type. These fields are not bus addresses or a general OpenWebNet alarm schema. The scheduler does not establish missed-event recovery or duplicate-trigger suppression. Earlier implementations and corrections are scoped in [Alarm-clock history evidence](../project/review/myopencommunity-alarm-clock-history-review.md).
+
+Evidence finding `moc-e0083` (claimed): Alarm-clock local scheduler
+Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
+Individual claims: `ownkb:claim:moc-c007770`, `ownkb:claim:moc-c007771`, `ownkb:claim:moc-c007772`, `ownkb:claim:moc-c007773`, `ownkb:claim:moc-c007774`, `ownkb:claim:moc-c007775`, `ownkb:claim:moc-c007776`
+- `ownkb:source:moc-s000239`: source_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - AlarmClock::AlarmClock; AlarmClock::alarmTick; AlarmClock::apply; AlarmClock::checkRequestManagement; AlarmClock::decrementAmbient; AlarmClock::decrementVolume; AlarmClock::getAlarmType; AlarmClock::getAmbient; AlarmClock::getAmplifier; AlarmClock::getAmplifierInterface; AlarmClock::getDays; AlarmClock::getDescription; AlarmClock::getHour; AlarmClock::getMinute; AlarmClock::getSource; AlarmClock::getValidityStatus; AlarmClock::getVolume; AlarmClock::incrementAmbient; AlarmClock::incrementVolume; AlarmClock::isRinging; AlarmClock::isTriggerOnFridays; AlarmClock::isTriggerOnMondays; AlarmClock::isTriggerOnSaturdays; AlarmClock::isTriggerOnSundays; AlarmClock::isTriggerOnThursdays; AlarmClock::isTriggerOnTuesdays; AlarmClock::isTriggerOnWednesdays; AlarmClock::mediaSourcePlaybackStatus; AlarmClock::postpone; AlarmClock::qmlValueChanged; AlarmClock::reset; AlarmClock::restart; AlarmClock::setAlarmType; AlarmClock::setAmplifier; AlarmClock::setDays; AlarmClock::setDescription; AlarmClock::setEnabled; AlarmClock::setHour; AlarmClock::setMinute; AlarmClock::setSource; AlarmClock::setTriggerOnFridays; AlarmClock::setTriggerOnMondays; AlarmClock::setTriggerOnSaturdays; AlarmClock::setTriggerOnSundays; AlarmClock::setTriggerOnThursdays; AlarmClock::setTriggerOnTuesdays; AlarmClock::setTriggerOnWednesdays; AlarmClock::setTriggerOnWeekdays; AlarmClock::setVolume; AlarmClock::soundDiffusionSetVolume; AlarmClock::soundDiffusionStop; AlarmClock::start; AlarmClock::startRinging; AlarmClock::stop; AlarmClock::triggersIfHasTo; AlarmClock::updateAmbient; AlarmClock::valueReceived; parseAlarmClocks; updateAlarmClocks](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/alarmclock.cpp#L72-L803) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007770, ownkb:claim:moc-c007771, ownkb:claim:moc-c007772, ownkb:claim:moc-c007773, ownkb:claim:moc-c007774, ownkb:claim:moc-c007775, ownkb:claim:moc-c007776
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000240`: test_expectation_inspection; client; direct; supports. [MyOpenCommunity/BtExperience - TestAlarmClockBeep::cleanup; TestAlarmClockBeep::init; TestAlarmClockBeep::testFirstTick; TestAlarmClockBeep::testLastTick; TestAlarmClockBeep::testPostpone; TestAlarmClockBeep::testRestart; TestAlarmClockBeep::testRestartExpired; TestAlarmClockBeep::testStart; TestAlarmClockBeep::testStop; TestAlarmClockBeep::testTick; TestAlarmClockSoundDiffusion::cleanup; TestAlarmClockSoundDiffusion::cleanupTestCase; TestAlarmClockSoundDiffusion::init; TestAlarmClockSoundDiffusion::initTestCase; TestAlarmClockSoundDiffusion::testFirstTick; TestAlarmClockSoundDiffusion::testLastTick; TestAlarmClockSoundDiffusion::testPostpone; TestAlarmClockSoundDiffusion::testRestart; TestAlarmClockSoundDiffusion::testRestartExpired; TestAlarmClockSoundDiffusion::testStart; TestAlarmClockSoundDiffusion::testStop; TestAlarmClockSoundDiffusion::testTick](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/test/test_alarm_clock.cpp#L31-L300) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Expected results inspected; no archived-suite pass is asserted.; Reviewed test context only; no individual claim is attributed to an expected result in this entry.
+
+Evidence finding `moc-e0090` (corroborates): Retained alarm scheduler execution
+Disposition reason: Retained controlled original-helper execution, distinct from source/test inspection; no complete-suite or physical result claimed.
+Individual claims: `ownkb:claim:moc-c007770`, `ownkb:claim:moc-c007771`, `ownkb:claim:moc-c007772`, `ownkb:claim:moc-c007773`, `ownkb:claim:moc-c007774`, `ownkb:claim:moc-c007775`, `ownkb:claim:moc-c007776`
+- `ownkb:source:moc-s000239`: helper_execution; client; direct; supports. [MyOpenCommunity/BtExperience - AlarmClock::AlarmClock; AlarmClock::alarmTick; AlarmClock::apply; AlarmClock::checkRequestManagement; AlarmClock::decrementAmbient; AlarmClock::decrementVolume; AlarmClock::getAlarmType; AlarmClock::getAmbient; AlarmClock::getAmplifier; AlarmClock::getAmplifierInterface; AlarmClock::getDays; AlarmClock::getDescription; AlarmClock::getHour; AlarmClock::getMinute; AlarmClock::getSource; AlarmClock::getValidityStatus; AlarmClock::getVolume; AlarmClock::incrementAmbient; AlarmClock::incrementVolume; AlarmClock::isRinging; AlarmClock::isTriggerOnFridays; AlarmClock::isTriggerOnMondays; AlarmClock::isTriggerOnSaturdays; AlarmClock::isTriggerOnSundays; AlarmClock::isTriggerOnThursdays; AlarmClock::isTriggerOnTuesdays; AlarmClock::isTriggerOnWednesdays; AlarmClock::mediaSourcePlaybackStatus; AlarmClock::postpone; AlarmClock::qmlValueChanged; AlarmClock::reset; AlarmClock::restart; AlarmClock::setAlarmType; AlarmClock::setAmplifier; AlarmClock::setDays; AlarmClock::setDescription; AlarmClock::setEnabled; AlarmClock::setHour; AlarmClock::setMinute; AlarmClock::setSource; AlarmClock::setTriggerOnFridays; AlarmClock::setTriggerOnMondays; AlarmClock::setTriggerOnSaturdays; AlarmClock::setTriggerOnSundays; AlarmClock::setTriggerOnThursdays; AlarmClock::setTriggerOnTuesdays; AlarmClock::setTriggerOnWednesdays; AlarmClock::setTriggerOnWeekdays; AlarmClock::setVolume; AlarmClock::soundDiffusionSetVolume; AlarmClock::soundDiffusionStop; AlarmClock::start; AlarmClock::startRinging; AlarmClock::stop; AlarmClock::triggersIfHasTo; AlarmClock::updateAmbient; AlarmClock::valueReceived; parseAlarmClocks; updateAlarmClocks](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/alarmclock.cpp#L72-L803) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: ownkb:claim:moc-c007770, ownkb:claim:moc-c007771, ownkb:claim:moc-c007772, ownkb:claim:moc-c007773, ownkb:claim:moc-c007774, ownkb:claim:moc-c007775, ownkb:claim:moc-c007776
+  Conditions: Qt5 Core, 26 original methods; controlled timer/signal/delegate seams with Qt local clock.
+  Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
+  Execution record: original_helper_in_adapted_harness - 32 comparisons passed across the review harness, without real elapsed timing, transport, playback backends or hardware.; Qt5 Core, 26 original methods; controlled timer/signal/delegate seams with Qt local clock.. Inputs: Local-clock recalculation; Restart window; Weekday/one-shot transitions. Record: `project/review/myopencommunity-alarm-clock-history-review.md` (32 comparisons).
+
+Evidence finding `moc-e0101` (deferred): Calendar, asynchronous player failure and hardware effects
+Disposition reason: Controlled seams do not establish DST/midnight/missed-event correctness, reliable USB/SD completion, audible playback or physical Stop/expiry effects.
+- `ownkb:source:moc-s000207`: source_inspection; client; interpretation; qualifies. [MyOpenCommunity/BtExperience - Amplifier::Amplifier; Amplifier::getArea; Amplifier::getVolume; Amplifier::isActive; Amplifier::setActive; Amplifier::setActiveOnSource; Amplifier::setVolume; Amplifier::valueReceived; Amplifier::volumeDown; Amplifier::volumeUp; AmplifierGroup::AmplifierGroup; AmplifierGroup::setActive; AmplifierGroup::setActiveOnSource; AmplifierGroup::setVolume; AmplifierGroup::volumeDown; AmplifierGroup::volumeUp; MediaDevice::MediaDevice; MediaDevice::getMountPoint; MediaDevice::getRootPath; PowerAmplifier::PowerAmplifier; PowerAmplifier::balanceLeft; PowerAmplifier::balanceRight; PowerAmplifier::bassDown; PowerAmplifier::bassUp; PowerAmplifier::getBalance; PowerAmplifier::getBass; PowerAmplifier::getLoud; PowerAmplifier::getPreset; PowerAmplifier::getPresetDescription; PowerAmplifier::getPresets; PowerAmplifier::getTreble; PowerAmplifier::nextPreset; PowerAmplifier::previousPreset; PowerAmplifier::setLoud; PowerAmplifier::setPreset; PowerAmplifier::trebleDown; PowerAmplifier::trebleUp; PowerAmplifier::valueReceived; PowerAmplifierPreset::PowerAmplifierPreset; PowerAmplifierPreset::getName; SoundAmbient::SoundAmbient; SoundAmbient::connectAmplifiers; SoundAmbient::connectSources; SoundAmbient::getHasActiveAmplifier; SoundAmbient::getPreviousSource; SoundAmbient::initializeObject; SoundAmbient::updateActiveAmplifier; SoundAmbient::updateActiveSource; SoundAmbientBase::SoundAmbientBase; SoundAmbientBase::getArea; SoundAmbientBase::getCurrentSource; SoundAmbientBase::getUii; SoundAmbientBase::setCurrentSource; SoundGeneralAmbient::SoundGeneralAmbient; SoundGeneralAmbient::connectSources; SoundGeneralAmbient::setSource; SourceAux::SourceAux; SourceBase::SourceBase; SourceBase::getActiveAreas; SourceBase::getCurrentTrack; SourceBase::getSourceObject; SourceBase::getType; SourceBase::initializeObject; SourceBase::isActive; SourceBase::isActiveInArea; SourceBase::nextTrack; SourceBase::previousTrack; SourceBase::setActive; SourceBase::setActiveGeneral; SourceBase::setSourceObject; SourceBase::valueReceived; SourceIpRadio::SourceIpRadio; SourceIpRadio::playFirstMediaContent; SourceIpRadio::startPlay; SourceLocalMedia::SourceLocalMedia; SourceLocalMedia::getMountPoint; SourceLocalMedia::getRootPath; SourceLocalMedia::pathScanComplete; SourceLocalMedia::playFirstMediaContent; SourceLocalMedia::scanPath; SourceLocalMedia::startPlay; SourceMedia::SourceMedia; SourceMedia::getAudioVideoPlayer; SourceMedia::getMediaPlayer; SourceMedia::nextTrack; SourceMedia::playFirstMediaContent; SourceMedia::previousTrack; SourceMedia::restart; SourceMedia::togglePause; SourceMultiMedia::SourceMultiMedia; SourceMultiMedia::addMediaSource; SourceMultiMedia::firstMediaContentStatus; SourceMultiMedia::getAudioVideoPlayer; SourceMultiMedia::nextSource; SourceMultiMedia::startLocalPlayback; SourceMultiMedia::valueReceived; SourceObject::SourceObject; SourceObject::getObjectKey; SourceObject::initializeObject; SourceObject::isActiveInArea; SourceObject::nextTrack; SourceObject::previousTrack; SourceObject::scsSourceActiveAreasChanged; SourceObject::scsSourceForGeneralAmbientChanged; SourceObject::scsSourceObjectChanged; SourceObject::setActive; SourceObject::setActiveGeneral; SourceRadio::SourceRadio; SourceRadio::frequencyDown; SourceRadio::frequencyUp; SourceRadio::getCurrentFrequency; SourceRadio::getRdsText; SourceRadio::getSavedStationsCount; SourceRadio::nextStation; SourceRadio::previousStation; SourceRadio::requestFrequency; SourceRadio::saveStation; SourceRadio::searchDown; SourceRadio::searchUp; SourceRadio::setCurrentStation; SourceRadio::startRdsUpdates; SourceRadio::stopRdsUpdates; SourceRadio::valueReceived; SourceUpnpMedia::SourceUpnpMedia; SourceUpnpMedia::startUpnpPlay; createLocalSources; makeAbsolute; makeModelPath; parseAmplifier; parseAmplifierGroup; parseAuxSource; parseGeneralAmplifier; parseMultimediaSource; parsePowerAmplifier; parseRadioSource](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/mediaobjects.cpp#L62-L1471) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+- `ownkb:source:moc-s000239`: source_inspection; client; interpretation; qualifies. [MyOpenCommunity/BtExperience - AlarmClock::AlarmClock; AlarmClock::alarmTick; AlarmClock::apply; AlarmClock::checkRequestManagement; AlarmClock::decrementAmbient; AlarmClock::decrementVolume; AlarmClock::getAlarmType; AlarmClock::getAmbient; AlarmClock::getAmplifier; AlarmClock::getAmplifierInterface; AlarmClock::getDays; AlarmClock::getDescription; AlarmClock::getHour; AlarmClock::getMinute; AlarmClock::getSource; AlarmClock::getValidityStatus; AlarmClock::getVolume; AlarmClock::incrementAmbient; AlarmClock::incrementVolume; AlarmClock::isRinging; AlarmClock::isTriggerOnFridays; AlarmClock::isTriggerOnMondays; AlarmClock::isTriggerOnSaturdays; AlarmClock::isTriggerOnSundays; AlarmClock::isTriggerOnThursdays; AlarmClock::isTriggerOnTuesdays; AlarmClock::isTriggerOnWednesdays; AlarmClock::mediaSourcePlaybackStatus; AlarmClock::postpone; AlarmClock::qmlValueChanged; AlarmClock::reset; AlarmClock::restart; AlarmClock::setAlarmType; AlarmClock::setAmplifier; AlarmClock::setDays; AlarmClock::setDescription; AlarmClock::setEnabled; AlarmClock::setHour; AlarmClock::setMinute; AlarmClock::setSource; AlarmClock::setTriggerOnFridays; AlarmClock::setTriggerOnMondays; AlarmClock::setTriggerOnSaturdays; AlarmClock::setTriggerOnSundays; AlarmClock::setTriggerOnThursdays; AlarmClock::setTriggerOnTuesdays; AlarmClock::setTriggerOnWednesdays; AlarmClock::setTriggerOnWeekdays; AlarmClock::setVolume; AlarmClock::soundDiffusionSetVolume; AlarmClock::soundDiffusionStop; AlarmClock::start; AlarmClock::startRinging; AlarmClock::stop; AlarmClock::triggersIfHasTo; AlarmClock::updateAmbient; AlarmClock::valueReceived; parseAlarmClocks; updateAlarmClocks](https://github.com/OpenWebNet-HA/BtExperience/blob/b88cdac9665d28494f19d6a5d759acf8d5f00ad9/BtObjects/alarmclock.cpp#L72-L803) at `b88cdac9665d28494f19d6a5d759acf8d5f00ad9`. Review: `project/review/myopencommunity-alarm-clock-history-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+### Generic simulator scripts
+
+Section ID: `ownkb:section:d000129:s000011`
+
+Applicability cues: `gateway`, `revision`
+Uncertainty: `unknown`
+Provenance cues: `evidence`, `source`
+
+MyHomeSystemEmulator's generic Device at retained revision `4f93f44ee5ec` uses a script-backed response model, separate from its product-specific models and the touchscreen scenario engine.
+
+| Mechanism | Simulator behavior |
+| --- | --- |
+| Trigger | Exact match on the stored `OPEN` string after the internal Device-destination check; no wildcard or functional `WHO` matcher |
+| Unmatched trigger | Reports a local missing-trigger error; this path does not itself construct an OpenWebNet `NACK` |
+| Action loop | Iterates from `from` through `repeat`, inclusive; `repeat` is the final index rather than an iteration count |
+| Output channel | `CMD` replies to the incoming source; `MON` targets the internal gateway and preserves the internal message ID; `GUI` calls the event handler |
+| Unknown channel | Emits no response for that message |
+| Reload | Replaces duplicate trigger keys with the last definition but retains old keys absent from the new document |
+| Saved configuration | Stores the bus and script-file reference, without embedding the script scenarios |
+
+Message substitution replaces `[index]` with the loop index and supports a numeric `[LOW..HIGH]` range. The reviewed implementation fails to advance when a remaining range starts at the beginning of the string; a controlled original-helper run exceeded a one-second bound before termination. Nonzero delay behavior, random distribution and malformed ranges are not certified. The worker places its delay after each message, rather than before the response.
+
+Source inspection establishes dispatch matching; controlled execution establishes the stated loader, substitution and zero-delay worker results. The complete threaded simulator, gateway transport and physical Devices were not executed. A scripted sound or status response consequently establishes the script's configured output, without demonstrating an audio model or hardware capability. See [Generic simulator closure evidence](../project/review/myopencommunity-closure-review.md#controlled-helper-execution).
+
+Evidence finding `moc-e0173` (claimed): Generic simulator exact-trigger dispatch
+Disposition reason: Reviewed exact-revision direct findings, with independent confidence and examination methods; no hardware generalization.
+Individual claims: `ownkb:claim:moc-c074132`, `ownkb:claim:moc-c074133`
+- `ownkb:source:moc-s001177`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtGEN_dev::ReceiveMessage; BtGEN_dev::execCommand](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/bt_gen_dev.cpp#L225-L259) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074132, ownkb:claim:moc-c074133
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+
+Evidence finding `moc-e0174` (claimed): Generic simulator loader, worker and saved reference
+Disposition reason: Reviewed exact-revision direct findings, with independent confidence and examination methods; no hardware generalization.
+Individual claims: `ownkb:claim:moc-c074134`, `ownkb:claim:moc-c074135`, `ownkb:claim:moc-c074136`, `ownkb:claim:moc-c074137`, `ownkb:claim:moc-c074138`, `ownkb:claim:moc-c074139`
+- `ownkb:source:moc-s001178`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - GenMsgWorker::run](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/genmsgworker.cpp#L35-L106) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074134, ownkb:claim:moc-c074135, ownkb:claim:moc-c074136, ownkb:claim:moc-c074137
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001178`: helper_execution; simulator; direct; corroborates. [MyOpenCommunity/MyHomeSystemEmulator - GenMsgWorker::run](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/genmsgworker.cpp#L35-L106) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074134, ownkb:claim:moc-c074135, ownkb:claim:moc-c074136
+  Conditions: BtGEN_dev className and PlantMgr getBuses are substitutes used only by configuration serialization; original dispatcher BtGEN_dev is source-inspected, not executed.; Native Qt 5.15.19 Core/Xml on Linux; unchanged original files recorded by Git blob and SHA-256.; One leading numeric range runs in an isolated subprocess; nontermination is measured only to a one-second bound, then the subprocess is killed.; Original GenMsgWorker::run invoked synchronously; no worker scheduling, plant bus, gateway, plugin loader, physical Device or hardware executes.; Synthetic XML, trigger strings and destinations; all message delays zero. EventHandler records GUI requests.
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Only the recorded original loader, serializer, message substitution and synchronously invoked zero-delay worker execute; full threaded dispatcher, bus, plugin runtime and Qt 4 remain unexecuted.
+  Execution record: original_helper_in_adapted_harness - Original worker/loader/serializer and valid substitution assertions pass; leading numeric range exceeds one-second subprocess bound and is killed.; Native Qt 5 Core/Xml, unchanged original files, synthetic XML and recording event-handler sink; explicitly substituted class-name and bus-list dependencies.. Inputs: BtGEN_dev className and PlantMgr getBuses are substitutes used only by configuration serialization; original dispatcher BtGEN_dev is source-inspected, not executed.; Native Qt 5.15.19 Core/Xml on Linux; unchanged original files recorded by Git blob and SHA-256.; One leading numeric range runs in an isolated subprocess; nontermination is measured only to a one-second bound, then the subprocess is killed.; Original GenMsgWorker::run invoked synchronously; no worker scheduling, plant bus, gateway, plugin loader, physical Device or hardware executes.; Synthetic XML, trigger strings and destinations; all message delays zero. EventHandler records GUI requests.. Record: `project/review/myopencommunity-closure-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001179`: helper_execution; simulator; direct; corroborates. [MyOpenCommunity/MyHomeSystemEmulator - GEN_xmlserializer::loadScenarios; GEN_xmlserializer::serialize](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/gen_xmlserializer.cpp#L55-L154) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074138, ownkb:claim:moc-c074139
+  Conditions: BtGEN_dev className and PlantMgr getBuses are substitutes used only by configuration serialization; original dispatcher BtGEN_dev is source-inspected, not executed.; Native Qt 5.15.19 Core/Xml on Linux; unchanged original files recorded by Git blob and SHA-256.; One leading numeric range runs in an isolated subprocess; nontermination is measured only to a one-second bound, then the subprocess is killed.; Original GenMsgWorker::run invoked synchronously; no worker scheduling, plant bus, gateway, plugin loader, physical Device or hardware executes.; Synthetic XML, trigger strings and destinations; all message delays zero. EventHandler records GUI requests.
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Only the recorded original loader, serializer, message substitution and synchronously invoked zero-delay worker execute; full threaded dispatcher, bus, plugin runtime and Qt 4 remain unexecuted.
+  Execution record: original_helper_in_adapted_harness - Original worker/loader/serializer and valid substitution assertions pass; leading numeric range exceeds one-second subprocess bound and is killed.; Native Qt 5 Core/Xml, unchanged original files, synthetic XML and recording event-handler sink; explicitly substituted class-name and bus-list dependencies.. Inputs: BtGEN_dev className and PlantMgr getBuses are substitutes used only by configuration serialization; original dispatcher BtGEN_dev is source-inspected, not executed.; Native Qt 5.15.19 Core/Xml on Linux; unchanged original files recorded by Git blob and SHA-256.; One leading numeric range runs in an isolated subprocess; nontermination is measured only to a one-second bound, then the subprocess is killed.; Original GenMsgWorker::run invoked synchronously; no worker scheduling, plant bus, gateway, plugin loader, physical Device or hardware executes.; Synthetic XML, trigger strings and destinations; all message delays zero. EventHandler records GUI requests.. Record: `project/review/myopencommunity-closure-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001179`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - GEN_xmlserializer::loadScenarios](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/gen_xmlserializer.cpp#L104-L154) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074138
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+- `ownkb:source:moc-s001179`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - GEN_xmlserializer::serialize](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/gen_xmlserializer.cpp#L55-L81) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074139
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+
+Evidence finding `moc-e0175` (claimed): Generic simulator message substitution and bounded nontermination
+Disposition reason: Reviewed exact-revision direct findings, with independent confidence and examination methods; no hardware generalization.
+Individual claims: `ownkb:claim:moc-c074140`, `ownkb:claim:moc-c074141`
+- `ownkb:source:moc-s001180`: helper_execution; simulator; direct; corroborates. [MyOpenCommunity/MyHomeSystemEmulator - Message::getMsgValue(int)](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/message.h#L107-L150) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074140, ownkb:claim:moc-c074141
+  Conditions: BtGEN_dev className and PlantMgr getBuses are substitutes used only by configuration serialization; original dispatcher BtGEN_dev is source-inspected, not executed.; Native Qt 5.15.19 Core/Xml on Linux; unchanged original files recorded by Git blob and SHA-256.; One leading numeric range runs in an isolated subprocess; nontermination is measured only to a one-second bound, then the subprocess is killed.; Original GenMsgWorker::run invoked synchronously; no worker scheduling, plant bus, gateway, plugin loader, physical Device or hardware executes.; Synthetic XML, trigger strings and destinations; all message delays zero. EventHandler records GUI requests.
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Only the recorded original loader, serializer, message substitution and synchronously invoked zero-delay worker execute; full threaded dispatcher, bus, plugin runtime and Qt 4 remain unexecuted.
+  Execution record: original_helper_in_adapted_harness - Original worker/loader/serializer and valid substitution assertions pass; leading numeric range exceeds one-second subprocess bound and is killed.; Native Qt 5 Core/Xml, unchanged original files, synthetic XML and recording event-handler sink; explicitly substituted class-name and bus-list dependencies.. Inputs: BtGEN_dev className and PlantMgr getBuses are substitutes used only by configuration serialization; original dispatcher BtGEN_dev is source-inspected, not executed.; Native Qt 5.15.19 Core/Xml on Linux; unchanged original files recorded by Git blob and SHA-256.; One leading numeric range runs in an isolated subprocess; nontermination is measured only to a one-second bound, then the subprocess is killed.; Original GenMsgWorker::run invoked synchronously; no worker scheduling, plant bus, gateway, plugin loader, physical Device or hardware executes.; Synthetic XML, trigger strings and destinations; all message delays zero. EventHandler records GUI requests.. Record: `project/review/myopencommunity-closure-review.md` (## Controlled helper execution).
+- `ownkb:source:moc-s001180`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - Message::getMsgValue(int)](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/message.h#L107-L150) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: ownkb:claim:moc-c074140, ownkb:claim:moc-c074141
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+
+Evidence finding `moc-e0176` (deferred): Full generic simulator runtime and configuration round-trip remain deferred
+Disposition reason: The original threaded dispatcher, plant/plugin/gateway runtime, nonzero/platform timing, cancellation and ownership interleavings were not executed. Client XML persistence is not an authoring/deployment round-trip. Wider indexed GUI, legacy SAX and build histories remain outside this bounded review; hardware/capture questions require independent evidence.
+- `ownkb:source:moc-s001177`: source_inspection; simulator; direct; supports. [MyOpenCommunity/MyHomeSystemEmulator - BtGEN_dev::cancelCmd; BtGEN_dev::unRegisterEventHnd](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_GEN_DEV_PGIN/bt_gen_dev.cpp#L210-L223) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/myopencommunity-closure-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Exact retained implementation/revision scope; no physical Device, deployed Firmware or gateway observation.; Executable source inspected; no runtime execution or original-suite success implied.
+
 ### Relationship to `OPEN.db`
 
 Section ID: `ownkb:section:d000129:s000008`
@@ -18803,6 +22209,19 @@ This is the strongest single observation, because it is not an inference about a
 
 *Evidence class: observed traffic on one Device emitting two dialects, scoped to plant B's MH200N firmware.*
 
+### Historical implementation evidence
+
+Section ID: `ownkb:section:d000135:s000015`
+
+Applicability cues: `gateway`
+Provenance cues: `evidence`, `source`
+
+The preserved BTouch snapshot of 25 February 2008 supplies independent executable evidence. Its matrix interpreter decodes `WHAT 3` and `WHERE >= 111` as environment/source selection; the alarm-clock writer activates `10S` then emits the selected source address plus `10`, `20`, through `80` for affected environments. For source 2 these are `112`, `122`, through `182`. The receive path normalizes routed addresses back to `102`.
+
+The matrix model stores eight environments with source domain `1..4`. It requests `*#16*1000*11##` and decodes eight values in environment order. That request is a historical extension, not a public-source table entry. The application formats individual amplifier addresses with two digits, including `01..09`; this does not resolve single-digit hardware behavior.
+
+Later BTouch versions mix `WHO 16` and `WHO 22` by operation. The September 2009 matrix change removes its older routing-report path; it does not invalidate the older emitted frames or prove that a gateway translates dialects. Pinned source locations and correction commits are recorded in [Sound implementation evidence](../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
 ### Claim records
 
 Section ID: `ownkb:section:d000135:s000009`
@@ -18816,13 +22235,13 @@ Provenance cues: `evidence`, `source`
 
 | Field | Content |
 | --- | --- |
-| Claim | In `WHO 16`, a `WHERE` of the form `1ES` with `E` in `1..9` routes the amplifiers of environment `E` to source `S`, using `WHAT` `3` for the stereo channel |
-| Source | Plant A (MH200 + F441M) and plant B (MH200N + F441M) captures; `WHO 22` counterpart frames on plant B |
+| Claim | In `WHO 16`, a `WHERE` of the form `1ES` with demonstrated `E` in `1..8` routes the amplifiers of environment `E` to source `S`, using `WHAT` `3` for the stereo channel |
+| Source | Plant A (MH200 + F441M) and plant B (MH200N + F441M) captures; `WHO 22` counterpart frames on plant B; historical BTouch emitter and decoder |
 | Revision | Plant A: gateway model MH200. Plant B: gateway model MH200N. Firmware not recorded on either |
 | Namespace | `E` is the environment digit shared with amplifier addressing; `S` is the source identifier used by `101`-`109` |
 | Conditions | `E` = `0` does not occur: `10S` is a source device address |
 | Cardinality | one environment to one source; an environment's amplifiers cannot differ |
-| Coverage | environments 1, 2, 3 and 8 observed; sources 1 and 2 observed |
+| Coverage | environments 1..8 in captures/source; sources 1 and 2 observed, 1..4 in the historical model; environment 9 unverified |
 | Supporting evidence | observations 1-4 above |
 | Counterevidence | none observed |
 | Alternatives | `1` + source + environment, rejected by observations 1, 2 and 4 |
@@ -18879,10 +22298,9 @@ Provenance cues: `capture`, `evidence`, `source`
 
 Section ID: `ownkb:section:d000135:s000013`
 
-Uncertainty: `may`
 Provenance cues: `capture`, `source`, `specification`
 
-- **Whether directed selection has a specified form.** The captured address may be a documented private mechanism rather than an undocumented one; no published source examined so far contains it.
+- **Whether directed selection has a published form.** Historical product source now establishes the emitter and decoder. The public specification still does not define it; a published or private protocol specification has not been located.
 - **Environment `0` and the `#E` form.** `WHO 16` admits `#0`-`#9` as an environment address for power commands. Whether routing accepts that form, and what `10S` would mean under it, is untested. No capture uses it.
 - **Base band.** Every routing frame observed uses `WHAT 3` (stereo channel). Whether base-band installations require `WHAT 0` for the same address is untested.
 - **Sources above 4.** `101`-`109` is the specified range; both plants have four-input matrices.
@@ -148483,3 +151901,306 @@ Complete implementation extraction uses the retained canonical `MHCatalogue.db`,
 - [Physical Devices](../../device-model/physical-devices.md)
 - [Programming](../../programming/)
 - [Semantic review record, 7 October 2026](../../project/review/device-reviews-0201-0210-2026-10-07.md#own-dev-0208)
+
+# Document: ownkb:document:moc-d000136
+
+Source path: `device-model/configurators.md`
+Namespace context: `contextual`
+Area: `device-model`
+
+## SCS Configurator Labels
+
+Section ID: `ownkb:section:moc-d000136:s000001`
+
+Applicability cues: `scs`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+SCS/MyHOME configurators are removable plugs used to assign addresses, select functions and set parameters. A plug's marking, the socket into which it is inserted, and the configured Device's role together determine its meaning. MyHOME Suite exposes software counterparts and additional settings.
+
+This reference distinguishes manufacturer-defined functions from catalogue encodings and simulator behavior. Product sheets determine which combinations are supported; the tables below do not authorize every label in every socket.
+
+### Reference
+
+Section ID: `ownkb:section:moc-d000136:s000002`
+
+Provenance cues: `catalogue`
+
+| Subject | Section |
+| --- | --- |
+| Lettered and arrow plugs | [Plug vocabulary](#plug-vocabulary) |
+| PUL on commands and actuators | [PUL behavior](#pul-behavior) |
+| Physical socket names | [Positions and functions](#positions-and-functions) |
+| Thermoregulation, Energy and other systems | [System-specific positions](#system-specific-positions) |
+| Software settings and numerical encodings | [Configuration modes](#configuration-modes) and [Catalogue encodings](#catalogue-encodings) |
+
+### Plug vocabulary
+
+Section ID: `ownkb:section:moc-d000136:s000003`
+
+Provenance cues: `catalogue`
+
+The manufacturer sells the lettered plugs below, alongside numeric configurators. `3501/T` and `3501/TM` are product references for the arrow plugs, not socket names. See the [BTicino configurator catalogue](https://www.bticino.com/products/smart-home-and-home-automation-systems/home-automation-system-myhome-bus-solutions/common-wiring-devices-interfaces-and-accessories).
+
+| Plug | Literal meaning or manufacturer function name | Function and usual context |
+| --- | --- | --- |
+| `0..9` | Numeric value | Address digit or parameter selector; the meaning and permitted range depend on the socket and product |
+| `AMB` | *Ambiente* - room/environment | Selects a room command, commonly in `A`; the point field then identifies the room |
+| `GEN` | *Generale* - general | Selects a general command, commonly in `A`; remaining address fields follow the product's rules |
+| `GR` | *Gruppo* - group | Selects a group command, commonly in `A`; distinct from an actuator's numeric group-membership field |
+| `AUX` | Auxiliary | Selects auxiliary-channel operation where supported; an `AUX` socket can instead hold the numeric channel |
+| `ON` | On | ON-only command when used as a command-mode selector |
+| `OFF` | Off | OFF-only lighting command; can instead disable an output or select a product-specific shutter mode |
+| `O/I`, `0/1` | OFF/ON | Selects separate OFF and ON operations; button/input assignment and dimming support depend on the product |
+| `PUL` | *Pulsante* - pushbutton | Momentary lighting-command mode; actuator use has additional collective-command semantics described below |
+| `SLA` | Slave | Selects a follower role; actuator followers and supplementary temperature probes perform different functions |
+| `CEN` | CEN / centralized scenario control | In a command-mode socket, enables interactions for a scenario programmer; other sockets have different uses |
+| `↑↓` (`3501/T`) | Up/down, bistable control | Starts opening or closing; a subsequent key press stops movement |
+| `↑↓M` (`3501/TM`) | Up/down, monostable control | Movement continues while the key is held; release stops movement |
+
+Italian and English product tables establish *ambiente*, *generale*, *gruppo* and *pulsante* directly. `CEN` is retained as the manufacturer's function label rather than assigned an unverified long-form acronym. The functional [CEN](../functional/who-15-cen/) and [CEN+](../functional/who-25-transversal/cen-plus.md) references describe their distinct wire namespaces.
+
+#### Command modes
+
+Section ID: `ownkb:section:moc-d000136:s000004`
+
+| Mode | Control behavior | Software counterpart |
+| --- | --- | --- |
+| Cyclic | Successive presses alternate ON/OFF; some point controls also dim on a long press | Cyclic; Cyclical ON/OFF; Cyclical dimmer are separate supported choices |
+| `O/I` | Typically upper ON and lower OFF; with adjustment, long upper/lower presses increase/decrease brightness | ON/OFF; ON/OFF with adjustment |
+| `PUL` | ON while pressed, OFF on release | Pushbutton |
+| Numeric timed mode | Sends a timed operation selected by the product's mode table | ON timed; customised timed ON |
+| Arrow modes | Bistable or monostable movement as defined above | Bistable control; Monostable control |
+
+These are command functions, not statements about the mechanical latching of the keys. The [Suite lighting-control help](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_comando_luce.html) distinguishes cyclic controls with and without adjustment. Its [Automation-control help](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/modalita_comando_automazione.html) distinguishes bistable, monostable and blade-control variants.
+
+On the F428 contact interface, `SPE=0, M=O/I` assigns OFF to `N1` and ON to `N2`; long-pressure regulation is available in the documented point-to-point dimmer mode. `SPE=0, M=PUL` selects pushbutton mode. Up/down modes use `PL1=PL2`. These are F428 combinations, not universal `SPE` values. See the [F428 sheet, pages 2..4](https://dar.bticino.it/asset/Documents/MQ00283_c_IT.pdf).
+
+### PUL behavior
+
+Section ID: `ownkb:section:moc-d000136:s000005`
+
+#### Lighting command
+
+Section ID: `ownkb:section:moc-d000136:s000006`
+
+`PUL` is an established momentary command function: the load is commanded ON while the control is held and OFF when released. The [Voice Control installation and use manual, page 55](https://dar.bticino.it/asset/Documents/RA00168AA_IT.pdf) states this explicitly and distinguishes it from cyclic and timed operation.
+
+An illustrative point command to Lighting address `11` therefore uses ON `*1*1*11##` on press and OFF `*1*0*11##` on release. These examples illustrate the ordinary Lighting vocabulary, not a captured exchange or a guarantee of delivery. `PUL` does not introduce a new `WHO` or `WHAT`.
+
+#### Actuator and local control
+
+Section ID: `ownkb:section:moc-d000136:s000007`
+
+An actuator's PUL setting must be read in its own mode table. F411U2 and F411/4 sheets define Master PUL and exclusion of Room and General controls. Slave operation follows a Master with the same address; available OFF delays and Slave PUL settings depend on the product and Configuration method. See [F411U2, pages 2..3](https://dar.bticino.com/asset/Documents/ST_00000893_EN.pdf) and [F411/4, pages 2..3](https://dar.bticino.com/asset/Documents/ST_00000896_EN.pdf).
+
+PUL on an actuator does not universally make its local key momentary. The [MHKIT1116 instructions, pages 5..6](https://dar.bticino.it/asset/Documents/LE08838AC.pdf) explicitly describe local ON/OFF cyclic operation with `M1=PUL`, or with `M1=CEN, M2=PUL` in the corresponding two-load mode, while excluding Room and General commands. The command function and the actuator's collective filtering must therefore remain separate.
+
+The same instructions use `M1=CEN` as a selector in the two-load actuator combinations. In their single-load shutter table, `M1=OFF` instead selects up/down with a two-minute stop and Room/General exclusion. Neither plug therefore has one universal effect independent of the selected function.
+
+#### Collective commands and status
+
+Section ID: `ownkb:section:moc-d000136:s000008`
+
+Applicability cues: `firmware`, `scs`
+Cautions: `do not`, `must not`
+Uncertainty: `contradiction`
+Provenance cues: `evidence`, `source`
+
+| Source and scope | PUL collective-command treatment |
+| --- | --- |
+| Older manufacturer SCS guide, actuator modes, printed page 36 | Explicitly permits point and group ON/OFF; excludes Room and General |
+| F411U2 and F411/4 sheets dated 23 March 2021 | State exclusion of Room and General; do not explicitly settle group handling in that PUL description |
+| Suite function help, `MHS_function_0304b`, Lighting, Automation, shutter and dimmer actuators | Master PUL and Slave PUL exclude general, group and room controls for the listed products |
+
+The older [manufacturer SCS guide](https://leonardocanducci.org/wiki/tp3/_media/guida_myhome_bticino.pdf) and [Suite actuator help](https://myhomeswupdate.bticino.com/MyHOMESuite_Docs/MHS_function_0304b/EN_MHS_function_0304/attuatore_automazione.html) differ explicitly on groups. The 2021 sheets' omission of groups is not itself a contradiction. The sources do not establish a physical Firmware boundary or prove that selecting Physical versus software Configuration explains the difference.
+
+Room/General exclusion is documented behavior, not merely an inference from a simulator. Group handling requires the applicable product/mode evidence. Status-request responses are a separate question: command filtering alone does not establish whether a Device answers point, group, Room or General status requests. The [F411 simulator model](configuration.md#f411-simulator-configuration) must not settle that hardware question.
+
+Evidence finding `moc-e0104` (deferred): Configurator manufacturer lineage versus simulator
+Disposition reason: Manufacturer product sheets/Suite definitions support physical label meanings independently. Their extensive atomic extraction is a separate source lineage; simulator comparison is claimed in the canonical F411 section.
+- `ownkb:source:moc-s000235`: source_inspection; simulator; interpretation; qualifies. [MyOpenCommunity/MyHomeSystemEmulator - BtF411_dev::BtF411_dev; BtF411_dev::HandleMessage; BtF411_dev::ReceiveMessage; BtF411_dev::attachChild; BtF411_dev::cancelCmd; BtF411_dev::execCommand; BtF411_dev::executeCmd; BtF411_dev::findLed; BtF411_dev::getApl; BtF411_dev::getID; BtF411_dev::getModeTypeValues; BtF411_dev::registerEventHnd; BtF411_dev::save; BtF411_dev::sendACK; BtF411_dev::setApl; BtF411_dev::setID; BtF411_dev::setResoucesFileName; BtF411_dev::setSuperior; BtF411_dev::unRegisterEventHnd; BtF411_dev::~BtF411_dev](https://github.com/OpenWebNet-HA/MyHomeSystemEmulator/blob/4f93f44ee5ec7f89a3de9e040141755c847a5eda/bt_F411_DEV_PGIN/btf411dev.cpp#L22-L499) at `4f93f44ee5ec7f89a3de9e040141755c847a5eda`. Review: `project/review/scs-configurator-labels-review.md`.
+  Examination claims: none - review context or unmaterialized finding
+  Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+### Positions and functions
+
+Section ID: `ownkb:section:moc-d000136:s000009`
+
+Applicability cues: `firmware`
+Cautions: `must not`
+Provenance cues: `catalogue`
+
+Socket names identify fields; plug markings identify values. For example, `M=SLA` inserts the Slave plug into the mode socket, whereas a probe's `SLA=3` inserts a numeric plug into the socket marked SLA. Fields without a product-sheet example below are catalogue descriptions from MyHOME Suite 3.5.38; their presence does not prove a physical socket on every associated product.
+
+| Position | Meaning/function | Context |
+| --- | --- | --- |
+| `A` | *Ambiente*, room/environment or addressing scope | Lighting/Automation controls and actuators; command scope plugs can replace the room digit |
+| `PL` | *Punto luce*, lighting point | Point within the addressed room; reused as a target selector for collective controls |
+| `A1`, `PL1`; `A2`, `PL2` | Address fields for separate channels/functions | Combined controls and actuators; not always successive digits of one address |
+| `PL1..PL4` | Per-output point addresses | Multi-relay Lighting actuators with a shared `A` |
+| `G`, `G1..G3` | *Gruppo*, group membership | Actuator participation in one or more groups; number of positions depends on product |
+| `M`, `M1`, `M2`, `MOD`, `MODE` | Operating mode | Select function, local control behavior, follower role or a parameter; no global mode-number table |
+| `SPE` | Special-function selector | Changes interpretation of the other fields; F428 and special wall-control codes differ |
+| `AUX` | Auxiliary channel | Input auxiliary-channel selection on a special control; distinct from `A=AUX` command addressing |
+| `I` | Destination interface/bus selector | Supported commands can target another local bus or the riser |
+| `Ar`, `PLr` | Reference actuator room and point | Advanced shutter control uses a reference actuator to update status for a collective target |
+| `PRE` | Preset | Shutter preset-related setting in the catalogue; it is not the functional `DIMENSION` number |
+| `LIV1`, `LIV2`, `LIV1/AUX` | Level or reused parameter fields | Special controls reinterpret them according to `SPE`; timer mode can repurpose them for minutes/seconds |
+| `LED`, `INT`, `SET` | Local indication/interface settings | Meaning depends on the control and Firmware definition; not functional ON/OFF state |
+| `MIN`, `MIN1`, `MIN2`, `TY` | Minimum dimming level and load type | Dimmer settings; channel suffixes and numeric domains are product-specific |
+| `C` | Zero-crossing/load-contact selection | F411U2 `C=0` with zero crossing, `C=1` without; unrelated to `C` in other product families |
+
+The [advanced shutter-control sheet, page 2](https://dar.bticino.com/asset/Documents/MQ00591_c_EN.pdf) defines `Ar`/`PLr` and distinguishes installation level from destination level: for this product, `I=1..9` selects a local bus, `I=CEN` the riser, and `I=0` the complete system. A [special wall-control sheet](https://configuratoren.legrand.nl/documize/2015/10/20151002_111284_1.pdf) instead describes `I=0` as its local line. These product descriptions must not be collapsed into one universal meaning for `I=0`.
+
+The same special-control sheet defines input `AUX` as a channel whose event activates the configured command as though its key were pressed. Its `SPE=ON` timer mode reuses `M`, `LIV1` and `LIV2` for two minute digits and a seconds selector. Socket reuse explains why a field name alone cannot determine a unit or function.
+
+### System-specific positions
+
+Section ID: `ownkb:section:moc-d000136:s000010`
+
+#### Temperature Control
+
+Section ID: `ownkb:section:moc-d000136:s000011`
+
+Applicability cues: `revision`
+Cautions: `must not`
+Provenance cues: `catalogue`
+
+| Position/value | Meaning/function | Product scope |
+| --- | --- | --- |
+| `ZA`, `ZB` | Zone-address components | Probes and Temperature Control actuators; matching zone addresses associate them |
+| `ZB1..ZB4` | Per-output zone component | Relevant multi-output actuators; `OFF` can exclude an output |
+| `N`, `N1`, `N2` | Progressive actuator number within a zone, or pump number | Temperature Control actuator; not a Lighting point or probe Slave index |
+| `MOD=SLA` | Supplementary Slave probe | Eligible probe without selector knob |
+| `SLA` socket, numeric | Slave count on a Master; progressive Slave number on a Slave | 4692/4693 family in the cited sheet |
+| `FUN` | Function selector | Local displays; catalogue meaning requires the selected display definition |
+| `TYPE` | System-probe, hotel or residential thermostat role | H4691/LN4691 and variants in the cited sheet |
+| `HEAT`, `COOL` | Heating and cooling load type | H4691/LN4691; separate from the current heating/cooling runtime mode |
+| `COOL=CEN` | Share the heating load for cooling | H4691/LN4691; actuator `N=1`, with `HEAT` neither `0` nor Fil Pilote `5` |
+| `PUMP` | Pump arrangement | H4691/LN4691; selects none, heating, cooling or shared pumps |
+| `IN` | External-contact action | H4691/LN4691; selects protection, OFF, ECO, COMFORT or heating/cooling changeover |
+| `WARM`, `COLD` | Winter/summer function enablement | Temperature central-unit catalogue definitions; not physical plug labels inferred from the column pattern |
+
+In the [4692-family probe sheet, page 2](https://dar.bticino.com/asset/Documents/MQ00179_c_EN.pdf), a Master averages its reading with those of up to eight Slave probes in the zone. Its numeric `SLA` value gives the number of Slaves; Slave indices start at `1` without gaps. The selector-knob 4692 is Master-only; eligible 4693 probes use `MOD=SLA`. The sheet also notes removal of `P`, `MOD` and `DEL` sockets from the revised selector probe. Older socket layouts must not be assumed for that product revision.
+
+The [F430/2 sheet, pages 2..4](https://dar.bticino.com/asset/Documents/ST_00000902_EN.pdf) shows why `ZA`, `ZB` and `N` must be interpreted together: they support zone-valve, Open/Close and circulation-pump arrangements. The [H4691/LN4691 sheet, page 2](https://dar.bticino.com/asset/Documents/MM00789_b_EN.pdf) provides the thermostat mappings above. With `TYPE=0`, its heating/cooling loads and pumps are configured through the central unit; `HEAT`, `COOL` and `PUMP` are not populated as in standalone thermostat modes.
+
+The `[SLA]` placeholder in diagnostic Slave-probe address rules denotes the probe selector, not the lettered plug's raw code. See [Temperature Control addressing](../functional/who-4-temperature-control/addressing.md) and [Address discovery](../diagnostics/address-discovery.md).
+
+#### Energy Management
+
+Section ID: `ownkb:section:moc-d000136:s000012`
+
+Applicability cues: `firmware`
+Cautions: `do not`
+Provenance cues: `catalogue`
+
+| Position | Meaning/function | Product scope |
+| --- | --- | --- |
+| `A1`, `A2`, `A3` | Hundreds, tens and units of an Energy address | Energy products with this address layout; not three Lighting command channels |
+| `A3-Ta`, `A3-Tb`, `A3-Tc` | Units for the three meter input addresses, sharing `A1`/`A2` | F520 |
+| `T↑` | Toroid-direction handling | F520; unrelated to the up/down control plug `3501/T` |
+| `MUL`, `DIV` | Multiplier and divider | 3522N pulse-count scaling |
+| `PF` | Power-factor setting | Catalogue Firmware `229`, current-sensing actuator; unrelated to a Sound System's sound-point label |
+| `P`, `TOL` | Rated-power and tolerance settings | Load-management central-unit catalogue context; numerical units require that definition |
+| `SM`, `G` | Energy pulse-counter selectors | Legacy catalogue Firmware `200`; their short names alone do not establish a scale or unit |
+
+The [F520 sheet, page 2](https://dar.bticino.com/asset/Documents/MQ00358_d_EN.pdf) limits meter addresses to `127`, prohibits zero in `A3-Ta`, and permits zero in `A3-Tb`/`A3-Tc` for unused inputs. Its direction selector `0` measures independently of toroid mounting direction; `1` makes measurement direction-dependent.
+
+The [3522N instructions, page 2](https://assets.legrand.com/pim/NP-FT-GT/LE06852AC.pdf) map `MUL=0..6` to factors `1, 2, 5, 10, 20, 50, 100`, and `DIV=0..7` to divisors `1, 10, 100, 1000, 2, 20, 200, 2000`. The plug number is a selector, not the multiplier/divisor itself. Runtime measurements remain documented under [Energy Management](../functional/who-18-energy-management/).
+
+#### Routing, sensors and Alarm
+
+Section ID: `ownkb:section:moc-d000136:s000013`
+
+Cautions: `do not`
+
+| Position | Meaning/function | Product scope |
+| --- | --- | --- |
+| `I1..I4`, `MOD` | Interface identity/boundary and operating mode | F422; occupied positions and interpretation change with mode |
+| `S`, `T`, `D`, `M` | Movement sensitivity, load timer, daylight threshold and operating mode | BMSE2002 Lighting sensor |
+| `Z`, `N°`, `MOD`, `AUX` | Alarm zone, progressive detector number, detection mode and auxiliary channel | 4610-family Alarm detector |
+
+The [F422 sheet](https://dar.bticino.com/asset/Documents/MQ00280_f_EN.pdf) distinguishes physical expansion, logical expansion, public-riser, inter-system and separation modes. `I3`/`I4` must be interpreted in the selected mode, not invariably as the suffix of a local-bus OpenWebNet address. See [Routing and bus selectors](../protocol/addressing.md).
+
+For [BMSE2002, page 3](https://dar.bticino.com/asset/Documents/MM00297_c_EN.pdf), `S=1,2,3` selects medium, high and very high movement sensitivity; no plug selects low. `D=1..5` selects `20,100,300,500,1000` lux. `M=2` reports movement/brightness to a scenario programmer rather than directly managing the load, and leaves `S`/`T` unconfigured. These are sensor settings, not universal `S`, `D` or `M` meanings.
+
+The [4610-family detector sheet, page 2](https://dar.bticino.com/asset/Documents/MQ00035_c_EN.pdf) permits zones `1..8` and progressive detector numbers `1..9`. It also permits the `AUX` plug in `MOD`, where it changes auxiliary-event behavior; the numeric plug in `AUX` selects the channel. This illustrates another use of a lettered plug outside an address socket. These product limits do not define the entire [Alarm](../functional/who-5-alarm/) or [Auxiliaries](../functional/who-9-auxiliaries/) protocol domains.
+
+#### Sound, hotel and door-entry systems
+
+Section ID: `ownkb:section:moc-d000136:s000014`
+
+Applicability cues: `scs`
+Provenance cues: `source`
+
+| Position | Meaning/function | Product scope |
+| --- | --- | --- |
+| `A`, `PF` | Room and sound-point address | F503 amplifier; `PF` is the sound point (*punto fonico*) in Sound System terminology |
+| `M1`, `M2`, `M3` | Paging volume/mute/follower role; source selection; output-channel assignment | F503 |
+| `R1`, `R2` | Room-number tens and units | Hotel indicator and room-status Devices |
+| `L`, `M` | LED/occupancy indication and management mode | H4650/LN4650 hotel indicator |
+| `DEL1`, `DEL2` | Entry/exit delay | H4648/LN4648 key-card switch; depends on scenario mode |
+| `N`, `P`, `M` | Internal-unit number, associated entrance panel and key operating mode | Classe 100 V16B `344652` |
+| `A`, `B`, `C`, `M`, `T` | Device address, operating mode and local relay time | `353000` keypad; interpretation depends on stand-alone, entrance-panel or access-control installation |
+
+The [F503 sheet, page 2](https://assets.legrand.com/general/legrand-exp/np-ft-gt/mq00271-c-uk.pdf) assigns `M1=SLA` to amplifier Slave operation. `M2` empty recalls the last source (Follow Me); `M2=1..4` selects a specific source. Its `AUX IN`/`AUX OUT` are analogue audio connectors, not SCS auxiliary configurators or `WHO 9` channels. See [Sound Diffusion](../functional/who-22-sound-diffusion/).
+
+The [hotel-indicator sheet, page 2](https://dar.bticino.com/asset/Documents/MM00774_b_EN.pdf) defines `R1`/`R2`, `L` and `M`. The [RFID key-card switch sheet, page 2](https://dar.bticino.com/asset/Documents/MM00771_a_EN.pdf) distinguishes centralized CEN events from stored-scenario/group operation; `DEL1` and `DEL2` must be empty in its documented centralized mode.
+
+For the [Classe 100 V16B, page 2](https://dar.bticino.com/asset/Documents/ST_00000691_EN.pdf), `P` associates the entrance panel used for idle door-lock release and first camera activation. For the [353000 keypad, page 2](https://assets.legrand.com/pim/NP-FT-GT/ST-00000684-EN.pdf), `A/B/C` form a `000..999` address only in the documented stand-alone configuration; other modes leave positions unused or repurpose them. `T` is a relay-duration selector, not the shutter up/down plug.
+
+### Configuration modes
+
+Section ID: `ownkb:section:moc-d000136:s000015`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`
+
+| Method | Representation | Interpretation |
+| --- | --- | --- |
+| Physical Configuration | Plugs in supported sockets | Read the product's position/mode table, including unused positions and combined selectors |
+| Virtual Configuration | Software values corresponding to supported configurator/function settings | Can offer addresses and parameters unavailable through plugs; capability remains product-specific |
+| Advanced Configuration | Firmware-supported Objects, Modules and richer properties | Separate catalogue mode; not a synonym for every software setting |
+| Product Programming | Separate catalogue mode | Support and workflow require the selected Firmware definition |
+
+A product sheet may call its Suite settings “virtual configuration” without proving the active catalogue mode for every software operation. The catalogue registers Virtual and Advanced Configuration separately. See [Configuration modes and ownership](configuration.md#physical-configuration-and-configuration-modes).
+
+Software-only fields such as IP addresses, ports, serial identifiers and unique codes can share the firmware-scoped `idx=-1` pattern with physical-position definitions. Their presence does not create physical sockets. Nor does a displayed label prove that a Configuration value was read from plugs rather than programmed in software.
+
+### Catalogue encodings
+
+Section ID: `ownkb:section:moc-d000136:s000016`
+
+Applicability cues: `firmware`
+Uncertainty: `may`
+Provenance cues: `catalogue`, `database`
+
+In the retained MyHOME Suite 3.5.38 catalogue, raw values resolve through the exact Firmware and `EN_CONF` definition. The following are examples of catalogue encodings, not universal OpenWebNet wire codes:
+
+| Firmware definition | Exact field | Raw value | Catalogue label |
+| --- | --- | --- | --- |
+| `145` | `A1` / `A2` | `12`, `13`, `14`, `15` | `GEN`, `GR`, `AMB`, `AUX` |
+| `145` | `M1` / `M2` | `9`, `10`, `11` | `O/I`, `OFF`, `ON` |
+| `145` | `M1` / `M2` | `12`, `13`, `14`, `15` | `UP/DOWN`, `UP/DOWN monostable`, `CEN`, `PUL` |
+| `132` | `M` | `11`, `15` | `SLA`, `PUL` |
+
+Thus raw `11` can mean ON for a control and SLA for an actuator; raw `15` can mean AUX in an address field and PUL in a mode field. The Firmware numbers above are database definition IDs, not reported physical Firmware versions. These rows are verified in the [canonical catalogue](../sources/myhome-suite/3.5.38/databases/).
+
+The catalogue also contains `PLU` instead of `PUL` for raw `15` in Firmware `659` (`MODE`) and `669` (`M`). Preserve those stored tokens when implementing catalogue resolution; a likely spelling irregularity does not prove an application normalization rule. Likewise, the existing `O/I` versus `I/O` conversion-rule question remains open. See [Catalogue Resolution](../internals/catalogue-resolution.md#physical-configuration-resolution).
+
+An empty socket, an explicit numeric zero and an empty catalogue range row are not universally interchangeable. Product instructions sometimes define “no configurator” as a default, but another position may require a digit or use zero to disable a channel. Resolve that equivalence only in the applicable product/definition context.
+
+### Evidence limits
+
+Section ID: `ownkb:section:moc-d000136:s000017`
+
+Applicability cues: `firmware`, `scs`
+Cautions: `do not`
+Provenance cues: `catalogue`, `source`
+
+The manufacturer sheets and Suite help establish the named functions and scoped combinations above. Catalogue descriptions supply additional field names and numerical mappings; they do not prove deployed behavior. Historical client tests establish their classification and cache choices, and simulator code establishes its model behavior.
+
+Remaining questions concern PUL group filtering on particular products/Firmware/modes, status-request behavior, deployment applicability, exact catalogue-token normalization and diagnostic position ordering. They do not make the basic manufacturer-defined meanings of PUL, SLA or O/I uncertain. Source fingerprints, candidate claims and the bounded vocabulary disposition are retained in the [Configurator-label review](../project/review/scs-configurator-labels-review.md).

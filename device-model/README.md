@@ -21,6 +21,7 @@ Firmware is an implementation layer between the product model and its exposed Mo
 | Logical functions and Object identity | [Objects](objects.md) |
 | Configurable Module templates and permitted Objects | [Virgin Objects](virgin-objects.md) |
 | Configuration definitions, values, constraints, and protocol representation | [Configuration](configuration.md) |
+| Physical plug labels, socket meanings, PUL and software counterparts | [SCS Configurator Labels](configurators.md) |
 
 ## Canonical model
 
