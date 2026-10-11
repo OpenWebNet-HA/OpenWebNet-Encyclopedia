@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: read
+  statuses: read
 
 jobs:
   mechanical-compliance:
@@ -78,16 +79,21 @@ jobs:
       - name: Verify external artifact manifest
         run: python project/review/checks/check_artifact_manifest.py
 
-      - name: Verify canonical sources
-        run: |
-          python project/review/checks/audit_source_coverage.py | tee source-audit.json
+      - name: Require exact-commit canonical-source and catalogue validation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CATALOGUE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python devices/tools/catalogue_ci_status.py verify --commit "$CATALOGUE_COMMIT" --output source-audit-status.json
+
+      - name: Test fail-closed source-status verification
+        run: python -m unittest discover -s devices/tools/tests -p test_ci_catalogue.py -v
 
       - name: Preserve source audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: source-integrity-audit
-          path: source-audit.json
+          path: source-audit-status.json
           if-no-files-found: ignore
 
   epistemic-review:

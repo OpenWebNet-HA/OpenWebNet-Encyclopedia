@@ -2,6 +2,7 @@
 import hashlib
 import json
 import os
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -20,11 +21,18 @@ class CatalogueStatusTests(unittest.TestCase):
         self.root = Path(self.directory.name)
         names = ('devices/definitions/example.md', 'devices/index.md', 'devices/work-queue.yaml',
                  'devices/tools/check-device-definitions.py', 'sources/manifest.yaml',
-                 'sources/artifact-manifest.yaml', 'check.py', '.github/workflows/machine-kb.yml')
+                 'sources/artifact-manifest.yaml', 'sources/archive/pdf-manifest.json',
+                 'project/review/checks/audit_source_coverage.py',
+                 'project/review/checks/check_artifact_manifest.py',
+                 'check.py', '.github/workflows/machine-kb.yml',
+                 '.github/workflows/encyclopedia-compliance.yml', 'sources/public/example.txt')
+        self.input_names = names
         for name in names:
             path = self.root / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text('Synthetic public fixture: ' + name)
+        (self.root / 'sources/manifest.yaml').write_text(json.dumps({
+            'source_sets': {'example': {'files': [{'path': 'public/example.txt'}]}}}))
         self.commit = 'a' * 40
         self.proof = {'commit': self.commit, 'creator': status.VALIDATOR, 'state': 'success',
                       'context': status.CONTEXT, 'description': status.PREFIX + status.input_digest(self.root)}
@@ -40,16 +48,16 @@ class CatalogueStatusTests(unittest.TestCase):
             status.validate_proof(dict(self.proof, arbitrary='field'), self.commit, self.root)
 
     def test_changed_gate_code_definition_index_ledger_and_source_need_revalidation(self):
-        for name in ('devices/definitions/example.md', 'devices/index.md', 'devices/work-queue.yaml',
-                     'devices/tools/check-device-definitions.py', 'sources/manifest.yaml',
-                     'sources/artifact-manifest.yaml', 'check.py', '.github/workflows/machine-kb.yml'):
+        for name in self.input_names:
             path = self.root / name
             old = path.read_bytes()
             with self.subTest(path=name):
-                path.write_bytes(old + b' changed')
-                with self.assertRaisesRegex(ValueError, 'inputs changed'):
-                    status.validate_proof(self.proof, self.commit, self.root)
-                path.write_bytes(old)
+                try:
+                    path.write_bytes(old + b'\n# changed')
+                    with self.assertRaisesRegex(ValueError, 'inputs changed'):
+                        status.validate_proof(self.proof, self.commit, self.root)
+                finally:
+                    path.write_bytes(old)
 
     def test_added_definition_and_escaping_symlink_cannot_reuse_result(self):
         new = self.root / 'devices/definitions/new.md'
@@ -101,6 +109,42 @@ class CatalogueStatusTests(unittest.TestCase):
         for commit in ('main', 'a' * 7, 'g' * 40):
             with self.assertRaises(ValueError):
                 status.commit_id(commit)
+
+    def test_invalid_source_manifest_cannot_satisfy_a_previous_result(self):
+        (self.root / 'sources/manifest.yaml').write_text('Invalid [ YAML')
+        with self.assertRaisesRegex(ValueError, 'manifest is invalid'):
+            status.validate_proof(self.proof, self.commit, self.root)
+
+    def test_failed_canonical_audit_never_publishes_success_or_private_details(self):
+        failed = subprocess.CompletedProcess([], 1, 'Synthetic source details', '')
+        with patch.object(status, 'ROOT', self.root), \
+                patch.object(status, 'require_clean_commit'), \
+                patch.object(catalogue_source, 'catalogue_path', return_value=self.root / 'private.db'), \
+                patch.object(status, 'gh', return_value=json.dumps({'login': status.VALIDATOR})), \
+                patch.object(status, 'post_status') as published, \
+                patch.object(status.subprocess, 'run', return_value=failed) as run:
+            with self.assertRaisesRegex(ValueError, 'Private catalogue gate failed') as error:
+                status.validate_local(self.commit, True)
+        self.assertIn('audit_source_coverage.py', run.call_args.args[0][1])
+        self.assertEqual(['pending', 'failure'], [call.args[1] for call in published.call_args_list])
+        self.assertNotIn(failed.stdout, str(error.exception))
+        self.assertTrue(all(failed.stdout not in call.args[2] for call in published.call_args_list))
+
+    def test_success_attests_all_three_local_checks(self):
+        passed = subprocess.CompletedProcess([], 0, '', '')
+        with patch.object(status, 'ROOT', self.root), \
+                patch.object(status, 'require_clean_commit'), \
+                patch.object(catalogue_source, 'catalogue_path', return_value=self.root / 'private.db'), \
+                patch.object(status, 'gh', return_value=json.dumps({'login': status.VALIDATOR})), \
+                patch.object(status, 'post_status') as published, \
+                patch.object(status.subprocess, 'run', return_value=passed) as run:
+            status.validate_local(self.commit, True)
+        commands = [call.args[0] for call in run.call_args_list]
+        self.assertEqual(3, len(commands))
+        self.assertIn('audit_source_coverage.py', commands[0][1])
+        self.assertIn('check-device-definitions.py', commands[1][1])
+        self.assertIn('devices/tools/tests', commands[2])
+        self.assertEqual(['pending', 'success'], [call.args[1] for call in published.call_args_list])
 
     def test_explicit_private_copy_is_verified_and_cannot_fall_back(self):
         path = self.root / 'private.db'

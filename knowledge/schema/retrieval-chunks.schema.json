@@ -161,7 +161,7 @@
         "properties": {
           "finding_id": {
             "type": "string",
-            "pattern": "^moc-e[0-9]{4}$"
+            "pattern": "^[a-z][a-z0-9-]{1,63}$"
           },
           "summary": {
             "type": "string",

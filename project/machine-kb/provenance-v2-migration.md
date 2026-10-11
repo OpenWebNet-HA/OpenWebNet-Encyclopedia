@@ -44,3 +44,5 @@ A section containing a published specification and a historical implementation r
 Check manifest compatibility before ingestion and validate with the new schemas. Preserve `artifact_locator`, `examination` and `evidence_support` when indexing, filtering or exporting. Resolve original evidence separately from canonical explanations. Follow `claim_ids` rather than promoting section-level methods to unrelated claims. Do not assume `provenance[0]` is primary evidence or count same-source/same-run entries as independent support.
 
 Static firmware analysis and dynamic firmware oracle remain distinct method values. Hash-pinned artifacts and offset locations support their future inputs without pretending either method has been exercised in this audit. Unlisted evidence stays unestablished.
+
+Finding IDs follow `^[a-z][a-z0-9-]{1,63}$` consistently in review inputs, original provenance and retrieval dispositions. Existing `moc-eNNNN` IDs retain their meanings; a future firmware review may allocate another prefix. This alignment fixes an unpublished retrieval-only prefix restriction without renaming any finding or changing the declared 2.0.0 compatibility candidate.

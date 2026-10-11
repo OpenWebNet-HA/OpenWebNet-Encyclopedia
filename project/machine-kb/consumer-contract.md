@@ -6,7 +6,7 @@
 
 ## Publication surface
 
-A release publishes `knowledge/manifest.json` as the inventory and version entry point. It lists each public artifact by repository-relative path, artifact format version, SHA-256 of its exact bytes, and record count where applicable. Its own hash is not included in itself. The initial artifact families are `knowledge/llm/llm-corpus.md`, `knowledge/retrieval/chunks.jsonl`, `knowledge/claims/claims.jsonl`, and the reference registries under `knowledge/reference/` (entities, namespaces, glossary, public sources, relationships, cautions, and open questions). The manifest enumerates actual files; an empty directory or README is not an artifact. The reference registry file names and record schemas are fixed by the 0.1.0 contract. Schema files under `knowledge/schema/` are also inventoried. Only listed artifacts and schema files constitute the versioned public interface; tools and project-control Markdown are not machine data.
+A release publishes `knowledge/manifest.json` as the inventory and version entry point. It lists each public artifact by repository-relative path, artifact format version, SHA-256 of its exact bytes, and record count where applicable. Its own hash is not included in itself. The initial artifact families are `knowledge/llm/llm-corpus.md`, `knowledge/retrieval/chunks.jsonl`, `knowledge/claims/claims.jsonl`, and the reference registries under `knowledge/reference/` (entities, namespaces, glossary, public sources, relationships, cautions, and open questions). The manifest enumerates actual files; an empty directory or README is not an artifact. The reference registry file names and record schemas are fixed within each declared compatibility line. Schema files under `knowledge/schema/` are also inventoried. Only listed artifacts and schema files constitute the versioned public interface; tools and project-control Markdown are not machine data.
 
 All records must carry the schema-defined stable ID, namespace/context, source provenance, evidence/epistemic qualification, applicability/version scope, privacy classification, and relevant relationships or cautions. Source locations use public repository-relative paths and section IDs, never private evidence paths. The manifest contains an input-content digest, generator version, schema compatibility version, and artifact hashes; it contains no nondeterministic timestamp or circular digest of its own bytes. The public source license remains applicable; generated material does not acquire rights to underlying publisher sources.
 
@@ -44,7 +44,7 @@ Deprecation marks a live ID as discouraged and supplies a reason and optional re
 
 ## Meaning of incomplete or conflicting knowledge
 
-Separate three axes. A record's `epistemic_status` describes the evidence-backed standing of its assertion; a value's `value_state` describes whether a value is supplied; `applicability.state` describes whether a proposition applies in its explicitly identified scope. Exact enum sets and shapes are defined by the 0.1.0 schemas, and these semantics are binding:
+Separate three axes. A record's `epistemic_status` describes the evidence-backed standing of its assertion; a value's `value_state` describes whether a value is supplied; `applicability.state` describes whether a proposition applies in its explicitly identified scope. Exact enum sets and shapes are defined by the manifest-listed schemas for the declared compatibility line, and these semantics are binding:
 
 | Situation | Required representation | Consumer interpretation |
 | --- | --- | --- |

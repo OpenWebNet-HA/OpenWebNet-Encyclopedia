@@ -7,10 +7,12 @@ import unittest
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
+from referencing import Registry, Resource
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'knowledge/tools'))
 from evidence_reviews import load_reviews, join_claim_evidence, corpus_evidence
+from render_artifacts import chunk_records, corpus
 
 REV = 'a' * 40
 SID = 'ownkb:source:archive'
@@ -179,13 +181,72 @@ class OriginalEvidenceTests(unittest.TestCase):
         self.finding['id'] = 'firmware-static-example'
         static = self.load()
         self.assertNotIn('execution', static['claims'][CID][0]['examination'])
+        self.assert_firmware_exports(static, 'static_firmware_analysis')
+        self.finding['id'] = 'firmware-oracle-example'
         ex.update(method='dynamic_firmware_oracle', execution=self.run_record())
         ex['execution']['material'] = 'firmware_oracle'
         dynamic = self.load()
         self.assertEqual('firmware_oracle', dynamic['claims'][CID][0]['examination']['execution']['material'])
+        self.assert_firmware_exports(dynamic, 'dynamic_firmware_oracle')
         ex['artifact_location']['start_offset'] = 9
         with self.assertRaisesRegex(ValueError, 'reversed artifact'):
             self.load()
+
+    def assert_firmware_exports(self, reviewed, method):
+        """A future firmware finding must survive claims, reading and validated search."""
+        ir = copy.deepcopy(self.ir)
+        document = ir['documents'][0]
+        context = {'area': 'protocol', 'namespace': 'openwebnet'}
+        document.update(source_id='ownkb:source:explanation', namespace_context=context)
+        section = document['sections'][0]
+        section.update(title='Synthetic firmware finding', level=1, parent=None,
+                       namespace_context=context,
+                       privacy={'classification': 'public', 'removed_value_classes': []},
+                       provenance={**LOC, 'source_id': document['source_id'],
+                                   'evidence_class': 'canonical_documentation'},
+                       blocks=[{'type': 'paragraph',
+                                'inline': [{'type': 'text', 'text': 'Synthetic finding.'}],
+                                'applicability': [], 'cautions': [], 'uncertainty': [],
+                                'provenance_references': []}])
+        sources = {source['id']: source for source in self.refs['source']}
+        chunks, _ = chunk_records(ir, {LOC['section_id']: 'ownkb:chunk:r999999'}, {},
+                                  {LOC['document_id']: 'ownkb:namespace:openwebnet'},
+                                  reviewed['sections'], sources)
+        schemas = [json.loads((ROOT / 'knowledge/schema' / name).read_text()) for name in
+                   ('retrieval-chunks.schema.json', 'common.schema.json', 'privacy-metadata.schema.json')]
+        registry = Registry().with_resources((s['$id'], Resource.from_contents(s)) for s in schemas)
+        Draft202012Validator(schemas[0], registry=registry).validate(chunks[0])
+        support = chunks[0]['evidence_support'][0]
+        self.assertEqual(self.finding['id'], support['finding_id'])
+        self.assertEqual(reviewed['claims'][CID], support['provenance'])
+        claim = copy.deepcopy(self.claim)
+        claim['applicability'] = {'domain': 'firmware', 'version': {'expression': 'public-build'}}
+        join_claim_evidence([claim], reviewed, self.refs)
+        self.assertEqual('high', claim['confidence'])
+        original = next(e for e in claim['provenance'] if 'examination' in e)
+        self.assertEqual(method, original['examination']['method'])
+        self.assertEqual('execution' in original['examination'], method == 'dynamic_firmware_oracle')
+        reading = corpus(ir, reviewed['sections'], sources).decode()
+        for text in (chunks[0]['text'], reading):
+            self.assertIn(self.finding['id'], text)
+            self.assertIn(method, text)
+            self.assertIn('public-build', text)
+            self.assertIn('Pinned source only; no hardware observation.', text)
+            if method == 'dynamic_firmware_oracle':
+                self.assertIn('One recorded comparison passed.', text)
+
+    def test_finding_id_grammar_matches_all_projections(self):
+        schemas = {name: json.loads((ROOT / 'knowledge/schema' / name).read_text()) for name in
+                   ('common.schema.json', 'evidence-reviews.schema.json', 'retrieval-chunks.schema.json')}
+        definitions = [schemas['common.schema.json']['$defs']['examination']['properties']['finding_id'],
+                       schemas['evidence-reviews.schema.json']['properties']['findings']['items']['properties']['id'],
+                       schemas['retrieval-chunks.schema.json']['properties']['evidence_support']['items']['properties']['finding_id']]
+        for value, accepted in [('moc-e0170', True), ('firmware-static-example', True),
+                                ('firmware-oracle-example', True), ('Firmware', False),
+                                ('../private', False), ('x' * 65, False)]:
+            for definition in definitions:
+                with self.subTest(finding=value, definition=definition):
+                    self.assertEqual(accepted, Draft202012Validator(definition).is_valid(value))
 
 
 if __name__ == '__main__':

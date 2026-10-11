@@ -56,6 +56,13 @@ class BranchIdMigrationTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(Exception):
                 validator.validate(value)
 
+    def test_retired_published_summary_keeps_its_latest_release(self):
+        entry = self.registry['ownkb:claim:c003080']
+        self.assertEqual('retired', entry['lifecycle'])
+        self.assertEqual('0.2.0', entry['last_release'])
+        self.assertEqual([], entry['replaced_by'])
+        self.assertIn('Editorial page-summary', entry['reason'])
+
 
 if __name__ == "__main__":
     unittest.main()
