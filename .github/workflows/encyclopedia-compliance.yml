@@ -18,6 +18,34 @@ permissions:
   statuses: read
 
 jobs:
+  git-storage:
+    name: Git storage policy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git objects and comparison history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: false
+
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+
+      - name: Test Git storage guard
+        run: python -m unittest discover -s project/review/checks/tests -p test_git_storage.py -v
+
+      - name: Reject oversized new Git blobs and ordinary review TSVs
+        env:
+          STORAGE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        shell: bash
+        run: |
+          args=(--head HEAD)
+          if [[ -n "$STORAGE_BASE" && "$STORAGE_BASE" != 0000000000000000000000000000000000000000 ]]; then
+            args+=(--base "$STORAGE_BASE")
+          fi
+          python project/review/checks/check_git_storage.py "${args[@]}"
+
   mechanical-compliance:
     name: Mechanical ESG and ECV compliance
     runs-on: ubuntu-latest
