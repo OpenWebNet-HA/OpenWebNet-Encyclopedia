@@ -12,15 +12,11 @@ import unicodedata
 from pathlib import Path
 
 from prepare_sources import prepare, read_manifest
+from source_topology import AREAS, canonical_paths
 
 ROOT = Path(__file__).resolve().parents[2]
-AREAS = ("protocol", "functional", "diagnostics", "programming", "device-model", "internals", "reverse-engineering", "scenario-engine")
 MANIFEST = ROOT / "knowledge/inputs/canonical-sources.jsonl"
 IDENTITIES = ROOT / "knowledge/inputs/identities.json"
-
-
-def canonical_paths(root: Path) -> list[str]:
-    return sorted(str(p.relative_to(root)) for area in AREAS for p in (root / area).rglob("*.md"))
 
 
 def guide_findings(root: Path, canonical: list[str]) -> list[dict[str, object]]:
@@ -39,6 +35,8 @@ def guide_findings(root: Path, canonical: list[str]) -> list[dict[str, object]]:
 
 
 def build(root: Path, manifest: Path, identities: Path, bootstrap: bool = False) -> dict:
+    from large_files import require_kb_hydrated
+    require_kb_hydrated(root)
     paths = canonical_paths(root)
     entries = read_manifest(manifest)
     declared = [r["source_path"] for r in entries if r["source_type"] == "canonical_documentation"]
@@ -56,7 +54,10 @@ def build(root: Path, manifest: Path, identities: Path, bootstrap: bool = False)
     if modules:
         env["NODE_PATH"] = modules
     command = [node, str(Path(__file__).with_name("parse_markdown.mjs"))]
-    result = subprocess.run(command, input=json.dumps({"records": records, "identities": mapping, "bootstrap": bootstrap}),
+    registry = root / "knowledge/inputs/id-registry.json"
+    reserved = [entry["id"] for entry in json.loads(registry.read_text(encoding="utf-8"))["ids"]] if registry.exists() else []
+    result = subprocess.run(command, input=json.dumps({"records": records, "identities": mapping, "bootstrap": bootstrap,
+                                                     "reserved_ids": reserved}),
                             text=True, capture_output=True, env=env, check=False)
     if result.returncode:
         # Parser diagnostics contain paths and construct names, never input text.

@@ -96,7 +96,7 @@ Absolute `DIMENSION` state complements relative `WHAT` operations. Prefer report
 | `19` | `PRESET` |
 | `20` | `LOUDNESS` |
 
-The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The source does not supply a complete RDS text encoding or band-value domain.
+The detailed flows additionally show RDS text under dimension `10` and equalizer reports under `21#1`, `21#2`, and `21#3`. The equalizer selectors carry bands `1..3`, `4..6`, and `7..8` respectively, separated by `*`. The published source does not supply a complete RDS text encoding or band-value domain; the historical RDS decoding evidence below establishes a narrower implementation format.
 
 Examples with unambiguous separators in the detailed flows include:
 
@@ -119,7 +119,212 @@ Source dimension requests use the general-source form `5#2#SOURCE_ID` in these f
 
 The detailed specification is not uniformly reliable as a copy-and-send frame catalogue. Speaker power examples omit separators that appear in the address table; speaker writes for dimensions `1..4` join the dimension marker to `WHERE` without the normal `*`; preset commands `55`/`56` contain an early `##`; and some tone-response dimension numbers disagree with the requested tone. RDS commands `31`/`32` are printed without a normal `WHERE` field. The source also shows `WHAT 21` source notifications outside its summary table.
 
-Preserve these as source discrepancies. The ordinary frame grammar suggests possible corrections, but captures or implementation evidence are needed before treating a repaired frame as established. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+Preserve these as source discrepancies. The tested forms below resolve speaker volume writes, preset commands, power-control emissions, and RDS syntax for the historical touchscreen implementation. Other tone-response discrepancies and the meaning of the published `WHAT 21` notification remain unresolved. Occasional trailing empty fields in volume reports should be preserved by the parser. The compact tables above do not assert support for every read/write combination.
+
+## Historical touchscreen syntax and extensions
+
+Exact BTicino tests at `TS10_1_0_23` resolve several malformed published examples for that implementation:
+
+| Operation | Tested emission |
+| --- | --- |
+| Speaker OFF | `*22*0#4#AREA*3#AREA#POINT##` |
+| Speaker ON using Follow Me | `*22*34#4#AREA*3#AREA#POINT##` |
+| Absolute volume | `*#22*3#AREA#POINT*#1*VOLUME##` |
+| Next / previous preset | `*22*55*3#AREA#POINT##` / `*22*56*3#AREA#POINT##` |
+| RDS start / stop | `*22*31*2#SOURCE##` / `*22*32*2#SOURCE##` |
+| Automatic tuning up / down | `*22*5*2#SOURCE##` / `*22*6*2#SOURCE##` |
+| Manual tuning up / down | `*22*5#STEP*2#SOURCE##` / `*22*6#STEP*2#SOURCE##` |
+| Select source for one area | `*22*35#4#AREA#SOURCE*3#AREA#0##` |
+| Select stored station | `*#22*2#SOURCE*#6*STATION##` |
+| Virtual amplifier state report | `*#22*5#3#AREA#POINT*12*STATE*3##` |
+| Virtual amplifier volume report | `*#22*5#3#AREA#POINT*1*VOLUME##` |
+
+The application maps amplifier-area configuration `#A` to `WHERE = 4#A`, and general amplifier configuration `0` to `5#3#0#0`. Tests also recognize `*22*0#4#15*5#1#1##` as a special general-OFF notification. That recognition does not establish an arbitrary sender-address domain.
+
+The virtual amplifier publishes its own cached state and volume in the two report forms above, including during initialization with OFF and volume `0`. Its volume controls generate local requests; they do not by themselves confirm playback or a physical amplifier's state. Area/general controllers containing that virtual amplifier dispatch power and relative-volume operations to both the bus and the local amplifier.
+
+The radio client interprets its cached frequency in hundredths of MHz: `9800` is 98.00 MHz, and a manual step changes it by `5` (50 kHz). It wraps above 108.00 MHz to 87.50 MHz and below 87.50 MHz to 108.00 MHz. With an unknown cached frequency, manual tuning sends nothing; automatic search still sends `WHAT 5` / `6`. BtExperience schedules a frequency read after manual tuning and waits for a report after automatic search. These are client policies; they do not resolve the published step-unit discrepancy or establish every tuner's band limits.
+
+### Virtual and composite amplifier controllers
+
+At `TS10_1_0_23`, the library's amplifier factory selects the configured local virtual amplifier for an exact address match. A general target or an area target containing that local address creates a composite controller with bus and local children. Other targets use the ordinary bus controller.
+
+| Composite operation | Library behavior |
+| --- | --- |
+| ON / OFF, volume up / down | Forwards the operation to each child |
+| Absolute volume | Uses the inherited general-address dimension `1` write at `5#3#0#0`; does not directly forward the value to the local child |
+| Received state | Produces no aggregate child-state values |
+
+The absolute-volume behavior also applies to an area composite because its base controller is constructed with general target `0`. It does not establish the effect of later bus echoes or a physical amplifier's response. BtExperience's application amplifier groups use a different mechanism: they call each linked member for power, relative volume and absolute volume. Their member references are [application Configuration](../../device-model/configuration.md#historical-touchscreen-application-configuration), rather than an OpenWebNet group address. See [Amplifier and simulator closure evidence](../../project/review/myopencommunity-closure-review.md#findings-and-canonical-placement).
+
+### Source activity and RDS
+
+The library requests active areas with `*#22*2#SOURCE*13##`. A tested response at `5#2#SOURCE` carries sixteen flags for area indices `0..15`, replacing that source's cached area set; its matching `WHAT 2#4#AREA` notifications add an active area. An OFF state report clears the set. Selecting another source for a cached area removes that area from the previous source. In monochannel mode its `WHAT 2` notifications use area `0`. BtExperience exposes only indices `0..8` and emits an activity change when its area set crosses between empty and nonempty. These are internal state-model choices, not revised published area domains.
+
+The tested source-selection method with no area supplied sends eight commands, one for each area `1..8`, using the selection form above. Supplying literal area `0` instead sends one command for area `0`. Application-wide selection and an explicit zero-area request are therefore distinct; neither establishes a universal broadcast form.
+
+`DIMENSION 10` carries decimal character codes. The tested report `*#22*2#SOURCE*10*104*101*108*108*111*33##` decodes to `hello!`; no fixed eight-character limit is established by that test. The client starts RDS for its first subscriber and delays stopping after the last subscriber by 100 ms, allowing a new subscriber to cancel the pending stop. It re-requests RDS after a stop report only while updates remain enabled. This is subscription policy, not a mandatory protocol response or Device timing rule.
+
+### Local volume and display scales
+
+The historical touchscreen implementation distinguishes local audio settings `L = 0..8` from amplifier volume `V = 0..31`:
+
+| Conversion | Implementation behavior |
+| --- | --- |
+| Local setting to amplifier volume | Round `L * 31 / 8` to the nearest integer |
+| Amplifier volume to local setting | Round `V * 8 / 31` to the nearest integer |
+| BtExperience percentage setting `P` to amplifier volume | Integer truncation of `P * 31 / 100` |
+| Amplifier volume to BtExperience percentage setting | Integer truncation of `V * 100 / 31` |
+| TS10 volume icon | Integer truncation of `V * 8 / 31`, giving indices `0..8` |
+| TS3.5 volume icon | Indices `1..9` for bands `0..3`, `4..7`, `8..11`, `12..14`, `15..17`, `18..20`, `21..23`, `24..27`, `28..31`, respectively |
+
+For example, amplifier volume `3` becomes local setting `1` but TS10 icon `0`. The conversion loses precision; icon indices and local settings are not interchangeable with the transmitted value or a calibrated loudness percentage. These are application/build choices, not a Firmware-wide volume rule. See [Volume conversion evidence](../../project/review/myopencommunity-remaining-source-review.md#volume-conversion-evidence).
+
+The separately tested BtExperience percentage API sends volume `19` for `62%` and displays `38%` for reported volume `12`. Its integer conversions are not exact inverses. Earlier application versions used raw amplifier values; this change does not identify a Firmware generation.
+
+### Historical alarm-clock control
+
+The archived touchscreen alarm clocks are local controllers using ordinary source, station, volume and amplifier operations. Their scheduling is separate from the sound protocol; see [Touchscreen alarm-clock scheduling](../../scenario-engine/execution-model.md#historical-touchscreen-alarm-clock-scheduling).
+
+| Controller / operation | Implementation behavior |
+| --- | --- |
+| Earlier `libqtdevices` helper startup | Select source for area `0`, select a nonzero station if the source is a radio, then process selected amplifiers in address order. In multichannel mode, select that source once per selected area `1..8` before setting volume and issuing Follow Me |
+| Earlier helper initial volume | Use each stored amplifier value below `10`; start higher targets at `8`. Negative stored values exclude amplifiers. These are alarm settings, not revised volume domains |
+| BtExperience startup at `TS10_1_0_23` | Starting the timer sends no sound command. The first 3-second tick selects the source through the amplifier controller, writes volume `0`, then activates the amplifier; the exact single-amplifier test selects its area |
+| BtExperience volume ramp | Tick `t` proposes integer `t * 100 / 31` percent, writing only while this is at most the configured percentage. The amplifier's percentage conversion truncates again: the tested `25%` target sends levels `0..7`, then no further increase in the tested sequence |
+| BtExperience snooze / automatic expiry | Snooze sends amplifier OFF and waits 5 minutes before restarting the ramp. The final sound tick sends OFF and stops the timers; the nominal ringing interval is 2 minutes |
+| BtExperience explicit Stop | Stops ringing and snooze timers without an amplifier OFF command. The popup's Stop action calls this method; snooze and expiry have separate OFF behavior |
+
+The alarm controllers do not inspect acknowledgements or confirm physical playback. The earlier helper's stop operation turns off selected amplifiers; the compared controllers do not restore the preceding source or volume. BtExperience's “ringing” flag describes an active timer.
+
+For a local media source, a negative first-content callback switches the running alarm to beep mode and sends amplifier OFF. That callback describes content selection or availability, not verified playback failure. The controller disconnects it after the first result and has no player-error subscription in this path. A later failed stream or exhausted playlist therefore does not itself trigger this fallback. USB/SD completion also has a cancellation-flag lifetime defect in the reviewed client. See [Local playback](#historical-local-playback) and [Alarm-clock control evidence](../../project/review/myopencommunity-alarm-clock-history-review.md).
+
+### Tone, balance, and presets
+
+| Wire value | Touchscreen interpretation |
+| --- | --- |
+| High/low tone, dimensions `2` / `4` | integer `raw / 3 - 10`; tests include `0 -> -10`, `30 -> 0`, `60 -> 10` |
+| Balance, dimension `17` | leading `0` means left, otherwise right; remaining digits divided by 3 give magnitude |
+| Preset `2..11` | built-in application indices `0..9` |
+| Preset `16..25` | custom application indices `10..19` |
+
+Balance is textual: tests distinguish `030` (left 10) from `115` (right 5). Preserve leading zeroes. Invalid preset gaps `12..15` are ignored by the tested decoder. These conversions describe the power-amplifier UI, not revised published domains or units for every sound Device.
+
+At `TS10_1_0_23`, the power-amplifier client uses the following controls:
+
+| Operation | Client behavior |
+| --- | --- |
+| Initialization | Request state `12`, volume `1`, preset `19`, high/low tones `2` / `4`, balance `17` and loudness `20` |
+| Preset selection | Convert application indices `0..9` to wire values `2..11`, and `10..19` to `16..25`. The setter forwards values outside those application ranges unchanged; this is not validation of additional presets |
+| Tone and balance adjustment | Send relative commands with step `1`; the Equalizer menu selects an existing preset immediately |
+| Loudness | Write dimension `20` with `1` or `0` immediately |
+| Display state | Start with local zero/false defaults; update tone, balance, preset and loudness from reports, notifying only when a cached value changes. These controls have no Save/Reset transaction or playback confirmation |
+
+Custom preset names are application Configuration. BtExperience includes only enabled custom entries, preserving their configured IDs while appending them after the ten built-ins. Selection uses the entry ID, but the current description uses the reported application index as a list row. Those numbers can differ: the entry configured as the first custom preset has ID `11`, which the setter sends as wire preset `17`, while a report for wire preset `16` selects description row `10`. Sparse lists can display the wrong name or no name. Use the wire mapping above rather than menu IDs or labels to identify a preset.
+
+The reviewed power-amplifier client does not decode medium tones `3`, 3D `18` or equalizer-band selectors `21#1`, `21#2` or `21#3`, and its Equalizer menu supplies no band editor or custom-curve programming operation. This establishes the client's coverage, not the amplifier's capabilities. Earlier client revisions used different preset conversions and loudness-write syntax; they do not establish Firmware generations. See [Equalizer and preset evidence](../../project/review/myopencommunity-equalizer-history-review.md).
+
+Relative balance direction remains unresolved between sources: exact client tests emit `42#1` from the method labelled left and `43#1` from right, reversing the published `WHAT` labels above. The method names and their historical correction do not independently establish physical direction.
+
+### Virtual-amplifier temporary-off events
+
+The historical virtual amplifier treats `*22*0#4#AREA*6##` and `*22*22#4#AREA*5#3#AREA#POINT##` as temporary-off events. Its tests show that the second form is matched by area rather than the final point: multichannel mode ignores another area's event, while monochannel mode accepts it. The class describes a one-second local interruption without changing its persistent ON/OFF state. This is touchscreen amplifier behavior, not a universal mute duration or a complete domain for `WHAT 22`.
+
+### Local multimedia initialization
+
+The virtual-source writer emits a private setup form at `WHERE = 7`, `DIMENSION = #15`:
+
+`*#22*7*#15*SOURCE*AREA*POINT*9*9**MATRIX_INPUT*IS_SOURCE*IS_GATEWAY*IS_AMPLIFIER*READS_SCS##`
+
+Empty source configuration becomes `0`; absent amplifier area/point remain empty. `MATRIX_INPUT` is the source address only in multichannel source mode. Flags reflect the writer's local configuration, with `IS_GATEWAY = 1` and `READS_SCS` set when a source or amplifier is configured. The two `9` fields and the empty field after them remain semantically unresolved.
+
+Exact tested examples are `*#22*7*#15*3***9*9**3*1*1*0*1##` for multichannel source 3 and `*#22*7*#15*0*2*8*9*9***0*1*1*1##` for amplifier 28. This establishes product initialization traffic, not a general readable multimedia property. Earlier source emitted a different payload layout.
+
+The virtual source's next/previous methods deliver local playback requests instead of sending bus frames. Its receiver accepts `WHAT 9` / `10` addressed to that source; the area-addressed delegate additionally accepts `WHAT 9` where the source is active. These method names do not redefine the published station/track command families. Source activation requests (`WHAT 1`) remain distinct from source-activity notifications (`WHAT 2`). BtExperience pauses local playback when no area remains active. This local player integration does not establish numeric [`WHO 26` UPnP Multimedia](../who-26-upnp-multimedia/) syntax.
+
+See [Sound Diffusion evidence](../../project/review/myopencommunity-integration.md#sound-dialects-and-matrix-state).
+
+### Historical local playback
+
+BtExperience at revision `b88cdac9665d28494f19d6a5d759acf8d5f00ad9` connects local media to its virtual Sound Diffusion source. These are client policies, separate from amplifier power, bus acknowledgements and audible output.
+
+| Operation or result | Client behavior |
+| --- | --- |
+| IP-radio first-content result | Start the configured Web Radio playlist when nonempty, then report whether entries exist; no stream connection or decoding check |
+| USB/SD discovery | Search directories breadth first and stop at the first directory containing an audio-extension match; select an audio entry and build a playlist of that entry's file type |
+| Replacement discovery request | A mounted request marks the previous search's flag and starts another search. An unmounted or empty-path request reports failure before marking that flag |
+| Unavailable discovery path | The worker ignores directory-change failures; a missing root can leave it searching the process's current directory |
+| Playback start | Audio uses an MPlayer process; `Playing` follows process startup, without checking decoded or audible output |
+| Pause and resource release | Ordinary pause retains locally active audio output. Releasing output stops the process while reporting logical `Paused`; audio resume attempts a restart at the cached time |
+| Automatic next item | A transition to `Stopped` advances the playlist unless a user-change flag suppresses it or the rapid-loop guard fires |
+| Rapid-loop guard | On reaching the item before the recorded starting index, suppress further advance and emit a loop notification if elapsed time is below `2 seconds * item count`; this is a retry heuristic, not a playback-error diagnosis |
+| Local media unmount | A matching local mount notification terminates the playlist when the current path begins with that mount path; it does not cancel the separate discovery worker |
+
+The USB/SD worker uses one flag for cancellation and unsuccessful search. Completion deletes the result flag before reading it for the first-content notification and does not clear the owning member. If that member still points to the deleted flag, a later mounted search can write through freed storage. Reliable completion and repeated-search behavior are therefore not established. Source selection also handles asynchronous results using the current source index, without matching the callback sender to the requested source.
+
+Process failures have narrower handling than the playlist model suggests. While active, the audio wrapper maps normal exit `0` to done, exit `1` or a crash to stopped; other normal exit codes emit neither completion signal. Its process-error handler only logs. Playlist retry and alarm fallback cannot be assumed to cover every failure.
+
+The player's `volume` and `mute` setters update local properties and emit notifications; they do not themselves command the backend or an SCS amplifier. The separate local routing controller is described below. Selecting UPnP media uses the [OpenXml service](../who-26-upnp-multimedia/#historical-openxml-client), without establishing numeric `WHO 26` traffic.
+
+The pause request is acknowledged by parsing the backend's pause marker. During release, the original wrapper changes its internal state before emitting the player-state notification, then emits the output-state notification. A receiver of the first notification can already read output as stopped. Releasing output from an ordinary paused state emits another public `Paused` notification. Controlled execution verifies this notification order with a synthetic slave process; [call interruption](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience) describes its conditional consequences.
+
+The same client's UPnP coordination selects one active local-media, Sound Diffusion or photo player. When another category becomes active, it terminates the other UPnP players, including paused ones, because they share browser/playlist state. Normal call restoration therefore does not guarantee restoration after another UPnP consumer takes over.
+
+Earlier clients used different loop and resource-release handling. These changes identify software revisions, not deployed Firmware boundaries. See [Playback backend evidence](../../project/review/myopencommunity-playback-history-review.md) for inspected expectations, controlled helper execution and unresolved runtime conditions.
+
+The discovery class supplies no worker cancellation or join on destruction. Its parented completion watchers do not themselves establish that worker execution has stopped. Cancellation uses a shared flag polled between directory searches; shared-flag visibility, model thread affinity and physical removal timing remain unverified. Controlled execution of the original dispatcher and worker under Qt 5 confirms that discovery can finish after its source owner is destroyed, using a gated model substitute.
+
+Local metadata extraction in libqtcommon at `825dc72cf0a4b202c0e8d2efd9bd50ce2dd23aa2` starts a separate MPlayer process with null audio/video output. It accumulates output until `current_time` is found or a five-second elapsed guard is exceeded, then requests termination and waits up to 300 ms. Failed startup or early exit does not bypass that guard; the result may be partial or empty, without a success field. Matching uses the last occurrence of each requested property. Earlier code waited without an elapsed guard and used the first match.
+
+Replacing a metadata request schedules the previous watcher for deletion without cancelling or waiting for its worker. Completion reads the current watcher rather than the signal sender, and emits the result before deleting that current watcher. Controlled Qt delivery demonstrates replacement-result misattribution and deletion of a watcher created synchronously during notification. The latter also occurs with the original metadata worker and QtConcurrent dispatcher; deleting its owner does not cancel that worker in the controlled run. BtExperience merges returned properties into the current track information without matching a track identity. These are client/library limitations, not verified playback or Firmware behavior. See [Discovery and browser lifecycle evidence](../../project/review/myopencommunity-async-browser-review.md).
+
+### Local video and audio routing
+
+At the same BtExperience revision, local video uses a separate GStreamer 0.10 executable; audio uses the shared MPlayer wrapper. These client choices do not define `WHO 7`, `16`, `22` or `26` wire semantics.
+
+| Path | Revision-scoped behavior |
+| --- | --- |
+| Video selection | Case-sensitive filename suffix matching selects `mpg`, `avi` and `mp4`; this is not content or codec detection |
+| Video launch and geometry | Launch `gstmediaplayer` beside the application with a display rectangle and track. The helper accepts absolute local paths or strings beginning with `http`; it centers video, shrinks to fit and does not enlarge it |
+| Resolution check | The separate MPlayer helper accepts parsed widths up to 320 and heights up to 240, and rejects missing resolution. The reviewed GStreamer launch does not call that check; it is not a general touchscreen/video limit |
+| Video pause/resume | Pause acknowledgement depends on parsing `state: paused`; resume reports locally when the command is sent. If the process has exited, resume launches the track again without restoring cached position |
+| Seek | The client's seek method sends to the audio player, and its position-start method excludes video. The standalone video helper accepts integer-second seek with flush/key-unit flags; this does not establish a connected video seek control or precise seeking |
+| Video completion/error | The helper's end-of-stream and decoder-error notifications both request ordinary application exit. The wrapper maps normal exit 0 to done, exit 1 or crash to stopped, and other normal codes to neither. Its process-error callback only logs |
+| Video metadata text | The helper periodically emits changed properties. The wrapper parses each read independently, without retaining an incomplete line; split property text can be truncated or lost |
+
+The paused-video exception in the client treats a zero exit while logically paused as stopped. This exception does not distinguish ordinary decoder errors from successful completion while playing. Actual GStreamer decoding, display output and seek accuracy remain unverified.
+
+The separate `AudioState` controller chooses the highest enabled state in its ordered enumeration. Its player-state callback skips `AboutToPause` before reevaluating direct audio access; output-state notifications remain a separate trigger. States above ringtone pause sound-diffusion playback, and temporarily paused sound diffusion is eligible to resume at ringtone or below. Controlled native-process execution with the original audio wrapper confirms that Sound Diffusion can remain logically paused with its process running and output reported active during a call. That role does not delay the controller through the local-media direct-access check. These are local arbitration policies, not SCS priorities.
+
+| Local control | Implementation behavior |
+| --- | --- |
+| Beep, local media and ringtone volume | Use the HP DAC control. Percentage 0 maps to 0, 1 to 20, and 2..100 maps by integer arithmetic to 21..118 |
+| SCS video/intercom-call volume | Use a separate ZL control, scaling percentage by `88 / 100` into a padded hexadecimal command argument. Call mute uses a separate operation |
+| Local playback mute | Entering the mute state sets the local playback hardware volume to zero. The multimedia property setter itself only caches and notifies |
+| Local sound-diffusion source activation | The registered source's active-state notification invokes local routing on/off scripts. The reviewed playback-state callback only updates its cached sound-diffusion flag |
+
+Build selection and consumers matter: the pinned plugin supplies an ALSA `plughw=0.0` argument outside its X11 branch, while X11 leaves output selection to MPlayer. Older library branches contain OSS and different ALSA choices, and older audio-state implementations use different scaling and routing triggers. These settings are not amplifier volume scales or deployed Firmware boundaries. See [Video and native-runtime evidence](../../project/review/myopencommunity-video-runtime-review.md) for exact build/source scope, historical comparisons and execution conditions.
+
+### Historical local audio arbitration
+
+The TS10 non-X11 implementation retained at libqtdevices revision `13f0c2049666` uses an audio-state stack. Its build definition selects this implementation for PXA270 and a separate implementation for X11. These are software/build distinctions, not identified Firmware generations.
+
+| Mechanism | Earlier TS10 implementation | BtExperience `b88cdac9665d` |
+| --- | --- | --- |
+| Priority | Call, call-ringtone, floor-call and mute states precede alarm states, which precede ordinary playback/ringtones. Lower-priority requests remain below them until higher states are removed | Highest enabled enum state wins; repeated enabling sets a flag rather than pushing another occurrence |
+| Repeated current state | Push another occurrence and emit re-entry without rerunning path callbacks; one removal leaves the other occurrence | One disable clears the enabled flag |
+| Transition completion | The stack top changes before path transition completion. Direct audio access normally delays callbacks; a 10-second guard can force completion while the access flag remains true | Temporarily pause local multimedia, request output release and complete on the direct-access notification; eligible temporary playback resumes when local playback regains priority |
+| Source Configuration | Without a local source, local media and amplifier activity select separate playback states. With a configured source, source, amplifier or media activity retain the Sound Diffusion state | Registered source active-state notifications select the local routing scripts |
+
+The earlier local amplifier's temporary-off flag preserves its logical ON status. Volume changes while temporarily off update the cache without writing that volume; restoration uses the latest cached value when the amplifier is logically ON. Its virtual-amplifier temporary-off request schedules restoration after one second. This client timer is not an amplifier-wide protocol timeout.
+
+The older `WHO 8` [silence/restore events](../who-8-video-door-entry-telephony/#teleloop-and-local-multimedia-events) use a different consumer: it freezes the current level, publishes silenced level `1`, ignores repeated silence while frozen and schedules a 900-second fallback. Restore publishes the frozen level while in Sound Diffusion, or `0` outside it. These cached report choices and local timers do not establish how physical amplifiers respond.
+
+Earlier TouchX consumers differ. At libqtdevices `4f3483f36134`, media temporarily paused by a higher state retains its playback-stack entry and avoids pushing it again on resume. At `795d40817436`, the TouchX `WHO 8` disable/restore consumer uses temporary-off and reports OFF/ON while logically ON, rather than the frozen-level policy above. These are revision-specific client report policies, not alternative meanings of the wire events.
+
+Source and amplifier roles are selected from configuration, not proved hardware capabilities. The older Sound Diffusion page creates its virtual source/amplifier consumers from those roles. BtExperience `b88cdac9665d` instead registers the first matching local media-source object when its source address is nonempty; it can leave Sound Diffusion playback unregistered if none exists. X11 routing helpers can be empty while embedded branches request platform-specific scripts or device operations. Build selection alone does not establish their physical effect.
+
+The call/mute callbacks preserve SCS or IP routing across mute transitions; the retained historical correction replaces microphone volume changes with a separate mute operation. See [Call/audio evidence](../../project/review/myopencommunity-audio-call-review.md) and [Consumer and call-history evidence](../../project/review/myopencommunity-consumer-call-review.md) for exact revisions, original-helper conditions and unresolved device behavior. Current call UI and camera-cycling limitations are documented under [Local call audio](../who-8-video-door-entry-telephony/#local-call-audio-in-btexperience).
 
 ## Source and speaker semantics
 
@@ -147,5 +352,7 @@ This is **established for that Device** and was used to corroborate the `WHO 16`
 ## Evidence basis
 
 Parameters, identifiers, and allowed-message distinctions come from [`WHO 22` specification](https://archive.openwebnet-ha.org/sha256/13/8d/138d9031cd6d70693fa10f6ec05b344fd4efc5fc80c0ffaf9d5dca36d0d26cf0.pdf). Where its summary table and detailed flow differ, this page records the more specific flow and notes the discrepancy.
+
+Archived test examples are inspected expectations, rather than a claim that the complete suite passed. Recorded original-helper executions retain their controlled conditions separately. The client forms, source caches, local feedback, tuning and display conversions are traced in [Sound implementation review](../../project/review/myopencommunity-sound-history-review.md). Retained software revisions do not identify deployed Firmware generations.
 
 See the [functional overview](../) for navigation by `WHO` and by function, and [Protocol](../../protocol/) for common frame and session syntax.

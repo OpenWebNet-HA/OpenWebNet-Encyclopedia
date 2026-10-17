@@ -29,18 +29,29 @@ Two published address forms are established:
 
 The published device families include automation dry-contact interfaces such as 3477/F428 and alarm/IR interfaces such as 3480/F482 and IR detector families.
 
+## Historical contact interpretation
+
+BTicino `PPTStatDevice` tests at `TS10_1_0_23` interpret `31#0` and `31#1` as contact closed, and `32#0` and `32#1` as contact open, and emit `*#25*WHERE##` for status. The 2009 implementation history explicitly corrects an earlier reversed interpretation. This corroborates the contact branch of the published ON/OFF model; it does not invert or redefine IR detection. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
+
+The client combines replies and events into one local boolean; its `DIM_STATUS` identifier is not a wire `DIMENSION`. It compares numeric addresses and forwards repeated decoded values. That matching behavior does not establish leading-zero normalization, routed contact support or a wider address domain.
+
+BtExperience selects this `WHO 25` receiver for its Automation contact Objects, preserving the configured `WHERE`. Its displayed state starts locally as inactive and emits a change notification only when the boolean changes. The initial display therefore is not a confirmed contact reading, and the change-only notification policy does not redefine bus events. See [Contact-client evidence](../../project/review/myopencommunity-cen-history-review.md#contact-receipt-and-product-state).
+
 ## Gateway compatibility and hardware boundaries
 
-Support for `WHO 25` dry-contact and IR operations follows the general `WHO 25` gateway boundary:
+**Published protocol.** The [dry-contact/IR specification](https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf), version `1.0.0`, page 13, lists the following availability for dry-contact and IR state functions. Firmware marked “not stated” remains unspecified in that table.
 
-| Gateway model | `WHO 13 MODEL` | `WHO 25` dry contact / IR support | Behavior | Reference |
-| --- | --- | :---: | --- | --- |
-| MH200N (03565) | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
-| MH202 | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
-| F454 | `200` | Supported | `ACK` / state response | Legrand WHO 25 v1.0.0, p. 13 |
-| MH200 (1st gen) | `4` | Unsupported | `NACK` (`*#*0##`) | Legrand WHO 25 v1.0.0, p. 13; empirical bench probe |
+| Gateway model | Firmware in source | Published dry-contact / IR support |
+| --- | --- | --- |
+| MH200 | Not stated | No |
+| MH200N / 03565 | Not stated | Yes |
+| F453AV | `1.0.19` | No |
+| F453AV / 573992 | `2.1.7` | Yes |
+| F453 | Not stated | Yes |
+| F452V | Not stated | No |
+| F452 | Not stated | No |
 
-The legacy MH200 (Model 4) does not process `WHO 25` dry-contact status requests (`*#25*WHERE##`) or events; all `WHO 25` requests return `NACK` (`*#*0##`).
+This source does not list MH202, F454 or MyHomeServer1. Their absence from this historical table is not a finding of incompatibility. Published dry-contact/IR availability does not establish the reply to every `WHO 25` request or support for the separate CEN+ and ScenarioPlus families. See [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) for the CEN+ specification and the scoped replay observations; the replay comparison there covers CEN+ commands, not dry-contact state queries.
 
 ## Functional navigation
 

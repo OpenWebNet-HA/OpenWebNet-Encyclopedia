@@ -27,6 +27,25 @@ def load_prepare_module():
 
 
 class PrivacyPipelineTests(unittest.TestCase):
+    def test_serialized_paragraphs_do_not_join_device_context_to_product_reference(self):
+        from validate_privacy import artifact_device_id_matches
+        prose = "Physically configured associated devices. Catalogue history is limited.\n\nEarlier manual names the captured344842 product classification."
+        self.assertEqual([], artifact_device_id_matches(json.dumps({"text": prose}), ".jsonl"))
+
+    def test_serialized_installed_identifiers_remain_blocked(self):
+        from validate_privacy import artifact_device_id_matches
+        for prose in ["Observed devices:\nA1B2C3D4, B2C3D4E5.",
+                      "Public product context.\n\nInstalled Device ID A1B2C3D4.",
+                      r"Installed Device ID \n A1B2C3D4."]:
+            with self.subTest(prose=prose):
+                self.assertTrue(artifact_device_id_matches(json.dumps({"text": prose}), ".jsonl"))
+
+    def test_serialized_line_break_normalization_preserves_diagnostic_offsets(self):
+        from validate_privacy import artifact_device_id_matches
+        text = json.dumps({"text": "Public prose.\n\nObserved Device A1B2C3D4."})
+        match = artifact_device_id_matches(text, ".jsonl")[0]
+        self.assertEqual("A1B2C3D4", text[match.start:match.end])
+
     @classmethod
     def setUpClass(cls):
         cls.pipeline = load_prepare_module()
@@ -78,6 +97,63 @@ class PrivacyPipelineTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "classify it sanitize"):
                 self.pipeline.prepare(manifest, root)
 
+    def test_concrete_markdown_password_is_removed_but_range_and_mask_survive(self):
+        source = "Published installer password `98765`; password `5..9`; password `#####`."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertEqual(["credential"], removed)
+        self.assertEqual("Published installer password `[REDACTED]`; password `5..9`; password `#####`.", text)
+        self.assertNotIn("98765", text)
+        self.assertEqual((text, []), self.pipeline.sanitize(text))
+
+    def test_concrete_markdown_password_fails_publishable_source_gate(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "docs").mkdir()
+            (root / "docs/example.md").write_text("Published installer password `98765`.")
+            manifest = self.write_manifest(root, [{"source_id": "ownkb:source:example", "source_path": "docs/example.md", "source_type": "canonical_documentation", "classification": "publishable"}])
+            with self.assertRaisesRegex(ValueError, "classify it sanitize"):
+                self.pipeline.prepare(manifest, root)
+
+    def test_public_sheet_identifiers_survive_installed_context(self):
+        source = "Device-specific documentation ST-00002497-NL.pdf; reconciled Device source ST-00002498. Installed unit ID A1B2C3D4 remains private."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertIn("ST-00002497-NL.pdf", text)
+        self.assertIn("ST-00002498", text)
+        self.assertNotIn("A1B2C3D4", text)
+        self.assertEqual(["device_id"], removed)
+
+    def test_eight_hexadecimal_filename_is_not_a_sheet_identifier_exemption(self):
+        text, removed = self.pipeline.sanitize("Installed Device ID A1B2C3D4.pdf was captured.")
+        self.assertNotIn("A1B2C3D4", text)
+        self.assertEqual(["device_id"], removed)
+
+    def test_public_sheet_with_adjacent_language_suffix_survives_device_context(self):
+        source = "IP devices use ST_00000937IT.pdf; installed Device ID A1B2C3D4 remains private."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertIn("ST_00000937IT.pdf", text)
+        self.assertNotIn("A1B2C3D4", text)
+        self.assertEqual(["device_id"], removed)
+
+    def test_public_sheet_suffix_is_narrow_and_does_not_exempt_other_identifiers(self):
+        for token in ("00000937IT.pdf", "ST_A1B2C3D4IT.pdf", "ST_00000937ZZ.pdf"):
+            with self.subTest(token=token):
+                text, removed = self.pipeline.sanitize("Installed Device ID " + token)
+                self.assertEqual(["device_id"], removed)
+                self.assertNotEqual("Installed Device ID " + token, text)
+
+    def test_public_sheet_number_still_sanitized_when_used_as_installed_identifier(self):
+        text, removed = self.pipeline.sanitize("Device ID 00000937; reference ST_00000937IT.pdf.")
+        self.assertEqual("Device ID [DEVICE_ID]; reference ST_00000937IT.pdf.", text)
+        self.assertEqual(["device_id"], removed)
+
+    def test_final_scanner_preserves_public_sheet_and_rejects_installed_id_in_json(self):
+        from validate_privacy import artifact_device_id_matches
+        public = "IP devices; ST_00000937IT.pdf is a public technical sheet."
+        self.assertEqual([], artifact_device_id_matches(json.dumps({"text": public}), ".jsonl"))
+        private = public + " Installed Device ID A1B2C3D4."
+        matches = artifact_device_id_matches(json.dumps({"text": private}), ".jsonl")
+        self.assertEqual(["A1B2C3D4"], [m.value for m in matches])
+
     def test_installed_device_id_forms_are_sanitized_before_ir(self):
         tick = chr(96)
         examples = (
@@ -93,6 +169,23 @@ class PrivacyPipelineTests(unittest.TestCase):
                 self.assertEqual(["device_id"], removed)
                 self.assertIn("[DEVICE_ID]", text)
                 self.assertNotRegex(text, r"(?i)\b[0-9a-f]{8}\b")
+
+    def test_public_model_contexts_at_nonzero_offsets_remain_public(self):
+        public = ("Device model A1B2C3D4", "Device types A1B2C3D4", "Devices catalogue A1B2C3D4", "Device firmware A1B2C3D4")
+        for context in public:
+            with self.subTest(context=context):
+                source = "Public explanation precedes this context. " + context + ". Installed unit ID 1A2B3C4D was captured."
+                text, removed = self.pipeline.sanitize(source)
+                self.assertIn(context, text)
+                self.assertIn("[DEVICE_ID]", text)
+                self.assertNotIn("1A2B3C4D", text)
+                self.assertEqual(["device_id"], removed)
+
+    def test_long_prefix_keeps_identifier_offsets_and_word_boundaries(self):
+        source = "Public preface. " * 1000 + "Device modeler A1B2C3D4 was recorded."
+        text, removed = self.pipeline.sanitize(source)
+        self.assertTrue(text.endswith("Device modeler [DEVICE_ID] was recorded."))
+        self.assertEqual(["device_id"], removed)
 
     def test_installed_device_id_lists_are_fully_sanitized(self):
         tick = chr(96)

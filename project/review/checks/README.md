@@ -63,6 +63,14 @@ A passing CI run establishes only that the configured deterministic checks
 passed. It does not certify that every factual claim is true, complete,
 universally applicable, or free of unresolved contradiction.
 
+The hosted source-integrity job verifies the trusted maintainer's exact-commit
+`Device catalogue validation` status. The local gate must pass the complete
+canonical-source audit and Device/catalogue checks before publishing success.
+The status digest covers their tools, manifests, registered local public source
+bytes and workflows; changed inputs require another audit. Hosted CI retains
+only public status metadata, without private archive probes or credentials.
+See [Private catalogue CI result](../../machine-kb/maintenance.md#private-catalogue-ci-result).
+
 The Machine KB has an additional fail-closed privacy validator on its
 development branch. That validator remains authoritative for generated
 machine-readable artifacts and should be retained when the Machine KB is

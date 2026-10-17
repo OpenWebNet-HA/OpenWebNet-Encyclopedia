@@ -22,7 +22,7 @@ COMMON_SEED_FIELDS = {"id", "kind", "label", "namespace_id", "section_id", "appl
 KIND_SEED_FIELDS = {
     "namespace": {"description"}, "term": {"definition"},
     "entity": {"description", "entity_type"},
-    "source": {"title", "publisher", "source_type"},
+    "source": {"title", "publisher", "source_type", "artifact_locator"},
     "relationship": {"subject_id", "predicate", "object_id", "qualification"},
     "caution": {"text"}, "question": {"text", "resolution_state", "resolution_note"},
 }
@@ -109,7 +109,7 @@ def _base(seed: dict[str, Any], section_index: dict[str, dict[str, Any]]) -> dic
         "relationships": [],
     }
     for key in ("description", "definition", "entity_type", "subject_id", "predicate", "object_id",
-                "qualification", "text", "resolution_state", "resolution_note", "title", "publisher", "source_type"):
+                "qualification", "text", "resolution_state", "resolution_note", "title", "publisher", "source_type", "artifact_locator"):
         if key in seed:
             record[key] = seed[key]
     if seed["kind"] == "question":
@@ -120,8 +120,8 @@ def _base(seed: dict[str, Any], section_index: dict[str, dict[str, Any]]) -> dic
 def _canonical_sources(ir: dict[str, Any]) -> list[dict[str, Any]]:
     records = []
     for document in ir["documents"]:
-        first = document["sections"][0]
-        label = first["title"] or document["path"]
+        first = next((s for s in document["sections"] if s["blocks"]), document["sections"][0])
+        label = document["sections"][0]["title"] or document["path"]
         namespace_id = _namespace_for_document(document)
         record = {
             "applicability": _applicability(namespace_id), "cautions": [], "confidence": "high",

@@ -18,6 +18,19 @@ Confidence describes support for one precisely scoped claim. It is not a score f
 | MyHOME Suite UI | labels, visibility, editability, and application behavior | does not establish wire or storage encoding alone |
 | Product documentation | hardware layout and supported physical configuration | may not describe advanced/Virtual configuration or later revisions |
 
+Examination method is separate from evidence class and confidence:
+
+| Method | Establishes within its recorded scope | Limitation |
+| --- | --- | --- |
+| Source inspection | behavior of the examined executable code path | no execution or deployment observation |
+| Test-expectation inspection | an assertion's expected value and tested input | does not show that the test passed |
+| Original-helper execution | the recorded result with the stated seams, inputs and environment | does not certify a full legacy suite or physical Device |
+| Static firmware analysis | properties of the pinned firmware artifact and analyzed path | execution and reachability may require separate evidence |
+| Dynamic firmware oracle | the result from the identified firmware and oracle setup | emulator, harness and input conditions limit the result |
+| Hardware observation | behavior of the identified Device under captured conditions | does not establish universal support |
+
+Keep the client, library, simulator, gateway or firmware role explicit. An Encyclopedia section is the explanation; the archived file, assertion, firmware artifact or capture is the underlying evidence. Several methods can support different findings in the same section. Shared code or a reused run is not independent corroboration.
+
 No source class is universally superior. A declared local foreign key is decisive for a database relationship; it cannot establish the meaning of a diagnostic field. A capture proves that one Device emitted a frame; it cannot establish universal support.
 
 ## Confidence levels

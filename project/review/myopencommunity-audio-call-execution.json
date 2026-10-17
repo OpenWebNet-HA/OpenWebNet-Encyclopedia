@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "pins": {
+    "BtExperience": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+    "libqtdevices": "13f0c2049666d234e9cd4b0396863da01636d0f5"
+  },
+  "helper_sha256": "8ff930d2a5ea278dd2157ed556bb06fa8af4f35be1dd9b2537bec82a075a0e57",
+  "original_files": [
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "gui/audiostate.cpp",
+      "blob": "c1cfb76bbe11d257c69161a96292fdd4f5e6187f",
+      "sha256": "b7fbecb2c70ded8fdf5ae02042a4ce2f0f7b38a5ff8d2f69ce685aac3b0840c0"
+    },
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "gui/audiostate.h",
+      "blob": "4f450b3ead7006fc96534488081fc887b420e302",
+      "sha256": "5af62814a1951b699f3e9a75452d857cfb72b154387e833751f6b856fe20774c"
+    },
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "gui/ringtonemanager.cpp",
+      "blob": "ff6bf3e8dbc958a89dbedef49532e95c42876332",
+      "sha256": "8a892643b96bf9936925585437158609d1f1272707d2e8b95028b6cefa919e0e"
+    },
+    {
+      "repository": "BtExperience",
+      "revision": "b88cdac9665d28494f19d6a5d759acf8d5f00ad9",
+      "path": "gui/ringtonemanager.h",
+      "blob": "aec3dc2f0968464304d946e78fac30e9b2773a86",
+      "sha256": "25a25f24df227ba562483ebb3f8686849dad1c8fcbd202608dfe947b56f4c578"
+    },
+    {
+      "repository": "libqtdevices",
+      "revision": "13f0c2049666d234e9cd4b0396863da01636d0f5",
+      "path": "statemachine.cpp",
+      "blob": "5f03ae9dc107e279cfef705f97a4c258dab60e4e",
+      "sha256": "a8ec975ad32eba581dfc89448c5f041cb9c1c7674d95998001845d67cbc1dcd1"
+    },
+    {
+      "repository": "libqtdevices",
+      "revision": "13f0c2049666d234e9cd4b0396863da01636d0f5",
+      "path": "statemachine.h",
+      "blob": "a08c31f81681798e444cf7d52474e5ccec0a7a7a",
+      "sha256": "cd7b18f5b9bc17967396f4911708052a0c0f85148b981bf3b3f4d29ccc5092fa"
+    },
+    {
+      "repository": "libqtdevices",
+      "revision": "13f0c2049666d234e9cd4b0396863da01636d0f5",
+      "path": "ts_10/audiostatemachine.cpp",
+      "blob": "6d0447bcf4a11b67c975589fa1a3c4148e666470",
+      "sha256": "76a4a5bbbabdd8fce6698eef44d298634c5c20ec2f36830a36b0de42acdf3b34"
+    },
+    {
+      "repository": "libqtdevices",
+      "revision": "13f0c2049666d234e9cd4b0396863da01636d0f5",
+      "path": "ts_10/audiostatemachine.h",
+      "blob": "9b3273bc2c8a63c0049310b377306e4ded4c8b58",
+      "sha256": "83142efe54d5c7e1480294b43a7660ea9af2c94e2306b96447f90b31dd7ed87f"
+    }
+  ],
+  "compiler": "g++ (SUSE Linux) 16.2.1 20260929",
+  "qt": "5.15.19",
+  "results": [
+    {
+      "experiment": "audio_ring",
+      "result": "PASS original stack, native delayed audio timer, flag routing, controlled pause/resume, ringtone lifetime and reentrant cleanup",
+      "failed_tests": []
+    },
+    {
+      "experiment": "oldgraph",
+      "result": "PASS original older priority graph, native 10-second guard and logical amplifier temporary silence",
+      "failed_tests": []
+    }
+  ],
+  "conditions": [
+    "Complete original AudioState/RingtoneManager/StateMachine translation units and headers execute under Qt 5.15.19 with native timers and signals.",
+    "Hardware/process functions only record commands; multimedia, beep, source, ringtone enum and XML dependency seams are controlled substitutes.",
+    "Older graph selected original method bodies and original header use substitute startup, callbacks, volume paths and hardware helpers; native QTimer and complete original generic stack execute.",
+    "No QML, original QtTest suite, Qt 4 application, hardware, firmware or audible output executes."
+  ],
+  "helper_path": "project/review/checks/check_myopencommunity_audio_call_helpers.py",
+  "controlled_case_groups": 12,
+  "original_test_suite_executed": false
+}

@@ -64,6 +64,8 @@ quietly over-broad label. The manifest and prepared-record schemas are in
 public `privacy` values `public` and `sanitized`; it never emits `private`,
 `unknown`, or an omitted classification.
 
+Concrete manufacturer-published factory passwords are also replaced by `[REDACTED]` before derivation; publication in a manual does not exempt a password value from this policy. Markdown credential literals are recognized separately from abstract ranges and masks.
+
 The transformations are conservative typed markers for network addresses, MAC
 addresses, instance identifiers, credential assignments, personal identifiers, and
 local user paths. A later field-aware parser may add transformations only with

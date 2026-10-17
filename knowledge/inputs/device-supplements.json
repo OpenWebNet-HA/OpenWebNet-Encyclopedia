@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "documents": {
+    "devices/definitions/own-dev-0102-multimedia-touch-screen.md": {
+      "path": "devices/inventory/touch-screen-package-unicode-ranges.json",
+      "sha256": "ad22cdfc7ad7421edf9eebf43631cc631cccb20e1f2a4ae45bb91d77d3d75b6a",
+      "catalogue_sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5"
+    },
+    "devices/definitions/own-dev-0107-legrand-multimedia-touch-screen.md": {
+      "path": "devices/inventory/touch-screen-package-unicode-ranges.json",
+      "sha256": "ad22cdfc7ad7421edf9eebf43631cc631cccb20e1f2a4ae45bb91d77d3d75b6a",
+      "catalogue_sha256": "f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5"
+    }
+  }
+}

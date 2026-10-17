@@ -6,10 +6,13 @@ import argparse
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / "knowledge/tools"))
+from large_files import require_kb_hydrated  # noqa: E402
 CANONICAL_AREAS = (
     "protocol", "functional", "diagnostics", "programming", "device-model",
     "internals", "reverse-engineering", "scenario-engine",
@@ -18,10 +21,14 @@ GLOBAL_INPUTS = {
     "knowledge/inputs/identities.json",
     "knowledge/inputs/chunk-identities.json",
     "knowledge/inputs/canonical-sources.jsonl",
+    "knowledge/inputs/device-sources.json",
+    "devices/work-queue.yaml",
 }
 CLAIM_INPUTS = {
     "knowledge/inputs/claim-records.json",
     "knowledge/inputs/claim-coverage.json",
+    "knowledge/inputs/device-unit-review.json",
+    "knowledge/inputs/claim-context.json",
 }
 REFERENCE_INPUTS = {"knowledge/inputs/reference-records.json"}
 
@@ -92,12 +99,14 @@ def git_changes(root: Path, base: str, head: str) -> list[dict[str, str]]:
 
 
 def canonical_path(path: str) -> bool:
-    return path.endswith(".md") and path.split("/", 1)[0] in CANONICAL_AREAS
+    return (path.endswith(".md") and path.split("/", 1)[0] in CANONICAL_AREAS
+            or re.fullmatch(r"devices/definitions/own-dev-\d{4}-[a-z0-9-]+\.md", path) is not None)
 
 
 def seed_indices(root: Path) -> dict[str, Any]:
     identities = load_json(root / "knowledge/inputs/identities.json")
     chunks = load_json(root / "knowledge/inputs/chunk-identities.json")
+    require_kb_hydrated(root)
     claims = load_json(root / "knowledge/inputs/claim-records.json")["claims"]
     references = load_json(root / "knowledge/inputs/reference-records.json")["records"]
 

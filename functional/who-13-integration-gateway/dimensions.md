@@ -18,7 +18,7 @@ The ZigBee OpenWebNet interface defines a separate `WHO 13` `DIMENSION` set. Som
 | `23` | Kernel version | R | `V*R*B` |
 | `24` | Distribution version | R | `V*R*B` |
 
-The table above is the complete `DIMENSION` registry defined by the preserved classic SCS/TCP `WHO 13` specification. It is a **published-registry boundary**, not a universal implementation ceiling. Later gateway observations are recorded below only where first-hand evidence exists.
+The table above is the complete `DIMENSION` registry defined by the preserved classic SCS/TCP `WHO 13` specification. It is a **published-registry boundary**, not a universal implementation ceiling. Later gateway observations and historical touchscreen extensions are separately scoped below.
 
 ## Read form
 
@@ -148,6 +148,24 @@ Together, `DIMENSION 16`, `23`, and `24` expose three distinct software layers: 
 
 A first-hand MH202 information request returned an empty value payload for this read (`*#13**24*##`) rather than the published three-component tuple. This is implementation evidence, not a redefinition of the published schema. Parsers should preserve the raw response and tolerate a gateway that cannot supply all published version components.
 
+## Historical touchscreen platform properties
+
+The BTicino `PlatformDevice` implementation and tests at `TS10_1_0_23` establish additional empty-`WHERE` properties:
+
+| `DIMENSION` | Implemented meaning | Evidence-supported access / payload |
+| ---: | --- | --- |
+| `9` | LAN enabled | Read/report/write; `0` disabled, `1` enabled |
+| `20` | PIC version | Read/report; first returned value used as the PIC version |
+| `50` | Network gateway | Read/report; four decimal IPv4 octets |
+| `51` | Primary DNS | Read/report; four decimal IPv4 octets |
+| `52` | Secondary DNS | Read/report; four decimal IPv4 octets |
+
+For example, the exact test report `*#13**20*22*40*05##` yields PIC value `22`. The other two fields are not decoded by this class; their meaning remains unresolved. The [Energy Management compatibility policy](../who-18-energy-management/what.md#historical-graph-request-variants) uses that first value with a cutoff of `22`.
+
+The library emits LAN writes as `*#13**#9*STATE##`, then requests state after 1 second to avoid a request overtaking its write on another connection. Its clock writes also have specific variants: `*#13**#0*13*12*11**##` leaves the time-zone field empty and adds a trailing empty field; combined writes use `*#13**#22*H*M*S**00*D*M*Y##`. Date writes always supply weekday `00` rather than calculating it. These are client emission choices, not revisions of the published clock schema.
+
+Support by an F454, MH202, or other external gateway is not established by these touchscreen tests. See [Platform evidence](../../project/review/myopencommunity-integration.md#platform-properties-and-ordering).
+
 ## Observed implementation extension: `DIMENSION 40`
 
 `DIMENSION 40` is not defined by the preserved classic SCS/TCP `WHO 13` specification, the ZigBee `WHO 13` registry, or the canonical MyHOME Suite `OPEN.db` functional model.
@@ -166,4 +184,4 @@ The evidence therefore establishes a readable gateway property with a two-value 
 
 ZigBee `WHO 13` explicitly defines `DIMENSION 17` as hardware version. That is established for the ZigBee interface revision documented in [ZigBee Network Management](zigbee-network-management.md#dimension-16-and-17---firmware-and-hardware-versions), but numeric equality does not establish the same meaning for classic SCS/TCP gateways.
 
-`DIMENSION 20` is likewise not assigned a classic SCS/TCP meaning on this page. The currently preserved canonical classic specification, ZigBee specification, MyHOME Suite `OPEN.db`, and the two gateway-information captures examined for this correction do not establish its SCS/TCP payload semantics. The unresolved provenance and required evidence are tracked in [Open Questions](../../reverse-engineering/open-questions.md#who-13-gateway-properties).
+`DIMENSION 20` has the separately scoped historical PIC-version interpretation above. That evidence does not establish a full version tuple or applicability to the F454/MH202 captures. The remaining questions are tracked in [Open Questions](../../reverse-engineering/open-questions.md#who-13-gateway-properties).

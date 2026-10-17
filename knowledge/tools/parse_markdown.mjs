@@ -4,7 +4,7 @@ process.on('uncaughtException', error => { console.error(error.message); process
 import { lexer } from './vendor/marked/marked.mjs';
 let input = '';
 for await (const part of process.stdin) input += part;
-const { records, identities, bootstrap } = JSON.parse(input);
+const { records, identities, bootstrap, reserved_ids = [] } = JSON.parse(input);
 const fail = (path, detail) => { throw new Error(`${path}: ${detail}`); };
 const cues = {
   applicability: /\b(?:SCS|ZigBee|TCP|gateway|firmware|revision|version|only for|applies to|not applicable)\b/gi,
@@ -60,12 +60,13 @@ function blocks(tokens, path, startLine=1) {
 }
 const slug = s => s.toLowerCase().replace(/<[^>]*>/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'section';
 function context(path) {
-  const area = path.split('/')[0];
+  const area = /^devices\/definitions\/own-dev-\d{4}-[a-z0-9-]+\.md$/.test(path) ? 'device-model' : path.split('/')[0];
   const match = path.match(/^functional\/who-(\d+)(?:-|\/)/);
   return { area, namespace:match ? `who:${match[1]}` : area === 'diagnostics' ? 'diagnostic' : area === 'protocol' ? 'protocol' : 'contextual' };
 }
 const documents = [];
-let nextDoc = Object.keys(identities).length + 1;
+let nextDoc = [...Object.values(identities).map(entry => entry.id), ...reserved_ids]
+  .reduce((maximum, id) => Math.max(maximum, Number(id.match(/^ownkb:document:d(\d+)$/)?.[1] ?? 0)), 0) + 1;
 for (const rec of records) {
   const path = rec.source_path;
   if (!rec.privacy || !['public','sanitized'].includes(rec.privacy.classification)) fail(path,'unpublishable privacy classification');

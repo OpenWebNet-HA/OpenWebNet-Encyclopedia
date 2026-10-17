@@ -52,6 +52,8 @@ The level is the shutter's absolute position model. It is distinct from the rela
 | `14` | Command not executed |
 | `15` | PUL |
 
+`PUL` is the named actuator mode, not the monostable up/down command selector or a movement state. Manufacturer mode tables and their collective-filtering scope are described in [SCS Configurator Labels](../../device-model/configurators.md#pul-behavior). The status flag alone does not identify a physical plug, active Configuration method or universal group/status-request policy.
+
 For general, environment, or group requests, the server can return one `DIMENSION 10` status frame for each Automation Object in the addressed scope. This expansion is part of the functional addressing behavior rather than a change to the four-value payload.
 
 ## `DIMENSION 11` - go to level

@@ -20,6 +20,7 @@ HUMAN_ROOTS = (
     "README.md",
     "device-model",
     "diagnostics",
+    "devices",
     "functional",
     "guides",
     "internals",
@@ -193,6 +194,147 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
                 )
 
         plain = mask_code(text)
+        is_device_definition = rel.parts[:2] == ("devices", "definitions") and rel.name.startswith("own-dev-")
+        strict_device_definition = False
+        if is_device_definition:
+            match = re.match(r"own-dev-(\d{4})-", rel.name)
+            strict_device_definition = bool(match and int(match.group(1)) >= 11)
+        if is_device_definition:
+            if "## Source reconciliation" not in text:
+                objective.append(f"DEVICE_SOURCE_RECONCILIATION {rel}: missing ## Source reconciliation")
+
+            documentation = re.search(r"(?ms)^## Documentation\s*$\n(.*?)(?=^## |\\Z)", text)
+            if documentation:
+                start_line = line_number(text, documentation.start(1))
+                for number, line in enumerate(documentation.group(1).splitlines(), start_line):
+                    if not line.startswith("|") or "---" in line:
+                        continue
+                    cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+                    if not cells or cells[0].lower() in {"document", "document / source"}:
+                        continue
+                    doc_name = re.sub(r"\x60", "", cells[0]).lower()
+                    normalized_cells = {re.sub(r"\x60", "", cell).lower() for cell in cells}
+                    multi_product = (
+                        "catalogue" in doc_name
+                        or bool(normalized_cells & {
+                            "product catalogue",
+                            "historical product catalogue",
+                            "compatibility table",
+                            "system / product guide",
+                        })
+                    )
+                    if multi_product and ".pdf)" in line.lower():
+                        if "printed p" not in line.lower() or "pdf p" not in line.lower():
+                            objective.append(
+                                f"DEVICE_SOURCE_PAGE_LOCATION {rel}:{number}: "
+                                "multi-product PDF row lacks printed/PDF page location"
+                            )
+
+            for pattern, code in (
+                (r"(?<![\w`])OWN-DEV-[0-9]{4}\b", "DEVICE_BARE_IDENTIFIER"),
+                (r"(?<![\w`])(WHO|WHAT|WHERE|DIMENSION)\s+[0-9]+\b", "DEVICE_BARE_PROTOCOL_LITERAL"),
+                (r"\b(?:EN|AS|CONF)_[A-Z0-9_]+\.[A-Za-z0-9_]+\b", "DEVICE_BARE_DATABASE_LITERAL"),
+                (r"(?<![.`\d])\d+\.\.\d+(?![.`\d])", "DEVICE_BARE_RANGE_LITERAL"),
+                (r"(?<![\w`])[A-Z][A-Z0-9_]*(?:=|<>)[A-Za-z0-9_/-]+(?![\w`])", "DEVICE_BARE_ASSIGNMENT_LITERAL"),
+            ):
+                for match in re.finditer(pattern, plain):
+                    objective.append(
+                        f"{code} {rel}:{line_number(plain, match.start())}: {match.group(0)}"
+                    )
+
+            for match in re.finditer(r"(?<![\w`])DIM(?:1|2|3|6|30|32|35|38|310)\b", plain):
+                objective.append(
+                    f"DEVICE_DIM_SHORTHAND {rel}:{line_number(plain, match.start())}: {match.group(0)}"
+                )
+
+            for match in re.finditer(
+                r"(?i)\b(?:Object|firmware id|condition record|conversion(?:-rule)? reference)\s+([0-9]+)\b",
+                plain,
+            ):
+                objective.append(
+                    f"DEVICE_BARE_NUMERIC_REFERENCE {rel}:{line_number(plain, match.start(1))}: {match.group(1)}"
+                )
+
+            current_h2 = ""
+            current_heading = ""
+            for number, line in enumerate(text.splitlines(), 1):
+                h2 = re.match(r"^##\s+(.+?)\s*$", line)
+                if h2:
+                    current_h2 = h2.group(1).replace("`", "").lower()
+                    current_heading = current_h2
+                    continue
+                h3 = re.match(r"^###\s+(.+?)\s*$", line)
+                if h3:
+                    current_heading = h3.group(1).replace("`", "").lower()
+                    continue
+                if not line.startswith("|"):
+                    continue
+                cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+                if not cells:
+                    continue
+
+                if strict_device_definition and current_h2 == "summary" and len(cells) >= 2:
+                    field, value = cells[0], cells[1]
+                    if field in {
+                        "Device ID", "Catalogue item", "Item model / modobj",
+                        "Firmware definition", "Firmware definitions",
+                        "Declared Modules", "Declared slots", "Object",
+                    } and value not in {"Value", "---"} and "`" not in value:
+                        objective.append(
+                            f"DEVICE_SUMMARY_LITERAL {rel}:{number}: {field} -> {value}"
+                        )
+                    if field == "Firmware applicability" and value not in {"Value", "---"}:
+                        remainder = re.sub(r"`[^`]*`", "", value)
+                        if re.search(r"\d", remainder):
+                            objective.append(
+                                f"DEVICE_SUMMARY_FIRMWARE_LITERAL {rel}:{number}: {value}"
+                            )
+                    if field == "Commercial identities" and value not in {"Value", "---"}:
+                        remainder = re.sub(r"`[^`]*`", "", value)
+                        if re.sub(r"[\s,;/]+", "", remainder):
+                            objective.append(
+                                f"DEVICE_SUMMARY_COMMERCIAL_LITERAL {rel}:{number}: {value}"
+                            )
+
+                if current_h2 == "diagnostic applicability":
+                    first = cells[0]
+                    if re.fullmatch(r"DIMENSION\s+[0-9]+", first):
+                        objective.append(
+                            f"DEVICE_BARE_DIAGNOSTIC_SURFACE {rel}:{number}: {first}"
+                        )
+
+                if strict_device_definition and current_h2 in {"firmware-scoped configuration", "object configuration surfaces"}:
+                    first = cells[0]
+                    if re.fullmatch(r"[A-Z][A-Z0-9_]{0,63}", first):
+                        objective.append(
+                            f"DEVICE_BARE_FIELD_LITERAL {rel}:{number}: {first}"
+                        )
+                    header = [x.lower() for x in cells]
+                    if "field" not in header and "---" not in cells and len(cells) >= 3 and first.startswith("`"):
+                        domain = cells[1]
+                        default = cells[2]
+                        plain_domain = mask_code(domain).strip()
+                        plain_default = mask_code(default).strip()
+                        if re.search(r"(?<![.\d])\d+\.\.\d+(?![.\d])", plain_domain):
+                            objective.append(
+                                f"DEVICE_BARE_CONFIG_DOMAIN {rel}:{number}: {domain}"
+                            )
+                        if re.search(
+                            r"(?<![\w])(?:SLA|PUL|CEN|GEN|GR|AMB|AUX|OFF|ON|O/I|UP/DOWN)(?![\w])",
+                            plain_domain,
+                        ):
+                            objective.append(
+                                f"DEVICE_BARE_CONFIG_ENUM {rel}:{number}: {domain}"
+                            )
+                        if re.fullmatch(r"\s*\d+(?:\s*/\s*\d+)*\s*", plain_domain):
+                            objective.append(
+                                f"DEVICE_BARE_CONFIG_DOMAIN {rel}:{number}: {domain}"
+                            )
+                        if re.fullmatch(r"(?:\d+(?:\.\d+)+|\d+|_)", plain_default):
+                            objective.append(
+                                f"DEVICE_BARE_CONFIG_DEFAULT {rel}:{number}: {default}"
+                            )
+
         if path in human:
             for pattern, code in (
                 (r"\binternal[ -]slot(?:s)?\b", "OBSOLETE_INTERNAL_SLOT"),

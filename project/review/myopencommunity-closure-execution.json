@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "helper_sha256": "2b66721c04a3ef7aa705c6fd97af6adb8592adbf1b7f70cb72d6e512f85a31d9",
+  "compiler": "g++ (SUSE Linux) 16.2.1 20260929",
+  "qt": "5.15.19",
+  "repository": "MyOpenCommunity/MyHomeSystemEmulator",
+  "revision": "4f93f44ee5ec7f89a3de9e040141755c847a5eda",
+  "method": "helper_execution",
+  "conditions": [
+    "Native Qt 5.15.19 Core/Xml on Linux; unchanged original files recorded by Git blob and SHA-256.",
+    "Original GenMsgWorker::run invoked synchronously; no worker scheduling, plant bus, gateway, plugin loader, physical Device or hardware executes.",
+    "Synthetic XML, trigger strings and destinations; all message delays zero. EventHandler records GUI requests.",
+    "BtGEN_dev className and PlantMgr getBuses are substitutes used only by configuration serialization; original dispatcher BtGEN_dev is source-inspected, not executed.",
+    "One leading numeric range runs in an isolated subprocess; nontermination is measured only to a one-second bound, then the subprocess is killed."
+  ],
+  "artifacts": [
+    {
+      "path": "bt_GEN_DEV_PGIN/genmsgworker.cpp",
+      "sha256": "18aff78377ec9fdead5b9ac7ab55d6163f676d1bf4b3a2fec839d23a612e4915",
+      "git_blob": "8efab5325295ea1d12a4ab3f8e7147e5ac128cdf"
+    },
+    {
+      "path": "bt_GEN_DEV_PGIN/genmsgworker.h",
+      "sha256": "e352fc562f7c7b766a8089deca4e341dd79d03b4cf0ca340120404479f55de88",
+      "git_blob": "a868c089626bc3d1ec7b0da87de80e1a3616a0a0"
+    },
+    {
+      "path": "bt_GEN_DEV_PGIN/gen_xmlserializer.cpp",
+      "sha256": "1832cd7a355994c9c0aba0cae11f3f69f4ea44a2d5bdaf4482d1d82915eb8389",
+      "git_blob": "75ddbdc93ce9a3e02f2c9f4db134af989ab1c801"
+    },
+    {
+      "path": "bt_GEN_DEV_PGIN/gen_xmlserializer.h",
+      "sha256": "25685e96d3f7b14d46a5188d098128dcb5240d4f03db31a1e723e820bc0f58ef",
+      "git_blob": "a7450f07e94a76aecd439d8fa1a06eff6f443466"
+    },
+    {
+      "path": "bt_GEN_DEV_PGIN/action.h",
+      "sha256": "46503a98b6b29e570881b4508b774e7d1e78a895ca1c52f84650ab54630109da",
+      "git_blob": "313f548658386a536932326ca414f3b3f7b24fd8"
+    },
+    {
+      "path": "bt_GEN_DEV_PGIN/message.h",
+      "sha256": "55efab422af564a554eb022680a15b13f6eb7bd48618ea2fa97e34843b0b44ca",
+      "git_blob": "53b15c52a88262d207883426c1844f90b7df0e76"
+    },
+    {
+      "path": "bt_GEN_DEV_PGIN/scenario.h",
+      "sha256": "40177cacc724f67d49b308fadb22e76024022c9fbcb7ee540c7b8ff342cf4df7",
+      "git_blob": "cb080005ff39cdf751ddc5688ec8a8a0d433842f"
+    },
+    {
+      "path": "libplant/plantmessage.cpp",
+      "sha256": "02fa1fd216e82662612787c7c42f36435f6215ddd6ab45fa35928a03f64263ed",
+      "git_blob": "56f4dc774ae3b58b29477deec63592cea78368c0"
+    },
+    {
+      "path": "libplant/plantmessage.h",
+      "sha256": "8b2009ef21fa827aab6dad2ceffba48e20c2a77c10fcc2dbbe280f44fb281717",
+      "git_blob": "cbcc56c8e6e5ffa9f3a606229c66cc2a509e39b4"
+    },
+    {
+      "path": "libplant/libplant_global.h",
+      "sha256": "e7c51654d6d3fc9fddf9443d07b2ec93c79f19999eaf368b2809e1c99295e5cb",
+      "git_blob": "665e26e79464c3d79befb86487cefa8136e7fec5"
+    },
+    {
+      "path": "libplant/eventhandler.h",
+      "sha256": "929c99f0cc49c14c9c6bf4bea47fce9f41108d06ccead98121f8723677cc42d5",
+      "git_blob": "825649d06b388ac358de646cf7a4a3929b763855"
+    },
+    {
+      "path": "libplant/syserror.h",
+      "sha256": "c9e240884faafce52d605d65ef502b7101bedf812f8e0c4bd4c5aaa10b7e4ce6",
+      "git_blob": "e188ba2876be251c08a8ef3a7397c7edfae91857"
+    }
+  ],
+  "results": [
+    {
+      "name": "script-loading-and-worker",
+      "result": "passed inclusive indices, four command/monitor responses, two GUI sink calls, unknown-channel discard, duplicate replacement, retained old trigger, valid range and saved reference"
+    },
+    {
+      "name": "leading-numeric-range",
+      "result": "subprocess exceeded one-second bound; killed; no universal timing claim"
+    }
+  ]
+}

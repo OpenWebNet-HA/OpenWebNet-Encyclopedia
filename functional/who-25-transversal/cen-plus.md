@@ -43,7 +43,7 @@ Action frame: `*25*21#PUSHBUTTON*WHERE##`.
 
 A short interaction is complete in one event. It represents a press and release occurring before the 0.5-second extended-pressure threshold; there is no separate short-release `WHAT` analogous to CEN `WHO 15` `#1`.
 
-The accepted virtual action is acknowledged with `ACK`, and the corresponding CEN+ frame is visible on event connections.
+The published action sequence acknowledges the virtual action with `ACK` and shows the corresponding CEN+ frame on event connections. Firmware-specific reply and bus-output observations are distinguished in [Gateway compatibility](#gateway-compatibility-and-hardware-boundaries).
 
 ## Start of extended pressure - `WHAT 22`
 
@@ -82,9 +82,11 @@ These operations use the same virtual Object/pushbutton addressing model. Their 
 
 ## Action and event connections
 
-CEN+ supports virtual actions and event reporting. For pushbutton interactions, a client sends the functional frame on an action connection and receives `ACK`; event-session clients receive the corresponding frame when the gateway reads the CEN+ event on the SCS bus.
+The published CEN+ action and event sequences show a client sending the functional frame on an action connection and receiving `ACK`; event-session clients receive the corresponding frame when the gateway reads the CEN+ event on the SCS bus. This is the published exchange, not an unconditional acknowledgement rule for every gateway firmware.
 
 The same event form can therefore represent an interaction originating from a physical CEN+ command or from a virtual action submitted through a gateway. The functional frame itself identifies the interaction, pushbutton and Object rather than its origin.
+
+Historical touchscreen scenario actions send the configured frame literally. Their CEN+ description labels and internal command identifiers do not select a wire `WHAT` or synthesize an extended-pressure sequence. See [Configured-action handling](../../scenario-engine/execution-model.md#historical-touchscreen-condition-evaluation) and [CEN/CEN+ implementation evidence](../../project/review/myopencommunity-cen-history-review.md#cen-and-cen-configured-actions).
 
 ## CEN+ configuration model
 
@@ -105,17 +107,30 @@ The two systems should be modeled separately even when a physical command device
 
 ## Gateway compatibility and hardware boundaries
 
-Gateway support for `WHO 25` is not uniform across OpenWebNet gateways:
+**Published protocol.** The [CEN/CEN+ specification](https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf), page 24, lists the following CEN+ compatibility. A firmware value of “not stated” preserves the source's scope rather than asserting support across every firmware release.
 
-| Gateway model | `WHO 13 MODEL` | `WHO 25` support | Behavior | Evidence / Reference |
-| --- | --- | :---: | --- | --- |
-| MH200N | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
-| MH202 | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
-| F454 | `200` | Supported | `ACK` (`*#*1##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); verified |
-| MyHomeServer1 | `200` | Supported | `ACK` (`*#*1##`) | Implementation evidence (firmware oracle replay & live capture) |
-| MH200 (1st gen) | `4` | Unsupported | `NACK` (`*#*0##`) | Published protocol (Legrand WHO 25 v1.0.0, p. 13); controlled test bench experiment (FW 2.1.0) |
+| Gateway model | Firmware in source | Published CEN+ support |
+| --- | --- | --- |
+| MH200 | Not stated | No |
+| MH200N / 03565 | Not stated | Yes |
+| F453AV | `1.0.19` | No |
+| F453AV / 573992 | `2.1.7` | Yes |
+| F453 | Not stated | Yes |
+| F452V | Not stated | No |
+| F452 | Not stated | No |
 
-The first-generation MH200 (Model 4) explicitly lacks `WHO 25` support in its firmware. Action commands (e.g. `*25*21#1*21##`), state requests (`*#25*21##`), and Scenario Plus commands (`*25*11#0*11##`) sent to an MH200 return an immediate gateway `NACK` (`*#*0##`). Installations employing an MH200 require CEN (`WHO 15`) rather than CEN+ (`WHO 25`).
+The same table lists CEN (`WHO 15`) support for MH200, while CEN+ is unavailable. This function-level distinction does not establish a response to every frame in the wider `WHO 25` namespace. The [dry-contact/IR specification](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries) has its own compatibility table.
+
+**Implementation evidence - published result inspection.** The following observations come from the pinned `who25-messages` results at own-firmware-oracle revision `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. For both CEN+ inputs `*25*21#1*21##` and `*25*23#8*233##`, the recorded reply and bus-output verdict are:
+
+| Gateway model | Firmware | Recorded socket reply | Recorded bus-output verdict | Original result |
+| --- | --- | --- | --- | --- |
+| MH200N | `010108` | `NACK` | `out` - bus bytes recorded | [MH200N result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) |
+| F454 | `020051` | `NACK` | `out` - bus bytes recorded | [F454 result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/F454/020051/oracle/full/who25-messages.tsv#L18-L19) |
+| MH202 | `010024` | `ACK` | `silent` - no bus bytes recorded | [MH202 result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH202/010024/oracle/full/who25-messages.tsv#L18-L19) |
+| MyHomeServer1 | `028206` | `NACK` | `out` - bus bytes recorded | [MyHomeServer1 result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) |
+
+The records declare the full harness, a simulated PIC responder, and `settle_ms=300`; MH200N uses `reset=each`, while the other three use `reset=0`. These are inspected published results, not a new emulator run or a physical-hardware observation. `NACK` with bus output must not be described as proof that the frame never reached the bus, and `ACK` without recorded bus output does not establish physical execution. Neither result determines gateway-wide support or rejection of unrelated `WHO 25` operations. Source hashes and review limits are recorded in the [gateway evidence review](../../project/review/who25-gateway-compatibility.md).
 
 ## Other `WHO 25` functions
 

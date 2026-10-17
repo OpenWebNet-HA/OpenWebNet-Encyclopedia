@@ -67,6 +67,8 @@ For daily holiday commands, the return-program parameter is `1101..1103` for hea
 
 Example: `*4*3102*#0##` selects weekly program 2 in the current thermal context. A reply/event can use the resolved heating or conditioning program code. An acknowledgement confirms submission, not that the requested mode was physically attained.
 
+The historical touchscreen's calendar-based setters send three frames in order: select the return program, write the end date with `DIMENSION 30`, then write the end time with `DIMENSION 31`. For daily holiday mode, the first payload is `315#PROGRAM`; for vacation mode, it is `33002#PROGRAM`. The vacation setter uses two days as a dummy value before supplying the explicit deadline. This [tested client sequence](../../project/review/myopencommunity-hvac-history-review.md#calendar-mode-sequences) does not establish a two-day minimum or a Firmware timing requirement.
+
 ## Zone setup commands
 
 Zone setup is performed through the central unit using `WHERE` forms `#1..#99`.

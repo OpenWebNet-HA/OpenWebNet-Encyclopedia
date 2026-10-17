@@ -22,6 +22,12 @@ The address prefix is not merely routing metadata. It constrains the operation s
 
 A decoder should therefore resolve the `WHERE` family before interpreting the complete operation.
 
+## Historical Stop&Go address discrepancy
+
+The `TS10_1_0_23` product configurations use instance addresses `22`, `23`, and `25` for Stop&Go, Plus, and BTest respectively. A February 2013 correction explicitly adds prefix `2` to those fixtures. The configuration parser passes each instance's complete `where` to the device class, which emits it unchanged.
+
+This conflicts with the published `1N` family. The source establishes a historical product configuration choice, but does not identify a gateway translation, applicable Firmware, complete `2N` domain, or physical Device acceptance. Preserve the configured address when investigating that product; do not replace the published family or infer interchangeability. See [Stop&Go address evidence](../../project/review/myopencommunity-reassessment.md#stopgo-address-discrepancy).
+
 ## Actuator suffix
 
 The actuator form includes the literal `#0` suffix: `7N#0`. The suffix is part of the published address grammar and must not be discarded by integer conversion or generic normalization.

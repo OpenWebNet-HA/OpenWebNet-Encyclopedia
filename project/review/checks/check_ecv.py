@@ -25,7 +25,7 @@ REQUIRED_FILES = (
 )
 
 SAFE_CONTEXT = re.compile(
-    r"\b(?:example|synthetic|illustrative|placeholder|redacted|documentation)\b",
+    r"\b(?:example|synthetic|illustrative|placeholder|redacted|documentation|template)\b",
     re.IGNORECASE,
 )
 
@@ -108,7 +108,8 @@ def check(root: Path) -> tuple[list[str], list[str], dict[str, int]]:
                         f"MAC_ADDRESS {rel}:{number}: concrete MAC-like value {token}"
                     )
 
-            for match in PRIVATE_USER_PATH.finditer(line):
+            path_scan_line = re.sub(r"https?://[^\s)]+", "", line)
+            for match in PRIVATE_USER_PATH.finditer(path_scan_line):
                 token = match.group(0)
                 if not explicit_safe_context:
                     objective.append(

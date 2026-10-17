@@ -1,2 +1,5 @@
 __pycache__/
 *.py[cod]
+
+# Private catalogue cache used only for local validation.
+/sources/myhome-suite/3.5.38/databases/MHCatalogue.db

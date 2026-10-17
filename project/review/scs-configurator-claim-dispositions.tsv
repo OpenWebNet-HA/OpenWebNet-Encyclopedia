@@ -1,0 +1,35 @@
+candidate_id	disposition	evidence	subject	canonical_destination	scope_or_exclusion
+C001	incorporated	CF039 manufacturer configurator accessory listing; older guide pp35-36; F428 pp2-4	Plug spelling and catalogue references	device-model/configurators.md#plug-vocabulary	Lettered/arrow vocabulary; numeric plugs remain selectors
+C002	incorporated	Voice manual p55; Suite light-control help	PUL command press/release	device-model/configurators.md#lighting-command	Established momentary control; no new WHAT
+C003	incorporated	F428 MQ00283-c-IT pp2-4	O/I input assignments and PUL/arrow modes	device-model/configurators.md#command-modes	F428 SPE=0 only; dimming point scope
+C004	incorporated	F411U2 ST-00000893-EN pp2-3; F411/4 ST-00000896-EN pp2-3	Master/SLA/PUL modes	device-model/configurators.md#actuator-and-local-control	Same-address follower and Room/General exclusion; delay scope retained
+C005	incorporated	LE08838AC pp5-6	Actuator local PUL cyclic; CEN/OFF selectors	device-model/configurators.md#actuator-and-local-control	Direct counterexample to universal momentary local PUL or OFF-only/CEN-only plug interpretation
+C006	incorporated	Older manufacturer guide p36; four Suite actuator-help pages	Explicit group difference	device-model/configurators.md#collective-commands-and-status	Older guide permits group; help excludes group; no Firmware/deployment chronology inferred
+C007	excluded	F411U2/F4114 2021 sheets	Group exclusion inferred from omission	device-model/configurators.md#collective-commands-and-status	Omission does not contradict or decide group treatment
+C008	excluded	All manufacturer PUL command descriptions	Command exclusion implies status suppression	device-model/configurators.md#collective-commands-and-status	Status behavior needs distinct evidence
+C009	incorporated	MQ00591-c-EN p2	Ar/PLr reference and I destination	device-model/configurators.md#positions-and-functions	I=0 complete system on this product; I=CEN riser
+C010	incorporated	BT00285-a-UK pp1,6	Special control I/LIV/AUX reuse	device-model/configurators.md#positions-and-functions	I=0 local differs from shutter sheet; timer reused positions; AUX event activates command
+C011	incorporated	MQ00179-c-EN pp1-2	Probe SLA role/count/index and removed sockets	device-model/configurators.md#temperature-control	Selector 4692 Master-only; 4693 eligible Slave; up to 8; no generic limit
+C012	incorporated	ST-00000902-EN pp2-4	F430 ZA/ZB/N combinations	device-model/configurators.md#temperature-control	Zone/output/pump roles separate; OFF can disable
+C013	incorporated	MM00789-b-EN p2	Thermostat TYPE/HEAT/COOL/CEN/PUMP/IN	device-model/configurators.md#temperature-control	COOL=CEN shares load N=1; HEAT neither0nor5; TYPE0 central Configuration
+C014	incorporated	MQ00358-d-EN p2	F520 address/input/direction	device-model/configurators.md#energy-management	127 address cap; nonzeroTa; Tb/Tc0unused; direction 0/1
+C015	incorporated	LE06852AC p2	MUL/DIV values	device-model/configurators.md#energy-management	Exact 3522N factor/divisor tables; not literal plug-number scale
+C016	incorporated	MHCatalogue 3.5.38 EN_CONF 2350,3320,3321,4329,4330	PF/P/TOL product-context names	device-model/configurators.md#energy-management	Catalogue-only fields; no global units or wire map
+C017	incorporated	MQ00280-f-EN	F422 mode-dependent I fields	device-model/configurators.md#routing-sensors-and-alarm	No new routing wire claims; existing address reference remains canonical
+C018	incorporated	MM00297-c-EN p3	Sensor S/T/D/M	device-model/configurators.md#routing-sensors-and-alarm	Exact sensitivity/lux choices and M2 reporting; product only
+C019	incorporated	MQ00035-c-EN p2	Alarm Z/N/MOD/AUX	device-model/configurators.md#routing-sensors-and-alarm	AUX plug in MOD changes behavior; numeric AUX channel; product limits not wire domains
+C020	incorporated	MQ00271-c-UK p2; MQ00283-c-IT p7	F503 A/PF/M1/M2/M3 and audio AUX	device-model/configurators.md#sound-hotel-and-door-entry-systems	PF sound point vs power factor; M1 SLA and M2 source; audio AUX distinct
+C021	incorporated	MM00774-b-EN p2; MM00771-a-EN p2	Hotel R/L/M/DEL and centralized mode	device-model/configurators.md#sound-hotel-and-door-entry-systems	Product positions; DEL empty in centralized mode
+C022	incorporated	ST-00000691-EN p2; ST-00000684-EN p2	Door/keypad N/P/M and A/B/C/T	device-model/configurators.md#sound-hotel-and-door-entry-systems	Installation context matters; numeric T timer vs arrow plug
+C023	corroborates	MHCatalogue 3.5.38 EN_CONFIG_MODE/AS_FIRMWARE_CONFIG_MODE	Physical/Virtual/Advanced/Product Programming	device-model/configurators.md#configuration-modes	No generic software=Advanced equivalence; richer Suite options product scoped
+C024	incorporated	MHCatalogue 3.5.38 Firmware145,132 exact range rows	Contextual raw codes	device-model/configurators.md#catalogue-encodings	145 A raw12-15 vs M raw9-15;132 M11SLA/15PUL verified
+C025	incorporated	MHCatalogue 3.5.38 EN_CONF3880,3905	PLU token irregularity	device-model/configurators.md#catalogue-encodings	Stored raw15 PLU retained; normalization not proven
+C026	excluded	MHCatalogue EN_CONV_RULE25 and domain O/I	O/I versus I/O automatically equivalent	internals/catalogue-resolution.md#worked-example-firmware-157	Existing textual irregularity retained; glossary is not decoder evidence
+C027	excluded	Numeric/default rows and product sheets	Universal empty=zero	device-model/configurators.md#catalogue-encodings	Only per-product equivalence supported
+C028	corroborates	libqtdevices TS10 testSimpleLight_on/off and PullStateManager	PUL classification	functional/who-1-lighting/dimensions.md#historical-collective-command-state-handling	Exact assertions classify reaction; names not physical-mechanism proof
+C029	corroborates	BtExperience TS10 lightobjects.cpp create factories	pul Configuration flag	functional/who-1-lighting/dimensions.md#historical-collective-command-state-handling	Instance override/parent fallback and local enum; no new hardware programming claim
+C030	corroborates	Emulator4f93f44 btf411dev.cpp execCommand	Point/group vs Room/General command/status	device-model/configuration.md#f411-simulator-configuration	Branches verified; group accepted independently of PUL guard; never hardware truth
+C031	excluded	Suite Automation control blade text versus MQ00591-c-EN p2	15s vs1.5s blade threshold	device-model/configurators.md#evidence-limits	Likely decimal presentation discrepancy; no universal threshold added
+C032	excluded	BT00285-a-UK SPE table versus F428 SPE table	Universal SPE namespace mapping	device-model/configurators.md#positions-and-functions	Special control uses SPE8 sound/SPE7 VDE; F428 differs; numeric function families not global
+C033	excluded	Catalogue candidate definition inventory	All idx=-1 rows are literal sockets	device-model/configurators.md#configuration-modes	Identity/network/software fields retained as exclusions
+C034	excluded	Source publication/commit dates	Deployed Firmware boundary	device-model/configurators.md#evidence-limits	Dates do not identify hardware revisions or deployed applicability

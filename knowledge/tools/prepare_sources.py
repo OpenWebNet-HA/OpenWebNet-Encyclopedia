@@ -101,6 +101,8 @@ def prepare(manifest: Path, source_root: Path) -> list[dict[str, object]]:
         if not path.is_file():
             raise ValueError(f"{label}: publishable source file is missing")
         original = path.read_text(encoding="utf-8")
+        from device_supplements import supplement_text
+        original = supplement_text(source_root, str(record["source_path"]), original)
         text, removed = sanitize(original)
         if record["classification"] == "publishable" and removed:
             raise ValueError(f"{label}: publishable source has sensitive values; classify it sanitize")
