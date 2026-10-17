@@ -9939,6 +9939,14 @@ The dry-contact/IR family uses `WHAT 31` for ON/detection and `WHAT 32` for OFF/
 
 The [functional overview](../) provides alternate navigation by function while these pages remain organized under their canonical protocol namespace.
 
+### Gateway boundaries
+
+Section ID: `ownkb:section:d000060:s000007`
+
+Applicability cues: `firmware`, `gateway`
+
+For gateway compatibility, see [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) and [Dry-contact and IR gateway compatibility](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries). These references distinguish published function support from scoped firmware observations.
+
 # Document: ownkb:document:d000061
 
 Source path: `functional/who-25-transversal/cen-plus.md`
@@ -9998,11 +10006,13 @@ A decoder should remove/interpret the CEN+ prefix according to the `WHO 25` gram
 
 Section ID: `ownkb:section:d000061:s000005`
 
+Applicability cues: `firmware`, `gateway`
+
 Action frame: `*25*21#PUSHBUTTON*WHERE##`.
 
 A short interaction is complete in one event. It represents a press and release occurring before the 0.5-second extended-pressure threshold; there is no separate short-release `WHAT` analogous to CEN `WHO 15` `#1`.
 
-The accepted virtual action is acknowledged with `ACK`, and the corresponding CEN+ frame is visible on event connections.
+The published action sequence acknowledges the virtual action with `ACK` and shows the corresponding CEN+ frame on event connections. Firmware-specific reply and bus-output observations are distinguished in [Gateway compatibility](#gateway-compatibility-and-hardware-boundaries).
 
 ### Start of extended pressure - `WHAT 22`
 
@@ -10053,11 +10063,11 @@ These operations use the same virtual Object/pushbutton addressing model. Their 
 
 Section ID: `ownkb:section:d000061:s000010`
 
-Applicability cues: `gateway`, `scs`
+Applicability cues: `firmware`, `gateway`, `scs`
 Cautions: `do not`
 Provenance cues: `evidence`
 
-CEN+ supports virtual actions and event reporting. For pushbutton interactions, a client sends the functional frame on an action connection and receives `ACK`; event-session clients receive the corresponding frame when the gateway reads the CEN+ event on the SCS bus.
+The published CEN+ action and event sequences show a client sending the functional frame on an action connection and receiving `ACK`; event-session clients receive the corresponding frame when the gateway reads the CEN+ event on the SCS bus. This is the published exchange, not an unconditional acknowledgement rule for every gateway firmware.
 
 The same event form can therefore represent an interaction originating from a physical CEN+ command or from a virtual action submitted through a gateway. The functional frame itself identifies the interaction, pushbutton and Object rather than its origin.
 
@@ -10099,6 +10109,71 @@ Provenance cues: `source`
 | Rotary events | not defined in the published CEN table | `WHAT 25..28` |
 
 The two systems should be modeled separately even when a physical command device is capable of both modes.
+
+### Gateway compatibility and hardware boundaries
+
+Section ID: `ownkb:section:d000061:s000014`
+
+Applicability cues: `firmware`, `gateway`, `revision`
+Cautions: `must not`
+Provenance cues: `evidence`, `source`, `specification`
+
+**Published protocol.** The [CEN/CEN+ specification](https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf), page 24, lists the following CEN+ compatibility. A firmware value of “not stated” preserves the source's scope rather than asserting support across every firmware release.
+
+| Gateway model | Firmware in source | Published CEN+ support |
+| --- | --- | --- |
+| MH200 | Not stated | No |
+| MH200N / 03565 | Not stated | Yes |
+| F453AV | `1.0.19` | No |
+| F453AV / 573992 | `2.1.7` | Yes |
+| F453 | Not stated | Yes |
+| F452V | Not stated | No |
+| F452 | Not stated | No |
+
+The same table lists CEN (`WHO 15`) support for MH200, while CEN+ is unavailable. This function-level distinction does not establish a response to every frame in the wider `WHO 25` namespace. The [dry-contact/IR specification](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries) has its own compatibility table.
+
+**Implementation evidence - published result inspection.** The following observations come from the pinned `who25-messages` results at own-firmware-oracle revision `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. For both CEN+ inputs `*25*21#1*21##` and `*25*23#8*233##`, the recorded reply and bus-output verdict are:
+
+| Gateway model | Firmware | Recorded socket reply | Recorded bus-output verdict | Original result |
+| --- | --- | --- | --- | --- |
+| MH200N | `010108` | `NACK` | `out` - bus bytes recorded | [MH200N result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) |
+| F454 | `020051` | `NACK` | `out` - bus bytes recorded | [F454 result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/F454/020051/oracle/full/who25-messages.tsv#L18-L19) |
+| MH202 | `010024` | `ACK` | `silent` - no bus bytes recorded | [MH202 result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH202/010024/oracle/full/who25-messages.tsv#L18-L19) |
+| MyHomeServer1 | `028206` | `NACK` | `out` - bus bytes recorded | [MyHomeServer1 result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) |
+
+The records declare the full harness, a simulated PIC responder, and `settle_ms=300`; MH200N uses `reset=each`, while the other three use `reset=0`. These are inspected published results, not a new emulator run or a physical-hardware observation. `NACK` with bus output must not be described as proof that the frame never reached the bus, and `ACK` without recorded bus output does not establish physical execution. Neither result determines gateway-wide support or rejection of unrelated `WHO 25` operations. Source hashes and review limits are recorded in the [gateway evidence review](../../project/review/who25-gateway-compatibility.md).
+
+Evidence finding `who25-mh200n-result` (claimed): MH200N FW 010108 recorded CEN+ reply and bus-output distinction
+Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
+Individual claims: `ownkb:claim:c074010`
+- `ownkb:source:s001136`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074010
+  Conditions: Full harness; simulated PIC; MH200N FW 010108; reset=each; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
+
+Evidence finding `who25-f454-result` (claimed): F454 FW 020051 recorded CEN+ reply and bus-output distinction
+Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
+Individual claims: `ownkb:claim:c074011`
+- `ownkb:source:s001137`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/F454/020051/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074011
+  Conditions: Full harness; simulated PIC; F454 FW 020051; reset=0; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
+
+Evidence finding `who25-mh202-result` (claimed): MH202 FW 010024 recorded CEN+ reply and bus-output distinction
+Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
+Individual claims: `ownkb:claim:c074012`
+- `ownkb:source:s001138`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH202/010024/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074012
+  Conditions: Full harness; simulated PIC; MH202 FW 010024; reset=0; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
+
+Evidence finding `who25-myhomeserver1-result` (claimed): MyHomeServer1 FW 028206 recorded CEN+ reply and bus-output distinction
+Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
+Individual claims: `ownkb:claim:c074013`
+- `ownkb:source:s001139`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074013
+  Conditions: Full harness; simulated PIC; MyHomeServer1 FW 028206; reset=0; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
 
 ### Other `WHO 25` functions
 
@@ -10186,6 +10261,27 @@ Individual claims: `ownkb:claim:moc-c007688`, `ownkb:claim:moc-c007689`, `ownkb:
   Conditions: Qt5 Core, 22 original bodies; controlled parser fields, output, signal, construction and timer seams.
   Limitations: Recorded targeted execution from the cited earlier review; not rerun as a complete legacy suite or hardware experiment.
   Execution record: original_helper_in_adapted_harness - 21 comparisons passed across the review harness; original parameter preservation remains inspected-test evidence.; Qt5 Core, 22 original bodies; controlled parser fields, output, signal, construction and timer seams.. Inputs: Contact query/decode/repeats; Local initialization and changed notifications. Record: `project/review/myopencommunity-cen-history-review.md` (21 comparisons).
+
+### Gateway compatibility and hardware boundaries
+
+Section ID: `ownkb:section:d000062:s000006`
+
+Applicability cues: `firmware`, `gateway`, `version`
+Provenance cues: `source`, `specification`
+
+**Published protocol.** The [dry-contact/IR specification](https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf), version `1.0.0`, page 13, lists the following availability for dry-contact and IR state functions. Firmware marked “not stated” remains unspecified in that table.
+
+| Gateway model | Firmware in source | Published dry-contact / IR support |
+| --- | --- | --- |
+| MH200 | Not stated | No |
+| MH200N / 03565 | Not stated | Yes |
+| F453AV | `1.0.19` | No |
+| F453AV / 573992 | `2.1.7` | Yes |
+| F453 | Not stated | Yes |
+| F452V | Not stated | No |
+| F452 | Not stated | No |
+
+This source does not list MH202, F454 or MyHomeServer1. Their absence from this historical table is not a finding of incompatibility. Published dry-contact/IR availability does not establish the reply to every `WHO 25` request or support for the separate CEN+ and ScenarioPlus families. See [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) for the CEN+ specification and the scoped replay observations; the replay comparison there covers CEN+ commands, not dry-contact state queries.
 
 ### Functional navigation
 

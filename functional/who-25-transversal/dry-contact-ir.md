@@ -37,6 +37,22 @@ The client combines replies and events into one local boolean; its `DIM_STATUS` 
 
 BtExperience selects this `WHO 25` receiver for its Automation contact Objects, preserving the configured `WHERE`. Its displayed state starts locally as inactive and emits a change notification only when the boolean changes. The initial display therefore is not a confirmed contact reading, and the change-only notification policy does not redefine bus events. See [Contact-client evidence](../../project/review/myopencommunity-cen-history-review.md#contact-receipt-and-product-state).
 
+## Gateway compatibility and hardware boundaries
+
+**Published protocol.** The [dry-contact/IR specification](https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf), version `1.0.0`, page 13, lists the following availability for dry-contact and IR state functions. Firmware marked “not stated” remains unspecified in that table.
+
+| Gateway model | Firmware in source | Published dry-contact / IR support |
+| --- | --- | --- |
+| MH200 | Not stated | No |
+| MH200N / 03565 | Not stated | Yes |
+| F453AV | `1.0.19` | No |
+| F453AV / 573992 | `2.1.7` | Yes |
+| F453 | Not stated | Yes |
+| F452V | Not stated | No |
+| F452 | Not stated | No |
+
+This source does not list MH202, F454 or MyHomeServer1. Their absence from this historical table is not a finding of incompatibility. Published dry-contact/IR availability does not establish the reply to every `WHO 25` request or support for the separate CEN+ and ScenarioPlus families. See [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) for the CEN+ specification and the scoped replay observations; the replay comparison there covers CEN+ commands, not dry-contact state queries.
+
 ## Functional navigation
 
 Dry contacts are indexed separately in [Functional Protocol](../README.md) so readers searching by function can reach this page directly while the canonical reference remains under `WHO 25`.

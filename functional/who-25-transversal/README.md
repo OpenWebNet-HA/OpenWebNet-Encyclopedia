@@ -41,3 +41,7 @@ CEN+ complements Basic/Evolved CEN under [`WHO 15`](../who-15-cen/). In CEN+, th
 The dry-contact/IR family uses `WHAT 31` for ON/detection and `WHAT 32` for OFF/no detection. It remains under the canonical `WHO 25` namespace even though its address grammar is unrelated to CEN+ virtual Objects.
 
 The [functional overview](../) provides alternate navigation by function while these pages remain organized under their canonical protocol namespace.
+
+## Gateway boundaries
+
+For gateway compatibility, see [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) and [Dry-contact and IR gateway compatibility](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries). These references distinguish published function support from scoped firmware observations.

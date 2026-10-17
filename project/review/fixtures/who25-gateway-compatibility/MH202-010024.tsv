@@ -1,0 +1,21 @@
+# product=MH202
+# version=010024
+# image_sha256=bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7
+# harness=full
+# target_sha256=5858374ef26a02c10381cb7ffd09cabbf762367ecce090e238cdde81c1ffced4
+# adapter=pty-1
+# reset=0
+# bus=pty
+# framer=line
+# responder=pic
+# settle_ms=300
+# suite=who25-messages
+# suite_sha256=57f36863e445aa963e48f4bfcd45297256dab5a2842c6b3c9944e66a845f7bb5
+# oracle_version=1
+direction	input	reply	verdict	output
+down	*25*11#121*10##	ack	out	bus:24 30 34 42 31 30 30 39 33 37 39 0d
+down	*25*12*131##	ack	silent	-
+down	*25*21#1*21##	ack	silent	-
+down	*25*23#8*233##	ack	silent	-
+down	*25*31#1*339##	ack	silent	-
+down	*25*32#1*33##	ack	silent	-
