@@ -1,17 +1,17 @@
 {
   "format_version": 1,
-  "baseline_commit": "d166b48884d396d61debc5aaa5a1822d27d41bc1",
-  "reason": "Existing large ordinary KB blobs retained unchanged. New versions must use LFS; this is not a path exemption or permission to rewrite history.",
+  "baseline_commit": "7102cffdcee8f3fd0f66aaca956472143508133f",
+  "reason": "Existing large ordinary KB blobs retained unchanged from current main before this storage policy is introduced. New versions must use LFS; this is not a path exemption or permission to rewrite history.",
   "ordinary_blobs": [
     {
       "path": "knowledge/id-registry.json",
-      "git_blob": "5824bf2ca80db7bcc14c29a44c40eaf108d9205b",
-      "size_bytes": 9503811
+      "git_blob": "f7dcfc8b285f086cd23c732bd2676e570c48324b",
+      "size_bytes": 9507857
     },
     {
       "path": "knowledge/inputs/claim-context.json",
-      "git_blob": "8cfb89d6673dab928e297b980900169cd4cb8987",
-      "size_bytes": 37958049
+      "git_blob": "e78c52731f7a02b0f1f2c93f5919531dbe67a1c3",
+      "size_bytes": 37977091
     },
     {
       "path": "knowledge/inputs/device-unit-review.json",
@@ -20,23 +20,23 @@
     },
     {
       "path": "knowledge/inputs/id-registry.json",
-      "git_blob": "5824bf2ca80db7bcc14c29a44c40eaf108d9205b",
-      "size_bytes": 9503811
+      "git_blob": "f7dcfc8b285f086cd23c732bd2676e570c48324b",
+      "size_bytes": 9507857
     },
     {
       "path": "knowledge/inputs/reference-records.json",
-      "git_blob": "61383a381f3a8d018eacc3eb21e8211e31ab8404",
-      "size_bytes": 26016387
+      "git_blob": "bc61870a8d858fd57caa0459813466ad08008eae",
+      "size_bytes": 26031286
     },
     {
       "path": "knowledge/llm/llm-corpus.md",
-      "git_blob": "9676922e3c23c8668efde4dae1e62d9f8a1a7b52",
-      "size_bytes": 10374915
+      "git_blob": "f05707cee5b36699a3ce60b7eccf52a8136f1420",
+      "size_bytes": 10414882
     },
     {
       "path": "knowledge/reference/entities.jsonl",
-      "git_blob": "105933b8ada661ac4134205b97dd7981c594daaa",
-      "size_bytes": 19502961
+      "git_blob": "8beedbfb34513a7c151a52110f36137d067ff94b",
+      "size_bytes": 19505727
     },
     {
       "path": "knowledge/reference/relationships.jsonl",
@@ -45,8 +45,8 @@
     },
     {
       "path": "knowledge/retrieval/chunks.jsonl",
-      "git_blob": "002beb2ee925a14f050513d9f60a30aaeea2ea6c",
-      "size_bytes": 18746689
+      "git_blob": "7e9315ce1c124592c9e9cc1d32a2bc03662503bf",
+      "size_bytes": 18820617
     }
   ]
 }

@@ -1,0 +1,257 @@
+{
+  "source": "https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459",
+  "withdrawn_source": "https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336110877",
+  "original_files": [
+    {
+      "file": "frames.jsonl",
+      "sha256": "2890a121975a334eebe29047cbe4dba137128cf40cb6c34d4134b2eb4bfceadf",
+      "size": 12618
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "a92418b22ae45543da4b88c67c21464153e8d2312d95dca7becfd26fc393c9dd",
+      "size": 4350
+    },
+    {
+      "file": "privacy.json",
+      "sha256": "269d41e2a2c350484a4bca2fab91b0fdce7635cdecc904ea74eaf8364616b748",
+      "size": 834
+    },
+    {
+      "file": "raw-session-log.jsonl",
+      "sha256": "2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28",
+      "size": 5298
+    }
+  ],
+  "transformations": [
+    "Discard the withdrawn 2026-10-17 physical-capture details; use only the 2026-10-22 replacement.",
+    "Exclude authentication/handshake records.",
+    "Exclude the clock query exchange and unsolicited clock payloads.",
+    "Replace the live lighting address with synthetic WHERE 99 in both retained representations.",
+    "Replace installation, bus and gateway identifiers with unlinked public labels; retain capture date only.",
+    "Rebase time to the first identification query, retaining fractional relative milliseconds in session-log.jsonl; frames.jsonl uses integer rounding.",
+    "Preserve every WHO 25 TX frame and its command-session NACK byte-for-byte."
+  ],
+  "omitted_source_frame_sequences": [
+    25,
+    26,
+    27,
+    28,
+    41
+  ],
+  "retained_records": [
+    {
+      "seq": 1,
+      "source_frame_seq": 1,
+      "source_raw_line": 11
+    },
+    {
+      "seq": 2,
+      "source_frame_seq": 2,
+      "source_raw_line": 12
+    },
+    {
+      "seq": 3,
+      "source_frame_seq": 3,
+      "source_raw_line": 13
+    },
+    {
+      "seq": 4,
+      "source_frame_seq": 4,
+      "source_raw_line": 14
+    },
+    {
+      "seq": 5,
+      "source_frame_seq": 5,
+      "source_raw_line": 15
+    },
+    {
+      "seq": 6,
+      "source_frame_seq": 6,
+      "source_raw_line": 16
+    },
+    {
+      "seq": 7,
+      "source_frame_seq": 7,
+      "source_raw_line": 17
+    },
+    {
+      "seq": 8,
+      "source_frame_seq": 8,
+      "source_raw_line": 18
+    },
+    {
+      "seq": 9,
+      "source_frame_seq": 9,
+      "source_raw_line": 19
+    },
+    {
+      "seq": 10,
+      "source_frame_seq": 10,
+      "source_raw_line": 20
+    },
+    {
+      "seq": 11,
+      "source_frame_seq": 11,
+      "source_raw_line": 21
+    },
+    {
+      "seq": 12,
+      "source_frame_seq": 12,
+      "source_raw_line": 22
+    },
+    {
+      "seq": 13,
+      "source_frame_seq": 13,
+      "source_raw_line": 23
+    },
+    {
+      "seq": 14,
+      "source_frame_seq": 14,
+      "source_raw_line": 24
+    },
+    {
+      "seq": 15,
+      "source_frame_seq": 15,
+      "source_raw_line": 25
+    },
+    {
+      "seq": 16,
+      "source_frame_seq": 16,
+      "source_raw_line": 26
+    },
+    {
+      "seq": 17,
+      "source_frame_seq": 17,
+      "source_raw_line": 27
+    },
+    {
+      "seq": 18,
+      "source_frame_seq": 18,
+      "source_raw_line": 28
+    },
+    {
+      "seq": 19,
+      "source_frame_seq": 19,
+      "source_raw_line": 29
+    },
+    {
+      "seq": 20,
+      "source_frame_seq": 20,
+      "source_raw_line": 30
+    },
+    {
+      "seq": 21,
+      "source_frame_seq": 21,
+      "source_raw_line": 31
+    },
+    {
+      "seq": 22,
+      "source_frame_seq": 22,
+      "source_raw_line": 32
+    },
+    {
+      "seq": 23,
+      "source_frame_seq": 23,
+      "source_raw_line": 33
+    },
+    {
+      "seq": 24,
+      "source_frame_seq": 24,
+      "source_raw_line": 34
+    },
+    {
+      "seq": 25,
+      "source_frame_seq": 29,
+      "source_raw_line": 39
+    },
+    {
+      "seq": 26,
+      "source_frame_seq": 30,
+      "source_raw_line": 40
+    },
+    {
+      "seq": 27,
+      "source_frame_seq": 31,
+      "source_raw_line": 41
+    },
+    {
+      "seq": 28,
+      "source_frame_seq": 32,
+      "source_raw_line": 42
+    },
+    {
+      "seq": 29,
+      "source_frame_seq": 33,
+      "source_raw_line": 43
+    },
+    {
+      "seq": 30,
+      "source_frame_seq": 34,
+      "source_raw_line": 44
+    },
+    {
+      "seq": 31,
+      "source_frame_seq": 35,
+      "source_raw_line": 45
+    },
+    {
+      "seq": 32,
+      "source_frame_seq": 36,
+      "source_raw_line": 46
+    },
+    {
+      "seq": 33,
+      "source_frame_seq": 37,
+      "source_raw_line": 47
+    },
+    {
+      "seq": 34,
+      "source_frame_seq": 38,
+      "source_raw_line": 48
+    },
+    {
+      "seq": 35,
+      "source_frame_seq": 39,
+      "source_raw_line": 49
+    },
+    {
+      "seq": 36,
+      "source_frame_seq": 40,
+      "source_raw_line": 50
+    },
+    {
+      "seq": 37,
+      "source_frame_seq": 42,
+      "source_raw_line": 52
+    },
+    {
+      "seq": 38,
+      "source_frame_seq": 43,
+      "source_raw_line": 53
+    },
+    {
+      "seq": 39,
+      "source_frame_seq": 44,
+      "source_raw_line": 54
+    },
+    {
+      "seq": 40,
+      "source_frame_seq": 45,
+      "source_raw_line": 55
+    },
+    {
+      "seq": 41,
+      "source_frame_seq": 46,
+      "source_raw_line": 56
+    },
+    {
+      "seq": 42,
+      "source_frame_seq": 47,
+      "source_raw_line": 57
+    }
+  ],
+  "declared_probe_window_ms": 2000,
+  "window_limit": "The source recipe declares the observation windows; its raw log has no explicit final observation-end marker. Absence is bounded to the contributor recording and declared setup.",
+  "method": "Source inspection and deterministic projection of a contributor recording; no hardware or emulator was run for this integration."
+}
