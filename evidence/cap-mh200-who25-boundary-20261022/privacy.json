@@ -1,0 +1,27 @@
+{
+  "classification": "sanitized",
+  "removed_value_classes": [
+    "capture_metadata",
+    "credential",
+    "device_id",
+    "hardware_id",
+    "installation_topology",
+    "network_address"
+  ],
+  "notes": "Derived privacy projection, not the complete original recording. Authentication frames, original installation/bus/gateway identifiers and all date/time query data are excluded. The physical lighting control uses synthetic WHERE 99. No WHO 25 probe or command reply was removed or changed. Original fingerprints, retained-record mapping and exact transformations are in projection.json; session-log.jsonl preserves session labels and fractional relative timing without credentials or wall-clock payloads.",
+  "pseudonymization": {
+    "gateway": "MH200-GW-01",
+    "lighting_positive_control": "Synthetic WHERE 99; original configured address is omitted."
+  },
+  "retained_local_addresses": [
+    "0",
+    "10",
+    "11",
+    "131",
+    "21",
+    "233",
+    "33",
+    "339",
+    "99"
+  ]
+}

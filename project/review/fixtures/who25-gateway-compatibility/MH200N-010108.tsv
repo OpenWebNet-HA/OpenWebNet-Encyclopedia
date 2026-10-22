@@ -1,0 +1,21 @@
+# product=MH200N
+# version=010108
+# image_sha256=e32d3404302f3619bbbb564ae50554ab81ac6ef818b6e5a2290142a5e2ab5fb3
+# harness=full
+# target_sha256=4ac640408201240096b09374522a7130967ad074047aa3a0aa455835fd737301
+# adapter=pty-1
+# reset=each
+# bus=pty
+# framer=line
+# responder=pic
+# settle_ms=300
+# suite=who25-messages
+# suite_sha256=57f36863e445aa963e48f4bfcd45297256dab5a2842c6b3c9944e66a845f7bb5
+# oracle_version=1
+direction	input	reply	verdict	output
+down	*25*11#121*10##	nack	silent	-
+down	*25*12*131##	nack	out	bus:24 30 34 42 31 31 46 39 34 30 30 0d | bus:24 32 34 0d | bus:24 32 34 0d
+down	*25*21#1*21##	nack	out	bus:24 30 34 42 32 30 31 39 30 30 31 0d | bus:24 32 34 0d | bus:24 32 34 0d
+down	*25*23#8*233##	nack	out	bus:24 30 34 42 32 32 31 39 32 30 38 0d | bus:24 32 34 0d | bus:24 32 34 0d
+down	*25*31#1*339##	nack	out	bus:24 30 34 42 34 33 39 39 32 30 30 0d | bus:24 32 34 0d | bus:24 32 34 0d
+down	*25*32#1*33##	nack	out	bus:24 30 34 42 34 30 33 39 32 30 31 0d | bus:24 32 34 0d | bus:24 32 34 0d
