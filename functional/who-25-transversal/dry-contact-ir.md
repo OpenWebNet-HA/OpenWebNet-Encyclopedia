@@ -53,6 +53,8 @@ BtExperience selects this `WHO 25` receiver for its Automation contact Objects, 
 
 This source does not list MH202, F454 or MyHomeServer1. Their absence from this historical table is not a finding of incompatibility. Published dry-contact/IR availability does not establish the reply to every `WHO 25` request or support for the separate CEN+ and ScenarioPlus families. See [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) for the CEN+ specification and the scoped replay observations; the replay comparison there covers CEN+ commands, not dry-contact state queries.
 
+**Physical MH200 capture inspection.** The [2026-10-22 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on MH200 firmware 2.1.0 for literal status request `*#25*21##` after 19.576 ms, `*25*31#1*339##` after 39.486 ms, and `*25*32#1*33##` after 14.686 ms. No dry-contact/IR interface was installed or configured. These are literal probe results: `WHERE 339` is outside the published address forms above, and none of the replies alone establishes a valid configured Device response or a gateway-wide rejection rule. The WHAT meanings remain 31 for ON/detection and 32 for OFF/no detection. Incoming physical WHO 25 events and physical bus forwarding were not tested.
+
 ## Functional navigation
 
 Dry contacts are indexed separately in [Functional Protocol](../README.md) so readers searching by function can reach this page directly while the canonical reference remains under `WHO 25`.

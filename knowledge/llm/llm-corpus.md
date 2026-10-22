@@ -9881,8 +9881,9 @@ Applicability cues: `zigbee`
 
 Section ID: `ownkb:section:d000060:s000006`
 
+Applicability cues: `firmware`
 Cautions: `do not`
-Provenance cues: `evidence`, `source`
+Provenance cues: `capture`, `evidence`, `source`
 
 The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` family under `WHO 25`:
 
@@ -9897,6 +9898,8 @@ The BTicino touchscreen `ScenarioPlusDevice` emits a separate `WHAT 11..15` fami
 These are executable implementation forms at `TS10_1_0_23`, separate from CEN+ `21..28`. Earlier source used increment/decrement suffix `#1`; the 2010 correction uses `#5`. The meaning and accepted range of this step parameter, and the complete ScenarioPlus address domain, are not independently established. Do not apply the CEN+ virtual-Object range automatically. See [Transversal evidence](../../project/review/myopencommunity-integration.md#transversal-functions).
 
 An earlier touchscreen controller sends increase/decrease on press, repeats the command using a one-second timer, and sends stop when release cancels the active timer. This is application behavior, separate from CEN+ `22..24` held-button events. The `ScenarioPlusDevice` API supplies command writers without a dedicated state decoder; sending ON/OFF does not establish an observed scenario state. See [Controller and feedback evidence](../../project/review/myopencommunity-cen-history-review.md#scenarioplus-writers-and-controller).
+
+The [2026-10-22 physical MH200 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on firmware 2.1.0 for literal ScenarioPlus-family probes `*25*11#0*11##` after 25.392 ms, `*25*11#121*10##` after 23.398 ms, and `*25*12*131##` after 34.942 ms. These are responses to those bytes in the recorded setup; the test does not establish the complete valid ScenarioPlus address/parameter domain or a namespace-wide WHO 25 rejection rule. It does not establish incoming ScenarioPlus event handling or physical bus forwarding.
 
 Evidence finding `moc-e0054` (claimed): ScenarioPlus writer and press controller
 Disposition reason: Reviewed scoped implementation finding materialized; no protocol-wide or physical-device generalization.
@@ -9914,6 +9917,30 @@ Individual claims: `ownkb:claim:moc-c007823`, `ownkb:claim:moc-c007824`
 - `ownkb:source:moc-s000245`: source_inspection; client; direct; supports. [MyOpenCommunity/libqtdevices - Scenario|timerEvent|increase|decrease|stop](https://github.com/OpenWebNet-HA/libqtdevices/blob/20b67275c780d5d0d4643ef446eabe6ad28877e5/bann_scenario.cpp#L19-L389) at `20b67275c780d5d0d4643ef446eabe6ad28877e5`. Review: `project/review/myopencommunity-cen-history-review.md`.
   Examination claims: ownkb:claim:moc-c007823, ownkb:claim:moc-c007824
   Limitations: Applies only to the pinned implementation; does not establish deployed product/Firmware behavior.; Executable behavior read from source; not a recorded runtime or hardware observation.
+
+Evidence finding `who25-physical-c074149` (claimed): Physical MH200 2.1.0 literal *25*11#0*11## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074149`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 4084, "start_offset": 3902}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074149
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
+
+Evidence finding `who25-physical-c074151` (claimed): Physical MH200 2.1.0 literal *25*11#121*10## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074151`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 4448, "start_offset": 4263}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074151
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
+
+Evidence finding `who25-physical-c074152` (claimed): Physical MH200 2.1.0 literal *25*12*131## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074152`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 4630, "start_offset": 4448}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074152
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
 
 ### Function selection
 
@@ -10114,9 +10141,9 @@ The two systems should be modeled separately even when a physical command device
 
 Section ID: `ownkb:section:d000061:s000014`
 
-Applicability cues: `firmware`, `gateway`, `revision`
-Cautions: `must not`
-Provenance cues: `evidence`, `source`, `specification`
+Applicability cues: `firmware`, `gateway`, `revision`, `scs`
+Cautions: `do not`, `must not`
+Provenance cues: `capture`, `evidence`, `source`, `specification`
 
 **Published protocol.** The [CEN/CEN+ specification](https://archive.openwebnet-ha.org/sha256/8b/f0/8bf06ff1394615dbf6d46a1fc8b9c53573ed96f1c1b112b2dd8a6021faf3dd21.pdf), page 24, lists the following CEN+ compatibility. A firmware value of “not stated” preserves the source's scope rather than asserting support across every firmware release.
 
@@ -10132,7 +10159,24 @@ Provenance cues: `evidence`, `source`, `specification`
 
 The same table lists CEN (`WHO 15`) support for MH200, while CEN+ is unavailable. This function-level distinction does not establish a response to every frame in the wider `WHO 25` namespace. The [dry-contact/IR specification](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries) has its own compatibility table.
 
-**Implementation evidence - published result inspection.** The following observations come from the pinned `who25-messages` results at own-firmware-oracle revision `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. For both CEN+ inputs `*25*21#1*21##` and `*25*23#8*233##`, the recorded reply and bus-output verdict are:
+**Current oracle v3 result inspection.** The pinned results at own-firmware-oracle revision `8a61bbeb1d26354241debac84a7310142e5ab3a5` record the following for both `*25*21#1*21##` and `*25*23#8*233##`. These observations are from executed firmware under a simulated PIC, inspected here without rerunning it; they are separate from physical gateway observations.
+
+| Gateway model | Firmware | Recorded socket reply | Recorded bus-output verdict | Original result |
+| --- | --- | --- | --- | --- |
+| MH200 | `020102` | `NACK` | `silent` - no bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH200/020102/oracle/full/who25-messages.tsv#L18-L19) |
+| MH200N | `010108` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) |
+| F453 | `010100` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/F453/010100/oracle/full/who25-messages.tsv#L18-L19) |
+| F454 | `020051` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/F454/020051/oracle/full/who25-messages.tsv#L18-L19) |
+| MH202 | `010024` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH202/010024/oracle/full/who25-messages.tsv#L18-L19) |
+| MyHomeServer1 | `028206` | `NACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) |
+
+All six records declare the full harness, `oracle_version=3`, a simulated PIC responder, `reset=0` and `settle_ms=3000`. The latter is a declared limit, not proof of a complete three-second observation. The upstream [$04 PIC acknowledgement fix](https://github.com/OpenWebNet-HA/own-firmware-oracle/commit/fe0eff552b9b031c692f8e08b428a94ebddf31c2) and [CPU-idle settling change](https://github.com/OpenWebNet-HA/own-firmware-oracle/commit/2e45bfac7e2c4e34b8c8ec3d2779285065ab7d05) explain why the newer comparison must be scoped separately from v1. MH200N and F454 now record ACK with bus output; MH202 now records bus output as well. MyHomeServer1 still records NACK with bus output, so a socket acknowledgement remains distinct from forwarding. Recorded bus bytes do not establish physical execution, and these two CEN+ inputs do not establish acceptance of every WHO 25 operation.
+
+**Physical MH200 capture inspection.** In the [2026-10-22 contributor capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json), the identified MH200 firmware 2.1.0 returns NACK for `*25*21#1*21##` after 57.430 ms and `*25*23#8*233##` after 24.200 ms. The first frame uses pushbutton 1 on CEN+ Object 1 (`WHERE 21`); the second uses pushbutton 8 on Object 33 (`WHERE 233`). These are recorded replies to those literal probes on that setup, not a namespace-wide rejection rule. Other families are described separately in [ScenarioPlus controls](README.md#historical-scenarioplus-controls) and [Dry Contact and IR](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries).
+
+The contributor declared a 2000 ms command/event observation window per probe, and no WHO 25 event frame occurs in the eight recorded probe windows. A physical lighting positive control shows that the event session was live. No WHO 25 transmitter or dry-contact/IR interface was installed or configured, and no independent physical SCS bus capture was made. Incoming WHO 25 event handling and physical bus forwarding therefore remain untested. The raw log does not include an explicit final observation-end marker. We inspected and privacy-projected the contributor recording; we did not run hardware ourselves. The [projection record](../../evidence/cap-mh200-who25-boundary-20261022/projection.json) describes filtering and fingerprints. See the [gateway evidence review](../../project/review/who25-gateway-compatibility.md) for the withdrawn capture, original source hashes and review limits.
+
+**Historical oracle v1 records.** The following superseded harness observations come from the pinned `who25-messages` results at own-firmware-oracle revision `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. For both CEN+ inputs `*25*21#1*21##` and `*25*23#8*233##`, the recorded reply and bus-output verdict are:
 
 | Gateway model | Firmware | Recorded socket reply | Recorded bus-output verdict | Original result |
 | --- | --- | --- | --- | --- |
@@ -10143,37 +10187,111 @@ The same table lists CEN (`WHO 15`) support for MH200, while CEN+ is unavailable
 
 The records declare the full harness, a simulated PIC responder, and `settle_ms=300`; MH200N uses `reset=each`, while the other three use `reset=0`. These are inspected published results, not a new emulator run or a physical-hardware observation. `NACK` with bus output must not be described as proof that the frame never reached the bus, and `ACK` without recorded bus output does not establish physical execution. Neither result determines gateway-wide support or rejection of unrelated `WHO 25` operations. Source hashes and review limits are recorded in the [gateway evidence review](../../project/review/who25-gateway-compatibility.md).
 
-Evidence finding `who25-mh200n-result` (claimed): MH200N FW 010108 recorded CEN+ reply and bus-output distinction
-Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
-Individual claims: `ownkb:claim:c074010`
-- `ownkb:source:s001136`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
-  Examination claims: ownkb:claim:c074010
-  Conditions: Full harness; simulated PIC; MH200N FW 010108; reset=each; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
-  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
+The v1 rows are preserved as historical recording facts. Their response/output combinations must not be used as the current firmware comparison: the later PIC responder and settling fixes changed the harness conditions. The original source fingerprints and claim identities remain traceable.
 
-Evidence finding `who25-f454-result` (claimed): F454 FW 020051 recorded CEN+ reply and bus-output distinction
-Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
+Evidence finding `who25-f454-result` (claimed): Historical v1 recording: F454 FW 020051 recorded CEN+ reply and bus-output distinction
+Disposition reason: Historical exact-revision record; later PIC responder and settling fixes supersede this comparison as current gateway evidence.
 Individual claims: `ownkb:claim:c074011`
 - `ownkb:source:s001137`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/F454/020051/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
   Examination claims: ownkb:claim:c074011
   Conditions: Full harness; simulated PIC; F454 FW 020051; reset=0; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
-  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.; Superseded for current comparison by oracle v3 at 8a61bbeb1d26354241debac84a7310142e5ab3a5.
 
-Evidence finding `who25-mh202-result` (claimed): MH202 FW 010024 recorded CEN+ reply and bus-output distinction
-Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
+Evidence finding `who25-mh200n-result` (claimed): Historical v1 recording: MH200N FW 010108 recorded CEN+ reply and bus-output distinction
+Disposition reason: Historical exact-revision record; later PIC responder and settling fixes supersede this comparison as current gateway evidence.
+Individual claims: `ownkb:claim:c074010`
+- `ownkb:source:s001136`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074010
+  Conditions: Full harness; simulated PIC; MH200N FW 010108; reset=each; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.; Superseded for current comparison by oracle v3 at 8a61bbeb1d26354241debac84a7310142e5ab3a5.
+
+Evidence finding `who25-mh202-result` (claimed): Historical v1 recording: MH202 FW 010024 recorded CEN+ reply and bus-output distinction
+Disposition reason: Historical exact-revision record; later PIC responder and settling fixes supersede this comparison as current gateway evidence.
 Individual claims: `ownkb:claim:c074012`
 - `ownkb:source:s001138`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MH202/010024/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
   Examination claims: ownkb:claim:c074012
   Conditions: Full harness; simulated PIC; MH202 FW 010024; reset=0; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
-  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.; Superseded for current comparison by oracle v3 at 8a61bbeb1d26354241debac84a7310142e5ab3a5.
 
-Evidence finding `who25-myhomeserver1-result` (claimed): MyHomeServer1 FW 028206 recorded CEN+ reply and bus-output distinction
-Disposition reason: Direct inspection of two rows in a pinned published result; no hardware generalization.
+Evidence finding `who25-myhomeserver1-result` (claimed): Historical v1 recording: MyHomeServer1 FW 028206 recorded CEN+ reply and bus-output distinction
+Disposition reason: Historical exact-revision record; later PIC responder and settling fixes supersede this comparison as current gateway evidence.
 Individual claims: `ownkb:claim:c074013`
 - `ownkb:source:s001139`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages recorded CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) at `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. Review: `project/review/who25-gateway-compatibility.md`.
   Examination claims: ownkb:claim:c074013
   Conditions: Full harness; simulated PIC; MyHomeServer1 FW 028206; reset=0; declared settle_ms=300.; Inspected recorded results only; the emulator was not rerun for this change.; The observation is limited to *25*21#1*21## and *25*23#8*233## at the pinned repository revision.
-  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.
+  Limitations: A recorded NACK with bus bytes does not establish bus rejection; ACK/silent does not establish physical execution.; No physical actuator execution, live gateway response, or MH200 behavior is established.; Results do not establish a gateway-wide WHO 25 capability boundary or dry-contact state-query support.; Superseded for current comparison by oracle v3 at 8a61bbeb1d26354241debac84a7310142e5ab3a5.
+
+Evidence finding `who25-physical-c074148` (claimed): Physical MH200 2.1.0 literal *25*21#1*21## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074148`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 3902, "start_offset": 3719}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074148
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
+
+Evidence finding `who25-physical-c074153` (claimed): Physical MH200 2.1.0 literal *25*23#8*233## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074153`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 4931, "start_offset": 4747}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074153
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
+
+Evidence finding `who25-physical-event-window` (claimed): Recorded WHO 25 event absence with explicit setup and observation limits
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074156`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 5298, "start_offset": 0}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074156
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
+
+Evidence finding `who25-v3-f453-result` (claimed): F453 FW 010100 oracle v3 literal CEN+ probe results
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074144`
+- `ownkb:source:s001185`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/F453/010100/oracle/full/who25-messages.tsv#L18-L19) at `8a61bbeb1d26354241debac84a7310142e5ab3a5`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074144
+  Conditions: Full simulated-PIC harness; F453 firmware 010100; oracle version 3; reset 0; declared settle_ms 3000.; Only *25*21#1*21## and *25*23#8*233## are covered.
+  Limitations: Published results were inspected; no hardware or emulator was operated for this integration.; Socket reply and recorded bus output are distinct; physical execution, unrelated WHO 25 operations and incoming event support are not established.; The declared settle value is not proof of an entire three-second observation.
+
+Evidence finding `who25-v3-f454-result` (claimed): F454 FW 020051 oracle v3 literal CEN+ probe results
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074145`
+- `ownkb:source:s001186`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/F454/020051/oracle/full/who25-messages.tsv#L18-L19) at `8a61bbeb1d26354241debac84a7310142e5ab3a5`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074145
+  Conditions: Full simulated-PIC harness; F454 firmware 020051; oracle version 3; reset 0; declared settle_ms 3000.; Only *25*21#1*21## and *25*23#8*233## are covered.
+  Limitations: Published results were inspected; no hardware or emulator was operated for this integration.; Socket reply and recorded bus output are distinct; physical execution, unrelated WHO 25 operations and incoming event support are not established.; The declared settle value is not proof of an entire three-second observation.
+
+Evidence finding `who25-v3-mh200-result` (claimed): MH200 FW 020102 oracle v3 literal CEN+ probe results
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074142`
+- `ownkb:source:s001183`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH200/020102/oracle/full/who25-messages.tsv#L18-L19) at `8a61bbeb1d26354241debac84a7310142e5ab3a5`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074142
+  Conditions: Full simulated-PIC harness; MH200 firmware 020102; oracle version 3; reset 0; declared settle_ms 3000.; Only *25*21#1*21## and *25*23#8*233## are covered.
+  Limitations: Published results were inspected; no hardware or emulator was operated for this integration.; Socket reply and recorded bus output are distinct; physical execution, unrelated WHO 25 operations and incoming event support are not established.; The declared settle value is not proof of an entire three-second observation.
+
+Evidence finding `who25-v3-mh200n-result` (claimed): MH200N FW 010108 oracle v3 literal CEN+ probe results
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074143`
+- `ownkb:source:s001184`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) at `8a61bbeb1d26354241debac84a7310142e5ab3a5`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074143
+  Conditions: Full simulated-PIC harness; MH200N firmware 010108; oracle version 3; reset 0; declared settle_ms 3000.; Only *25*21#1*21## and *25*23#8*233## are covered.
+  Limitations: Published results were inspected; no hardware or emulator was operated for this integration.; Socket reply and recorded bus output are distinct; physical execution, unrelated WHO 25 operations and incoming event support are not established.; The declared settle value is not proof of an entire three-second observation.
+
+Evidence finding `who25-v3-mh202-result` (claimed): MH202 FW 010024 oracle v3 literal CEN+ probe results
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074146`
+- `ownkb:source:s001187`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH202/010024/oracle/full/who25-messages.tsv#L18-L19) at `8a61bbeb1d26354241debac84a7310142e5ab3a5`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074146
+  Conditions: Full simulated-PIC harness; MH202 firmware 010024; oracle version 3; reset 0; declared settle_ms 3000.; Only *25*21#1*21## and *25*23#8*233## are covered.
+  Limitations: Published results were inspected; no hardware or emulator was operated for this integration.; Socket reply and recorded bus output are distinct; physical execution, unrelated WHO 25 operations and incoming event support are not established.; The declared settle value is not proof of an entire three-second observation.
+
+Evidence finding `who25-v3-myhomeserver1-result` (claimed): MyHomeServer1 FW 028206 oracle v3 literal CEN+ probe results
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074147`
+- `ownkb:source:s001188`: source_inspection; firmware; direct; supports. [OpenWebNet-HA/own-firmware-oracle - who25-messages CEN+ result rows](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) at `8a61bbeb1d26354241debac84a7310142e5ab3a5`. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074147
+  Conditions: Full simulated-PIC harness; MyHomeServer1 firmware 028206; oracle version 3; reset 0; declared settle_ms 3000.; Only *25*21#1*21## and *25*23#8*233## are covered.
+  Limitations: Published results were inspected; no hardware or emulator was operated for this integration.; Socket reply and recorded bus output are distinct; physical execution, unrelated WHO 25 operations and incoming event support are not established.; The declared settle value is not proof of an entire three-second observation.
 
 ### Other `WHO 25` functions
 
@@ -10267,7 +10385,7 @@ Individual claims: `ownkb:claim:moc-c007688`, `ownkb:claim:moc-c007689`, `ownkb:
 Section ID: `ownkb:section:d000062:s000006`
 
 Applicability cues: `firmware`, `gateway`, `version`
-Provenance cues: `source`, `specification`
+Provenance cues: `capture`, `evidence`, `source`, `specification`
 
 **Published protocol.** The [dry-contact/IR specification](https://archive.openwebnet-ha.org/sha256/12/2d/122d9c1a43e1610a43eaeac3f61feefbdb1fd5ff377041e216c82a802eba4927.pdf), version `1.0.0`, page 13, lists the following availability for dry-contact and IR state functions. Firmware marked “not stated” remains unspecified in that table.
 
@@ -10282,6 +10400,32 @@ Provenance cues: `source`, `specification`
 | F452 | Not stated | No |
 
 This source does not list MH202, F454 or MyHomeServer1. Their absence from this historical table is not a finding of incompatibility. Published dry-contact/IR availability does not establish the reply to every `WHO 25` request or support for the separate CEN+ and ScenarioPlus families. See [CEN+ gateway compatibility](cen-plus.md#gateway-compatibility-and-hardware-boundaries) for the CEN+ specification and the scoped replay observations; the replay comparison there covers CEN+ commands, not dry-contact state queries.
+
+**Physical MH200 capture inspection.** The [2026-10-22 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on MH200 firmware 2.1.0 for literal status request `*#25*21##` after 19.576 ms, `*25*31#1*339##` after 39.486 ms, and `*25*32#1*33##` after 14.686 ms. No dry-contact/IR interface was installed or configured. These are literal probe results: `WHERE 339` is outside the published address forms above, and none of the replies alone establishes a valid configured Device response or a gateway-wide rejection rule. The WHAT meanings remain 31 for ON/detection and 32 for OFF/no detection. Incoming physical WHO 25 events and physical bus forwarding were not tested.
+
+Evidence finding `who25-physical-c074150` (claimed): Physical MH200 2.1.0 literal *#25*21## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074150`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 4263, "start_offset": 4084}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074150
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
+
+Evidence finding `who25-physical-c074154` (claimed): Physical MH200 2.1.0 literal *25*31#1*339## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074154`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 5115, "start_offset": 4931}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074154
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.; WHERE 339 is outside the published dry-contact address forms; this probe is not a valid configured-device capability test.
+
+Evidence finding `who25-physical-c074155` (claimed): Physical MH200 2.1.0 literal *25*32#1*33## socket reply
+Disposition reason: Direct inspection of fingerprint-verified contributor artifacts; no new hardware/emulator execution and no broadened capability inference.
+Individual claims: `ownkb:claim:c074155`
+- `ownkb:source:s001189`: source_inspection; gateway; direct; supports. [Contributor raw-session-log.jsonl before the documented privacy projection at `2026-10-22 contributor raw session log`, SHA-256 `2300d334629ad0dc0f61377e0e91e1b22e11359eaf1279c3fa39dba44faacb28`](https://github.com/OpenWebNet-HA/OpenWebNet-Encyclopedia/pull/49#issuecomment-6336963459); {"address_space": "Original contributor raw-session-log.jsonl UTF-8 bytes", "end_offset": 5298, "start_offset": 5115}. Review: `project/review/who25-gateway-compatibility.md`.
+  Examination claims: ownkb:claim:c074155
+  Conditions: Concurrent command and event sessions; no physical WHO 25 transmitter or dry-contact/IR interface configured.; Physical MH200 reports model 4 and firmware 2.1.0; contributor-operated live main SCS bus.; The contributor recipe declares a separate 2000 ms observation window per literal probe.
+  Limitations: No independent physical SCS bus capture was made; forwarding, actuation and incoming WHO 25 events are not established.; Source inspection of the replacement recording only; the reviewer did not run physical hardware.; The Oct 17 physical-capture details were withdrawn and support no claim here.; The raw log lacks an explicit final observation-end marker; negative event observations remain bounded to the contributor record and declared recipe.
 
 ### Functional navigation
 

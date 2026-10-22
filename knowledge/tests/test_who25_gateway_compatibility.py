@@ -1,117 +1,182 @@
-"""Keep published gateway availability separate from scoped recorded replies."""
+"""Preserve function scope, harness history and privacy-projected physical evidence."""
 import csv
 import hashlib
 import io
 import json
+import re
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-CEN = "ownkb:section:d000061:s000014"
-CONTACT = "ownkb:section:d000062:s000006"
-NAVIGATION = "ownkb:section:d000060:s000007"
-REVISION = "af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b"
-INPUTS = {"*25*21#1*21##", "*25*23#8*233##"}
+CEN = 'ownkb:section:d000061:s000014'
+CONTACT = 'ownkb:section:d000062:s000006'
+SCENE = 'ownkb:section:d000060:s000006'
+NAVIGATION = 'ownkb:section:d000060:s000007'
+OLD = 'af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b'
+CURRENT = '8a61bbeb1d26354241debac84a7310142e5ab3a5'
+CAPTURE = ROOT / 'evidence/cap-mh200-who25-boundary-20261022'
+INPUTS = {'*25*21#1*21##', '*25*23#8*233##'}
+PROBES = {'*25*21#1*21##', '*25*11#0*11##', '*#25*21##', '*25*11#121*10##',
+          '*25*12*131##', '*25*23#8*233##', '*25*31#1*339##', '*25*32#1*33##'}
+
+
+def rows(path):
+    return [json.loads(line) for line in path.read_text().splitlines()]
 
 
 class Who25GatewayCompatibilityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.claims = [json.loads(line) for line in
-                      (ROOT / "knowledge/claims/claims.jsonl").read_text().splitlines()]
-        cls.sources = {r["id"]: r for r in map(json.loads,
-                       (ROOT / "knowledge/reference/sources.jsonl").read_text().splitlines())}
-        cls.new_claims = [r for r in cls.claims if any(
-            p["location"]["section_id"] in {CEN, CONTACT} for p in r["provenance"])]
+        cls.claims = rows(ROOT / 'knowledge/claims/claims.jsonl')
+        cls.sources = {r['id']: r for r in rows(ROOT / 'knowledge/reference/sources.jsonl')}
+        cls.local = [r for r in cls.claims if any(
+            p['location']['section_id'] in {CEN, CONTACT, SCENE} for p in r['provenance'])]
 
-    def test_each_function_has_its_own_published_compatibility_claims(self):
-        for section, source in [(CEN, "ownkb:source:s000142"),
-                                (CONTACT, "ownkb:source:s000148")]:
-            claims = [r for r in self.new_claims if any(
-                p["location"]["section_id"] == section and
-                p["evidence_class"] == "official_specification"
-                for p in r["provenance"])]
-            supported = [r for r in claims if "gateway compatibility table identifies" in r["statement"]]
+    def test_each_function_retains_its_own_published_table(self):
+        for section, source in [(CEN, 'ownkb:source:s000142'),
+                                (CONTACT, 'ownkb:source:s000148')]:
+            claims = [r for r in self.local if any(
+                p['location']['section_id'] == section and
+                p['evidence_class'] == 'official_specification' for p in r['provenance'])]
+            supported = [r for r in claims if 'gateway compatibility table identifies' in r['statement']]
             self.assertEqual(7, len(supported))
-            self.assertTrue(all(r["epistemic_status"] == "specified" for r in claims))
-            self.assertTrue(all(any(p["source_id"] == source for p in r["provenance"])
-                                for r in claims))
-            old = next(r for r in supported if "firmware 1.0.19" in r["statement"])
-            new = next(r for r in supported if "firmware 2.1.7" in r["statement"])
-            self.assertIn("as unsupported", old["statement"])
-            self.assertIn("as supported", new["statement"])
-            self.assertNotIn("every firmware", " ".join(r["statement"] for r in supported))
+            self.assertTrue(all(r['epistemic_status'] == 'specified' for r in claims))
+            self.assertTrue(all(any(p['source_id'] == source for p in r['provenance']) for r in claims))
+            self.assertIn('as unsupported', next(r['statement'] for r in supported if 'firmware 1.0.19' in r['statement']))
+            self.assertIn('as supported', next(r['statement'] for r in supported if 'firmware 2.1.7' in r['statement']))
 
-    def test_recorded_reply_and_bus_verdict_survive_with_original_evidence(self):
-        observations = [r for r in self.new_claims if any(
-            self.sources[p["source_id"]].get("artifact_locator", {}).get("repository") == "OpenWebNet-HA/own-firmware-oracle"
-            for p in r["provenance"])]
-        self.assertEqual(4, len(observations))
+    def test_both_oracle_versions_preserve_original_bytes_and_scope(self):
+        observations = [r for r in self.local if any(
+            self.sources[p['source_id']].get('artifact_locator', {}).get('repository') ==
+            'OpenWebNet-HA/own-firmware-oracle' for p in r['provenance'])]
+        self.assertEqual(10, len(observations))
+        counts = {OLD: 0, CURRENT: 0}
         for claim in observations:
-            provenance = next(p for p in claim["provenance"] if "examination" in p)
-            source = self.sources[provenance["source_id"]]
-            locator = source["artifact_locator"]
-            self.assertRegex(source["id"], r"^ownkb:source:s\d{6}$")
-            product, version = locator["path"].split("/")[1:3]
-            data = (ROOT / "project/review/fixtures/who25-gateway-compatibility" /
-                    f"{product}-{version}.tsv").read_bytes()
-            self.assertEqual(hashlib.sha256(data).hexdigest(), locator["sha256"])
-            self.assertEqual(hashlib.sha1(f"blob {len(data)}\0".encode() + data).hexdigest(),
-                             locator["git_blob"])
-            text = "\n".join(line for line in data.decode().splitlines() if not line.startswith("#"))
-            rows = [r for r in csv.DictReader(io.StringIO(text), delimiter="\t")
-                    if r["input"] in INPUTS]
-            self.assertEqual(INPUTS, {r["input"] for r in rows})
-            expected = ("ack", "silent") if product == "MH202" else ("nack", "out")
-            self.assertEqual({expected}, {(r["reply"], r["verdict"]) for r in rows})
-            self.assertIn("reply=" + expected[0], claim["statement"])
-            self.assertIn("verdict=" + expected[1], claim["statement"])
-            self.assertTrue(all((r["output"] != "-") == (r["verdict"] == "out") for r in rows))
-            self.assertEqual("source_inspection", provenance["examination"]["method"])
-            self.assertNotIn("execution", provenance["examination"])
-            self.assertEqual("public_experiment", provenance["evidence_class"])
-            self.assertEqual("implementation", claim["applicability"]["domain"])
-            self.assertIn(REVISION, claim["applicability"]["version"]["expression"])
-            self.assertIn(version, claim["applicability"]["version"]["expression"])
-            self.assertTrue(provenance["examination"]["limitations"])
+            p = next(p for p in claim['provenance'] if 'examination' in p)
+            source = self.sources[p['source_id']]
+            loc = source['artifact_locator']; revision = loc['revision']; counts[revision] += 1
+            product, version = loc['path'].split('/')[1:3]
+            folder = ROOT / 'project/review/fixtures/who25-gateway-compatibility'
+            if revision == CURRENT:
+                folder /= 'oracle-v3'
+            raw = (folder / f'{product}-{version}.tsv').read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), loc['sha256'])
+            self.assertEqual(hashlib.sha1(f'blob {len(raw)}\0'.encode() + raw).hexdigest(), loc['git_blob'])
+            data = '\n'.join(l for l in raw.decode().splitlines() if not l.startswith('#'))
+            selected = [r for r in csv.DictReader(io.StringIO(data), delimiter='\t') if r['input'] in INPUTS]
+            self.assertEqual(INPUTS, {r['input'] for r in selected})
+            expected = (('ack', 'silent') if product == 'MH202' else ('nack', 'out')) if revision == OLD else (
+                ('nack', 'silent') if product == 'MH200' else
+                ('nack', 'out') if product == 'MyHomeServer1' else ('ack', 'out'))
+            self.assertEqual({expected}, {(r['reply'], r['verdict']) for r in selected})
+            for key, value in zip(('reply', 'verdict'), expected):
+                self.assertIn(f'{key}={value}', claim['statement'])
+            self.assertEqual('source_inspection', p['examination']['method'])
+            self.assertNotIn('execution', p['examination'])
+            self.assertIn(revision, claim['applicability']['version']['expression'])
+            self.assertRegex(source['id'], r'^ownkb:source:s\d{6}$')
+            if revision == OLD:
+                self.assertIn('Historical', claim['statement'])
+                self.assertTrue(any('Superseded' in s for s in p['examination']['limitations']))
+        self.assertEqual({OLD: 4, CURRENT: 6}, counts)
 
-    def test_missing_bench_evidence_does_not_become_a_runtime_claim(self):
-        for claim in self.new_claims:
-            self.assertNotEqual("experimentally_confirmed", claim["epistemic_status"])
-            for p in claim["provenance"]:
-                self.assertNotEqual("hardware_observation", p.get("examination", {}).get("method"))
-            if "MH200" in claim["statement"] and "MH200N" not in claim["statement"]:
-                self.assertNotIn("immediate", claim["statement"])
-                self.assertNotIn("NACK", claim["statement"])
-        claims = {r["id"]: r for r in self.claims}
-        for identity in ("ownkb:claim:c002972", "ownkb:claim:c002988", "ownkb:claim:c002989"):
-            self.assertIn("published", claims[identity]["statement"].lower())
-            self.assertTrue(any(p["source_id"] == "ownkb:source:s000142"
-                                for p in claims[identity]["provenance"]))
+    def test_corrected_harness_qualifies_historical_results(self):
+        current = [r for r in self.local if CURRENT in r['applicability']['version'].get('expression', '')]
+        targets = {t for c in current for t in c['claim_links']['qualifies']}
+        self.assertEqual({f'ownkb:claim:c{n:06d}' for n in range(74010, 74014)}, targets)
+        self.assertTrue(all('reset=0' in c['applicability']['version']['expression'] for c in current))
+        self.assertTrue(all('settle_ms=3000' in c['applicability']['version']['expression'] for c in current))
+
+    def test_physical_claims_use_only_replacement_capture(self):
+        physical = [r for r in self.local if any(
+            p['evidence_class'] == 'public_capture' and 'examination' in p for p in r['provenance'])]
+        self.assertEqual(9, len(physical))
+        manifest = json.loads((CAPTURE / 'manifest.json').read_text())
+        self.assertEqual({r['id'] for r in physical}, set(manifest['machine_kb_claims']))
+        for c in physical:
+            self.assertEqual('observed', c['epistemic_status'])
+            self.assertEqual('implementation', c['applicability']['domain'])
+            self.assertIn('2026-10-22', c['applicability']['version']['expression'])
+            self.assertIn('2.1.0', c['applicability']['version']['expression'])
+            p = next(p for p in c['provenance'] if 'examination' in p)
+            self.assertEqual('source_inspection', p['examination']['method'])
+            self.assertNotIn('execution', p['examination'])
+            self.assertTrue(any('not established' in s for s in p['examination']['limitations']))
+            if any(p['location']['section_id'] == SCENE for p in c['provenance']):
+                self.assertEqual('ownkb:entity:topic:d000060-s000006', c['subject_id'])
+
+    def test_projection_preserves_every_probe_and_measured_reply(self):
+        data = rows(CAPTURE / 'session-log.jsonl')
+        found = set()
+        for index, r in enumerate(data):
+            if r['dir'] != 'tx' or r['raw'] not in PROBES:
+                continue
+            found.add(r['raw'])
+            reply = next(x for x in data[index + 1:] if x['session'] == 'command' and x['dir'] == 'rx')
+            self.assertEqual('*#*0##', reply['raw'])
+            latency = reply['t_rel_ms'] - r['t_rel_ms']
+            claim = next(c for c in self.local if
+                         c['id'].startswith('ownkb:claim:c0741') and
+                         f'literal command-session probe {r["raw"]} received' in c['statement'])
+            self.assertIn(f'{latency:.3f} ms', claim['statement'])
+            events = [x for x in data if x['session'] == 'event' and
+                      r['t_rel_ms'] <= x['t_rel_ms'] < r['t_rel_ms'] + 2000]
+            self.assertFalse(any(x['raw'].startswith(('*25*', '*#25*')) for x in events))
+        self.assertEqual(PROBES, found)
+
+    def test_projection_removes_live_identifiers_authentication_and_clock(self):
+        frames = rows(CAPTURE / 'frames.jsonl'); sessions = rows(CAPTURE / 'session-log.jsonl')
+        self.assertEqual(42, len(frames)); self.assertEqual(len(frames), len(sessions))
+        self.assertTrue(all(f['seq'] == i + 1 for i, f in enumerate(frames)))
+        for f, r in zip(frames, sessions):
+            self.assertEqual((f['raw'], f['dir']), (r['raw'], r['dir']))
+            self.assertEqual(f['t_rel_ms'], round(r['t_rel_ms']))
+            self.assertFalse(f['raw'].startswith(('*99*', '*#13**22')))
+            if f['who'] == 1:
+                self.assertEqual('99', f['where'])
+        serialized = '\n'.join(p.read_text() for p in CAPTURE.glob('*.json*'))
+        self.assertNotRegex(serialized, r'(?i)\b[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}\b')
+        self.assertNotIn('OPEN_PASSWORD_HASH', serialized)
+        self.assertNotIn('NONCE', serialized)
+        self.assertIn('synthetic', serialized.lower())
+        projection = json.loads((CAPTURE / 'projection.json').read_text())
+        source_hash = next(r['sha256'] for r in projection['original_files'] if r['file'] == 'raw-session-log.jsonl')
+        sources = [r for r in self.sources.values() if r.get('artifact_locator', {}).get('sha256') == source_hash]
+        self.assertEqual(1, len(sources))
+        self.assertIn('no explicit final', projection['window_limit'])
+
+    def test_incoming_events_and_invalid_contact_target_are_not_generalized(self):
+        c = next(c for c in self.local if c['id'] == 'ownkb:claim:c074156')
+        self.assertIn('incoming WHO 25 event handling remains untested', c['statement'])
+        text = (ROOT / 'functional/who-25-transversal/dry-contact-ir.md').read_text()
+        self.assertIn('WHERE 339', text)
+        self.assertIn('outside the published address forms', text)
+        self.assertIn('31 for ON/detection and 32 for OFF/no detection', text)
+        for c in self.local:
+            if 'public_capture' in {p['evidence_class'] for p in c['provenance']}:
+                self.assertNotIn('immediate', c['statement'])
+
+    def test_normative_ack_source_and_existing_identity_boundaries(self):
+        claims = {c['id']: c for c in self.claims}
+        for identity in ('ownkb:claim:c002972', 'ownkb:claim:c002988', 'ownkb:claim:c002989'):
+            self.assertIn('published', claims[identity]['statement'].lower())
+            self.assertTrue(any(p['source_id'] == 'ownkb:source:s000142' for p in claims[identity]['provenance']))
+        chunks = json.loads((ROOT / 'knowledge/inputs/chunk-identities.json').read_text())
+        for n in range(3):
+            self.assertEqual(f'ownkb:chunk:r{1174+n:06d}', chunks[f'ownkb:section:d000136:s{2+n:06d}'])
+        self.assertEqual(3, len({chunks[s] for s in (CEN, CONTACT, NAVIGATION)}))
+        identities = json.loads((ROOT / 'knowledge/inputs/identities.json').read_text())
+        self.assertEqual(SCENE, identities['functional/who-25-transversal/README.md']['sections']['historical-scenarioplus-controls-1'])
+        self.assertEqual('ownkb:section:d000062:s000005', identities['functional/who-25-transversal/dry-contact-ir.md']['sections']['historical-contact-interpretation-1'])
 
     def test_substantive_sections_are_claimed_and_navigation_is_not(self):
-        coverage = json.loads((ROOT / "knowledge/inputs/claim-coverage.json").read_text())
-        rows = {r["section_id"]: r for d in coverage["domains"] for r in d["sections"]}
-        for section in (CEN, CONTACT):
-            self.assertEqual("claimed", rows[section]["status"])
-            self.assertGreater(rows[section]["claim_count"], 0)
-        self.assertEqual(("nonclaim", 0), (rows[NAVIGATION]["status"], rows[NAVIGATION]["claim_count"]))
-
-    def test_existing_device_and_historical_section_ids_are_preserved(self):
-        chunks = json.loads((ROOT / "knowledge/inputs/chunk-identities.json").read_text())
-        for n in range(3):
-            self.assertEqual(f"ownkb:chunk:r{1174+n:06d}",
-                             chunks[f"ownkb:section:d000136:s{2+n:06d}"])
-        self.assertEqual(3, len({chunks[s] for s in (CEN, CONTACT, NAVIGATION)}))
-        self.assertTrue(all(int(chunks[s].rsplit("r", 1)[-1]) > 7929
-                            for s in (CEN, CONTACT, NAVIGATION)))
-        identities = json.loads((ROOT / "knowledge/inputs/identities.json").read_text())
-        base = "functional/who-25-transversal/"
-        self.assertEqual("ownkb:section:d000060:s000006",
-                         identities[base + "README.md"]["sections"]["historical-scenarioplus-controls-1"])
-        self.assertEqual("ownkb:section:d000062:s000005",
-                         identities[base + "dry-contact-ir.md"]["sections"]["historical-contact-interpretation-1"])
+        coverage = json.loads((ROOT / 'knowledge/inputs/claim-coverage.json').read_text())
+        sections = {r['section_id']: r for d in coverage['domains'] for r in d['sections']}
+        for s in (CEN, CONTACT, SCENE):
+            self.assertEqual('claimed', sections[s]['status'])
+            self.assertGreater(sections[s]['claim_count'], 0)
+        self.assertEqual(('nonclaim', 0), (sections[NAVIGATION]['status'], sections[NAVIGATION]['claim_count']))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

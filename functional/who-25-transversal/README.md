@@ -28,6 +28,8 @@ These are executable implementation forms at `TS10_1_0_23`, separate from CEN+ `
 
 An earlier touchscreen controller sends increase/decrease on press, repeats the command using a one-second timer, and sends stop when release cancels the active timer. This is application behavior, separate from CEN+ `22..24` held-button events. The `ScenarioPlusDevice` API supplies command writers without a dedicated state decoder; sending ON/OFF does not establish an observed scenario state. See [Controller and feedback evidence](../../project/review/myopencommunity-cen-history-review.md#scenarioplus-writers-and-controller).
 
+The [2026-10-22 physical MH200 capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json) records NACK on firmware 2.1.0 for literal ScenarioPlus-family probes `*25*11#0*11##` after 25.392 ms, `*25*11#121*10##` after 23.398 ms, and `*25*12*131##` after 34.942 ms. These are responses to those bytes in the recorded setup; the test does not establish the complete valid ScenarioPlus address/parameter domain or a namespace-wide WHO 25 rejection rule. It does not establish incoming ScenarioPlus event handling or physical bus forwarding.
+
 ## Function selection
 
 A parser should resolve the OpenWebNet interface variant, `WHO 25`, and then the `WHAT` family before decoding the remaining fields. CEN+ interprets the `WHAT` parameter as a virtual pushbutton and uses a `2`-prefixed virtual Object `WHERE`. Dry-contact/IR operations instead use the parameter to distinguish requested state from event/action context and use Device-family-specific `WHERE` ranges. ZigBee binding uses the radio product-and-Unit `WHERE` grammar with family suffix `#9`.

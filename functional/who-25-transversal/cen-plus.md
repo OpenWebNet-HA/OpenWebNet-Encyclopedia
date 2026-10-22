@@ -121,7 +121,24 @@ The two systems should be modeled separately even when a physical command device
 
 The same table lists CEN (`WHO 15`) support for MH200, while CEN+ is unavailable. This function-level distinction does not establish a response to every frame in the wider `WHO 25` namespace. The [dry-contact/IR specification](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries) has its own compatibility table.
 
-**Implementation evidence - published result inspection.** The following observations come from the pinned `who25-messages` results at own-firmware-oracle revision `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. For both CEN+ inputs `*25*21#1*21##` and `*25*23#8*233##`, the recorded reply and bus-output verdict are:
+**Current oracle v3 result inspection.** The pinned results at own-firmware-oracle revision `8a61bbeb1d26354241debac84a7310142e5ab3a5` record the following for both `*25*21#1*21##` and `*25*23#8*233##`. These observations are from executed firmware under a simulated PIC, inspected here without rerunning it; they are separate from physical gateway observations.
+
+| Gateway model | Firmware | Recorded socket reply | Recorded bus-output verdict | Original result |
+| --- | --- | --- | --- | --- |
+| MH200 | `020102` | `NACK` | `silent` - no bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH200/020102/oracle/full/who25-messages.tsv#L18-L19) |
+| MH200N | `010108` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH200N/010108/oracle/full/who25-messages.tsv#L18-L19) |
+| F453 | `010100` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/F453/010100/oracle/full/who25-messages.tsv#L18-L19) |
+| F454 | `020051` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/F454/020051/oracle/full/who25-messages.tsv#L18-L19) |
+| MH202 | `010024` | `ACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MH202/010024/oracle/full/who25-messages.tsv#L18-L19) |
+| MyHomeServer1 | `028206` | `NACK` | `out` - bus bytes recorded | [Pinned result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/8a61bbeb1d26354241debac84a7310142e5ab3a5/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) |
+
+All six records declare the full harness, `oracle_version=3`, a simulated PIC responder, `reset=0` and `settle_ms=3000`. The latter is a declared limit, not proof of a complete three-second observation. The upstream [$04 PIC acknowledgement fix](https://github.com/OpenWebNet-HA/own-firmware-oracle/commit/fe0eff552b9b031c692f8e08b428a94ebddf31c2) and [CPU-idle settling change](https://github.com/OpenWebNet-HA/own-firmware-oracle/commit/2e45bfac7e2c4e34b8c8ec3d2779285065ab7d05) explain why the newer comparison must be scoped separately from v1. MH200N and F454 now record ACK with bus output; MH202 now records bus output as well. MyHomeServer1 still records NACK with bus output, so a socket acknowledgement remains distinct from forwarding. Recorded bus bytes do not establish physical execution, and these two CEN+ inputs do not establish acceptance of every WHO 25 operation.
+
+**Physical MH200 capture inspection.** In the [2026-10-22 contributor capture](../../evidence/cap-mh200-who25-boundary-20261022/manifest.json), the identified MH200 firmware 2.1.0 returns NACK for `*25*21#1*21##` after 57.430 ms and `*25*23#8*233##` after 24.200 ms. The first frame uses pushbutton 1 on CEN+ Object 1 (`WHERE 21`); the second uses pushbutton 8 on Object 33 (`WHERE 233`). These are recorded replies to those literal probes on that setup, not a namespace-wide rejection rule. Other families are described separately in [ScenarioPlus controls](README.md#historical-scenarioplus-controls) and [Dry Contact and IR](dry-contact-ir.md#gateway-compatibility-and-hardware-boundaries).
+
+The contributor declared a 2000 ms command/event observation window per probe, and no WHO 25 event frame occurs in the eight recorded probe windows. A physical lighting positive control shows that the event session was live. No WHO 25 transmitter or dry-contact/IR interface was installed or configured, and no independent physical SCS bus capture was made. Incoming WHO 25 event handling and physical bus forwarding therefore remain untested. The raw log does not include an explicit final observation-end marker. We inspected and privacy-projected the contributor recording; we did not run hardware ourselves. The [projection record](../../evidence/cap-mh200-who25-boundary-20261022/projection.json) describes filtering and fingerprints. See the [gateway evidence review](../../project/review/who25-gateway-compatibility.md) for the withdrawn capture, original source hashes and review limits.
+
+**Historical oracle v1 records.** The following superseded harness observations come from the pinned `who25-messages` results at own-firmware-oracle revision `af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b`. For both CEN+ inputs `*25*21#1*21##` and `*25*23#8*233##`, the recorded reply and bus-output verdict are:
 
 | Gateway model | Firmware | Recorded socket reply | Recorded bus-output verdict | Original result |
 | --- | --- | --- | --- | --- |
@@ -131,6 +148,8 @@ The same table lists CEN (`WHO 15`) support for MH200, while CEN+ is unavailable
 | MyHomeServer1 | `028206` | `NACK` | `out` - bus bytes recorded | [MyHomeServer1 result](https://github.com/OpenWebNet-HA/own-firmware-oracle/blob/af8ec0ceaff4c82a1a71f2a3ac5d01ad2095de7b/results/MyHomeServer1/028206/oracle/full/who25-messages.tsv#L18-L19) |
 
 The records declare the full harness, a simulated PIC responder, and `settle_ms=300`; MH200N uses `reset=each`, while the other three use `reset=0`. These are inspected published results, not a new emulator run or a physical-hardware observation. `NACK` with bus output must not be described as proof that the frame never reached the bus, and `ACK` without recorded bus output does not establish physical execution. Neither result determines gateway-wide support or rejection of unrelated `WHO 25` operations. Source hashes and review limits are recorded in the [gateway evidence review](../../project/review/who25-gateway-compatibility.md).
+
+The v1 rows are preserved as historical recording facts. Their response/output combinations must not be used as the current firmware comparison: the later PIC responder and settling fixes changed the harness conditions. The original source fingerprints and claim identities remain traceable.
 
 ## Other `WHO 25` functions
 

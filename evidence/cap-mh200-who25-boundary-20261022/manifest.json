@@ -1,0 +1,67 @@
+{
+  "evidence_id": "EVID-MH200-WHO25-BOUNDARY",
+  "capture_id": "cap-mh200-who25-boundary-20261022",
+  "title": "BTicino MH200 (FW 2.1.0) command-session replies to tested WHO 25 frames",
+  "capture_kind": "controlled_experiment",
+  "epistemic_status": "observed",
+  "confidence": "high",
+  "evidence_class": "public_capture",
+  "recorded_at": "2026-10-22",
+  "installation_id": "sanitized-installation",
+  "bus_id": "sanitized-main-bus",
+  "gateway_id": "MH200-GW-01",
+  "environment": {
+    "gateway_model": "MH200",
+    "gateway_firmware": "2.1.0",
+    "bus_topology": "Privacy-filtered capture from a live main SCS bus; no WHO 25 transmitter or dry-contact/IR interface was installed or configured.",
+    "who13_device_type": 4
+  },
+  "device_under_test": {
+    "sku": "BTicino MH200 gateway",
+    "description": "MH200 gateway under test, identified by product model and firmware; no installed hardware identifier is retained.",
+    "configured_where": "0",
+    "pseudonym_device_id": "MH200-GW-01"
+  },
+  "summary": "Contributor-recorded MH200 firmware 2.1.0 replies to eight literal WHO 25 probes were NACK, with measured socket latency 14.686..57.430 ms. The contributor declared a 2000 ms dual-session observation window per probe; no WHO 25 event frame occurs in the recording. Incoming WHO 25 hardware events and physical bus forwarding were not tested. This is a privacy projection of the retained contributor recording, not a new hardware run.",
+  "test_recipe": [
+    "Open concurrent event (*99*1##) and command (*99*0##) TCP sessions on port 20000; authentication is excluded from the public projection.",
+    "Identify the gateway with *#13**15##, *#13**16##, *#13**23##, *#13**24## and *#1013*0*1##; retain data and ACK replies.",
+    "Use *#9*0## as a positive command/event control. During a ten-second manual window, press a physical lighting control to confirm real bus events reach the monitor; its address is replaced by synthetic WHERE 99 in this projection.",
+    "Send literal probe *25*21#1*21## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 57.430 ms.",
+    "Send literal probe *25*11#0*11## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 25.392 ms.",
+    "Send literal probe *#25*21## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 19.576 ms.",
+    "Send literal probe *25*11#121*10## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 23.398 ms.",
+    "Send literal probe *25*12*131## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 34.942 ms.",
+    "Send literal probe *25*23#8*233## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 24.200 ms.",
+    "Send literal probe *25*31#1*339## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 39.486 ms.",
+    "Send literal probe *25*32#1*33## separately and observe both sessions for the declared 2000 ms window. Recorded command reply: NACK after 14.686 ms."
+  ],
+  "claims_supported": [
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *25*21#1*21## received NACK after 57.430 ms.",
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *25*11#0*11## received NACK after 25.392 ms.",
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *#25*21## received NACK after 19.576 ms.",
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *25*11#121*10## received NACK after 23.398 ms.",
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *25*12*131## received NACK after 34.942 ms.",
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *25*23#8*233## received NACK after 24.200 ms.",
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *25*31#1*339## received NACK after 39.486 ms.",
+    "On the recorded MH200 firmware 2.1.0 setup, literal probe *25*32#1*33## received NACK after 14.686 ms.",
+    "No WHO 25 event frame was recorded during the eight declared probe windows; no WHO 25 transmitter was installed, so incoming event handling remains untested."
+  ],
+  "related_documents": [
+    "functional/who-25-transversal/README.md",
+    "functional/who-25-transversal/cen-plus.md",
+    "functional/who-25-transversal/dry-contact-ir.md"
+  ],
+  "frame_count": 42,
+  "machine_kb_claims": [
+    "ownkb:claim:c074148",
+    "ownkb:claim:c074149",
+    "ownkb:claim:c074150",
+    "ownkb:claim:c074151",
+    "ownkb:claim:c074152",
+    "ownkb:claim:c074153",
+    "ownkb:claim:c074154",
+    "ownkb:claim:c074155",
+    "ownkb:claim:c074156"
+  ]
+}
