@@ -1,21 +1,3 @@
-# product=MH200
-# version=020102
-# image_sha256=53848de84438f9a395501cf955d20762951faacb8449e1271ed5e027448e1e3b
-# harness=full
-# target_sha256=539f943d7f298be10a77d5990b7163c0fe1a8616c45d865486291d71b3899583
-# adapter=pty-1
-# reset=0
-# bus=pty
-# framer=line
-# responder=pic
-# settle_ms=3000
-# suite=who25-messages
-# suite_sha256=57f36863e445aa963e48f4bfcd45297256dab5a2842c6b3c9944e66a845f7bb5
-# oracle_version=3
-direction	input	reply	verdict	output
-down	*25*11#121*10##	nack	silent	-
-down	*25*12*131##	nack	silent	-
-down	*25*21#1*21##	nack	silent	-
-down	*25*23#8*233##	nack	silent	-
-down	*25*31#1*339##	nack	silent	-
-down	*25*32#1*33##	nack	silent	-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8895d1c545f80ae4c0177a6cc2ea135d7112b11983cc8875119f38a21100ba5e
+size 652

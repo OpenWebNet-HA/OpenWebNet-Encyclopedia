@@ -26,6 +26,41 @@ also emitting reproducible evidence probes.
 
 These checks are suitable as required continuous-integration status checks.
 
+## Git storage policy
+
+`check_git_storage.py` rejects ordinary Git blobs larger than 5 MiB and requires
+every tracked TSV under `project/review/` to be stored as a canonical Git LFS
+pointer. It examines Git objects, so hydrated LFS payloads may exceed the limit.
+The staged index is checked by default; changing only the working file or
+adding an LFS attribute without staging the conversion cannot satisfy the guard.
+
+The reviewed [legacy baseline](git-storage-baseline.json) records nine existing
+large KB files at their exact paths and Git object IDs. These unchanged bytes
+are retained to keep this migration bounded. A new version or copy at another
+path receives no exemption and must use appropriate storage. Review changes to
+this baseline as storage-policy changes, not routine generated updates.
+
+After staging changes, run:
+
+```text
+python project/review/checks/check_git_storage.py --base origin/main
+python -m unittest discover -s project/review/checks/tests -p test_git_storage.py -v
+```
+
+For a committed candidate, add `--head HEAD`. CI checks both the final tree and
+new objects reachable between the PR base and its merge checkout, or between
+the previous and current pushed commit. Adding a large blob and deleting it in
+a later commit still fails. Existing history is not rescanned as new material.
+The standalone CI job needs Git objects and comparison history, not LFS payloads.
+It does not rewrite history, change tags, or verify remote LFS payload availability.
+
+Use Git LFS for review tables and other large public text artifacts. Retain
+private and manufacturer archives in their established external storage. Before
+examining review TSV evidence, hydrate it with `git lfs pull`; an LFS pointer is
+not the table. The TSV migration preserves paths and exact bytes, including
+line endings. Existing large historical blobs remain reachable; new oversized
+ordinary blobs are blocked without changing published history or tags.
+
 ## Advisory review checks
 
 `audit_epistemic_drift.py` searches for candidates that may indicate
@@ -84,6 +119,7 @@ ruleset or branch protection to require these status checks before merging:
 
 - `Mechanical ESG and ECV compliance`
 - `Source integrity and reproducibility`
+- `Git storage policy`
 
 `Advisory epistemic review` should run on every pull request but must not be a
 required factual gate. Its findings require evidence-aware adjudication and can
