@@ -7,7 +7,14 @@ knowledge/** text eol=lf
 
 # Large complete Machine KB files; hydrate before reading or building.
 knowledge/claims/claims.jsonl filter=lfs diff=lfs merge=lfs -text
+knowledge/id-registry.json filter=lfs diff=lfs merge=lfs -text
+knowledge/inputs/claim-context.json filter=lfs diff=lfs merge=lfs -text
 knowledge/inputs/claim-records.json filter=lfs diff=lfs merge=lfs -text
+knowledge/inputs/id-registry.json filter=lfs diff=lfs merge=lfs -text
+knowledge/inputs/reference-records.json filter=lfs diff=lfs merge=lfs -text
+knowledge/llm/llm-corpus.md filter=lfs diff=lfs merge=lfs -text
+knowledge/reference/entities.jsonl filter=lfs diff=lfs merge=lfs -text
+knowledge/retrieval/chunks.jsonl filter=lfs diff=lfs merge=lfs -text
 
 # Preserve review tables byte-for-byte; hydrate before examining their evidence.
 project/review/**/*.tsv filter=lfs diff=lfs merge=lfs -text
