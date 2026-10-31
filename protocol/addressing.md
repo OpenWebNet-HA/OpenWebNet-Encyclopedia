@@ -168,3 +168,9 @@ The `A`/`PL` grammar above must not be treated as a global OpenWebNet address gr
 Their canonical functional `WHERE` syntax belongs in the relevant `WHO` documentation. The common rule is only that `WHERE` is parsed in the context of `WHO`, not that all systems share a common numeric address space.
 
 See the relevant functional `WHO` addressing page for system-specific applicability, [Frame Syntax](frame-syntax.md) for the position of `WHERE` in OpenWebNet frames, and [MyHOME Suite OPEN.db Coverage](../functional/open-db-coverage.md) for the implementation address-rule inventory.
+
+## Temperature Control local-bus routing boundary
+
+The `BASE#4#INTERFACE` local-bus qualification established for `WHO 1` and point-to-point `WHO 2` must not be generalized to `WHO 4` Temperature Control requests. In the pinned 12-Firmware `own-firmware-oracle` `thermo-zone-requests` v3 suite at revision `de87a34e251b677a299917c98fcfcea3b409bf34`, zero emulated gateways emit interface-routed `$06EC` or `$06E4` SCS bus telegrams on `#4#INTERFACE`-qualified `WHO 4` status or dimension requests: gateways either reject the frame with `NACK` / `silent`, truncate `WHERE` at `#` to query local main-bus zone `Z`, or on `MH202` Firmware `010024` parse the trailing `#4#01` tokens of `*#4*2#4#01*20##` and `*#4*2#1#4#01*20##` as local zone `4` actuator `1` (`$0499843110` on `DIMENSION 20`, `coso` daemon `crash` on dimensionless `*#4*2#4#01##`, and `NACK` / `silent` on `#4#12`).
+
+See [Temperature Control gateway routing boundaries](../functional/who-4-temperature-control/addressing.md#gateway-firmware-routing-and-actuator-request-boundaries) and [WHO 4 gateway routing and actuator-request review](../project/review/who4-gateway-routing-and-actuator-requests.md) for the per-Firmware results and scope limits.
