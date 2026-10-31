@@ -16270,6 +16270,120 @@ artifacts:
     object_key: sha256/bb/56/bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7
     visibility: private
   redistribution_status: private-archive-only
+- id: myhome-suite-3.5.38-device-1768-1.0-systems
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  title: 'MyHOME Suite3.5.38 database: resTargetDir4/devices/1768_1.0_LG/db/systems.sqlite'
+  media_type: application/vnd.sqlite3
+  filename: systems.sqlite
+  version_label: MyHOME Suite3.5.38; package scope recorded by exact installer member paths
+  size: 344064
+  sha256: 73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/73/29/73297a1449df378063b8a2ab23a8f1787a782df9ee6f00f7b2d702e3ec608e93
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1768_1.0_LG/db/systems.sqlite'
+  - 'Exact installer member: default/resTargetDir4/devices/1768_1.0_BT/db/systems.sqlite'
+  - Statically recovered from registered installer SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b;599437936 bytes.
+  - Original CookFS pages validated by decoded size and CRC32; member SHA-256 and readonly SQLite quick_check verified.
+  - Manufacturer configuration database; not a user project, installed configuration, runtime or physical capability claim.
+- id: myhome-suite-3.5.38-device-1768-2.1-systems
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  title: 'MyHOME Suite3.5.38 database: resTargetDir4/devices/1768_2.1_LG/db/systems.sqlite'
+  media_type: application/vnd.sqlite3
+  filename: systems.sqlite
+  version_label: MyHOME Suite3.5.38; package scope recorded by exact installer member paths
+  size: 344064
+  sha256: e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/e4/4b/e44bbbd25ad849b38e52f58862c9b4e31240a01555115b68e4397584cb85308e
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1768_2.1_LG/db/systems.sqlite'
+  - 'Exact installer member: default/resTargetDir4/devices/1768_2.1_BT/db/systems.sqlite'
+  - Statically recovered from registered installer SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b;599437936 bytes.
+  - Original CookFS pages validated by decoded size and CRC32; member SHA-256 and readonly SQLite quick_check verified.
+  - Manufacturer configuration database; not a user project, installed configuration, runtime or physical capability claim.
+- id: myhome-suite-3.5.38-device-1898-2.1-systems
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  title: 'MyHOME Suite3.5.38 database: resTargetDir4/devices/1898_2.1_BT/db/systems.sqlite'
+  media_type: application/vnd.sqlite3
+  filename: systems.sqlite
+  version_label: MyHOME Suite3.5.38; package scope recorded by exact installer member paths
+  size: 344064
+  sha256: ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/ad/88/ad88777e1b3e2d11dd7efa6c79b080ec57258fdff3596c9c1ac5cc1ad0983214
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1898_2.1_BT/db/systems.sqlite'
+  - 'Exact installer member: default/resTargetDir4/devices/1898_2.1_LG/db/systems.sqlite'
+  - Statically recovered from registered installer SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b;599437936 bytes.
+  - Original CookFS pages validated by decoded size and CRC32; member SHA-256 and readonly SQLite quick_check verified.
+  - Manufacturer configuration database; not a user project, installed configuration, runtime or physical capability claim.
+- id: myhome-suite-3.5.38-f454-1455-2.0-lgg-systems
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  title: 'MyHOME Suite3.5.38 database: resTargetDir4/devices/1455_2.0_LGG/db/systems.sqlite'
+  media_type: application/vnd.sqlite3
+  filename: systems.sqlite
+  version_label: MyHOME Suite3.5.38; package scope recorded by exact installer member paths
+  size: 344064
+  sha256: fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/ff/fc/fffc43f8d2fb5d05b8240aa4b6d449bcf5bf60339013aba2fb2301a42738e694
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1455_2.0_LGG/db/systems.sqlite'
+  - Statically recovered from registered installer SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b;599437936 bytes.
+  - Original CookFS pages validated by decoded size and CRC32; member SHA-256 and readonly SQLite quick_check verified.
+  - Manufacturer configuration database; not a user project, installed configuration, runtime or physical capability claim.
+- id: myhome-suite-3.5.38-mh200n-1331-1.0-scen-suite-db-eng
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  title: 'MyHOME Suite3.5.38 database: resTargetDir4/devices/1331_1.0_BT/xml/Steps/Step_2/Scen_SuiteDB_ENG.db'
+  media_type: application/vnd.sqlite3
+  filename: Scen_SuiteDB_ENG.db
+  version_label: MyHOME Suite3.5.38; package scope recorded by exact installer member paths
+  size: 2542592
+  sha256: 83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/83/b7/83b7fa13c224012ebd1561fbc2895deb599b06223eb8e5041f565b7c5b7dbfd8
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1331_1.0_BT/xml/Steps/Step_2/Scen_SuiteDB_ENG.db'
+  - 'Exact installer member: default/resTargetDir4/devices/1331_1.0_LG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db'
+  - Statically recovered from registered installer SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b;599437936 bytes.
+  - Original CookFS pages validated by decoded size and CRC32; member SHA-256 and readonly SQLite quick_check verified.
+  - Manufacturer configuration database; not a user project, installed configuration, runtime or physical capability claim.
 - id: myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng
   kind: reference-data
   publisher: BTICINO S.P.A. / LegrandGroup
@@ -16313,6 +16427,28 @@ artifacts:
   repository_history:
     former_paths:
     - sources/myhome-suite/3.5.38/databases/MHCatalogue.db
+- id: myhome-suite-3.5.38-mhprj
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  title: 'MyHOME Suite3.5.38 database: resTargetDir2/db/MHPrj.db'
+  media_type: application/vnd.sqlite3
+  filename: MHPrj.db
+  version_label: MyHOME Suite3.5.38; package scope recorded by exact installer member paths
+  size: 50176
+  sha256: 74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/74/fc/74fc3762e47718da40f85562225fb676932349e39bd797ff94a073b8db8bd39a
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir2/db/MHPrj.db'
+  - Statically recovered from registered installer SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b;599437936 bytes.
+  - Original CookFS pages validated by decoded size and CRC32; member SHA-256 and readonly SQLite quick_check verified.
+  - Manufacturer configuration database; not a user project, installed configuration, runtime or physical capability claim.
 - id: myhome-suite-3.5.38-open
   kind: reference-data
   publisher: BTICINO S.P.A. / LegrandGroup
@@ -16333,6 +16469,28 @@ artifacts:
   repository_history:
     former_paths:
     - sources/myhome-suite/3.5.38/databases/OPEN.db
+- id: myhome-suite-3.5.38-ptdb
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite
+  title: 'MyHOME Suite3.5.38 database: resTargetDir2/db/PTDB.db'
+  media_type: application/vnd.sqlite3
+  filename: PTDB.db
+  version_label: MyHOME Suite3.5.38; package scope recorded by exact installer member paths
+  size: 17408
+  sha256: 606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/60/6f/606f0fef30b8db6c5a2998ae5ef88d7193488479ad97f7aea89c8f274c41ae64
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir2/db/PTDB.db'
+  - Statically recovered from registered installer SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b;599437936 bytes.
+  - Original CookFS pages validated by decoded size and CRC32; member SHA-256 and readonly SQLite quick_check verified.
+  - Manufacturer configuration database; not a user project, installed configuration, runtime or physical capability claim.
 - id: myhome-suite-3.5.38-scenario-devices-program-files
   kind: reference-data
   publisher: BTICINO S.P.A. / LegrandGroup
