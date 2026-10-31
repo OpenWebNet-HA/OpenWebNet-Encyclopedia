@@ -16555,6 +16555,29 @@ artifacts:
   repository_history:
     former_paths:
     - sources/myhome-suite/3.5.38/databases/rules.db3
+- id: myhomeserver1-3.87.13-mhcatalogue
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOMEServer1
+  title: MyHOMEServer1 3.87.13 embedded MHCatalogue database
+  media_type: application/vnd.sqlite3
+  filename: MHCatalogue.db
+  version_label: MyHOMEServer1 firmware3.87.13; embedded catalogue DATA4.4.0
+  size: 2233344
+  sha256: 79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb
+  source_page: https://assets.legrand.com/pim/AUTRE/SMARTGW_038713.fwz
+  source_url: https://assets.legrand.com/pim/AUTRE/SMARTGW_038713.fwz
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/79/fc/79fcf2e2580dfe23349ead3d3e385ad8210cf44dddff3179a9c021644a7d1edb
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - Original firmware SMARTGW_038713.fwz SHA-256 4ca1bcc70c1616270cb4c1f4b3ceb3c01c941797e437c3544d7d3d11b159c603; 183381241 bytes.
+  - 'Exact original image path: /home/bticino/matrix_mx/MHCatalogue.db; identical bytes in normal and recovery images.'
+  - Normal ext4 image SHA-256 0a7ded1eeeff8a6c888903f02a28879b91259067fc4222839d604094035ef273; recovery ext4 image SHA-256 3d8d5ee888d80e94a0479352342dafc306239bf9ef269581d12a5894b96b4400.
+  - Statically extracted original bytes; readonly immutable SQLite quick_check verified;75 tables. No vendor execution.
+  - Distinct from MyHOME Suite3.5.38 MHCatalogue SHA-256 f0c9d24f988937d1c8654c72b034fc02c7aacb37dc099bbc926f0c58363fe8e5; do not substitute catalogue variants or treat the database as current runtime configuration.
 - id: myhome-suite-3.5.38-installer
   kind: software-installer
   publisher: BTICINO S.P.A. / LegrandGroup
