@@ -16270,6 +16270,29 @@ artifacts:
     object_key: sha256/bb/56/bb561eb2b6b476de21cc4981234108b0698c2a58b1e229f2909ef4e49aef9df7
     visibility: private
   redistribution_status: private-archive-only
+- id: myhome-suite-3.5.38-mh202-1902-lgg-scen-suite-db-eng
+  kind: reference-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: English ScenarioSuite rules database for MH202 device package1902_1.0_LGG
+  media_type: application/vnd.sqlite3
+  filename: Scen_SuiteDB_ENG.db
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG; database1.0.53
+  size: 2542592
+  sha256: ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/ae/1e/ae1e60ca9b06eeb1eecd5bc8e21ff5ba2bdb928aa47075a2e7d8995c41e06e29
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scen_SuiteDB_ENG.db'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+  - DB_CONFIG language English; ANA_VERSIONE_DB 1/0/53; 79 tables, including 24 empty TMP working tables. Internal database version is separate from Suite and firmware versions.
 - id: myhome-suite-3.5.38-mhcatalogue
   kind: reference-data
   publisher: BTICINO S.P.A. / LegrandGroup
@@ -16394,6 +16417,538 @@ artifacts:
     object_key: sha256/70/7d/707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b
     visibility: private
   redistribution_status: private-archive-only
+- id: myhome-suite-3.5.38-mh202-1902-lgg-bticino-scenariosuite-class-dll
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/targetDir/Bticino.ScenarioSuite.Class.dll'
+  media_type: application/vnd.microsoft.portable-executable
+  filename: Bticino.ScenarioSuite.Class.dll
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 51200
+  sha256: 3a9ef4d3c41889d5990ce1977b4782580d9b6bed7f2a3a28ab4693d091dc3afb
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/3a/9e/3a9ef4d3c41889d5990ce1977b4782580d9b6bed7f2a3a28ab4693d091dc3afb
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/targetDir/Bticino.ScenarioSuite.Class.dll'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+  - Extracted vendor ScenarioSuite assembly retained as private supporting source material; no execution and no public redistribution. Parent installer remains the canonical full software package.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-bticino-scenariosuite-core-dll
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/targetDir/Bticino.ScenarioSuite.Core.dll'
+  media_type: application/vnd.microsoft.portable-executable
+  filename: Bticino.ScenarioSuite.Core.dll
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 1021440
+  sha256: 7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/7b/72/7b7269a14652472fc471568430364a038f02a8c881cb5c9db089a7683e38307b
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/targetDir/Bticino.ScenarioSuite.Core.dll'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+  - Extracted vendor ScenarioSuite assembly retained as private supporting source material; no execution and no public redistribution. Parent installer remains the canonical full software package.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-bticino-scenariosuite-datamanager-dll
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/targetDir/Bticino.ScenarioSuite.DataManager.dll'
+  media_type: application/vnd.microsoft.portable-executable
+  filename: Bticino.ScenarioSuite.DataManager.dll
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 38400
+  sha256: c52f483e0a5abbd5ca0ada6214afd0125fbe895005ea1e775c087c6b491e3492
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/c5/2f/c52f483e0a5abbd5ca0ada6214afd0125fbe895005ea1e775c087c6b491e3492
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/targetDir/Bticino.ScenarioSuite.DataManager.dll'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+  - Extracted vendor ScenarioSuite assembly retained as private supporting source material; no execution and no public redistribution. Parent installer remains the canonical full software package.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-bticino-scenariosuite-osjconverter-dll
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/targetDir/Bticino.ScenarioSuite.OSJConverter.dll'
+  media_type: application/vnd.microsoft.portable-executable
+  filename: Bticino.ScenarioSuite.OSJConverter.dll
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 27648
+  sha256: a1ccd67d0ee970922d2d4b08dba8b914168dedf63e5ebca783e1a79a1aa3a0fa
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/a1/cc/a1ccd67d0ee970922d2d4b08dba8b914168dedf63e5ebca783e1a79a1aa3a0fa
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/targetDir/Bticino.ScenarioSuite.OSJConverter.dll'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+  - Extracted vendor ScenarioSuite assembly retained as private supporting source material; no execution and no public redistribution. Parent installer remains the canonical full software package.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-cfgrestore-2-xtz
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/cfgRestore/2.xtz'
+  media_type: application/zip
+  filename: 2.xtz
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 41036
+  sha256: ef20c2c8ca7ca1f82a57718c48802c60d8d37dac37b61ceee2483f52f8c570aa
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/ef/20/ef20c2c8ca7ca1f82a57718c48802c60d8d37dac37b61ceee2483f52f8c570aa
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/cfgRestore/2.xtz'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-cfgrestore-4-xtz
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/cfgRestore/4.xtz'
+  media_type: application/zip
+  filename: 4.xtz
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 459
+  sha256: 5c784cdecbfe302307233dd3fb119417acf75332ef639c75c76c6e8c461d1050
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/5c/78/5c784cdecbfe302307233dd3fb119417acf75332ef639c75c76c6e8c461d1050
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/cfgRestore/4.xtz'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-defaultproject-project-0-extra-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0/extra.xml'
+  media_type: application/xml
+  filename: extra.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 163
+  sha256: 91059d6cba7c242eb24ac21ad5d7490aecce20a5adbd063858cc395c8b70ab7f
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/91/05/91059d6cba7c242eb24ac21ad5d7490aecce20a5adbd063858cc395c8b70ab7f
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0/extra.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-defaultproject-project-0-project-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0/project.xml'
+  media_type: application/xml
+  filename: project.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 2478
+  sha256: f35cb7d428bcbfafcb87e4dcb3ac1867010e533edfd546bb93a7b812ea33f85f
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/f3/5c/f35cb7d428bcbfafcb87e4dcb3ac1867010e533edfd546bb93a7b812ea33f85f
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0/project.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-defaultproject-project-0-xtz
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0.xtz'
+  media_type: application/zip
+  filename: 0.xtz
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 1442
+  sha256: 847a9b0c69787044a5496722503b227e3cad2cc23bf84211f6635a30b906cb01
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/84/7a/847a9b0c69787044a5496722503b227e3cad2cc23bf84211f6635a30b906cb01
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/0.xtz'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-defaultproject-project-4-extra-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/4/extra.xml'
+  media_type: application/xml
+  filename: extra.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 177
+  sha256: 99f93b9eaf55358ea1021e92e6e55bcc9276477caba66e9c7f05d7619699728b
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/99/f9/99f93b9eaf55358ea1021e92e6e55bcc9276477caba66e9c7f05d7619699728b
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/4/extra.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-defaultproject-project-4-xtz
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/4.xtz'
+  media_type: application/zip
+  filename: 4.xtz
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 411
+  sha256: 52bdf696af41356f4330fa0cf34b6ede7bfcd512969de1ac1290cd3e34779a16
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/52/bd/52bdf696af41356f4330fa0cf34b6ede7bfcd512969de1ac1290cd3e34779a16
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project/4.xtz'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-defaultproject-project-prj
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project.prj'
+  media_type: application/zip
+  filename: project.prj
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 1874
+  sha256: ae42c6ee1fe61b471908aa3ecc4ca86d764bb7799a491dc7f5cac26b41357f61
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/ae/42/ae42c6ee1fe61b471908aa3ecc4ca86d764bb7799a491dc7f5cac26b41357f61
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/defaultProject/project.prj'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-conf2prj-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/conf2prj.xml'
+  media_type: application/xml
+  filename: conf2prj.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 10773
+  sha256: e35972e9756cbf23b7b5def6b32f34f4abd2f85a19e805c9dcc87c60678fd531
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/e3/59/e35972e9756cbf23b7b5def6b32f34f4abd2f85a19e805c9dcc87c60678fd531
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/conf2prj.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-director-director-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/DIRECTOR/director.xml'
+  media_type: application/xml
+  filename: director.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 2912
+  sha256: 18bc8528e60eb8cf43cadfde61f73884ee87229d78d8f14f490745611ec500e9
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/18/bc/18bc8528e60eb8cf43cadfde61f73884ee87229d78d8f14f490745611ec500e9
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/DIRECTOR/director.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-extra-extra-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/Extra/extra.xml'
+  media_type: application/xml
+  filename: extra.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 606
+  sha256: 7307c36ab71235fb11254d59161131c676c7025ebdc6accb88a362e443a82af5
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/73/07/7307c36ab71235fb11254d59161131c676c7025ebdc6accb88a362e443a82af5
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/Extra/extra.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-mh200n2mh202-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/MH200N2MH202.xml'
+  media_type: application/xml
+  filename: MH200N2MH202.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 1483
+  sha256: f4e51ee2d325e92fd0a984389cc1a9972abdfb3d29037f58147fe1223e7a5d06
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/f4/e5/f4e51ee2d325e92fd0a984389cc1a9972abdfb3d29037f58147fe1223e7a5d06
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/MH200N2MH202.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-prj2conf-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/prj2conf.xml'
+  media_type: application/xml
+  filename: prj2conf.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 14199
+  sha256: 02abbe97f44589a39e4d500dd9c8e6ab66ab95d2a8919ebe1368b461483a934c
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/02/ab/02abbe97f44589a39e4d500dd9c8e6ab66ab95d2a8919ebe1368b461483a934c
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/prj2conf.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-protocol-protocol-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/Protocol/protocol.xml'
+  media_type: application/xml
+  filename: protocol.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 3233
+  sha256: 0a527c15b7d8c6cd7122e6617aea5fa60b63165ce5ef0cf9ec8ed08b07ce5d16
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/0a/52/0a527c15b7d8c6cd7122e6617aea5fa60b63165ce5ef0cf9ec8ed08b07ce5d16
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/Protocol/protocol.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-sdc-sdc-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/SDC/sdc.xml'
+  media_type: application/xml
+  filename: sdc.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 2961
+  sha256: b59e180ec35ba2a2b413498a19b43f6629e0382b63be481c99a47956929008a7
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/b5/9e/b59e180ec35ba2a2b413498a19b43f6629e0382b63be481c99a47956929008a7
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/SDC/sdc.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-steps-step-1-btparametersmanager-step1-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_1/BTParametersManager_Step1.xml'
+  media_type: application/xml
+  filename: BTParametersManager_Step1.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 56636
+  sha256: 01ff0cd26d98961f33723c9469d3a48fe56504bd2f22c4164d13f0ee4e4ca98b
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/01/ff/01ff0cd26d98961f33723c9469d3a48fe56504bd2f22c4164d13f0ee4e4ca98b
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_1/BTParametersManager_Step1.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-steps-step-1-bttree-step1-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_1/BTTree_Step1.xml'
+  media_type: application/xml
+  filename: BTTree_Step1.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 1335
+  sha256: d58e9576a6a408b6438281953da4f66755ed3a565764ee7715b08e920392b64f
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/d5/8e/d58e9576a6a408b6438281953da4f66755ed3a565764ee7715b08e920392b64f
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_1/BTTree_Step1.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-steps-step-2-scenariosuite-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scenariosuite.xml'
+  media_type: application/xml
+  filename: Scenariosuite.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 355
+  sha256: 9a23f4ed3d84854bf43de0c64742bedc23ab592bf778923cd857e91b725c2d38
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/9a/23/9a23f4ed3d84854bf43de0c64742bedc23ab592bf778923cd857e91b725c2d38
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/Steps/Step_2/Scenariosuite.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-svm-svm-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/SVM/svm.xml'
+  media_type: application/xml
+  filename: svm.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 3503
+  sha256: edea48937b54ee0fe21b837f880be655bb0f2fece2001a896c28ff4f0b44c601
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/ed/ea/edea48937b54ee0fe21b837f880be655bb0f2fece2001a896c28ff4f0b44c601
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/SVM/svm.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
+- id: myhome-suite-3.5.38-mh202-1902-lgg-xml-xtrman-prj-xml
+  kind: support-data
+  publisher: BTICINO S.P.A. / LegrandGroup
+  product: MyHOME Suite / MH202 ScenarioSuite
+  title: 'MH202 ScenarioSuite resource: default/resTargetDir4/devices/1902_1.0_LGG/xml/XTRMAN/prj.xml'
+  media_type: application/xml
+  filename: prj.xml
+  version_label: MyHOME Suite3.5.38; extracted package1902_1.0_LGG
+  size: 585
+  sha256: 8413710cd75e04065dd67967eefe2b59f4ca1efe790ece2dce1a0ec7b799cf5c
+  source_page: https://www.homesystems-legrandgroup.com/home/-/productsheets/2493426
+  source_url: https://assets.legrand.com/pim/AUTRE/MyHOME_Suite_030538.exe
+  storage:
+    bucket: openwebnet-data
+    object_key: sha256/84/13/8413710cd75e04065dd67967eefe2b59f4ca1efe790ece2dce1a0ec7b799cf5c
+    visibility: private
+  redistribution_status: private-archive-only
+  notes:
+  - 'Exact installer member: default/resTargetDir4/devices/1902_1.0_LGG/xml/XTRMAN/prj.xml'
+  - Extracted statically from registered myhome-suite-3.5.38-installer, SHA-256 707d8a43a5296a1ea87c33f111e9269c8bbd0fe524ac5efe87bdede8b6eb311b; size 599437936.
+  - Read-only CookFS extraction v2 verifies exact decoded page sizes/CRC32 and member SHA-256; no installer/Tcl/.NET/vendor execution.
+  - Preserved manufacturer resource, not a user configuration or proof of MH202 firmware1.0.24 compatibility.
 - id: myhome-suite-3.5.38-open-query
   kind: support-data
   publisher: BTICINO S.P.A. / LegrandGroup
