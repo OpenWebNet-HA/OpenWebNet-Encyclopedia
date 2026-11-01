@@ -126,8 +126,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 3301, "documents": 60, "reviewed_nonclaim_sections": 28,
-             "sections": 476, "sections_with_claims": 448},
+            {"claims": 3317, "documents": 60, "reviewed_nonclaim_sections": 28,
+             "sections": 477, "sections_with_claims": 449},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
