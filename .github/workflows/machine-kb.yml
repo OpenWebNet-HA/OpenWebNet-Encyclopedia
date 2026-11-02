@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main, machine-knowledge-base]
   push:
-    branches: [main, machine-knowledge-base, docs/devices-foundation]
+    branches: [main, machine-knowledge-base, docs/devices-foundation, docs/static-firmware-analysis-findings]
   workflow_dispatch:
 permissions:
   contents: read

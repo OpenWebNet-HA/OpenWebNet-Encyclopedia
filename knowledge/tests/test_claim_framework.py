@@ -126,8 +126,8 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["protocol"],
         )
         self.assertEqual(
-            {"claims": 3301, "documents": 60, "reviewed_nonclaim_sections": 28,
-             "sections": 476, "sections_with_claims": 448},
+            {"claims": 3318, "documents": 60, "reviewed_nonclaim_sections": 28,
+             "sections": 493, "sections_with_claims": 465},
             metrics["bounded_domains"]["functional"],
         )
         self.assertEqual(
@@ -141,23 +141,23 @@ class ClaimFrameworkTests(unittest.TestCase):
             metrics["bounded_domains"]["programming"],
         )
         self.assertEqual(
-            {"claims": 903, "documents": 9, "reviewed_nonclaim_sections": 28,
-             "sections": 141, "sections_with_claims": 113},
+            {"claims": 904, "documents": 9, "reviewed_nonclaim_sections": 28,
+             "sections": 142, "sections_with_claims": 114},
             self.legacy_device_model_metrics(metrics),
         )
         self.assertEqual(
-            {"claims": 321, "documents": 9, "reviewed_nonclaim_sections": 4,
-             "sections": 75, "sections_with_claims": 71},
+            {"claims": 336, "documents": 12, "reviewed_nonclaim_sections": 4,
+             "sections": 95, "sections_with_claims": 91},
             metrics["bounded_domains"]["internals"],
         )
         self.assertEqual(
-            {"claims": 551, "documents": 12, "reviewed_nonclaim_sections": 18,
-             "sections": 151, "sections_with_claims": 133},
+            {"claims": 802, "documents": 52, "reviewed_nonclaim_sections": 47,
+             "sections": 431, "sections_with_claims": 384},
             metrics["bounded_domains"]["reverse-engineering"],
         )
         self.assertEqual(
-            {"claims": 341, "documents": 11, "reviewed_nonclaim_sections": 11,
-             "sections": 103, "sections_with_claims": 92},
+            {"claims": 367, "documents": 15, "reviewed_nonclaim_sections": 11,
+             "sections": 132, "sections_with_claims": 121},
             metrics["bounded_domains"]["scenario-engine"],
         )
 
@@ -196,7 +196,20 @@ class ClaimFrameworkTests(unittest.TestCase):
         claims = self.render()
         phase11 = [record for record in claims
                    if 6296 <= int(record["id"].rsplit("c", 1)[1]) <= 7527]
-        self.assertEqual(1232, len(phase11))
+        # Twelve editorial policy/store summaries were explicitly retired, not
+        # silently lost or reassigned. Preserve the entire historical cohort.
+        retired_numbers = {*range(6458, 6464), 6476, 6477, *range(7417, 7421)}
+        retired_ids = {f"ownkb:claim:c{number:06d}" for number in retired_numbers}
+        registry = {row["id"]: row for row in json.loads(
+            (ROOT / "knowledge/inputs/id-registry.json").read_text())["ids"]}
+        live_ids = {record["id"] for record in phase11}
+        historical_ids = {f"ownkb:claim:c{number:06d}" for number in range(6296, 7528)}
+        self.assertEqual(historical_ids - retired_ids, live_ids)
+        for identity in retired_ids:
+            self.assertEqual("retired", registry[identity]["lifecycle"])
+            self.assertEqual("0.2.0", registry[identity]["last_release"])
+            self.assertEqual([], registry[identity]["replaced_by"])
+            self.assertIn("Reviewed editorial retirement", registry[identity]["reason"])
         self.assertTrue(all(not record["provenance"][0]["location"]["path"].startswith("guides/")
                             for record in phase11))
         rejected = [record for record in phase11 if record["epistemic_status"] == "rejected"]
@@ -293,12 +306,16 @@ class ClaimFrameworkTests(unittest.TestCase):
 
     def test_phase16_epistemic_keyword_review_is_preserved(self):
         by_id = {record["id"]: record for record in self.render()}
-        corrected = {6460, 6494, 6633, 6900, 7081, 7420}
+        corrected = {6494, 6633, 6900, 7081}
         retained = {230, 6339, 6827}
         self.assertTrue(all(by_id[f"ownkb:claim:c{number:06d}"]["epistemic_status"] != "inferred"
                             for number in corrected))
         self.assertTrue(all(by_id[f"ownkb:claim:c{number:06d}"]["epistemic_status"] == "inferred"
                             for number in retained))
+        # Former local taxonomy claims have explicit tombstones checked by the
+        # phase11 cohort test above; they must not reappear as live assertions.
+        for number in (6460, 7420):
+            self.assertNotIn(f"ownkb:claim:c{number:06d}", by_id)
 
     def test_phase16_context_guards_reject_regressions(self):
         base = copy.deepcopy(self.seeds["claims"][0])
